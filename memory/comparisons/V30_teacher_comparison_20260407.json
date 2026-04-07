@@ -1,0 +1,72 @@
+{
+  "id": "comparison_V30_001",
+  "video_id": "V30_video",
+  "video_alias": "V30",
+  "created_at": "2026-04-08T13:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V30_video_claude-sonnet-4_20260407_190000.json",
+      "completion_time_seconds": 158.0,
+      "estimated_penalties": 5.0,
+      "estimated_fls_score": 437.0,
+      "confidence": 0.62
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V30_video_gpt-4o_20260408_130000.json",
+      "completion_time_seconds": 161.8,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 435.7,
+      "confidence": 0.74
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 3.8,
+    "delta_penalties": 2.5,
+    "delta_fls_score": 1.3,
+    "agreement_level": "very_strong"
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true},
+    "lead_hand_throw_1":        {"claude": "right", "gpt4o": "left", "agreement": false}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "well_closed", "gpt4o": "complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 3.0,
+    "gpt4o_total_mm":  2.5,
+    "delta_mm": 0.5,
+    "agreement": "tight"
+  },
+  "penalty_extra_disagreement": {
+    "claude_total_penalties": 5.0,
+    "gpt4o_total_penalties": 2.5,
+    "claude_breakdown": "3.0 placement + 2.0 quality/efficiency (out-of-rubric)",
+    "gpt4o_breakdown": "2.5 placement only",
+    "analysis": "Sixth video (V20, V22, V26, V28, V29, V30) where Claude applies an out-of-rubric quality/efficiency penalty. GPT-4o's rubric-strict 2.5 is the correct rubric application. The pattern is now persistent across both equipment-disaster and recovery videos, confirming it is a prompt-level scoring drift rather than a recording-quality artifact."
+  },
+  "phase_attribution_disagreement": {
+    "claude_diagnosis": "Phase split: load 3s, placement 25s, throws 62s (30+14+18), cut 70s. Cutting is the dominant loss center at 44% of total time.",
+    "gpt4o_diagnosis": "Phase split: needle_load 5.8s, placement 43.1s, first 34.9s, second 25.3s, third 29.7s, cut 22.7s. Placement and throws are the dominant loss centers; cutting is fast.",
+    "analysis": "INVERSE phase-split disagreement relative to V28. Same convergent-tails pattern (endpoint delta 3.8s) but Claude bundles ~50s of work into the cut phase that GPT-4o keeps in placement and throws. Both diagnoses agree the run is efficiency-limited, not technique-limited; they disagree on which window the inefficiency lives in. Worth flagging as the V30 mirror of the V28 boundary issue: cut phase definition needs to be tied to scissors entry, not visual knot completion."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 437.0,
+    "gpt4o_fls": 435.7,
+    "reconciled_fls": 435.7,
+    "reconciliation_note": "Tightest score agreement in the series at delta 1.3 FLS. Reconciled value is 435.7 (GPT-4o, rubric-strict). The 1.3-point delta is the net of Claude's 2.5-point out-of-rubric quality/efficiency penalty offsetting Claude's 3.8-second time advantage. Both teachers independently identify V30 as a recovery run on a third equipment configuration, validating the equipment-specific framing of the V28-V29 catastrophe."
+  },
+  "systematic_findings": {
+    "tightest_score_agreement_in_series": "FLS delta 1.3 is the smallest non-zero score gap recorded (V28 hit exact 0.0 by coincidence). Direct-camera recordings continue to compress the teacher-disagreement band: V30 confidence 0.62/0.74 — both at series highs.",
+    "rubric_scope_issue_now_persistent": "Sixth out-of-rubric quality/efficiency penalty case from Claude (V20, V22, V26, V28, V29, V30). Pattern appears regardless of recording quality or run difficulty. Recommend formalizing the rubric-allowed penalty set in the next prompt iteration and adding a separate cosmetic_quality field to capture Claude's signal without distorting the FLS score.",
+    "inverse_phase_boundary_disagreement": "V28 and V30 form a mirror pair on the cut-phase boundary: V28 has Claude bundling work INTO cut (135s vs GPT 15s), V30 has GPT bundling work OUT OF cut (22.7s vs Claude 70s). Both cases reflect the same root-cause ambiguity about when 'tying' becomes 'trimming.' Suggested fix: define cut phase start as first scissors-in-field event, not knot-visually-seated.",
+    "drain_agreement_continues": "V30 is another drain-closure agreement case. Running tally: AGREE 10 (V12, V13, V18, V19, V22, V26, V27, V28, V29, V30), DIVERGE 5 (V11, V14, V16, V17, V20).",
+    "v28_through_v30_arc_validated_by_gpt4o": "GPT-4o now independently corroborates the equipment-narrative across all three transition videos: V28 365/370s (catastrophe), V29 295/304.5s (adaptation), V30 158/161.8s (recovery on different new station). The blue-trainer recovery being on a SECOND new station rules out skill regression as the V28 explanation.",
+    "lead_hand_disagreement_throw_1": "First documented lead-hand disagreement on throw 1 (Claude right, GPT-4o left). Hand alternation pattern is preserved by both readings (R-L-R vs L-R-L), so neither incurs a hand-switch penalty. Worth flagging as a low-confidence attribute when the direct camera does not show wrist orientation clearly."
+  }
+}
