@@ -1,89 +1,76 @@
-task_name: "Intracorporeal Suture with Knot Tying"
-task_number: 5
-task_enum: "task5_intracorporeal_suture"
+task: task5_intracorporeal_suture
+name: "Intracorporeal Suture with Knot Tying"
+fls_manual_reference: "FLS Manual Skills Guidelines, Task 5"
+
 max_time_seconds: 600
+score_formula: "600 - completion_time - penalties"
+passing_score: 475  # approximate proficiency cutoff
 
 equipment:
-  - "Two needle drivers (non-self-righting)"
-  - "One 2-0 silk suture, 15 cm length"
-  - "One pair endoscopic scissors"
-  - "One suture block"
-  - "One penrose drain with marked targets"
-
-procedure:
-  - "Place suture block on lower Velcro strip inside marked square"
-  - "Center penrose drain on Velcro strip on suture block, slit side up"
-  - "Pass suture through both marks on penrose drain"
-  - "Tie surgeon's knot (double throw) as first throw"
-  - "Tie single throw as second throw, switching hands"
-  - "Tie single throw as third throw, switching hands again"
-  - "Cut both suture ends inside the trainer"
-
-scoring_formula: "score = max_time - completion_time - penalties"
-
-timing:
-  starts_when: "First instrument visible on monitor"
-  ends_when: "Both ends of suture cut inside trainer"
-
-penalties:
-  suture_placement_deviation:
-    description: "Sum of deviation (mm) from each mark"
-    unit: "mm"
-    formula: "deviation_mark1_mm + deviation_mark2_mm"
-  gap_in_drain:
-    description: "Visible gap in longitudinal slit after knot tightening"
-    scoring: "Penalty assessed for any visible gap"
-  knot_security:
-    description: "Knot slips or comes apart under tension"
-    scoring: "Major penalty"
-  drain_avulsion:
-    description: "Penrose drain separates from suture block"
-    scoring: "Automatic score of ZERO"
-
-knot_requirements:
-  first_throw:
-    type: "surgeon's knot (double throw)"
-    description: "Must be a double throw"
-  second_throw:
-    type: "single throw"
-    description: "Must switch hands from first throw"
-  third_throw:
-    type: "single throw"
-    description: "Must switch hands from second throw"
-  hand_exchange:
-    description: "Must exchange hands with needle between each throw to ensure square knot"
+  - "FLS trainer box"
+  - "Penrose drain on suture block (slit longitudinally)"
+  - "15cm 2-0 silk suture on needle"
+  - "Two needle drivers"
+  - "Laparoscopic scissors"
+  - "Two pre-placed marks on drain (entry/exit points)"
 
 phases:
-  - name: "needle_load"
-    description: "Grasping and positioning the needle in the needle driver"
-  - name: "suture_placement"
-    description: "Passing needle through both marks on the penrose drain"
-  - name: "first_throw"
-    description: "Tying the surgeon's knot (double throw)"
-  - name: "second_throw"
-    description: "Tying the first single throw with opposite hand"
-  - name: "third_throw"
-    description: "Tying the second single throw with opposite hand"
-  - name: "suture_cut"
-    description: "Cutting both ends of the suture"
-  - name: "completion"
-    description: "Task complete"
+  - name: needle_load
+    description: "Pick up needle with driver, orient for driving"
+    expert_time_range: [3, 8]
+    intermediate_range: [5, 15]
 
-automatic_failures:
-  - "Drain avulsed from suture block"
-  - "Exceeding 600 second time limit"
+  - name: suture_placement
+    description: "Drive needle through both marks on the drain"
+    expert_time_range: [10, 20]
+    intermediate_range: [15, 35]
 
-technique_markers:
-  efficient:
-    - "Economy of motion in instrument movements"
-    - "Smooth needle driving through tissue"
-    - "Quick hand exchanges"
-    - "Minimal idle time between phases"
-    - "Proper needle angle (perpendicular to tissue)"
-  inefficient:
-    - "Excessive instrument fumbling"
-    - "Dropping the needle"
-    - "Multiple attempts to grasp suture"
-    - "Hesitation between phases"
-    - "Improper needle angle causing tissue drag"
-    - "Using instruments outside field of view"
+  - name: first_throw
+    description: "Surgeon's knot (double throw). Right hand leads (typically)"
+    expert_time_range: [10, 18]
+    intermediate_range: [15, 30]
+    requirements:
+      - "Must be a double throw (surgeon's knot)"
+      - "Note which hand leads the wrap"
+
+  - name: second_throw
+    description: "Single throw, switch hands from first"
+    expert_time_range: [8, 15]
+    intermediate_range: [12, 25]
+    requirements:
+      - "Must switch leading hand from throw 1"
+      - "Single throw only"
+
+  - name: third_throw
+    description: "Single throw, switch hands from second"
+    expert_time_range: [8, 15]
+    intermediate_range: [12, 25]
+    requirements:
+      - "Must switch leading hand from throw 2"
+      - "Single throw only"
+
+  - name: suture_cut
+    description: "Cut both suture ends with laparoscopic scissors"
+    expert_time_range: [5, 12]
+    intermediate_range: [10, 30]
+
+penalties:
+  - name: suture_deviation
+    description: "Sum of mm deviation from each mark"
+    scoring: "1 point per mm total deviation"
+
+  - name: gap_visible
+    description: "Gap visible in drain slit after knot"
+    scoring: "Variable penalty (5-15 points)"
+
+  - name: knot_failure
+    description: "Knot slips or comes apart"
+    scoring: "Major penalty (25-50 points)"
+
+  - name: drain_avulsion
+    description: "Drain pulled off suture block"
+    scoring: "Automatic zero"
+
+  - name: hand_switch_failure
+    description: "Failure to alternate hands between throws"
+    scoring: "Penalty per missed switch"

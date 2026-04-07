@@ -1,45 +1,16 @@
-# Prompt Registry
-# Maps prompt versions to their files and intended use
-
 prompts:
-  v001_task5:
-    system: "v001_task5_system.md"
-    critique: "v001_task5_critique.md"
-    task: 5
-    status: "active"
+  - id: v001_task5_system
+    task: task5_intracorporeal_suture
+    type: scoring
+    path: prompts/v001_task5_system.md
+    status: active
     created: "2026-04-07"
-    notes: "Initial prompt for intracorporeal suture scoring"
-    compatible_models:
-      - "claude-sonnet-4-20250514"
-      - "gpt-4o"
+    notes: "Initial scoring prompt for Task 5"
 
-  v001_task5_consensus:
-    system: "v001_task5_consensus.md"
-    task: 5
-    status: "active"
+  - id: v001_task5_critique
+    task: task5_intracorporeal_suture
+    type: critique
+    path: prompts/v001_task5_critique.md
+    status: active
     created: "2026-04-07"
-    notes: "Multi-turn critique consensus prompt (N=2 rounds, early-stop at agreement>0.92)"
-    compatible_models:
-      - "claude-sonnet-4-20250514"
-      - "gpt-4o"
-
-  v001_task5_coach:
-    system: "v001_task5_coach.md"
-    task: 5
-    status: "active"
-    created: "2026-04-07"
-    notes: "Dedicated Coach Agent — rich technique-level feedback beyond FLS rubric. Separate from scoring pipeline."
-    compatible_models:
-      - "claude-sonnet-4-20250514"
-    role: "coach"
-    runs_after: "consensus"
-
-# Template for new versions:
-# v002_task5:
-#   system: "v002_task5_system.md"
-#   critique: "v002_task5_critique.md"
-#   task: 5
-#   status: "testing"
-#   created: "YYYY-MM-DD"
-#   notes: "What changed from v001"
-#   parent: "v001_task5"
+    notes: "Critique agent for dual-teacher consensus"

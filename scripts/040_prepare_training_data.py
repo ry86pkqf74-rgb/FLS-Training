@@ -1,65 +1,29 @@
 #!/usr/bin/env python3
-"""040_prepare_training_data.py — Build training dataset from scored videos.
-
-Usage:
-    python scripts/040_prepare_training_data.py --version 1
-    python scripts/040_prepare_training_data.py --version 2 --min-confidence 0.8
-"""
-
+"""Prepare training data for fine-tuning on RunPod."""
 import argparse
-import logging
-import sys
-from pathlib import Path
-
-from dotenv import load_dotenv
-from rich.console import Console
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from src.memory.learning_log import LearningLog
-from src.memory.memory_store import MemoryStore
-from src.training.prepare_dataset import prepare_dataset
-
-load_dotenv()
-logging.basicConfig(level=logging.INFO)
-console = Console()
+from src.training.data_prep import prepare_training_data
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Prepare training dataset")
-    parser.add_argument("--version", type=int, required=True, help="Dataset version number")
-    parser.add_argument("--min-confidence", type=float, default=0.7)
-    parser.add_argument("--include-coach", action="store_true",
-                        help="Include coach feedback in training examples (Phase 2)")
-    parser.add_argument("--video-dir", default="./videos")
-    parser.add_argument("--output-dir", default="./data/training")
-    parser.add_argument("--db", default="data/fls_training.duckdb")
+    parser = argparse.ArgumentParser(description="Prepare training datasets")
+    parser.add_argument("--ver", default="v1", help="Dataset version tag")
+    parser.add_argument("--val-split", type=float, default=0.15)
+    parser.add_argument("--min-confidence", type=float, default=0.3)
+    parser.add_argument("--base-dir", default=".")
     args = parser.parse_args()
 
-    store = MemoryStore(args.db)
-    log = LearningLog()
-
-    console.print(f"[bold]Preparing training dataset v{args.version}...[/bold]")
-    manifest = prepare_dataset(
-        store, log,
-        video_dir=args.video_dir,
-        output_dir=args.output_dir,
-        version=args.version,
+    meta = prepare_training_data(
+        base_dir=args.base_dir,
+        version=args.ver,
+        val_split=args.val_split,
         min_confidence=args.min_confidence,
-        include_coach_feedback=args.include_coach,
     )
 
-    if "error" in manifest:
-        console.print(f"[red]Error: {manifest['error']}[/red]")
-        sys.exit(1)
-
-    console.print(f"[green]Dataset v{args.version} created:[/green]")
-    console.print(f"  Train: {manifest['n_train']} examples")
-    console.print(f"  Val:   {manifest['n_val']} examples")
-    console.print(f"  Test:  {manifest['n_test']} examples")
-    console.print(f"  Sources: {manifest['sources']}")
-
-    store.close()
+    print(f"\nReady for RunPod. Next steps:")
+    print(f"  1. git add training/data/")
+    print(f"  2. git commit -m 'feat: training data {args.ver}'")
+    print(f"  3. git push")
+    print(f"  4. On RunPod: python scripts/050_runpod_train.py --ver {args.ver}")
 
 
 if __name__ == "__main__":
