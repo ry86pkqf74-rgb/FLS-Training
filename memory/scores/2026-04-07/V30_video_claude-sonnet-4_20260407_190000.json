@@ -1,0 +1,111 @@
+{
+  "id": "score_claude_V30_001",
+  "video_id": "V30_video",
+  "video_filename": "V30.mov",
+  "video_hash": "v30_placeholder",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T19:00:00Z",
+  "recording_notes": "DIRECT CAMERA RECORDING — camera inside blue FLS trainer box looking directly at task area. Blue plastic trainer with red clamps, duct tape covering, pink/red foam, dark suture. BEST RECORDING QUALITY since V15. Similar setup to V15 (STORZ-style instruments, direct view). NOT the V28-V29 station. 1280x720 at 30fps. Instruments already partially visible at frame 1.",
+  "frame_analyses": [
+    {"frame_number": 1, "timestamp_seconds": 3, "phase": "needle_load", "description": "DIRECT CAMERA VIEW inside FLS trainer. Blue box with red clamps, duct tape, pink foam. Drain with Penrose visible. One instrument from left with dark suture and needle. TIMING STARTS ~1-2s.", "technique_notes": "Best recording quality since V15. Dark suture clearly visible. Excellent detail."},
+    {"frame_number": 2, "timestamp_seconds": 20, "phase": "suture_placement", "description": "Both instruments at drain. Right instrument driving needle through drain. Left instrument stabilizing. Dark suture clearly visible extending from needle. Active placement.", "technique_notes": "Placement in progress. Good bimanual technique visible in direct view."},
+    {"frame_number": 3, "timestamp_seconds": 35, "phase": "first_throw", "description": "Suture placed. Both instruments at drain with suture ends visible. First throw wrapping beginning. Dark suture extending from drain to instrument.", "technique_notes": "Placement complete ~28s (~26s from first instrument). Starting first throw."},
+    {"frame_number": 4, "timestamp_seconds": 50, "phase": "first_throw", "description": "First throw wrapping/tightening. Both instruments spread wide above drain. Dark suture arcing high between instruments. Classic V-spread tightening pattern.", "technique_notes": "First throw in progress. Clear suture arc visible — excellent technique visualization."},
+    {"frame_number": 5, "timestamp_seconds": 65, "phase": "second_throw", "description": "Second throw in progress. Instruments at drain. Suture crossing at drain center. Knot building.", "technique_notes": "First throw complete ~58s (~30s). Second throw wrapping."},
+    {"frame_number": 6, "timestamp_seconds": 80, "phase": "third_throw", "description": "Third throw wrapping. Both instruments at drain. Multiple dark suture crossings visible at knot. Drain starting to compress.", "technique_notes": "Second throw complete ~72s (~14s). Third throw in progress. Good pace."},
+    {"frame_number": 7, "timestamp_seconds": 95, "phase": "suture_cut", "description": "Knot complete. Suture tails visible extending from knot — one to upper right, one extending down. Instrument at drain positioning for cutting. Dark suture clearly visible.", "technique_notes": "Third throw complete ~90s (~18s). Throws total ~62s. Cutting starting."},
+    {"frame_number": 8, "timestamp_seconds": 125, "phase": "suture_cut", "description": "Cutting in progress. Both instruments above drain. Suture tail arcing upward held by right instrument while left positions scissors. Knot visible at drain center.", "technique_notes": "~33s into cutting. Working on second tail."},
+    {"frame_number": 9, "timestamp_seconds": 155, "phase": "suture_cut", "description": "Final cutting. One instrument at drain with short remaining tail. Knot visible — compact with dark suture wrapping. Nearly complete.", "technique_notes": "~63s of cutting. Still the bottleneck phase. Nearing completion."},
+    {"frame_number": 10, "timestamp_seconds": 165, "phase": "completion", "description": "Task complete. Instruments withdrawn. EXCELLENT FINAL VIEW: Compact knot at drain center with very short dark tails. Drain slit appears WELL CLOSED — edges approximated tightly around knot. One suture tail extends slightly to left onto duct tape. Drain not avulsed. Clean, professional result.", "technique_notes": "Completion ~160s. Total from first instrument: ~158s. HIGHEST CONFIDENCE final assessment in series due to direct camera."}
+  ],
+  "completion_time_seconds": 158.0,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0, "end_seconds": 3, "duration_seconds": 3},
+    {"phase": "suture_placement", "start_seconds": 3, "end_seconds": 28, "duration_seconds": 25},
+    {"phase": "first_throw", "start_seconds": 28, "end_seconds": 58, "duration_seconds": 30},
+    {"phase": "second_throw", "start_seconds": 58, "end_seconds": 72, "duration_seconds": 14},
+    {"phase": "third_throw", "start_seconds": 72, "end_seconds": 90, "duration_seconds": 18},
+    {"phase": "suture_cut", "start_seconds": 90, "end_seconds": 160, "duration_seconds": 70}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "First throw 28-58s (30s). Surgeon's knot — double wrap visible in direct camera. V-spread tightening at 50s. Good technique. Confidence: HIGH."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Second throw 58-72s (14s). Fast, efficient single throw. Hand switch confirmed — left instrument leads. Confidence: MODERATE."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Third throw 72-90s (18s). Hand switch back confirmed. Drain compression visible. Confidence: MODERATE."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 3.0,
+    "confidence": "moderate",
+    "placement_notes": "Direct camera allows better assessment. Needle pass appears through or very near both marks. Marks partially visible on gauze. More accurate than any monitor-based estimate."
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "well_closed",
+    "assessment_note": "HIGHEST CONFIDENCE drain assessment in series. At 165s, direct camera shows drain slit well-closed with compact knot. Edges tightly approximated. Very short tails. No gap visible. Drain not avulsed. This is the best-confirmed final product quality since V15."
+  },
+  "estimated_penalties": 5.0,
+  "estimated_fls_score": 437.0,
+  "confidence_score": 0.62,
+  "technique_summary": "V30 at approximately 158 seconds represents a DRAMATIC RECOVERY from the V28-V29 equipment-change disaster (365s/295s), returning to the V22-V25 familiar-equipment plateau range. Critically, this is on a THIRD equipment setup — a blue FLS trainer with direct camera, similar to V15's setup but different from both the V25-V27 RCA-monitor station and the V28-V29 Vizio station. The fact that the trainee performed at 158s on yet another different setup (vs V28's 365s on its first attempt at a different station) suggests the V28-V29 catastrophe was suture-specific or instrument-specific, not a general equipment-transfer problem. The direct camera provides the HIGHEST CONFIDENCE score since V15 (0.62), confirming well-closed drain, short tails, no gap, and proper throw sequence. Cutting at 70s remains the bottleneck (44% of total time). The first throw at 30s is the longest phase — the surgeon's knot double wrap is inherently time-consuming but the subsequent single throws (14s, 18s) are efficient.",
+  "improvement_suggestions": [
+    "RECOVERY CONFIRMED: 158s on new equipment vs V28's 365s on different new equipment. Equipment transfer is NOT universally impaired.",
+    "Cutting at 70s (44% of total time) remains the #1 bottleneck — consistent across all equipment configurations.",
+    "First throw at 30s is reasonable for a surgeon's knot but could potentially be faster with practice on this specific setup.",
+    "DIRECT CAMERA should be the STANDARD for all future recordings — dramatically improves scoring confidence (0.62 vs 0.30-0.45).",
+    "This setup (blue FLS trainer, direct camera) appears to work well. Consider using it as the primary practice station.",
+    "V28-V29 catastrophe was likely suture/instrument-specific. Investigate what was different about those specific instruments.",
+    "Placement at 25s is slightly slower than the 16-22s range on the RCA station — familiarization needed."
+  ],
+  "strengths": [
+    "DRAMATIC RECOVERY from V28-V29 equipment disaster (365/295 → 158)",
+    "HIGHEST CONFIDENCE score since V15 (0.62) — direct camera provides excellent detail",
+    "CONFIRMED well-closed drain with no gap — first high-confidence drain assessment in 15 videos",
+    "Proper throw sequence confirmed: surgeon's knot → single → single with hand switches",
+    "Very short, clean tails — best-confirmed cutting quality",
+    "Drain not avulsed — 30 consecutive videos without avulsion",
+    "Equipment transfer skill demonstrated — performs well on third different station",
+    "Throws at 62s — reasonable, with fast throws 2+3 (14+18 = 32s)"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["V26_video", "V27_video", "V28_video", "V29_video"],
+    "time_vs_V29": -137,
+    "time_vs_V28": -207,
+    "time_vs_V27": 18,
+    "time_vs_V26": 64,
+    "time_vs_V25": 8,
+    "time_vs_pre": -40,
+    "score_vs_V29": 140.0,
+    "score_vs_V28": 210.0,
+    "trajectory": "recovery_new_equipment_plateau",
+    "phase_comparison": {
+      "placement_25s": "Slightly slow. V26: 16s. V27: 18s. V25: 22s. New equipment familiarization.",
+      "throws_62s": "Reasonable. V27: 67s. V26: 50s. V25: 58s. Mid-range.",
+      "cutting_70s": "BOTTLENECK. V27: 53s. V26: 26s. V25: 67s. Reverted to slow cutting."
+    },
+    "key_observations": [
+      "158s / 437 FLS — RECOVERY from V28-V29 disaster back to V22-V27 plateau range.",
+      "THIRD EQUIPMENT SETUP: Blue FLS trainer with direct camera. Different from both RCA and Vizio stations.",
+      "DIRECT CAMERA: Confidence 0.62 — highest since V15. Confirms drain well-closed, proper technique.",
+      "V28 (365s) was equipment-specific, NOT a general skill regression — proven by V30's 158s on another new setup.",
+      "Cutting 70s (44% of time) — the universal bottleneck regardless of equipment.",
+      "First throw 30s — surgeon's knot double wrap is time-consuming but correct technique.",
+      "Equipment adaptation: V28 station needed 365→295s to start adapting. V30 station: 158s on first attempt.",
+      "30th video. Three equipment configurations: RCA station (V11-V27, peak 94s), Vizio station (V28-V29, 365-295s), Blue trainer (V30, 158s)."
+    ],
+    "series_statistics": {
+      "total_videos": 30,
+      "all_time_best": "94s (V26, RCA station)",
+      "rca_station_plateau": "140-155s",
+      "rca_station_peaks": "94s (V26), 107s (V14), 117s (V24)",
+      "vizio_station": "365s → 295s (adapting)",
+      "blue_trainer_V30": "158s (first attempt)",
+      "pre_training_baseline": "198s",
+      "current_performance": "158s (new equipment, high confidence)"
+    }
+  }
+}
