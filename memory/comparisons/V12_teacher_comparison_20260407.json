@@ -1,0 +1,64 @@
+{
+  "id": "comparison_V12_001",
+  "video_id": "V12_video",
+  "video_alias": "V12",
+  "created_at": "2026-04-07T22:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V12_video_claude-sonnet-4_20260407_113000.json",
+      "completion_time_seconds": 115.0,
+      "estimated_penalties": 5.5,
+      "estimated_fls_score": 479.5,
+      "confidence": 0.45
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V12_video_gpt-4o_20260407_220000.json",
+      "completion_time_seconds": 114.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 483.0,
+      "confidence": 0.74
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 1.0,
+    "delta_penalties": 2.5,
+    "delta_fls_score": 3.5,
+    "agreement_level": "strong"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 5,  "gpt4o": 2.5,  "delta": 2.5,  "note": "Claude has a 3s idle before needle_load; combined idle+needle_load Claude=8s vs GPT-4o=2.5s (delta 5.5s)."},
+    "suture_placement": {"claude": 25, "gpt4o": 27.0, "delta": 2.0,  "note": "Near-exact agreement on placement duration."},
+    "first_throw":      {"claude": 15, "gpt4o": 23.0, "delta": 8.0},
+    "second_throw":     {"claude": 14, "gpt4o": 26.0, "delta": 12.0},
+    "third_throw":      {"claude": 20, "gpt4o": 31.0, "delta": 11.0},
+    "suture_cut":       {"claude": 33, "gpt4o": 4.5,  "delta": 28.5, "note": "Same boundary disagreement as V11/V14 — Claude assigns 33s to cut, GPT-4o only 4.5s and rolls the late-task time into the throws. Sum of throws+cut: Claude 82s vs GPT-4o 84.5s (delta 2.5s) — essentially agreement."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false,           "gpt4o": false,    "agreement": true, "note": "First V-series monitor-filmed video with NO drain-gap divergence. Claude's closure call is 'appears_closed' (very_low conf) vs GPT-4o 'complete' — both effectively agree there is no gap."},
+    "drain_avulsed": {"claude": false,           "gpt4o": false,    "agreement": true},
+    "closure":       {"claude": "appears_closed","gpt4o": "complete","agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 3.5,
+    "gpt4o_total_mm":  3.0,
+    "delta_mm": 0.5,
+    "agreement": "strong",
+    "note": "Both teachers low/very_low confidence; estimates within 0.5 mm."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 479.5,
+    "gpt4o_fls": 483.0,
+    "reconciled_fls": 481.25,
+    "reconciliation_note": "Strong agreement. Completion time essentially identical (Δ1.0s). The 2.5pt penalty gap is a 0.5pt placement + 2.0pt unexplained Claude penalty margin (Claude applied 5.5 total penalties but only 3.5 were placement — the extra 2.0 may be an implicit time-buffer penalty from the drain-quality uncertainty). GPT-4o's 483.0 is the cleaner point estimate; midpoint 481.25 is a reasonable reconciled value."
+  },
+  "systematic_findings": {
+    "boundary_disagreement_confirmed": "V12 confirms the V11/V14 pattern — Claude and GPT-4o disagree on third_throw vs suture_cut boundary but agree on their sum. V12 delta on sum is only 2.5s (tightest so far). Continue to recommend training on total_time + penalties, not raw phase durations.",
+    "drain_gap_agreement_breakthrough": "V12 is the FIRST V-series comparison where Claude and GPT-4o agree on the drain closure. Claude's 'appears_closed' with very_low confidence matches GPT-4o's 'complete'. Counter-evidence to the Claude monitor-bias finding from V11/V14 — the bias is not universal, only triggers on specific video quality/angle combinations."
+  }
+}

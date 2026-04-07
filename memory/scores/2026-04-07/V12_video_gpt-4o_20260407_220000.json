@@ -1,0 +1,62 @@
+{
+  "id": "score_gpt4o_V12_001",
+  "video_id": "V12_video",
+  "video_filename": "V12.mov",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:00:00Z",
+  "frame_analyses": [
+    {"frame_number": 46,   "phase": "needle_load",      "description": "First instrument becomes visible and the needle driver/grasper pair begin orienting toward the Penrose target.",       "technique_notes": "Start is clean but there is a brief setup period before the first bite is driven."},
+    {"frame_number": 136,  "phase": "suture_placement", "description": "Needle being driven through the first side of the Penrose near the marked target.",                                  "technique_notes": "Needle angle acceptable; setup and entry somewhat deliberate."},
+    {"frame_number": 540,  "phase": "suture_placement", "description": "Second bite completed and suture is being pulled through both marks.",                                                "technique_notes": "Good tissue control; some extra instrument travel while drawing the suture through."},
+    {"frame_number": 960,  "phase": "first_throw",      "description": "Both limbs organized and the long limb is being wrapped to set up the first throw.",                                  "technique_notes": "First throw prepared as a surgeon's knot but loops are fairly large and cost time."},
+    {"frame_number": 1260, "phase": "first_throw",      "description": "First throw passed and seated down onto the Penrose.",                                                               "technique_notes": "Knot lays down without obvious tearing or avulsion; cinching is controlled."},
+    {"frame_number": 1979, "phase": "second_throw",     "description": "Reverse single throw being formed and tightened with the opposite hand leading.",                                     "technique_notes": "Apparent hand switch is correct; motion controlled but not especially compact."},
+    {"frame_number": 2414, "phase": "third_throw",      "description": "Third throw started with the right-sided instrument leading and loop being passed.",                                  "technique_notes": "Hand alternation appears to switch back appropriately; loop size remains somewhat large."},
+    {"frame_number": 2728, "phase": "third_throw",      "description": "Final throw cinched and knot stack stabilizes over the slit.",                                                       "technique_notes": "Final knot appears snug with no obvious loosening during tightening."},
+    {"frame_number": 3358, "phase": "suture_cut",       "description": "Scissors applied to trim the suture tails close to the completed knot.",                                              "technique_notes": "Cutting performed inside the trainer as required."},
+    {"frame_number": 3463, "phase": "completion",       "description": "Both tails are cut and instruments withdraw, ending the task.",                                                      "technique_notes": "Task completed without visible avulsion or knot disruption."}
+  ],
+  "completion_time_seconds": 114.0,
+  "phase_timings": [
+    {"phase": "needle_load",      "start_seconds": 0.0,   "end_seconds": 2.5,   "duration_seconds": 2.5},
+    {"phase": "suture_placement", "start_seconds": 2.5,   "end_seconds": 29.5,  "duration_seconds": 27.0},
+    {"phase": "first_throw",      "start_seconds": 29.5,  "end_seconds": 52.5,  "duration_seconds": 23.0},
+    {"phase": "second_throw",     "start_seconds": 52.5,  "end_seconds": 78.5,  "duration_seconds": 26.0},
+    {"phase": "third_throw",      "start_seconds": 78.5,  "end_seconds": 109.5, "duration_seconds": 31.0},
+    {"phase": "suture_cut",       "start_seconds": 109.5, "end_seconds": 114.0, "duration_seconds": 4.5},
+    {"phase": "completion",       "start_seconds": 114.0, "end_seconds": 114.0, "duration_seconds": 0.0}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Right-led double wrap around the opposing instrument before passage and seating."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left",  "hand_switched": true, "appears_secure": true, "notes": "Single reverse throw formed with left instrument leading, seated in the opposite direction."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Third throw switches back to right-led and remains stable through final tightening."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 3.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete"
+  },
+  "estimated_penalties": 3.0,
+  "estimated_fls_score": 483.0,
+  "confidence_score": 0.74,
+  "technique_summary": "V12 scored at 114.0s / 483.0 FLS. Successful completion with steady instrument control, no drain avulsion, and a final knot that appears snug without a visible slit gap. Trainee was deliberate rather than fast, especially during limb organization and loop formation, but the required bite placement, three-throw sequence, and intrabox cutting were all completed. Knot-tying phase consumed the majority of the run; cutting was efficient at 4.5s once the knot was finalized.",
+  "improvement_suggestions": [
+    "Load and present the needle in a more ready-to-drive orientation before the first bite to reduce early setup time.",
+    "After the second bite, organize the long and short limbs sooner so the transition into the first throw is faster.",
+    "Make smaller, tighter loops during the throws to improve economy of motion and shorten knot-tying time."
+  ],
+  "strengths": [
+    "All required task elements completed without visible drain avulsion, knot failure, or missed intrabox cuts.",
+    "Throw sequence appears correct with hand alternation and a stable final knot over the slit."
+  ],
+  "comparison_notes": "Paired with score_claude_V12_001 — see memory/comparisons/V12_teacher_comparison_20260407.json. ΔFLS 3.5 (strong agreement). Completion time agreement within 1s (114 vs 115). Both teachers agree drain is closed — first V-series video with no drain-gap divergence."
+}
