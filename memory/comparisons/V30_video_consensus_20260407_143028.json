@@ -1,0 +1,177 @@
+{
+  "round": 2,
+  "agreement_score": 0.95,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "phase_timings.suture_cut",
+      "teacher_a_value": 70.0,
+      "teacher_b_value": 22.7,
+      "resolution": 22.7,
+      "reasoning": "FINAL RULING: Both teachers agree the run is efficiency-limited but not technique-limited. The phase disagreement is a boundary-definition issue, not a substantive disagreement about the completed task. Consensus keeps GPT-4o's scissors-anchored cut timing and records the discrepancy as a prompt-boundary artifact.",
+      "confidence": 0.72,
+      "frames_cited": [
+        95,
+        125,
+        155,
+        161.8
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "teacher_a_value": 3.0,
+      "teacher_b_value": 2.5,
+      "resolution": 2.5,
+      "reasoning": "FINAL RULING: Both teachers see placement close to both marks with no high-penalty miss. GPT-4o's 2.5-point placement-only deduction is the rubric-correct interpretation; Claude's higher total is driven by the recurring out-of-rubric quality/efficiency penalty.",
+      "confidence": 0.79,
+      "frames_cited": [
+        20,
+        35,
+        50
+      ]
+    },
+    {
+      "field": "knot_assessments.throw_1.hand_used",
+      "teacher_a_value": "right",
+      "teacher_b_value": "left",
+      "resolution": "unclear",
+      "reasoning": "FINAL RULING: Lead-hand identification on throw 1 is not stable enough to adjudicate from the direct top-down view. Both teachers still agree the first throw is a proper surgeon's knot and that hand alternation is preserved across the sequence, so no switching penalty is warranted.",
+      "confidence": 0.43,
+      "frames_cited": [
+        35,
+        50,
+        65
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 161.8,
+    "phase_timings": [
+      {
+        "phase": "needle_load",
+        "start_seconds": 0.0,
+        "end_seconds": 5.8,
+        "duration_seconds": 5.8
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 5.8,
+        "end_seconds": 48.9,
+        "duration_seconds": 43.1
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 48.9,
+        "end_seconds": 83.8,
+        "duration_seconds": 34.9
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 83.8,
+        "end_seconds": 109.1,
+        "duration_seconds": 25.3
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 109.1,
+        "end_seconds": 138.8,
+        "duration_seconds": 29.7
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 138.8,
+        "end_seconds": 161.5,
+        "duration_seconds": 22.7
+      },
+      {
+        "phase": "completion",
+        "start_seconds": 161.5,
+        "end_seconds": 161.8,
+        "duration_seconds": 0.3
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "unclear",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw is accepted as a correctly configured surgeon's knot. The exact lead hand remains indeterminate, but the throw seats securely and the teachers agree the sequence is valid."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "unclear",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw reverses the first and preserves alternation. Time loss comes from limb organization rather than any visible knot failure."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "unclear",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw locks the stack without visible slip. Both teachers agree the final knot is secure and the drain remains intact."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 1.0,
+      "total_deviation_penalty": 2.5,
+      "confidence": "medium",
+      "placement_notes": "Direct-camera review supports a modest placement-only deduction. Needle entry and exit appear close to both target marks and no gross miss is visible."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Both teachers agree the slit is closed, the knot remains seated through trimming, and no avulsion or persistent gap is visible."
+    },
+    "estimated_penalties": 2.5,
+    "estimated_fls_score": 435.7,
+    "confidence_score": 0.68,
+    "technique_summary": "V30 is a clear recovery run on the blue trainer. The performance is passing-quality with accurate-enough placement, a stable three-throw knot, intact drain, and no visible slit gap. The main losses are inefficiency during placement and tail management, plus a prompt-level disagreement about when the cut phase begins, not disagreement about the clinical outcome.",
+    "improvement_suggestions": [
+      "Commit to the needle angle earlier so placement does not require repeated regrasping before the bite is driven.",
+      "Separate and tension the active and passive limbs more decisively between throws to reduce time spent sorting crossed tails.",
+      "Present the tails for cutting immediately after the third throw is seated to convert the direct-camera technical recovery into a faster finishing phase."
+    ],
+    "strengths": [
+      "Clear recovery from the V28-V29 equipment-change collapse on a different new station.",
+      "Needle placement remains close to both marks with no avulsion or gross tissue handling error.",
+      "All three throws are secure and the final knot stays seated through trimming.",
+      "Direct-camera recording provides one of the highest-confidence outcome reads in the series."
+    ]
+  },
+  "critique_reasoning": "FINAL ARBITRATION: V30 is a tight-agreement recovery run. The clinically important features are settled by both teachers: passing placement, intact drain, secure knot, and a strong outcome on a third equipment configuration. Consensus follows the rubric-strict GPT-4o time and penalty totals because Claude again applied an out-of-rubric efficiency adjustment. The large phase split disagreement is retained as a prompt-boundary note, not allowed to distort the final reconciled score. The automated Anthropic arbitration path remained unavailable because the configured API key was invalid, so this consensus was resolved directly from the two teacher scorecards and the teacher comparison artifact.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T14:30:28Z"
+  },
+  "_meta": {
+    "video_id": "V30_video",
+    "model": "manual-consensus",
+    "round": 1,
+    "elapsed_seconds": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd_approx": 0.0,
+    "timestamp": "2026-04-07T14:30:28Z",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 0.0,
+    "round2_input_tokens": 0,
+    "round2_output_tokens": 0,
+    "total_cost_usd_approx": 0.0,
+    "manual_arbitration": true,
+    "automation_error": "invalid x-api-key"
+  }
+}

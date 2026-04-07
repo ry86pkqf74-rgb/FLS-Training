@@ -1,0 +1,175 @@
+{
+  "round": 2,
+  "agreement_score": 0.97,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "phase_timings.suture_cut",
+      "teacher_a_value": 47.0,
+      "teacher_b_value": 16.7,
+      "resolution": 16.7,
+      "reasoning": "FINAL RULING: The teachers converge almost exactly on endpoint and final product quality. The cut-phase gap reflects the same direct-camera boundary-definition mismatch seen in V30. Consensus anchors the cut interval to the first tails-presented-for-cutting interpretation used in the rubric-strict GPT-4o score.",
+      "confidence": 0.76,
+      "frames_cited": [
+        120,
+        137,
+        139.6
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "teacher_a_value": 3.0,
+      "teacher_b_value": 2.5,
+      "resolution": 2.5,
+      "reasoning": "FINAL RULING: Both teachers see placement close to the dots and a clean finished product. As in the preceding direct-camera runs, GPT-4o provides the rubric-correct placement-only penalty while Claude's higher total includes an out-of-rubric cosmetic/efficiency deduction.",
+      "confidence": 0.82,
+      "frames_cited": [
+        7.4,
+        42.3,
+        64.9
+      ]
+    },
+    {
+      "field": "knot_assessments.throw_1.hand_used",
+      "teacher_a_value": "unclear",
+      "teacher_b_value": "left",
+      "resolution": "left",
+      "reasoning": "FINAL RULING: GPT-4o's left-hand estimate is the best available read, but the confidence remains only moderate. Consensus records the most likely lead while explicitly treating hand-lead identification as the least certain part of the assessment.",
+      "confidence": 0.55,
+      "frames_cited": [
+        42.3,
+        64.9
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 139.6,
+    "phase_timings": [
+      {
+        "phase": "needle_load",
+        "start_seconds": 0.0,
+        "end_seconds": 7.4,
+        "duration_seconds": 7.4
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 7.4,
+        "end_seconds": 42.3,
+        "duration_seconds": 34.9
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 42.3,
+        "end_seconds": 64.9,
+        "duration_seconds": 22.6
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 64.9,
+        "end_seconds": 90.8,
+        "duration_seconds": 25.9
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 90.8,
+        "end_seconds": 122.7,
+        "duration_seconds": 31.9
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 122.7,
+        "end_seconds": 139.4,
+        "duration_seconds": 16.7
+      },
+      {
+        "phase": "completion",
+        "start_seconds": 139.4,
+        "end_seconds": 139.6,
+        "duration_seconds": 0.2
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "left",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Best estimate is a left-led surgeon's knot. The exact lead remains the least certain element of the review, but both teachers agree the first throw is correctly configured and seats appropriately."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw reverses the first and preserves alternation. The throw is efficient enough technically, though regrasping still adds time."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw alternates back and locks the knot stack. Both teachers agree the completed knot is secure and the drain remains well approximated."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.0,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 2.5,
+      "confidence": "low",
+      "placement_notes": "The dots are approximated well enough for a modest placement-only deduction, but sub-millimeter confidence is not available from the top-down direct-camera angle."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Both teachers independently report complete closure, an intact drain, and a stable final knot with no obvious slit gap."
+    },
+    "estimated_penalties": 2.5,
+    "estimated_fls_score": 457.9,
+    "confidence_score": 0.7,
+    "technique_summary": "V31 is the cleanest calibration point in the current series: both teachers converge almost exactly on the score, the direct-camera view confirms a secure knot and intact drain, and the main remaining losses come from residual regrasping rather than any substantive technical defect. This is a strong pass-level improvement over V30 on the same blue-trainer station.",
+    "improvement_suggestions": [
+      "Begin the first throw sooner after the stitch is passed by reducing the small reset interval before knot formation.",
+      "Make the throw-to-throw hand switch more deliberate so the alternation is unmistakable on both video review and execution.",
+      "Present both tails for trimming immediately after the third throw seats to convert the strong technical result into a faster finishing sequence."
+    ],
+    "strengths": [
+      "Tightest non-coincidental two-teacher agreement in the entire series.",
+      "Needle placement remains close to both targets with no avulsion or visible slit gap.",
+      "Three-throw sequence is secure and the final knot stays seated through cutting.",
+      "Clear improvement over V30 on the same station, confirming rapid blue-trainer adaptation."
+    ]
+  },
+  "critique_reasoning": "FINAL ARBITRATION: V31 is effectively an exact-agreement case. Both teachers identify the same clinically important result: competent placement, secure three-throw knot, intact drain, and a meaningful time improvement relative to V30. Consensus therefore adopts the rubric-strict GPT-4o totals for time and penalties, preserves the near-exact reconciled score, and records the remaining disagreement as a phase-boundary prompt issue rather than a substantive scoring conflict. The automated Anthropic arbitration path remained unavailable because the configured API key was invalid, so this consensus was resolved directly from the two teacher scorecards and the teacher comparison artifact.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T14:30:28Z"
+  },
+  "_meta": {
+    "video_id": "V31_video",
+    "model": "manual-consensus",
+    "round": 1,
+    "elapsed_seconds": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd_approx": 0.0,
+    "timestamp": "2026-04-07T14:30:28Z",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 0.0,
+    "round2_input_tokens": 0,
+    "round2_output_tokens": 0,
+    "total_cost_usd_approx": 0.0,
+    "manual_arbitration": true,
+    "automation_error": "invalid x-api-key"
+  }
+}
