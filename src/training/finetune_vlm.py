@@ -51,11 +51,14 @@ def _finetune_unsloth(config: dict) -> dict:
     )
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    logger.info(f"[unsloth] Loading {base_model} in 4-bit...")
+    use_4bit = config.get("quantization") == "4bit"
+    use_grad_ckpt = config.get("gradient_checkpointing", False)
+
+    logger.info(f"[unsloth] Loading {base_model} ({'4-bit' if use_4bit else 'bf16'})...")
     model, tokenizer = FastVisionModel.from_pretrained(
         base_model,
-        load_in_4bit=True,
-        use_gradient_checkpointing="unsloth",
+        load_in_4bit=use_4bit,
+        use_gradient_checkpointing="unsloth" if use_grad_ckpt else False,
     )
 
     model = FastVisionModel.get_peft_model(

@@ -2,8 +2,8 @@
 
 ## Overview
 
-Fine-tune Qwen2.5-VL-7B-Instruct on your FLS scoring data using QLoRA via Unsloth.
-Expected cost: **<$15** on RunPod spot RTX 4090.
+Fine-tune Qwen2.5-VL-7B-Instruct on your FLS scoring data using LoRA via Unsloth.
+Expected cost: ~$3-5 on RunPod H200 spot.
 
 ## Prerequisites
 
@@ -30,15 +30,15 @@ This creates `data/training/YYYY-MM-DD_v1/` with `train.jsonl`, `val.jsonl`, `te
 ### 2. Launch GPU Instance
 
 **RunPod (recommended for spot pricing):**
-- Template: `runpod/pytorch:2.4.0-py3.11-cuda12.1.0-devel-ubuntu22.04`
-- GPU: RTX 4090 (24GB) — ~$0.40/hr spot
-- Disk: 50GB (model weights ~15GB + dataset)
-- No need to use the Docker image — the launch script handles deps
+- Template: `runpod/pytorch:2.4.0-py3.11-cuda12.4.0-devel-ubuntu22.04`
+- GPU: H200 SXM (141GB) — ~$3-4/hr spot, best quality
+- Disk: 80GB (model weights ~15GB bf16 + dataset + checkpoint)
+- 
 
 **Vast.ai alternative:**
-- Search for RTX 4090 or L40S
-- Use PyTorch 2.4+ CUDA 12.x template
-- Similar pricing
+- Search for H200 SXM or H100 SXM
+- Use PyTorch 2.4+ CUDA 12.4 template
+- H200 ~$3-4/hr, H100 ~$2-3/hr
 
 ### 3. Upload Repo + Data to GPU Instance
 
@@ -74,7 +74,7 @@ pip install "unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.
 python -m src.training.finetune_vlm --config src/configs/finetune_task5_v1.yaml
 ```
 
-Training takes ~2-4 hours on RTX 4090 for 26 videos × 2 epochs.
+Training takes ~15-20 minutes on H200 for 26 videos × 2 epochs.
 
 ### 5. Download Checkpoint
 
@@ -109,7 +109,7 @@ Promotion criteria (from config):
 |-------|------|
 | API scoring (26 videos × Claude + GPT-4o) | ~$15-25 |
 | Coach feedback (26 videos × Claude) | ~$5-10 |
-| GPU training (4090 spot, 2-4 hrs) | ~$1-2 |
+| GPU training (H200 spot, ~20 min) | ~$1-2 |
 | Evaluation inference | ~$2-5 |
 | **Total** | **~$25-42** |
 
@@ -117,7 +117,7 @@ Promotion criteria (from config):
 
 **"Unsloth install failed"**: The launch script falls back to `hf_trainer` automatically. Edit `src/configs/finetune_task5_v1.yaml` and set `framework: hf_trainer`.
 
-**OOM on RTX 4090**: Reduce `gradient_accumulation` from 4 to 2, or reduce `max_frames_per_sample` from 20 to 15 in the config.
+**OOM (shouldn't happen on H200): If on a smaller GPU, set quantization: "4bit", batch_size: 1, lora_r: 16, gradient_checkpointing: true.
 
 **"No training candidates found"**: Your DuckDB doesn't have scored videos above the confidence threshold. Lower `--min-confidence` or score more videos.
 

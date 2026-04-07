@@ -42,7 +42,7 @@ pip install --quiet --break-system-packages -e ".[training]" 2>/dev/null || \
 # Install Unsloth (try CUDA 12.1 + torch 2.4 first, fall back)
 echo "Installing Unsloth..."
 pip install --quiet --break-system-packages \
-    "unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.git" 2>/dev/null || \
+    "unsloth[cu124-torch240] @ git+https://github.com/unslothai/unsloth.git" 2>/dev/null || \
 pip install --quiet --break-system-packages \
     "unsloth @ git+https://github.com/unslothai/unsloth.git" 2>/dev/null || {
     echo "WARNING: Unsloth install failed. Will fall back to hf_trainer backend."

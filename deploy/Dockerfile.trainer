@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.1.0-devel-ubuntu22.04
+FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
@@ -18,7 +18,7 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir --break-system-packages -e ".[training]"
 
 # Install Unsloth (preferred training backend)
-RUN pip install --no-cache-dir --break-system-packages "unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.git" || \
+RUN pip install --no-cache-dir --break-system-packages "unsloth[cu124-torch240] @ git+https://github.com/unslothai/unsloth.git" || \
     echo "Unsloth install failed — hf_trainer fallback available"
 
 # Install flash-attention (optional but recommended)
