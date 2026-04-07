@@ -2,6 +2,7 @@
 """Score a video using frontier models (Claude + GPT-4o) with critique consensus."""
 import argparse
 import json
+from datetime import datetime
 from pathlib import Path
 
 from rich.console import Console
@@ -17,7 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description="Score video with frontier models")
     parser.add_argument("--video-id", required=True)
     parser.add_argument("--video", required=True, help="Path to video file")
-    parser.add_argument("--task", type=int, default=5)
+    parser.add_argument("--task", default="5")
     parser.add_argument("--prompt-version", default="v001")
     parser.add_argument("--skip-gpt", action="store_true", help="Skip GPT-4o (Claude only)")
     parser.add_argument("--base-dir", default=".")
@@ -44,12 +45,17 @@ def main():
     for s in sorted(all_scores, key=lambda x: x.scored_at)[-10:]:
         history_lines.append(f"{s.video_id}: {s.completion_time_seconds:.0f}s / {s.estimated_fls_score:.0f} FLS")
     history_summary = "\n".join(history_lines) if history_lines else ""
+    score_b = None
 
     # Score with Claude
     console.print("\n[bold blue]Scoring with Claude...[/bold blue]")
     score_a = score_with_claude(
-        frames_b64, args.video_id, video_path.name,
+        frames_b64=frames_b64,
+        video_id=args.video_id,
+        video_filename=video_path.name,
+        video_hash="",
         prompt_version=args.prompt_version,
+        task=args.task,
         previous_scores_summary=history_summary,
     )
     store.save_score(score_a)
@@ -58,18 +64,48 @@ def main():
     if not args.skip_gpt:
         # Score with GPT-4o
         console.print("\n[bold green]Scoring with GPT-4o...[/bold green]")
-        score_b = score_with_gpt(
-            frames_b64, args.video_id, video_path.name,
-            prompt_version=args.prompt_version,
-            previous_scores_summary=history_summary,
-        )
-        store.save_score(score_b)
-        console.print(f"  GPT-4o: {score_b.completion_time_seconds:.0f}s / {score_b.estimated_fls_score:.0f} FLS (conf: {score_b.confidence_score:.2f})")
+        try:
+            score_b = score_with_gpt(
+                frames_b64=frames_b64,
+                video_id=args.video_id,
+                video_filename=video_path.name,
+                video_hash="",
+                prompt_version=args.prompt_version,
+                task=args.task,
+                previous_scores_summary=history_summary,
+            )
+            store.save_score(score_b)
+            console.print(f"  GPT-4o: {score_b.completion_time_seconds:.0f}s / {score_b.estimated_fls_score:.0f} FLS (conf: {score_b.confidence_score:.2f})")
 
-        # Run critique
-        console.print("\n[bold magenta]Running critique agent...[/bold magenta]")
-        consensus = run_critique(score_a, score_b, args.video_id, args.prompt_version)
-        store.save_score(consensus)
+            # Run critique
+            console.print("\n[bold magenta]Running critique agent...[/bold magenta]")
+            try:
+                consensus = run_critique(
+                    score_a=score_a,
+                    score_b=score_b,
+                    video_id=args.video_id,
+                    prompt_version=args.prompt_version,
+                    task=args.task,
+                )
+            except Exception as exc:
+                console.print(f"[yellow]Critique failed, using higher-confidence teacher score: {exc}[/yellow]")
+                selected = score_a if score_a.confidence_score >= score_b.confidence_score else score_b
+                consensus = selected.model_copy(update={
+                    "id": f"score_consensus_{args.video_id}_{datetime.utcnow().strftime('%Y%m%d%H%M%S')}",
+                    "source": "consensus",
+                    "model_name": "fallback_selector",
+                    "model_version": selected.model_version,
+                })
+            store.save_score(consensus)
+        except Exception as exc:
+            console.print(f"[yellow]GPT-4o failed, falling back to Claude-only consensus: {exc}[/yellow]")
+            consensus = score_a.model_copy(update={
+                "id": f"score_consensus_{args.video_id}_{datetime.utcnow().strftime('%Y%m%d%H%M%S')}",
+                "source": "consensus",
+                "model_name": "fallback_claude",
+                "model_version": score_a.model_version,
+            })
+            store.save_score(consensus)
     else:
         consensus = score_a
 
@@ -77,7 +113,7 @@ def main():
     table = Table(title=f"Scoring Results — {args.video_id}")
     table.add_column("Metric", style="bold")
     table.add_column("Claude", justify="right")
-    if not args.skip_gpt:
+    if not args.skip_gpt and score_b is not None:
         table.add_column("GPT-4o", justify="right")
     table.add_column("Consensus", justify="right", style="bold green")
 
@@ -93,7 +129,7 @@ def main():
     ]
 
     for row in rows:
-        if args.skip_gpt:
+        if args.skip_gpt or score_b is None:
             table.add_row(row[0], row[1], row[2])
         else:
             table.add_row(row[0], row[1], f"{score_b.completion_time_seconds:.0f}" if row[0] == "Time (s)" else

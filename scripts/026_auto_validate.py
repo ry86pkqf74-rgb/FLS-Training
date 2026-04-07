@@ -36,15 +36,16 @@ QUARANTINE_SCORE_DIVERGENCE = 50
 MAX_REASONABLE_PENALTY = 20
 MIN_REASONABLE_PENALTY = 0
 
-VALIDATION_LOG = Path("validation_results.jsonl")
+SCRIPT_DIR = Path(__file__).resolve().parent
+DEFAULT_BASE_DIR = SCRIPT_DIR.parent
 
 
-def load_scores(video_id: str = None) -> list[dict]:
+def load_scores(base_dir: Path, video_id: str = None) -> list[dict]:
     """Load scored video data from memory/scores/ and ledger files."""
     scores = []
     
     # Try loading from memory/scores/
-    scores_dir = Path("memory/scores")
+    scores_dir = base_dir / "memory" / "scores"
     if scores_dir.exists():
         for f in scores_dir.glob("*.json"):
             try:
@@ -55,7 +56,7 @@ def load_scores(video_id: str = None) -> list[dict]:
                 continue
 
     # Also try loading from comparisons
-    comp_dir = Path("memory/comparisons")
+    comp_dir = base_dir / "memory" / "comparisons"
     if comp_dir.exists():
         for f in comp_dir.glob("*consensus*.json"):
             try:
@@ -65,7 +66,19 @@ def load_scores(video_id: str = None) -> list[dict]:
             except (json.JSONDecodeError, KeyError):
                 continue
 
-    return scores
+    latest_scores = {}
+    for data in scores:
+        key = (data.get("video_id", "unknown"), data.get("source", "unknown"))
+        scored_at = data.get("scored_at") or data.get("timestamp") or ""
+        previous = latest_scores.get(key)
+        previous_scored_at = ""
+        if previous is not None:
+            previous_scored_at = previous.get("scored_at") or previous.get("timestamp") or ""
+
+        if previous is None or scored_at >= previous_scored_at:
+            latest_scores[key] = data
+
+    return list(latest_scores.values())
 
 
 def time_anchor_check(completion_time: float, estimated_score: float) -> dict:
@@ -108,7 +121,9 @@ def validate_video(claude_score: dict, gpt_score: dict = None) -> dict:
     c_conf = claude_score.get("confidence_score", 0)
     
     # Time anchor check on Claude score
-    if c_time > 0:
+    if c_time <= 0:
+        reasons.append("Claude completion time missing or zero")
+    else:
         anchor = time_anchor_check(c_time, c_fls)
         metrics["time_anchor"] = anchor
         if not anchor["in_band"]:
@@ -144,7 +159,9 @@ def validate_video(claude_score: dict, gpt_score: dict = None) -> dict:
             reasons.append(f"GPT confidence {g_conf:.2f} < {MIN_CONFIDENCE}")
         
         # Time anchor on GPT score too
-        if g_time > 0:
+        if g_time <= 0:
+            reasons.append("GPT completion time missing or zero")
+        else:
             g_anchor = time_anchor_check(g_time, g_fls)
             if not g_anchor["in_band"]:
                 reasons.append(f"GPT score {g_fls} outside time-anchor band")
@@ -166,9 +183,10 @@ def validate_video(claude_score: dict, gpt_score: dict = None) -> dict:
     }
 
 
-def run_validation(video_id: str = None, report: bool = False):
+def run_validation(base_dir: Path, video_id: str = None, report: bool = False):
     """Run validation on all or one video."""
-    scores = load_scores(video_id)
+    scores = load_scores(base_dir, video_id)
+    validation_log = base_dir / "validation_results.jsonl"
     
     if not scores:
         print("No scores found. Run the scoring pipeline first.")
@@ -196,7 +214,7 @@ def run_validation(video_id: str = None, report: bool = False):
         all_entries.append(entry)
         
         # Log
-        with open(VALIDATION_LOG, "a") as f:
+        with open(validation_log, "a") as f:
             f.write(json.dumps(entry, default=str) + "\n")
         
         status = result["status"]
@@ -214,11 +232,12 @@ def run_validation(video_id: str = None, report: bool = False):
 
 def main():
     parser = argparse.ArgumentParser(description="FLS Auto-Validation")
+    parser.add_argument("--base-dir", type=Path, default=DEFAULT_BASE_DIR, help="Repository base directory")
     parser.add_argument("--video-id", type=str, default=None, help="Validate a specific video")
     parser.add_argument("--report", action="store_true", help="Print summary report")
     args = parser.parse_args()
     
-    run_validation(video_id=args.video_id, report=args.report)
+    run_validation(base_dir=args.base_dir, video_id=args.video_id, report=args.report)
 
 
 if __name__ == "__main__":

@@ -6,14 +6,14 @@ from datetime import datetime
 from pathlib import Path
 
 from src.ingest.frame_extractor import extract_frames, frames_to_base64
-from src.scoring.schema import VideoRecord
+from src.scoring.schema import FLSTask, VideoRecord
 from src.memory.memory_store import MemoryStore
 
 
 def main():
     parser = argparse.ArgumentParser(description="Ingest an FLS video")
     parser.add_argument("--video", required=True, help="Path to video file")
-    parser.add_argument("--task", type=int, default=5, help="FLS task number (default: 5)")
+    parser.add_argument("--task", default="5", help="FLS task number or variant (default: 5)")
     parser.add_argument("--note", default="", help="Recording note")
     parser.add_argument("--base-dir", default=".", help="Repo base directory")
     args = parser.parse_args()
@@ -28,15 +28,23 @@ def main():
 
     video_id = video_path.stem.lower().replace(" ", "_").replace("-", "_")
 
+    task_value = str(args.task)
+    if task_value == "5_general":
+        task_name = FLSTask.TASK5_INTRACORPOREAL
+        note = f"{args.note} [category=intracorporeal_general]".strip()
+    else:
+        task_name = FLSTask(f"task{task_value}_intracorporeal_suture")
+        note = args.note
+
     record = VideoRecord(
         video_id=video_id,
         filename=video_path.name,
-        task=f"task{args.task}_intracorporeal_suture",
+        task=task_name,
         duration_seconds=metadata["duration_seconds"],
         resolution=metadata["resolution"],
         fps=metadata["fps"],
         file_hash=metadata["file_hash"],
-        recording_note=args.note,
+        recording_note=note,
         frame_count_extracted=metadata["frame_count"],
     )
 

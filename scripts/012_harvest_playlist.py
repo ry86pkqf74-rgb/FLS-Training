@@ -45,8 +45,11 @@ from pathlib import Path
 # CONFIGURATION
 # ============================================================
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+
 DOWNLOAD_DIR = Path.home() / "fls_harvested_videos"
-CLASSIFICATION_LOG = Path("playlist_classification.jsonl")
+CLASSIFICATION_LOG = REPO_ROOT / "playlist_classification.jsonl"
 
 # Keywords for metadata-based classification
 FLS_KEYWORDS = [
@@ -359,10 +362,12 @@ def score_category(category: str):
     print(f"=== Scoring {len(entries)} '{category}' videos ===\n")
 
     if category == "fls_task5":
-        task_arg = "5"
+        ingest_task_arg = "5"
+        score_task_arg = "5"
         print("Using standard FLS Task 5 scoring prompt.\n")
     elif category == "intracorporeal_general":
-        task_arg = "5_general"
+        ingest_task_arg = "5_general"
+        score_task_arg = "5_general"
         print("Using adapted intracorporeal scoring prompt.")
         print("NOTE: These videos won't have penrose drain / marked targets.")
         print("Scoring focuses on: knot quality, hand technique, economy of motion.\n")
@@ -370,8 +375,8 @@ def score_category(category: str):
         print(f"Cannot score category '{category}'. Use 'fls_task5' or 'intracorporeal_general'.")
         return
 
-    ingest_script = Path("scripts/010_ingest_video.py")
-    score_script = Path("scripts/020_score_frontier.py")
+    ingest_script = REPO_ROOT / "scripts" / "010_ingest_video.py"
+    score_script = REPO_ROOT / "scripts" / "020_score_frontier.py"
 
     if not ingest_script.exists():
         print(f"Pipeline not found at {ingest_script}. Push framework code to repo first.")
@@ -380,19 +385,36 @@ def score_category(category: str):
     scored = 0
     errors = 0
     for i, entry in enumerate(entries, 1):
+        yt_id = entry["youtube_id"]
         vpath = entry.get("video_path")
-        if not vpath or not Path(vpath).exists():
+        if vpath and Path(vpath).exists():
+            resolved_path = Path(vpath)
+        else:
+            resolved_path = None
+            preferred_patterns = [
+                f"{yt_id}.f*.mp4",
+                f"{yt_id}.f[0-9][0-9][0-9].webm",
+                f"{yt_id}.webm",
+                f"{yt_id}.mp4",
+            ]
+            for pattern in preferred_patterns:
+                matches = sorted(DOWNLOAD_DIR.glob(pattern))
+                matches = [match for match in matches if not match.name.endswith(".f251.webm")]
+                if matches:
+                    resolved_path = matches[0]
+                    break
+
+        if resolved_path is None or not resolved_path.exists():
             print(f"[{i}/{len(entries)}] SKIP (file not found): {entry['title'][:50]}")
             errors += 1
             continue
 
-        yt_id = entry["youtube_id"]
         video_id = f"yt_{yt_id}"
         print(f"[{i}/{len(entries)}] {entry['title'][:60]}")
 
         # Ingest
         result = subprocess.run(
-            ["python", str(ingest_script), "--video", vpath, "--task", task_arg],
+            [sys.executable, str(ingest_script), "--base-dir", str(REPO_ROOT), "--video", str(resolved_path), "--task", ingest_task_arg],
             capture_output=True, text=True, timeout=120
         )
         if result.returncode != 0:
@@ -402,8 +424,23 @@ def score_category(category: str):
 
         # Score
         if score_script.exists():
+            score_cmd = [
+                sys.executable,
+                str(score_script),
+                "--base-dir",
+                str(REPO_ROOT),
+                "--video-id",
+                video_id,
+                "--video",
+                str(resolved_path),
+                "--task",
+                score_task_arg,
+            ]
+            if os.getenv("FLS_SKIP_GPT", "").lower() in {"1", "true", "yes"}:
+                score_cmd.append("--skip-gpt")
+
             result = subprocess.run(
-                ["python", str(score_script), "--video-id", video_id, "--video", vpath],
+                score_cmd,
                 capture_output=True, text=True, timeout=300
             )
             if result.returncode != 0:
@@ -456,8 +493,7 @@ Workflow:
     args = parser.parse_args()
 
     if args.output:
-        global DOWNLOAD_DIR
-        DOWNLOAD_DIR = Path(args.output)
+        globals()["DOWNLOAD_DIR"] = Path(args.output)
 
     if args.download:
         if not args.url:

@@ -189,7 +189,7 @@ def _identify_priorities(
             priority_level = FeedbackPriority.MEDIUM
 
         priorities.append(ImprovementPriority(
-            rank=0,  # will be set after sorting
+            rank=1,  # temporary placeholder; reassigned after sorting
             priority=priority_level,
             phase=pc.phase,
             current_value=f"{pc.duration_seconds:.0f}s",
@@ -229,20 +229,28 @@ def _build_progression_insights(
     best_time = min(times)
 
     # Overall improvement
-    improvement_pct = (baseline - current_time) / baseline * 100
-    insights.append(ProgressionInsight(
-        insight_type="overall_progress",
-        description=f"{improvement_pct:.0f}% improvement from baseline ({baseline:.0f}s → {current_time:.0f}s)",
-        evidence=f"Baseline: {baseline:.0f}s, Current: {current_time:.0f}s, Best: {best_time:.0f}s",
-        recommendation="" if improvement_pct > 0 else "Performance below baseline — check equipment or fatigue.",
-    ))
+    if baseline > 0:
+        improvement_pct = (baseline - current_time) / baseline * 100
+        insights.append(ProgressionInsight(
+            insight_type="overall_progress",
+            description=f"{improvement_pct:.0f}% improvement from baseline ({baseline:.0f}s → {current_time:.0f}s)",
+            evidence=f"Baseline: {baseline:.0f}s, Current: {current_time:.0f}s, Best: {best_time:.0f}s",
+            recommendation="" if improvement_pct > 0 else "Performance below baseline — check equipment or fatigue.",
+        ))
+    else:
+        insights.append(ProgressionInsight(
+            insight_type="overall_progress",
+            description="Baseline timing unavailable because earlier scored attempts had zero or missing duration.",
+            evidence=f"Baseline: {baseline:.0f}s, Current: {current_time:.0f}s, Best: {best_time:.0f}s",
+            recommendation="Interpret progression cautiously until scored attempts include measurable task completion times.",
+        ))
 
     # Plateau detection (last 5 within 10% of each other)
     if len(times) >= 5:
         last5 = times[-5:]
         avg = sum(last5) / 5
-        spread = (max(last5) - min(last5)) / avg
-        if spread < 0.10:
+        spread = (max(last5) - min(last5)) / avg if avg > 0 else 0
+        if avg > 0 and spread < 0.10:
             insights.append(ProgressionInsight(
                 insight_type="plateau_detection",
                 description=f"Performance plateau at ~{avg:.0f}s for last 5 attempts",
