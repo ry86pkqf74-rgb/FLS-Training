@@ -1,0 +1,76 @@
+{
+  "comparison_id": "cmp_postV8_001",
+  "video_id": "postV8_video",
+  "video_filename": "postV8.mov",
+  "video_hash": "95deb0c3f060d688",
+  "task": "task5_intracorporeal_suture",
+  "created_at": "2026-04-07T12:00:00Z",
+  "teachers": [
+    {
+      "source": "teacher_claude",
+      "score_id": "score_claude_postV8_001",
+      "model": "claude-sonnet-4-20250514",
+      "completion_time_seconds": 208.0,
+      "estimated_penalties": 13.0,
+      "estimated_fls_score": 379.0,
+      "confidence_score": 0.52,
+      "drain_gap_visible": true,
+      "phase_timings": {"needle_load": 13, "suture_placement": 62, "first_throw": 32, "second_throw": 28, "third_throw": 30, "suture_cut": 38}
+    },
+    {
+      "source": "teacher_chatgpt",
+      "score_id": "score_chatgpt_postV8_001",
+      "model": "gpt-4o",
+      "completion_time_seconds": 200.0,
+      "estimated_penalties": 3.5,
+      "estimated_fls_score": 396.5,
+      "confidence_score": 0.72,
+      "drain_gap_visible": false,
+      "phase_timings": {"needle_load": 13.2, "suture_placement": 24.8, "first_throw": 37.2, "second_throw": 43.2, "third_throw": 67.0, "suture_cut": 14.2}
+    }
+  ],
+  "deltas": {
+    "completion_time_delta_s": 8.0,
+    "penalty_delta": 9.5,
+    "fls_score_delta": 17.5,
+    "confidence_delta": 0.20,
+    "phase_timing_max_delta_s": 37.0,
+    "disputed_items": ["drain_gap_visible", "suture_placement_duration", "third_throw_duration", "suture_cut_duration"]
+  },
+  "agreement": {
+    "completed_intracorporeally": true,
+    "drain_avulsion": false,
+    "automatic_zero_triggered": false,
+    "first_throw_is_surgeon_knot": true,
+    "hand_switching_preserved": true,
+    "approximate_total_time_window_s": [200, 213],
+    "verdict": "slow_but_complete_no_major_technical_failure"
+  },
+  "reconciled": {
+    "completion_time_seconds": 204.0,
+    "rationale_completion": "Both teachers' true measurements bracket 204s (gpt narrative says 204-205 before rounding to 200; claude says 208).",
+    "phase_timings": {"needle_load": 13, "suture_placement": 25, "first_throw": 37, "second_throw": 43, "third_throw": 65, "suture_cut": 16, "rationale": "GPT-4o phase split is more credible — Claude appears to have defaulted suture_placement to a boilerplate ~62s under uncertainty (same value used in V6/V8/V10) and compressed throw phases to compensate."},
+    "penalties": {
+      "mark_deviation": 4.25,
+      "rationale_deviation": "Average of two low-confidence estimates (3.5 + 5.0)/2.",
+      "partial_closure_penalty": 3.0,
+      "rationale_closure": "Disputed gap. Claude's frame description supports a real upper-portion non-approximation, but Claude over-calls gaps in this series. Conservative partial penalty rather than 0 or 8.",
+      "knot_security": 0,
+      "hand_switch_failure": 0,
+      "drain_avulsion": 0,
+      "total": 7.25
+    },
+    "fls_score": 388.75,
+    "calculation": "600 - 204 - 7.25 = 388.75",
+    "confidence": 0.65
+  },
+  "training_signal": {
+    "high_value_disagreement": true,
+    "claude_failure_mode": "Defaults suture_placement to ~62s under low-confidence visibility, compressing other phases to fit total time.",
+    "chatgpt_strength": "More granular frame-by-frame phase tracing (frame numbers in the 100s-6000s range vs Claude's frame indices).",
+    "chatgpt_weakness": "Rounded completion time to 200.0 despite narrative indicating 204-205. Underestimates gap visibility from limited frame sampling.",
+    "use_for_critique_agent": true,
+    "recommended_label_for_student_training": 388.75
+  },
+  "notes": "First teacher disagreement of significance in the series. The pattern (Claude over-penalizes by ~10pts, GPT-4o under-times by ~5s) is the kind of systematic bias the critique agent and consensus pipeline are designed to capture and correct."
+}

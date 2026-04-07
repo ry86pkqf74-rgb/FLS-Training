@@ -1,0 +1,70 @@
+{
+  "id": "score_claude_postV8_001",
+  "video_id": "postV8_video",
+  "video_filename": "postV8.mov",
+  "video_hash": "95deb0c3f060d688",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T09:30:00Z",
+  "frame_analyses": [
+    {"frame_number": 2, "phase": "needle_load", "description": "At 11 seconds, both instruments in field near drain. Suture and needle visible. Quick entry.", "technique_notes": "Standard fast instrument entry. Needle loading beginning."},
+    {"frame_number": 6, "phase": "suture_placement", "description": "At 53 seconds, both instruments working at drain with suture loops visible. Still in suture placement or early first throw.", "technique_notes": "Extended suture placement phase. At 53 seconds, still working on needle driving through drain marks."},
+    {"frame_number": 10, "phase": "first_throw", "description": "At 96 seconds, both instruments engaged near drain with suture wrapping visible. First or second throw in progress.", "technique_notes": "Throw phase. The instruments appear coordinated but pace is slow relative to recent attempts."},
+    {"frame_number": 16, "phase": "third_throw", "description": "At 160 seconds, both instruments working near drain. Suture loop extending to the right. Late throw or early cutting phase.", "technique_notes": "Still in active phases at 160 seconds — significantly slower than PostV7 (which was complete by 142s). The extended time suggests difficulty with one or more throws."},
+    {"frame_number": 20, "phase": "suture_cut", "description": "At 203 seconds, both instruments STILL in field. Suture loop visible above right instrument. Task not yet complete. Extended cutting phase.", "technique_notes": "Instruments still engaged at 203 seconds. This is the longest any post-training attempt has taken to reach this point. Likely having difficulty with suture cutting."},
+    {"frame_number": 21, "phase": "completion", "description": "Final frame at 213 seconds. Instruments withdrawn. Completed knot visible on Penrose drain with dark suture thread. The drain slit shows a VISIBLE GAP — the upper portion is not approximated. Drain remains attached to suture block (not avulsed).", "technique_notes": "Worst time in the entire series at ~208 seconds, exceeding even the pre-training baseline (198s). The visible gap suggests insufficient knot tension. This is likely a fatigue-driven regression if done in the same session as previous attempts."}
+  ],
+  "completion_time_seconds": 208.0,
+  "phase_timings": [
+    {"phase": "idle", "start_seconds": 0, "end_seconds": 5, "duration_seconds": 5},
+    {"phase": "needle_load", "start_seconds": 5, "end_seconds": 18, "duration_seconds": 13},
+    {"phase": "suture_placement", "start_seconds": 18, "end_seconds": 80, "duration_seconds": 62},
+    {"phase": "first_throw", "start_seconds": 80, "end_seconds": 112, "duration_seconds": 32},
+    {"phase": "second_throw", "start_seconds": 112, "end_seconds": 140, "duration_seconds": 28},
+    {"phase": "third_throw", "start_seconds": 140, "end_seconds": 170, "duration_seconds": 30},
+    {"phase": "suture_cut", "start_seconds": 170, "end_seconds": 208, "duration_seconds": 38}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "unclear", "hand_switched": null, "appears_secure": true, "notes": "Throw wrapping visible in frames 8-10. Confidence moderate."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Second throw in progress around frames 12-14. Confidence low."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": false, "notes": "Third throw completed but final result shows visible gap. Knot tension appears insufficient. Confidence low."}
+  ],
+  "suture_placement": {"deviation_from_mark1_mm": 2.5, "deviation_from_mark2_mm": 2.5, "total_deviation_penalty": 5.0, "confidence": "low"},
+  "drain_assessment": {"gap_visible": true, "drain_avulsed": false, "slit_closure_quality": "partial"},
+  "estimated_penalties": 13.0,
+  "estimated_fls_score": 379.0,
+  "confidence_score": 0.52,
+  "technique_summary": "This eighth video represents the worst performance in the entire training series — at 208 seconds with a visible drain gap, it is slower than even the pre-training baseline (198s). Every phase is extended: suture placement at ~62 seconds (matching the worst previous attempt), throws averaging 30 seconds each, and cutting at 38 seconds. The visible gap confirms the pattern of inconsistent knot tension. Needle loading remains at 13 seconds, confirming this is the only fully retained skill. If this attempt was performed in the same session as PostV7 (the personal best at 142s), the 66-second regression strongly suggests muscle and mental fatigue. The recommendation would be to limit practice sessions to 4-5 attempts maximum, rest, and resume in a subsequent session.",
+  "improvement_suggestions": [
+    "CRITICAL: Limit practice sessions to 4-5 attempts to prevent fatigue-driven regression — this video's 208s versus the 142s achieved in PostV7 is almost certainly fatigue",
+    "Every phase regressed: suture placement (62s), throws (30s avg), cutting (38s) — rest is the primary intervention needed",
+    "When fresh, the trainee has demonstrated 142-second performance with complete closure — the skill is there, endurance is the limiter",
+    "Consider shorter, more frequent practice sessions rather than extended single sessions"
+  ],
+  "strengths": [
+    "Needle loading maintained at 13 seconds even under fatigue — deeply ingrained skill",
+    "All three throws completed in correct sequence despite fatigue",
+    "Drain not avulsed — tissue handling remains safe even when tired",
+    "Task completed within the 600-second time limit"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video", "postV6_video", "postV7_video"],
+    "time_vs_pre": 10,
+    "time_vs_postV7": 66,
+    "score_vs_pre": -10.5,
+    "score_vs_postV7": -76.5,
+    "trajectory": "worst_performance_fatigue_driven",
+    "key_observations": [
+      "WORST time in series: 208s (pre was 198s, PostV7 was 142s)",
+      "WORST score in series: 379.0 (pre was 389.5)",
+      "66-second regression from PostV7 — strongest evidence of fatigue effect",
+      "Suture placement at 62s matches postV6 worst",
+      "Cutting at 38s — extended again",
+      "Gap returned — partial closure",
+      "Only needle loading stable at 13s",
+      "Strong recommendation: shorter practice sessions with rest between"
+    ]
+  }
+}
