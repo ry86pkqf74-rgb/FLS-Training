@@ -1,0 +1,67 @@
+{
+  "id": "score_gpt4o_V26_001",
+  "video_id": "V26_video",
+  "video_filename": "V26.mov",
+  "video_alias": "V26",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o-2024-11-20",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T05:00:00Z",
+  "recording_notes": "Phone filming RCA monitor — FLS skills lab, same setup as V25. 104.1s clip, task ~93.1s. Active work frames ~7-99.",
+  "frame_analyses": [
+    {"frame_number": 180, "phase": "needle_load", "description": "First instrument enters field and begins orienting needle near target.", "technique_notes": "Prompt start; brief early adjustment before bite sequence."},
+    {"frame_number": 312, "phase": "needle_load", "description": "Needle loaded and aligned for first pass, tips centered over working area.", "technique_notes": "Acceptable angle; small regrasping before drive."},
+    {"frame_number": 546, "phase": "suture_placement", "description": "Both bites appear through marked region; suture being drawn through drain.", "technique_notes": "Placement close to target; exact deviation hard to measure."},
+    {"frame_number": 690, "phase": "first_throw", "description": "First knot sequence begins with instruments crossing and loop building.", "technique_notes": "Consistent with double-wrap surgeon's knot setup."},
+    {"frame_number": 1020, "phase": "first_throw", "description": "First throw advancing toward drain, seated over approximation point.", "technique_notes": "Reasonable control; several regrips to lay flat."},
+    {"frame_number": 1245, "phase": "first_throw", "description": "First throw tightened; knot stack centered over target area.", "technique_notes": "No obvious slip during seating."},
+    {"frame_number": 1560, "phase": "second_throw", "description": "Second throw formed from opposite side, laid over first throw.", "technique_notes": "Appropriate hand alternation; loop smaller and more efficient than first."},
+    {"frame_number": 1995, "phase": "third_throw", "description": "Third throw built with another alternating hand sequence.", "technique_notes": "Slower; extra slack management and regrasping before tightening."},
+    {"frame_number": 2520, "phase": "third_throw", "description": "Final tightening underway; approximation intact.", "technique_notes": "No avulsion or loosening; throw sequence prolonged."},
+    {"frame_number": 2904, "phase": "suture_cut", "description": "Blue scissors enter and cut suture tails near completed knot.", "technique_notes": "Controlled, performed inside trainer."},
+    {"frame_number": 2970, "phase": "completion", "description": "Both ends cut; field clear with knot in place.", "technique_notes": "Final construct approximated, no obvious gap or disruption."}
+  ],
+  "completion_time_seconds": 93.1,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 4.4, "duration_seconds": 4.4},
+    {"phase": "suture_placement", "start_seconds": 4.4, "end_seconds": 13.1, "duration_seconds": 8.7},
+    {"phase": "first_throw", "start_seconds": 13.1, "end_seconds": 39.1, "duration_seconds": 26.0},
+    {"phase": "second_throw", "start_seconds": 39.1, "end_seconds": 53.2, "duration_seconds": 14.1},
+    {"phase": "third_throw", "start_seconds": 53.2, "end_seconds": 88.4, "duration_seconds": 35.2},
+    {"phase": "suture_cut", "start_seconds": 88.4, "end_seconds": 92.9, "duration_seconds": 4.5},
+    {"phase": "completion", "start_seconds": 92.9, "end_seconds": 93.1, "duration_seconds": 0.2}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Right-led double wrap consistent with surgeon's knot; seated after prolonged tightening."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Alternating single throw from opposite side; no obvious loosening."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Switch back to right for final single throw; extra regrasping and slack management before seating."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 3.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No visible residual gap; drain anchored."
+  },
+  "estimated_penalties": 3.0,
+  "estimated_fls_score": 503.9,
+  "confidence_score": 0.67,
+  "technique_summary": "Task completed efficiently at ~93s with no drain avulsion and no obvious knot failure after cutting. Needle placement close to marks, final approximation intact. First and especially third throws required extra regrasping and slack management, reducing economy of motion.",
+  "improvement_suggestions": [
+    "Reduce early needle-loading adjustments so first pass starts sooner with stable drive angle.",
+    "Manage slack more tightly during third throw; long loop and regrasping cost the most time.",
+    "Seat each throw more directly over approximation point with steady lateral tension."
+  ],
+  "strengths": [
+    "Completed well within 600s with continuous forward progress.",
+    "Needle passes close to target marks, no drain avulsion.",
+    "Final knot stack intact after tail cutting, no obvious residual gap."
+  ],
+  "comparison_notes": "Near-exact agreement with Claude V26 (ΔFLS 3.9, Δtime 0.9s). Both teachers identify V26 as the new series best and both flag third_throw as the biggest economy-of-motion loss. Placement penalty disagreement: Claude 4.0mm (2.0 per mark) vs GPT-4o 3.0mm (1.5 per mark); both low-confidence estimates."
+}

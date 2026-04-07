@@ -1,0 +1,64 @@
+{
+  "id": "comparison_V26_001",
+  "video_id": "V26_video",
+  "video_alias": "V26",
+  "created_at": "2026-04-08T05:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V26_video_claude-sonnet-4_20260407_110000.json",
+      "completion_time_seconds": 94.0,
+      "estimated_penalties": 6.0,
+      "estimated_fls_score": 500.0,
+      "confidence": 0.40
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V26_video_gpt-4o_20260408_050000.json",
+      "completion_time_seconds": 93.1,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 503.9,
+      "confidence": 0.67
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 0.9,
+    "delta_penalties": 3.0,
+    "delta_fls_score": 3.9,
+    "agreement_level": "very_strong"
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "appears_well_closed", "gpt4o": "complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  3.0,
+    "delta_mm": 1.0,
+    "agreement": "moderate"
+  },
+  "penalty_extra_disagreement": {
+    "claude_total_penalties": 6.0,
+    "gpt4o_total_penalties": 3.0,
+    "claude_breakdown": "4.0 placement + 2.0 other/quality extrapolation",
+    "gpt4o_breakdown": "3.0 placement only",
+    "analysis": "Same rubric-scope issue seen on V20/V22. GPT-4o's rubric-strict read is correct per the uploaded prompt."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 500.0,
+    "gpt4o_fls": 503.9,
+    "reconciled_fls": 503.9,
+    "reconciliation_note": "Both teachers independently identify V26 as the SERIES BEST to date. Near-exact agreement on total time (Δ0.9s), knot sequence, drain closure, and rubric compliance. FLS delta of 3.9 is entirely from Claude's out-of-rubric quality penalties. Rubric-strict reconciled value is 503.9 (GPT-4o). V26 is now the first V-series video to break the 500-point ceiling under any scoring."
+  },
+  "systematic_findings": {
+    "new_series_ceiling": "V26 is the first V-series attempt to break 500 FLS. Both teachers agree. This confirms the trainee's true capability is at the ~500 tier when fresh and using familiar equipment.",
+    "drain_agreement_continues": "V26 is the 6th drain-closure agreement case (V12, V13, V18, V19, V22, V26). Running tally: AGREE 6, DIVERGE 5 (V11, V14, V16, V17, V20).",
+    "rubric_scope_issue_recurring": "Third video (V20, V22, V26) where Claude applies an out-of-rubric quality penalty. Strongly recommends formalizing the 'placement + gap + knot + avulsion + hand switch' penalty set in the prompt and adding a separate cosmetic_quality field if we want to track other signals.",
+    "economy_ceiling_identified": "Both teachers identify the third_throw as the biggest remaining time sink even on the series-best run. GPT-4o's phase split: placement 8.7s, throws 75.3s, cut 4.5s. The trainee's cut phase on V26 is ~4.5s — the fastest ever — showing the long-tail V20 issue has been solved. The remaining lever is knot economy during throws 1 and 3."
+  }
+}
