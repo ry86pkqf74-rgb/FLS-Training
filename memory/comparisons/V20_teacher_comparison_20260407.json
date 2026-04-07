@@ -1,0 +1,74 @@
+{
+  "id": "comparison_V20_001",
+  "video_id": "V20_video",
+  "video_alias": "V20",
+  "created_at": "2026-04-08T03:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V20_video_claude-sonnet-4_20260407_143000.json",
+      "completion_time_seconds": 218.0,
+      "estimated_penalties": 8.0,
+      "estimated_fls_score": 374.0,
+      "confidence": 0.60
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V20_video_gpt-4o_20260408_030000.json",
+      "completion_time_seconds": 215.0,
+      "estimated_penalties": 2.0,
+      "estimated_fls_score": 383.0,
+      "confidence": 0.78
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 3.0,
+    "delta_penalties": 6.0,
+    "delta_fls_score": 9.0,
+    "agreement_level": "moderate"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 10, "gpt4o": 10.0, "delta": 0.0, "note": "Exact agreement (Claude idle+load=15s vs GPT-4o 10s — 5s delta when idle included)."},
+    "suture_placement": {"claude": 40, "gpt4o": 59.0, "delta": 19.0, "note": "GPT-4o extends placement to 69s to absorb tail-equalization; Claude closes placement at 55s."},
+    "first_throw":      {"claude": 27, "gpt4o": 12.0, "delta": 15.0, "note": "Claude's first throw window is wider; GPT-4o closes it at 81s."},
+    "second_throw":     {"claude": 23, "gpt4o": 35.0, "delta": 12.0},
+    "third_throw":      {"claude": 30, "gpt4o": 37.0, "delta": 7.0, "note": "Tightest knot-phase agreement in this video."},
+    "suture_cut":       {"claude": 83, "gpt4o": 61.0, "delta": 22.0, "note": "Both teachers identify cutting as the dominant time sink. Claude: 83s (38% of total). GPT-4o: 61s (28%). Both call this 'the biggest opportunity to improve the score.'"}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_identification": {"claude": "unclear", "gpt4o": "left/right/left", "note": "Direct camera lets GPT-4o commit to hand leadership; Claude still marked unclear."}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true, "note": "Agreement. Direct camera (not monitor recording) — no monitor-bias artifact to worry about."},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "closed", "gpt4o": "complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 3.0,
+    "gpt4o_total_mm":  2.0,
+    "delta_mm": 1.0,
+    "agreement": "moderate",
+    "note": "1mm delta. Both in 'good placement' range. GPT-4o higher confidence (medium vs Claude moderate) because direct camera."
+  },
+  "long_tail_deduction_disagreement": {
+    "claude_deduction": 5.0,
+    "gpt4o_deduction": 0.0,
+    "claude_observation": "Long suture tails visible — one extending ~3cm to right, one to lower left. Tails NOT well trimmed.",
+    "gpt4o_observation": "Only short tails remain on knot while the loose cut segments lie free in the field.",
+    "analysis": "Rubric interpretation disagreement. The FLS Task 5 rubric does NOT explicitly list 'long tails' as a scored penalty — the listed penalties are mark deviation, visible gap, knot failure, avulsion, and failure to switch hands. GPT-4o's rubric-strict reading is technically correct: long tails are not a scoring element. Claude's deduction is a quality extrapolation. RECOMMENDATION: drop the long-tail penalty for rubric-strict scoring. If we want to score tail quality, add it as a separate quality dimension, not as an FLS penalty."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 374.0,
+    "gpt4o_fls": 383.0,
+    "reconciled_fls": 383.0,
+    "reconciliation_note": "V20 is the first video where I recommend NOT taking the midpoint. The FLS rubric as uploaded does not include a long-tail penalty, so GPT-4o's 383.0 is the rubric-strict correct score. Claude's 374.0 reflects a valid quality observation that should be captured in a separate quality field. The reconciled rubric score is 383.0. If a 'cosmetic_quality' dimension is added later, V20 would lose points there, but not from the FLS score itself."
+  },
+  "systematic_findings": {
+    "rubric_scope_clarification_needed": "V20 exposes a rubric scope question. The uploaded prompt lists five penalty categories and 'long tails' is not among them. For training consistency, the scoring prompt should be amended to either (a) explicitly include tail length as a penalty with a defined mm threshold, or (b) explicitly exclude it. Ambiguity produces 6-point FLS deltas like this one on otherwise-aligned runs.",
+    "direct_camera_boosts_both_confidences": "V20 is a direct-camera recording (not phone-of-monitor). GPT-4o confidence 0.78 is the highest of any V-series video scored so far. Claude confidence 0.60 is also elevated vs its ~0.42 monitor-recording baseline. Direct camera consistently raises confidence for both teachers.",
+    "fatigue_regression_confirmed_by_both": "Both teachers independently call cutting the dominant time sink and flag the run as 'inefficient late-phase work.' The reconciled time (215-218s) is the worst in the V-series — worse than pre-training baseline (198s). Both flag this as a skill-not-effort gap: trainee knows technique, execution degraded by fatigue.",
+    "session_discipline_signal": "Claude explicitly recommends a mandatory 2-attempt session cap. GPT-4o doesn't moralize about session management but its phase breakdown (needle_load 10s, cut 61s) implicitly corroborates — a fresh trainee doesn't spend 61 seconds cutting after completing throws in 84s."
+  }
+}
