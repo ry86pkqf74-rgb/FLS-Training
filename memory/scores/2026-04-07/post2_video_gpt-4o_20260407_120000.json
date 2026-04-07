@@ -1,0 +1,52 @@
+{
+  "id": "score_chatgpt_post2_001",
+  "video_id": "post2_video",
+  "video_filename": "post-2.mov",
+  "video_hash": "fa43b4252acf7da9",
+  "source": "teacher_chatgpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T12:00:00Z",
+  "frame_analyses": [
+    {"frame_number": 72, "phase": "needle_load", "description": "The first instrument enters the field and begins acquiring/orienting the needle.", "technique_notes": "Prompt entry with controlled instrument approach."},
+    {"frame_number": 330, "phase": "needle_load", "description": "The needle is aligned for the first bite after several small orientation adjustments near the target.", "technique_notes": "Setup is careful and stable, though slightly deliberate."},
+    {"frame_number": 720, "phase": "suture_placement", "description": "The needle is driven through one side of the Penrose near the marked target.", "technique_notes": "Needle entry appears close to the mark with gentle tissue handling."},
+    {"frame_number": 1470, "phase": "suture_placement", "description": "Both bites are completed and the suture is drawn through to establish tail length for knot tying.", "technique_notes": "Good control of the strand, but there is a brief pause to organize the tails."},
+    {"frame_number": 1650, "phase": "first_throw", "description": "The first throw is being formed with a probable double wrap before cinching down.", "technique_notes": "Right instrument appears to lead; the wrap count is partly obscured but looks consistent with a surgeon's knot."},
+    {"frame_number": 2700, "phase": "second_throw", "description": "The second throw is laid down and squared against the first throw.", "technique_notes": "Lead appears to switch to the left instrument, with controlled tension and no obvious loosening."},
+    {"frame_number": 3330, "phase": "third_throw", "description": "The final throw is being formed and tightened over the seated knot.", "technique_notes": "Right-hand lead appears to return; several regrasping motions and larger loops slow this phase."},
+    {"frame_number": 4560, "phase": "suture_cut", "description": "Scissors are used to divide both suture tails inside the trainer.", "technique_notes": "The cut is straightforward once instruments are positioned, but the transition to cutting takes noticeable time."},
+    {"frame_number": 4890, "phase": "completion", "description": "The drain is lifted for inspection after cutting, and the completed knot remains seated on the Penrose.", "technique_notes": "No avulsion is seen; closure appears maintained during post-task handling."}
+  ],
+  "completion_time_seconds": 153.6,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 9.6, "duration_seconds": 9.6},
+    {"phase": "suture_placement", "start_seconds": 9.6, "end_seconds": 47.4, "duration_seconds": 37.8},
+    {"phase": "first_throw", "start_seconds": 47.4, "end_seconds": 81.8, "duration_seconds": 34.4},
+    {"phase": "second_throw", "start_seconds": 81.8, "end_seconds": 97.4, "duration_seconds": 15.6},
+    {"phase": "third_throw", "start_seconds": 97.4, "end_seconds": 143.6, "duration_seconds": 46.2},
+    {"phase": "suture_cut", "start_seconds": 143.6, "end_seconds": 153.6, "duration_seconds": 10.0},
+    {"phase": "completion", "start_seconds": 153.6, "end_seconds": 168.8, "duration_seconds": 15.2}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "First throw shows a likely double wrap with right-instrument lead before cinching; wrap detail is partially obscured but appears consistent with a surgeon's knot."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Second throw appears single and left-led, squaring the knot without obvious slack."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Final throw appears single and right-led, and the knot remains stable after cutting and inspection."}
+  ],
+  "suture_placement": {"deviation_from_mark1_mm": 1.0, "deviation_from_mark2_mm": 1.5, "total_deviation_penalty": 2.5, "confidence": "medium"},
+  "drain_assessment": {"gap_visible": false, "drain_avulsed": false, "slit_closure_quality": "complete"},
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 443.9,
+  "confidence_score": 0.75,
+  "technique_summary": "The trainee completed the task without drain avulsion and with controlled needle driving and generally gentle handling of the Penrose. Suture placement appeared close to the targets and the final knot looked secure, but knot tying slowed because of several regrasping/tail-management pauses and larger-than-necessary loops before the final cut.",
+  "improvement_suggestions": [
+    "After the tissue pass, set a more consistent short tail sooner so the first throw can start without extra regrasping.",
+    "Keep the active loop smaller and closer to the knot during throws 2 and 3 to reduce slack and speed cinching.",
+    "Bring the scissors in immediately after the third throw is seated; the final cut phase added avoidable time."
+  ],
+  "strengths": [
+    "Needle passage through the drain was controlled and the drain was not avulsed.",
+    "The throws appeared to alternate right-left-right and the final knot sat snugly without an obvious residual gap."
+  ]
+}

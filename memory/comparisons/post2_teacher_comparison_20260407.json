@@ -1,0 +1,85 @@
+{
+  "comparison_id": "cmp_post2_001",
+  "video_id": "post2_video",
+  "video_filename": "post-2.mov",
+  "video_hash": "fa43b4252acf7da9",
+  "task": "task5_intracorporeal_suture",
+  "created_at": "2026-04-07T12:15:00Z",
+  "teachers": [
+    {
+      "source": "teacher_claude",
+      "score_id": "score_claude_post2_001",
+      "model": "claude-sonnet-4-20250514",
+      "completion_time_seconds": 158.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 439.0,
+      "confidence_score": 0.65,
+      "drain_gap_visible": false,
+      "phase_timings": {"needle_load": 13, "suture_placement": 40, "first_throw": 25, "second_throw": 25, "third_throw": 30, "suture_cut": 18}
+    },
+    {
+      "source": "teacher_chatgpt",
+      "score_id": "score_chatgpt_post2_001",
+      "model": "gpt-4o",
+      "completion_time_seconds": 153.6,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 443.9,
+      "confidence_score": 0.75,
+      "drain_gap_visible": false,
+      "phase_timings": {"needle_load": 9.6, "suture_placement": 37.8, "first_throw": 34.4, "second_throw": 15.6, "third_throw": 46.2, "suture_cut": 10.0}
+    }
+  ],
+  "deltas": {
+    "completion_time_delta_s": 4.4,
+    "penalty_delta": 0.5,
+    "fls_score_delta": 4.9,
+    "confidence_delta": 0.10,
+    "phase_timing_max_delta_s": 16.2,
+    "disputed_items": ["first_throw_duration", "second_throw_duration", "third_throw_duration", "suture_cut_duration"]
+  },
+  "agreement": {
+    "completed_intracorporeally": true,
+    "drain_avulsion": false,
+    "automatic_zero_triggered": false,
+    "drain_gap_visible": false,
+    "slit_closure_quality": "complete",
+    "first_throw_is_surgeon_knot": true,
+    "hand_switching_preserved": true,
+    "approximate_total_time_window_s": [153, 158],
+    "verdict": "successful_run_low_penalty_burden_strong_agreement"
+  },
+  "reconciled": {
+    "completion_time_seconds": 156.0,
+    "rationale_completion": "Average of two teachers (158 + 153.6) / 2 ≈ 156. Both teachers within 5s of each other — high confidence on overall time.",
+    "phase_timings": {
+      "needle_load": 11,
+      "suture_placement": 39,
+      "first_throw": 30,
+      "second_throw": 20,
+      "third_throw": 38,
+      "suture_cut": 14,
+      "rationale": "Phase boundaries averaged where both teachers agreed; in the throw breakdown GPT-4o saw a fast second throw and slow first/third, while Claude saw uniform throws — averaging gives a reasonable middle ground."
+    },
+    "penalties": {
+      "mark_deviation": 2.75,
+      "rationale_deviation": "Average of (3.0 + 2.5) / 2 = 2.75. Both teachers low-confidence on exact mm, but agreement on the order of magnitude is good.",
+      "partial_closure_penalty": 0,
+      "knot_security": 0,
+      "hand_switch_failure": 0,
+      "drain_avulsion": 0,
+      "total": 2.75
+    },
+    "fls_score": 441.25,
+    "calculation": "600 - 156 - 2.75 = 441.25",
+    "confidence": 0.78
+  },
+  "training_signal": {
+    "high_value_disagreement": false,
+    "agreement_strength": "strong",
+    "note": "This comparison serves as a 'high agreement / low noise' calibration point. Where the V8 disagreement (Δ17.5 FLS) is a high-value training signal, this post2 comparison (Δ4.9 FLS) confirms both teachers can produce consistent labels on clean, well-completed runs. The throw-phase boundaries are still noisy between the two teachers but the totals converge.",
+    "recommended_label_for_student_training": 441.25,
+    "use_for_critique_agent": true,
+    "calibration_use": true
+  },
+  "notes": "Second teacher comparison in the series. Unlike V8 (where the teachers disagreed by 17.5 points and on visible gap), here both teachers agree on closure quality, knot sequence, and fall within ~5 points on FLS score. This is the kind of clean labeling Claude/GPT-4o consensus can produce on unambiguous runs."
+}
