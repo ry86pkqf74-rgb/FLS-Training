@@ -1,0 +1,65 @@
+{
+  "id": "comparison_V11_001",
+  "video_id": "V11_video",
+  "video_alias": "V11",
+  "created_at": "2026-04-07T21:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V11_video_claude-sonnet-4_20260407_110000.json",
+      "completion_time_seconds": 195.0,
+      "estimated_penalties": 8.0,
+      "estimated_fls_score": 397.0,
+      "confidence": 0.42
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V11_video_gpt-4o_20260407_210000.json",
+      "completion_time_seconds": 198.3,
+      "estimated_penalties": 3.5,
+      "estimated_fls_score": 398.2,
+      "confidence": 0.64
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 3.3,
+    "delta_penalties": 4.5,
+    "delta_fls_score": 1.2,
+    "agreement_level": "strong"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 10, "gpt4o": 4.0,  "delta": 6.0,  "note": "Claude includes a 5s idle period before needle_load then 10s of loading (15s combined); GPT-4o starts clock at first instrument and assigns 4s. Combined idle+needle_load Claude=15s vs GPT-4o=4s (delta 11s)."},
+    "suture_placement": {"claude": 50, "gpt4o": 20.0, "delta": 30.0, "note": "Major disagreement — Claude assigns 50s to placement, GPT-4o only 20s. Difference migrates into downstream phases."},
+    "first_throw":      {"claude": 25, "gpt4o": 29.0, "delta": 4.0},
+    "second_throw":     {"claude": 22, "gpt4o": 50.0, "delta": 28.0, "note": "GPT-4o more than doubles Claude's second_throw estimate."},
+    "third_throw":      {"claude": 33, "gpt4o": 83.0, "delta": 50.0, "note": "Largest single phase delta in any comparison so far — GPT-4o assigns 83s to third_throw, Claude only 33s. GPT-4o absorbs the prolonged late-task reinforcing manipulation into throw 3; Claude puts it into the cutting phase."},
+    "suture_cut":       {"claude": 50, "gpt4o": 11.7, "delta": 38.3, "note": "Mirror of the third_throw disagreement — Claude 50s vs GPT-4o 11.7s. Sum of third_throw + suture_cut: Claude 83s, GPT-4o 94.7s (delta 11.7s). Sum of second+third+cut: Claude 105s, GPT-4o 144.7s — still disagreement even after collapsing the boundary."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": true,             "gpt4o": false,          "agreement": false, "note": "Same pattern as V14 — Claude flags a possible gap (very_low confidence, 'unclear_partial' closure), GPT-4o sees no gap and 'near_complete' closure. This divergence accounts for most of the 4.5pt penalty delta."},
+    "drain_avulsed": {"claude": false,            "gpt4o": false,          "agreement": true},
+    "closure":       {"claude": "unclear_partial","gpt4o": "near_complete","agreement": false}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  3.5,
+    "delta_mm": 0.5,
+    "agreement": "strong",
+    "note": "Both teachers low/very_low confidence — monitor recording limits exact mm measurement, but the estimates themselves are within 0.5 mm."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 397.0,
+    "gpt4o_fls": 398.2,
+    "reconciled_fls": 397.6,
+    "reconciliation_note": "Strongest teacher agreement in the entire V-series — ΔFLS 1.2, even tighter than V14's 1.5. Both teachers converge on total time (within 3.3s) and both reach the same bottom-line judgment: competent completion with major efficiency deficits, no automatic-zero events. The 4.5pt penalty gap is entirely Claude's gap-visible concern, which Claude itself rates very_low confidence. GPT-4o's 398.2 is likely the more reliable point estimate; a 397.6 midpoint is a safe reconciled value."
+  },
+  "systematic_findings": {
+    "boundary_disagreement": "The two teachers disagree massively on WHERE the time goes in this video (placement vs throws vs cut) but agree almost exactly on the TOTAL. This is a strong signal that phase-by-phase training signals should be used with caution — only aggregate time and overall penalties are robust across teachers. Recommend training downstream models on total_time + penalty breakdown, not raw phase durations.",
+    "drain_gap_divergence_recurrence": "V11 and V14 both show Claude flagging a possible drain gap on monitor-filmed videos while GPT-4o sees complete/near-complete closure. This now looks like a systematic Claude bias on low-resolution monitor recordings, not a real finding. Recommend down-weighting Claude's gap-visible signal on any video with 'phone filming monitor' recording notes until ground truth is established.",
+    "late_task_regrasping_consensus": "Despite disagreeing on where it lives (throws vs cut), both teachers identify the late-task segment (from ~105s onward) as the dominant inefficiency. The improvement suggestions converge: shorter working loops, earlier symmetric opposing tension, and earlier cutter exchange prep."
+  }
+}
