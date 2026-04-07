@@ -1,0 +1,2 @@
+{"timestamp": "2026-04-07T06:15:00Z", "event_type": "video_ingested", "data": {"video_id": "lap_pre_video", "filename": "lap_pre_video.mov", "task": "task5_intracorporeal_suture", "duration_seconds": 202.9, "resolution": "1280x720", "fps": 30.0, "file_hash": "8a90d6fbe82917b5"}}
+{"timestamp": "2026-04-07T06:15:00Z", "event_type": "frontier_scored", "data": {"video_id": "lap_pre_video", "score_id": "score_claude_lap_pre_001", "model": "claude-sonnet-4-20250514", "source": "teacher_claude", "fls_score": 389.5, "confidence": 0.55, "cost_usd": 0.0}}
