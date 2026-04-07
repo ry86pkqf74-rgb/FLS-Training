@@ -1,0 +1,162 @@
+{
+  "id": "score_claude_V29_001",
+  "video_id": "V29_video",
+  "video_filename": "V29.mp4",
+  "video_hash": "v29_placeholder",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T18:30:00Z",
+  "recording_notes": "MONITOR RECORDING — SAME NEW STATION as V28. Vizio monitor (logo visible at upper left) with significant color banding/moire at edges. Same bright red foam. 1280x720 at ~30fps. Very close framing — task area fills frame but monitor artifacts reduce quality. Dark suture (not pink/purple like V28 — possibly different suture or just color rendering). Instruments already visible at frame 1 — recording started after task began or with minimal idle time.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 3,
+      "phase": "suture_placement",
+      "description": "Instruments already at drain. One instrument from lower left, one from right. Dark suture visible extending from drain. Task already in progress. Vizio monitor with moire artifacts.",
+      "technique_notes": "Recording starts mid-task or immediately at instrument entry. TIMING STARTS ~1-3s."
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 60,
+      "phase": "first_throw",
+      "description": "Both instruments at drain. Drain appears to have shifted/tilted. Dark suture loops visible above drain. First throw wrapping or tightening.",
+      "technique_notes": "1 minute in, first throw still in progress. Slower than familiar equipment."
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 150,
+      "phase": "throws",
+      "description": "Instrument from lower left at drain. Knot building at drain center. Dark suture visible. Still in throw sequence at 2.5 minutes.",
+      "technique_notes": "Throws extremely prolonged on this equipment. Likely second or third throw."
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 210,
+      "phase": "suture_cut",
+      "description": "Both instruments crossing at drain. Knot visible with suture tails. Appears to be cutting phase. Instrument from lower left, one from upper right.",
+      "technique_notes": "Cutting started ~200s. Throws consumed ~175s (normally 50-67s)."
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 240,
+      "phase": "suture_cut",
+      "description": "Both instruments at drain. Knot at center with suture wrapping. Cutting in progress. Dark suture tails visible.",
+      "technique_notes": "40+ seconds into cutting. Slow but faster than V28's 135s cutting."
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 300,
+      "phase": "completion",
+      "description": "Near completion. One instrument remaining at upper left. Knot visible at drain with short tails. Drain appears closed. Drain not avulsed.",
+      "technique_notes": "Completion ~295s. Short tails visible. Final product appears acceptable."
+    }
+  ],
+  "completion_time_seconds": 295.0,
+  "phase_timings": [
+    {"phase": "needle_load_and_placement", "start_seconds": 0, "end_seconds": 25, "duration_seconds": 25},
+    {"phase": "first_throw", "start_seconds": 25, "end_seconds": 80, "duration_seconds": 55},
+    {"phase": "second_throw", "start_seconds": 80, "end_seconds": 140, "duration_seconds": 60},
+    {"phase": "third_throw", "start_seconds": 140, "end_seconds": 200, "duration_seconds": 60},
+    {"phase": "suture_cut", "start_seconds": 200, "end_seconds": 295, "duration_seconds": 95}
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "unclear",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw ~55s. Still very slow on new equipment but improved from V28."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw ~60s. Prolonged."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw ~60s. Prolonged but consistent with throw 2."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "very_low",
+    "placement_notes": "Moire artifacts and close framing make placement assessment nearly impossible. Conservative estimate."
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "appears_closed",
+    "assessment_note": "At 300s, drain appears closed with compact knot. Short tails. Drain not avulsed despite 5 minutes of manipulation. Better final product visibility than V28."
+  },
+  "estimated_penalties": 8.0,
+  "estimated_fls_score": 297.0,
+  "confidence_score": 0.30,
+  "technique_summary": "V29 at approximately 295 seconds is the second consecutive catastrophic performance on the new equipment station (Vizio monitor, red foam, different instruments). However, it represents a 19% IMPROVEMENT from V28 (365s → 295s), indicating the trainee is beginning to adapt. Throws consumed ~175s (normally 50-67s) and cutting ~95s (normally 26-67s) — both still 2-3x slower than on familiar equipment, but significantly improved from V28's 205s throws and 135s cutting. The dark suture (vs V28's pink/purple) may indicate return to familiar suture material, which could explain part of the improvement. The final product appears acceptable with short tails and closed drain. The V28→V29 improvement trajectory (365→295 = 70s improvement) suggests that with 2-3 more practice runs, the trainee could reach the 150-200s range on this equipment, and eventually return to sub-150s.",
+  "improvement_suggestions": [
+    "V28→V29 improvement of 70 seconds (19%) — ADAPTATION IS OCCURRING on the new equipment.",
+    "Throws improved from ~205s (V28) to ~175s (V29) — 15% faster. Still 3x slower than familiar equipment.",
+    "Cutting improved from 135s (V28) to 95s (V29) — 30% faster. Still 2x slower than familiar equipment.",
+    "At this adaptation rate (~70s improvement per attempt), 2-3 more attempts could bring times to ~150-200s.",
+    "The equipment-change adaptation curve is EXPECTED and mirrors the original learning curve (V1-V5 era).",
+    "If possible, return to familiar equipment for examination-scored attempts. Use new equipment for practice.",
+    "RECORDING: Vizio monitor has severe moire artifacts. Use a polarizing filter or adjust camera angle to reduce.",
+    "CONFIDENCE very low (0.30) due to moire, color banding, and close framing obscuring detail."
+  ],
+  "strengths": [
+    "19% improvement from V28 (365s → 295s) — rapid equipment adaptation",
+    "Final product appears acceptable — short tails, closed drain",
+    "Drain not avulsed — 29 consecutive videos without avulsion",
+    "Perseverance through unfamiliar equipment maintained",
+    "Suture may be dark/standard (vs V28's pink) — partial equipment familiarity restored"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["V26_video", "V27_video", "V28_video"],
+    "time_vs_V28": -70,
+    "time_vs_V27": 155,
+    "time_vs_V26": 201,
+    "time_vs_pre": 97,
+    "score_vs_V28": 70.0,
+    "trajectory": "adapting_to_new_equipment",
+    "key_observations": [
+      "295s / 297 FLS — SECOND WORST in series but 19% better than V28 (365s).",
+      "DIFFERENT MONITOR: Vizio (not RCA) with significant moire artifacts. Same red foam as V28.",
+      "Adaptation occurring: V28 365s → V29 295s = 70s improvement. Equipment learning curve in progress.",
+      "Throws: ~175s (V28: ~205s). Cutting: ~95s (V28: ~135s). Both phases improving.",
+      "Dark suture (vs V28 pink) may mean partial return to familiar materials.",
+      "CONFIDENCE: 0.30 — lowest in series due to moire, artifacts, and close framing.",
+      "Projected: 2-3 more attempts could reach 150-200s on this equipment.",
+      "29th video. V28-V29 should be treated as a SEPARATE EQUIPMENT ARC from V1-V27."
+    ],
+    "equipment_adaptation_curve": {
+      "attempt_1_V28": "365s",
+      "attempt_2_V29": "295s",
+      "improvement_pct": 19,
+      "projected_attempt_3": "~240s",
+      "projected_attempt_5": "~160s",
+      "note": "Linear projection. Actual adaptation may be faster (power law) or slower (asymptotic)."
+    },
+    "series_statistics": {
+      "total_videos": 29,
+      "all_time_best": "94s (V26, familiar equipment)",
+      "familiar_equipment_plateau": "140-155s (V22-V25/V27)",
+      "new_equipment_V28": "365s",
+      "new_equipment_V29": "295s",
+      "new_equipment_improvement": "70s (19%)"
+    }
+  }
+}

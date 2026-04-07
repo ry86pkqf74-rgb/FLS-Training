@@ -1,0 +1,219 @@
+{
+  "id": "score_claude_V26_001",
+  "video_id": "V26_video",
+  "video_filename": "V26.MOV",
+  "video_hash": "v26_placeholder",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T17:00:00Z",
+  "recording_notes": "MONITOR RECORDING — phone filming RCA monitor. Same lab as V25. Similar close framing — task area fills most of frame. 1280x720 at 30fps (lower resolution than V25's 1920x1080). Dark/light suture visible. Moderate debris on perforated board. Stryker tower visible at right. FLS Fundamentals binder below monitor.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 3,
+      "phase": "idle",
+      "description": "Drain centered on pink foam block on white perforated base. No instruments. Same RCA monitor lab setup as V25.",
+      "technique_notes": "Clean starting position."
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8,
+      "phase": "needle_load",
+      "description": "Instruments entering from lower right. One instrument tip visible at drain area with suture/needle. Hand visible at lower left holding instrument outside trainer. TIMING STARTS ~6s.",
+      "technique_notes": "Fast entry. Instruments appear between 6-8s."
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 15,
+      "phase": "suture_placement",
+      "description": "Both instruments at drain area. Needle visible with suture extending downward from instrument. Active needle driving through drain.",
+      "technique_notes": "Already driving needle at 15s — fast placement."
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 25,
+      "phase": "first_throw",
+      "description": "Instruments crossed in X pattern over drain. Suture placed. Transitioning to first throw wrapping. Suture ends extending from drain.",
+      "technique_notes": "Placement complete ~22-24s (~17s from first instrument). Very fast placement — near series best."
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35,
+      "phase": "first_throw",
+      "description": "First throw wrapping. Both instruments at drain. Suture loop visible hanging below drain. Active wrapping in progress.",
+      "technique_notes": "First throw wrap taking shape."
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 45,
+      "phase": "first_throw_tightening",
+      "description": "Instruments spread wide laterally. Suture lines extending from drain to both instruments. Tightening the first throw — classic lateral pull pattern.",
+      "technique_notes": "First throw tightening at 45s. Throw 1 took ~20s (25-45s). Good lateral technique."
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 55,
+      "phase": "second_throw",
+      "description": "Second throw wrapping. Both instruments at drain with suture loops visible. One instrument from lower right, one from lower left. Active wrapping.",
+      "technique_notes": "Second throw at 55s. Fast transition from first throw."
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 65,
+      "phase": "third_throw",
+      "description": "Third throw in progress. Instruments at drain center. Suture wrapping visible. One instrument from upper right pulling suture.",
+      "technique_notes": "Second throw complete ~60s (~13s). Third throw wrapping at 65s."
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 75,
+      "phase": "suture_cut",
+      "description": "Suture tails extending from knot at drain center. Instrument from upper right — transitioning to cutting or just started cutting. Tails visible extending upward and to right.",
+      "technique_notes": "Third throw complete ~72-74s (~12s). Cutting beginning. All three throws in ~48s — fastest in recent series."
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 85,
+      "phase": "suture_cut",
+      "description": "Cutting in progress. Instrument at drain from upper area. Suture tail visible extending downward from knot. One tail may already be cut.",
+      "technique_notes": "~12s into cutting. Efficient scissors work."
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 95,
+      "phase": "suture_cut",
+      "description": "Still cutting. Long suture tails visible extending upward from drain — arcing above the field. Blue/green instrument from lower right. Appears to be cutting the second tail.",
+      "technique_notes": "~22s into cutting. The long tail arc suggests the second tail is being positioned for final cut."
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 101,
+      "phase": "completion",
+      "description": "Task complete. Instruments withdrawn. Drain visible with knot at center — compact knot with short-to-moderate tails. Drain slit appears well-closed. No obvious gap visible at this resolution. Drain not avulsed. Clean final result.",
+      "technique_notes": "Completion at ~100s. Total task time from first instrument: ~94s. NEW ALL-TIME BEST."
+    }
+  ],
+  "completion_time_seconds": 94.0,
+  "phase_timings": [
+    {"phase": "idle", "start_seconds": 0, "end_seconds": 6, "duration_seconds": 6},
+    {"phase": "needle_load", "start_seconds": 6, "end_seconds": 8, "duration_seconds": 2},
+    {"phase": "suture_placement", "start_seconds": 8, "end_seconds": 24, "duration_seconds": 16},
+    {"phase": "first_throw", "start_seconds": 24, "end_seconds": 46, "duration_seconds": 22},
+    {"phase": "second_throw", "start_seconds": 46, "end_seconds": 60, "duration_seconds": 14},
+    {"phase": "third_throw", "start_seconds": 60, "end_seconds": 74, "duration_seconds": 14},
+    {"phase": "suture_cut", "start_seconds": 74, "end_seconds": 100, "duration_seconds": 26}
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "unclear",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw 24-46s (22s). Surgeon's knot assumed. Good lateral tightening visible at 45s."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw 46-60s (14s). Efficient. Single throw."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw 60-74s (14s). Symmetric with throw 2. Good efficiency."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "low",
+    "placement_notes": "Marks not independently visible on RCA monitor. Placement area appears correct. Conservative 2mm estimate per mark."
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "appears_well_closed",
+    "assessment_note": "At 101s, drain slit appears well-closed with compact knot. Short-to-moderate tails. No obvious gap at this resolution. Confidence low due to monitor recording. Drain not avulsed."
+  },
+  "estimated_penalties": 6.0,
+  "estimated_fls_score": 500.0,
+  "confidence_score": 0.40,
+  "technique_summary": "V26 at approximately 94 seconds is a NEW ALL-TIME BEST — smashing V14's 107s record by 13 seconds. Every phase was executed at or near series-best pace: placement ~16s (near best), throws totaling ~50s (best since V14's 48s), and cutting at ~26s (NEW SERIES BEST by a wide margin — V14's previous best was 29s, V24's breakthrough was 40s). The cutting improvement is the headline: from V25's regressed 67s to 26s represents a 61% reduction and the first time cutting has dropped below 30s since V14. This is the first sub-100s performance in the entire 26-video series. FLS score of ~500 would be the highest ever recorded. The trainee has clearly consolidated V24's gains and pushed through to a new performance tier. At 94s, this approaches competitive FLS examination territory.",
+  "improvement_suggestions": [
+    "CELEBRATE: First sub-100s performance. NEW ALL-TIME BEST by 13 seconds.",
+    "Cutting at ~26s is the most dramatic single-phase improvement in the series — from 67s (V25) to 26s.",
+    "Placement at 16s is excellent but could potentially shave 2-3s with pre-staged needle loading.",
+    "First throw at 22s is the longest phase proportionally — investigate if the surgeon's knot double-wrap is the bottleneck.",
+    "RECORDING: Still RCA monitor at 720p. Direct camera would confirm this extraordinary result with higher confidence.",
+    "Verify this time estimate carefully — if confirmed, the trainee has entered a qualitatively different performance tier.",
+    "Continue this session rhythm — whatever warmup/preparation led to V26 should be replicated."
+  ],
+  "strengths": [
+    "NEW ALL-TIME BEST: ~94 seconds — 13s faster than V14 (107s), 23s faster than V24 (117s)",
+    "FIRST SUB-100 SECOND PERFORMANCE in the entire 26-video series",
+    "CUTTING BREAKTHROUGH CONSOLIDATED: ~26s — series best (previous: 29s V14, 40s V24, 67s V25)",
+    "Throws at ~50s total — second best ever (V14: 48s)",
+    "Placement at ~16s — near series best",
+    "ALL PHASES at or near personal bests simultaneously",
+    "Drain appears well-closed, not avulsed — 26 consecutive videos without avulsion",
+    "FLS score ~500 — highest ever estimated",
+    "52% improvement from baseline (198s → 94s)",
+    "Validates the training feedback loop — cutting drills and consistency work paying off"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video", "postV6_video", "postV7_video", "postV8_video", "postV9_video", "postV10_video", "V11_video", "V12_video", "V13_video", "V14_video", "V15_video", "V16_video", "V17_video", "V18_video", "V19_video", "V20_video", "V21_video", "V22_video", "V23_video", "V24_video", "V25_video"],
+    "time_vs_pre": -104,
+    "time_vs_V14": -13,
+    "time_vs_V24": -23,
+    "time_vs_V25": -56,
+    "score_vs_pre": 98.0,
+    "score_vs_V14": 13.0,
+    "score_vs_V24": 23.0,
+    "score_vs_V25": 58.0,
+    "trajectory": "NEW_ALL_TIME_BEST_breakthrough",
+    "phase_comparison": {
+      "placement_16s": "Near series best. V24: 18s. V25: 22s. V14: 22s.",
+      "throws_50s": "Second best ever. V14: 48s. V24: 56s. V25: 58s.",
+      "cutting_26s": "NEW SERIES BEST. V14: 29s. V24: 40s. V25: 67s. MASSIVE improvement."
+    },
+    "key_observations": [
+      "94s / ~500 FLS — NEW ALL-TIME BEST. First sub-100s. Beats V14 (107s) by 13 seconds.",
+      "CUTTING: 26s — 61% improvement from V25 (67s). Best ever by 3s (V14: 29s).",
+      "Throws: 50s — only V14 (48s) was faster. All three throws efficient and symmetric.",
+      "Placement: 16s — excellent, near series best.",
+      "52% improvement from baseline (198s → 94s).",
+      "V25→V26: 150s→94s = 56-second improvement. The V25 regression was NOT a trend — it was a dip before a massive breakthrough.",
+      "The pattern: V24 breakthrough (117s) → V25 regression (150s) → V26 NEW PEAK (94s). Two steps forward, one step back, three steps forward.",
+      "5-video trajectory: V22 152 → V23 155 → V24 117 → V25 150 → V26 94. Exponential improvement envelope.",
+      "If confirmed, this performance is firmly in FLS examination passing range.",
+      "26th video: the full training arc — 198s baseline → 218s crash → 107s peak → 150s plateau → 94s new peak — is a textbook mastery curve."
+    ],
+    "series_statistics": {
+      "total_videos": 26,
+      "all_time_best": "94s (V26) ← NEW",
+      "all_time_second_best": "107s (V14)",
+      "all_time_third_best": "117s (V24)",
+      "all_time_worst": "218s (V20)",
+      "pre_training_baseline": "198s",
+      "current_performance": "94s",
+      "improvement_from_baseline_pct": 52,
+      "last_5_video_trend": "155→117→150→94 (volatile with upward envelope)",
+      "cutting_time_last_5": [58, 40, 67, 26],
+      "cutting_trend": "volatile_with_new_breakthrough",
+      "placement_time_last_5": [24, 18, 22, 16],
+      "throws_time_last_5": [66, 56, 58, 50]
+    }
+  }
+}

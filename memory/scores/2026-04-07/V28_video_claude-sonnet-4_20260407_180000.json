@@ -1,0 +1,194 @@
+{
+  "id": "score_claude_V28_001",
+  "video_id": "V28_video",
+  "video_filename": "V28.mov",
+  "video_hash": "v28_placeholder",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T18:00:00Z",
+  "recording_notes": "MONITOR RECORDING — DIFFERENT SETUP. RCA monitor on yellow basket/crate, directly facing camera. Different lab station — 'No Food or Drink' sign visible at left. DIFFERENT FOAM (brighter red vs pink). 1920x1080 at 30fps. Moderate debris on board. DIFFERENT SUTURE COLOR — appears pink/purple rather than dark/black (may be RCA color rendering or genuinely different suture material). Best direct-facing monitor framing in series but on a smaller/different monitor.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 3,
+      "phase": "idle",
+      "description": "Drain centered on bright red foam. Different setup — monitor on yellow basket, 'No Food/Drink' sign visible. Moderate debris. No instruments.",
+      "technique_notes": "DIFFERENT STATION/SETUP from V25-V27. Equipment change may affect performance."
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 30,
+      "phase": "suture_placement",
+      "description": "Both instruments at drain. One metallic from left, one from upper right. Suture visible. Active needle driving.",
+      "technique_notes": "Instruments entered ~8-10s. Placement in progress at 30s — normal pace so far."
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 60,
+      "phase": "first_throw",
+      "description": "Both instruments at drain with suture visible extending downward. Pink/purple suture clearly visible. First throw in progress.",
+      "technique_notes": "Placement complete ~35s. First throw at 60s — 25s into throw, slower than usual."
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 150,
+      "phase": "throws",
+      "description": "ENORMOUS suture arcs extending across entire field. Instrument from lower left. Suture loops spanning the full width of the view. Tightening a throw with massive excess suture.",
+      "technique_notes": "At 2.5 minutes, still in throws. Suture management severely degraded. Excess suture length causing tangles."
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 180,
+      "phase": "throws",
+      "description": "Large pink/purple suture loops visible across field. Both instruments at drain. Multiple suture crossings. Extremely tangled suture management.",
+      "technique_notes": "3 minutes in, still throwing. Suture tangles are consuming enormous time. Possible re-wraps needed."
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 240,
+      "phase": "throws_or_cutting",
+      "description": "Instrument from upper right at drain. Multiple suture crossings visible over drain. Knot area complex with dark and purple lines.",
+      "technique_notes": "4 minutes. Transitioning to cutting or final throw tightening. Extremely prolonged throw sequence."
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 300,
+      "phase": "suture_cut",
+      "description": "Both instruments at drain. Knot visible. Dark suture and purple suture visible. Cutting in progress. Drain shifted position.",
+      "technique_notes": "5 minutes. Cutting phase but extremely slow. Tangled suture making cutting difficult."
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 330,
+      "phase": "suture_cut",
+      "description": "Instruments crossed in X at drain. Suture tails extending laterally. Still cutting at 5.5 minutes. Knot visible at center.",
+      "technique_notes": "Still cutting. The tangled suture requires multiple cuts and careful work."
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 360,
+      "phase": "suture_cut",
+      "description": "Both instruments at drain. Blue instrument from left, metallic from upper right. Long suture tails still visible. Tangled loops above drain.",
+      "technique_notes": "6 minutes. Still cutting. This is the longest cutting phase in the entire series."
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 378,
+      "phase": "completion",
+      "description": "Task complete. Instruments withdrawn. Knot visible at drain center with short tails. Drain slit appears closed. Drain not avulsed despite the prolonged manipulation.",
+      "technique_notes": "Completion ~375s. Total task time from first instrument: ~365s. WORST PERFORMANCE IN ENTIRE SERIES."
+    }
+  ],
+  "completion_time_seconds": 365.0,
+  "phase_timings": [
+    {"phase": "idle", "start_seconds": 0, "end_seconds": 8, "duration_seconds": 8},
+    {"phase": "needle_load", "start_seconds": 8, "end_seconds": 12, "duration_seconds": 4},
+    {"phase": "suture_placement", "start_seconds": 12, "end_seconds": 35, "duration_seconds": 23},
+    {"phase": "first_throw", "start_seconds": 35, "end_seconds": 90, "duration_seconds": 55},
+    {"phase": "second_throw", "start_seconds": 90, "end_seconds": 160, "duration_seconds": 70},
+    {"phase": "third_throw", "start_seconds": 160, "end_seconds": 240, "duration_seconds": 80},
+    {"phase": "suture_cut", "start_seconds": 240, "end_seconds": 375, "duration_seconds": 135}
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "unclear",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw extremely prolonged (~55s). Suture management issues evident. Multiple attempts likely."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw ~70s. Enormous suture arcs visible — excess suture causing tangles."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw ~80s. Most prolonged. Suture tangles severely impaired efficiency."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "low",
+    "placement_notes": "Placement appeared normal (~23s). The catastrophic regression started AFTER placement."
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "appears_closed",
+    "assessment_note": "Despite the extreme time, final result at 378s shows drain closed with compact knot and short tails. Drain not avulsed — remarkable given 6 minutes of manipulation. Quality of final product appears acceptable despite the time."
+  },
+  "estimated_penalties": 8.0,
+  "estimated_fls_score": 227.0,
+  "confidence_score": 0.35,
+  "technique_summary": "V28 at approximately 365 seconds is the WORST PERFORMANCE IN THE ENTIRE 28-VIDEO SERIES — 85% slower than V26's 94s record set potentially in the same session, and 67% slower than even the V20 crash (218s). The catastrophic regression appears driven by THREE COMPOUNDING FACTORS: (1) DIFFERENT EQUIPMENT/STATION — new monitor setup, different foam, possibly different instruments; (2) DIFFERENT SUTURE — appears pink/purple rather than the familiar dark/black, suggesting a different material with different handling properties; (3) FATIGUE — if this follows V26-V27 in the same session. The placement phase (23s) was normal, indicating the core needle driving skill transferred. But every throw was catastrophically slow (55s, 70s, 80s — totaling ~205s vs typical 50-67s) and cutting consumed 135s. The visible suture tangles suggest the different suture material (if confirmed) was the primary disruptor — unfamiliar handling properties made every wrapping motion take 3-4x longer. The FINAL PRODUCT paradoxically looks acceptable — short tails, closed drain, no avulsion — suggesting the trainee persevered through difficulty to complete correctly.",
+  "improvement_suggestions": [
+    "CRITICAL: Identify what changed. Was this a DIFFERENT SUTURE MATERIAL? The pink/purple color suggests possibly Vicryl or a different brand vs the standard 2-0 silk.",
+    "If different suture: this is expected. Suture handling skills are partially suture-specific. Practice with the new material will bring times down rapidly.",
+    "If same suture, different color rendering: the equipment change alone (different station, monitor, possibly different instruments) can cause significant regression.",
+    "The 365s time should NOT be compared to V26's 94s in the same performance trajectory — this is effectively a different task with different equipment.",
+    "POSITIVE: Placement was normal (23s). The core skill transferred. Only suture manipulation was affected.",
+    "POSITIVE: The trainee completed the task correctly despite 6+ minutes of difficulty. Perseverance and quality maintained.",
+    "If this equipment/suture will be used again, do 3-5 dedicated practice runs to build familiarity before recording.",
+    "Consider this V28 as a new 'baseline' for this specific equipment configuration, not a regression in the V1-V27 arc."
+  ],
+  "strengths": [
+    "COMPLETED the task despite extreme difficulty — perseverance",
+    "Final product quality appears acceptable — short tails, closed drain, no avulsion",
+    "Placement at 23s — core needle driving skill transferred to new equipment",
+    "Drain not avulsed despite 6 minutes of manipulation — 28 consecutive videos",
+    "Better monitor framing — direct camera view of RCA monitor"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video", "postV6_video", "postV7_video", "postV8_video", "postV9_video", "postV10_video", "V11_video", "V12_video", "V13_video", "V14_video", "V15_video", "V16_video", "V17_video", "V18_video", "V19_video", "V20_video", "V21_video", "V22_video", "V23_video", "V24_video", "V25_video", "V26_video", "V27_video"],
+    "time_vs_pre": 167,
+    "time_vs_V14": 258,
+    "time_vs_V26": 271,
+    "time_vs_V27": 225,
+    "time_vs_V20_previous_worst": 147,
+    "score_vs_pre": -175.0,
+    "score_vs_V26": -273.0,
+    "trajectory": "CATASTROPHIC_REGRESSION_equipment_change",
+    "phase_comparison": {
+      "placement_23s": "NORMAL. V27: 18s. V26: 16s. Core skill intact.",
+      "throws_205s": "CATASTROPHIC. V27: 67s. V26: 50s. 3-4x slower. Suture tangles.",
+      "cutting_135s": "CATASTROPHIC. V27: 53s. V26: 26s. 2.5-5x slower."
+    },
+    "key_observations": [
+      "365s / 227 FLS — WORST IN ENTIRE SERIES. Worse than baseline (198s) and V20 crash (218s).",
+      "DIFFERENT EQUIPMENT: New station, new monitor setup, different foam, possibly different suture material.",
+      "Pink/purple suture visible — different from standard dark/black. If different material, this explains everything.",
+      "Placement (23s) was NORMAL — only post-placement phases were catastrophically affected.",
+      "Throws consumed 205s (normally 50-67s) — 3-4x slower. Visible suture tangles in every frame.",
+      "Cutting consumed 135s (normally 26-67s) — tangled suture made every cut difficult.",
+      "DESPITE the catastrophe: task completed correctly, drain closed, no avulsion, short tails.",
+      "This should be classified as an EQUIPMENT CHANGE event, not a skill regression.",
+      "If same session as V26-V27: extreme fatigue + equipment change = perfect storm.",
+      "28th video. The training arc remains valid for V1-V27. V28 is an outlier caused by external factors."
+    ],
+    "series_statistics": {
+      "total_videos": 28,
+      "all_time_best": "94s (V26)",
+      "all_time_worst": "365s (V28) ← NEW WORST",
+      "previous_worst": "218s (V20)",
+      "pre_training_baseline": "198s",
+      "current_performance": "365s (equipment-change outlier)",
+      "note": "V28 should be flagged as equipment-change outlier, not included in skill trajectory analysis"
+    }
+  }
+}
