@@ -29,6 +29,50 @@ def load_config(config_path: str) -> dict:
         return yaml.safe_load(f)
 
 
+def _format_chat_examples(batch: dict, tokenizer) -> list[str]:
+    """Render chat-style training examples into plain text for SFT trainers."""
+    if batch["messages"] and isinstance(batch["messages"][0], dict):
+        return [
+            tokenizer.apply_chat_template(
+                batch["messages"],
+                tokenize=False,
+                add_generation_prompt=False,
+            )
+        ]
+
+    rendered = []
+    for messages in batch["messages"]:
+        rendered.append(
+            tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=False,
+            )
+        )
+    return rendered
+
+
+def _tokenize_hf_example(example: dict, tokenizer, max_seq_length: int) -> dict:
+    """Tokenize one chat-style example for the fallback HF Trainer path."""
+    rendered = tokenizer.apply_chat_template(
+        example["messages"],
+        tokenize=False,
+        add_generation_prompt=False,
+    )
+    tokens = tokenizer(
+        rendered,
+        truncation=True,
+        max_length=max_seq_length,
+        padding=False,
+    )
+    tokens["labels"] = list(tokens["input_ids"])
+    return tokens
+
+
+def _should_export_merged(config: dict) -> bool:
+    return bool(config.get("export_merged_16bit", True))
+
+
 def _finetune_unsloth(config: dict) -> dict:
     """Fine-tune using Unsloth (fast QLoRA path)."""
     try:
@@ -45,9 +89,8 @@ def _finetune_unsloth(config: dict) -> dict:
 
     base_model = config.get("base_model", "Qwen/Qwen2.5-VL-7B-Instruct")
     dataset_path = config["dataset_path"]
-    output_dir = config.get(
-        "output_dir",
-        f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_unsloth",
+    output_dir = config.get("output_dir") or (
+        f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_unsloth"
     )
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -91,11 +134,15 @@ def _finetune_unsloth(config: dict) -> dict:
         bf16=config.get("bf16", True),
         logging_steps=config.get("logging_steps", 10),
         save_strategy=config.get("save_strategy", "epoch"),
+        save_steps=config.get("save_steps", 500),
+        save_total_limit=config.get("save_total_limit"),
         eval_strategy=config.get("eval_strategy", "epoch"),
         report_to="none",
+        dataloader_num_workers=config.get("dataloader_num_workers", 0),
+        packing=config.get("packing", False),
         dataset_text_field="",
         remove_unused_columns=False,
-        max_seq_length=4096,
+        max_seq_length=config.get("max_seq_length", 2048),
     )
 
     trainer = SFTTrainer(
@@ -103,16 +150,18 @@ def _finetune_unsloth(config: dict) -> dict:
         train_dataset=dataset["train"],
         eval_dataset=dataset["validation"],
         tokenizer=tokenizer,
+        formatting_func=lambda batch: _format_chat_examples(batch, tokenizer),
     )
 
     logger.info("Starting Unsloth QLoRA training...")
-    trainer.train()
+    trainer.train(resume_from_checkpoint=config.get("resume_from_checkpoint"))
 
     model.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
 
-    merged_dir = str(Path(output_dir) / "merged_16bit")
-    model.save_pretrained_merged(merged_dir, tokenizer, save_method="merged_16bit")
+    if _should_export_merged(config):
+        merged_dir = str(Path(output_dir) / "merged_16bit")
+        model.save_pretrained_merged(merged_dir, tokenizer, save_method="merged_16bit")
 
     eval_results = trainer.evaluate()
     with open(Path(output_dir) / "eval_results.json", "w") as f:
@@ -140,9 +189,8 @@ def _finetune_hf(config: dict) -> dict:
 
     base_model = config.get("base_model", "Qwen/Qwen2.5-VL-7B-Instruct")
     dataset_path = config["dataset_path"]
-    output_dir = config.get(
-        "output_dir",
-        f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_hf",
+    output_dir = config.get("output_dir") or (
+        f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_hf"
     )
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -174,10 +222,18 @@ def _finetune_hf(config: dict) -> dict:
         model.gradient_checkpointing_enable()
 
     tokenizer = AutoTokenizer.from_pretrained(base_model, trust_remote_code=True)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
     dataset = load_dataset("json", data_files={
         "train": str(Path(dataset_path) / "train.jsonl"),
         "validation": str(Path(dataset_path) / "val.jsonl"),
     })
+    max_seq_length = min(config.get("max_seq_length", 4096), 2048)
+    tokenized_dataset = dataset.map(
+        lambda example: _tokenize_hf_example(example, tokenizer, max_seq_length),
+        remove_columns=dataset["train"].column_names,
+    )
 
     training_args = TrainingArguments(
         output_dir=output_dir,
@@ -189,16 +245,19 @@ def _finetune_hf(config: dict) -> dict:
         bf16=config.get("bf16", True),
         logging_steps=config.get("logging_steps", 10),
         save_strategy=config.get("save_strategy", "epoch"),
+        save_steps=config.get("save_steps", 500),
+        save_total_limit=config.get("save_total_limit"),
         evaluation_strategy=config.get("eval_strategy", "epoch"),
+        dataloader_num_workers=config.get("dataloader_num_workers", 0),
         report_to="none",
     )
 
     trainer = Trainer(
         model=model, args=training_args,
-        train_dataset=dataset["train"], eval_dataset=dataset["validation"],
+        train_dataset=tokenized_dataset["train"], eval_dataset=tokenized_dataset["validation"],
         tokenizer=tokenizer,
     )
-    trainer.train()
+    trainer.train(resume_from_checkpoint=config.get("resume_from_checkpoint"))
     trainer.save_model(output_dir)
     tokenizer.save_pretrained(output_dir)
 

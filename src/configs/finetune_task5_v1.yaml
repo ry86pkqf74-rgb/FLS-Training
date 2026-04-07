@@ -39,6 +39,11 @@ logging_steps: 5
 save_strategy: "epoch"
 eval_strategy: "epoch"
 dataloader_num_workers: 4
+save_steps: 200
+save_total_limit: 2
+max_seq_length: 2048
+packing: false
+export_merged_16bit: true
 
 # Frames
 max_frames_per_sample: 20
