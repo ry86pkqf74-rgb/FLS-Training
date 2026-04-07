@@ -1,0 +1,63 @@
+{
+  "id": "score_gpt4o_V14_001",
+  "video_id": "V14_video",
+  "video_filename": "V14.mov",
+  "video_hash": "26b0a0ba3d9df8db",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T20:00:00Z",
+  "frame_analyses": [
+    {"frame_number": 1, "phase": "needle_load", "description": "Both instruments enter the field and the needle-suture complex is brought into view above the Penrose drain.", "technique_notes": "Initial setup is controlled but with a brief adjustment before committing to the bite."},
+    {"frame_number": 301, "phase": "suture_placement", "description": "Needle aligned toward the marked target on the drain and driver begins the pass.", "technique_notes": "Needle angle acceptable; slightly faster commitment would reduce setup time."},
+    {"frame_number": 661, "phase": "suture_placement", "description": "Stitch has traversed the drain; suture is being drawn through while the drain is rotated for exposure.", "technique_notes": "Atraumatic tissue handling; bite close to intended marks."},
+    {"frame_number": 1094, "phase": "first_throw", "description": "First knot throw constructed and cinched down over the slit line.", "technique_notes": "Appears to be a double-wrap surgeon's knot; seats centrally without avulsing the drain."},
+    {"frame_number": 1798, "phase": "second_throw", "description": "Second throw formed and tightened over the initial throw.", "technique_notes": "Some extra regrasping but throw lies flat and secure."},
+    {"frame_number": 2457, "phase": "third_throw", "description": "Suture tails repositioned for the final throw after a prolonged setup period.", "technique_notes": "Efficiency drops: noticeable pause and reorientation before final knot completion."},
+    {"frame_number": 2980, "phase": "suture_cut", "description": "Cutting instruments introduced and suture tails managed for sequential transection near the knot.", "technique_notes": "Cut setup slower than ideal, but control remains steady; knot not disrupted."},
+    {"frame_number": 3266, "phase": "completion", "description": "Both tails appear cut; final knot remains on the drain with the slit approximated.", "technique_notes": "Final construct intact; no visible avulsion and no obvious knot slippage."}
+  ],
+  "completion_time_seconds": 109.0,
+  "video_length_seconds": 109.4,
+  "phase_timings": [
+    {"phase": "needle_load",      "start_seconds": 0.0,   "end_seconds": 9.2,   "duration_seconds": 9.2},
+    {"phase": "suture_placement", "start_seconds": 9.2,   "end_seconds": 32.8,  "duration_seconds": 23.6},
+    {"phase": "first_throw",      "start_seconds": 32.8,  "end_seconds": 45.2,  "duration_seconds": 12.4},
+    {"phase": "second_throw",     "start_seconds": 45.2,  "end_seconds": 63.8,  "duration_seconds": 18.6},
+    {"phase": "third_throw",      "start_seconds": 63.8,  "end_seconds": 90.8,  "duration_seconds": 27.0},
+    {"phase": "suture_cut",       "start_seconds": 90.8,  "end_seconds": 108.9, "duration_seconds": 18.1},
+    {"phase": "completion",       "start_seconds": 108.9, "end_seconds": 109.0, "duration_seconds": 0.1}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "First throw appears double-wrapped before cinching; right-sided lead best estimate from loop motion, though view partially obscured by crossed instruments."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Second throw appears to reverse loop orientation relative to throw 1, consistent with a hand switch, but extra regrasping is present."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Final throw appears to alternate again and seats the stack securely; least certain hand assessment due to partial monitor occlusion."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 2.5,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete"
+  },
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 488.5,
+  "confidence_score": 0.64,
+  "technique_summary": "V14 completed well within the 600s limit with a secure final knot and adequately approximated drain slit. Needle passage and tissue handling generally controlled, but several pauses and regrasping sequences — especially between the later throws and during cut setup — reduced overall efficiency. Scored at 109.0s / 488.5 FLS with only a small placement-deviation penalty; no major rubric failures (no avulsion, no visible gap, no obvious knot slippage).",
+  "improvement_suggestions": [
+    "Reduce regrasping between the second and third throws by maintaining tension on one tail and planning the next instrument exchange before releasing the previous hold.",
+    "Commit to the initial needle angle more decisively to shorten early setup and transition faster from loading into the stitch pass.",
+    "Organize both tails for cutting immediately after the final cinch so scissors can divide both ends with less delay."
+  ],
+  "strengths": [
+    "Stitch spans the slit appropriately and lands close to both target marks despite limited video resolution.",
+    "Knot stack remains centered on the drain with no visible avulsion or obvious knot failure.",
+    "Instrument handling is steady and atraumatic, with controlled tightening rather than abrupt pulling."
+  ],
+  "comparison_notes": "Paired with score_claude_V14_001 — see memory/comparisons/V14_teacher_comparison_20260407.json. Δ FLS 1.5 (strong agreement); primary disagreement is drain gap (Claude partial vs GPT-4o complete) and phase boundaries between third_throw / suture_cut."
+}

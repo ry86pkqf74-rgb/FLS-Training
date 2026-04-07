@@ -1,0 +1,64 @@
+{
+  "id": "comparison_V14_001",
+  "video_id": "V14_video",
+  "video_alias": "V14",
+  "created_at": "2026-04-07T20:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V14_video_claude-sonnet-4_20260407_123000.json",
+      "completion_time_seconds": 107.0,
+      "estimated_penalties": 6.0,
+      "estimated_fls_score": 487.0,
+      "confidence": 0.43
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V14_video_gpt-4o_20260407_200000.json",
+      "completion_time_seconds": 109.0,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 488.5,
+      "confidence": 0.64
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 2.0,
+    "delta_penalties": 3.5,
+    "delta_fls_score": 1.5,
+    "agreement_level": "strong"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 5,  "gpt4o": 9.2,  "delta": 4.2, "note": "Claude has a 3s 'idle' phase before needle_load; GPT-4o rolls that into needle_load. Combined idle+needle_load Claude=8s vs GPT-4o=9.2s — essentially agreement."},
+    "suture_placement": {"claude": 22, "gpt4o": 23.6, "delta": 1.6, "note": "Near-exact agreement on placement duration."},
+    "first_throw":      {"claude": 18, "gpt4o": 12.4, "delta": 5.6, "note": "Claude extends first_throw further; GPT-4o ends it earlier."},
+    "second_throw":     {"claude": 14, "gpt4o": 18.6, "delta": 4.6},
+    "third_throw":      {"claude": 16, "gpt4o": 27.0, "delta": 11.0, "note": "Biggest single disagreement — GPT-4o sees a long pause/reorientation before the third throw as part of throw 3; Claude treats it as already in cut setup."},
+    "suture_cut":       {"claude": 29, "gpt4o": 18.1, "delta": 10.9, "note": "Mirror of the third_throw disagreement — Claude's cut phase is 11s longer because it absorbs the regrasping pause that GPT-4o assigns to throw 3. Sum of third_throw + suture_cut: Claude 45s, GPT-4o 45.1s — exact agreement on the combined late-task window."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": true,     "gpt4o": false,    "agreement": false, "note": "Claude flags a possible small gap ('partial closure', very_low confidence) and adds 4pt penalty; GPT-4o sees no visible gap. This is the primary source of the penalty delta."},
+    "drain_avulsed": {"claude": false,    "gpt4o": false,    "agreement": true},
+    "closure":       {"claude": "partial","gpt4o": "complete","agreement": false}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  2.5,
+    "delta_mm": 1.5,
+    "agreement": "moderate",
+    "note": "Claude confidence 'very_low', GPT-4o confidence 'low' — both teachers explicitly call out monitor recording as the reason for low placement confidence."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 487.0,
+    "gpt4o_fls": 488.5,
+    "reconciled_fls": 487.75,
+    "reconciliation_note": "Teachers agree within 1.5 FLS points — strongest agreement of the V-series so far. Completion time is essentially identical (Claude 107 vs GPT-4o 109, delta 2s). The entire 4.5pt penalty gap comes from Claude's gap-visible / partial-closure assessment, which Claude itself flags as very_low confidence. GPT-4o's 488.5 is likely the more reliable point estimate; a midpoint of 487.75 is a reasonable reconciled value."
+  },
+  "systematic_findings": {
+    "boundary_disagreement": "third_throw vs suture_cut — Claude assigns the late-task regrasping pause to cutting, GPT-4o assigns it to throw 3. Sum is identical (45s). This is a consistent pattern across recent comparisons: the two teachers disagree on where to draw the line between 'finishing the knot' and 'starting to cut'.",
+    "drain_gap_divergence": "Claude is more conservative about drain closure on monitor-filmed videos (V14 here, similar to prior partial-closure flags). Recommend cross-checking future partial-closure calls against GPT-4o before applying the full gap penalty."
+  }
+}
