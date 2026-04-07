@@ -13,6 +13,16 @@ prompts:
       - "claude-sonnet-4-20250514"
       - "gpt-4o"
 
+  v001_task5_consensus:
+    system: "v001_task5_consensus.md"
+    task: 5
+    status: "active"
+    created: "2026-04-07"
+    notes: "Multi-turn critique consensus prompt (N=2 rounds, early-stop at agreement>0.92)"
+    compatible_models:
+      - "claude-sonnet-4-20250514"
+      - "gpt-4o"
+
 # Template for new versions:
 # v002_task5:
 #   system: "v002_task5_system.md"
