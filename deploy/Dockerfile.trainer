@@ -1,0 +1,27 @@
+FROM nvidia/cuda:12.1.0-devel-ubuntu22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y \
+    python3.11 python3.11-venv python3-pip git wget \
+    libgl1-mesa-glx libglib2.0-0 ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN ln -sf /usr/bin/python3.11 /usr/bin/python && \
+    ln -sf /usr/bin/python3.11 /usr/bin/python3
+
+WORKDIR /workspace
+
+# Install Python dependencies
+COPY pyproject.toml .
+RUN pip install --no-cache-dir --break-system-packages -e ".[training]"
+
+# Install flash-attention (optional but recommended)
+RUN pip install --no-cache-dir --break-system-packages flash-attn --no-build-isolation || true
+
+# Copy project
+COPY . .
+
+ENTRYPOINT ["python", "-m", "src.training.finetune_vlm"]
+CMD ["--config", "/workspace/configs/finetune_task5_v1.yaml"]

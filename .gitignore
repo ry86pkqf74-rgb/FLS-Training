@@ -1,0 +1,35 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Large files
+videos/
+*.mov
+*.mp4
+*.avi
+*.mkv
+memory/model_checkpoints/**/*.bin
+memory/model_checkpoints/**/*.safetensors
+memory/model_checkpoints/**/*.pt
+
+# DuckDB
+data/*.duckdb
+data/*.duckdb.wal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Extracted frames (regenerable)
+frames_cache/

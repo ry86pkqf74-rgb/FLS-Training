@@ -1,0 +1,89 @@
+task_name: "Intracorporeal Suture with Knot Tying"
+task_number: 5
+task_enum: "task5_intracorporeal_suture"
+max_time_seconds: 600
+
+equipment:
+  - "Two needle drivers (non-self-righting)"
+  - "One 2-0 silk suture, 15 cm length"
+  - "One pair endoscopic scissors"
+  - "One suture block"
+  - "One penrose drain with marked targets"
+
+procedure:
+  - "Place suture block on lower Velcro strip inside marked square"
+  - "Center penrose drain on Velcro strip on suture block, slit side up"
+  - "Pass suture through both marks on penrose drain"
+  - "Tie surgeon's knot (double throw) as first throw"
+  - "Tie single throw as second throw, switching hands"
+  - "Tie single throw as third throw, switching hands again"
+  - "Cut both suture ends inside the trainer"
+
+scoring_formula: "score = max_time - completion_time - penalties"
+
+timing:
+  starts_when: "First instrument visible on monitor"
+  ends_when: "Both ends of suture cut inside trainer"
+
+penalties:
+  suture_placement_deviation:
+    description: "Sum of deviation (mm) from each mark"
+    unit: "mm"
+    formula: "deviation_mark1_mm + deviation_mark2_mm"
+  gap_in_drain:
+    description: "Visible gap in longitudinal slit after knot tightening"
+    scoring: "Penalty assessed for any visible gap"
+  knot_security:
+    description: "Knot slips or comes apart under tension"
+    scoring: "Major penalty"
+  drain_avulsion:
+    description: "Penrose drain separates from suture block"
+    scoring: "Automatic score of ZERO"
+
+knot_requirements:
+  first_throw:
+    type: "surgeon's knot (double throw)"
+    description: "Must be a double throw"
+  second_throw:
+    type: "single throw"
+    description: "Must switch hands from first throw"
+  third_throw:
+    type: "single throw"
+    description: "Must switch hands from second throw"
+  hand_exchange:
+    description: "Must exchange hands with needle between each throw to ensure square knot"
+
+phases:
+  - name: "needle_load"
+    description: "Grasping and positioning the needle in the needle driver"
+  - name: "suture_placement"
+    description: "Passing needle through both marks on the penrose drain"
+  - name: "first_throw"
+    description: "Tying the surgeon's knot (double throw)"
+  - name: "second_throw"
+    description: "Tying the first single throw with opposite hand"
+  - name: "third_throw"
+    description: "Tying the second single throw with opposite hand"
+  - name: "suture_cut"
+    description: "Cutting both ends of the suture"
+  - name: "completion"
+    description: "Task complete"
+
+automatic_failures:
+  - "Drain avulsed from suture block"
+  - "Exceeding 600 second time limit"
+
+technique_markers:
+  efficient:
+    - "Economy of motion in instrument movements"
+    - "Smooth needle driving through tissue"
+    - "Quick hand exchanges"
+    - "Minimal idle time between phases"
+    - "Proper needle angle (perpendicular to tissue)"
+  inefficient:
+    - "Excessive instrument fumbling"
+    - "Dropping the needle"
+    - "Multiple attempts to grasp suture"
+    - "Hesitation between phases"
+    - "Improper needle angle causing tissue drag"
+    - "Using instruments outside field of view"

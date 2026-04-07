@@ -1,0 +1,24 @@
+# Prompt Registry
+# Maps prompt versions to their files and intended use
+
+prompts:
+  v001_task5:
+    system: "v001_task5_system.md"
+    critique: "v001_task5_critique.md"
+    task: 5
+    status: "active"
+    created: "2026-04-07"
+    notes: "Initial prompt for intracorporeal suture scoring"
+    compatible_models:
+      - "claude-sonnet-4-20250514"
+      - "gpt-4o"
+
+# Template for new versions:
+# v002_task5:
+#   system: "v002_task5_system.md"
+#   critique: "v002_task5_critique.md"
+#   task: 5
+#   status: "testing"
+#   created: "YYYY-MM-DD"
+#   notes: "What changed from v001"
+#   parent: "v001_task5"
