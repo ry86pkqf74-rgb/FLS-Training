@@ -1,0 +1,52 @@
+{
+  "id": "score_chatgpt_postV7_001",
+  "video_id": "postV7_video",
+  "video_filename": "PostV7.mov",
+  "video_hash": "e5db3f9f8456143f",
+  "source": "teacher_chatgpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T13:00:00Z",
+  "frame_analyses": [
+    {"frame_number": 180, "phase": "needle_load", "description": "First instruments enter the field and bring the needle-suture toward the Penrose; this is the likely timing start.", "technique_notes": "Controlled entry, but there is a brief setup period before the bite sequence begins."},
+    {"frame_number": 720, "phase": "suture_placement", "description": "The needle has traversed the slit edges and the suture is being drawn through both sides of the Penrose.", "technique_notes": "Bites appear close to the target marks, though exact mark centers are partly obscured by angle and instruments."},
+    {"frame_number": 1110, "phase": "first_throw", "description": "A double-wrap first throw is being formed around the opposing strand for the surgeon's knot.", "technique_notes": "Loop geometry is acceptable, but the first knot takes extra regrasping and time before it seats."},
+    {"frame_number": 1860, "phase": "second_throw", "description": "After the first knot seats, the operator reorients and begins the next single throw with opposite-hand setup.", "technique_notes": "Hand switch appears present; knot placement remains centered without avulsing the drain."},
+    {"frame_number": 2520, "phase": "third_throw", "description": "The third-throw interval begins with the free end elevated and loop geometry re-established over the knot stack.", "technique_notes": "The required alternating pattern appears to continue, but this phase is prolonged by repeated repositioning."},
+    {"frame_number": 3015, "phase": "third_throw", "description": "The required third throw appears seated by this portion of the case, followed by additional reinforcing manipulation before cutting.", "technique_notes": "Knot security looks acceptable, but extra throws/manipulation cost substantial time."},
+    {"frame_number": 4260, "phase": "suture_cut", "description": "A cutting instrument is applied to the suture tails inside the trainer.", "technique_notes": "Tail cutting is performed intracorporeally as required."},
+    {"frame_number": 4305, "phase": "completion", "description": "Both tails appear cut and the instruments withdraw from the field.", "technique_notes": "Task appears complete without drain avulsion or knot failure."}
+  ],
+  "completion_time_seconds": 138.0,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 8.0, "duration_seconds": 8.0},
+    {"phase": "suture_placement", "start_seconds": 8.0, "end_seconds": 27.0, "duration_seconds": 19.0},
+    {"phase": "first_throw", "start_seconds": 27.0, "end_seconds": 56.0, "duration_seconds": 29.0},
+    {"phase": "second_throw", "start_seconds": 56.0, "end_seconds": 74.0, "duration_seconds": 18.0},
+    {"phase": "third_throw", "start_seconds": 74.0, "end_seconds": 125.0, "duration_seconds": 51.0},
+    {"phase": "suture_cut", "start_seconds": 125.0, "end_seconds": 137.0, "duration_seconds": 12.0},
+    {"phase": "completion", "start_seconds": 137.0, "end_seconds": 138.0, "duration_seconds": 1.0}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Best estimate is a right-instrument-led double throw consistent with a surgeon's knot; it ultimately seats without obvious slip."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "A left-instrument-led single throw appears to follow the first throw, with visible hand alternation but some extra setup time."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "The third required throw appears right-instrument-led and secure; additional reinforcing throws/manipulation seem to follow before cutting."}
+  ],
+  "suture_placement": {"deviation_from_mark1_mm": 1.5, "deviation_from_mark2_mm": 1.5, "total_deviation_penalty": 3.0, "confidence": "low"},
+  "drain_assessment": {"gap_visible": false, "drain_avulsed": false, "slit_closure_quality": "near-complete"},
+  "estimated_penalties": 3.0,
+  "estimated_fls_score": 459.0,
+  "confidence_score": 0.64,
+  "technique_summary": "The task is completed successfully with controlled tissue handling, no drain avulsion, and a knot stack that appears secure. The main performance limiter is efficiency: the first throw takes time to seat, and there appear to be additional reinforcing throws/manipulations after the required third throw before the tails are cut. Suture placement looks close to the marks, but exact deviation is low-confidence because the targets are intermittently obscured.",
+  "improvement_suggestions": [
+    "After the third required throw is seated, transition directly to cutting rather than adding extra reinforcing throws unless the knot is clearly unstable.",
+    "Keep the post and working end more clearly separated during hand switches to reduce regrasping and shorten the second and third throw setup.",
+    "Load and drive the needle with a more consistent bite depth aimed directly through the marked targets to tighten mark accuracy."
+  ],
+  "strengths": [
+    "Completed the task without drain avulsion and cut both suture ends inside the trainer.",
+    "The first throw appears to be a proper double throw, and the first three required throws appear to alternate hands.",
+    "Instrument control is generally steady, with gentle handling of the Penrose and no obvious knot slippage."
+  ]
+}

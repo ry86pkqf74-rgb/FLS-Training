@@ -1,0 +1,85 @@
+{
+  "comparison_id": "cmp_postV7_001",
+  "video_id": "postV7_video",
+  "video_filename": "PostV7.mov",
+  "video_hash": "e5db3f9f8456143f",
+  "task": "task5_intracorporeal_suture",
+  "created_at": "2026-04-07T13:15:00Z",
+  "teachers": [
+    {
+      "source": "teacher_claude",
+      "score_id": "score_claude_postV7_001",
+      "model": "claude-sonnet-4-20250514",
+      "completion_time_seconds": 142.0,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 455.5,
+      "confidence_score": 0.68,
+      "drain_gap_visible": false,
+      "phase_timings": {"needle_load": 10, "suture_placement": 30, "first_throw": 23, "second_throw": 20, "third_throw": 24, "suture_cut": 30}
+    },
+    {
+      "source": "teacher_chatgpt",
+      "score_id": "score_chatgpt_postV7_001",
+      "model": "gpt-4o",
+      "completion_time_seconds": 138.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 459.0,
+      "confidence_score": 0.64,
+      "drain_gap_visible": false,
+      "phase_timings": {"needle_load": 8, "suture_placement": 19, "first_throw": 29, "second_throw": 18, "third_throw": 51, "suture_cut": 12}
+    }
+  ],
+  "deltas": {
+    "completion_time_delta_s": 4.0,
+    "penalty_delta": 0.5,
+    "fls_score_delta": 3.5,
+    "confidence_delta": 0.04,
+    "phase_timing_max_delta_s": 27.0,
+    "disputed_items": ["suture_placement_duration", "third_throw_duration", "suture_cut_duration"]
+  },
+  "agreement": {
+    "completed_intracorporeally": true,
+    "drain_avulsion": false,
+    "automatic_zero_triggered": false,
+    "drain_gap_visible": false,
+    "first_throw_is_surgeon_knot": true,
+    "hand_switching_preserved": true,
+    "approximate_total_time_window_s": [137, 147],
+    "verdict": "personal_best_strong_agreement_on_score"
+  },
+  "reconciled": {
+    "completion_time_seconds": 140.0,
+    "rationale_completion": "Both teachers within 4s of each other (138 and 142). Average of 140 is the consensus for this peak performance.",
+    "phase_timings": {
+      "needle_load": 9,
+      "suture_placement": 25,
+      "first_throw": 26,
+      "second_throw": 19,
+      "third_throw": 38,
+      "suture_cut": 21,
+      "rationale": "GPT-4o saw an unusually fast suture_placement (19s) and an extreme third_throw (51s) — possibly attributing extra reinforcing manipulation to the third throw rather than to a separate cutting/setup phase. Claude's 24s third throw and 30s cut split the same time window differently. Averaging gives a more defensible split."
+    },
+    "penalties": {
+      "mark_deviation": 2.75,
+      "rationale_deviation": "Average of (2.5 + 3.0) / 2 = 2.75. Both teachers low confidence on exact mm.",
+      "partial_closure_penalty": 0,
+      "knot_security": 0,
+      "hand_switch_failure": 0,
+      "drain_avulsion": 0,
+      "total": 2.75
+    },
+    "fls_score": 457.25,
+    "calculation": "600 - 140 - 2.75 = 457.25",
+    "confidence": 0.72
+  },
+  "training_signal": {
+    "high_value_disagreement": false,
+    "agreement_strength": "strong",
+    "note": "Third dual-teacher comparison. Both teachers agree this is a peak performance — complete closure, surgeon's knot, hand alternation, low penalties, sub-145s completion. The 3.5-point score delta is the smallest in the series. As with post2, the throw boundaries remain noisy between the two teachers but the totals converge tightly. GPT-4o has a tendency to lump 'extra reinforcing manipulation' into the third throw phase, inflating it dramatically (51s vs Claude's 24s). This is a useful, repeatable systematic difference worth flagging for the critique agent.",
+    "recommended_label_for_student_training": 457.25,
+    "use_for_critique_agent": true,
+    "calibration_use": true,
+    "systematic_finding": "GPT-4o consistently inflates the third_throw duration relative to Claude (post2: 46.2 vs 30; postV7: 51 vs 24; postV8: 67 vs 30). This appears to be a phase-attribution difference, not an actual disagreement on what happened in the video — GPT-4o is rolling extra manipulation/setup into the throw label while Claude separates them out."
+  },
+  "notes": "Third teacher comparison after post2 and postV8. The pattern across all three: total time agrees within 4-8s, total FLS agrees within 3.5-17.5 points, but throw-phase splits diverge significantly — particularly the third throw, which GPT-4o systematically inflates by 20-30s vs Claude. This is now confirmed as a reproducible systematic difference, not noise."
+}
