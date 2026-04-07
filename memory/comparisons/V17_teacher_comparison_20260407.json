@@ -1,0 +1,66 @@
+{
+  "id": "comparison_V17_001",
+  "video_id": "V17_video",
+  "video_alias": "V17",
+  "created_at": "2026-04-08T00:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V17_video_claude-sonnet-4_20260407_140000.json",
+      "completion_time_seconds": 158.0,
+      "estimated_penalties": 7.0,
+      "estimated_fls_score": 435.0,
+      "confidence": 0.42
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V17_video_gpt-4o_20260408_000000.json",
+      "completion_time_seconds": 160.8,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 436.2,
+      "confidence": 0.58
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 2.8,
+    "delta_penalties": 4.0,
+    "delta_fls_score": 1.2,
+    "agreement_level": "strong"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 7,  "gpt4o": 8.0,  "delta": 1.0, "note": "Claude logs ~5s idle before needle_load; combined idle+needle_load Claude=12s vs GPT-4o=8s (delta 4s)."},
+    "suture_placement": {"claude": 36, "gpt4o": 44.0, "delta": 8.0, "note": "GPT-4o extends placement window further into the first pull-through."},
+    "first_throw":      {"claude": 20, "gpt4o": 12.0, "delta": 8.0, "note": "Claude absorbs more of the tail-organization time into first_throw."},
+    "second_throw":     {"claude": 17, "gpt4o": 10.0, "delta": 7.0},
+    "third_throw":      {"claude": 25, "gpt4o": 42.0, "delta": 17.0, "note": "GPT-4o attributes the extra security throws to third_throw, Claude closes third earlier."},
+    "suture_cut":       {"claude": 48, "gpt4o": 44.8, "delta": 3.2, "note": "Unusually tight cut-phase agreement for a V-series video. Sum of third_throw+cut: Claude 73s vs GPT-4o 86.8s (delta 13.8s) — wider than V11/V12/V14/V16."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true},
+    "extra_security_throws":    {"claude": true, "gpt4o": true, "agreement": true, "note": "Both teachers flag additional throws beyond the required three as a major efficiency loss."}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": true,                 "gpt4o": false,           "agreement": false, "note": "Drain-gap divergence recurs. Same pattern as V11/V14/V16 — monitor-recording bias. Claude flags partial closure with visible gap (low confidence), GPT-4o sees near-complete closure."},
+    "drain_avulsed": {"claude": false,                "gpt4o": false,           "agreement": true},
+    "closure":       {"claude": "partial_gap",        "gpt4o": "near-complete", "agreement": false}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 3.0,
+    "gpt4o_total_mm":  3.0,
+    "delta_mm": 0.0,
+    "agreement": "strong",
+    "note": "Exact agreement on placement deviation, both with low confidence due to phone-recording-of-monitor format."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 435.0,
+    "gpt4o_fls": 436.2,
+    "reconciled_fls": 435.6,
+    "reconciliation_note": "Strong agreement — ΔFLS only 1.2 points, one of the tightest convergences in the V-series. Near-identical placement calls and near-identical total time, with the penalty delta (4.0) almost entirely explained by the recurring Claude drain-gap flag. Midpoint 435.6 is a reasonable reconciled value; GPT-4o's 436.2 is likely closer to a human proctor given its higher confidence (0.58 vs 0.42) and clean drain call."
+  },
+  "systematic_findings": {
+    "drain_gap_bias_pattern_continues": "V17 extends the monitor-resolution drain-gap bias pattern. Confirmed cases: V11 (gap), V14 (gap), V16 (gap), V17 (gap). Counter-example remains V12 (agreement). The pattern is strongly associated with phone-recording-of-monitor format regardless of nominal resolution. The gap_visible signal from Claude should be down-weighted for training when the recording format is monitor-capture.",
+    "phase_boundary_pattern_variant": "V17 shows a variant of the third_throw/suture_cut boundary issue. In V11/V12/V14/V16 the two phases mirror (sum converges within ~4s). In V17 the sum diverges by ~14s because the disagreement extends further back into first_throw and second_throw — Claude places ~37s of tying time in throws 1+2, GPT-4o only ~22s. Hypothesis: V17's extra security throws blur the throw-count boundary for Claude, pulling late work into earlier phase labels. Training signal guidance still stands — use total_time + penalties, not per-phase durations.",
+    "endpoint_ambiguity": "Both teachers flag that V17 ends while the cut phase is still active — instruments are still near the knot at the final frame. Neither scorer can confirm both tails are fully divided. Both used end-of-clip as a conservative completion proxy. This is the first V-series video where both teachers explicitly note endpoint uncertainty."
+  }
+}
