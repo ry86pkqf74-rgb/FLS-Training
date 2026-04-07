@@ -1,0 +1,84 @@
+{
+  "id": "score_chatgpt_postV6_001",
+  "video_id": "postV6_video",
+  "video_filename": "postV6.mov",
+  "video_hash": null,
+  "source": "teacher_chatgpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T17:30:00Z",
+  "frame_analyses": [
+    {"frame_number": 150, "phase": "needle_load", "description": "First instrument enters the field and task timing begins as the trainee reaches for the needle and suture.", "technique_notes": "Controlled entry, but there is a short setup interval before the needle is fully oriented."},
+    {"frame_number": 360, "phase": "needle_load", "description": "The needle is being reloaded and aligned for the initial bite through the Penrose.", "technique_notes": "Needle control is steady; orientation is acceptable but not especially fast."},
+    {"frame_number": 810, "phase": "suture_placement", "description": "A bite is passed through one marked target on the slit Penrose and the needle is advanced across the opening.", "technique_notes": "Tissue handling remains gentle and the drain is not avulsed during passage."},
+    {"frame_number": 1680, "phase": "first_throw", "description": "The first knot throw is being formed at the approximation site with two wraps visible before the throw is seated.", "technique_notes": "This is consistent with a surgeon's knot; right-hand lead is the best estimate."},
+    {"frame_number": 2670, "phase": "second_throw", "description": "The second throw is underway with the opposite hand appearing to lead as the knot is squared down.", "technique_notes": "Alternation appears correct, though several regrasping moves add time before the throw is fully seated."},
+    {"frame_number": 3930, "phase": "third_throw", "description": "The third scored throw is formed and tightened down onto the previous throws.", "technique_notes": "This looks like a single throw and appears to alternate back to the right hand."},
+    {"frame_number": 4500, "phase": "third_throw", "description": "After the third required throw, the trainee appears to place an additional reinforcing throw before proceeding to cut.", "technique_notes": "Likely improves security, but it increases total completion time."},
+    {"frame_number": 5040, "phase": "suture_cut", "description": "Scissors are introduced and one suture end is being trimmed inside the trainer.", "technique_notes": "Cutting is deliberate but prolonged, with multiple small positioning adjustments near the knot."},
+    {"frame_number": 5850, "phase": "completion", "description": "Final trimming is completed and the instruments withdraw from the field.", "technique_notes": "The task appears finished with the knot intact and the drain still secured to the block."}
+  ],
+  "completion_time_seconds": 190.8,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 10.0, "duration_seconds": 10.0},
+    {"phase": "suture_placement", "start_seconds": 10.0, "end_seconds": 49.0, "duration_seconds": 39.0},
+    {"phase": "first_throw", "start_seconds": 49.0, "end_seconds": 65.0, "duration_seconds": 16.0},
+    {"phase": "second_throw", "start_seconds": 65.0, "end_seconds": 115.0, "duration_seconds": 50.0},
+    {"phase": "third_throw", "start_seconds": 115.0, "end_seconds": 160.0, "duration_seconds": 45.0},
+    {"phase": "suture_cut", "start_seconds": 160.0, "end_seconds": 176.0, "duration_seconds": 16.0},
+    {"phase": "completion", "start_seconds": 176.0, "end_seconds": 190.8, "duration_seconds": 14.8}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Double wrap is visible during formation and the right instrument appears to lead the first throw."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Single throw appears left-hand led and alternates appropriately from throw 1, though seating is slowed by regrasping."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Single throw appears right-hand led and alternates appropriately from throw 2; an extra reinforcing throw seems to be added afterward before cutting."}
+  ],
+  "suture_placement": {"deviation_from_mark1_mm": 1.0, "deviation_from_mark2_mm": 1.5, "total_deviation_penalty": 2.5, "confidence": "low"},
+  "drain_assessment": {"gap_visible": false, "drain_avulsed": false, "slit_closure_quality": "complete"},
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 406.7,
+  "confidence_score": 0.72,
+  "technique_summary": "The trainee handled the Penrose gently and achieved a stable final closure without avulsion or an obvious residual slit gap. Needle placement was close to the marks and the three scored throws appear to alternate right-left-right, but repeated regrasping and an additional reinforcing throw before cutting made the performance substantially slower than necessary. The task was not slow because of a major error; it was slow because of accumulated small inefficiencies, especially during knot tying and trimming.",
+  "improvement_suggestions": [
+    "Reduce regrasping between the second and third throws; a large portion of the total time is spent reorienting strands instead of advancing the knot.",
+    "Keep loop sizes smaller and closer to the knot so each single throw can be laid down and squared more efficiently.",
+    "Once the third throw is flat and secure, transition directly to cutting rather than adding a prolonged extra reinforcing throw unless the knot clearly looks unstable."
+  ],
+  "strengths": [
+    "Needle bites were placed close to the marked targets and the drain remained attached to the block throughout the task.",
+    "Final knot approximation looked secure with no obvious visible gap after tightening, and required hand alternation appears to have been maintained.",
+    "Tissue handling was gentle throughout with no rough traction that threatened drain avulsion."
+  ],
+  "rubric_assessment": {
+    "score_formula": "600 - completion_time_seconds - penalties",
+    "calculation": "600 - 190.8 - 2.5 = 406.7",
+    "final_score": 406.7,
+    "max_score": 600,
+    "automatic_zero": false,
+    "penalty_breakdown": {
+      "placement_deviation": 2.5,
+      "visible_gap_after_tightening": 0,
+      "knot_slip_or_unraveling": 0,
+      "failure_to_switch_hands": 0,
+      "drain_avulsion": 0
+    },
+    "rubric_judgments": {
+      "task_completed_within_allowed_time": true,
+      "no_automatic_zero_event": true,
+      "no_visible_drain_avulsion": true,
+      "no_post_tightening_gap": true,
+      "no_knot_slippage": true,
+      "hand_alternation_preserved": true
+    },
+    "overall_judgment": "Technically acceptable but time-inefficient. Strongest parts were gentle tissue handling, maintenance of drain fixation, and a final closure that looked secure without an obvious persistent slit gap. The biggest limitation was efficiency: repeated regrasping during knot construction, long loop management, and an extra reinforcing throw after the three required scored throws likely improved subjective security but cost a substantial amount of time. Safe and serviceable performance pulled down by inefficiency rather than major technical failure.",
+    "biggest_time_losses": [
+      "Repeated regrasping between throws",
+      "Large loops rather than compact throws close to the target",
+      "Slow transition from third required throw into trimming",
+      "Extra reinforcing throw(s) after the required knot sequence",
+      "Deliberate but prolonged scissor positioning before final cut completion"
+    ],
+    "uncertainty_notes": "Moderate overall confidence. Most confident about absence of avulsion/gap and overall time inefficiency. Less confident about exact mm deviation and the lead-hand call on the third throw."
+  }
+}
