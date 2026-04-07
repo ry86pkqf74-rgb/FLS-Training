@@ -1,0 +1,76 @@
+{
+  "id": "comparison_postV10_001",
+  "video_id": "postV10_video",
+  "video_alias": "postV10",
+  "created_at": "2026-04-08T15:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/postV10_video_claude-sonnet-4_20260407_103000.json",
+      "completion_time_seconds": 215.0,
+      "estimated_penalties": 12.5,
+      "estimated_fls_score": 372.5,
+      "confidence": 0.50
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/postV10_video_gpt-4o_20260408_150000.json",
+      "completion_time_seconds": 211.7,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 385.8,
+      "confidence": 0.65
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 3.3,
+    "delta_penalties": 10.0,
+    "delta_fls_score": 13.3,
+    "agreement_level": "moderate"
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true},
+    "lead_hand_throw_1":        {"claude": "right", "gpt4o": "right", "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": true, "gpt4o": false, "agreement": false},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "partial", "gpt4o": "complete", "agreement": false}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.5,
+    "gpt4o_total_mm":  2.5,
+    "delta_mm": 2.0,
+    "agreement": "moderate"
+  },
+  "penalty_extra_disagreement": {
+    "claude_total_penalties": 12.5,
+    "gpt4o_total_penalties": 2.5,
+    "claude_breakdown": "4.5 placement + 8.0 quality/efficiency/gap (out-of-rubric plus gap penalty)",
+    "gpt4o_breakdown": "2.5 placement only",
+    "analysis": "Eighth video where Claude applies out-of-rubric penalty bookkeeping (V20, V22, V26, V28, V29, V30, V31, postV10). Uniquely, postV10 also triggers Claude's gap penalty because Claude reads the final frame as showing a partial slit gap while GPT-4o reads it as complete closure. This makes postV10 the largest penalty-delta case in the series at 10.0 points."
+  },
+  "phase_attribution_disagreement": {
+    "claude_diagnosis": "Phase split: idle 5s, load 13s, placement 67s, first 23s, second 22s, third 35s, cut 50s. Placement and cutting are the dominant loss centers; both are the worst in the post-training series.",
+    "gpt4o_diagnosis": "Phase split: load 16.5s, placement 38s, first 30s, second 40s, third 45s, cut 36.2s, completion 6s. Throws 2 and 3 are the dominant loss centers; placement and cut are moderate.",
+    "analysis": "Same INVERSE cut-phase boundary pattern as V30/V31 but with an additional placement-boundary disagreement. Claude's 67s placement vs GPT-4o's 38s is the largest placement-phase gap in the series (29s). Claude's 50s cut vs GPT-4o's 36.2s cut adds another ~14s to the cut side. Tails converge within 3.3s but the internal allocation is dramatically different. Same convergent-tails pattern seen across V28/V30/V31 — the cut and placement phase boundaries are the two weakest points in the current prompt definition."
+  },
+  "drain_gap_divergence_analysis": {
+    "claude_finding": "Visible gap in upper portion of slit; knot compact but closure only partial.",
+    "gpt4o_finding": "No visible gap; slit approximation complete; knot seated and stable.",
+    "significance": "This is the first drain-gap divergence recorded outside the V11-V20 early-training window and the first divergence on a post-training video. The running tally is now AGREE 11, DIVERGE 6 (V11, V14, V16, V17, V20, postV10). Unlike the earlier divergence cases which were on monitor-recorded videos with artifact noise, postV10 is on the standard training station. Worth flagging for human review if a third opinion is available — the gap/no-gap call has a direct effect on 8 points of penalty bookkeeping in Claude's scoring."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 372.5,
+    "gpt4o_fls": 385.8,
+    "reconciled_fls": 385.8,
+    "reconciliation_note": "Moderate score agreement with delta 13.3 FLS. Reconciled value is 385.8 (GPT-4o, rubric-strict). The 13.3-point delta breaks down as: 3.3s time advantage for GPT-4o (contributes -3.3) + 10.0 penalty advantage for GPT-4o (contributes +10.0) = net +13.3. If Claude's gap finding is correct, the reconciled score should be lower; if GPT-4o's no-gap finding is correct, 385.8 stands. Pending drain-gap adjudication, 385.8 is the rubric-strict value."
+  },
+  "systematic_findings": {
+    "largest_penalty_delta_in_series": "10.0 penalty delta is the largest recorded. Driven by both Claude's persistent out-of-rubric quality/efficiency penalty AND Claude's gap-based deduction. postV10 is the only post-training video that has triggered both forms of Claude-side penalty simultaneously.",
+    "rubric_scope_issue_now_8_of_17": "Eighth out-of-rubric case across 17 two-teacher-scored videos. Pattern is definitively a prompt drift on Claude's side. v002 prompt should formalize the rubric-allowed penalty set explicitly and move quality/efficiency observations into a separate cosmetic_quality field.",
+    "drain_gap_divergence_reappears": "postV10 is the first drain-gap divergence outside the early-training V11-V20 window. Running tally: AGREE 11, DIVERGE 6. Unlike earlier divergences which were video-quality driven, postV10 is on the standard station — the disagreement is about visual interpretation of the final frame, not recording artifacts.",
+    "inverse_phase_pattern_persists": "Third video (V30, V31, postV10) where the convergent-tails pattern shows Claude bundling into cut and GPT-4o spreading into throws. Also the first case adding a placement-boundary disagreement (67s vs 38s). Cut-phase and placement-phase start definitions are now confirmed as the two highest-priority prompt fixes.",
+    "postV10_as_series_low": "Both teachers independently rank postV10 in the bottom tier of post-training runs. Claude calls it the worst in the series (372.5) framing it as late-session fatigue or skill regression. GPT-4o scores it 385.8 framing it as competent-but-inefficient. The split reflects the gap-finding disagreement: with the gap, this is a problem run; without it, it's a slow but clean run."
+  }
+}

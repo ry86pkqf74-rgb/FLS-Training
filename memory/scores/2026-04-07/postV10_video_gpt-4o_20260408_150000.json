@@ -1,0 +1,66 @@
+{
+  "id": "score_gpt4o_postV10_001",
+  "video_id": "postV10_video",
+  "video_filename": "postV10.mov",
+  "video_alias": "postV10",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o-2024-11-20",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T15:00:00Z",
+  "recording_notes": "Post-training V10 run on the original training station. Deliberate, controlled run with atraumatic drain handling. Some video-angle limitations on exact mark deviation and wrap count, but the knot structure and closure outcome are clearly assessable.",
+  "frame_analyses": [
+    {"frame_number": 155, "phase": "needle_load", "description": "The first instrument tip becomes visible from the right and the trainee begins bringing the needle-suture complex into the field.", "technique_notes": "Task timing starts here; entry is controlled but setup is not immediate."},
+    {"frame_number": 661, "phase": "needle_load", "description": "The needle is being reoriented for the initial bite with both instruments working near the Penrose.", "technique_notes": "Several small regrasps are used to achieve a workable needle angle before the pass."},
+    {"frame_number": 1081, "phase": "suture_placement", "description": "The needle is driven through the Penrose near the marked targets while the opposite instrument stabilizes and elevates the drain.", "technique_notes": "Control is steady and tissue handling is gentle, though the bite sequence is deliberate rather than efficient."},
+    {"frame_number": 1792, "phase": "first_throw", "description": "The suture has been drawn through and the trainee transitions from placement to intracorporeal knot tying.", "technique_notes": "This is the clean handoff point from needle passage to loop formation."},
+    {"frame_number": 2566, "phase": "first_throw", "description": "The first throw is being advanced toward the slit and seated over the Penrose.", "technique_notes": "Loop management is wide and somewhat slow, but the throw appears to be laid down centrally."},
+    {"frame_number": 3496, "phase": "second_throw", "description": "An alternating second throw is formed and tightened with the knot stack flattening over the slit.", "technique_notes": "The loop direction appears reversed from the first throw, suggesting an appropriate hand switch."},
+    {"frame_number": 4486, "phase": "third_throw", "description": "The final throw is tightened and the knot becomes compact at the center of the Penrose.", "technique_notes": "The trainee maintains control without obvious slippage, though there are extra corrective movements before final seating."},
+    {"frame_number": 6181, "phase": "suture_cut", "description": "Scissors are in the field and the suture tails are being isolated for intracorporeal cutting.", "technique_notes": "Tail control is cautious; this phase adds time because the ends are repeatedly repositioned before cutting."},
+    {"frame_number": 6505, "phase": "completion", "description": "Both suture ends have been cut and the final knot remains seated on the Penrose without avulsion.", "technique_notes": "End state appears stable with the slit approximated and the knot still centered."}
+  ],
+  "completion_time_seconds": 211.7,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 16.5, "duration_seconds": 16.5},
+    {"phase": "suture_placement", "start_seconds": 16.5, "end_seconds": 54.5, "duration_seconds": 38.0},
+    {"phase": "first_throw", "start_seconds": 54.5, "end_seconds": 84.5, "duration_seconds": 30.0},
+    {"phase": "second_throw", "start_seconds": 84.5, "end_seconds": 124.5, "duration_seconds": 40.0},
+    {"phase": "third_throw", "start_seconds": 124.5, "end_seconds": 169.5, "duration_seconds": 45.0},
+    {"phase": "suture_cut", "start_seconds": 169.5, "end_seconds": 205.7, "duration_seconds": 36.2},
+    {"phase": "completion", "start_seconds": 205.7, "end_seconds": 211.7, "duration_seconds": 6.0}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "First throw appears to be a double-wrapped surgeon's knot with the right instrument leading, although the exact wrap count is partially obscured during loop transfer."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Second throw appears to reverse loop direction and is best interpreted as a single alternating throw led by the left instrument."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Final throw appears to return to a right-sided lead and seats without obvious loosening or unraveling."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 2.5,
+    "confidence": "low",
+    "placement_notes": "Bite appears close to both target marks; millimetric deviation is video-angle limited."
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No visible gap at the knot site, drain not avulsed, knot stack remains seated through the cutting phase."
+  },
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 385.8,
+  "confidence_score": 0.65,
+  "technique_summary": "This was a deliberate, controlled performance with suture bites that appeared close to the marks and a final knot that remained seated after cutting. The main weakness was efficiency: there were repeated regrasps, large loop management during the throws, and a prolonged cutting phase. Tissue handling stayed gentle, the drain was not avulsed, and slit approximation appeared complete at the end.",
+  "improvement_suggestions": [
+    "Load the needle to a stable working angle earlier; the initial bite setup involved several extra regrasps that added time before the first pass.",
+    "Keep a shorter working end and reduce oversized loops during knot tying so each throw can be transferred and seated with fewer corrective movements.",
+    "After each throw, apply immediate opposing tension to seat the knot flat over the slit rather than spending extra time recentering the throw before tightening."
+  ],
+  "strengths": [
+    "Needle placement appeared close to the marked targets despite a constrained workspace.",
+    "The Penrose was handled atraumatically with no avulsion or obvious tearing during the task.",
+    "The final knot appeared secure and centered, and both suture ends were successfully cut intracorporeally."
+  ],
+  "comparison_notes": "Major drain-gap divergence vs Claude postV10. Claude reported gap_visible=true / slit_closure=partial and applied 12.5 total penalties (4.5 placement + 8.0 quality/efficiency/gap); GPT-4o reports gap_visible=false / slit_closure=complete and applies rubric-strict 2.5 placement-only. Score delta 13.3 FLS (385.8 vs 372.5). This is the first drain-gap divergence in the series outside the V11-V20 window and the eighth out-of-rubric penalty case for Claude (V20, V22, V26, V28, V29, V30, V31, postV10). Time agreement is tight (delta 3.3s) with the same INVERSE cut-phase boundary pattern as V30/V31: GPT-4o cut 36.2s, Claude cut 50s; throws 115s vs 80s — Claude pushes work into cut while GPT-4o keeps it in throws. Hand-lead alternation pattern agrees (R-L-R on both sides)."
+}
