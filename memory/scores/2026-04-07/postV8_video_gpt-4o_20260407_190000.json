@@ -1,0 +1,91 @@
+{
+  "id": "score_chatgpt_postV8_001",
+  "video_id": "postV8_video",
+  "video_filename": "postV8.mov",
+  "video_hash": null,
+  "source": "teacher_chatgpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T19:00:00Z",
+  "frame_analyses": [
+    {"frame_number": 145, "phase": "needle_load", "description": "First instrument appears in the field and the trainee begins orienting the needle and suture toward the Penrose drain.", "technique_notes": "Entry is controlled but the setup is deliberate, with a few seconds spent establishing needle orientation."},
+    {"frame_number": 496, "phase": "needle_load", "description": "Needle is positioned near the marked target on the drain and alignment is refined before the pass.", "technique_notes": "Needle angle is acceptable, though the load could be optimized earlier to reduce repositioning."},
+    {"frame_number": 691, "phase": "suture_placement", "description": "The needle traverses the slit Penrose drain and the suture is pulled through the marked area.", "technique_notes": "Bite placement appears close to both marks; exact deviation is difficult to judge from this camera angle."},
+    {"frame_number": 1141, "phase": "suture_placement", "description": "Both tails are being equalized and arranged for intracorporeal knot tying after the pass is completed.", "technique_notes": "Good tissue respect with no avulsion, but some extra regrasping adds time."},
+    {"frame_number": 1621, "phase": "first_throw", "description": "The first throw is formed with an apparent double wrap before the strand is passed through.", "technique_notes": "This appears consistent with a surgeon's knot; the throw is methodical rather than fast."},
+    {"frame_number": 2491, "phase": "second_throw", "description": "The trainee reverses direction and creates the next throw with the opposite hand leading.", "technique_notes": "Alternation appears preserved, though the loop is built with several small adjustments."},
+    {"frame_number": 4081, "phase": "third_throw", "description": "Final throw is constructed and seated after another extended setup period.", "technique_notes": "The knot is tightened without obvious slip, but this phase is the least efficient portion of the task."},
+    {"frame_number": 6031, "phase": "suture_cut", "description": "Scissors are applied to the tails and the trainee begins trimming the suture ends inside the trainer.", "technique_notes": "Cutting is safe and controlled, though the scissors are brought in late after a prolonged finish to the knot."},
+    {"frame_number": 6145, "phase": "completion", "description": "Both tails appear cut and the task is effectively complete.", "technique_notes": "Final knot remains in place and the drain is not avulsed."}
+  ],
+  "completion_time_seconds": 200.0,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 13.2, "duration_seconds": 13.2},
+    {"phase": "suture_placement", "start_seconds": 13.2, "end_seconds": 38.0, "duration_seconds": 24.8},
+    {"phase": "first_throw", "start_seconds": 38.0, "end_seconds": 75.2, "duration_seconds": 37.2},
+    {"phase": "second_throw", "start_seconds": 75.2, "end_seconds": 118.4, "duration_seconds": 43.2},
+    {"phase": "third_throw", "start_seconds": 118.4, "end_seconds": 185.4, "duration_seconds": 67.0},
+    {"phase": "suture_cut", "start_seconds": 185.4, "end_seconds": 199.6, "duration_seconds": 14.2},
+    {"phase": "completion", "start_seconds": 199.6, "end_seconds": 200.0, "duration_seconds": 0.4}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "left", "hand_switched": null, "appears_secure": true, "notes": "First throw appears to be a double wrap with the left instrument leading; it seats slowly but without visible loss of control."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Second throw appears to reverse direction with right-hand lead and is tightened flat after several regrasping motions."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Third throw appears to switch back to left-hand lead; setup is prolonged, but the final knot remains intact without obvious slip."}
+  ],
+  "suture_placement": {"deviation_from_mark1_mm": 1.5, "deviation_from_mark2_mm": 2.0, "total_deviation_penalty": 3.5, "confidence": "low"},
+  "drain_assessment": {"gap_visible": false, "drain_avulsed": false, "slit_closure_quality": "good_apposition"},
+  "estimated_penalties": 3.5,
+  "estimated_fls_score": 396.5,
+  "confidence_score": 0.72,
+  "technique_summary": "The trainee completes the task successfully with a secure-appearing final knot, no drain avulsion, and generally gentle handling of the Penrose drain. The main limitation is efficiency: the first and especially the third throw include repeated regrasping and prolonged setup, which lengthens total time. Needle control is acceptable and mark targeting appears reasonably close, but not crisp enough to score with high confidence from this view. The three throwing phases together took about 147.4 seconds, so roughly three-quarters of the total run was spent building and seating the knot.",
+  "improvement_suggestions": [
+    "Set the needle in a more efficient working angle before approaching the drain so the initial pass can be made with fewer corrective adjustments.",
+    "Reduce regrasping during the first and third throws by organizing tail length and loop orientation earlier before committing to the intracorporeal throw.",
+    "After the final throw is seated, transition to scissors sooner and present the tails more clearly to shorten the cutting phase."
+  ],
+  "strengths": [
+    "Completed all required task components intracorporeally and finished with both tails cut inside the trainer.",
+    "Maintained control of the drain throughout the task with no visible avulsion or gross tissue trauma.",
+    "Knot sequence appears to alternate hands appropriately (left-right-left) and the final knot remains stable without obvious slip."
+  ],
+  "rubric_assessment": {
+    "score_formula": "600 - completion_time_seconds - penalties",
+    "calculation": "600 - 200.0 - 3.5 = 396.5",
+    "final_score": 396.5,
+    "max_score": 600,
+    "automatic_zero": false,
+    "penalty_breakdown": {
+      "placement_deviation": 3.5,
+      "visible_gap_after_tightening": 0,
+      "knot_slip_or_unraveling": 0,
+      "failure_to_switch_hands": 0,
+      "drain_avulsion": 0
+    },
+    "rubric_judgments": {
+      "task_completed_within_allowed_time": true,
+      "no_automatic_zero_event": true,
+      "no_visible_drain_avulsion": true,
+      "no_post_tightening_gap": true,
+      "no_knot_slippage": true,
+      "hand_alternation_preserved": true
+    },
+    "overall_judgment": "Technically acceptable but inefficient. Completion quality acceptable, knot security acceptable, penalty burden low, time efficiency below strong performance level. Score driven primarily by slowness, not by major technical errors.",
+    "biggest_time_losses": [
+      "Third throw at 67.0s — the single largest efficiency problem",
+      "Second throw at 43.2s with repeated regrasping",
+      "First throw at 37.2s with slow setup and tightening"
+    ],
+    "coaching_grade": {
+      "task_compliance": "9/10",
+      "knot_construction_security": "8.5/10",
+      "target_accuracy": "8/10",
+      "tissue_handling_instrument_control": "8.5/10",
+      "economy_of_motion": "6.5/10",
+      "end_game_efficiency": "6/10",
+      "overall": "7.8/10"
+    },
+    "uncertainty_notes": "Moderate confidence overall (0.72). Time and completion judgments are fairly solid; least certain part is exact mm deviation from marks and, to lesser extent, precise hand-leading interpretation on each throw due to camera angle."
+  }
+}
