@@ -1,0 +1,68 @@
+{
+  "id": "score_gpt4o_V18_001",
+  "video_id": "V18_video",
+  "video_filename": "V_8.mov",
+  "video_alias": "V18",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o-2024-11-20",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T01:00:00Z",
+  "recording_notes": "Phone filming wall-mounted RCA monitor — SURG20 station. Dark suture. Oblique monitor angle.",
+  "frame_analyses": [
+    {"frame_number": 100, "phase": "needle_load", "description": "~3.3s: first instrument enters from the left; scoring timer starts here.", "technique_notes": "Controlled entry; some extra tail/needle orientation work before a stable load."},
+    {"frame_number": 361, "phase": "needle_load", "description": "~12.0s: needle being reoriented in front of drain for first bite.", "technique_notes": "Deliberate rather than fluid; small regrasp maneuvers cost time."},
+    {"frame_number": 661, "phase": "suture_placement", "description": "~22.0s: needle tip engaged at target, first pass underway.", "technique_notes": "Acceptable entry angle; gentle tissue handling."},
+    {"frame_number": 931, "phase": "suture_placement", "description": "~31.0s: needle traversed drain, suture drawn through second side.", "technique_notes": "Pass appears close to target; mm accuracy hard to judge from monitor."},
+    {"frame_number": 1561, "phase": "first_throw", "description": "~52.0s: first throw configured with double-wrap appearance.", "technique_notes": "Surgeon's knot setup; correct in concept but slowed by regrasping."},
+    {"frame_number": 1831, "phase": "first_throw", "description": "~61.0s: first throw seated; approximation maintained.", "technique_notes": "Lies down reasonably well, no obvious loosening."},
+    {"frame_number": 2521, "phase": "second_throw", "description": "~84.0s: alternating loop formed near top of field.", "technique_notes": "Alternating direction preserved; setup prolonged and uneconomical."},
+    {"frame_number": 3241, "phase": "second_throw", "description": "~108.0s: second throw cinched with tension across knot.", "technique_notes": "Stable control; substantial extra motion before seated."},
+    {"frame_number": 4381, "phase": "third_throw", "description": "~146.0s: final required throw formed after tail repositioning.", "technique_notes": "Slowest segment; repeated regrasping before advancement."},
+    {"frame_number": 4741, "phase": "third_throw", "description": "~158.0s: knot stack seated, tails oriented for cutting.", "technique_notes": "Knot secure; no unraveling or loss of approximation."},
+    {"frame_number": 4957, "phase": "suture_cut", "description": "~165.2s: blue cutter dividing remaining tails inside trainer.", "technique_notes": "Completed intrabody; transition to scissors was delayed."}
+  ],
+  "completion_time_seconds": 162.9,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 14.9, "duration_seconds": 14.9},
+    {"phase": "suture_placement", "start_seconds": 14.9, "end_seconds": 36.9, "duration_seconds": 22.0},
+    {"phase": "first_throw", "start_seconds": 36.9, "end_seconds": 58.8, "duration_seconds": 21.9},
+    {"phase": "second_throw", "start_seconds": 58.8, "end_seconds": 106.7, "duration_seconds": 47.9},
+    {"phase": "third_throw", "start_seconds": 106.7, "end_seconds": 156.0, "duration_seconds": 49.3},
+    {"phase": "suture_cut", "start_seconds": 156.0, "end_seconds": 162.7, "duration_seconds": 6.7},
+    {"phase": "completion", "start_seconds": 162.7, "end_seconds": 162.9, "duration_seconds": 0.2}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Right-led double throw consistent with surgeon's knot; moderate confidence given monitor angle."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Alternating single throw with opposite instrument leading; prolonged but seats without visible slippage."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Alternates back again and remains secure; prolonged tail management before cut."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 3.5,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No visible gap seen; closure appears complete."
+  },
+  "estimated_penalties": 3.5,
+  "estimated_fls_score": 433.6,
+  "confidence_score": 0.64,
+  "technique_summary": "Task completed successfully with both tails cut inside trainer, no drain avulsion, no knot failure. Needle passage and tissue handling controlled; knot stack held without visible loosening. Main performance limiter was efficiency — needle loading, throw setup, and especially the late knot-tying/tail-management phases were prolonged by repeated regrasping.",
+  "improvement_suggestions": [
+    "Load the needle at a reproducible angle before approaching target.",
+    "Keep one tail under constant tension during throws 2 and 3; advance the loop directly to the knot.",
+    "Once throw 3 is seated, transition to scissors sooner — post-knot management consumed disproportionate time.",
+    "Make the right-left-right hand alternation pattern more obvious and fluid."
+  ],
+  "strengths": [
+    "Completed entire sequence including intracorporeal cutting without avulsion.",
+    "Controlled instrument-tissue interaction during needle pass and knot advancement.",
+    "Knot approximation stable at the end, no unraveling or loss of closure."
+  ],
+  "comparison_notes": "LARGE time delta vs Claude V18 (Δ=17.9s). Claude read 145s (reading from clip-end at frame 23 = 149s), GPT-4o read 162.9s (timing start at ~3s, end at ~166s absolute). ΔFLS = 17.4 — the widest FLS disagreement in V-series so far. Phase-level: Claude consolidates throws into 60s (20/18/22), GPT-4o stretches throws 2+3 across ~97s. Endpoint anchor: Claude's final frame is at 149s absolute and may correspond to GPT-4o's throw-3/cut transition at ~156s absolute, suggesting Claude cut short the end of the clip OR GPT-4o over-counted trailing tail management. Placement and closure agree closely; the disagreement is purely about where 'completion' lands on the timeline."
+}
