@@ -1,0 +1,144 @@
+{
+  "feedback_id": "feedback_r5rwepzagpk.f247_20260407222311",
+  "video_id": "r5rwepzagpk.f247",
+  "score_id": "score_consensus_r5rwepzagpk.f247_20260407222311",
+  "generated_at": "2026-04-07T22:23:11.904556",
+  "generator": "teacher",
+  "headline": "Steady at 120s — focus on suture_placement for next breakthrough",
+  "fls_score": 478.0,
+  "completion_time": 120.0,
+  "attempt_number": 3,
+  "phase_coaching": [
+    {
+      "phase": "needle_load",
+      "duration_seconds": 25.0,
+      "benchmark_seconds": 8.0,
+      "expert_seconds": 5.0,
+      "status": "on_track",
+      "trend_last_5": [
+        15.0,
+        15.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": "needle_loading"
+    },
+    {
+      "phase": "suture_placement",
+      "duration_seconds": 45.0,
+      "benchmark_seconds": 22.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [
+        20.0,
+        20.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": "needle_driving_angle"
+    },
+    {
+      "phase": "first_throw",
+      "duration_seconds": 25.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [
+        25.0,
+        25.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": "wrapping_speed"
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 10.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "on_track",
+      "trend_last_5": [
+        20.0,
+        20.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": null
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 10.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "on_track",
+      "trend_last_5": [
+        20.0,
+        20.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": null
+    },
+    {
+      "phase": "suture_cut",
+      "duration_seconds": 5.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 10.0,
+      "status": "on_track",
+      "trend_last_5": [
+        10.0,
+        10.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "high",
+      "phase": "suture_placement",
+      "current_value": "45s",
+      "target_value": "22s",
+      "description": "suture_placement: 45s → target 22s (23s potential savings)",
+      "drill": "needle_driving_angle",
+      "expected_time_savings": "~23s"
+    },
+    {
+      "rank": 2,
+      "priority": "medium",
+      "phase": "needle_load",
+      "current_value": "25s",
+      "target_value": "8s",
+      "description": "needle_load: 25s → target 8s (17s potential savings)",
+      "drill": "needle_loading",
+      "expected_time_savings": "~17s"
+    },
+    {
+      "rank": 3,
+      "priority": "low",
+      "phase": "first_throw",
+      "current_value": "25s",
+      "target_value": "20s",
+      "description": "first_throw: 25s → target 20s (5s potential savings)",
+      "drill": "wrapping_speed",
+      "expected_time_savings": "~5s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "-9% improvement from baseline (110s → 120s)",
+      "evidence": "Baseline: 110s, Current: 120s, Best: 110s",
+      "actionable": true,
+      "recommendation": "Performance below baseline — check equipment or fatigue."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Good demonstration of proper needle loading",
+    "Clear visualization of suture placement technique",
+    "Drain not avulsed — safe tissue handling maintained"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "At or above proficiency level",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Warm up with 5 minutes of needle_driving_angle drills before scoring. Primary focus: suture_placement (currently 45s, target 22s)."
+}

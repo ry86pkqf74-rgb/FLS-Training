@@ -1,0 +1,113 @@
+{
+  "id": "score_claude_yt_iuGqaDV1nU8_20260407213221",
+  "video_id": "yt_iuGqaDV1nU8",
+  "video_filename": "iuGqaDV1nU8.f298.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:32:21.904395",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Educational presentation title slide about suturing and knot-tying for EMIG exam",
+      "technique_notes": "This is educational content, not a performance"
+    },
+    {
+      "frame_number": 6,
+      "phase": "idle",
+      "description": "FLS trainer setup visible with marked Penrose drain on red platform, suture already threaded through tissue",
+      "technique_notes": "Standard FLS Task 5 setup - marked Penrose drain with black targeting marks visible"
+    },
+    {
+      "frame_number": 8,
+      "phase": "first_throw",
+      "description": "Right-hand instrument grasping suture to begin first throw of knot",
+      "technique_notes": "Proper instrument positioning for knot tying initiation"
+    },
+    {
+      "frame_number": 9,
+      "phase": "first_throw",
+      "description": "Creating loops for surgeon's knot with right hand, left instrument stabilizing",
+      "technique_notes": "Appears to be constructing a surgeon's knot with multiple wraps on first throw"
+    },
+    {
+      "frame_number": 10,
+      "phase": "first_throw",
+      "description": "Completing the surgeon's knot formation with both instruments engaged",
+      "technique_notes": "Good bilateral instrument coordination during knot construction"
+    },
+    {
+      "frame_number": 11,
+      "phase": "first_throw",
+      "description": "Tightening the first throw, knot appears secure against tissue",
+      "technique_notes": "First throw being properly seated and tightened"
+    },
+    {
+      "frame_number": 12,
+      "phase": "second_throw",
+      "description": "Knot completed and secured, tissue appears well-approximated",
+      "technique_notes": "Final knot appears secure with good tissue approximation"
+    },
+    {
+      "frame_number": 16,
+      "phase": "idle",
+      "description": "Running stitch demonstration setup with long marked Penrose drain",
+      "technique_notes": "Different task setup - this is for running stitch demonstration"
+    },
+    {
+      "frame_number": 18,
+      "phase": "suture_placement",
+      "description": "Needle being loaded and positioned for running suture technique",
+      "technique_notes": "Proper needle loading technique demonstrated"
+    },
+    {
+      "frame_number": 20,
+      "phase": "suture_placement",
+      "description": "Sequential suture placement along the Penrose drain",
+      "technique_notes": "Running suture technique with consistent bite spacing"
+    },
+    {
+      "frame_number": 21,
+      "phase": "suture_cut",
+      "description": "Cutting suture tail after completion of running suture",
+      "technique_notes": "Final step of running suture completion"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "This is an educational demonstration video showing multiple techniques rather than a timed performance"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 0.95,
+  "technique_summary": "This is an educational presentation demonstrating proper intracorporeal knot tying and running suture techniques. The video shows instructional content rather than a timed performance assessment.",
+  "improvement_suggestions": [
+    "This is educational content - no performance assessment applicable"
+  ],
+  "strengths": [
+    "Clear demonstration of proper surgical techniques",
+    "Good educational value for learning intracorporeal suturing"
+  ],
+  "comparison_to_previous": {}
+}

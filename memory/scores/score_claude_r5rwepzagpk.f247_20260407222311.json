@@ -1,0 +1,160 @@
+{
+  "id": "score_claude_r5rwepzagpk.f247_20260407222311",
+  "video_id": "r5rwepzagpk.f247",
+  "video_filename": "R5rwEpZagPk.f247.webm",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:23:11.438674",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Black screen, task not started",
+      "technique_notes": "Waiting for task to begin"
+    },
+    {
+      "frame_number": 3,
+      "phase": "idle",
+      "description": "Shows Penrose drain with slit prepared for suturing",
+      "technique_notes": "Training setup showing the Penrose drain model"
+    },
+    {
+      "frame_number": 4,
+      "phase": "idle",
+      "description": "Demonstrates target marks A and B on the Penrose drain with 2cm spacing",
+      "technique_notes": "Clear marking of suture placement targets"
+    },
+    {
+      "frame_number": 7,
+      "phase": "needle_load",
+      "description": "Demonstrates needle loading and handling techniques in training model",
+      "technique_notes": "Shows proper needle grip and positioning"
+    },
+    {
+      "frame_number": 9,
+      "phase": "suture_placement",
+      "description": "Drop needle technique demonstration showing needle placement through drain",
+      "technique_notes": "Good technique for passing needle through tissue"
+    },
+    {
+      "frame_number": 10,
+      "phase": "suture_placement",
+      "description": "Needle being passed through the Penrose drain at marked location",
+      "technique_notes": "Demonstrates proper needle trajectory"
+    },
+    {
+      "frame_number": 13,
+      "phase": "suture_placement",
+      "description": "Hold needle technique demonstration with suture being pulled through",
+      "technique_notes": "Shows controlled needle handling for suture passage"
+    },
+    {
+      "frame_number": 15,
+      "phase": "suture_placement",
+      "description": "Suture being threaded through drain, showing elongated U-shaped configuration",
+      "technique_notes": "Good visualization of suture path through both marks"
+    },
+    {
+      "frame_number": 17,
+      "phase": "first_throw",
+      "description": "Beginning knot tying process with instruments positioned for first throw",
+      "technique_notes": "Proper instrument positioning for intracorporeal knot tying"
+    },
+    {
+      "frame_number": 18,
+      "phase": "first_throw",
+      "description": "Executing first throw of surgeon's knot with wrapping motion",
+      "technique_notes": "Shows wrapping technique for double throw"
+    },
+    {
+      "frame_number": 19,
+      "phase": "first_throw",
+      "description": "Completing first surgeon's knot throw with instruments",
+      "technique_notes": "Good control during knot formation"
+    },
+    {
+      "frame_number": 21,
+      "phase": "completion",
+      "description": "Final view showing completed suture placement through drain",
+      "technique_notes": "Suture properly placed through both marked locations"
+    }
+  ],
+  "completion_time_seconds": 120.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 25.0,
+      "duration_seconds": 25.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 25.0,
+      "end_seconds": 70.0,
+      "duration_seconds": 45.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 70.0,
+      "end_seconds": 95.0,
+      "duration_seconds": 25.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 95.0,
+      "end_seconds": 105.0,
+      "duration_seconds": 10.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 105.0,
+      "end_seconds": 115.0,
+      "duration_seconds": 10.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 115.0,
+      "end_seconds": 120.0,
+      "duration_seconds": 5.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot with double throw demonstrated"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.0,
+    "total_deviation_penalty": 2.0,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain appears properly closed with good suture tension"
+  },
+  "estimated_penalties": 2.0,
+  "estimated_fls_score": 478.0,
+  "confidence_score": 0.65,
+  "technique_summary": "This appears to be an instructional video demonstrating proper FLS Task 5 techniques rather than an actual performance attempt. The video shows good needle handling and suturing fundamentals.",
+  "improvement_suggestions": [
+    "This is a training demonstration - focus on practicing the demonstrated techniques",
+    "Apply consistent tension during knot tying"
+  ],
+  "strengths": [
+    "Good demonstration of proper needle loading",
+    "Clear visualization of suture placement technique"
+  ],
+  "comparison_to_previous": {}
+}

@@ -1,0 +1,108 @@
+{
+  "id": "score_consensus_yt_3Ea83FIDWL4_20260407220339",
+  "video_id": "yt_3Ea83FIDWL4",
+  "video_filename": "3Ea83FIDWL4.f136.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:03:39.023480",
+  "frame_analyses": [],
+  "completion_time_seconds": 130.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 16.0,
+      "duration_seconds": 16.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 16.0,
+      "end_seconds": 34.0,
+      "duration_seconds": 18.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 34.0,
+      "end_seconds": 50.0,
+      "duration_seconds": 16.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 50.0,
+      "end_seconds": 66.0,
+      "duration_seconds": 16.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 66.0,
+      "end_seconds": 82.0,
+      "duration_seconds": 16.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 82.0,
+      "end_seconds": 130.0,
+      "duration_seconds": 48.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Double throw (surgeon's knot) completed successfully following EMIG protocol"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand alternation"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final throw completing secure knot with appropriate hand alternation"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Good approximation of drain edges with secure knot, no visible gaps or slit closure issues"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 470.0,
+  "confidence_score": 0.81,
+  "technique_summary": "EMIG tutorial demonstration showing proper intracorporeal knot tying technique on Penrose drain. Teachers disagreed on total time (10s vs 130s) and penalties - chose longer duration as more realistic for complete procedure, but zero penalties given secure knot construction and good tissue approximation without visible errors.",
+  "improvement_suggestions": [
+    "Increase speed of completion without sacrificing accuracy",
+    "Focus on maintaining this precision in timed scenarios",
+    "Minimize unnecessary movements during suturing"
+  ],
+  "strengths": [
+    "Proper surgeon's knot construction on first throw",
+    "Excellent needle handling and consistent secure knot tying",
+    "Good tissue approximation and bimanual coordination",
+    "Appropriate hand alternation between throws"
+  ],
+  "comparison_to_previous": {}
+}

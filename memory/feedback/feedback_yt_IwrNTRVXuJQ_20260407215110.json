@@ -1,0 +1,54 @@
+{
+  "feedback_id": "feedback_yt_IwrNTRVXuJQ_20260407215110",
+  "video_id": "yt_IwrNTRVXuJQ",
+  "score_id": "score_claude_yt_IwrNTRVXuJQ_20260407215110",
+  "generated_at": "2026-04-07T21:51:10.538299",
+  "generator": "teacher",
+  "headline": "Strong improvement: 147s faster (0s / 600 FLS)",
+  "fls_score": 600.0,
+  "completion_time": 0.0,
+  "attempt_number": 55,
+  "phase_coaching": [
+    {
+      "phase": "idle",
+      "duration_seconds": 0.0,
+      "benchmark_seconds": 25.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "100% improvement from baseline (85s → 0s)",
+      "evidence": "Baseline: 85s, Current: 0s, Best: 0s",
+      "actionable": true,
+      "recommendation": ""
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~3 consecutive attempts",
+      "evidence": "5 instances of >30% slowdown within 3-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 2 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Perfect suture placement on target marks",
+    "Proper knot sequence with surgeon's knot followed by single throws",
+    "Excellent hand switching technique",
+    "Drain not avulsed — safe tissue handling maintained",
+    "147s faster than previous attempt"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "At or above proficiency level",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Consider recording with direct camera for highest scoring confidence."
+}

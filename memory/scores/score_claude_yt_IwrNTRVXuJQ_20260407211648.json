@@ -1,0 +1,120 @@
+{
+  "id": "score_claude_yt_IwrNTRVXuJQ_20260407211648",
+  "video_id": "yt_IwrNTRVXuJQ",
+  "video_filename": "IwrNTRVXuJQ.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:16:48.481223",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title slide for FLS Manual Skills Exam Tips and Tricks",
+      "technique_notes": "Educational content, not actual task performance"
+    },
+    {
+      "frame_number": 2,
+      "phase": "idle",
+      "description": "Introduction slide about FLS training and requirements",
+      "technique_notes": "Educational content, not actual task performance"
+    },
+    {
+      "frame_number": 3,
+      "phase": "idle",
+      "description": "Task One: Peg Transfer setup visible with foam shapes on pegs",
+      "technique_notes": "This is Task 1, not Task 5 - wrong task shown"
+    },
+    {
+      "frame_number": 7,
+      "phase": "idle",
+      "description": "Close-up view of two circles drawn on gauze pad with instruments partially closed",
+      "technique_notes": "Appears to be demonstration of circle pattern, not actual suturing"
+    },
+    {
+      "frame_number": 8,
+      "phase": "idle",
+      "description": "Instruments positioned near circles with 'Partially close blades' text overlay",
+      "technique_notes": "Educational demonstration showing proper blade positioning"
+    },
+    {
+      "frame_number": 12,
+      "phase": "idle",
+      "description": "Task 5 setup visible with Penrose drain on suture block",
+      "technique_notes": "Now showing correct Task 5 setup with Penrose drain"
+    },
+    {
+      "frame_number": 13,
+      "phase": "idle",
+      "description": "Close-up of Penrose drain with text overlay about intracorporeal suturing",
+      "technique_notes": "Educational view of the drain with marking visible"
+    },
+    {
+      "frame_number": 14,
+      "phase": "idle",
+      "description": "Overhead view of Task 5 setup with drain positioned on red foam block",
+      "technique_notes": "Clear view of the setup with drain properly positioned"
+    },
+    {
+      "frame_number": 15,
+      "phase": "idle",
+      "description": "Close-up of hands showing suture with '3 knots in a row' text",
+      "technique_notes": "Educational demonstration of knot sequence outside the trainer"
+    },
+    {
+      "frame_number": 17,
+      "phase": "idle",
+      "description": "Overhead view showing completed suture with '2cm suture tail' text",
+      "technique_notes": "Shows final result with appropriate tail lengths"
+    },
+    {
+      "frame_number": 20,
+      "phase": "idle",
+      "description": "Final view showing C-shaped suture configuration",
+      "technique_notes": "Educational demonstration of proper suture placement pattern"
+    },
+    {
+      "frame_number": 22,
+      "phase": "completion",
+      "description": "Black screen indicating end of educational content",
+      "technique_notes": "End of instructional video"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "none"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_applicable",
+    "assessment_note": "No actual task performance observed"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 1.0,
+  "technique_summary": "This is an educational/instructional video showing FLS Task 5 setup and technique demonstration, not an actual task performance that can be scored.",
+  "improvement_suggestions": [
+    "This appears to be instructional content rather than a performance attempt",
+    "To receive an FLS score, an actual task performance video showing the complete suturing and knot tying sequence would be needed"
+  ],
+  "strengths": [
+    "Good educational demonstration of Task 5 setup",
+    "Clear visualization of proper equipment positioning"
+  ],
+  "comparison_to_previous": {}
+}

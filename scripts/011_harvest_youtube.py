@@ -43,6 +43,10 @@ from pathlib import Path
 # Where downloaded videos go
 DOWNLOAD_DIR = Path.home() / "fls_harvested_videos"
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+YT_DLP_CMD = [sys.executable, "-m", "yt_dlp"]
+
 # Harvest log (append-only JSONL tracking everything downloaded)
 HARVEST_LOG = Path("harvest_log.jsonl")
 
@@ -118,7 +122,7 @@ def get_already_downloaded() -> set:
 
 def extract_skill_level(title: str, description: str) -> str:
     """Guess skill level from video metadata."""
-    text = (title + " " + description).lower()
+    text = ((title or "") + " " + (description or "")).lower()
     for level, keywords in SKILL_SIGNALS.items():
         if any(kw in text for kw in keywords):
             return level
@@ -127,7 +131,7 @@ def extract_skill_level(title: str, description: str) -> str:
 
 def extract_time_from_metadata(title: str, description: str) -> float | None:
     """Try to extract a completion time from title or description."""
-    text = title + " " + description
+    text = (title or "") + " " + (description or "")
     # Patterns like "142 seconds", "2:22", "time: 135s"
     patterns = [
         r'(\d{2,3})\s*(?:seconds|sec|s)\b',           # "142 seconds" or "142s"
@@ -149,7 +153,7 @@ def extract_time_from_metadata(title: str, description: str) -> float | None:
 
 def is_likely_task5(title: str, description: str) -> bool:
     """Check if a video is likely FLS Task 5 based on metadata."""
-    text = (title + " " + description).lower()
+    text = ((title or "") + " " + (description or "")).lower()
 
     # Reject if it matches exclusion keywords
     for kw in EXCLUDE_KEYWORDS:
@@ -164,7 +168,7 @@ def is_likely_task5(title: str, description: str) -> bool:
 def search_youtube(query: str, max_results: int = MAX_VIDEOS_PER_QUERY) -> list[dict]:
     """Search YouTube and return video metadata (without downloading)."""
     cmd = [
-        "yt-dlp",
+        *YT_DLP_CMD,
         f"ytsearch{max_results}:{query}",
         "--dump-json",
         "--flat-playlist",
@@ -199,7 +203,7 @@ def download_video(url: str, output_dir: Path) -> dict | None:
     output_template = str(output_dir / "%(id)s.%(ext)s")
 
     cmd = [
-        "yt-dlp",
+        *YT_DLP_CMD,
         url,
         "--output", output_template,
         "--format", f"bestvideo[height<={MAX_RESOLUTION}]+bestaudio/best[height<={MAX_RESOLUTION}]/best",
@@ -273,9 +277,9 @@ def score_video(filepath: str, video_id: str) -> dict | None:
     Returns scoring summary or None if pipeline not found.
     """
     # Check if pipeline scripts exist
-    ingest_script = Path("scripts/010_ingest_video.py")
-    score_script = Path("scripts/020_score_frontier.py")
-    validate_script = Path("scripts/026_auto_validate.py")
+    ingest_script = REPO_ROOT / "scripts/010_ingest_video.py"
+    score_script = REPO_ROOT / "scripts/020_score_frontier.py"
+    validate_script = REPO_ROOT / "scripts/026_auto_validate.py"
 
     if not ingest_script.exists():
         print(f"  SKIP scoring: {ingest_script} not found (push framework code first)")
@@ -284,7 +288,7 @@ def score_video(filepath: str, video_id: str) -> dict | None:
     # 1. Ingest
     print(f"  Ingesting {video_id}...")
     result = subprocess.run(
-        ["python", str(ingest_script), "--video", filepath, "--task", "5"],
+        [sys.executable, str(ingest_script), "--base-dir", str(REPO_ROOT), "--video", filepath, "--task", "5"],
         capture_output=True, text=True, timeout=120
     )
     if result.returncode != 0:
@@ -304,7 +308,7 @@ def score_video(filepath: str, video_id: str) -> dict | None:
     if score_script.exists():
         print(f"  Scoring {ingested_id}...")
         result = subprocess.run(
-            ["python", str(score_script), "--video-id", ingested_id, "--video", filepath],
+            [sys.executable, str(score_script), "--base-dir", str(REPO_ROOT), "--video-id", ingested_id, "--video", filepath],
             capture_output=True, text=True, timeout=300
         )
         if result.returncode != 0:
@@ -315,7 +319,7 @@ def score_video(filepath: str, video_id: str) -> dict | None:
     if validate_script.exists():
         print(f"  Validating {ingested_id}...")
         subprocess.run(
-            ["python", str(validate_script), "--video-id", ingested_id],
+            [sys.executable, str(validate_script), "--base-dir", str(REPO_ROOT), "--video-id", ingested_id],
             capture_output=True, text=True, timeout=60
         )
 
@@ -530,6 +534,10 @@ def harvest_single(url: str, score: bool = False):
 # ============================================================
 
 def main():
+    global DOWNLOAD_DIR
+
+    download_dir = DOWNLOAD_DIR
+
     parser = argparse.ArgumentParser(
         description="FLS-Training YouTube Video Harvester",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -573,10 +581,11 @@ Examples:
     args = parser.parse_args()
 
     if args.output:
-        global DOWNLOAD_DIR
-        DOWNLOAD_DIR = Path(args.output)
+        download_dir = Path(args.output).expanduser()
 
-    DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    download_dir.mkdir(parents=True, exist_ok=True)
+
+    DOWNLOAD_DIR = download_dir
 
     if args.search:
         harvest_from_search(dry_run=args.dry_run, score=args.score)

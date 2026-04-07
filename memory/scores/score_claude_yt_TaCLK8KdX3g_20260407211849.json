@@ -1,0 +1,95 @@
+{
+  "id": "score_claude_yt_TaCLK8KdX3g_20260407211849",
+  "video_id": "yt_TaCLK8KdX3g",
+  "video_filename": "TaCLK8KdX3g.f134.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:18:49.099497",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "FLS presentation slide showing title about development and validation of manual skills component",
+      "technique_notes": "Educational content - not actual task performance"
+    },
+    {
+      "frame_number": 5,
+      "phase": "idle",
+      "description": "FLS presentation slide about development of tasks and expert panels",
+      "technique_notes": "Educational content about FLS methodology"
+    },
+    {
+      "frame_number": 10,
+      "phase": "idle",
+      "description": "FLS presentation slide showing all 6 FLS tasks with images",
+      "technique_notes": "Educational overview of FLS tasks including Task 5 (bottom middle - suturing task)"
+    },
+    {
+      "frame_number": 15,
+      "phase": "idle",
+      "description": "FLS presentation slide showing performance correlation data",
+      "technique_notes": "Educational content about FLS validation"
+    },
+    {
+      "frame_number": 16,
+      "phase": "idle",
+      "description": "GOALS assessment form visible",
+      "technique_notes": "Global Operative Assessment of Laparoscopic Skills evaluation form"
+    },
+    {
+      "frame_number": 18,
+      "phase": "idle",
+      "description": "FLS practice enhancement study results",
+      "technique_notes": "Research data showing FLS training effectiveness"
+    },
+    {
+      "frame_number": 20,
+      "phase": "idle",
+      "description": "ROC curve analysis for FLS scoring",
+      "technique_notes": "Statistical validation data for FLS assessment"
+    },
+    {
+      "frame_number": 22,
+      "phase": "idle",
+      "description": "Final FLS logo slide",
+      "technique_notes": "End of presentation content"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_applicable",
+    "assessment_note": "No actual task performance visible - educational presentation only"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 1.0,
+  "technique_summary": "This video contains only educational presentation slides about FLS methodology and validation studies, with no actual Task 5 performance visible.",
+  "improvement_suggestions": [
+    "This appears to be educational content rather than a performance video",
+    "For actual Task 5 assessment, a video showing hands-on suturing performance would be needed"
+  ],
+  "strengths": [
+    "Educational content provides good background on FLS development and validation"
+  ],
+  "comparison_to_previous": {}
+}

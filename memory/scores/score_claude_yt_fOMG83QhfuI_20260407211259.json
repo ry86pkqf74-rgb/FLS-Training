@@ -1,0 +1,180 @@
+{
+  "id": "score_claude_yt_fOMG83QhfuI_20260407211259",
+  "video_id": "yt_fOMG83QhfuI",
+  "video_filename": "fOMG83QhfuI.f135.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:12:59.951001",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Initial setup showing FLS trainer with Penrose drain and marking, instruments visible",
+      "technique_notes": "Good initial positioning of materials"
+    },
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Trainee beginning to manipulate suture and needle with laparoscopic instruments",
+      "technique_notes": "Steady instrument handling observed"
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Attempting to place suture through first mark on Penrose drain",
+      "technique_notes": "Precise needle positioning at mark location"
+    },
+    {
+      "frame_number": 5,
+      "phase": "suture_placement",
+      "description": "Continuing suture placement through drain tissue",
+      "technique_notes": "Good needle control and tissue manipulation"
+    },
+    {
+      "frame_number": 7,
+      "phase": "suture_placement",
+      "description": "Working on second suture placement through drain",
+      "technique_notes": "Maintaining proper suture positioning"
+    },
+    {
+      "frame_number": 9,
+      "phase": "first_throw",
+      "description": "Beginning first throw of surgeon's knot with double wrap",
+      "technique_notes": "Proper technique for surgeon's knot initiation"
+    },
+    {
+      "frame_number": 11,
+      "phase": "first_throw",
+      "description": "Tightening first throw of surgeon's knot",
+      "technique_notes": "Good tension control and knot security"
+    },
+    {
+      "frame_number": 13,
+      "phase": "second_throw",
+      "description": "Performing second throw with hand switch",
+      "technique_notes": "Proper hand switching technique observed"
+    },
+    {
+      "frame_number": 15,
+      "phase": "third_throw",
+      "description": "Executing third throw with opposite hand switch",
+      "technique_notes": "Consistent hand switching and knot progression"
+    },
+    {
+      "frame_number": 17,
+      "phase": "suture_cut",
+      "description": "Preparing to cut suture ends with scissors",
+      "technique_notes": "Positioning scissors for clean cut"
+    },
+    {
+      "frame_number": 19,
+      "phase": "suture_cut",
+      "description": "Cutting first suture end",
+      "technique_notes": "Precise cutting technique"
+    },
+    {
+      "frame_number": 22,
+      "phase": "completion",
+      "description": "Task completed with both suture ends cut",
+      "technique_notes": "Clean final result"
+    }
+  ],
+  "completion_time_seconds": 88.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 8.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8.0,
+      "end_seconds": 28.0,
+      "duration_seconds": 20.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 28.0,
+      "end_seconds": 44.0,
+      "duration_seconds": 16.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 44.0,
+      "end_seconds": 56.0,
+      "duration_seconds": 12.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 56.0,
+      "end_seconds": 68.0,
+      "duration_seconds": 12.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 68.0,
+      "end_seconds": 88.0,
+      "duration_seconds": 20.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot with double throw"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Correct single throw with hand switch"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final single throw with proper hand switch"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 3.5,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain properly approximated with no visible gaps"
+  },
+  "estimated_penalties": 3.5,
+  "estimated_fls_score": 508.5,
+  "confidence_score": 0.85,
+  "technique_summary": "Excellent performance with proper surgeon's knot, correct hand switching, and precise suture placement. Clean execution with minimal penalties.",
+  "improvement_suggestions": [
+    "Consider slightly more precise initial suture placement",
+    "Maintain consistent tension throughout knot tying"
+  ],
+  "strengths": [
+    "Proper surgeon's knot technique",
+    "Correct hand switching between throws",
+    "Efficient completion time",
+    "Good instrument control"
+  ],
+  "comparison_to_previous": {}
+}

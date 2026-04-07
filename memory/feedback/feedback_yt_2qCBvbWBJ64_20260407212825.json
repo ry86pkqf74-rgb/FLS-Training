@@ -1,0 +1,151 @@
+{
+  "feedback_id": "feedback_yt_2qCBvbWBJ64_20260407212825",
+  "video_id": "yt_2qCBvbWBJ64",
+  "score_id": "score_claude_yt_2qCBvbWBJ64_20260407212825",
+  "generated_at": "2026-04-07T21:28:25.174828",
+  "generator": "teacher",
+  "headline": "Steady at 85s — focus on second_throw for next breakthrough",
+  "fls_score": 513.0,
+  "completion_time": 85.0,
+  "attempt_number": 37,
+  "phase_coaching": [
+    {
+      "phase": "needle_load",
+      "duration_seconds": 8.0,
+      "benchmark_seconds": 8.0,
+      "expert_seconds": 5.0,
+      "status": "improving",
+      "trend_last_5": [
+        15.0,
+        12.0,
+        20.0,
+        8.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "suture_placement",
+      "duration_seconds": 12.0,
+      "benchmark_seconds": 22.0,
+      "expert_seconds": 15.0,
+      "status": "improving",
+      "trend_last_5": [
+        10.0,
+        33.0,
+        35.0,
+        20.0,
+        24.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "first_throw",
+      "duration_seconds": 15.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "plateau",
+      "trend_last_5": [
+        20.0,
+        17.0,
+        15.0,
+        16.0,
+        12.0
+      ],
+      "coaching_note": "Stable at ~15s for 5 attempts. Consider targeted drills.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 25.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        20.0,
+        13.0,
+        15.0,
+        16.0,
+        12.0
+      ],
+      "coaching_note": "Regressed from recent average of 14s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 25.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        15.0,
+        11.0,
+        13.0,
+        16.0,
+        12.0
+      ],
+      "coaching_note": "Regressed from recent average of 14s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "low",
+      "phase": "second_throw",
+      "current_value": "25s",
+      "target_value": "18s",
+      "description": "second_throw: 25s → target 18s (7s potential savings)",
+      "drill": "hand_switching",
+      "expected_time_savings": "~7s"
+    },
+    {
+      "rank": 2,
+      "priority": "low",
+      "phase": "third_throw",
+      "current_value": "25s",
+      "target_value": "18s",
+      "description": "third_throw: 25s → target 18s (7s potential savings)",
+      "drill": "hand_switching",
+      "expected_time_savings": "~7s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "0% improvement from baseline (85s → 85s)",
+      "evidence": "Baseline: 85s, Current: 85s, Best: 0s",
+      "actionable": true,
+      "recommendation": "Performance below baseline — check equipment or fatigue."
+    },
+    {
+      "insight_type": "plateau_detection",
+      "description": "Performance plateau at ~88s for last 5 attempts",
+      "evidence": "Last 5 times: ['89s', '88s', '88s', '88s', '85s']",
+      "actionable": true,
+      "recommendation": "Consider changing practice focus — targeted drills on weakest phase may break through."
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~4 consecutive attempts",
+      "evidence": "2 instances of >30% slowdown within 4-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 3 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Excellent C-loop formation technique",
+    "Proper hand alternation between throws",
+    "Smooth and controlled instrument movements",
+    "Drain not avulsed — safe tissue handling maintained",
+    "3s faster than previous attempt"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "At or above proficiency level",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Warm up with 5 minutes of hand_switching drills before scoring. Primary focus: second_throw (currently 25s, target 18s). Consider recording with direct camera for highest scoring confidence."
+}

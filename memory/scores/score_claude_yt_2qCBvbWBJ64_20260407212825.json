@@ -1,0 +1,156 @@
+{
+  "id": "score_claude_yt_2qCBvbWBJ64_20260407212825",
+  "video_id": "yt_2qCBvbWBJ64",
+  "video_filename": "2qCBvbWBJ64.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:28:25.167098",
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Needle driver holding curved needle with suture attached, proper orientation visible",
+      "technique_notes": "Good needle loading technique with appropriate grip"
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Beginning suture placement through tissue in supinating motion",
+      "technique_notes": "Proper supination technique demonstrated for needle passage"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Continuing needle passage with C-loop formation beginning",
+      "technique_notes": "Smooth needle driver motion with good wrist mechanics"
+    },
+    {
+      "frame_number": 6,
+      "phase": "first_throw",
+      "description": "Completing C-loop formation for first throw",
+      "technique_notes": "Well-formed C-loop with appropriate size and positioning"
+    },
+    {
+      "frame_number": 8,
+      "phase": "first_throw",
+      "description": "Square knot formation in progress, pulling suture through loop",
+      "technique_notes": "Clean square knot technique with proper tension"
+    },
+    {
+      "frame_number": 9,
+      "phase": "second_throw",
+      "description": "Beginning reverse C-loop formation for second throw",
+      "technique_notes": "Proper hand alternation and reverse loop formation"
+    },
+    {
+      "frame_number": 15,
+      "phase": "second_throw",
+      "description": "Completing second throw with slide and lock motion",
+      "technique_notes": "Good sliding technique to secure the throw"
+    },
+    {
+      "frame_number": 18,
+      "phase": "third_throw",
+      "description": "Final throw formation and tightening",
+      "technique_notes": "Secure final throw with appropriate tension applied"
+    },
+    {
+      "frame_number": 21,
+      "phase": "completion",
+      "description": "Completed knot with both suture tails visible",
+      "technique_notes": "Knot appears secure with good final positioning"
+    }
+  ],
+  "completion_time_seconds": 85.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 8.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8.0,
+      "end_seconds": 20.0,
+      "duration_seconds": 12.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 20.0,
+      "end_seconds": 35.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 35.0,
+      "end_seconds": 60.0,
+      "duration_seconds": 25.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 60.0,
+      "end_seconds": 85.0,
+      "duration_seconds": 25.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": false,
+      "is_single_throw": false,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Standard square knot first throw with good technique"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Proper hand alternation with reverse C-loop"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final throw with good tension and security"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No visible tissue gap, appears to be foam pad training model rather than Penrose drain"
+  },
+  "estimated_penalties": 2.0,
+  "estimated_fls_score": 513.0,
+  "confidence_score": 0.85,
+  "technique_summary": "Excellent intracorporeal knot tying technique with proper C-loop formation, appropriate hand alternation, and secure final knot. Smooth efficient motion throughout.",
+  "improvement_suggestions": [
+    "Consider slightly faster transitions between throws to improve overall time",
+    "Maintain consistent tension throughout knot construction"
+  ],
+  "strengths": [
+    "Excellent C-loop formation technique",
+    "Proper hand alternation between throws",
+    "Smooth and controlled instrument movements",
+    "Secure final knot construction"
+  ],
+  "comparison_to_previous": {}
+}

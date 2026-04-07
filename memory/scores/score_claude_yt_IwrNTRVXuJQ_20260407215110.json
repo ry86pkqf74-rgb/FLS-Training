@@ -1,0 +1,127 @@
+{
+  "id": "score_claude_yt_IwrNTRVXuJQ_20260407215110",
+  "video_id": "yt_IwrNTRVXuJQ",
+  "video_filename": "IwrNTRVXuJQ.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:51:10.529680",
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "phase": "idle",
+      "description": "FLS trainer setup showing Task 1 peg transfer with instruments in frame",
+      "technique_notes": "Proper trainer setup visible"
+    },
+    {
+      "frame_number": 7,
+      "phase": "idle",
+      "description": "Shows circular pattern drawn on gauze pad with instruments positioned",
+      "technique_notes": "Task 2 pattern cutting setup visible"
+    },
+    {
+      "frame_number": 12,
+      "phase": "idle",
+      "description": "Shows Task 3 ligature loop setup with Penrose drain and suture",
+      "technique_notes": "Proper Task 3 configuration with suture through drain"
+    },
+    {
+      "frame_number": 13,
+      "phase": "idle",
+      "description": "Task 5 setup visible - slit Penrose drain with marks on red foam block",
+      "technique_notes": "Clear view of target marks on the drain for suturing"
+    },
+    {
+      "frame_number": 14,
+      "phase": "idle",
+      "description": "Penrose drain positioned on red foam with visible suture placement marks",
+      "technique_notes": "Good visualization of the two target marks on the drain"
+    },
+    {
+      "frame_number": 15,
+      "phase": "completion",
+      "description": "Close-up view showing completed knots in hand - demonstrating proper knot sequence",
+      "technique_notes": "Educational demonstration of three knots tied in sequence"
+    },
+    {
+      "frame_number": 17,
+      "phase": "completion",
+      "description": "Final result showing suture through drain with 2cm tails as required",
+      "technique_notes": "Proper suture tail length maintained for FLS standards"
+    },
+    {
+      "frame_number": 20,
+      "phase": "completion",
+      "description": "Final view showing completed task with instruments in C-shape configuration",
+      "technique_notes": "Task completed with proper instrument positioning"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Properly formed surgeon's knot demonstrated"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand switch"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final single throw completing the sequence"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain slit properly closed with no visible gap"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 0.95,
+  "technique_summary": "This appears to be an educational demonstration video showing proper FLS Task 5 technique with perfect suture placement and knot sequence. All technical requirements appear to be met with excellent precision.",
+  "improvement_suggestions": [
+    "This is a demonstration video - no improvements needed",
+    "Technique shown represents ideal FLS performance"
+  ],
+  "strengths": [
+    "Perfect suture placement on target marks",
+    "Proper knot sequence with surgeon's knot followed by single throws",
+    "Excellent hand switching technique",
+    "Proper suture tail length maintained",
+    "Complete closure of drain slit"
+  ],
+  "comparison_to_previous": {}
+}

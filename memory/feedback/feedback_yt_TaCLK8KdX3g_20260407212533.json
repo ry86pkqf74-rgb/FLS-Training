@@ -1,0 +1,52 @@
+{
+  "feedback_id": "feedback_yt_TaCLK8KdX3g_20260407212533",
+  "video_id": "yt_TaCLK8KdX3g",
+  "score_id": "score_claude_yt_TaCLK8KdX3g_20260407212533",
+  "generated_at": "2026-04-07T21:25:33.137372",
+  "generator": "teacher",
+  "headline": "Strong improvement: 88s faster (0s / 0 FLS)",
+  "fls_score": 0.0,
+  "completion_time": 0.0,
+  "attempt_number": 31,
+  "phase_coaching": [
+    {
+      "phase": "idle",
+      "duration_seconds": 0.0,
+      "benchmark_seconds": 25.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "Baseline timing unavailable because earlier scored attempts had zero or missing duration.",
+      "evidence": "Baseline: 0s, Current: 0s, Best: 0s",
+      "actionable": true,
+      "recommendation": "Interpret progression cautiously until scored attempts include measurable task completion times."
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~5 consecutive attempts",
+      "evidence": "2 instances of >30% slowdown within 5-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 4 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Educational content provides excellent background on FLS validation and research",
+    "Drain not avulsed — safe tissue handling maintained",
+    "88s faster than previous attempt"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "~475 points below typical proficiency cutoff (475)",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Consider recording with direct camera for highest scoring confidence."
+}

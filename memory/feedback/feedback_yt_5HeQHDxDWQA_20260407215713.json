@@ -1,0 +1,118 @@
+{
+  "feedback_id": "feedback_yt_5HeQHDxDWQA_20260407215713",
+  "video_id": "yt_5HeQHDxDWQA",
+  "score_id": "score_claude_yt_5HeQHDxDWQA_20260407215713",
+  "generated_at": "2026-04-07T21:57:13.951685",
+  "generator": "teacher",
+  "headline": "Strong improvement: 147s faster (0s / 600 FLS)",
+  "fls_score": 600.0,
+  "completion_time": 0.0,
+  "attempt_number": 69,
+  "phase_coaching": [
+    {
+      "phase": "needle_load",
+      "duration_seconds": 3.0,
+      "benchmark_seconds": 8.0,
+      "expert_seconds": 5.0,
+      "status": "improving",
+      "trend_last_5": [
+        18.0,
+        18.0,
+        18.0,
+        25.0,
+        18.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "suture_placement",
+      "duration_seconds": 2.0,
+      "benchmark_seconds": 22.0,
+      "expert_seconds": 15.0,
+      "status": "improving",
+      "trend_last_5": [
+        42.0,
+        27.0,
+        17.0,
+        35.0,
+        27.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "first_throw",
+      "duration_seconds": 6.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "improving",
+      "trend_last_5": [
+        24.0,
+        20.0,
+        20.0,
+        40.0,
+        30.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 5.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "improving",
+      "trend_last_5": [
+        18.0,
+        25.0,
+        15.0,
+        40.0,
+        30.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "completion",
+      "duration_seconds": 0.0,
+      "benchmark_seconds": 25.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "100% improvement from baseline (85s → 0s)",
+      "evidence": "Baseline: 85s, Current: 0s, Best: 0s",
+      "actionable": true,
+      "recommendation": ""
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~3 consecutive attempts",
+      "evidence": "3 instances of >30% slowdown within 3-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 2 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Proper surgeon's knot technique with double wrap on first throw",
+    "Good hand alternation between throws",
+    "Clean needle passage and tissue handling",
+    "Drain not avulsed — safe tissue handling maintained",
+    "147s faster than previous attempt"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "At or above proficiency level",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Consider recording with direct camera for highest scoring confidence."
+}

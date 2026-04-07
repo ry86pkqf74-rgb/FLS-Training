@@ -14,3 +14,6 @@ build/
 wandb/
 outputs/
 .ipynb_checkpoints/
+*.log
+memory/frames/
+.tmp_*

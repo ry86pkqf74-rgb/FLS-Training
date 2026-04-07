@@ -1,0 +1,173 @@
+{
+  "id": "score_claude_yt_5HeQHDxDWQA_20260407220406",
+  "video_id": "yt_5HeQHDxDWQA",
+  "video_filename": "5HeQHDxDWQA.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:04:06.458186",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title screen showing 'LAPAROSCOPIC SKILLS: KNOT-TYING 101'",
+      "technique_notes": "Instructional video introduction"
+    },
+    {
+      "frame_number": 2,
+      "phase": "idle",
+      "description": "Box trainer setup with 3D Bio foam pad visible, no instruments present yet",
+      "technique_notes": "Training environment prepared"
+    },
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Two laparoscopic instruments visible above foam pad, suture material present",
+      "technique_notes": "Initial positioning of instruments"
+    },
+    {
+      "frame_number": 4,
+      "phase": "needle_load",
+      "description": "Instruments positioned with suture material, preparing for needle loading",
+      "technique_notes": "Suture appears to be pre-loaded or being positioned"
+    },
+    {
+      "frame_number": 5,
+      "phase": "suture_placement",
+      "description": "Right instrument appears to be driving needle through foam tissue",
+      "technique_notes": "Needle driving technique being demonstrated"
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Continuing needle passage through tissue with both instruments engaged",
+      "technique_notes": "Proper instrument coordination for tissue penetration"
+    },
+    {
+      "frame_number": 7,
+      "phase": "suture_placement",
+      "description": "Needle appears to have completed passage, suture visible on both sides",
+      "technique_notes": "Good bite placement across the tissue"
+    },
+    {
+      "frame_number": 8,
+      "phase": "first_throw",
+      "description": "Beginning first throw formation with instruments manipulating suture ends",
+      "technique_notes": "Initiating knot construction"
+    },
+    {
+      "frame_number": 14,
+      "phase": "first_throw",
+      "description": "Continuing first throw construction with right instrument, appears to be forming surgeon's knot",
+      "technique_notes": "Double wrap visible suggesting surgeon's knot technique"
+    },
+    {
+      "frame_number": 16,
+      "phase": "second_throw",
+      "description": "Second throw being constructed with left instrument taking control",
+      "technique_notes": "Proper hand alternation demonstrated"
+    },
+    {
+      "frame_number": 20,
+      "phase": "third_throw",
+      "description": "Final throw being completed with instruments working in coordination",
+      "technique_notes": "Completing knot security"
+    },
+    {
+      "frame_number": 21,
+      "phase": "completion",
+      "description": "Knot appears secure and tightened against tissue surface",
+      "technique_notes": "Final knot positioning looks appropriate"
+    }
+  ],
+  "completion_time_seconds": 42.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 8.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8.0,
+      "end_seconds": 16.0,
+      "duration_seconds": 8.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 16.0,
+      "end_seconds": 28.0,
+      "duration_seconds": 12.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 28.0,
+      "end_seconds": 36.0,
+      "duration_seconds": 8.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 36.0,
+      "end_seconds": 42.0,
+      "duration_seconds": 6.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Double wrap technique demonstrated for surgeon's knot"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Proper hand alternation with single throw"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final securing throw with good technique"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Foam tissue appears well approximated without visible gaps"
+  },
+  "estimated_penalties": 3.0,
+  "estimated_fls_score": 555.0,
+  "confidence_score": 0.82,
+  "technique_summary": "Instructional demonstration of proper intracorporeal knot tying technique with surgeon's knot and appropriate hand alternation. Good instrument coordination and tissue handling throughout.",
+  "improvement_suggestions": [
+    "This appears to be an instructional video rather than a trainee performance",
+    "Focus on maintaining consistent tension during knot tightening"
+  ],
+  "strengths": [
+    "Excellent demonstration of surgeon's knot technique",
+    "Proper hand alternation between throws",
+    "Good instrument coordination and economy of motion"
+  ],
+  "comparison_to_previous": {}
+}

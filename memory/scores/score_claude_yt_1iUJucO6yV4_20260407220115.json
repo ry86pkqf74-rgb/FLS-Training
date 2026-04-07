@@ -1,0 +1,168 @@
+{
+  "id": "score_claude_yt_1iUJucO6yV4_20260407220115",
+  "video_id": "yt_1iUJucO6yV4",
+  "video_filename": "1iUJucO6yV4.f135.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:01:15.230810",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Four circular targets visible on white fabric with purple dotted marks",
+      "technique_notes": "Setup phase, no instruments visible yet"
+    },
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Left instrument grasping needle with suture attached",
+      "technique_notes": "Good needle loading with proper instrument positioning"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Needle being positioned for first bite through fabric at upper target",
+      "technique_notes": "Needle oriented properly for perpendicular tissue entry"
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Suture being pulled through fabric creating loop pattern",
+      "technique_notes": "Good suture management, no tangling observed"
+    },
+    {
+      "frame_number": 9,
+      "phase": "first_throw",
+      "description": "First throw being constructed with both instruments manipulating suture",
+      "technique_notes": "Double throw being created, appears to be surgeon's knot"
+    },
+    {
+      "frame_number": 11,
+      "phase": "first_throw",
+      "description": "First throw being tightened down to tissue",
+      "technique_notes": "Good tension application, knot appears secure"
+    },
+    {
+      "frame_number": 13,
+      "phase": "second_throw",
+      "description": "Second throw construction underway with left hand leading",
+      "technique_notes": "Hand switching observed, proper technique for alternating throws"
+    },
+    {
+      "frame_number": 16,
+      "phase": "third_throw",
+      "description": "Third throw being constructed with right hand leading",
+      "technique_notes": "Consistent hand alternation pattern maintained"
+    },
+    {
+      "frame_number": 18,
+      "phase": "third_throw",
+      "description": "Final throw being tightened and secured",
+      "technique_notes": "Good final tightening technique visible"
+    },
+    {
+      "frame_number": 20,
+      "phase": "suture_cut",
+      "description": "Scissors cutting suture tails close to knot",
+      "technique_notes": "Appropriate tail length being maintained"
+    }
+  ],
+  "completion_time_seconds": 22.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 3.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 8.0,
+      "end_seconds": 12.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 12.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 15.0,
+      "end_seconds": 19.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 19.0,
+      "end_seconds": 22.0,
+      "duration_seconds": 3.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": false,
+      "hand_used": "left",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Double throw surgeon's knot properly constructed"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand switching"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final securing throw with good technique"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Good tissue approximation visible, no gaps between fabric edges"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 578.0,
+  "confidence_score": 0.85,
+  "technique_summary": "Excellent intracorporeal knot tying technique with proper surgeon's knot, consistent hand alternation, and efficient completion time. Good tissue approximation achieved.",
+  "improvement_suggestions": [
+    "Consider slightly faster needle loading",
+    "Maintain consistent instrument positioning throughout"
+  ],
+  "strengths": [
+    "Excellent surgeon's knot construction",
+    "Proper hand alternation between throws",
+    "Efficient overall completion time",
+    "Good final tissue approximation"
+  ],
+  "comparison_to_previous": {}
+}

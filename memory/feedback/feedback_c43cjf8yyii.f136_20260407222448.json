@@ -1,0 +1,145 @@
+{
+  "feedback_id": "feedback_c43cjf8yyii.f136_20260407222448",
+  "video_id": "c43cjf8yyii.f136",
+  "score_id": "score_consensus_c43cjf8yyii.f136_20260407222448",
+  "generated_at": "2026-04-07T22:24:48.345870",
+  "generator": "teacher",
+  "headline": "Regression: 60s slower — check fatigue or equipment change",
+  "fls_score": 415.5,
+  "completion_time": 180.0,
+  "attempt_number": 9,
+  "phase_coaching": [
+    {
+      "phase": "suture_placement",
+      "duration_seconds": 45.0,
+      "benchmark_seconds": 22.0,
+      "expert_seconds": 15.0,
+      "status": "regressing",
+      "trend_last_5": [
+        45.0,
+        30.0,
+        20.0,
+        25.0,
+        45.0
+      ],
+      "coaching_note": "Regressed from recent average of 30s. Check for fatigue or equipment change.",
+      "recommended_drill": "needle_driving_angle"
+    },
+    {
+      "phase": "first_throw",
+      "duration_seconds": 45.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "regressing",
+      "trend_last_5": [
+        25.0,
+        40.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "coaching_note": "Regressed from recent average of 25s. Check for fatigue or equipment change.",
+      "recommended_drill": "wrapping_speed"
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 45.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        10.0,
+        20.0,
+        20.0,
+        10.0
+      ],
+      "coaching_note": "Regressed from recent average of 17s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 30.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        10.0,
+        20.0,
+        15.0,
+        10.0
+      ],
+      "coaching_note": "Regressed from recent average of 15s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "suture_cut",
+      "duration_seconds": 15.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 10.0,
+      "status": "regressing",
+      "trend_last_5": [
+        5.0,
+        25.0,
+        10.0,
+        10.0,
+        5.0
+      ],
+      "coaching_note": "Regressed from recent average of 8s. Check for fatigue or equipment change.",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "high",
+      "phase": "second_throw",
+      "current_value": "45s",
+      "target_value": "18s",
+      "description": "second_throw: 45s → target 18s (27s potential savings)",
+      "drill": "hand_switching",
+      "expected_time_savings": "~27s"
+    },
+    {
+      "rank": 2,
+      "priority": "high",
+      "phase": "first_throw",
+      "current_value": "45s",
+      "target_value": "20s",
+      "description": "first_throw: 45s → target 20s (25s potential savings)",
+      "drill": "wrapping_speed",
+      "expected_time_savings": "~25s"
+    },
+    {
+      "rank": 3,
+      "priority": "high",
+      "phase": "suture_placement",
+      "current_value": "45s",
+      "target_value": "22s",
+      "description": "suture_placement: 45s → target 22s (23s potential savings)",
+      "drill": "needle_driving_angle",
+      "expected_time_savings": "~23s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "-64% improvement from baseline (110s → 180s)",
+      "evidence": "Baseline: 110s, Current: 180s, Best: 105s",
+      "actionable": true,
+      "recommendation": "Performance below baseline — check equipment or fatigue."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Proper surgeon's knot formation as first throw",
+    "Correct hand switching between throws",
+    "Good instrument handling and knot security",
+    "Drain not avulsed — safe tissue handling maintained"
+  ],
+  "fatigue_risk": "moderate",
+  "fatigue_evidence": "Time increased 20%+ over last 3 attempts: ['105s', '120s', '180s']",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "~60 points below typical proficiency cutoff (475)",
+  "next_session_plan": "REST before next session — fatigue detected. When fresh, limit to 2-3 scored attempts. Warm up with 5 minutes of hand_switching drills before scoring. Primary focus: second_throw (currently 45s, target 18s)."
+}

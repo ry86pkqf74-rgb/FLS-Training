@@ -1,0 +1,148 @@
+{
+  "id": "score_gpt_yt_1iUJucO6yV4_20260407220129",
+  "video_id": "yt_1iUJucO6yV4",
+  "video_filename": "1iUJucO6yV4.f135.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:01:29.371415",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Setup visible with marked targets but no instruments engaged.",
+      "technique_notes": "Initial phase, no action yet."
+    },
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Needle is being loaded onto the instrument.",
+      "technique_notes": "Appears efficient, appropriate orientation."
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Suture is placed through a marked point.",
+      "technique_notes": "Good bite placement, close to target."
+    },
+    {
+      "frame_number": 5,
+      "phase": "first_throw",
+      "description": "Starting first throw of knot tying.",
+      "technique_notes": "Technique seems appropriate for a surgeon's knot."
+    },
+    {
+      "frame_number": 9,
+      "phase": "second_throw",
+      "description": "Second throw of knot being tied.",
+      "technique_notes": "Hands alternate appropriately."
+    },
+    {
+      "frame_number": 14,
+      "phase": "third_throw",
+      "description": "Third throw of knot being tied, ensure correct hand alternation.",
+      "technique_notes": "Good hand alternation and suture management."
+    },
+    {
+      "frame_number": 21,
+      "phase": "completion",
+      "description": "Final knot appears secure, suture ends cut.",
+      "technique_notes": "Knot looks tight with good approximation."
+    }
+  ],
+  "completion_time_seconds": 68.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 1.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 9.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 11.0,
+      "end_seconds": 22.0,
+      "duration_seconds": 11.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 23.0,
+      "end_seconds": 30.0,
+      "duration_seconds": 7.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 31.0,
+      "end_seconds": 38.0,
+      "duration_seconds": 7.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 39.0,
+      "end_seconds": 57.0,
+      "duration_seconds": 18.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 58.0,
+      "end_seconds": 68.0,
+      "duration_seconds": 10.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Secure surgeon's knot."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": false,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Proper hand alternation."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": false,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Secure third throw."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Tissue approximation appears complete and secure."
+  },
+  "estimated_penalties": 5.0,
+  "estimated_fls_score": 527.0,
+  "confidence_score": 0.85,
+  "technique_summary": "The trainee demonstrated good suture placement and secure knot tying, with effective hand alternation and tissue approximation.",
+  "improvement_suggestions": [
+    "Increase efficiency in needle loading phase.",
+    "Minimize movements during knot tying for faster completion."
+  ],
+  "strengths": [
+    "Precise suture placement.",
+    "Secure and alternating knot tying."
+  ],
+  "comparison_to_previous": {}
+}

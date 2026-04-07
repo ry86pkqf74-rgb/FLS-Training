@@ -1,0 +1,101 @@
+{
+  "id": "score_claude_yt_f0xcnHYL6Uw_20260407213156",
+  "video_id": "yt_f0xcnHYL6Uw",
+  "video_filename": "f0xcnHYL6Uw.f298.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:31:56.120875",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title slide for educational presentation about EMIG exam suturing and knot-tying tips",
+      "technique_notes": "No technical activity visible"
+    },
+    {
+      "frame_number": 7,
+      "phase": "idle",
+      "description": "Setup showing laparoscopic box trainer with Penrose drain model positioned on pink pad",
+      "technique_notes": "Standard FLS Task 5 setup with marked Penrose drain visible"
+    },
+    {
+      "frame_number": 8,
+      "phase": "idle",
+      "description": "Both laparoscopic instruments positioned near the Penrose drain model",
+      "technique_notes": "Instruments appear properly oriented for the task"
+    },
+    {
+      "frame_number": 10,
+      "phase": "needle_load",
+      "description": "Needle loading being demonstrated with needle driver grasping the needle",
+      "technique_notes": "Proper needle orientation at approximately 90 degrees to needle driver"
+    },
+    {
+      "frame_number": 15,
+      "phase": "needle_load",
+      "description": "Extracorporeal demonstration of suture handling and needle positioning",
+      "technique_notes": "Good needle control demonstrated outside the trainer"
+    },
+    {
+      "frame_number": 16,
+      "phase": "suture_placement",
+      "description": "Suture being threaded through the Penrose drain slit",
+      "technique_notes": "Appropriate suture placement through the marked drain"
+    },
+    {
+      "frame_number": 17,
+      "phase": "first_throw",
+      "description": "Beginning of knot tying with suture management",
+      "technique_notes": "Good suture control with appropriate hand positioning"
+    },
+    {
+      "frame_number": 18,
+      "phase": "first_throw",
+      "description": "Continuing first throw formation",
+      "technique_notes": "Proper technique for forming initial throw"
+    },
+    {
+      "frame_number": 20,
+      "phase": "second_throw",
+      "description": "Second throw being formed with opposite hand direction",
+      "technique_notes": "Appropriate hand switching for square knot formation"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_assessable",
+    "assessment_note": "This appears to be an instructional demonstration video rather than a complete timed performance"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 0.3,
+  "technique_summary": "This video shows an educational demonstration of suturing techniques for the EMIG exam rather than a complete timed performance. The visible technique demonstrates proper needle handling and suture management principles.",
+  "improvement_suggestions": [
+    "This appears to be instructional content rather than a performance to evaluate"
+  ],
+  "strengths": [
+    "Good demonstration of proper needle orientation",
+    "Clear educational presentation of technique principles"
+  ],
+  "comparison_to_previous": {}
+}

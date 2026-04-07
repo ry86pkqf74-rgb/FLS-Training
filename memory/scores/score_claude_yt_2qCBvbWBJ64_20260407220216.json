@@ -1,0 +1,168 @@
+{
+  "id": "score_claude_yt_2qCBvbWBJ64_20260407220216",
+  "video_id": "yt_2qCBvbWBJ64",
+  "video_filename": "2qCBvbWBJ64.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:02:16.570808",
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Needle driver grasping needle in preparation for suturing. Penrose drain visible with marked targets.",
+      "technique_notes": "Good needle grip position, needle properly oriented"
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Needle being introduced through tissue in supinating motion as indicated by overlay text",
+      "technique_notes": "Proper supinating motion technique being demonstrated"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "C-loop formation step 1 - needle passing through tissue with suture following",
+      "technique_notes": "Clean needle passage, good tissue handling"
+    },
+    {
+      "frame_number": 7,
+      "phase": "first_throw",
+      "description": "Square knot formation step 2 - instruments crossed for knot construction",
+      "technique_notes": "Proper instrument crossing technique for square knot"
+    },
+    {
+      "frame_number": 9,
+      "phase": "first_throw",
+      "description": "Reverse C-loop formation - completing first throw construction",
+      "technique_notes": "Good loop formation and control of suture ends"
+    },
+    {
+      "frame_number": 11,
+      "phase": "first_throw",
+      "description": "Square knot formation step 4 - tightening first throw",
+      "technique_notes": "Both hands working together to secure first throw"
+    },
+    {
+      "frame_number": 14,
+      "phase": "second_throw",
+      "description": "Slip knot formation step 5 - beginning second throw",
+      "technique_notes": "Hand alternation visible, proper technique for second throw"
+    },
+    {
+      "frame_number": 15,
+      "phase": "second_throw",
+      "description": "Slide and lock phase - securing second throw",
+      "technique_notes": "Good control during knot sliding and locking"
+    },
+    {
+      "frame_number": 18,
+      "phase": "third_throw",
+      "description": "Final throw construction with instruments crossed",
+      "technique_notes": "Consistent technique maintained through final throw"
+    },
+    {
+      "frame_number": 21,
+      "phase": "completion",
+      "description": "Final knot secured and tightened, suture ends remain uncut",
+      "technique_notes": "Knot appears secure with good tissue approximation"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 3.0,
+      "end_seconds": 7.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 7.0,
+      "end_seconds": 12.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 12.0,
+      "end_seconds": 16.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 16.0,
+      "end_seconds": 21.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 21.0,
+      "end_seconds": 21.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Square knot technique with proper crossing"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Good hand alternation and knot security"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final throw properly secured"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Excellent tissue approximation with no visible gaps"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 0.85,
+  "technique_summary": "This is an educational demonstration video showing perfect intracorporeal knot tying technique with clear step-by-step instruction overlays. The demonstration shows excellent technical execution with proper hand alternation, secure knot construction, and good tissue approximation.",
+  "improvement_suggestions": [
+    "This appears to be an instructional video demonstrating ideal technique",
+    "No technical improvements needed for this demonstration"
+  ],
+  "strengths": [
+    "Perfect demonstration of square knot technique",
+    "Excellent hand alternation between throws",
+    "Clear and methodical approach",
+    "Secure final knot with good tissue approximation"
+  ],
+  "comparison_to_previous": {}
+}

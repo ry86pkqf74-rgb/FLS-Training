@@ -1,0 +1,137 @@
+{
+  "id": "score_consensus_4fr0lgp_h7w.f136_20260407222415",
+  "video_id": "4fr0lgp_h7w.f136",
+  "video_filename": "4fr0lgP_H7w.f136.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "fallback_claude",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:24:15.077751",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title slide showing EMIG video tutorial information",
+      "technique_notes": "Pre-task instructional content"
+    },
+    {
+      "frame_number": 10,
+      "phase": "idle",
+      "description": "Setup view showing laparoscopic trainer with Penrose drain positioned, no instruments visible yet",
+      "technique_notes": "Clear view of starting setup with drain and marks visible"
+    },
+    {
+      "frame_number": 11,
+      "phase": "needle_load",
+      "description": "Needle driver and other instruments now visible in field, beginning to manipulate suture",
+      "technique_notes": "Task timing begins - instruments first visible"
+    },
+    {
+      "frame_number": 12,
+      "phase": "needle_load",
+      "description": "Needle driver actively grasping and positioning needle with suture",
+      "technique_notes": "Proper needle loading technique observed"
+    },
+    {
+      "frame_number": 13,
+      "phase": "suture_placement",
+      "description": "Beginning to position needle for placement through Penrose drain",
+      "technique_notes": "Careful approach to suture placement"
+    },
+    {
+      "frame_number": 14,
+      "phase": "suture_placement",
+      "description": "Actively working to place suture through the marks on the drain",
+      "technique_notes": "Multiple instruments coordinating for placement"
+    },
+    {
+      "frame_number": 16,
+      "phase": "first_throw",
+      "description": "Beginning intracorporeal knot tying after suture placement",
+      "technique_notes": "Starting surgeon's knot formation"
+    },
+    {
+      "frame_number": 18,
+      "phase": "first_throw",
+      "description": "Continuing to form the surgeon's knot (double throw)",
+      "technique_notes": "Complex loop formation for surgeon's knot"
+    },
+    {
+      "frame_number": 20,
+      "phase": "suture_cut",
+      "description": "Using scissors to cut suture ends",
+      "technique_notes": "Both suture ends being cut inside the trainer"
+    },
+    {
+      "frame_number": 22,
+      "phase": "completion",
+      "description": "Final view showing completed suture with both ends cut",
+      "technique_notes": "Task completed with suture properly placed and cut"
+    }
+  ],
+  "completion_time_seconds": 110.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 15.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 45.0,
+      "end_seconds": 85.0,
+      "duration_seconds": 40.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 85.0,
+      "end_seconds": 110.0,
+      "duration_seconds": 25.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": false,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "This appears to be a running stitch rather than individual knot throws - different from FLS Task 5"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Running suture appears to close the drain slit effectively"
+  },
+  "estimated_penalties": 4.0,
+  "estimated_fls_score": 486.0,
+  "confidence_score": 0.6,
+  "technique_summary": "This video shows an EMIG running stitch technique rather than FLS Task 5 intracorporeal knot tying. The procedure demonstrates competent suturing skills but does not match the required FLS protocol.",
+  "improvement_suggestions": [
+    "This is the wrong task - should perform FLS Task 5 with surgeon's knot and alternating throws",
+    "Need to follow FLS protocol with specific knot sequence"
+  ],
+  "strengths": [
+    "Smooth instrument handling",
+    "Good suture placement accuracy",
+    "Efficient completion time"
+  ],
+  "comparison_to_previous": {}
+}

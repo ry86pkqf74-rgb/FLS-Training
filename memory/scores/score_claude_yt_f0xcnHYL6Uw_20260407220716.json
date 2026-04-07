@@ -1,0 +1,165 @@
+{
+  "id": "score_claude_yt_f0xcnHYL6Uw_20260407220716",
+  "video_id": "yt_f0xcnHYL6Uw",
+  "video_filename": "f0xcnHYL6Uw.f298.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:07:16.841968",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title slide showing educational presentation about EMIG exam suturing and knot-tying",
+      "technique_notes": "Educational content introduction"
+    },
+    {
+      "frame_number": 7,
+      "phase": "idle",
+      "description": "Setup view showing laparoscopic box trainer with Penrose drain and marked targets visible",
+      "technique_notes": "Standard FLS Task 5 setup with clearly marked targets on drain"
+    },
+    {
+      "frame_number": 10,
+      "phase": "suture_placement",
+      "description": "Needle driver grasping suture near Penrose drain, preparing for first bite placement",
+      "technique_notes": "Good instrument positioning and setup"
+    },
+    {
+      "frame_number": 11,
+      "phase": "suture_placement",
+      "description": "Needle being positioned for penetration through Penrose drain at marked target",
+      "technique_notes": "Precise targeting of marked location on drain"
+    },
+    {
+      "frame_number": 15,
+      "phase": "needle_load",
+      "description": "Extracorporeal demonstration showing proper needle loading technique outside the trainer",
+      "technique_notes": "Educational demonstration of optimal needle grip and orientation"
+    },
+    {
+      "frame_number": 16,
+      "phase": "suture_placement",
+      "description": "Return to intracorporeal view with suture already placed through drain",
+      "technique_notes": "Suture appears well-positioned through both marks on drain"
+    },
+    {
+      "frame_number": 17,
+      "phase": "first_throw",
+      "description": "Beginning knot construction with hands positioned for first throw",
+      "technique_notes": "Good hand positioning for throw initiation"
+    },
+    {
+      "frame_number": 18,
+      "phase": "first_throw",
+      "description": "Continuing first throw formation with suture being manipulated",
+      "technique_notes": "Smooth suture handling during throw construction"
+    },
+    {
+      "frame_number": 19,
+      "phase": "second_throw",
+      "description": "Hands positioned for second throw, appearing to alternate hand dominance",
+      "technique_notes": "Good alternating hand technique visible"
+    },
+    {
+      "frame_number": 20,
+      "phase": "second_throw",
+      "description": "Completing second throw with continued good hand alternation",
+      "technique_notes": "Consistent technique maintained through second throw"
+    },
+    {
+      "frame_number": 21,
+      "phase": "completion",
+      "description": "Final positioning and tightening of completed knot",
+      "technique_notes": "Knot appears secure with good tissue approximation"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 14.0,
+      "duration_seconds": 14.0
+    },
+    {
+      "phase": "needle_load",
+      "start_seconds": 14.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 1.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 15.0,
+      "end_seconds": 16.0,
+      "duration_seconds": 1.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 16.0,
+      "end_seconds": 18.0,
+      "duration_seconds": 2.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 18.0,
+      "end_seconds": 20.0,
+      "duration_seconds": 2.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 20.0,
+      "end_seconds": 21.0,
+      "duration_seconds": 1.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw appears to be surgeon's knot with good formation"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Good hand alternation demonstrated on second throw"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Excellent tissue approximation with no visible gaps in drain closure"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 0.25,
+  "technique_summary": "This appears to be an educational demonstration video showing optimal technique rather than a timed performance. The visible portions show excellent suture placement accuracy and proper knot-tying technique with good hand alternation.",
+  "improvement_suggestions": [
+    "This appears to be instructional content rather than a performance to be improved",
+    "For actual practice, focus on maintaining the demonstrated precision under time pressure"
+  ],
+  "strengths": [
+    "Perfect suture placement accuracy at marked targets",
+    "Excellent hand alternation technique",
+    "Smooth and controlled movements throughout",
+    "Proper surgeon's knot formation"
+  ],
+  "comparison_to_previous": {}
+}

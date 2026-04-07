@@ -1,0 +1,151 @@
+{
+  "id": "score_claude_yt_UnV0AIhZQtY_20260407215739",
+  "video_id": "yt_UnV0AIhZQtY",
+  "video_filename": "UnV0AIhZQtY.f135.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:57:39.499579",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Black frame, no activity visible",
+      "technique_notes": "Video not yet started"
+    },
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Instructional frame showing proper needle grasp technique",
+      "technique_notes": "Educational overlay showing needle should be grasped at 2/3 from tip, perpendicular to needle driver"
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Needle entering foam tissue at 90 degrees with assistance from other instrument",
+      "technique_notes": "Good needle angle and tissue handling technique demonstrated"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Needle passing through tissue, both instruments visible for tissue manipulation",
+      "technique_notes": "Coordinated bimanual technique shown"
+    },
+    {
+      "frame_number": 5,
+      "phase": "suture_placement",
+      "description": "Suture being pulled through tissue creating proper bite",
+      "technique_notes": "Adequate suture length being pulled through"
+    },
+    {
+      "frame_number": 7,
+      "phase": "first_throw",
+      "description": "Instructional frame showing C-loop formation and wrapping technique",
+      "technique_notes": "Tutorial demonstrates proper surgeon's knot with double wrap around instrument"
+    },
+    {
+      "frame_number": 10,
+      "phase": "first_throw",
+      "description": "Grasping short end to complete first throw",
+      "technique_notes": "Proper technique for securing double throw (surgeon's knot)"
+    },
+    {
+      "frame_number": 13,
+      "phase": "second_throw",
+      "description": "Second throw being performed with single wrap",
+      "technique_notes": "Correct alternating technique - single wrap for second throw"
+    },
+    {
+      "frame_number": 14,
+      "phase": "second_throw",
+      "description": "C-loop formation for second throw with single wrap instruction",
+      "technique_notes": "Good demonstration of proper throw alternation"
+    },
+    {
+      "frame_number": 16,
+      "phase": "completion",
+      "description": "Final knot tightening to complete suture",
+      "technique_notes": "Knot appears secure with good tissue approximation"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 3.0,
+      "end_seconds": 6.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 6.0,
+      "end_seconds": 11.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 11.0,
+      "end_seconds": 16.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 16.0,
+      "end_seconds": 16.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": false,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot with double wrap demonstrated"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand alternation"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "This is an instructional tutorial video, not a performance assessment"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 0.95,
+  "technique_summary": "This is a high-quality instructional tutorial demonstrating excellent intracorporeal suturing technique with proper needle handling, tissue manipulation, and knot construction. The video shows ideal form for educational purposes.",
+  "improvement_suggestions": [
+    "This is a tutorial video - no performance improvements needed"
+  ],
+  "strengths": [
+    "Excellent demonstration of surgeon's knot technique",
+    "Clear visualization of proper hand alternation",
+    "Good educational overlay instructions"
+  ],
+  "comparison_to_previous": {}
+}

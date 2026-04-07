@@ -1,0 +1,107 @@
+{
+  "id": "score_consensus_yt_UnV0AIhZQtY_20260407220553",
+  "video_id": "yt_UnV0AIhZQtY",
+  "video_filename": "UnV0AIhZQtY.f135.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:05:53.094105",
+  "frame_analyses": [],
+  "completion_time_seconds": 55.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 5.0,
+      "end_seconds": 20.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 20.0,
+      "end_seconds": 28.0,
+      "duration_seconds": 8.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 28.0,
+      "end_seconds": 35.0,
+      "duration_seconds": 7.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 35.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 10.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 45.0,
+      "end_seconds": 55.0,
+      "duration_seconds": 10.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": false,
+      "hand_used": "right",
+      "hand_switched": false,
+      "appears_secure": true,
+      "notes": "Surgeon's knot with double wrap properly executed using C-loop technique"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand alternation"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final securing throw executed smoothly"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Good tissue approximation achieved with secure knot construction"
+  },
+  "estimated_penalties": 1.5,
+  "estimated_fls_score": 570.0,
+  "confidence_score": 0.75,
+  "technique_summary": "Educational demonstration showing proper intracorporeal knot tying with surgeon's knot and hand alternation. Teachers disagreed on video length (17s vs 55s) and number of throws (2 vs 3) - consensus favors GPT-4o's more detailed phase breakdown while incorporating Claude's technical insights about surgeon's knot construction.",
+  "improvement_suggestions": [
+    "Ensure consistent tension throughout all throws",
+    "Continue practicing smooth hand alternation for efficiency"
+  ],
+  "strengths": [
+    "Excellent demonstration of surgeon's knot technique with proper double wrap",
+    "Proper hand alternation between throws",
+    "Good instrument control and needle handling",
+    "Secure final knot construction with complete tissue approximation"
+  ],
+  "comparison_to_previous": {}
+}

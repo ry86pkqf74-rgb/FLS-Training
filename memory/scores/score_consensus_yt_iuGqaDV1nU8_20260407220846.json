@@ -1,0 +1,116 @@
+{
+  "id": "score_consensus_yt_iuGqaDV1nU8_20260407220846",
+  "video_id": "yt_iuGqaDV1nU8",
+  "video_filename": "iuGqaDV1nU8.f298.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "fallback_claude",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:08:38.599185",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title slide for EMIG exam suturing and knot-tying tips presentation",
+      "technique_notes": "Educational content introduction"
+    },
+    {
+      "frame_number": 6,
+      "phase": "idle",
+      "description": "Setup view showing marked Penrose drain with black marks on pink gauze pad in FLS trainer box",
+      "technique_notes": "Standard FLS Task 5 setup with clearly visible target marks"
+    },
+    {
+      "frame_number": 8,
+      "phase": "needle_load",
+      "description": "Right-hand needle driver grasping suture near needle, beginning needle loading process",
+      "technique_notes": "Proper initial needle driver positioning"
+    },
+    {
+      "frame_number": 9,
+      "phase": "needle_load",
+      "description": "Both instruments positioned to load needle with good ergonomics",
+      "technique_notes": "Efficient two-handed needle loading technique"
+    },
+    {
+      "frame_number": 10,
+      "phase": "suture_placement",
+      "description": "Needle being driven through Penrose drain tissue with controlled motion",
+      "technique_notes": "Good needle trajectory and tissue handling"
+    },
+    {
+      "frame_number": 11,
+      "phase": "suture_placement",
+      "description": "Completing suture passage through drain with proper needle follow-through",
+      "technique_notes": "Smooth needle passage with appropriate tissue engagement"
+    },
+    {
+      "frame_number": 12,
+      "phase": "first_throw",
+      "description": "Initiating first throw of knot with suture positioned for tying",
+      "technique_notes": "Good suture positioning for knot construction"
+    },
+    {
+      "frame_number": 16,
+      "phase": "idle",
+      "description": "Different setup view showing yellow foam pad for running stitch demonstration",
+      "technique_notes": "Transition to running stitch training setup"
+    },
+    {
+      "frame_number": 18,
+      "phase": "suture_placement",
+      "description": "Needle placement for running stitch on foam pad with good instrument control",
+      "technique_notes": "Appropriate needle angle and tissue engagement"
+    },
+    {
+      "frame_number": 19,
+      "phase": "suture_placement",
+      "description": "Continuing running stitch pattern with consistent bite spacing",
+      "technique_notes": "Good rhythm and spacing in running stitch technique"
+    },
+    {
+      "frame_number": 21,
+      "phase": "suture_cut",
+      "description": "Cutting suture with scissors after completion of suturing",
+      "technique_notes": "Proper suture cutting technique at appropriate length"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_assessable",
+    "assessment_note": "Educational demonstration video showing technique rather than complete task performance"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 0.95,
+  "technique_summary": "This is an educational demonstration video showing proper techniques for intracorporeal suturing and knot tying rather than a timed performance. The video demonstrates excellent form with proper needle loading, tissue handling, and instrument ergonomics.",
+  "improvement_suggestions": [
+    "This is a teaching video demonstrating proper technique",
+    "No performance deficits to address as this is instructional content"
+  ],
+  "strengths": [
+    "Excellent demonstration of proper needle loading technique",
+    "Good instrument ergonomics and tissue handling",
+    "Clear visualization of both simple and running suture techniques",
+    "Professional educational presentation format"
+  ],
+  "comparison_to_previous": {}
+}

@@ -1,0 +1,192 @@
+{
+  "id": "score_claude_yt_1iUJucO6yV4_20260407215551",
+  "video_id": "yt_1iUJucO6yV4",
+  "video_filename": "1iUJucO6yV4.f135.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:55:51.409500",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Initial setup showing training mat with four circular marked targets and suture material present",
+      "technique_notes": "Clean setup with clearly marked training targets"
+    },
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Left instrument grasping needle, beginning needle loading process",
+      "technique_notes": "Appropriate initial grasp of needle"
+    },
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Continuing needle loading with left instrument positioning needle",
+      "technique_notes": "Good control during needle positioning"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Both instruments visible, preparing for first bite placement at upper marked target",
+      "technique_notes": "Good bilateral instrument coordination"
+    },
+    {
+      "frame_number": 5,
+      "phase": "suture_placement",
+      "description": "Taking first bite through tissue at upper target, needle passing through material",
+      "technique_notes": "Appropriate bite depth and placement technique"
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Completing first bite, both suture ends visible for knot tying preparation",
+      "technique_notes": "Clean completion of suture placement"
+    },
+    {
+      "frame_number": 9,
+      "phase": "first_throw",
+      "description": "Beginning knot construction with right instrument manipulating suture",
+      "technique_notes": "Initiating knot with right hand - appears to be starting surgeon's knot"
+    },
+    {
+      "frame_number": 11,
+      "phase": "first_throw",
+      "description": "Tightening first throw with both instruments pulling in opposite directions",
+      "technique_notes": "Good bilateral traction for knot security"
+    },
+    {
+      "frame_number": 13,
+      "phase": "second_throw",
+      "description": "Beginning second throw with left instrument now taking lead",
+      "technique_notes": "Proper hand alternation between throws"
+    },
+    {
+      "frame_number": 15,
+      "phase": "second_throw",
+      "description": "Completing second throw formation and beginning tightening",
+      "technique_notes": "Smooth throw construction with good hand coordination"
+    },
+    {
+      "frame_number": 17,
+      "phase": "third_throw",
+      "description": "Beginning third throw with right instrument manipulation",
+      "technique_notes": "Continued proper alternation of hands between throws"
+    },
+    {
+      "frame_number": 19,
+      "phase": "third_throw",
+      "description": "Final tightening of completed knot with bilateral tension",
+      "technique_notes": "Good final knot tightening technique"
+    },
+    {
+      "frame_number": 21,
+      "phase": "suture_cut",
+      "description": "Positioning scissors for suture cutting close to knot",
+      "technique_notes": "Appropriate cutting position near knot"
+    },
+    {
+      "frame_number": 22,
+      "phase": "completion",
+      "description": "Task completed with secure knot and cut suture ends",
+      "technique_notes": "Clean final result with secure knot"
+    }
+  ],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 25.0,
+      "duration_seconds": 25.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 25.0,
+      "end_seconds": 60.0,
+      "duration_seconds": 35.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 60.0,
+      "end_seconds": 105.0,
+      "duration_seconds": 45.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 105.0,
+      "end_seconds": 135.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 135.0,
+      "end_seconds": 165.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 165.0,
+      "end_seconds": 180.0,
+      "duration_seconds": 15.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Good surgeon's knot formation with double wrap visible"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Proper hand alternation with secure single throw"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final throw with good alternation and secure tightening"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 3.0,
+    "total_deviation_penalty": 0.5,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Good tissue approximation with no visible gaps after knot completion"
+  },
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 417.5,
+  "confidence_score": 0.85,
+  "technique_summary": "Solid intracorporeal knot tying performance with proper surgeon's knot, good hand alternation, and secure final result. Time was somewhat prolonged but technique was sound throughout.",
+  "improvement_suggestions": [
+    "Work on increasing speed while maintaining quality",
+    "Practice more efficient needle loading to reduce initial setup time"
+  ],
+  "strengths": [
+    "Excellent hand alternation between throws",
+    "Proper surgeon's knot construction",
+    "Good final knot security",
+    "Clean suture placement accuracy"
+  ],
+  "comparison_to_previous": {}
+}

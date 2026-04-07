@@ -1,0 +1,108 @@
+{
+  "id": "score_consensus_yt_1iUJucO6yV4_20260407220149",
+  "video_id": "yt_1iUJucO6yV4",
+  "video_filename": "1iUJucO6yV4.f135.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T22:01:49.156785",
+  "frame_analyses": [],
+  "completion_time_seconds": 22.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 3.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 8.0,
+      "end_seconds": 12.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 12.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 15.0,
+      "end_seconds": 19.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 19.0,
+      "end_seconds": 22.0,
+      "duration_seconds": 3.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": false,
+      "hand_used": "left",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Secure surgeon's knot properly constructed"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand alternation"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final securing throw with good technique"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Good tissue approximation visible, no gaps between fabric edges"
+  },
+  "estimated_penalties": 2.0,
+  "estimated_fls_score": 552.0,
+  "confidence_score": 0.8,
+  "technique_summary": "Excellent intracorporeal knot tying technique with proper surgeon's knot and consistent hand alternation. Teachers disagreed significantly on timing (22s vs 68s) - adopted the more plausible shorter duration while acknowledging some efficiency penalties. Both agreed on good knot security and tissue approximation.",
+  "improvement_suggestions": [
+    "Consider slightly faster needle loading",
+    "Minimize movements during knot tying for optimal efficiency",
+    "Maintain consistent instrument positioning throughout"
+  ],
+  "strengths": [
+    "Excellent surgeon's knot construction",
+    "Proper hand alternation between throws",
+    "Good final tissue approximation",
+    "Secure knot completion"
+  ],
+  "comparison_to_previous": {}
+}

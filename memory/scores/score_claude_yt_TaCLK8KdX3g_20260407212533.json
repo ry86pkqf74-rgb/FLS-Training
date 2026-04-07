@@ -1,0 +1,94 @@
+{
+  "id": "score_claude_yt_TaCLK8KdX3g_20260407212533",
+  "video_id": "yt_TaCLK8KdX3g",
+  "video_filename": "TaCLK8KdX3g.f134.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:25:33.129169",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "FLS presentation title slide showing development and validation of manual skills component",
+      "technique_notes": "Educational content - no task performance visible"
+    },
+    {
+      "frame_number": 5,
+      "phase": "idle",
+      "description": "Presentation slide about development of FLS tasks showing expert panel and skill requirements",
+      "technique_notes": "Educational content describing task development methodology"
+    },
+    {
+      "frame_number": 10,
+      "phase": "idle",
+      "description": "Slide showing all six FLS tasks including Task 5 (intracorporeal suture) in bottom middle position",
+      "technique_notes": "Overview of FLS task components - Task 5 visible as suturing exercise"
+    },
+    {
+      "frame_number": 13,
+      "phase": "idle",
+      "description": "Reliability results slide showing statistical validation of FLS scoring system",
+      "technique_notes": "Educational content about FLS validation with high reliability coefficients"
+    },
+    {
+      "frame_number": 16,
+      "phase": "idle",
+      "description": "GOALS assessment form visible alongside Global Operative Assessment of Laparoscopic Skills",
+      "technique_notes": "Alternative assessment method comparison to FLS manual skills testing"
+    },
+    {
+      "frame_number": 18,
+      "phase": "idle",
+      "description": "Research data showing FLS practice enhances operative performance in randomized controlled trial",
+      "technique_notes": "Evidence-based validation of FLS training effectiveness in actual surgery"
+    },
+    {
+      "frame_number": 20,
+      "phase": "idle",
+      "description": "ROC curve analysis showing FLS score sensitivity and specificity for surgical proficiency",
+      "technique_notes": "Statistical analysis demonstrating FLS predictive validity for operative competence"
+    },
+    {
+      "frame_number": 22,
+      "phase": "idle",
+      "description": "Final FLS logo slide concluding the presentation",
+      "technique_notes": "End of educational content - no task performance observed"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "not_applicable"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_applicable",
+    "assessment_note": "No task performance observed - educational presentation only"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 1.0,
+  "technique_summary": "This video contains only educational presentation slides about FLS development and validation research. No actual Task 5 performance or laparoscopic suturing is demonstrated.",
+  "improvement_suggestions": [
+    "This appears to be educational content rather than a task performance - please provide a video showing actual FLS Task 5 execution for assessment"
+  ],
+  "strengths": [
+    "Educational content provides excellent background on FLS validation and research"
+  ],
+  "comparison_to_previous": {}
+}

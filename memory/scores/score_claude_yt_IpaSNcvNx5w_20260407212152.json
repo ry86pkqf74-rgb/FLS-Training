@@ -1,0 +1,184 @@
+{
+  "id": "score_claude_yt_IpaSNcvNx5w_20260407212152",
+  "video_id": "yt_IpaSNcvNx5w",
+  "video_filename": "IpaSNcvNx5w.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:21:52.413027",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title slide for FLS suturing tutorial",
+      "technique_notes": "Educational video beginning"
+    },
+    {
+      "frame_number": 2,
+      "phase": "idle",
+      "description": "Objective slide outlining tutorial goals",
+      "technique_notes": "Covers both extracorporeal and intracorporeal knot tying"
+    },
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Demonstrating proper suture grasping technique outside trainer",
+      "technique_notes": "Shows correct grip within 1cm of needle"
+    },
+    {
+      "frame_number": 4,
+      "phase": "needle_load",
+      "description": "Stabilizing needle position for loading",
+      "technique_notes": "Good needle stabilization technique shown"
+    },
+    {
+      "frame_number": 6,
+      "phase": "needle_load",
+      "description": "Mid-air needle loading challenge demonstration",
+      "technique_notes": "Advanced technique for needle control"
+    },
+    {
+      "frame_number": 10,
+      "phase": "first_throw",
+      "description": "Knot pushing technique demonstration",
+      "technique_notes": "Shows proper knot advancement method"
+    },
+    {
+      "frame_number": 13,
+      "phase": "first_throw",
+      "description": "Task 5 parameters slide - 15cm suture, 10 min max, 112s target",
+      "technique_notes": "Educational reference for scoring criteria"
+    },
+    {
+      "frame_number": 14,
+      "phase": "first_throw",
+      "description": "Right hand creating rainbow pattern for surgeon's knot",
+      "technique_notes": "Demonstrates proper double throw technique with clockwise needle rotation"
+    },
+    {
+      "frame_number": 15,
+      "phase": "first_throw",
+      "description": "Completing double wrap for surgeon's knot",
+      "technique_notes": "Shows 'under over' wrapping technique with 2 clockwise wraps"
+    },
+    {
+      "frame_number": 17,
+      "phase": "second_throw",
+      "description": "Pulling suture ends in opposite directions to tighten",
+      "technique_notes": "Proper knot cinching technique with opposing tension"
+    },
+    {
+      "frame_number": 19,
+      "phase": "second_throw",
+      "description": "Consolidating both suture ends in left hand",
+      "technique_notes": "Preparation for hand switching between throws"
+    },
+    {
+      "frame_number": 20,
+      "phase": "third_throw",
+      "description": "Creating small circles near instrument tips for final throw",
+      "technique_notes": "Demonstrates proper wrapping technique for securing knot"
+    },
+    {
+      "frame_number": 22,
+      "phase": "completion",
+      "description": "Acknowledgments and credits slide",
+      "technique_notes": "End of tutorial"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "needle_load",
+      "start_seconds": 15.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 45.0,
+      "end_seconds": 120.0,
+      "duration_seconds": 75.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 120.0,
+      "end_seconds": 150.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 150.0,
+      "end_seconds": 180.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 180.0,
+      "end_seconds": 190.0,
+      "duration_seconds": 10.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": false,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot demonstrated with double wrap clockwise"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand switching"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final securing throw with hand switch"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_assessable",
+    "assessment_note": "Tutorial video - actual performance not visible"
+  },
+  "estimated_penalties": 600.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.1,
+  "technique_summary": "This is an educational tutorial video demonstrating proper FLS Task 5 technique rather than an actual performance assessment. No actual timing or scoring can be performed.",
+  "improvement_suggestions": [
+    "This is a tutorial video, not a performance",
+    "Cannot assess actual trainee technique"
+  ],
+  "strengths": [
+    "Excellent educational demonstration",
+    "Clear technique instruction"
+  ],
+  "comparison_to_previous": {}
+}

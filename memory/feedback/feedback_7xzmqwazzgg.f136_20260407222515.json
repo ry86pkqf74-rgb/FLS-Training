@@ -1,0 +1,129 @@
+{
+  "feedback_id": "feedback_7xzmqwazzgg.f136_20260407222515",
+  "video_id": "7xzmqwazzgg.f136",
+  "score_id": "score_consensus_7xzmqwazzgg.f136_20260407222515",
+  "generated_at": "2026-04-07T22:25:15.100059",
+  "generator": "teacher",
+  "headline": "Steady at 132s — focus on third_throw for next breakthrough",
+  "fls_score": 464.5,
+  "completion_time": 132.0,
+  "attempt_number": 11,
+  "phase_coaching": [
+    {
+      "phase": "first_throw",
+      "duration_seconds": 36.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "regressing",
+      "trend_last_5": [
+        40.0,
+        45.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "coaching_note": "Regressed from recent average of 25s. Check for fatigue or equipment change.",
+      "recommended_drill": "wrapping_speed"
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 36.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        45.0,
+        20.0,
+        20.0,
+        10.0
+      ],
+      "coaching_note": "Regressed from recent average of 17s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 48.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        30.0,
+        20.0,
+        15.0,
+        10.0
+      ],
+      "coaching_note": "Regressed from recent average of 15s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "suture_cut",
+      "duration_seconds": 12.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 10.0,
+      "status": "regressing",
+      "trend_last_5": [
+        25.0,
+        15.0,
+        10.0,
+        10.0,
+        5.0
+      ],
+      "coaching_note": "Regressed from recent average of 8s. Check for fatigue or equipment change.",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "high",
+      "phase": "third_throw",
+      "current_value": "48s",
+      "target_value": "18s",
+      "description": "third_throw: 48s → target 18s (30s potential savings)",
+      "drill": "hand_switching",
+      "expected_time_savings": "~30s"
+    },
+    {
+      "rank": 2,
+      "priority": "medium",
+      "phase": "second_throw",
+      "current_value": "36s",
+      "target_value": "18s",
+      "description": "second_throw: 36s → target 18s (18s potential savings)",
+      "drill": "hand_switching",
+      "expected_time_savings": "~18s"
+    },
+    {
+      "rank": 3,
+      "priority": "medium",
+      "phase": "first_throw",
+      "current_value": "36s",
+      "target_value": "20s",
+      "description": "first_throw: 36s → target 20s (16s potential savings)",
+      "drill": "wrapping_speed",
+      "expected_time_savings": "~16s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "-20% improvement from baseline (110s → 132s)",
+      "evidence": "Baseline: 110s, Current: 132s, Best: 105s",
+      "actionable": true,
+      "recommendation": "Performance below baseline — check equipment or fatigue."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Proper surgeon's knot formation",
+    "Consistent hand switching between throws",
+    "Good instrument control throughout",
+    "Drain not avulsed — safe tissue handling maintained"
+  ],
+  "fatigue_risk": "moderate",
+  "fatigue_evidence": "Time increased 20%+ over last 3 attempts: ['105s', '120s', '132s']",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "~10 points below typical proficiency cutoff (475)",
+  "next_session_plan": "REST before next session — fatigue detected. When fresh, limit to 2-3 scored attempts. Warm up with 5 minutes of hand_switching drills before scoring. Primary focus: third_throw (currently 48s, target 18s)."
+}

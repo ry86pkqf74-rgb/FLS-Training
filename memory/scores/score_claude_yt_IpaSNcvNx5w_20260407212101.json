@@ -1,0 +1,102 @@
+{
+  "id": "score_claude_yt_IpaSNcvNx5w_20260407212101",
+  "video_id": "yt_IpaSNcvNx5w",
+  "video_filename": "IpaSNcvNx5w.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:21:01.081429",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Title slide for FLS suturing tutorial",
+      "technique_notes": "Educational material introduction"
+    },
+    {
+      "frame_number": 3,
+      "phase": "idle",
+      "description": "Instructor demonstrating needle loading technique outside trainer",
+      "technique_notes": "Proper suture grasping technique shown"
+    },
+    {
+      "frame_number": 4,
+      "phase": "idle",
+      "description": "Demonstration of needle stabilization at point 2 with Penrose drain visible",
+      "technique_notes": "Good visualization of target anatomy and needle positioning"
+    },
+    {
+      "frame_number": 6,
+      "phase": "idle",
+      "description": "Challenge demonstration - loading needle in mid-air",
+      "technique_notes": "Advanced technique demonstration for educational purposes"
+    },
+    {
+      "frame_number": 13,
+      "phase": "idle",
+      "description": "Task 5 specification slide showing 15cm suture, 10 minute max time, 112 second target",
+      "technique_notes": "Standard FLS Task 5 parameters displayed"
+    },
+    {
+      "frame_number": 14,
+      "phase": "idle",
+      "description": "Demonstration of first throw technique - right hand turning needle clockwise",
+      "technique_notes": "Proper surgeon's knot initiation with clockwise rotation"
+    },
+    {
+      "frame_number": 15,
+      "phase": "idle",
+      "description": "Showing 2 wraps clockwise for surgeon's knot double throw",
+      "technique_notes": "Correct surgeon's knot configuration with double wrap"
+    },
+    {
+      "frame_number": 17,
+      "phase": "idle",
+      "description": "Demonstration of knot cinching by pulling suture ends in opposite directions",
+      "technique_notes": "Proper knot tightening technique shown"
+    },
+    {
+      "frame_number": 20,
+      "phase": "idle",
+      "description": "Instruction to wrap with small circles near instrument tips",
+      "technique_notes": "Efficient knot tying technique for subsequent throws"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "none"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_assessed",
+    "assessment_note": "No actual task performance to assess"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "This is an educational tutorial video demonstrating FLS Task 5 techniques rather than an actual task performance. No scoring is applicable as no timed performance was observed.",
+  "improvement_suggestions": [
+    "This is instructional content - consider practicing the demonstrated techniques",
+    "Focus on the needle loading and knot tying sequences shown"
+  ],
+  "strengths": [
+    "Excellent educational demonstration of proper technique",
+    "Clear visualization of surgeon's knot formation and knot tying principles"
+  ],
+  "comparison_to_previous": {}
+}

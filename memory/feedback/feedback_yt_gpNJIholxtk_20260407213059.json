@@ -1,0 +1,113 @@
+{
+  "feedback_id": "feedback_yt_gpNJIholxtk_20260407213059",
+  "video_id": "yt_gpNJIholxtk",
+  "score_id": "score_claude_yt_gpNJIholxtk_20260407213059",
+  "generated_at": "2026-04-07T21:30:59.872577",
+  "generator": "teacher",
+  "headline": "Strong improvement: 46s faster (42s / 556 FLS)",
+  "fls_score": 556.0,
+  "completion_time": 42.0,
+  "attempt_number": 42,
+  "phase_coaching": [
+    {
+      "phase": "first_throw",
+      "duration_seconds": 22.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "regressing",
+      "trend_last_5": [
+        20.0,
+        17.0,
+        15.0,
+        16.0,
+        12.0
+      ],
+      "coaching_note": "Regressed from recent average of 14s. Check for fatigue or equipment change.",
+      "recommended_drill": "wrapping_speed"
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 10.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "improving",
+      "trend_last_5": [
+        20.0,
+        13.0,
+        15.0,
+        16.0,
+        12.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 8.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "improving",
+      "trend_last_5": [
+        15.0,
+        11.0,
+        13.0,
+        16.0,
+        12.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "completion",
+      "duration_seconds": 2.0,
+      "benchmark_seconds": 25.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "low",
+      "phase": "first_throw",
+      "current_value": "22s",
+      "target_value": "20s",
+      "description": "first_throw: 22s → target 20s (2s potential savings)",
+      "drill": "wrapping_speed",
+      "expected_time_savings": "~2s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "51% improvement from baseline (85s → 42s)",
+      "evidence": "Baseline: 85s, Current: 42s, Best: 0s",
+      "actionable": true,
+      "recommendation": ""
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~3 consecutive attempts",
+      "evidence": "2 instances of >30% slowdown within 3-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 2 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Excellent slip knot technique with proper C-loop formation",
+    "Good bimanual coordination throughout",
+    "Appropriate hand alternation between throws",
+    "Drain not avulsed — safe tissue handling maintained",
+    "46s faster than previous attempt"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "At or above proficiency level",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Warm up with 5 minutes of wrapping_speed drills before scoring. Primary focus: first_throw (currently 22s, target 20s). Consider recording with direct camera for highest scoring confidence."
+}

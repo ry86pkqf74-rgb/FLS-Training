@@ -1,0 +1,90 @@
+{
+  "id": "score_claude_yt_TaCLK8KdX3g_20260407215311",
+  "video_id": "yt_TaCLK8KdX3g",
+  "video_filename": "TaCLK8KdX3g.f134.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T21:53:11.638260",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "FLS presentation title slide showing development and validation of manual skills component",
+      "technique_notes": "Educational content, no task performance visible"
+    },
+    {
+      "frame_number": 5,
+      "phase": "idle",
+      "description": "FLS presentation slide about development of tasks methodology",
+      "technique_notes": "Educational content about FLS task creation process"
+    },
+    {
+      "frame_number": 10,
+      "phase": "idle",
+      "description": "FLS Tasks overview slide showing all 5 FLS tasks in trainer boxes",
+      "technique_notes": "Educational slide showing Task 5 (bottom right) with suturing setup visible"
+    },
+    {
+      "frame_number": 15,
+      "phase": "idle",
+      "description": "FLS correlation data slide showing relationship between FLS scores and in-training evaluations",
+      "technique_notes": "Educational content demonstrating FLS validity"
+    },
+    {
+      "frame_number": 18,
+      "phase": "idle",
+      "description": "RCT results slide showing FLS practice enhances operative performance",
+      "technique_notes": "Educational content about FLS training effectiveness"
+    },
+    {
+      "frame_number": 20,
+      "phase": "idle",
+      "description": "ROC analysis slide showing FLS score sensitivity and specificity",
+      "technique_notes": "Educational content about FLS score threshold of 270 for proficiency"
+    },
+    {
+      "frame_number": 22,
+      "phase": "idle",
+      "description": "Final FLS logo slide concluding the presentation",
+      "technique_notes": "End of educational presentation, no task performance"
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 0.0,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "none"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "not_assessed",
+    "assessment_note": "No actual task performance observed - educational presentation only"
+  },
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 600.0,
+  "confidence_score": 1.0,
+  "technique_summary": "This video contains only educational presentation slides about FLS development and validation, with no actual Task 5 performance visible. The frames show various research data and methodology slides but no hands-on suturing demonstration.",
+  "improvement_suggestions": [
+    "Submit a video showing actual Task 5 performance",
+    "Ensure camera captures the trainer box and suturing activity"
+  ],
+  "strengths": [
+    "Educational content provides good background on FLS validation",
+    "Comprehensive overview of FLS research and effectiveness"
+  ],
+  "comparison_to_previous": {}
+}

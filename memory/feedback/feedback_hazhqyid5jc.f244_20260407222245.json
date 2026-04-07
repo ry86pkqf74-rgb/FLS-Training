@@ -1,0 +1,127 @@
+{
+  "feedback_id": "feedback_hazhqyid5jc.f244_20260407222245",
+  "video_id": "hazhqyid5jc.f244",
+  "score_id": "score_consensus_hazhqyid5jc.f244_20260407222245",
+  "generated_at": "2026-04-07T22:22:45.248817",
+  "generator": "teacher",
+  "headline": "Baseline established: 110s / 488 FLS",
+  "fls_score": 488.0,
+  "completion_time": 110.0,
+  "attempt_number": 1,
+  "phase_coaching": [
+    {
+      "phase": "needle_load",
+      "duration_seconds": 15.0,
+      "benchmark_seconds": 8.0,
+      "expert_seconds": 5.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": "needle_loading"
+    },
+    {
+      "phase": "suture_placement",
+      "duration_seconds": 20.0,
+      "benchmark_seconds": 22.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": null
+    },
+    {
+      "phase": "first_throw",
+      "duration_seconds": 25.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": "wrapping_speed"
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 20.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 20.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "suture_cut",
+      "duration_seconds": 10.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 10.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "low",
+      "phase": "needle_load",
+      "current_value": "15s",
+      "target_value": "8s",
+      "description": "needle_load: 15s → target 8s (7s potential savings)",
+      "drill": "needle_loading",
+      "expected_time_savings": "~7s"
+    },
+    {
+      "rank": 2,
+      "priority": "low",
+      "phase": "first_throw",
+      "current_value": "25s",
+      "target_value": "20s",
+      "description": "first_throw: 25s → target 20s (5s potential savings)",
+      "drill": "wrapping_speed",
+      "expected_time_savings": "~5s"
+    },
+    {
+      "rank": 3,
+      "priority": "low",
+      "phase": "second_throw",
+      "current_value": "20s",
+      "target_value": "18s",
+      "description": "second_throw: 20s → target 18s (2s potential savings)",
+      "drill": "hand_switching",
+      "expected_time_savings": "~2s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "baseline",
+      "description": "First scored attempt — this establishes the baseline.",
+      "evidence": "Time: 110.0s, FLS: 488.0",
+      "actionable": true,
+      "recommendation": "Focus on completing all phases correctly before optimizing speed."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Proper surgeon's knot execution",
+    "Consistent hand switching technique",
+    "Accurate suture placement",
+    "Drain not avulsed — safe tissue handling maintained"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "At or above proficiency level",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Warm up with 5 minutes of needle_loading drills before scoring. Primary focus: needle_load (currently 15s, target 8s)."
+}
