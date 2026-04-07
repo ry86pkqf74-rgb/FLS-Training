@@ -1,0 +1,75 @@
+{
+  "id": "comparison_V21_001",
+  "video_id": "V21_video",
+  "video_filename": "V21.MOV",
+  "compared_at": "2026-04-07T21:00:00Z",
+  "teachers": {
+    "claude": {
+      "model": "claude-sonnet-4-20250514",
+      "completion_time_seconds": 170.0,
+      "estimated_penalties": 6.0,
+      "estimated_fls_score": 424.0,
+      "confidence_score": 0.38
+    },
+    "gpt4o": {
+      "model": "gpt-4o-2024-11-20",
+      "completion_time_seconds": 171.5,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 425.5,
+      "confidence_score": 0.71
+    }
+  },
+  "deltas": {
+    "time_delta_seconds": 1.5,
+    "penalty_delta": 3.0,
+    "fls_delta": 1.5,
+    "confidence_delta": 0.33,
+    "agreement_band": "tight_matches_V24"
+  },
+  "phase_alignment": {
+    "needle_load_incl_idle": {"claude_s": 14.0, "gpt4o_s": 7.0, "delta_s": 7.0, "alignment": "moderate", "note": "Claude splits 6s idle + 8s needle_load; GPT-4o collapses to 7.0s"},
+    "suture_placement": {"claude_s": 22.0, "gpt4o_s": 23.2, "delta_s": 1.2, "alignment": "tight"},
+    "first_throw": {"claude_s": 22.0, "gpt4o_s": 20.0, "delta_s": 2.0, "alignment": "tight"},
+    "second_throw": {"claude_s": 20.0, "gpt4o_s": 23.0, "delta_s": 3.0, "alignment": "tight"},
+    "third_throw": {"claude_s": 32.0, "gpt4o_s": 70.0, "delta_s": 38.0, "alignment": "boundary_disagreement"},
+    "suture_cut": {"claude_s": 65.0, "gpt4o_s": 22.8, "delta_s": 42.2, "alignment": "boundary_disagreement"},
+    "tail_sum_throws_plus_cut": {"claude_s": 139.0, "gpt4o_s": 135.8, "delta_s": 3.2, "alignment": "convergent"}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": "both_yes",
+    "second_throw_single": "both_yes",
+    "third_throw_single": "both_yes",
+    "hand_alternation": "both_preserved",
+    "security": "both_secure",
+    "extra_reinforcing_throws_noted": "both_yes",
+    "agreement": "strong"
+  },
+  "drain_alignment": {
+    "gap_visible": "both_no",
+    "avulsed": "both_no",
+    "closure_quality": {"claude": "appears_closed", "gpt4o": "acceptable", "agreement": "converged"},
+    "note": "9th drain-agreement case; drain-divergence pattern continues eroding."
+  },
+  "placement_alignment": {
+    "claude_mm": [2.0, 2.0],
+    "gpt4o_mm": [1.5, 1.5],
+    "delta_penalty": 1.0,
+    "note": "Claude's 2mm default vs GPT-4o's 1.5mm tighter read. Narrower mm gap than V24."
+  },
+  "fls_score_reconciliation": {
+    "claude_score": 424.0,
+    "gpt4o_score": 425.5,
+    "reconciled_score": 425.5,
+    "reconciliation_method": "rubric_strict_gpt4o",
+    "delta": 1.5,
+    "notes": "Tight reconciliation matching V24 tier (ΔFLS 1.5 vs V24's 1.6). Both teachers independently identified over-tying after the required third throw as the dominant time sink. Unanimous diagnosis of the failure mode."
+  },
+  "systematic_findings": {
+    "endpoint_agreement": "Δtime 1.5s — second-tightest endpoint agreement in the series (behind only V24's 1.9s, and V24 was slightly looser). V21 endpoint is unambiguous to both teachers.",
+    "phase_boundary_disagreement": "Claude bundles extra reinforcing work into suture_cut (65s), GPT-4o bundles it into third_throw (70s). Same phenomenon as V24/V17/V19/V22. Tails converge within 3.2s — strongest convergence observed in any boundary-disagreement case.",
+    "penalty_scope_disagreement": "7th case of Claude > GPT-4o penalties (Δ 3.0). Narrower than V24 (was 3.5). Claude applies 2mm default; GPT-4o reads 1.5mm. Pattern consistent.",
+    "diagnosis_agreement": "Both teachers independently named over-tying after the required three-throw sequence as the #1 failure mode. This is the most aligned qualitative diagnosis in the series.",
+    "drain_agreement_streak": "9 agree / 6 diverge — pattern is drifting clearly toward agreement.",
+    "confidence_split": "GPT-4o 0.71 vs Claude 0.38 (Δ 0.33) — second-largest after V24's 0.32. Claude continues to penalize itself harder for monitor-recording conditions."
+  }
+}
