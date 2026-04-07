@@ -1,0 +1,63 @@
+{
+  "id": "comparison_V25_001",
+  "video_id": "V25_video",
+  "video_alias": "V25",
+  "created_at": "2026-04-08T07:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V25_video_claude-sonnet-4_20260407_160000.json",
+      "completion_time_seconds": 150.0,
+      "estimated_penalties": 8.0,
+      "estimated_fls_score": 442.0,
+      "confidence": 0.45
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V25_video_gpt-4o_20260408_070000.json",
+      "completion_time_seconds": 149.5,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 448.0,
+      "confidence": 0.72
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 0.5,
+    "delta_penalties": 5.5,
+    "delta_fls_score": 6.0,
+    "agreement_level": "moderate"
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": true, "gpt4o": false, "agreement": false, "note": "DIVERGENCE — 6th case in V-series. Running tally: AGREE 7 (V12, V13, V18, V19, V22, V23, V26), DIVERGE 6 (V11, V14, V16, V17, V20, V25)."},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "gap_visible", "gpt4o": "complete"}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  2.5,
+    "delta_mm": 1.5,
+    "agreement": "moderate"
+  },
+  "penalty_breakdown_disagreement": {
+    "claude_total": 8.0,
+    "gpt4o_total": 2.5,
+    "claude_breakdown": "4.0 placement + ~4.0 gap/other",
+    "gpt4o_breakdown": "2.5 placement only",
+    "analysis": "Claude's 8.0 includes the drain-gap penalty plus possible quality extrapolation. GPT-4o's rubric-strict 2.5 reflects placement-only. 5th rubric-scope disagreement case."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 442.0,
+    "gpt4o_fls": 448.0,
+    "reconciled_fls": 445.0,
+    "reconciliation_note": "Near-exact time agreement (Δ0.5s). Penalty delta entirely due to drain-gap divergence and possible out-of-rubric quality points. Midpoint 445.0 is the safest reconciled value. GPT-4o confidence is significantly higher (0.72 vs 0.45), so if forced to pick, 448.0 is the rubric-strict correct value."
+  },
+  "systematic_findings": {
+    "drain_gap_pattern_alive": "V25 revives the drain-gap divergence after four consecutive agreement cases (V19, V22, V23, V26). This shows the pattern is not fully retired — it recurs on specific recording conditions. Agree 7 / Diverge 6 now.",
+    "time_precision": "Near-exact time agreement (Δ0.5s) confirms that when both teachers use the same endpoint definition, timing reliability is very high. V25 is one of the tightest time agreements in the series.",
+    "recovery_confirmation": "V25 sits in the V22-V27 mid-cluster (440-460 range) confirming stable performance after the V20 fatigue valley and leading into the V26 breakthrough."
+  }
+}
