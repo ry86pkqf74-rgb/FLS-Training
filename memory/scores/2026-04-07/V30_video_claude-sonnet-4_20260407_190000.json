@@ -10,16 +10,76 @@
   "scored_at": "2026-04-07T19:00:00Z",
   "recording_notes": "DIRECT CAMERA RECORDING — camera inside blue FLS trainer box looking directly at task area. Blue plastic trainer with red clamps, duct tape covering, pink/red foam, dark suture. BEST RECORDING QUALITY since V15. Similar setup to V15 (STORZ-style instruments, direct view). NOT the V28-V29 station. 1280x720 at 30fps. Instruments already partially visible at frame 1.",
   "frame_analyses": [
-    {"frame_number": 1, "timestamp_seconds": 3, "phase": "needle_load", "description": "DIRECT CAMERA VIEW inside FLS trainer. Blue box with red clamps, duct tape, pink foam. Drain with Penrose visible. One instrument from left with dark suture and needle. TIMING STARTS ~1-2s.", "technique_notes": "Best recording quality since V15. Dark suture clearly visible. Excellent detail."},
-    {"frame_number": 2, "timestamp_seconds": 20, "phase": "suture_placement", "description": "Both instruments at drain. Right instrument driving needle through drain. Left instrument stabilizing. Dark suture clearly visible extending from needle. Active placement.", "technique_notes": "Placement in progress. Good bimanual technique visible in direct view."},
-    {"frame_number": 3, "timestamp_seconds": 35, "phase": "first_throw", "description": "Suture placed. Both instruments at drain with suture ends visible. First throw wrapping beginning. Dark suture extending from drain to instrument.", "technique_notes": "Placement complete ~28s (~26s from first instrument). Starting first throw."},
-    {"frame_number": 4, "timestamp_seconds": 50, "phase": "first_throw", "description": "First throw wrapping/tightening. Both instruments spread wide above drain. Dark suture arcing high between instruments. Classic V-spread tightening pattern.", "technique_notes": "First throw in progress. Clear suture arc visible — excellent technique visualization."},
-    {"frame_number": 5, "timestamp_seconds": 65, "phase": "second_throw", "description": "Second throw in progress. Instruments at drain. Suture crossing at drain center. Knot building.", "technique_notes": "First throw complete ~58s (~30s). Second throw wrapping."},
-    {"frame_number": 6, "timestamp_seconds": 80, "phase": "third_throw", "description": "Third throw wrapping. Both instruments at drain. Multiple dark suture crossings visible at knot. Drain starting to compress.", "technique_notes": "Second throw complete ~72s (~14s). Third throw in progress. Good pace."},
-    {"frame_number": 7, "timestamp_seconds": 95, "phase": "suture_cut", "description": "Knot complete. Suture tails visible extending from knot — one to upper right, one extending down. Instrument at drain positioning for cutting. Dark suture clearly visible.", "technique_notes": "Third throw complete ~90s (~18s). Throws total ~62s. Cutting starting."},
-    {"frame_number": 8, "timestamp_seconds": 125, "phase": "suture_cut", "description": "Cutting in progress. Both instruments above drain. Suture tail arcing upward held by right instrument while left positions scissors. Knot visible at drain center.", "technique_notes": "~33s into cutting. Working on second tail."},
-    {"frame_number": 9, "timestamp_seconds": 155, "phase": "suture_cut", "description": "Final cutting. One instrument at drain with short remaining tail. Knot visible — compact with dark suture wrapping. Nearly complete.", "technique_notes": "~63s of cutting. Still the bottleneck phase. Nearing completion."},
-    {"frame_number": 10, "timestamp_seconds": 165, "phase": "completion", "description": "Task complete. Instruments withdrawn. EXCELLENT FINAL VIEW: Compact knot at drain center with very short dark tails. Drain slit appears WELL CLOSED — edges approximated tightly around knot. One suture tail extends slightly to left onto duct tape. Drain not avulsed. Clean, professional result.", "technique_notes": "Completion ~160s. Total from first instrument: ~158s. HIGHEST CONFIDENCE final assessment in series due to direct camera."}
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 3,
+      "phase": "needle_load",
+      "description": "DIRECT CAMERA VIEW inside FLS trainer. Blue box with red clamps, duct tape, pink foam. Drain with Penrose visible. One instrument from left with dark suture and needle. TIMING STARTS ~1-2s.",
+      "technique_notes": "Best recording quality since V15. Dark suture clearly visible. Excellent detail."
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 20,
+      "phase": "suture_placement",
+      "description": "Both instruments at drain. Right instrument driving needle through drain. Left instrument stabilizing. Dark suture clearly visible extending from needle. Active placement.",
+      "technique_notes": "Placement in progress. Good bimanual technique visible in direct view."
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 35,
+      "phase": "first_throw",
+      "description": "Suture placed. Both instruments at drain with suture ends visible. First throw wrapping beginning. Dark suture extending from drain to instrument.",
+      "technique_notes": "Placement complete ~28s (~26s from first instrument). Starting first throw."
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 50,
+      "phase": "first_throw",
+      "description": "First throw wrapping/tightening. Both instruments spread wide above drain. Dark suture arcing high between instruments. Classic V-spread tightening pattern.",
+      "technique_notes": "First throw in progress. Clear suture arc visible — excellent technique visualization."
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 65,
+      "phase": "second_throw",
+      "description": "Second throw in progress. Instruments at drain. Suture crossing at drain center. Knot building.",
+      "technique_notes": "First throw complete ~58s (~30s). Second throw wrapping."
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 80,
+      "phase": "third_throw",
+      "description": "Third throw wrapping. Both instruments at drain. Multiple dark suture crossings visible at knot. Drain starting to compress.",
+      "technique_notes": "Second throw complete ~72s (~14s). Third throw in progress. Good pace."
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 95,
+      "phase": "suture_cut",
+      "description": "Knot complete. Suture tails visible extending from knot — one to upper right, one extending down. Instrument at drain positioning for cutting. Dark suture clearly visible.",
+      "technique_notes": "Third throw complete ~90s (~18s). Throws total ~62s. Cutting starting."
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 125,
+      "phase": "suture_cut",
+      "description": "Cutting in progress. Both instruments above drain. Suture tail arcing upward held by right instrument while left positions scissors. Knot visible at drain center.",
+      "technique_notes": "~33s into cutting. Working on second tail."
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 155,
+      "phase": "suture_cut",
+      "description": "Final cutting. One instrument at drain with short remaining tail. Knot visible — compact with dark suture wrapping. Nearly complete.",
+      "technique_notes": "~63s of cutting. Still the bottleneck phase. Nearing completion."
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 165,
+      "phase": "completion",
+      "description": "Task complete. Instruments withdrawn. EXCELLENT FINAL VIEW: Compact knot at drain center with very short dark tails. Drain slit appears WELL CLOSED — edges approximated tightly around knot. One suture tail extends slightly to left onto duct tape. Drain not avulsed. Clean, professional result.",
+      "technique_notes": "Completion ~160s. Total from first instrument: ~158s. HIGHEST CONFIDENCE final assessment in series due to direct camera."
+    }
   ],
   "completion_time_seconds": 158.0,
   "phase_timings": [
@@ -31,9 +91,33 @@
     {"phase": "suture_cut", "start_seconds": 90, "end_seconds": 160, "duration_seconds": 70}
   ],
   "knot_assessments": [
-    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "First throw 28-58s (30s). Surgeon's knot — double wrap visible in direct camera. V-spread tightening at 50s. Good technique. Confidence: HIGH."},
-    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Second throw 58-72s (14s). Fast, efficient single throw. Hand switch confirmed — left instrument leads. Confidence: MODERATE."},
-    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Third throw 72-90s (18s). Hand switch back confirmed. Drain compression visible. Confidence: MODERATE."}
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw 28-58s (30s). Surgeon's knot — double wrap visible in direct camera. V-spread tightening at 50s. Good technique. Confidence: HIGH."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw 58-72s (14s). Fast, efficient single throw. Hand switch confirmed — left instrument leads. Confidence: MODERATE."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw 72-90s (18s). Hand switch back confirmed. Drain compression visible. Confidence: MODERATE."
+    }
   ],
   "suture_placement": {
     "deviation_from_mark1_mm": 1.5,

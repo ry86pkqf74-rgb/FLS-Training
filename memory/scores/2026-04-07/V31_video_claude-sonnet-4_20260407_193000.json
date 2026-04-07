@@ -10,12 +10,48 @@
   "scored_at": "2026-04-07T19:30:00Z",
   "recording_notes": "DIRECT CAMERA RECORDING — same blue FLS trainer as V30. Camera inside trainer looking directly at task. Blue box, red clamps, duct tape, pink/red foam. Dark suture. Standard scissors visible on table above trainer. 1280x720 at 30fps. Excellent detail — highest confidence tier.",
   "frame_analyses": [
-    {"frame_number": 1, "timestamp_seconds": 3, "phase": "needle_load", "description": "Direct camera inside blue FLS trainer. Drain visible with Penrose. One instrument from lower left with dark suture. Scissors on table above. TIMING STARTS ~3s.", "technique_notes": "Same excellent direct camera setup as V30."},
-    {"frame_number": 2, "timestamp_seconds": 30, "phase": "first_throw", "description": "Both instruments at drain. Suture placed — dark suture extending from drain. Instruments working on first throw wrapping.", "technique_notes": "Placement complete ~22-25s (~20s). First throw started."},
-    {"frame_number": 3, "timestamp_seconds": 60, "phase": "second_throw", "description": "Second throw in progress. Both instruments at drain. Suture wrapping visible. Knot building at drain center.", "technique_notes": "First throw complete ~48s (~25s). Second throw wrapping."},
-    {"frame_number": 4, "timestamp_seconds": 90, "phase": "third_throw_tightening", "description": "Third throw tightening. Both instruments spread laterally — classic lateral pull. Dark suture crossing at drain. Drain compressing under knot tension.", "technique_notes": "Second throw complete ~65s (~17s). Third throw tightening at 90s (~25s)."},
-    {"frame_number": 5, "timestamp_seconds": 120, "phase": "suture_cut", "description": "Cutting phase. Both instruments at drain — scissors visible at right with open jaws. Suture tails extending from knot. Active cutting.", "technique_notes": "Third throw complete ~93s. Cutting started ~93s. 27s into cutting."},
-    {"frame_number": 6, "timestamp_seconds": 143, "phase": "completion", "description": "Task complete. Instruments withdrawn. Compact knot at drain center with very short dark tails. Drain slit appears WELL CLOSED — edges tightly approximated. No gap visible. Drain not avulsed. Clean result.", "technique_notes": "Completion ~140s. Total from first instrument: ~137s. IMPROVEMENT from V30 (158s)."}
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 3,
+      "phase": "needle_load",
+      "description": "Direct camera inside blue FLS trainer. Drain visible with Penrose. One instrument from lower left with dark suture. Scissors on table above. TIMING STARTS ~3s.",
+      "technique_notes": "Same excellent direct camera setup as V30."
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 30,
+      "phase": "first_throw",
+      "description": "Both instruments at drain. Suture placed — dark suture extending from drain. Instruments working on first throw wrapping.",
+      "technique_notes": "Placement complete ~22-25s (~20s). First throw started."
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 60,
+      "phase": "second_throw",
+      "description": "Second throw in progress. Both instruments at drain. Suture wrapping visible. Knot building at drain center.",
+      "technique_notes": "First throw complete ~48s (~25s). Second throw wrapping."
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 90,
+      "phase": "third_throw_tightening",
+      "description": "Third throw tightening. Both instruments spread laterally — classic lateral pull. Dark suture crossing at drain. Drain compressing under knot tension.",
+      "technique_notes": "Second throw complete ~65s (~17s). Third throw tightening at 90s (~25s)."
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 120,
+      "phase": "suture_cut",
+      "description": "Cutting phase. Both instruments at drain — scissors visible at right with open jaws. Suture tails extending from knot. Active cutting.",
+      "technique_notes": "Third throw complete ~93s. Cutting started ~93s. 27s into cutting."
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 143,
+      "phase": "completion",
+      "description": "Task complete. Instruments withdrawn. Compact knot at drain center with very short dark tails. Drain slit appears WELL CLOSED — edges tightly approximated. No gap visible. Drain not avulsed. Clean result.",
+      "technique_notes": "Completion ~140s. Total from first instrument: ~137s. IMPROVEMENT from V30 (158s)."
+    }
   ],
   "completion_time_seconds": 137.0,
   "phase_timings": [
@@ -27,9 +63,33 @@
     {"phase": "suture_cut", "start_seconds": 93, "end_seconds": 140, "duration_seconds": 47}
   ],
   "knot_assessments": [
-    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "unclear", "hand_switched": null, "appears_secure": true, "notes": "First throw 23-48s (25s). Surgeon's knot. Improved from V30's 30s. Confidence: HIGH."},
-    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Second throw 48-65s (17s). Single throw. Efficient. Confidence: HIGH."},
-    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Third throw 65-93s (28s). Longest throw — visible lateral tightening at 90s. Good technique but slower. Confidence: HIGH."}
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "unclear",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw 23-48s (25s). Surgeon's knot. Improved from V30's 30s. Confidence: HIGH."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw 48-65s (17s). Single throw. Efficient. Confidence: HIGH."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw 65-93s (28s). Longest throw — visible lateral tightening at 90s. Good technique but slower. Confidence: HIGH."
+    }
   ],
   "suture_placement": {
     "deviation_from_mark1_mm": 1.5,
