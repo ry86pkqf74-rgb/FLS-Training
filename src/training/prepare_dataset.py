@@ -18,6 +18,28 @@ from src.memory.learning_log import LearningLog
 
 logger = logging.getLogger(__name__)
 
+FEEDBACK_DIR = Path(__file__).parent.parent.parent / "memory" / "feedback"
+
+
+def _load_coach_feedback(video_id: str) -> dict | None:
+    """Load the most recent coach feedback for a video, if available."""
+    if not FEEDBACK_DIR.exists():
+        return None
+    matches = sorted(
+        [f for f in FEEDBACK_DIR.iterdir() if video_id in f.name and f.suffix == ".json"],
+        reverse=True,
+    )
+    if not matches:
+        return None
+    try:
+        data = json.loads(matches[0].read_text())
+        # Strip internal metadata from training data
+        data.pop("_meta", None)
+        return data
+    except (json.JSONDecodeError, OSError) as e:
+        logger.warning(f"Could not load coach feedback for {video_id}: {e}")
+        return None
+
 
 def prepare_dataset(
     store: MemoryStore,
@@ -29,8 +51,14 @@ def prepare_dataset(
     train_split: float = 0.8,
     val_split: float = 0.1,
     seed: int = 42,
+    include_coach_feedback: bool = False,
 ) -> dict:
     """Build train/val/test JSONL files from scored videos.
+
+    Args:
+        include_coach_feedback: If True, append coach feedback to the assistant
+            response so the student model learns to produce both scores and
+            rich technique coaching in a single pass (Phase 2 of coach integration).
 
     Returns manifest dict with dataset stats.
     """
@@ -80,11 +108,26 @@ def prepare_dataset(
                 corrected_fields = json.loads(corrected_fields)
             score_data.update(corrected_fields)
 
+        # Optionally attach coach feedback for richer student training
+        coach_feedback = None
+        if include_coach_feedback:
+            coach_feedback = _load_coach_feedback(sample["video_id"])
+
+        # Build the assistant response: score JSON + optional coach JSON
+        assistant_content = json.dumps(score_data, default=str)
+        if coach_feedback:
+            # Wrap both in a combined output so student learns to produce both
+            combined = {
+                "scoring_result": score_data,
+                "coach_feedback": coach_feedback,
+            }
+            assistant_content = json.dumps(combined, default=str)
+
         example = {
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": "[FRAMES_PLACEHOLDER] Score this FLS Task 5 video."},
-                {"role": "assistant", "content": json.dumps(score_data, default=str)},
+                {"role": "assistant", "content": assistant_content},
             ],
             "metadata": {
                 "video_id": sample["video_id"],
@@ -129,6 +172,7 @@ def prepare_dataset(
         "n_val": len(val),
         "n_test": len(test),
         "min_confidence": min_confidence,
+        "include_coach_feedback": include_coach_feedback,
         "sources": {},
         "seed": seed,
     }
