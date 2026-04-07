@@ -1,0 +1,64 @@
+{
+  "id": "comparison_V16_001",
+  "video_id": "V16_video",
+  "video_alias": "V16",
+  "created_at": "2026-04-07T23:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V16_video_claude-sonnet-4_20260407_133000.json",
+      "completion_time_seconds": 175.0,
+      "estimated_penalties": 8.0,
+      "estimated_fls_score": 417.0,
+      "confidence": 0.40
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V16_video_gpt-4o_20260407_230000.json",
+      "completion_time_seconds": 166.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 431.0,
+      "confidence": 0.66
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 9.0,
+    "delta_penalties": 5.0,
+    "delta_fls_score": 14.0,
+    "agreement_level": "moderate"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 7,  "gpt4o": 8.0,  "delta": 1.0, "note": "Claude has 5s idle before needle_load; combined idle+needle_load 12s vs GPT-4o 8s (delta 4s)."},
+    "suture_placement": {"claude": 43, "gpt4o": 35.0, "delta": 8.0, "note": "Relatively tight agreement on placement duration."},
+    "first_throw":      {"claude": 23, "gpt4o": 33.5, "delta": 10.5},
+    "second_throw":     {"claude": 19, "gpt4o": 14.5, "delta": 4.5},
+    "third_throw":      {"claude": 23, "gpt4o": 44.0, "delta": 21.0, "note": "GPT-4o absorbs late-task regrasping into throw 3 (same pattern as V11/V12/V14)."},
+    "suture_cut":       {"claude": 55, "gpt4o": 30.0, "delta": 25.0, "note": "Claude assigns 55s to cut (longest in V-series), GPT-4o only 30s. Sum of third_throw + suture_cut: Claude 78s vs GPT-4o 74s — tight agreement on the combined late-task window (delta 4s)."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": true,                 "gpt4o": false,    "agreement": false, "note": "Drain-gap divergence returns. V16 is 640x480 — the lowest resolution in the V-series — and Claude flags a small gap (partial_small_gap, low confidence). GPT-4o sees complete closure."},
+    "drain_avulsed": {"claude": false,                "gpt4o": false,    "agreement": true},
+    "closure":       {"claude": "partial_small_gap",  "gpt4o": "complete","agreement": false}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  3.0,
+    "delta_mm": 1.0,
+    "agreement": "moderate",
+    "note": "Both teachers low/very_low confidence — 640x480 resolution makes exact mm measurement unreliable."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 417.0,
+    "gpt4o_fls": 431.0,
+    "reconciled_fls": 424.0,
+    "reconciliation_note": "Moderate agreement — largest ΔFLS in the V-series so far (14 points). 9s time delta and 5pt penalty delta both contribute. The penalty delta breaks down as: 1pt placement (both teachers low confidence) + 4pt Claude gap penalty that GPT-4o doesn't see. The time delta is harder to attribute — Claude stops the clock 9s later, possibly because it waits for a cleaner 'both tails cut' frame. Reconciled midpoint 424.0 is reasonable; the GPT-4o point estimate (431) is likely closer to a human proctor given its higher confidence (0.66 vs 0.40)."
+  },
+  "systematic_findings": {
+    "boundary_disagreement_persists": "Same third_throw/suture_cut mirror as V11/V12/V14 — sum of the two phases is within 4s, individual durations disagree by 20+ seconds. Training signal guidance stands: use total_time + penalties, not raw per-phase durations.",
+    "resolution_dependent_gap_bias": "V16 confirms the resolution-dependent Claude gap bias. Pattern now: low-res monitor recordings (V11, V14, V16) → Claude flags gap, GPT-4o does not. Higher-res direct or good-monitor recordings (V12) → both teachers agree no gap. V16 is the lowest-resolution V-series entry (640x480) and also shows the largest penalty delta. Recommend a recording-quality → gap-bias confidence weighting before using Claude's drain signal for training."
+  }
+}
