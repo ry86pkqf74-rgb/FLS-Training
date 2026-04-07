@@ -1,0 +1,71 @@
+{
+  "id": "comparison_V22_001",
+  "video_id": "V22_video",
+  "video_alias": "V22",
+  "created_at": "2026-04-08T04:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V22_video_claude-sonnet-4_20260407_153000.json",
+      "completion_time_seconds": 152.0,
+      "estimated_penalties": 5.0,
+      "estimated_fls_score": 443.0,
+      "confidence": 0.48
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V22_video_gpt-4o_20260408_040000.json",
+      "completion_time_seconds": 157.0,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 440.5,
+      "confidence": 0.68
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 5.0,
+    "delta_penalties": 2.5,
+    "delta_fls_score": 2.5,
+    "agreement_level": "strong"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 5,  "gpt4o": 17.5, "delta": 12.5, "note": "Claude uses 3s idle + 5s load = 8s; GPT-4o extends load to 17.5s."},
+    "suture_placement": {"claude": 20, "gpt4o": 23.5, "delta": 3.5},
+    "first_throw":      {"claude": 30, "gpt4o": 20.0, "delta": 10.0},
+    "second_throw":     {"claude": 17, "gpt4o": 18.5, "delta": 1.5, "note": "Tightest phase agreement in V22."},
+    "third_throw":      {"claude": 23, "gpt4o": 44.5, "delta": 21.5, "note": "GPT-4o absorbs more late manipulation into third_throw."},
+    "suture_cut":       {"claude": 57, "gpt4o": 33.0, "delta": 24.0, "note": "Mirror of third_throw delta. Sum third_throw+cut: Claude 80s, GPT-4o 77.5s (delta 2.5s — near-exact)."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_identification": {"claude": "unclear", "gpt4o": "right/left/right"}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true, "note": "Drain-gap agreement. V22 joins the agreement set."},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "well_closed", "gpt4o": "complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 3.0,
+    "gpt4o_total_mm":  2.5,
+    "delta_mm": 0.5,
+    "agreement": "strong"
+  },
+  "long_tail_deduction_disagreement": {
+    "claude_deduction": 2.0,
+    "gpt4o_deduction": 0.0,
+    "claude_observation": "Claude's 5.0 total penalties includes 3.0 placement + 2.0 other (possible tail/quality). GPT-4o's 2.5 is placement only.",
+    "analysis": "Same rubric-scope issue seen on V20. GPT-4o's rubric-strict read is correct per the uploaded prompt."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 443.0,
+    "gpt4o_fls": 440.5,
+    "reconciled_fls": 441.75,
+    "reconciliation_note": "Strong agreement. Both teachers independently score in the 440-443 range, both flag cutting as the dominant time sink, both confirm all rubric items. Midpoint 441.75 is the safest reconciled value. This is one of the tightest V-series agreements to date."
+  },
+  "systematic_findings": {
+    "phase_boundary_pattern_continues": "V22 shows the classic late-phase boundary mirror: third_throw and cut have 21.5s and 24.0s individual deltas but their SUM is within 2.5s. Seventh consecutive video where this pattern holds (V11, V14, V16, V17, V18, V19, V22).",
+    "drain_agreement_set_grows": "V22 is the 5th drain-closure agreement (V12, V13, V18, V19, V22). Diverge: V11, V14, V16, V17, V20 (Claude flagged long tails, not gap). Pattern still inconsistent with recording-format hypothesis alone.",
+    "recovery_confirmation": "Both teachers read V22 as a clean, technically sound run. This corroborates Claude's trajectory narrative of a recovery from the V18-V20 fatigue valley. Reconciled 441.75 is a healthy mid-cluster score."
+  }
+}
