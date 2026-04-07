@@ -1,0 +1,46 @@
+{
+  "id": "score_gpt4o_post4_001",
+  "video_id": "post4_video",
+  "video_alias": "V4",
+  "video_filename": "post4.mov",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T16:00:00Z",
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 4.0, "duration_seconds": 4.0},
+    {"phase": "suture_placement", "start_seconds": 4.0, "end_seconds": 40.0, "duration_seconds": 36.0},
+    {"phase": "first_throw", "start_seconds": 40.0, "end_seconds": 68.0, "duration_seconds": 28.0},
+    {"phase": "second_throw", "start_seconds": 68.0, "end_seconds": 112.0, "duration_seconds": 44.0},
+    {"phase": "third_throw", "start_seconds": 112.0, "end_seconds": 138.0, "duration_seconds": 26.0},
+    {"phase": "suture_cut", "start_seconds": 138.0, "end_seconds": 187.0, "duration_seconds": 49.0},
+    {"phase": "completion", "start_seconds": 187.0, "end_seconds": 187.7, "duration_seconds": 0.7}
+  ],
+  "completion_time_seconds": 187.7,
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "hand_used": "left", "appears_secure": true, "notes": "Likely double-wrapped surgeon's knot; partial occlusion during loop formation."},
+    {"throw_number": 2, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Hand switch preserved; extra regrasping before flattening."},
+    {"throw_number": 3, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Alternation back to left instrument; final stack stable."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 2.5,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete"
+  },
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 409.8,
+  "confidence_score": 0.69,
+  "technique_summary": "Completed task without avulsion or gap; final knot stack stable and slit well-approximated. Time loss is dominated by the second throw (44s) and especially suture cutting (49s) — together ~93s, roughly half the run. Needle handling and placement were controlled. Performance is quality-preserving but inefficient: knot construction and tail trimming both need tightening.",
+  "improvement_suggestions": [
+    "Present needle perpendicular before first bite to cut placement reorientation time.",
+    "Keep working loops smaller during throws 2 and 3 to reduce regrasping.",
+    "Adopt a fixed cutting routine: stabilize knot, isolate tail, cut, repeat — target 10-15s total."
+  ]
+}

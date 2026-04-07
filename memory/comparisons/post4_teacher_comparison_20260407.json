@@ -1,0 +1,80 @@
+{
+  "id": "comparison_post4_001",
+  "video_id": "post4_video",
+  "video_alias": "V4",
+  "created_at": "2026-04-07T16:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/post4_video_claude-sonnet-4_20260407_081000.json",
+      "completion_time_seconds": 192.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 405.0,
+      "confidence": 0.60
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/post4_video_gpt-4o_20260407_160000.json",
+      "completion_time_seconds": 187.7,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 409.8,
+      "confidence": 0.69
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 4.3,
+    "delta_penalties": 0.5,
+    "delta_fls_score": 4.8,
+    "agreement_level": "strong"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 13, "gpt4o": 4,  "delta": 9,  "note": "Claude includes a 5s idle window before instrument-in then 13s of needle handling; GPT-4o starts the clock at first instrument visible and assigns only 4s. Sum of needle_load + suture_placement is similar (Claude 55s vs GPT-4o 40s)."},
+    "suture_placement": {"claude": 42, "gpt4o": 36, "delta": 6},
+    "first_throw":      {"claude": 28, "gpt4o": 28, "delta": 0,  "note": "Exact agreement."},
+    "second_throw":     {"claude": 22, "gpt4o": 44, "delta": 22, "note": "Major divergence — Claude allocates only 22s, GPT-4o 44s. Combined with third_throw, the totals are closer (Claude 60s vs GPT-4o 70s)."},
+    "third_throw":      {"claude": 38, "gpt4o": 26, "delta": 12, "note": "Inverted from the systematic_finding pattern — here GPT-4o is LOWER on third_throw, not higher. The slow segment exists, but the two teachers disagree about whether it lives in throw 2 or throw 3."},
+    "suture_cut":       {"claude": 44, "gpt4o": 49, "delta": 5,  "note": "Both teachers identify cutting as the dominant inefficiency."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":  {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed":{"claude": false, "gpt4o": false, "agreement": true},
+    "closure":      {"claude": "complete", "gpt4o": "complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 3.0,
+    "gpt4o_total_mm": 2.5,
+    "delta_mm": 0.5,
+    "rationale": "Both teachers report low-confidence placement near 1-1.5mm per mark. Reconciled at 2.75mm."
+  },
+  "reconciliation": {
+    "method": "average completion time, average penalties, formula = 600 - time - penalties",
+    "completion_time_seconds": 189.85,
+    "penalties": 2.75,
+    "fls_score": 407.4,
+    "rationale": "Both teachers agree on the qualitative picture: clean closure, all knots secure, hand switches preserved, no avulsion or gap; bottleneck is suture cutting (44-49s) plus a slow knot segment (~22s disputed between throw 2 and throw 3). The 4.8 FLS delta is well within the V7/post2 calibration band (3.5-4.9) and qualifies as strong agreement."
+  },
+  "calibration_notes": {
+    "calibration_set_position": 5,
+    "calibration_band": "strong agreement",
+    "running_calibration": [
+      {"video": "post_practice", "delta_fls": 0.3},
+      {"video": "V7",            "delta_fls": 3.5},
+      {"video": "post2",         "delta_fls": 4.9},
+      {"video": "V4 (post4)",    "delta_fls": 4.8},
+      {"video": "V8",            "delta_fls": 17.5}
+    ],
+    "interpretation": "Four of five comparisons now fall in the 0.3-4.9 ΔFLS band. V8 remains the lone outlier and the outlier is well-explained by Claude's 62s suture_placement default failure mode under uncertainty."
+  },
+  "systematic_findings_update": {
+    "gpt4o_third_throw_inflation": {
+      "status": "refined",
+      "previous_observation": "GPT-4o systematically inflates third_throw duration relative to Claude when there is reinforcing manipulation to attribute (post2 46.2 vs 30; V7 51 vs 24; V8 67 vs 30); does NOT apply when bottleneck is unambiguously elsewhere (post_practice).",
+      "new_data_point": "post4 / V4: GPT-4o assigns 26s third_throw, Claude assigns 38s. The inflation pattern is INVERTED here — GPT-4o instead inflates the second throw (44s vs 22s).",
+      "refined_hypothesis": "GPT-4o inflates ONE knot segment when there is extra manipulation to attribute, but the segment it picks (throw 2 vs throw 3) is not stable. Combined throw-2-plus-throw-3 duration is more reliable than either segment in isolation. The critique agent should prefer the SUM of throws 2+3 over individual phase boundaries when the two teachers disagree internally."
+    }
+  }
+}
