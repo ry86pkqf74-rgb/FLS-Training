@@ -1,0 +1,222 @@
+{
+  "id": "score_claude_V23_001",
+  "video_id": "V23_video",
+  "video_filename": "V23.MOV",
+  "video_hash": "42eca2195f022ed3",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T15:30:00Z",
+  "recording_notes": "MONITOR RECORDING — 4K phone filming RCA monitor from SIGNIFICANT DISTANCE (several feet back, showing entire lab room including wall signs, second monitor, yellow crate, electrical outlets). This is the SAME RCA monitor as V11-V14/V17/V21 but filmed from much farther away, dramatically reducing effective resolution of the task area. The 4K camera resolution (3840x2160) is entirely wasted on showing the room rather than the task. HEAVY DEBRIS — red/pink splatter marks and dark suture fragments covering both the perforated board and foam block, indicating MANY prior attempts in this session. Purple/dark suture used. LOWEST EFFECTIVE RESOLUTION in the entire series despite highest camera resolution. Lab environment clearly visible — NOTICE sign, electrical outlets, medical equipment.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 4,
+      "phase": "idle",
+      "description": "Wide shot of RCA monitor on yellow crate in lab. Drain visible at center of foam block. No instruments. Heavy red/pink debris everywhere — many prior attempts. Lab environment visible (signs, outlets, second monitor above).",
+      "technique_notes": "TIMING NOT YET STARTED. Camera distance makes detail assessment very difficult. The heavy debris is the most severe in the series — more than V19 or V22."
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 12,
+      "phase": "suture_placement",
+      "description": "Both instruments in field at drain. Needle driving visible. Trainee's arm partially visible at left edge. Dark suture line visible from instruments to drain.",
+      "technique_notes": "Instruments entered around 6-8s. Needle pass underway at 12s. TIMING STARTS ~6s."
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 28,
+      "phase": "suture_placement",
+      "description": "Still in suture placement. Both instruments at drain. Dark suture visible extending from drain. Right instrument from lower right working at drain level.",
+      "technique_notes": "Placement still underway at 28s — slower than V22's 28s completion."
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 36,
+      "phase": "first_throw",
+      "description": "Both instruments above drain repositioning. Purple/dark suture lines visible extending from drain. Needle visible at upper area. Suture placement appears complete, transitioning to first throw.",
+      "technique_notes": "Suture placement complete at approximately 32-34s (~26s placement time). Starting first throw."
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 48,
+      "phase": "first_throw",
+      "description": "First throw wrapping. Both instruments crossing above drain. Dark suture wrapping visible. Instruments working close together for the wrap.",
+      "technique_notes": "First throw wrap in progress. 14+ seconds into first throw."
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 56,
+      "phase": "first_throw",
+      "description": "First throw tightening. Both instruments spread wide pulling laterally. Good separation for tightening. Suture line visible between instruments and drain. Knot being cinched.",
+      "technique_notes": "Good tightening technique — wide lateral pull. First throw completing around 56-60s."
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 64,
+      "phase": "second_throw",
+      "description": "Second throw in progress. Both instruments at drain. Suture wrapping visible. Knot building at center.",
+      "technique_notes": "Second throw underway. First throw completed ~58-60s (~26s duration)."
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 80,
+      "phase": "third_throw",
+      "description": "Third throw in progress or second completing. Both instruments at drain pulling apart (tightening motion). Instruments spread wide. Knot visible at center.",
+      "technique_notes": "Second throw completed around 75-78s (~17s). Third throw starting/underway."
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 96,
+      "phase": "third_throw",
+      "description": "Third throw completing. Both instruments at drain. Multiple suture loops visible around knot area. Instruments positioning near drain center.",
+      "technique_notes": "Third throw completing around 96-100s (~22s duration). Transitioning to cutting."
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 104,
+      "phase": "suture_cut",
+      "description": "Cutting phase beginning. Both instruments crossing at drain — scissors from upper left, grasper from upper right. Knot at center. Suture wraps visible. Positioning for first cut.",
+      "technique_notes": "Cutting starts approximately 100-105s."
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 112,
+      "phase": "suture_cut",
+      "description": "Cutting underway. Instruments at drain level. One instrument (scissors) from left, other from right. Knot visible. Suture tails being cut.",
+      "technique_notes": "12+ seconds into cutting."
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 140,
+      "phase": "suture_cut",
+      "description": "Still cutting. One instrument from right holding suture tail upward. Other instrument (scissors) approaching for cut. Extended cutting phase at 40+ seconds.",
+      "technique_notes": "40+ seconds of cutting. Suture tail held up for scissors access."
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 160,
+      "phase": "completion",
+      "description": "TASK COMPLETE. Instruments withdrawn. Drain visible on foam block. Knot visible at center but detail very limited due to camera distance and heavy debris. Drain appears intact and centered on block — not avulsed. No instruments in field. The heavy debris makes it very difficult to distinguish the completed knot from surrounding suture fragments.",
+      "technique_notes": "Task completed at approximately 155-158 seconds. Instruments withdrawn by 160s. Due to camera distance, knot quality, tail length, gap assessment, and drain closure quality CANNOT be reliably assessed. This is the lowest-confidence final assessment in the series."
+    }
+  ],
+  "completion_time_seconds": 155.0,
+  "phase_timings": [
+    {"phase": "idle", "start_seconds": 0, "end_seconds": 6, "duration_seconds": 6},
+    {"phase": "needle_load", "start_seconds": 6, "end_seconds": 10, "duration_seconds": 4},
+    {"phase": "suture_placement", "start_seconds": 10, "end_seconds": 34, "duration_seconds": 24},
+    {"phase": "first_throw", "start_seconds": 34, "end_seconds": 60, "duration_seconds": 26},
+    {"phase": "second_throw", "start_seconds": 60, "end_seconds": 78, "duration_seconds": 18},
+    {"phase": "third_throw", "start_seconds": 78, "end_seconds": 100, "duration_seconds": 22},
+    {"phase": "suture_cut", "start_seconds": 100, "end_seconds": 158, "duration_seconds": 58}
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "unclear",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw 34-60s (26s). Double wrap assumed. Wide lateral tightening visible at 56s. Confidence: very low — camera distance."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw 60-78s (18s). Efficient. Hand switch assumed. Confidence: very low."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw 78-100s (22s). Hand switch assumed. Confidence: very low."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "very_low",
+    "placement_notes": "Marks completely invisible from camera distance. Suture appears to pass through drain area. Default 2mm estimate. Cannot verify placement accuracy at all."
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "unable_to_assess",
+    "assessment_note": "CANNOT reliably assess drain closure from this camera distance. The drain appears intact and centered at 160s. Not avulsed. Gap assessment, tail length, and knot quality are all UNRELIABLE due to the extreme camera distance combined with heavy debris making it nearly impossible to distinguish the completed knot from surrounding suture fragments. This is the lowest quality final assessment in the entire series."
+  },
+  "estimated_penalties": 6.0,
+  "estimated_fls_score": 439.0,
+  "confidence_score": 0.28,
+  "technique_summary": "V23 at an estimated 155 seconds is comparable to V22 (152s) and continues the recovery trajectory. However, this is the LOWEST CONFIDENCE score in the entire 23-video series (0.28) due to the camera being placed several feet back from the small RCA monitor, resulting in the task occupying only a small portion of the 4K frame. Despite the highest camera resolution in the series (3840x2160), the effective resolution on the task area is the lowest. The heavy red/pink debris covering the setup indicates MANY prior attempts — more debris than any previous video. Phase timing is the most reliable data: placement 24s (slightly slower than V22's 20s), throws 66s total (slightly faster than V22's 70s), cutting 58s (comparable to V22's 57s). The similar timing profile to V22 despite different location and heavy debris suggests consistent mid-range performance at this training stage. The trainee should be strongly encouraged to position the recording camera CLOSER to the monitor or use direct camera for future recordings.",
+  "improvement_suggestions": [
+    "CRITICAL RECORDING ISSUE: Camera WAY too far from monitor. The 4K resolution is entirely wasted on filming the room. Move camera to within 1-2 feet of the monitor, or switch to DIRECT CAMERA above the trainer.",
+    "Heavy debris suggests many prior attempts — confirm which attempt number this was. If #4+, fatigue risk is high even though time is still good.",
+    "Cutting at 58 seconds continues the structural bottleneck pattern (37% of total time).",
+    "Placement at 24s is slightly slower than V22 (20s) and V21 (22s) — still good but not peak.",
+    "Throws at 66s total are efficient — slightly better than V22's 70s. First throw at 26s is still the longest.",
+    "Consider cleaning debris between attempts — the heavy residue makes AI scoring much harder and may also affect the trainee's visual feedback during practice."
+  ],
+  "strengths": [
+    "155s completion time — consistent with V22 (152s), confirming the recovery is stable",
+    "Throws at 66 seconds total — most efficient in recent series",
+    "All three throws completed in sequence",
+    "Drain not avulsed (confirmed even from distance)",
+    "Consistent performance across two consecutive videos (V22→V23) suggests the improvement is real",
+    "24% improvement from baseline maintained (198s → 155s)"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video", "postV6_video", "postV7_video", "postV8_video", "postV9_video", "postV10_video", "V11_video", "V12_video", "V13_video", "V14_video", "V15_video", "V16_video", "V17_video", "V18_video", "V19_video", "V20_video", "V21_video", "V22_video"],
+    "time_vs_pre": -43,
+    "time_vs_V14": 48,
+    "time_vs_V15": 13,
+    "time_vs_V22": 3,
+    "time_vs_V21": -15,
+    "time_vs_V20": -63,
+    "score_vs_pre": 37.0,
+    "score_vs_V14": -48.0,
+    "score_vs_V22": -4.0,
+    "trajectory": "stable_mid_range_consistent",
+    "phase_comparison": {
+      "placement_24s": "Good. V22: 20s. V21: 22s. Slightly slower but consistent.",
+      "throws_66s": "Best in recent series. V22: 70s. V21: 74s. Improvement trend in throws.",
+      "cutting_58s": "Unchanged bottleneck. V22: 57s. V21: 65s. Stable at ~57-58s."
+    },
+    "key_observations": [
+      "155s / 439 FLS — nearly identical to V22 (152s/443). Consistent performance confirmed.",
+      "LOWEST CONFIDENCE in series: 0.28. Camera distance makes quality assessment unreliable.",
+      "Back at RCA monitor lab (same as V11-V14/V17/V21) but camera much farther away.",
+      "HEAVIEST DEBRIS in series — many prior attempts. Fatigue risk if late in session.",
+      "Throws at 66s total — best in recent 5 videos. Improvement trend emerging.",
+      "Cutting at 58s — stable bottleneck, no change from V22.",
+      "V22→V23 consistency (152s→155s) is very encouraging — the trainee has found a stable performance plateau.",
+      "24% improvement from baseline (198s→155s) — the strongest sustained improvement since the V18-V20 crash.",
+      "23rd video in series. The V22-V23 pair represents the first back-to-back consistent performance since V12-V14.",
+      "Recording quality must be addressed — current setup wastes the highest camera resolution on room footage."
+    ],
+    "series_statistics": {
+      "total_videos": 23,
+      "all_time_best": "107s (V14)",
+      "all_time_worst": "218s (V20)",
+      "pre_training_baseline": "198s",
+      "current_performance": "155s",
+      "improvement_from_baseline_pct": 22,
+      "distance_from_peak_pct": 45,
+      "last_2_video_average": "153.5s",
+      "fatigue_crashes_identified": 5,
+      "cutting_time_last_3": [65, 57, 58],
+      "cutting_average_last_3_seconds": 60,
+      "placement_time_last_3": [22, 20, 24],
+      "placement_average_last_3_seconds": 22
+    }
+  }
+}
