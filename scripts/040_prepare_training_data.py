@@ -29,6 +29,8 @@ def main():
     parser = argparse.ArgumentParser(description="Prepare training dataset")
     parser.add_argument("--version", type=int, required=True, help="Dataset version number")
     parser.add_argument("--min-confidence", type=float, default=0.7)
+    parser.add_argument("--include-coach", action="store_true",
+                        help="Include coach feedback in training examples (Phase 2)")
     parser.add_argument("--video-dir", default="./videos")
     parser.add_argument("--output-dir", default="./data/training")
     parser.add_argument("--db", default="data/fls_training.duckdb")
@@ -44,6 +46,7 @@ def main():
         output_dir=args.output_dir,
         version=args.version,
         min_confidence=args.min_confidence,
+        include_coach_feedback=args.include_coach,
     )
 
     if "error" in manifest:
