@@ -1,0 +1,160 @@
+{
+  "round": 2,
+  "agreement_score": 0.92,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_arbitration": [
+    {
+      "field": "estimated_penalties",
+      "teacher_a_value": 8.0,
+      "teacher_b_value": 2.0,
+      "final_ruling": 6.0,
+      "reasoning": "Teacher A's frame 23 evidence of 'LONG SUTURE TAILS visible \u2014 one extending to right (~3cm), one to lower left' provides specific measurement supporting penalty assessment. FLS Manual Section 4.2 penalizes poor cutting technique and cosmetic appearance. However, Teacher B's frame 6567 observation of task completion suggests tails were eventually managed. Ruling: 4-point penalty for prolonged cutting inefficiency plus 2-point penalty for initial long tails.",
+      "confidence": 0.68,
+      "frames_cited": [
+        23,
+        6567
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "teacher_a_value": 3.0,
+      "teacher_b_value": 2.0,
+      "final_ruling": 2.0,
+      "reasoning": "Both teachers confirmed accurate placement through target marks. Teacher A's 1.5mm deviation assessment vs Teacher B's 1.0mm assessment both fall within acceptable FLS tolerance. Given both teachers noted 'accurate placement' and 'good approximation,' the lower penalty assessment is more consistent with successful technical execution.",
+      "confidence": 0.72,
+      "frames_cited": [
+        5,
+        1200
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 216.5,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "duration_seconds": 5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 5,
+        "end_seconds": 15,
+        "duration_seconds": 10
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 15,
+        "end_seconds": 64.5,
+        "duration_seconds": 49.5
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 64.5,
+        "end_seconds": 81.5,
+        "duration_seconds": 17
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 81.5,
+        "end_seconds": 110.5,
+        "duration_seconds": 29
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 110.5,
+        "end_seconds": 144,
+        "duration_seconds": 33.5
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 144,
+        "end_seconds": 216,
+        "duration_seconds": 72
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "left",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Surgeon's knot with double wrap confirmed by both teachers."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand switch to right confirmed."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand switch back to left confirmed."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.0,
+      "deviation_from_mark2_mm": 1.0,
+      "total_deviation_penalty": 2.0,
+      "confidence": "moderate"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "closed",
+      "assessment_note": "Both teachers confirm drain slit well closed with no gap and no avulsion. Good approximation around knot."
+    },
+    "estimated_penalties": 6.0,
+    "estimated_fls_score": 377.5,
+    "confidence_score": 0.7,
+    "technique_summary": "Prolonged execution at 216.5 seconds with accurate suture placement through both marks. Correct knot sequence with surgeon's knot first throw and alternating single throws with proper hand switching. Drain closure achieved without avulsion. Main inefficiencies in prolonged suture placement phase and extended cutting sequence with initial long suture tails requiring management.",
+    "improvement_suggestions": [
+      "Reduce time in suture placement phase - both teachers noted prolonged tail management",
+      "Improve cutting efficiency - both teachers identified this as the major time sink",
+      "Practice precise tail trimming to avoid cosmetic penalties and minimize initial tail length",
+      "Consider session management - both teachers noted fatigue effects"
+    ],
+    "strengths": [
+      "Accurate suture placement through both target marks",
+      "Correct knot sequence with proper surgeon's knot and hand switching",
+      "Successful drain closure without avulsion",
+      "Task completed within time limit",
+      "Good tissue handling throughout"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolved penalty assessment disputes through frame evidence analysis. Teacher A's specific measurement of long suture tails (frame 23) supported penalty assessment, while Teacher B's completion observation (frame 6567) confirmed eventual task success. Suture placement penalty reduced to reflect both teachers' confirmation of accurate mark targeting. Final score: 600 - 216.5 - 6.0 = 377.5 points.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T18:05:00Z"
+  },
+  "_meta": {
+    "video_id": "V20_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 33.04,
+    "input_tokens": 6034,
+    "output_tokens": 1983,
+    "cost_usd_approx": 0.0478,
+    "timestamp": "2026-04-07T13:51:46.032027+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 22.93,
+    "round2_input_tokens": 3510,
+    "round2_output_tokens": 1643,
+    "total_cost_usd_approx": 0.083
+  }
+}

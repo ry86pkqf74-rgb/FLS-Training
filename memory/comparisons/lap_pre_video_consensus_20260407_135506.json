@@ -1,0 +1,154 @@
+{
+  "round": 2,
+  "agreement_score": 0.71,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "completion_time_seconds",
+      "final_value": 195.0,
+      "ruling": "UPHELD - 6-second difference is within acceptable threshold. Both teachers observed task completion around the same timepoint. Averaged value of 195.0 seconds is appropriate.",
+      "confidence": 0.75
+    },
+    {
+      "field": "drain_assessment.gap_visible",
+      "final_value": true,
+      "ruling": "UPHELD - Teacher A's explicit observation of 'VISIBLE GAP \u2014 the edges are not fully approximated' in frame 21 provides specific evidence. FLS rubric penalizes visible gaps, and conservative assessment is required when gap visibility is disputed. Teacher B's assessment lacks specific frame evidence.",
+      "confidence": 0.65
+    },
+    {
+      "field": "knot_assessments[2].hand_switched",
+      "final_value": true,
+      "ruling": "NO DISPUTE - Both teachers agreed this field was true. This was incorrectly flagged as needs_rebuttal in Round 1.",
+      "confidence": 0.85
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 195.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "duration_seconds": 6
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 6,
+        "end_seconds": 21,
+        "duration_seconds": 15
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 21,
+        "end_seconds": 70,
+        "duration_seconds": 49
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 70,
+        "end_seconds": 95,
+        "duration_seconds": 25
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 95,
+        "end_seconds": 123,
+        "duration_seconds": 28
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 123,
+        "end_seconds": 165,
+        "duration_seconds": 42
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 165,
+        "end_seconds": 195,
+        "duration_seconds": 30
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Both teachers confirm surgeon's knot (double wrap) with right instrument leading. Secured appropriately despite extended time."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand switch confirmed by both teachers. Left instrument takes lead role."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": false,
+        "notes": "Final single throw with hand switch back to right. Teacher A notes insecurity due to visible gap in final result."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.75,
+      "deviation_from_mark2_mm": 2.0,
+      "total_deviation_penalty": 3.75,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": true,
+      "drain_avulsed": false,
+      "slit_closure_quality": "partial"
+    },
+    "estimated_penalties": 8.75,
+    "estimated_fls_score": 396.25,
+    "confidence_score": 0.58,
+    "technique_summary": "Pre-training baseline performance showing systematic completion of all required steps within time limit. Extended phases in needle loading, suture placement, and knot tying indicate developing technical skills. Final result shows incomplete slit closure with visible gap, suggesting insufficient knot tension or suboptimal placement. Drain handling was appropriate with no avulsion.",
+    "improvement_suggestions": [
+      "Reduce needle loading time through practice of optimal needle grasping technique",
+      "Improve suture placement efficiency with consistent perpendicular needle driving angle",
+      "Focus on achieving adequate knot tension to ensure complete slit closure",
+      "Practice smoother hand exchanges between throws to reduce phase durations",
+      "Develop more decisive instrument exchanges during cutting phase"
+    ],
+    "strengths": [
+      "Completed full task sequence within time limit",
+      "Proper surgeon's knot technique on first throw",
+      "Appropriate hand switching between throws",
+      "Gentle tissue handling with no drain avulsion",
+      "Systematic approach through all required phases"
+    ]
+  },
+  "critique_reasoning": "Final arbitration complete. All disputed fields resolved: completion time averaged within acceptable range, drain gap visibility upheld based on Teacher A's specific frame evidence per FLS conservative scoring standards, and knot hand switching agreement confirmed (was incorrectly flagged). Final FLS score of 396.25 reflects 195s completion time minus 8.75 penalty points for visible gap and suture placement deviations.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "lap_pre_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 33.34,
+    "input_tokens": 6993,
+    "output_tokens": 1883,
+    "cost_usd_approx": 0.0492,
+    "timestamp": "2026-04-07T13:54:49.651143+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 16.58,
+    "round2_input_tokens": 3420,
+    "round2_output_tokens": 1537,
+    "total_cost_usd_approx": 0.0825
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "round": 2,
+  "agreement_score": 0.88,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "drain_assessment.gap_visible",
+      "teacher_a_value": true,
+      "teacher_b_value": false,
+      "resolution": false,
+      "reasoning": "Final arbitration: Upon detailed review of frame 158 evidence, Teacher B's assessment of 'complete closure' is more defensible. Teacher A's 'possible small gap' observation at confidence 0.45 with 'knot pulling drain to one side' suggests asymmetric tension rather than true gap visibility. FLS Manual Section 4.2 requires 'visible gap' - not asymmetric positioning. Teacher B's oblique angle limitation acknowledged but their 'no obvious residual gap' assessment meets FLS standard for penalty avoidance. Conservative ruling reversed based on evidence quality.",
+      "confidence": 0.65,
+      "frames_cited": [
+        158,
+        4665
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 149.75,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 6.25,
+        "duration_seconds": 6.25
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 6.25,
+        "end_seconds": 8.25,
+        "duration_seconds": 2.0
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 8.25,
+        "end_seconds": 33.75,
+        "duration_seconds": 25.5
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 33.75,
+        "end_seconds": 53.25,
+        "duration_seconds": 19.5
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 53.25,
+        "end_seconds": 73.75,
+        "duration_seconds": 20.5
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 73.75,
+        "end_seconds": 97.0,
+        "duration_seconds": 23.25
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 97.0,
+        "end_seconds": 150.75,
+        "duration_seconds": 53.75
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Surgeon's knot with double wrap. Both teachers agree on security and configuration."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand switch to left instrument leading. Both teachers confirm alternation."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final single throw switching back to right lead. Knot remains secure through completion."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.75,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 3.25,
+      "confidence": "low",
+      "placement_notes": "Both teachers cite low confidence on mark visibility due to recording angle. Averaged deviations."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete_closure",
+      "assessment_note": "Final ruling: No visible gap penalty applied. Teacher A's 'possible small gap' at low confidence (0.45) represents asymmetric knot positioning rather than true gap visibility. Teacher B's 'complete closure' assessment meets FLS standard despite oblique viewing angle."
+    },
+    "estimated_penalties": 3.25,
+    "estimated_fls_score": 447.0,
+    "confidence_score": 0.62,
+    "technique_summary": "Task completed in 149.75s with proper 3-throw sequence and hand alternation. Suture placement close to marks with moderate deviation penalties (3.25 points). Extended cutting phase (53.75s) represents primary inefficiency. Drain assessment shows complete closure with no gap penalty after final arbitration.",
+    "improvement_suggestions": [
+      "Cutting phase efficiency: 53.75s consensus time indicates significant room for improvement in tail presentation and scissor work",
+      "Suture placement precision: work on mark identification and needle positioning to reduce deviation penalties",
+      "Knot centering: ensure final tightening centers knot over drain slit for optimal closure appearance"
+    ],
+    "strengths": [
+      "Proper knot sequence with surgeon's first throw and alternating single throws",
+      "Complete drain closure with no avulsion throughout procedure",
+      "Consistent hand switching between throws as required by FLS protocol",
+      "Secure knot construction with all throws properly seated",
+      "Effective slit closure without visible gap penalty"
+    ]
+  },
+  "critique_reasoning": "Round 2 Final Arbitration: Reversed drain gap assessment from Round 1 conservative ruling. Teacher A's 'possible small gap' at confidence 0.45 insufficient to meet FLS Manual Section 4.2 'visible gap' standard. Teacher B's 'complete closure' assessment more defensible despite viewing angle limitations. This reduces penalties from 7.25 to 3.25 points, improving FLS score from 443 to 447. All other Round 1 consensus values maintained. Final agreement score remains 0.88 with improved confidence (0.62) after gap dispute resolution.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V25_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 35.99,
+    "input_tokens": 7577,
+    "output_tokens": 2249,
+    "cost_usd_approx": 0.0565,
+    "timestamp": "2026-04-07T13:40:05.122965+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 19.33,
+    "round2_input_tokens": 3759,
+    "round2_output_tokens": 1655,
+    "total_cost_usd_approx": 0.0926
+  }
+}

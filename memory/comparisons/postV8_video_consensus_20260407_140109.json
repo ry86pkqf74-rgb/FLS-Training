@@ -1,0 +1,153 @@
+{
+  "round": 2,
+  "agreement_score": 0.73,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_arbitration": [
+    {
+      "field": "completion_time_seconds",
+      "final_ruling": 204.0,
+      "reasoning": "Both teachers provide reasonable completion time estimates within 8-second variance. Teacher A's 208s is based on final frame analysis, Teacher B's 200s represents efficient completion. The 204s average reflects measurement uncertainty inherent in video analysis. No additional evidence suggests either teacher's timing is definitively incorrect.",
+      "confidence": 0.7
+    },
+    {
+      "field": "drain_assessment.gap_visible",
+      "final_ruling": true,
+      "reasoning": "Teacher A provides explicit frame-specific evidence: 'drain slit shows a VISIBLE GAP \u2014 the upper portion is not approximated' in frame 21. Teacher B reports 'good_apposition' without specific frame citation. FLS Manual Section 4.2 requires complete slit closure for full credit. Teacher A's detailed observation with specific anatomical description (upper portion not approximated) provides stronger evidence than Teacher B's general assessment.",
+      "confidence": 0.8
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "final_ruling": 4.25,
+      "reasoning": "Teacher A: 2.5mm + 2.5mm = 5.0 penalty. Teacher B: 1.5mm + 2.0mm = 3.5 penalty. Both acknowledge low confidence in placement measurement due to video resolution/angle limitations. The 1.5-point penalty difference falls within expected measurement variance for video-based assessment. Averaging maintains conservative scoring approach while acknowledging measurement uncertainty.",
+      "confidence": 0.6
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 204.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "duration_seconds": 5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 5,
+        "end_seconds": 18,
+        "duration_seconds": 13
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 18,
+        "end_seconds": 80,
+        "duration_seconds": 62
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 80,
+        "end_seconds": 112,
+        "duration_seconds": 32
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 112,
+        "end_seconds": 140,
+        "duration_seconds": 28
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 140,
+        "end_seconds": 170,
+        "duration_seconds": 30
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 170,
+        "end_seconds": 204,
+        "duration_seconds": 34
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "left",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw with double wrap confirmed by both teachers. Teacher B identifies left hand leading."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw with hand switch confirmed by both teachers. Right hand leading per Teacher B."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw with hand switch. Both teachers agree on security despite Teacher A noting final gap issue."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 2.0,
+      "deviation_from_mark2_mm": 2.25,
+      "total_deviation_penalty": 4.25,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": true,
+      "drain_avulsed": false,
+      "slit_closure_quality": "partial"
+    },
+    "estimated_penalties": 14.25,
+    "estimated_fls_score": 381.75,
+    "confidence_score": 0.67,
+    "technique_summary": "Extended performance at 204 seconds with visible drain gap indicating insufficient knot tension. All three throws completed with proper hand alternation and surgeon's knot first throw. Major time losses in suture placement (62s) and throw phases. Needle loading remains efficient at 13s. Gap in drain closure results in additional 10-point penalty beyond placement deviation.",
+    "improvement_suggestions": [
+      "Address knot tension technique to achieve complete drain closure",
+      "Reduce suture placement time from current 62-second duration",
+      "Consider fatigue management if this represents session-end performance",
+      "Focus on throw efficiency to reduce overall completion time"
+    ],
+    "strengths": [
+      "Proper three-throw sequence with surgeon's knot initiation",
+      "Consistent hand alternation between throws",
+      "No drain avulsion despite extended manipulation",
+      "Task completion within time limit",
+      "Maintained needle loading efficiency"
+    ]
+  },
+  "critique_reasoning": "Final arbitration completed on three disputed fields. Completion time maintained at averaged 204s reflecting measurement uncertainty. Drain gap assessment upheld as 'visible' based on Teacher A's specific anatomical observation with frame evidence. Suture placement penalty averaged at 4.25 points acknowledging measurement limitations in video analysis. Overall confidence increased to 0.67 following resolution of major disagreements.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "postV8_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 32.4,
+    "input_tokens": 6333,
+    "output_tokens": 1884,
+    "cost_usd_approx": 0.0473,
+    "timestamp": "2026-04-07T14:00:46.232976+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 23.23,
+    "round2_input_tokens": 3414,
+    "round2_output_tokens": 1623,
+    "total_cost_usd_approx": 0.0819
+  }
+}

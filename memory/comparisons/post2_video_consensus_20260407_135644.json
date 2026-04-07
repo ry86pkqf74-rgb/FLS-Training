@@ -1,0 +1,154 @@
+{
+  "round": 2,
+  "agreement_score": 0.82,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "completion_time_seconds",
+      "final_value": 155.8,
+      "ruling": "UPHELD - Round 1 average",
+      "reasoning": "4.4 second difference falls within acceptable variance for manual timing. Both teachers identified task completion in similar timeframe. Averaged value of 155.8s is appropriate.",
+      "confidence": 0.75
+    },
+    {
+      "field": "knot_assessments[0].hand_used",
+      "final_value": "left",
+      "ruling": "UPHELD - Teacher A evidence",
+      "reasoning": "Teacher A provided specific frame 10 evidence of 'looping around the left instrument for surgeon's knot.' This frame-specific observation is more precise than Teacher B's general assessment. FLS scoring requires accurate hand dominance tracking.",
+      "confidence": 0.7
+    },
+    {
+      "field": "phase_timings.third_throw.duration_seconds",
+      "final_value": 38.1,
+      "ruling": "UPHELD - Averaged with annotation",
+      "reasoning": "16.2 second difference likely reflects different phase boundary interpretations. Teacher B's observation of 'regrasping motions and larger loops' explains extended duration. Average captures reasonable estimate while acknowledging technique inefficiency.",
+      "confidence": 0.6
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 155.8,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 4.8,
+        "duration_seconds": 4.8
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 4.8,
+        "end_seconds": 16.0,
+        "duration_seconds": 11.2
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 16.0,
+        "end_seconds": 54.9,
+        "duration_seconds": 38.9
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 54.9,
+        "end_seconds": 85.6,
+        "duration_seconds": 30.7
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 85.6,
+        "end_seconds": 106.4,
+        "duration_seconds": 20.8
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 106.4,
+        "end_seconds": 144.5,
+        "duration_seconds": 38.1
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 144.5,
+        "end_seconds": 155.8,
+        "duration_seconds": 11.3
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "left",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw confirmed as surgeon's knot with left instrument lead based on frame 10 evidence. Secure construction verified."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw single with left hand lead. Hand switch confirmed between throws."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final throw single with right hand lead. Extended duration due to regrasping motions but ultimately secure."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.25,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 2.75,
+      "confidence": "medium-low"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    },
+    "estimated_penalties": 2.75,
+    "estimated_fls_score": 441.45,
+    "confidence_score": 0.72,
+    "technique_summary": "Training progression video showing continued improvement. Completion time of 155.8 seconds with secure knot construction. All three throws completed with proper hand switching pattern. Complete slit closure achieved. Third throw showed some inefficiency with regrasping motions affecting timing.",
+    "improvement_suggestions": [
+      "Optimize third throw technique to reduce regrasping and improve loop management",
+      "Continue refining suture placement precision to minimize deviation penalties",
+      "Maintain efficient phases while focusing on throw execution consistency"
+    ],
+    "strengths": [
+      "Consistent improvement in completion times across training sessions",
+      "Secure knot construction with proper surgeon's knot technique",
+      "Complete drain slit closure without complications",
+      "Effective hand switching pattern throughout throws"
+    ]
+  },
+  "critique_reasoning": "Final arbitration upheld all Round 1 resolutions. Completion time averaging appropriate for 4.4s variance. Hand dominance ruling favored Teacher A's frame-specific evidence over general assessment. Third throw timing averaged while acknowledging technique inefficiency noted by Teacher B. Final consensus maintains 72% confidence with all major technique elements confirmed.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "post2_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 26.14,
+    "input_tokens": 6009,
+    "output_tokens": 1678,
+    "cost_usd_approx": 0.0432,
+    "timestamp": "2026-04-07T13:56:22.638191+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 21.81,
+    "round2_input_tokens": 3204,
+    "round2_output_tokens": 1556,
+    "total_cost_usd_approx": 0.0762
+  }
+}

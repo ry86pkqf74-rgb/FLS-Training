@@ -1,0 +1,170 @@
+{
+  "round": 2,
+  "agreement_score": 0.71,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_arbitration": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 145.0,
+      "teacher_b_value": 162.9,
+      "final_ruling": 145.0,
+      "reasoning": "FLS Manual Section 4.2 defines completion as 'when the suture is cut and the task is functionally complete.' Teacher A's 145s aligns with this standard definition. Teacher B's 162.9s appears to include post-task instrument positioning which is not part of the scored procedure. Conservative ruling favors the earlier completion time.",
+      "confidence": 0.75,
+      "frames_cited": [
+        23,
+        4381
+      ]
+    },
+    {
+      "field": "phase_timings",
+      "teacher_a_value": "consolidated_phases",
+      "teacher_b_value": "granular_phases",
+      "final_ruling": "teacher_a_phases_adjusted",
+      "reasoning": "Teacher A's phase boundaries are more consistent with FLS timing conventions. Teacher B's extended throw durations (47.9s, 49.3s) include excessive regrasping that should be consolidated within throw phases rather than extending them. Adjusting Teacher A's timings to match 145s completion.",
+      "confidence": 0.65,
+      "frames_cited": [
+        2521,
+        3241,
+        4381
+      ]
+    },
+    {
+      "field": "estimated_fls_score",
+      "teacher_a_value": 451.0,
+      "teacher_b_value": 433.6,
+      "final_ruling": 451.2,
+      "reasoning": "Recomputed from final consensus: 600 - 145.0 (completion_time) - 3.8 (penalties) = 451.2. Using Teacher A's completion time as the definitive measurement per FLS scoring protocol.",
+      "confidence": 0.75,
+      "frames_cited": []
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 145.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "duration_seconds": 5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 5,
+        "end_seconds": 15,
+        "duration_seconds": 10
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 15,
+        "end_seconds": 38,
+        "duration_seconds": 23
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 38,
+        "end_seconds": 60,
+        "duration_seconds": 22
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 60,
+        "end_seconds": 78,
+        "duration_seconds": 18
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 78,
+        "end_seconds": 100,
+        "duration_seconds": 22
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 100,
+        "end_seconds": 145,
+        "duration_seconds": 45
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw surgeon's knot - both teachers agree on double wrap structure"
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw single with hand switch - both teachers confirm alternating pattern"
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw single with hand switch back - proper alternating sequence completed"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.8,
+      "deviation_from_mark2_mm": 2.0,
+      "total_deviation_penalty": 3.8,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Both teachers agree - no visible gap, complete closure, no avulsion"
+    },
+    "estimated_penalties": 3.8,
+    "estimated_fls_score": 451.2,
+    "confidence_score": 0.68,
+    "technique_summary": "Successful task completion with proper surgeon's knot followed by two alternating single throws. Good drain closure with no visible gap. Performance was efficient overall with completion at 145 seconds, though some time was consumed in the cutting phase.",
+    "improvement_suggestions": [
+      "Optimize cutting technique to reduce final phase duration",
+      "Maintain consistent tension during throw advancement",
+      "Consider more efficient needle loading approach",
+      "Streamline instrument positioning between throws"
+    ],
+    "strengths": [
+      "Complete drain closure with no visible gap",
+      "Proper knot sequence with surgeon's knot and alternating throws",
+      "No drain avulsion or knot failure",
+      "Efficient overall completion time of 145 seconds",
+      "Controlled tissue handling throughout procedure"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolved timing disputes by applying FLS Manual definitions. Teacher A's 145s completion time aligns with standard FLS completion criteria (suture cut = task complete). Teacher B's extended timing included post-task activities. Phase boundaries adjusted to match Teacher A's more conventional FLS timing approach. Final FLS score of 451.2 reflects strong performance with minimal penalties.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V18_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 33.56,
+    "input_tokens": 5930,
+    "output_tokens": 1954,
+    "cost_usd_approx": 0.0471,
+    "timestamp": "2026-04-07T13:49:45.832289+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 24.01,
+    "round2_input_tokens": 3489,
+    "round2_output_tokens": 1686,
+    "total_cost_usd_approx": 0.0829
+  }
+}

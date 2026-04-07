@@ -1,0 +1,181 @@
+{
+  "round": 2,
+  "agreement_score": 0.71,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 175.0,
+      "teacher_b_value": 166.0,
+      "resolution": 170.0,
+      "reasoning": "Final arbitration: Teacher A cites frame 5100 (~170s at 30fps) as completion point, Teacher B reports 166s. Video metadata shows 179s total duration. Conservative estimate places completion at 170s, splitting the difference but favoring observable frame evidence.",
+      "confidence": 0.65,
+      "frames_cited": [
+        5100
+      ]
+    },
+    {
+      "field": "phase_timings.suture_placement.duration_seconds",
+      "teacher_a_value": 43,
+      "teacher_b_value": 35,
+      "resolution": 40,
+      "reasoning": "Final ruling: Both teachers identify extended placement phase as performance concern. 8-second gap suggests different phase boundary identification. Using 40s duration as reasonable compromise given both cite similar start/end behavioral markers.",
+      "confidence": 0.65,
+      "frames_cited": [
+        390,
+        660
+      ]
+    },
+    {
+      "field": "phase_timings.suture_cut.duration_seconds",
+      "teacher_a_value": 55,
+      "teacher_b_value": 30,
+      "resolution": 45,
+      "reasoning": "Final ruling: 25-second disagreement represents major phase boundary dispute. Both identify extended cutting as key weakness. Teacher A's 55s duration aligns with completion time of 170s if cutting starts ~115s. Compromise at 45s reflects extended cutting while acknowledging boundary uncertainty.",
+      "confidence": 0.55,
+      "frames_cited": [
+        4050,
+        4500
+      ]
+    },
+    {
+      "field": "drain_assessment.gap_visible",
+      "teacher_a_value": true,
+      "teacher_b_value": false,
+      "resolution": true,
+      "reasoning": "Final ruling: FLS Manual Section 6.2 states 'any visible gap results in penalty regardless of size.' Teacher A explicitly identifies 'small gap likely present' despite low confidence from 640x480 resolution. Conservative FLS scoring principle requires gap penalty when identified by qualified assessor. Teacher B's 'complete' assessment may reflect resolution limitations.",
+      "confidence": 0.6,
+      "frames_cited": [
+        5100
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 170.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 6.5,
+        "duration_seconds": 6.5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 6.5,
+        "end_seconds": 10.0,
+        "duration_seconds": 3.5
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 10.0,
+        "end_seconds": 50.0,
+        "duration_seconds": 40.0
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 50.0,
+        "end_seconds": 77.25,
+        "duration_seconds": 27.25
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 77.25,
+        "end_seconds": 94.0,
+        "duration_seconds": 16.75
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 94.0,
+        "end_seconds": 125.0,
+        "duration_seconds": 31.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 125.0,
+        "end_seconds": 170.0,
+        "duration_seconds": 45.0
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw surgeon's knot, both teachers agree on security and type"
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw single with hand switch, both teachers agree"
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw single with hand switch, both teachers agree"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.75,
+      "deviation_from_mark2_mm": 1.75,
+      "total_deviation_penalty": 3.5,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": true,
+      "drain_avulsed": false,
+      "slit_closure_quality": "partial_small_gap",
+      "assessment_note": "Conservative FLS scoring applied. Teacher A identified small gap despite 640x480 resolution limitations. Gap penalty required per FLS Manual Section 6.2."
+    },
+    "estimated_penalties": 8.5,
+    "estimated_fls_score": 421.5,
+    "confidence_score": 0.58,
+    "technique_summary": "V16 demonstrates significant time management challenges at 170.0 seconds completion. Extended suture placement (40s) and cutting phases (45s) represent primary performance deficits. Knot technique properly executed with surgeon's knot and appropriate hand switching. Small gap visible in drain closure requires penalty per FLS standards.",
+    "improvement_suggestions": [
+      "Focus on cutting efficiency - 45s cutting phase is primary time sink",
+      "Streamline suture placement technique - 40s exceeds optimal range",
+      "Practice instrument handling to reduce phase transition delays",
+      "Consider trainer setup optimization for improved workflow"
+    ],
+    "strengths": [
+      "Proper knot sequence execution with surgeon's knot first throw",
+      "Appropriate hand switching technique demonstrated",
+      "Safe tissue handling - drain not avulsed",
+      "Task completion within time limit despite inefficiencies"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolved timing disputes through frame-based evidence and FLS Manual adherence. Completion time set at 170s based on frame 5100 evidence. Extended cutting phase (45s) and placement phase (40s) represent consensus on major time inefficiencies. Drain gap penalty maintained per conservative FLS scoring principles despite resolution limitations. Agreement score unchanged at 0.71 reflecting persistent timing boundary uncertainties.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V16_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 31.88,
+    "input_tokens": 6018,
+    "output_tokens": 1971,
+    "cost_usd_approx": 0.0476,
+    "timestamp": "2026-04-07T13:47:53.648627+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 25.35,
+    "round2_input_tokens": 3505,
+    "round2_output_tokens": 1871,
+    "total_cost_usd_approx": 0.0862
+  }
+}

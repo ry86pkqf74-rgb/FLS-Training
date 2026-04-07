@@ -1,0 +1,154 @@
+{
+  "round": 2,
+  "agreement_score": 0.78,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "completion_time_seconds",
+      "final_value": 147.1,
+      "ruling": "Maintain Round 1 average pending video re-analysis. 15.8s gap suggests different timing reference points. Teacher A likely measured to final instrument withdrawal, Teacher B to task completion. Without frame-by-frame verification, averaging remains most defensible.",
+      "confidence": 0.45
+    },
+    {
+      "field": "phase_timings.third_throw.duration_seconds",
+      "final_value": 42.0,
+      "ruling": "Teacher B's 61.8s duration more credible given detailed description of 'prolonged loop management' and 'repeated regrasping.' Teacher A's 22s likely missed extended struggle phase. Adjusting toward Teacher B while maintaining some averaging.",
+      "confidence": 0.55
+    },
+    {
+      "field": "knot_assessments[2].hand_switched",
+      "final_value": true,
+      "ruling": "No actual disagreement - both teachers agreed true. Flagged in error during Round 1. Maintaining consensus value.",
+      "confidence": 0.85
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 147.1,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "duration_seconds": 6
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 6,
+        "end_seconds": 10,
+        "duration_seconds": 4
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 10,
+        "end_seconds": 32,
+        "duration_seconds": 22
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 32,
+        "end_seconds": 55,
+        "duration_seconds": 23
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 55,
+        "end_seconds": 78,
+        "duration_seconds": 23
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 78,
+        "end_seconds": 120,
+        "duration_seconds": 42
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 120,
+        "end_seconds": 147,
+        "duration_seconds": 27
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw with double wrap (surgeon's knot). Both teachers agree on surgeon's knot structure."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw single alternating with hand switch. Both teachers agree on hand switch and single throw."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw single alternating with hand switch. Extended duration due to loop management difficulties."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 2.0,
+      "total_deviation_penalty": 3.5,
+      "confidence": "very_low",
+      "placement_notes": "Both teachers cite low confidence due to camera distance and debris. Marks barely visible."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Both teachers agree: no gap visible, drain not avulsed, closure appears complete despite camera limitations."
+    },
+    "estimated_penalties": 3.5,
+    "estimated_fls_score": 449.4,
+    "confidence_score": 0.52,
+    "technique_summary": "Task completed with timing uncertainty between assessors. Both agree on knot structure, hand switching pattern, and drain closure quality. Third throw showed extended difficulty with loop management. Camera distance severely limits precision assessment.",
+    "improvement_suggestions": [
+      "Improve camera positioning for better visual assessment",
+      "Focus on third throw efficiency - extended duration indicates technical difficulty",
+      "Practice loop management techniques to reduce throw duration",
+      "Clean debris between attempts to improve mark visibility"
+    ],
+    "strengths": [
+      "Completed all required throws with proper hand switching",
+      "Achieved drain closure without avulsion",
+      "Maintained knot security throughout sequence",
+      "Successful intracorporeal cutting completion"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolves timing disputes through conservative averaging and detailed phase analysis. Teacher B's description of extended third throw struggle appears more comprehensive than Teacher A's assessment. Knot assessment flagging was erroneous - both teachers agreed. Overall confidence improved slightly (0.48\u21920.52) through dispute resolution while maintaining uncertainty where evidence is limited.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T18:05:00Z"
+  },
+  "_meta": {
+    "video_id": "V23_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 32.86,
+    "input_tokens": 7730,
+    "output_tokens": 1962,
+    "cost_usd_approx": 0.0526,
+    "timestamp": "2026-04-07T13:38:05.531105+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 21.06,
+    "round2_input_tokens": 3485,
+    "round2_output_tokens": 1517,
+    "total_cost_usd_approx": 0.0858
+  }
+}

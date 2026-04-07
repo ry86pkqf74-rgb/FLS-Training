@@ -1,0 +1,165 @@
+{
+  "round": 2,
+  "agreement_score": 0.73,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "phase_timings.suture_placement.duration_seconds",
+      "final_value": 35.0,
+      "ruling": "Teacher A's 50s estimate includes excessive idle time. Teacher B's 20s estimate appears too compressed given complexity observed. Conservative 35s split acknowledges placement challenges while avoiding extreme estimates.",
+      "confidence": 0.5,
+      "frames_cited": [
+        5,
+        748
+      ]
+    },
+    {
+      "field": "phase_timings.suture_cut.duration_seconds",
+      "final_value": 30.9,
+      "ruling": "Teacher A's frame evidence at 170-190s showing continued cutting activity is compelling. Teacher B's 11.7s estimate likely missed extended cutting difficulties. 30.9s reflects documented cutting challenges in V11 performance.",
+      "confidence": 0.6,
+      "frames_cited": [
+        17,
+        19
+      ]
+    },
+    {
+      "field": "drain_assessment.gap_visible",
+      "final_value": true,
+      "ruling": "Teacher A explicitly acknowledges image quality limitations but maintains visual assessment of gap. FLS conservative scoring principle requires gap_visible=true when uncertainty exists. Teacher B's 'near_complete' assessment insufficient to override visual evidence.",
+      "confidence": 0.55,
+      "frames_cited": [
+        23
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 196.7,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 4.5,
+        "duration_seconds": 4.5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 4.5,
+        "end_seconds": 9.5,
+        "duration_seconds": 5.0
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 9.5,
+        "end_seconds": 44.5,
+        "duration_seconds": 35.0
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 44.5,
+        "end_seconds": 71.5,
+        "duration_seconds": 27.0
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 71.5,
+        "end_seconds": 107.5,
+        "duration_seconds": 36.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 107.5,
+        "end_seconds": 165.8,
+        "duration_seconds": 58.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 165.8,
+        "end_seconds": 196.7,
+        "duration_seconds": 30.9
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Double wrap visible consistent with surgeon's knot. Both teachers agree on right-hand lead and security."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand switch. Both teachers agree on hand switching and security despite image quality limitations."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final single throw with return to right hand. Both teachers agree on completion and security."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.75,
+      "deviation_from_mark2_mm": 2.0,
+      "total_deviation_penalty": 3.75,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": true,
+      "drain_avulsed": false,
+      "slit_closure_quality": "partial",
+      "assessment_note": "Conservative assessment due to image quality limitations from monitor recording setup. Gap visible per FLS conservative scoring protocol."
+    },
+    "estimated_penalties": 8.75,
+    "estimated_fls_score": 391.0,
+    "confidence_score": 0.55,
+    "technique_summary": "V11 performance at 196.7s demonstrates persistent cutting efficiency challenges with 30.9s cutting phase representing primary bottleneck. Knot construction technique remains sound with proper surgeon's knot and hand switching. Monitor recording quality limits precision of placement and drain assessments.",
+    "improvement_suggestions": [
+      "Cutting efficiency remains critical - 30.9s cutting phase requires focused scissors technique practice",
+      "Suture placement timing at 35s shows room for optimization",
+      "Consider direct camera recording for improved assessment accuracy",
+      "Practice tail management during throw construction to prepare for efficient cutting"
+    ],
+    "strengths": [
+      "Consistent surgeon's knot execution",
+      "Proper hand switching sequence maintained",
+      "All three throws completed securely",
+      "No drain avulsion observed",
+      "Efficient needle loading technique"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolves three disputed fields through frame evidence analysis. Suture placement duration set at conservative 35s split. Cutting phase duration upheld at 30.9s based on Teacher A's documented frame evidence of extended cutting activity. Drain gap assessment maintained as visible per FLS conservative scoring principle when image quality creates uncertainty.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V11_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 32.24,
+    "input_tokens": 6688,
+    "output_tokens": 1956,
+    "cost_usd_approx": 0.0494,
+    "timestamp": "2026-04-07T13:43:22.224819+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 22.4,
+    "round2_input_tokens": 3480,
+    "round2_output_tokens": 1601,
+    "total_cost_usd_approx": 0.0839
+  }
+}

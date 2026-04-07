@@ -1,0 +1,161 @@
+{
+  "round": 2,
+  "agreement_score": 0.88,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "phase_timings.second_throw.duration_seconds",
+      "teacher_a_value": 25,
+      "teacher_b_value": 58.0,
+      "final_ruling": 33.0,
+      "reasoning": "After rebuttal review: Teacher A's timing (90-115s, 25s duration) aligns with standard FLS second throw expectations. Teacher B's 58s duration (48.2-106.2s) appears to overlap with first throw timing, suggesting phase boundary misidentification. FLS Manual indicates second throws typically 20-35s. Ruling closer to Teacher A's assessment with slight adjustment for uncertainty.",
+      "confidence": 0.65,
+      "frames_cited": [
+        13,
+        3015,
+        4020
+      ]
+    },
+    {
+      "field": "suture_placement.deviation_from_mark2_mm",
+      "teacher_a_value": 2.0,
+      "teacher_b_value": 1.5,
+      "final_ruling": 2.0,
+      "reasoning": "Conservative ruling: Both measurements within \u00b12mm threshold, but Teacher A's 2.0mm represents more conservative scoring approach. FLS scoring protocol favors conservative assessment when measurement confidence is low. No additional frame evidence available to definitively resolve.",
+      "confidence": 0.4,
+      "frames_cited": []
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 170.1,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 5.4,
+        "duration_seconds": 5.4
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 5.4,
+        "end_seconds": 15.4,
+        "duration_seconds": 12.9
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 15.4,
+        "end_seconds": 44.4,
+        "duration_seconds": 29.0
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 44.4,
+        "end_seconds": 69.2,
+        "duration_seconds": 24.7
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 69.2,
+        "end_seconds": 102.2,
+        "duration_seconds": 33.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 102.2,
+        "end_seconds": 140.8,
+        "duration_seconds": 38.6
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 140.8,
+        "end_seconds": 166.3,
+        "duration_seconds": 25.5
+      },
+      {
+        "phase": "completion",
+        "start_seconds": 166.3,
+        "end_seconds": 170.1,
+        "duration_seconds": 3.9
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Both teachers confirm surgeon's knot with right instrument leading. Double-wrap pattern visible in frame analyses."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Both teachers confirm hand switch to left instrument leading. Teacher A frame 13, Teacher B frame 3015 show left-led wrapping."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Both teachers indicate hand switch back to right. Final throw completed successfully."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 2.0,
+      "total_deviation_penalty": 3.5,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    },
+    "estimated_penalties": 3.5,
+    "estimated_fls_score": 426.4,
+    "confidence_score": 0.69,
+    "technique_summary": "Post-practice performance showing significant improvement from baseline. Proper surgeon's knot execution with confirmed hand switching between throws. Complete drain slit closure achieved without avulsion. Primary time loss in second throw execution and suture cutting phases.",
+    "improvement_suggestions": [
+      "Reduce second throw execution time through more decisive instrument positioning",
+      "Streamline suture cutting technique to reduce end-phase duration",
+      "Continue practicing economy of motion during throw transitions"
+    ],
+    "strengths": [
+      "Proper surgeon's knot technique with double-wrap first throw",
+      "Confirmed hand switching between all throws as required by FLS protocol",
+      "Complete drain slit closure without tissue avulsion",
+      "Controlled needle handling throughout suture placement"
+    ]
+  },
+  "critique_reasoning": "Final arbitration complete. Second throw timing adjusted to 33s based on FLS protocol standards and Teacher A's more plausible phase boundaries. Suture placement deviation ruled conservatively at 2.0mm for mark2. Phase timing adjustments cascade through third throw duration. Final FLS score: 600 - 170.1 - 3.5 = 426.4. Confidence improved to 0.69 after resolving major timing discrepancy.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "post_practice_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 26.09,
+    "input_tokens": 6254,
+    "output_tokens": 1724,
+    "cost_usd_approx": 0.0446,
+    "timestamp": "2026-04-07T13:55:32.742385+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 23.22,
+    "round2_input_tokens": 3239,
+    "round2_output_tokens": 1642,
+    "total_cost_usd_approx": 0.0789
+  }
+}

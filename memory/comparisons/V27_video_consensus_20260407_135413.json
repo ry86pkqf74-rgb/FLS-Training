@@ -1,0 +1,214 @@
+{
+  "round": 2,
+  "agreement_score": 0.87,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "phase_timings.suture_placement",
+      "teacher_a_value": 18,
+      "teacher_b_value": 37,
+      "resolution": 27.5,
+      "reasoning": "FINAL RULING: Teacher A's 18s placement phase (10-28s) vs Teacher B's 37s (8.5-45.5s). FLS Manual defines placement completion as 'needle fully through tissue and positioned for first throw.' Without clear frame evidence of exact transition point, maintaining averaged duration. Both teachers show uncertainty in monitor recording quality.",
+      "confidence": 0.45,
+      "frames_cited": [
+        30,
+        1320
+      ]
+    },
+    {
+      "field": "phase_timings.first_throw",
+      "teacher_a_value": 22,
+      "teacher_b_value": 11.5,
+      "resolution": 16.75,
+      "reasoning": "FINAL RULING: Disagreement stems from different placement end points. Teacher A: 28-50s (22s), Teacher B: 45.5-57s (11.5s). Maintaining averaged duration given upstream placement boundary uncertainty.",
+      "confidence": 0.5,
+      "frames_cited": [
+        28,
+        45.5,
+        50,
+        57
+      ]
+    },
+    {
+      "field": "phase_timings.second_throw",
+      "teacher_a_value": 18,
+      "teacher_b_value": 32,
+      "resolution": 25,
+      "reasoning": "FINAL RULING: Teacher A: 50-68s (18s), Teacher B: 57-89s (32s). 14-second disagreement on throw boundaries. Without definitive frame evidence for throw completion, maintaining averaged duration.",
+      "confidence": 0.45,
+      "frames_cited": [
+        50,
+        57,
+        68,
+        89
+      ]
+    },
+    {
+      "field": "phase_timings.third_throw",
+      "teacher_a_value": 27,
+      "teacher_b_value": 35,
+      "resolution": 31,
+      "reasoning": "FINAL RULING: Teacher A: 68-95s (27s), Teacher B: 89-124s (35s). Both identify this as longest throw. 8-second difference is within reasonable interpretation variance. Maintaining averaged duration.",
+      "confidence": 0.55,
+      "frames_cited": [
+        68,
+        89,
+        95,
+        124
+      ]
+    },
+    {
+      "field": "phase_timings.suture_cut",
+      "teacher_a_value": 53,
+      "teacher_b_value": 17,
+      "resolution": 35,
+      "reasoning": "FINAL RULING: Major 36-second disagreement. Teacher A includes extended tail management (95-148s, 53s), Teacher B focuses on cutting action only (124-141s, 17s). FLS scoring includes all post-knot activities until task completion. Maintaining averaged duration but noting high uncertainty.",
+      "confidence": 0.4,
+      "frames_cited": [
+        95,
+        124,
+        141,
+        148
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "teacher_a_value": 4.0,
+      "teacher_b_value": 2.0,
+      "resolution": 3.0,
+      "reasoning": "FINAL RULING: Teacher A estimates 2mm deviation per mark (4.0 penalty), Teacher B estimates 1mm per mark (2.0 penalty). Both cite low confidence due to monitor recording quality. FLS Manual: 1 point per mm deviation. Without clear measurement capability, maintaining conservative average of 3.0 points.",
+      "confidence": 0.35,
+      "frames_cited": []
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 141.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 8.25,
+        "duration_seconds": 8.25
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 8.25,
+        "end_seconds": 9.25,
+        "duration_seconds": 1.0
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 9.25,
+        "end_seconds": 36.75,
+        "duration_seconds": 27.5
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 36.75,
+        "end_seconds": 53.5,
+        "duration_seconds": 16.75
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 53.5,
+        "end_seconds": 78.5,
+        "duration_seconds": 25.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 78.5,
+        "end_seconds": 109.5,
+        "duration_seconds": 31.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 109.5,
+        "end_seconds": 141.0,
+        "duration_seconds": 31.5
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw appears to be surgeon's knot (double-wrap) led by right instrument. Both teachers agree on surgeon's knot classification."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw single with hand switch to left lead. Both teachers agree on hand switch and single throw."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw single with switch back to right lead. Both teachers agree on hand switch and single throw."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 3.0,
+      "confidence": "low",
+      "placement_notes": "Monitor recording limits precise measurement. Placement appears close to targets. Conservative averaging of teacher estimates."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "mostly_closed",
+      "assessment_note": "Both teachers agree no gap visible and no avulsion. Drain slit appears well approximated after knot completion."
+    },
+    "estimated_penalties": 3.0,
+    "estimated_fls_score": 456.0,
+    "confidence_score": 0.54,
+    "technique_summary": "V27 represents a regression from V26's series best (94s) back to the plateau range around 140s. Both teachers identify this as a fatigue-related performance decline with heavy debris indicating multiple prior attempts. The task was completed successfully with secure knot, no avulsion, and good drain closure, but with extended time in suture management phases.",
+    "improvement_suggestions": [
+      "Reduce excess tail handling between throws - identified by both teachers as major time sink",
+      "Improve cutting efficiency - significant time spent in final cutting phase",
+      "Consider session management - heavy debris suggests fatigue from multiple attempts",
+      "Third throw technique - both teachers note this was the longest/most difficult throw"
+    ],
+    "strengths": [
+      "Secure knot construction with proper surgeon's knot first throw",
+      "Successful hand switching between throws as required",
+      "No drain avulsion - 27th consecutive video without avulsion",
+      "Good final closure with no visible gap",
+      "Controlled needle passage and tissue handling"
+    ]
+  },
+  "critique_reasoning": "FINAL ARBITRATION: After Round 2 review, maintaining all Round 1 consensus decisions. Phase timing disagreements stem from legitimate interpretation differences in monitor recording quality, not clear errors by either teacher. Suture placement penalty averaging (3.0 points) reflects both teachers' acknowledged measurement uncertainty. No new evidence emerged to overturn Round 1 resolutions. Teachers agreed on all critical assessments: completion time, knot security, drain integrity, and overall technique evaluation. Final confidence remains moderate (0.54) due to inherent measurement limitations in monitor recording format.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V27_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 42.6,
+    "input_tokens": 7888,
+    "output_tokens": 2259,
+    "cost_usd_approx": 0.0575,
+    "timestamp": "2026-04-07T13:53:40.779413+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 32.4,
+    "round2_input_tokens": 3791,
+    "round2_output_tokens": 2325,
+    "total_cost_usd_approx": 0.1037
+  }
+}

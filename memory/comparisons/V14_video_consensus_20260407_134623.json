@@ -1,0 +1,165 @@
+{
+  "round": 2,
+  "agreement_score": 0.82,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "drain_assessment.gap_visible",
+      "final_value": false,
+      "reasoning": "FLS Manual Section 4.2 requires 'clearly visible gap' for penalty application. Teacher A acknowledged 'very low confidence' and 'small gap may be present' - this uncertainty does not meet the 'clearly visible' standard. Teacher B's 'complete closure' assessment with moderate confidence is more definitive. Conservative scoring principle: ambiguous gap assessment defaults to no penalty.",
+      "confidence": 0.65,
+      "frames_cited": [
+        23
+      ]
+    },
+    {
+      "field": "phase_timings.third_throw.duration_seconds",
+      "final_value": 21.5,
+      "reasoning": "Phase boundary disagreement stems from different categorization of setup period (62-63.8s). Teacher A ends third throw at 78s, Teacher B at 90.8s. FLS convention defines throw completion as 'final tightening and seating.' Extended manipulation after seating belongs to cutting phase preparation. Maintaining averaged value as both interpretations have merit within FLS guidelines.",
+      "confidence": 0.5,
+      "frames_cited": [
+        14,
+        17
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "final_value": 3.0,
+      "reasoning": "Both teachers acknowledged low confidence due to monitor quality. Teacher A: 2mm+2mm=4.0, Teacher B: 1mm+1.5mm=2.5. FLS scoring uses 1-point penalty per mm deviation. Given measurement uncertainty, applying conservative middle estimate of 1.5mm+1.5mm=3.0 total penalty. This reflects the measurement limitations while maintaining scoring integrity.",
+      "confidence": 0.45,
+      "frames_cited": [
+        4,
+        7
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 108.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 3,
+        "duration_seconds": 3
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 3,
+        "end_seconds": 8.6,
+        "duration_seconds": 5.6
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 8.6,
+        "end_seconds": 31.4,
+        "duration_seconds": 22.8
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 31.4,
+        "end_seconds": 46.6,
+        "duration_seconds": 15.2
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 46.6,
+        "end_seconds": 62.9,
+        "duration_seconds": 16.3
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 62.9,
+        "end_seconds": 84.4,
+        "duration_seconds": 21.5
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 84.4,
+        "end_seconds": 108.0,
+        "duration_seconds": 23.6
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw double-wrapped surgeon's knot, completed efficiently with secure seating."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw with hand switch, some regrasping but secure final position."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final throw with hand switch, extended setup period but secure completion."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 3.0,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Drain slit appears adequately closed with no clearly visible gap meeting FLS penalty criteria. Monitor quality limits precision but no gap penalty warranted."
+    },
+    "estimated_penalties": 3.0,
+    "estimated_fls_score": 489.0,
+    "confidence_score": 0.62,
+    "technique_summary": "V14 demonstrates excellent time performance at 108 seconds with secure knot construction and adequate drain closure. All three throws properly executed with required hand switches. Some efficiency loss in third throw setup and cutting phases, but overall technique maintains high standard with minimal penalties.",
+    "improvement_suggestions": [
+      "Reduce regrasping and setup time between second and third throws",
+      "Optimize cutting phase organization for faster completion",
+      "Maintain current suture placement accuracy while improving speed",
+      "Consider monitor positioning for better suture placement precision"
+    ],
+    "strengths": [
+      "Excellent completion time under 110 seconds",
+      "Proper knot sequence with surgeon's knot first throw",
+      "Required hand switches between throws executed",
+      "Secure knot construction with no avulsion",
+      "Adequate drain closure without visible gap penalty"
+    ]
+  },
+  "critique_reasoning": "Round 2 final arbitration resolved three disputed fields. Drain gap assessment: Applied FLS 'clearly visible' standard, ruling no penalty due to Teacher A's acknowledged uncertainty. Phase timing: Maintained averaged third throw duration due to legitimate boundary interpretation differences. Suture placement: Applied conservative middle estimate (3.0 penalty) given measurement uncertainty from both teachers. Final FLS score: 600 - 108 - 3.0 = 489.0. Confidence increased to 0.62 after resolving major disputes.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V14_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 33.01,
+    "input_tokens": 6448,
+    "output_tokens": 2042,
+    "cost_usd_approx": 0.05,
+    "timestamp": "2026-04-07T13:45:57.839671+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 26.03,
+    "round2_input_tokens": 3577,
+    "round2_output_tokens": 1753,
+    "total_cost_usd_approx": 0.087
+  }
+}

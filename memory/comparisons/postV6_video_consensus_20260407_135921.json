@@ -1,0 +1,152 @@
+{
+  "round": 2,
+  "agreement_score": 0.68,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "completion_time_seconds",
+      "final_value": 193.4,
+      "ruling_reasoning": "5.2 second difference falls within acceptable measurement variance for video analysis. Both teachers provide reasonable frame-based evidence. Averaging remains appropriate given the inherent uncertainty in precise timing from video frames.",
+      "confidence": 0.7
+    },
+    {
+      "field": "drain_assessment.gap_visible",
+      "final_value": true,
+      "ruling_reasoning": "Teacher A provides explicit frame 21 evidence describing 'VISIBLE GAP \u2014 the upper portion is not approximated' with specific anatomical detail. Teacher B's assessment lacks specific frame evidence for complete closure. FLS rubric requires complete slit approximation; any visible gap constitutes incomplete closure and penalty application.",
+      "confidence": 0.8
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "final_value": 3.5,
+      "ruling_reasoning": "Both teachers acknowledge low confidence in precise measurements from video frames. 2mm difference in total penalty (4.5mm vs 2.5mm) reflects measurement uncertainty rather than clear technical disagreement. Averaging maintains conservative approach while acknowledging measurement limitations.",
+      "confidence": 0.55
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 193.4,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 7.5,
+        "duration_seconds": 7.5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 7.5,
+        "end_seconds": 19,
+        "duration_seconds": 11.5
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 19,
+        "end_seconds": 69,
+        "duration_seconds": 50
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 69,
+        "end_seconds": 92,
+        "duration_seconds": 23
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 92,
+        "end_seconds": 131,
+        "duration_seconds": 39
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 131,
+        "end_seconds": 170,
+        "duration_seconds": 39
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 170,
+        "end_seconds": 193.4,
+        "duration_seconds": 23.4
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Both teachers agree on surgeon's knot with right hand lead and double wrap pattern."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Both teachers agree on single throw with hand switching to left hand lead."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Both teachers agree on single throw with hand switching back to right hand lead. Teacher A notes final gap suggests insufficient tension."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 2.0,
+      "total_deviation_penalty": 3.5,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": true,
+      "drain_avulsed": false,
+      "slit_closure_quality": "partial"
+    },
+    "estimated_penalties": 8.5,
+    "estimated_fls_score": 398.1,
+    "confidence_score": 0.68,
+    "technique_summary": "Performance shows regression from previous attempts with extended suture placement phase and visible gap in final drain closure. While knot sequence was completed correctly with proper hand alternation, inefficiencies in throw construction and insufficient final tension resulted in incomplete slit approximation. Needle loading remained efficient but overall time approached pre-training baseline levels.",
+    "improvement_suggestions": [
+      "Focus on suture placement speed - extended 50s duration indicates need for dedicated needle driving practice",
+      "Improve knot tension technique - visible gap suggests throws not adequately tightened",
+      "Reduce regrasping during throw construction to improve efficiency",
+      "Practice compact loop management during knot tying phases"
+    ],
+    "strengths": [
+      "Proper knot sequence with surgeon's knot first throw and correct hand alternation",
+      "Gentle tissue handling with no drain avulsion",
+      "Task completed within time limit",
+      "Efficient needle loading phase maintained"
+    ]
+  },
+  "critique_reasoning": "Round 2 final arbitration confirms Round 1 consensus with enhanced confidence in drain gap assessment based on Teacher A's specific frame evidence. All disputed fields resolved through evidence-based reasoning. Completion time averaging appropriate given measurement uncertainty. Drain gap ruling favors more detailed anatomical observation. Suture placement penalty averaging acknowledges measurement limitations while maintaining conservative scoring approach.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "postV6_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 31.17,
+    "input_tokens": 6628,
+    "output_tokens": 1884,
+    "cost_usd_approx": 0.0481,
+    "timestamp": "2026-04-07T13:59:04.427334+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 17.48,
+    "round2_input_tokens": 3415,
+    "round2_output_tokens": 1545,
+    "total_cost_usd_approx": 0.0815
+  }
+}

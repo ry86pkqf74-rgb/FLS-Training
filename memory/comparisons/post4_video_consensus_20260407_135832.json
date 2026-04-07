@@ -1,0 +1,170 @@
+{
+  "round": 2,
+  "agreement_score": 0.85,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 192.0,
+      "teacher_b_value": 187.7,
+      "resolution": 190.0,
+      "reasoning": "Final ruling: 4.3 second difference is within acceptable measurement variance for video analysis. Both teachers identified completion around frames 20-21. Rounding to 190.0 seconds as definitive consensus.",
+      "confidence": 0.8,
+      "frames_cited": [
+        20,
+        21
+      ]
+    },
+    {
+      "field": "phase_timings.second_throw.duration_seconds",
+      "teacher_a_value": 22,
+      "teacher_b_value": 44,
+      "resolution": 30,
+      "reasoning": "Final ruling: Teacher B's observation of 'extra regrasping before flattening' suggests extended manipulation during second throw. However, Teacher A's tighter timing boundaries may reflect core throw execution vs. preparatory movements. Consensus at 30 seconds balances both interpretations.",
+      "confidence": 0.6,
+      "frames_cited": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "field": "knot_assessments[1].hand_switched",
+      "teacher_a_value": true,
+      "teacher_b_value": true,
+      "resolution": true,
+      "reasoning": "Final ruling: Both teachers explicitly confirmed hand switching on second throw. No rebuttal needed - this was consensus from Round 1. Maintaining high confidence.",
+      "confidence": 0.85,
+      "frames_cited": [
+        11
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 190.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 4.5,
+        "duration_seconds": 4.5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 4.5,
+        "end_seconds": 13.0,
+        "duration_seconds": 8.5
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 13.0,
+        "end_seconds": 52.0,
+        "duration_seconds": 39.0
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 52.0,
+        "end_seconds": 80.0,
+        "duration_seconds": 28.0
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 80.0,
+        "end_seconds": 110.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 110.0,
+        "end_seconds": 145.0,
+        "duration_seconds": 35.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 145.0,
+        "end_seconds": 190.0,
+        "duration_seconds": 45.0
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "left",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Double-wrapped surgeon's knot confirmed by both teachers. Teacher B identified left hand usage."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with confirmed hand switch to right. Both teachers agree on hand switching."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final single throw with hand switch back to left. Extended duration suggests deliberate technique focus."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.25,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 2.75,
+      "confidence": "medium"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    },
+    "estimated_penalties": 2.75,
+    "estimated_fls_score": 407.25,
+    "confidence_score": 0.72,
+    "technique_summary": "Quality-focused performance with excellent final result showing complete slit closure and stable knot stack. Time regression primarily due to extended cutting phase (~45s) and deliberate throw execution. Hand switching properly executed between all throws. Suture placement accurate within acceptable deviation.",
+    "improvement_suggestions": [
+      "Streamline suture cutting technique - target 10-15 seconds total cutting time",
+      "Optimize second and third throw efficiency while maintaining quality",
+      "Practice consistent cutting routine: stabilize, isolate, cut, repeat"
+    ],
+    "strengths": [
+      "Excellent final knot quality with complete slit closure",
+      "Proper hand switching technique maintained throughout",
+      "Accurate suture placement within acceptable deviation",
+      "No drain avulsion - consistent tissue handling",
+      "Quality-preserving approach demonstrates technical confidence"
+    ]
+  },
+  "critique_reasoning": "Final arbitration complete. Completion time finalized at 190.0 seconds (compromise between 192.0 and 187.7). Second throw duration resolved at 30 seconds (balancing Teacher A's 22s core execution vs Teacher B's 44s including preparatory movements). Hand switching consensus maintained from Round 1. FLS score recomputed: 600 - 190.0 - 2.75 = 407.25. Confidence increased to 0.72 with resolution of timing disputes.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "post4_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 28.96,
+    "input_tokens": 5285,
+    "output_tokens": 1659,
+    "cost_usd_approx": 0.0407,
+    "timestamp": "2026-04-07T13:58:11.676517+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 21.05,
+    "round2_input_tokens": 3187,
+    "round2_output_tokens": 1673,
+    "total_cost_usd_approx": 0.0754
+  }
+}

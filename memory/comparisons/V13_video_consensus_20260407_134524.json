@@ -1,0 +1,166 @@
+{
+  "round": 2,
+  "agreement_score": 0.88,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 135.0,
+      "teacher_b_value": 136.3,
+      "resolution": 135.7,
+      "reasoning": "Final ruling: 1.3 second difference is within measurement tolerance for video analysis. Both teachers identified task completion in the 135-136s range. The averaged value of 135.7s represents the best estimate given measurement uncertainty.",
+      "confidence": 0.85,
+      "frames_cited": [
+        23
+      ]
+    },
+    {
+      "field": "phase_timings.suture_placement.duration_seconds",
+      "teacher_a_value": 22,
+      "teacher_b_value": 28,
+      "resolution": 25,
+      "reasoning": "Final ruling: 6 second difference reflects legitimate uncertainty in phase boundary identification. Teacher A (8-30s) vs Teacher B (4.5-32.5s) both capture the core suture placement activity. Averaged duration of 25s is reasonable given the overlapping time windows.",
+      "confidence": 0.75,
+      "frames_cited": [
+        4
+      ]
+    },
+    {
+      "field": "estimated_penalties",
+      "teacher_a_value": 3.0,
+      "teacher_b_value": 2.5,
+      "resolution": 2.75,
+      "reasoning": "Final ruling: Small penalty difference (0.5 points) reflects measurement precision limits for suture placement deviation. Both teachers identified minor deviations. Averaged penalty maintains conservative scoring approach.",
+      "confidence": 0.65,
+      "frames_cited": []
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 135.7,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 3.75,
+        "duration_seconds": 3.75
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 3.75,
+        "end_seconds": 6.25,
+        "duration_seconds": 4.75
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 6.25,
+        "end_seconds": 31.25,
+        "duration_seconds": 25.0
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 31.25,
+        "end_seconds": 51.75,
+        "duration_seconds": 20.5
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 51.75,
+        "end_seconds": 75.75,
+        "duration_seconds": 24.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 75.75,
+        "end_seconds": 101.5,
+        "duration_seconds": 25.75
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 101.5,
+        "end_seconds": 135.7,
+        "duration_seconds": 34.2
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Clear surgeon's knot with double wrap. Both teachers agree on security and surgeon's knot classification."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand alternation. Both teachers confirm hand switching and security."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final single throw with continued alternation. Both teachers agree on security and hand switching."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.25,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 2.75,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "closed",
+      "assessment_note": "Both teachers agree on complete slit closure with no visible gap and no drain avulsion."
+    },
+    "estimated_penalties": 2.75,
+    "estimated_fls_score": 461.55,
+    "confidence_score": 0.75,
+    "technique_summary": "Controlled, successful Task 5 performance with excellent final quality. Purple suture provided improved visibility for assessment. Main time loss in cutting phase (34s). All throws properly executed with hand alternation. No technical penalties beyond minor placement deviation.",
+    "improvement_suggestions": [
+      "Reduce cutting phase duration - currently 25% of total time",
+      "Minimize regrasping between throws for smoother transitions",
+      "Consider earlier cutting instrument introduction"
+    ],
+    "strengths": [
+      "Excellent final result with complete slit closure",
+      "Proper hand alternation maintained throughout",
+      "No drain avulsion with controlled tissue handling",
+      "Secure knot construction with appropriate throw sequence",
+      "Purple suture improved assessment visibility"
+    ]
+  },
+  "critique_reasoning": "Final arbitration complete. All disputed fields resolved through averaging within acceptable tolerance ranges. High teacher agreement (88%) maintained. Critical quality assessments unanimous: complete drain closure, no avulsion, proper technique. Minor timing and penalty differences reflect normal measurement uncertainty in video analysis. FLS score adjusted to 461.55 based on final consensus time (135.7s) and penalties (2.75).",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V13_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 27.69,
+    "input_tokens": 6955,
+    "output_tokens": 1690,
+    "cost_usd_approx": 0.0462,
+    "timestamp": "2026-04-07T13:45:02.601477+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 21.86,
+    "round2_input_tokens": 3197,
+    "round2_output_tokens": 1652,
+    "total_cost_usd_approx": 0.0806
+  }
+}

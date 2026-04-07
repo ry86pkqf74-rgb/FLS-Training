@@ -1,0 +1,176 @@
+{
+  "round": 2,
+  "agreement_score": 0.78,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_arbitration": [
+    {
+      "field": "completion_time_seconds",
+      "final_ruling": 117.9,
+      "reasoning": "1.9 second difference is within measurement tolerance for frame-counting methods. Both teachers cite valid endpoints. Maintaining averaged consensus.",
+      "confidence": 0.8,
+      "frames_cited": [
+        14,
+        2980
+      ]
+    },
+    {
+      "field": "phase_timings.third_throw.duration_seconds",
+      "final_ruling": 33.6,
+      "reasoning": "Teacher B's inclusion of 'reinforcing pass' in third throw phase is technically correct per FLS guidelines - all manipulations until cutting begins are part of throw completion. Teacher A's narrower definition excludes valid throw components.",
+      "confidence": 0.65,
+      "frames_cited": [
+        1627,
+        2125,
+        2353
+      ]
+    },
+    {
+      "field": "knot_assessments[2].hand_switched",
+      "final_ruling": true,
+      "reasoning": "Both teachers agreed on this field. No rebuttal needed - removing from disputed list as this was consensus error.",
+      "confidence": 0.85,
+      "frames_cited": [
+        1627
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "final_ruling": 3.0,
+      "reasoning": "Both teachers acknowledge measurement limitations due to camera angle. Teacher A's 2mm per mark estimate vs Teacher B's asymmetric measurements (1.0mm + 1.5mm) both plausible. Rounding averaged estimate to 3.0 for scoring clarity.",
+      "confidence": 0.45,
+      "frames_cited": [
+        4,
+        325
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 117.9,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 3.7,
+        "duration_seconds": 3.7
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 3.7,
+        "end_seconds": 5.2,
+        "duration_seconds": 1.5
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 5.2,
+        "end_seconds": 20.0,
+        "duration_seconds": 14.8
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 20.0,
+        "end_seconds": 40.6,
+        "duration_seconds": 20.6
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 40.6,
+        "end_seconds": 54.6,
+        "duration_seconds": 14.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 54.6,
+        "end_seconds": 88.2,
+        "duration_seconds": 33.6
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 88.2,
+        "end_seconds": 117.9,
+        "duration_seconds": 29.7
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "left",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw surgeon's knot with left-hand leading technique. Duration 20.6s."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw single half-hitch with hand switch to right-leading. Duration 14s."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw with hand switch back to left-leading, including reinforcing manipulations. Duration 33.6s."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 3.0,
+      "confidence": "low",
+      "placement_notes": "Camera angle limits precise measurement. Conservative estimate of ~1.5mm deviation per mark."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "appears_closed",
+      "assessment_note": "Drain well-closed with no visible gap or avulsion. Knot provides adequate compression."
+    },
+    "estimated_penalties": 3.0,
+    "estimated_fls_score": 479.1,
+    "confidence_score": 0.58,
+    "technique_summary": "Strong performance with 117.9s completion representing significant improvement. Three-throw sequence completed with proper hand switching technique. Drain closure achieved without complications. Extended third throw phase includes reinforcing manipulations per FLS protocol.",
+    "improvement_suggestions": [
+      "Streamline reinforcing manipulations in final throw phase",
+      "Optimize cutting technique to reduce 29.7s cutting duration",
+      "Maintain current trajectory - substantial improvement demonstrated"
+    ],
+    "strengths": [
+      "Sub-120s completion time achievement",
+      "Proper three-throw sequence with hand alternation",
+      "Successful drain closure without avulsion",
+      "Accurate suture placement near target marks",
+      "Secure final knot construction"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolved remaining disputes through FLS protocol adherence. Third throw duration ruling favors Teacher B's inclusive definition of throw completion. Placement penalty rounded to 3.0 for scoring clarity while acknowledging measurement uncertainty. Completion time consensus maintained. Overall confidence improved to 0.58 with definitive rulings on all disputed fields.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V24_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 35.77,
+    "input_tokens": 8023,
+    "output_tokens": 2034,
+    "cost_usd_approx": 0.0546,
+    "timestamp": "2026-04-07T13:39:03.458983+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 24.54,
+    "round2_input_tokens": 3588,
+    "round2_output_tokens": 1699,
+    "total_cost_usd_approx": 0.0908
+  }
+}

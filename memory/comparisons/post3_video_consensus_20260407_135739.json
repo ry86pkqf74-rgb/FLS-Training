@@ -1,0 +1,161 @@
+{
+  "round": 2,
+  "agreement_score": 0.78,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "completion_time_seconds",
+      "final_value": 180.0,
+      "ruling": "Teacher A's assessment takes precedence. Teacher A explicitly states 'final frame at 185s with completion at 180s' providing specific frame reference. Teacher B's 170.2s lacks clear frame citation for task completion moment. FLS scoring requires precise completion timing - Teacher A's frame-specific methodology is more reliable.",
+      "confidence": 0.75,
+      "frames_cited": [
+        23
+      ]
+    },
+    {
+      "field": "phase_timings",
+      "final_value": "teacher_a_methodology",
+      "ruling": "Teacher A's phase boundaries are more consistent with FLS Task 5 definitions. Teacher A shows logical progression: 60s suture placement \u2192 23s second throw. Teacher B's 18s suture placement with 58s second throw suggests misclassification of knot-tying activities as suture placement. FLS Manual defines suture placement as needle insertion through tissue completion, not knot manipulation.",
+      "confidence": 0.7,
+      "frames_cited": [
+        4,
+        9,
+        11,
+        13
+      ]
+    },
+    {
+      "field": "drain_assessment.gap_visible",
+      "final_value": true,
+      "ruling": "Teacher A's assessment confirmed. Teacher A provides specific anatomical description: 'SMALL VISIBLE GAP \u2014 the upper portion of the slit is not fully approximated' with frame 23 citation. Teacher B's 'near-complete closure' contradicts their own 'no_post_tightening_gap: true' notation. Visual evidence description takes precedence over general assessment terms.",
+      "confidence": 0.8,
+      "frames_cited": [
+        23
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 180.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "duration_seconds": 5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 5,
+        "end_seconds": 14,
+        "duration_seconds": 9
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 14,
+        "end_seconds": 74,
+        "duration_seconds": 60
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 74,
+        "end_seconds": 97,
+        "duration_seconds": 23
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 97,
+        "end_seconds": 155,
+        "duration_seconds": 58
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 155,
+        "end_seconds": 180,
+        "duration_seconds": 25
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "left",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Surgeon's knot completed with left hand dominance as reported by Teacher A."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "hand_switched_penalty": 0,
+        "appears_secure": true,
+        "notes": "Single throw with hand switch. Extended duration indicates technical difficulty."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "hand_switched_penalty": 0,
+        "appears_secure": true,
+        "notes": "Final single throw completing the sequence with proper hand alternation."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 2.0,
+      "deviation_from_mark2_mm": 2.0,
+      "total_deviation_penalty": 4.0,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": true,
+      "gap_penalty": 5.0,
+      "drain_avulsed": false,
+      "slit_closure_quality": "incomplete"
+    },
+    "estimated_penalties": 9.0,
+    "estimated_fls_score": 411.0,
+    "confidence_score": 0.72,
+    "technique_summary": "Task completed with proper throw sequence (surgeon's knot + 2 single throws) and correct hand alternation. Performance hampered by extended completion time (180s) and incomplete slit closure with visible gap. Technical execution shows competency but efficiency and precision need improvement.",
+    "improvement_suggestions": [
+      "Reduce overall completion time - 180s is significantly above optimal range",
+      "Focus on achieving complete slit approximation through adequate knot tension",
+      "Improve suture placement accuracy to minimize deviation penalties",
+      "Practice phase transitions to reduce time loss between suture placement and knot tying"
+    ],
+    "strengths": [
+      "Correct throw sequence maintained throughout",
+      "Proper hand alternation between throws",
+      "No tissue damage or drain avulsion",
+      "All required knot components successfully completed"
+    ]
+  },
+  "critique_reasoning": "Round 2 arbitration resolved three major disputes through frame-evidence analysis and FLS Manual adherence. Teacher A's completion time methodology (frame-specific) deemed more reliable than Teacher B's general assessment. Phase timing disputes resolved by applying FLS definitions of suture placement vs knot manipulation. Drain gap assessment confirmed through Teacher A's specific anatomical description. Final score recalculated: 600 - 180 - 9 = 411 points.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "post3_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 32.15,
+    "input_tokens": 6482,
+    "output_tokens": 1854,
+    "cost_usd_approx": 0.0473,
+    "timestamp": "2026-04-07T13:57:17.073565+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 22.13,
+    "round2_input_tokens": 3375,
+    "round2_output_tokens": 1622,
+    "total_cost_usd_approx": 0.0818
+  }
+}

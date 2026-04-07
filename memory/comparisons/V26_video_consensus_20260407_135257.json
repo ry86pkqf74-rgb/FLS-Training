@@ -1,0 +1,161 @@
+{
+  "round": 2,
+  "agreement_score": 0.88,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "phase_timings.third_throw.duration_seconds",
+      "teacher_a_value": 14.0,
+      "teacher_b_value": 35.2,
+      "final_resolution": 35.2,
+      "reasoning": "Teacher B's 35.2s duration (53.2-88.4s) is more consistent with frame evidence. Frame 2520 shows ongoing third throw work well beyond Teacher A's 74s endpoint. The prolonged duration reflects realistic complexity of final throw with slack management and regrasping. Teacher A likely underestimated the phase boundary.",
+      "confidence": 0.7,
+      "frames_cited": [
+        1995,
+        2520
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "teacher_a_value": 4.0,
+      "teacher_b_value": 3.0,
+      "final_resolution": 3.0,
+      "reasoning": "Both teachers acknowledge low confidence due to monitor recording quality. Teacher B's 1.5mm per mark assessment appears more conservative and realistic given the visual limitations. FLS scoring benefits from conservative penalty assessment when measurement confidence is compromised.",
+      "confidence": 0.5,
+      "frames_cited": [
+        546
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 93.6,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "duration_seconds": 6
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 6,
+        "end_seconds": 8.2,
+        "duration_seconds": 2.2
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 8.2,
+        "end_seconds": 20.6,
+        "duration_seconds": 12.4
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 20.6,
+        "end_seconds": 42.6,
+        "duration_seconds": 22.0
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 42.6,
+        "end_seconds": 53.2,
+        "duration_seconds": 10.6
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 53.2,
+        "end_seconds": 88.4,
+        "duration_seconds": 35.2
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 88.4,
+        "end_seconds": 93.6,
+        "duration_seconds": 5.2
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw surgeon's knot with double wrap. Both teachers agree on security and type."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand switch. Both teachers confirm alternation."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final single throw with hand switch back to right. Extended duration due to slack management and regrasping."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 3.0,
+      "confidence": "low",
+      "placement_notes": "Conservative penalty assessment given monitor recording limitations. 1.5mm deviation per mark."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Both teachers agree: no visible gap, drain not avulsed, good closure quality."
+    },
+    "estimated_penalties": 3.0,
+    "estimated_fls_score": 503.4,
+    "confidence_score": 0.68,
+    "technique_summary": "V26 achieves new series best at ~93.6 seconds. Excellent overall performance with efficient needle placement and secure knot construction. Third throw required extended time (35.2s) for proper slack management and regrasping, but final result shows complete drain closure without avulsion.",
+    "improvement_suggestions": [
+      "Focus on third throw efficiency - current 35.2s duration represents largest time sink",
+      "Practice slack management techniques to reduce regrasping during final throw",
+      "Consider pre-staging needle loading to optimize setup phase",
+      "Continue current session momentum - sub-95s performance represents significant breakthrough"
+    ],
+    "strengths": [
+      "New series best time at 93.6 seconds",
+      "First sub-95 second performance in series",
+      "Secure three-throw knot construction with proper hand switching",
+      "Complete drain closure without avulsion",
+      "Efficient cutting phase (5.2s)",
+      "FLS score 503.4 represents highest estimated score in series"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolves two disputed fields. Third throw duration: Teacher B's 35.2s assessment supported by frame evidence showing work continuing through frame 2520. Placement penalty: Teacher B's conservative 3.0 penalty more appropriate given acknowledged measurement uncertainty. Final FLS score: 600 - 93.6 - 3.0 = 503.4.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V26_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 28.56,
+    "input_tokens": 7783,
+    "output_tokens": 1835,
+    "cost_usd_approx": 0.0509,
+    "timestamp": "2026-04-07T13:52:38.003586+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 19.34,
+    "round2_input_tokens": 3347,
+    "round2_output_tokens": 1654,
+    "total_cost_usd_approx": 0.0858
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "round": 2,
+  "agreement_score": 0.89,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "phase_timings.first_throw",
+      "teacher_a_value": 55.0,
+      "teacher_b_value": 20.0,
+      "resolution": 35.0,
+      "reasoning": "FINAL RULING: This disagreement is mostly a boundary problem. Claude carries a large portion of first-throw setup into the first_throw interval, while GPT-4o ends placement later and records a shorter first throw. Consensus splits the difference to preserve the shared diagnosis that throws 2 and 3 remain the dominant loss centers.",
+      "confidence": 0.54,
+      "frames_cited": [
+        60,
+        80,
+        145,
+        206
+      ]
+    },
+    {
+      "field": "phase_timings.suture_cut",
+      "teacher_a_value": 95.0,
+      "teacher_b_value": 97.0,
+      "resolution": 89.5,
+      "reasoning": "FINAL RULING: Both teachers agree trimming remained prolonged but improved relative to V28. Consensus keeps cut near the shared 95-97s region while allocating a modest amount of disputed time back into the earlier knot-tying boundary.",
+      "confidence": 0.66,
+      "frames_cited": [
+        210,
+        240,
+        300,
+        304.5
+      ]
+    },
+    {
+      "field": "suture_placement.total_deviation_penalty",
+      "teacher_a_value": 4.0,
+      "teacher_b_value": 2.5,
+      "resolution": 2.5,
+      "reasoning": "FINAL RULING: Vizio moire artifacts reduce confidence in exact mark measurement, but the stronger rubric basis remains GPT-4o's 2.5mm total deviation because Claude's higher penalty again incorporates an out-of-rubric quality adjustment. Consensus therefore retains the placement-only penalty.",
+      "confidence": 0.58,
+      "frames_cited": []
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 304.5,
+    "phase_timings": [
+      {
+        "phase": "needle_load",
+        "start_seconds": 0.0,
+        "end_seconds": 24.0,
+        "duration_seconds": 24.0
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 24.0,
+        "end_seconds": 60.0,
+        "duration_seconds": 36.0
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 60.0,
+        "end_seconds": 95.0,
+        "duration_seconds": 35.0
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 95.0,
+        "end_seconds": 155.0,
+        "duration_seconds": 60.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 155.0,
+        "end_seconds": 215.0,
+        "duration_seconds": 60.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 215.0,
+        "end_seconds": 304.5,
+        "duration_seconds": 89.5
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw is accepted as a surgeon's knot. The exact start boundary is disputed, but both teachers agree the configuration is correct and ultimately seats securely."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw remains the clearest efficiency loss center after boundary normalization, with repeated regrasping but preserved alternation."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw alternates back and seats flat. It remains prolonged, but both teachers agree the final knot is acceptable and secure."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.0,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 2.5,
+      "confidence": "low",
+      "placement_notes": "Monitor artifacts materially reduce confidence, but the available evidence still supports a modest placement-only deduction rather than a larger composite penalty."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "near_complete",
+      "assessment_note": "Both teachers agree the drain stayed mounted, no persistent gap is visible, and final approximation is acceptable with a centered knot and short tails."
+    },
+    "estimated_penalties": 2.5,
+    "estimated_fls_score": 293.0,
+    "confidence_score": 0.61,
+    "technique_summary": "V29 shows real adaptation on the new Vizio station rather than a continued collapse. The run is still inefficient, especially through throws 2 and 3 plus the final trimming sequence, but it improves materially on V28 while preserving acceptable closure, knot security, and drain integrity. The largest remaining source of uncertainty is recording quality, not the basic interpretation of the performance.",
+    "improvement_suggestions": [
+      "Keep practicing on this exact station if it will be used again; the V28-to-V29 improvement already shows the adaptation curve is moving in the right direction.",
+      "Focus specifically on the second-to-third-throw transition, where repeated regrasping still adds the most time.",
+      "Standardize tail isolation before introducing the cutter so trimming happens in fewer motions after the final throw is seated.",
+      "Improve recording angle or filtering on the Vizio monitor to reduce moire artifacts and make future placement review defensible."
+    ],
+    "strengths": [
+      "Meaningful recovery from V28 on the same unfamiliar station.",
+      "Final knot remains centered and secure with acceptable closure.",
+      "Drain was not avulsed despite a long tying and trimming sequence.",
+      "The performance issues are primarily efficiency-related rather than gross technical failure."
+    ]
+  },
+  "critique_reasoning": "FINAL ARBITRATION: V29 has strong teacher agreement on the clinically important outcome: acceptable placement, secure knot, intact drain, and equipment-adaptation rather than skill regression. Consensus therefore follows the rubric-strict GPT-4o penalty model for the final score, uses a blended first-throw boundary, and keeps trimming prolonged but not catastrophic. The automated Anthropic arbitration path was unavailable because the configured API key was invalid, so this consensus was resolved directly from the two teacher scorecards and the teacher comparison artifact.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 2,
+    "timestamp": "2026-04-07T14:15:33Z"
+  },
+  "_meta": {
+    "video_id": "V29_video",
+    "model": "manual-consensus",
+    "round": 1,
+    "elapsed_seconds": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd_approx": 0.0,
+    "timestamp": "2026-04-07T14:15:33Z",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 0.0,
+    "round2_input_tokens": 0,
+    "round2_output_tokens": 0,
+    "total_cost_usd_approx": 0.0,
+    "manual_arbitration": true,
+    "automation_error": "invalid x-api-key"
+  }
+}

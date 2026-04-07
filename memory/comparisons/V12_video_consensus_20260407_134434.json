@@ -1,0 +1,150 @@
+{
+  "round": 2,
+  "agreement_score": 0.91,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "phase_timings",
+      "final_resolution": "teacher_b_approach",
+      "reasoning": "Teacher B's phase breakdown is more consistent with FLS task structure. The 28.5s difference in cutting phase (Teacher A: 33s vs Teacher B: 4.5s) suggests Teacher A may have misidentified phase boundaries. Teacher B's throw phases totaling 80s vs Teacher A's 49s aligns better with observed knot complexity. Using Teacher B's timing structure with minor adjustments for 114.5s total.",
+      "confidence": 0.65,
+      "frames_cited": [
+        15,
+        17,
+        19,
+        22,
+        3358,
+        3463
+      ]
+    },
+    {
+      "field": "estimated_penalties",
+      "final_resolution": 3.25,
+      "reasoning": "Teacher A's additional 2.0 penalty points beyond suture placement are not substantiated by specific violations. Both teachers agree on secure knots, closed drain, and no avulsion. Only documented penalty source is suture placement deviation (3.25mm consensus). Teacher B's assessment is more conservative and evidence-based.",
+      "confidence": 0.75,
+      "frames_cited": []
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 114.5,
+    "phase_timings": [
+      {
+        "phase": "needle_load",
+        "start_seconds": 0.0,
+        "end_seconds": 4.5,
+        "duration_seconds": 4.5
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 4.5,
+        "end_seconds": 19.0,
+        "duration_seconds": 14.5
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 19.0,
+        "end_seconds": 42.0,
+        "duration_seconds": 23.0
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 42.0,
+        "end_seconds": 68.0,
+        "duration_seconds": 26.0
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 68.0,
+        "end_seconds": 99.0,
+        "duration_seconds": 31.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 99.0,
+        "end_seconds": 114.5,
+        "duration_seconds": 15.5
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw completed as surgeon's knot with double wrap. Both teachers confirm secure seating."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single reverse throw with confirmed hand switch to left instrument leading."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final single throw switching back to right-led, remains stable through tightening."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 1.75,
+      "total_deviation_penalty": 3.25,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Both teachers agree drain slit is closed without visible gap. First V-series video with complete teacher agreement on drain closure."
+    },
+    "estimated_penalties": 3.25,
+    "estimated_fls_score": 482.25,
+    "confidence_score": 0.68,
+    "technique_summary": "V12 demonstrates excellent performance at 114.5s with 482.25 FLS score. Task completed with proper three-throw sequence, correct hand alternation, and complete drain closure. Suture placement within acceptable deviation limits. Phase timing shows efficient progression through all task elements.",
+    "improvement_suggestions": [
+      "Optimize loop formation during throws to reduce knot-tying time",
+      "Improve early needle loading and orientation for faster task initiation",
+      "Focus on tighter, more economical instrument movements during throw phases"
+    ],
+    "strengths": [
+      "Excellent completion time under 115 seconds",
+      "Proper three-throw sequence with correct hand alternation",
+      "Complete drain closure without avulsion",
+      "All required task elements completed successfully",
+      "Secure knot formation throughout sequence"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolved phase timing disputes by adopting Teacher B's more structurally consistent breakdown, and confirmed penalty assessment at 3.25 points based solely on documented suture placement deviations. Both disputed fields now have definitive rulings with improved confidence. Final FLS score remains 482.25 (600 - 114.5 - 3.25).",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V12_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 30.75,
+    "input_tokens": 6712,
+    "output_tokens": 1832,
+    "cost_usd_approx": 0.0476,
+    "timestamp": "2026-04-07T13:44:15.887185+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 18.39,
+    "round2_input_tokens": 3329,
+    "round2_output_tokens": 1522,
+    "total_cost_usd_approx": 0.0804
+  }
+}

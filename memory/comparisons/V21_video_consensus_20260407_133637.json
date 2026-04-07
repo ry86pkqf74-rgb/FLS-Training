@@ -1,0 +1,156 @@
+{
+  "round": 2,
+  "agreement_score": 0.82,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "phase_timings.third_throw.duration_seconds",
+      "final_value": 32,
+      "ruling_reasoning": "Teacher A's frame-by-frame analysis provides definitive evidence that scissors are introduced at frame 17 (120s), marking the clear transition from knot completion to cutting phase. FLS Task 5 rubric defines throw completion when the knot is seated and tightened. Teacher B's extension to 143.2s includes cutting preparation work that belongs in the subsequent phase. Teacher A's boundary at 110s aligns with standard FLS phase definitions.",
+      "confidence": 0.75,
+      "frames_cited": [
+        16,
+        17
+      ]
+    },
+    {
+      "field": "knot_assessments[2].notes",
+      "final_value": "Third throw with hand switch back to right instrument leading. Single wrap completed and secured by 110s. Extended cutting preparation noted but does not affect throw assessment.",
+      "ruling_reasoning": "Consolidating both teachers' observations while maintaining Teacher A's phase boundary determination. The note should reflect the core throw completion while acknowledging the extended activity that Teacher B observed, but clarifying it belongs to cutting phase preparation rather than throw execution.",
+      "confidence": 0.7,
+      "frames_cited": [
+        16,
+        17
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 170.8,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "duration_seconds": 6
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 6,
+        "end_seconds": 14,
+        "duration_seconds": 7.5
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 14,
+        "end_seconds": 36,
+        "duration_seconds": 22.6
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 36,
+        "end_seconds": 58,
+        "duration_seconds": 21.0
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 58,
+        "end_seconds": 78,
+        "duration_seconds": 21.5
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 78,
+        "end_seconds": 110,
+        "duration_seconds": 32.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 110,
+        "end_seconds": 175,
+        "duration_seconds": 65.0
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw with double wrap visible, consistent with surgeon's knot. Right instrument leads wrap. Tightened and seated properly."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw with hand switch to left instrument leading. Single wrap, efficient execution."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw with hand switch back to right instrument leading. Single wrap completed and secured by 110s. Extended cutting preparation noted but does not affect throw assessment."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.75,
+      "deviation_from_mark2_mm": 1.75,
+      "total_deviation_penalty": 3.5,
+      "confidence": "very_low",
+      "placement_notes": "Both teachers acknowledge very low confidence due to monitor recording limiting precise measurement. Suture appears to pass through appropriate area near marks."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "acceptable",
+      "assessment_note": "Both teachers agree drain slit appears closed with no visible gap. Knot seated properly, drain not avulsed. Closure quality adequate."
+    },
+    "estimated_penalties": 3.5,
+    "estimated_fls_score": 425.7,
+    "confidence_score": 0.62,
+    "technique_summary": "Competent intracorporeal knot-tying performance with successful completion of all required elements. Suture placement efficient at ~23s, all three throws completed with proper hand switching and surgeon's knot technique. Main time loss in extended cutting phase (65s) representing 38% of total time. Monitor recording limits precision of measurements but core technique appears sound.",
+    "improvement_suggestions": [
+      "Address cutting phase bottleneck - 65s represents 38% of total time and matches previous worst performances",
+      "Consider stopping additional reinforcing work after required third throw is secure",
+      "Practice dedicated cutting drills to improve efficiency in tail management and trimming"
+    ],
+    "strengths": [
+      "Efficient suture placement (~23s)",
+      "Proper surgeon's knot technique on first throw",
+      "Consistent hand switching between throws",
+      "Successful drain closure without avulsion",
+      "All required technical elements completed correctly"
+    ]
+  },
+  "critique_reasoning": "Final arbitration resolved remaining disputes through frame-evidence analysis. Teacher A's frame-by-frame methodology provided superior temporal precision for phase boundaries. Third throw duration confirmed at 32s with clear scissors introduction marking cutting phase start. Knot assessment notes refined to acknowledge both teachers' observations while maintaining accurate phase classification. Overall confidence increased to 0.62 with resolution of temporal boundary disputes.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "V21_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 36.89,
+    "input_tokens": 9498,
+    "output_tokens": 2164,
+    "cost_usd_approx": 0.061,
+    "timestamp": "2026-04-07T13:36:14.659481+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 22.66,
+    "round2_input_tokens": 3675,
+    "round2_output_tokens": 1649,
+    "total_cost_usd_approx": 0.0968
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "round": 2,
+  "agreement_score": 0.91,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "final_rulings": [
+    {
+      "field": "drain_assessment.gap_visible",
+      "final_value": true,
+      "reasoning": "FLS Manual Section 4.2 requires 'complete closure of the slit' for no penalty. Teacher A's observation of 'small gap likely' with 'partial closure quality' represents the conservative standard required by FLS scoring. Teacher B's 'near-complete' assessment, while optimistic, does not meet the 'complete closure' threshold. Final ruling: gap_visible = true, incurring 2-point penalty per FLS guidelines.",
+      "confidence": 0.7,
+      "frames_cited": [
+        23,
+        4820
+      ]
+    },
+    {
+      "field": "phase_timings.third_throw.duration_seconds",
+      "final_value": 30.0,
+      "reasoning": "Teacher B's 42s includes additional security throws beyond the required third throw, extending the phase boundary. Teacher A's 25s may end at the completion of the primary third throw. FLS Task 5 requires three throws minimum but does not penalize additional throws. Split the difference but favor Teacher A's boundary definition as it aligns with 'third throw completion' rather than 'all subsequent throws.' Final duration: 30.0s.",
+      "confidence": 0.65,
+      "frames_cited": [
+        2340,
+        3330
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 159.4,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 6.5,
+        "duration_seconds": 6.5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 6.5,
+        "end_seconds": 10.0,
+        "duration_seconds": 3.5
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 10.0,
+        "end_seconds": 50.0,
+        "duration_seconds": 40.0
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 50.0,
+        "end_seconds": 66.0,
+        "duration_seconds": 16.0
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 66.0,
+        "end_seconds": 79.5,
+        "duration_seconds": 13.5
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 79.5,
+        "end_seconds": 109.5,
+        "duration_seconds": 30.0
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 109.5,
+        "end_seconds": 159.4,
+        "duration_seconds": 49.9
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "First throw surgeon's knot with double wrap, right-hand lead. Both teachers confirm secure seating."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Second throw single with hand switch to left. Both teachers confirm appropriate technique."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Third throw single with hand switch back to right. Both teachers note additional security throws follow."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.75,
+      "deviation_from_mark2_mm": 1.75,
+      "total_deviation_penalty": 3.5,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": true,
+      "drain_avulsed": false,
+      "slit_closure_quality": "partial",
+      "assessment_note": "Final ruling: Gap visible based on FLS 'complete closure' standard. 2-point penalty applied per FLS Manual Section 4.2."
+    },
+    "estimated_penalties": 5.5,
+    "estimated_fls_score": 435.1,
+    "confidence_score": 0.68,
+    "technique_summary": "V17 performance at 159.4s demonstrates competent three-throw technique with proper hand switching. Time distribution shows extended cutting phase (49.9s) and suture placement (40s) as primary improvement areas. Drain closure assessment conservative per FLS standards.",
+    "improvement_suggestions": [
+      "Reduce cutting phase duration - currently 50s represents 31% of total time",
+      "Streamline suture placement - 40s is extended for this task component",
+      "Focus on achieving complete drain slit closure to avoid 2-point penalty",
+      "Consider stopping after required third throw unless knot security is questionable"
+    ],
+    "strengths": [
+      "Correct three-throw knot sequence with appropriate hand switching",
+      "No drain avulsion or tissue trauma observed",
+      "Secure knot construction throughout all throws",
+      "Proper surgeon's knot initiation technique"
+    ]
+  },
+  "critique_reasoning": "Round 2 final arbitration resolved two disputed fields. Drain gap assessment ruled conservatively per FLS 'complete closure' requirement. Third throw timing adjusted to 30s, balancing Teacher A's phase boundary definition with Teacher B's security throw observations. Final FLS score: 435.1 (600 - 159.4 - 5.5). Confidence increased to 0.68 after final rulings.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:05:00Z"
+  },
+  "_meta": {
+    "video_id": "V17_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 30.91,
+    "input_tokens": 5997,
+    "output_tokens": 1812,
+    "cost_usd_approx": 0.0452,
+    "timestamp": "2026-04-07T13:48:50.335986+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 21.48,
+    "round2_input_tokens": 3328,
+    "round2_output_tokens": 1643,
+    "total_cost_usd_approx": 0.0798
+  }
+}

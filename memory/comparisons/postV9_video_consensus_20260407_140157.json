@@ -1,0 +1,160 @@
+{
+  "round": 2,
+  "agreement_score": 0.88,
+  "early_stop": false,
+  "needs_rebuttal": [],
+  "divergences": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 143.0,
+      "teacher_b_value": 141.5,
+      "resolution": 142.0,
+      "reasoning": "Final arbitration: 1.5s difference falls within measurement precision variance. Rounding averaged value to 142.0s as both teachers cite valid frame evidence. This minor timing difference does not materially affect technique assessment.",
+      "confidence": 0.8,
+      "frames_cited": [
+        21,
+        4314
+      ]
+    },
+    {
+      "field": "phase_timings",
+      "teacher_a_value": "varied_boundaries",
+      "teacher_b_value": "varied_boundaries",
+      "resolution": "consensus_boundaries",
+      "reasoning": "Final arbitration: Phase boundary differences reflect legitimate interpretation variance in transition identification. Maintaining averaged durations as both teachers provide reasonable frame evidence. Key phases (suture placement: 28s, first throw: 29s) represent fair compromise between methodologies.",
+      "confidence": 0.7,
+      "frames_cited": [
+        6,
+        720,
+        1044,
+        1530
+      ]
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 142.0,
+    "phase_timings": [
+      {
+        "phase": "idle",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "duration_seconds": 5
+      },
+      {
+        "phase": "needle_load",
+        "start_seconds": 5,
+        "end_seconds": 14.75,
+        "duration_seconds": 9.75
+      },
+      {
+        "phase": "suture_placement",
+        "start_seconds": 14.75,
+        "end_seconds": 42.75,
+        "duration_seconds": 28
+      },
+      {
+        "phase": "first_throw",
+        "start_seconds": 42.75,
+        "end_seconds": 71.75,
+        "duration_seconds": 29
+      },
+      {
+        "phase": "second_throw",
+        "start_seconds": 71.75,
+        "end_seconds": 95.5,
+        "duration_seconds": 23.75
+      },
+      {
+        "phase": "third_throw",
+        "start_seconds": 95.5,
+        "end_seconds": 127.25,
+        "duration_seconds": 31.75
+      },
+      {
+        "phase": "suture_cut",
+        "start_seconds": 127.25,
+        "end_seconds": 142.0,
+        "duration_seconds": 14.75
+      }
+    ],
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "is_surgeon_knot": true,
+        "is_single_throw": null,
+        "hand_used": "right",
+        "hand_switched": null,
+        "appears_secure": true,
+        "notes": "Surgeon's knot confirmed by both teachers. Teacher B provides hand identification (right-hand-led)."
+      },
+      {
+        "throw_number": 2,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "left",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Single throw with hand switching confirmed by both teachers."
+      },
+      {
+        "throw_number": 3,
+        "is_surgeon_knot": null,
+        "is_single_throw": true,
+        "hand_used": "right",
+        "hand_switched": true,
+        "appears_secure": true,
+        "notes": "Final single throw with hand switching confirmed by both teachers."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.0,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 2.5,
+      "confidence": "medium"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    },
+    "estimated_penalties": 2.5,
+    "estimated_fls_score": 455.5,
+    "confidence_score": 0.75,
+    "technique_summary": "Trainee demonstrated consistent high-level performance matching previous best attempts. Complete slit closure achieved with proper knot sequence (surgeon's knot + 2 single throws) and confirmed hand switching. Main time consumption in knot tying phases with some inefficiency in tail management and regrasping.",
+    "improvement_suggestions": [
+      "Reduce suture cutting time through better tail positioning",
+      "Minimize regrasping during throw formation",
+      "Optimize tail organization between throws"
+    ],
+    "strengths": [
+      "Confirmed repeatable sub-145s performance",
+      "Complete slit closure maintained at speed",
+      "Proper knot sequence with hand alternation",
+      "No drain avulsion or tissue damage",
+      "Accurate suture placement near target marks"
+    ]
+  },
+  "critique_reasoning": "Final arbitration complete. Timing disputes resolved through conservative averaging with increased confidence. Both teachers demonstrated strong agreement on technique assessment (11/14 fields). Phase timing differences reflect methodological variance rather than fundamental disagreement. FLS score recomputed: 600 - 142.0 - 2.5 = 455.5 points.",
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o",
+    "round": 2,
+    "timestamp": "2026-04-07T18:00:00Z"
+  },
+  "_meta": {
+    "video_id": "postV9_video",
+    "model": "claude-sonnet-4-20250514",
+    "round": 1,
+    "elapsed_seconds": 31.55,
+    "input_tokens": 6285,
+    "output_tokens": 1623,
+    "cost_usd_approx": 0.0432,
+    "timestamp": "2026-04-07T14:01:41.380708+00:00",
+    "final_round": 2,
+    "early_stopped": false,
+    "round2_elapsed_seconds": 16.12,
+    "round2_input_tokens": 3134,
+    "round2_output_tokens": 1491,
+    "total_cost_usd_approx": 0.075
+  }
+}
