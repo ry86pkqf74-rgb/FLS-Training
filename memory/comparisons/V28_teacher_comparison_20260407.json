@@ -1,0 +1,70 @@
+{
+  "id": "comparison_V28_001",
+  "video_id": "V28_video",
+  "video_alias": "V28",
+  "created_at": "2026-04-08T12:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V28_video_claude-sonnet-4_20260407_180000.json",
+      "completion_time_seconds": 365.0,
+      "estimated_penalties": 8.0,
+      "estimated_fls_score": 227.0,
+      "confidence": 0.35
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V28_video_gpt-4o_20260408_120000.json",
+      "completion_time_seconds": 370.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 227.0,
+      "confidence": 0.62
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 5.0,
+    "delta_penalties": 5.0,
+    "delta_fls_score": 0.0,
+    "agreement_level": "exact"
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "appears_closed", "gpt4o": "complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  3.0,
+    "delta_mm": 1.0,
+    "agreement": "moderate"
+  },
+  "penalty_extra_disagreement": {
+    "claude_total_penalties": 8.0,
+    "gpt4o_total_penalties": 3.0,
+    "claude_breakdown": "4.0 placement + 4.0 quality/efficiency (out-of-rubric)",
+    "gpt4o_breakdown": "3.0 placement only",
+    "analysis": "Fifth video (V20, V22, V26, V28, V29) where Claude applies an out-of-rubric quality/efficiency penalty. GPT-4o's rubric-strict 3.0 is the correct rubric application. Pattern is now persistent enough to recommend prompt-level formalization of the allowed penalty set."
+  },
+  "phase_attribution_disagreement": {
+    "claude_diagnosis": "Phase split: load+placement 35s, throws 205s (55+70+80), cut 135s. Cutting is the dominant loss center.",
+    "gpt4o_diagnosis": "Phase split: needle_load 17s, placement 29s, first 60s, second 42s, third 205s, cut 15s. Third throw is the dominant loss center.",
+    "analysis": "LARGEST phase-attribution disagreement in the series. Tails converge within 5s but the cut/third-throw boundary differs by ~120s. Same convergent-tails pattern as V21/V24/V29 but more extreme here because severe suture tangling makes the boundary between 'still tying' and 'now trimming' genuinely ambiguous. Both diagnoses point to the same overall problem: post-second-throw economy collapsed."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 227.0,
+    "gpt4o_fls": 227.0,
+    "reconciled_fls": 227.0,
+    "reconciliation_note": "EXACT score agreement at 227 via different math. Claude: 600 - 365 - 8 = 227. GPT-4o: 600 - 370 - 3 = 227. Most striking single-video numerical alignment in the series. The 5-second time delta and 5-point penalty delta cancel exactly. Both teachers independently identify V28 as the worst single-attempt time in the 28-video series and frame it as new-equipment/new-suture catastrophe rather than skill regression."
+  },
+  "systematic_findings": {
+    "exact_score_alignment_via_different_math": "First case in the series of EXACT 0.0 FLS delta. Time delta (5s) and penalty delta (5 points) cancel precisely. Useful as a calibration anchor: when the time and penalty deltas have opposite signs and equal magnitude, the bottom line is robust even when the bookkeeping disagrees.",
+    "rubric_scope_issue_recurring": "Fifth case (V20, V22, V26, V28, V29) where Claude applies an out-of-rubric quality/efficiency penalty. Pattern is now persistent enough that the next prompt iteration should formalize the allowed penalty set and add a separate cosmetic_quality field to capture Claude's signal without distorting the FLS score.",
+    "largest_phase_split_disagreement": "Cut/third-throw boundary differs by ~120s on V28. Severe suture tangling created genuine ambiguity about when the trainee transitioned from tying to trimming. Worth flagging in future prompts: define the cut phase as starting when the cutter (scissors) first enters the field, not when the knot is 'visually seated.'",
+    "drain_agreement_continues": "V28 is another drain-closure agreement case. Running tally: AGREE 9 (V12, V13, V18, V19, V22, V26, V27, V28, V29), DIVERGE 5 (V11, V14, V16, V17, V20).",
+    "v28_v29_v30_v31_arc_now_complete": "With all four videos scored by both teachers, the new-equipment narrative is fully supported. V28 (365/370s) was a Vizio-station catastrophe. V29 (295/304.5s) was a 70s adaptation. V30 (158s, blue trainer) was a station change with immediate recovery. V31 (137s) was further adaptation. The V28 score should be read as a station-specific anomaly, not a true performance ceiling."
+  }
+}
