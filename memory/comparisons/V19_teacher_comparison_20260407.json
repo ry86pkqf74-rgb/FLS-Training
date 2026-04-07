@@ -1,0 +1,66 @@
+{
+  "id": "comparison_V19_001",
+  "video_id": "V19_video",
+  "video_alias": "V19",
+  "created_at": "2026-04-08T02:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V19_video_claude-sonnet-4_20260407_143000.json",
+      "completion_time_seconds": 193.0,
+      "estimated_penalties": 5.0,
+      "estimated_fls_score": 402.0,
+      "confidence": 0.42
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V19_video_gpt-4o_20260408_020000.json",
+      "completion_time_seconds": 191.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 406.0,
+      "confidence": 0.63
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 2.0,
+    "delta_penalties": 2.0,
+    "delta_fls_score": 4.0,
+    "agreement_level": "strong"
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 7,   "gpt4o": 4.0,   "delta": 3.0,  "note": "Claude prefaces with 5s idle; combined idle+load=12s."},
+    "suture_placement": {"claude": 43,  "gpt4o": 12.5,  "delta": 30.5, "note": "MAJOR disagreement — Claude extends placement to 55s, GPT-4o closes placement at 16.5s and absorbs the rest into first_throw."},
+    "first_throw":      {"claude": 25,  "gpt4o": 22.0,  "delta": 3.0},
+    "second_throw":     {"claude": 20,  "gpt4o": 22.0,  "delta": 2.0},
+    "third_throw":      {"claude": 28,  "gpt4o": 119.7, "delta": 91.7, "note": "LARGEST per-phase delta ever in the V-series. GPT-4o stuffs all post-knot security throws and retightening into third_throw; Claude closes third_throw at 128s and re-labels the remainder as cutting."},
+    "suture_cut":       {"claude": 65,  "gpt4o": 10.8,  "delta": 54.2, "note": "Mirror image of third_throw delta. Sum of third_throw+cut: Claude 93s vs GPT-4o 130.5s (delta 37.5s — still wide)."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true},
+    "extra_security_throws":    {"claude": "implied", "gpt4o": true, "note": "GPT-4o explicitly flags extra security throws after the required three; Claude infers excessive time in cut phase but doesn't label it as extra throws."}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "appears_closed", "gpt4o": "complete", "agreement": true, "note": "V19 joins V12, V13, V18 as drain-agreement cases."}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  3.0,
+    "delta_mm": 1.0,
+    "agreement": "moderate",
+    "note": "Claude scored 2.0mm per mark, GPT-4o scored 1.5mm per mark. 1mm delta on penalty explains most of the 4-point FLS gap."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 402.0,
+    "gpt4o_fls": 406.0,
+    "reconciled_fls": 404.0,
+    "reconciliation_note": "Strong agreement on total time (Δ2.0s) and qualitative rubric. Small FLS delta (4.0) comes almost entirely from placement penalty (Δ1.0mm). Both teachers confirm: task completed, drain closed, knots secure, no avulsion, extra security work consumed excess time. Midpoint 404.0 is a clean reconciled value. This is a fatigue-regression video regardless of which teacher you trust."
+  },
+  "systematic_findings": {
+    "extreme_phase_boundary_disagreement": "V19 sets a new record for phase boundary divergence. Third_throw delta of 91.7s and cut delta of 54.2s. Both are mirror-image allocations of the same real-world 130-second post-knot-completion period. This reinforces the V18 finding: phase-level durations cannot be used as a training signal. Total time converges within 2s despite 90s+ phase-level swings.",
+    "drain_gap_pattern_continues_agreeing": "V19 is the 4th consecutive drain-agreement case (V18, V12, V13, V19). Running tally — AGREE: V12, V13, V18, V19. DIVERGE: V11, V14, V16, V17. The pattern is clearly not deterministic on any simple recording attribute.",
+    "fatigue_signature_confirmed": "Both teachers independently identify efficiency collapse as the defining feature of V19. Claude's 'late-session fatigue crash' narrative (V18 145s → V19 193s = 48s jump) is corroborated by GPT-4o's independent flagging of extra security throws and prolonged post-knot retightening. The reconciled 404 FLS represents a ~47-point drop from V18, which is the largest single-video regression in the V-series."
+  }
+}

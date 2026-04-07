@@ -1,0 +1,68 @@
+{
+  "id": "score_gpt4o_V19_001",
+  "video_id": "V19_video",
+  "video_filename": "V19.MOV",
+  "video_alias": "V19",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o-2024-11-20",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T02:00:00Z",
+  "recording_notes": "Phone filming RCA monitor — same lab as V11-V14/V17. Task start at ~3.88s absolute (first instrument visible, ~frame 115); task end at ~194.88s absolute (~frame 5846). Task time ~191.0s.",
+  "frame_analyses": [
+    {"frame_number": 113, "phase": "needle_load", "description": "~task 0.0s: first instrument tip enters field, timing starts.", "technique_notes": "Controlled entry; initial setup not immediate, costs early time."},
+    {"frame_number": 255, "phase": "suture_placement", "description": "~task 4.8s: needle aligned over Penrose, first bite being organized.", "technique_notes": "Acceptable orientation with small repositions."},
+    {"frame_number": 570, "phase": "suture_placement", "description": "~task 15.3s: suture traversed drain, drawn through both marked sides.", "technique_notes": "Close to marks; exact deviation hard to verify."},
+    {"frame_number": 735, "phase": "first_throw", "description": "~task 20.8s: loops formed over slit for first knot.", "technique_notes": "Consistent with double-wrap surgeon's throw."},
+    {"frame_number": 990, "phase": "first_throw", "description": "~task 29.3s: first throw seated, slit approximated without avulsion.", "technique_notes": "Steady snugging, slower than ideal."},
+    {"frame_number": 1530, "phase": "second_throw", "description": "~task 47.3s: second throw forming after regrasping/post management.", "technique_notes": "Likely single alternating throw; extra regrasping."},
+    {"frame_number": 2070, "phase": "third_throw", "description": "~task 65.3s: third throw cinched with knot stack centered.", "technique_notes": "Alternating single throw, moderate confidence on lead."},
+    {"frame_number": 2820, "phase": "third_throw", "description": "~task 90.3s: additional security manipulation continues after required three.", "technique_notes": "Extra throws or repeated tightening prolong task."},
+    {"frame_number": 3780, "phase": "third_throw", "description": "~task 122.3s: knot manipulation continues, drain still approximated.", "technique_notes": "Stable control; economy of motion is the scoring limiter."},
+    {"frame_number": 5550, "phase": "suture_cut", "description": "~task 181.3s: cutter enters and lines up with tails.", "technique_notes": "Controlled tail management; drain stable."},
+    {"frame_number": 5850, "phase": "completion", "description": "~task 191.3s: both suture ends cut, task complete.", "technique_notes": "Closure intact, no visible avulsion or gap."}
+  ],
+  "completion_time_seconds": 191.0,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0.0, "end_seconds": 4.0, "duration_seconds": 4.0},
+    {"phase": "suture_placement", "start_seconds": 4.0, "end_seconds": 16.5, "duration_seconds": 12.5},
+    {"phase": "first_throw", "start_seconds": 16.5, "end_seconds": 38.5, "duration_seconds": 22.0},
+    {"phase": "second_throw", "start_seconds": 38.5, "end_seconds": 60.5, "duration_seconds": 22.0},
+    {"phase": "third_throw", "start_seconds": 60.5, "end_seconds": 180.2, "duration_seconds": 119.7},
+    {"phase": "suture_cut", "start_seconds": 180.2, "end_seconds": 191.0, "duration_seconds": 10.8},
+    {"phase": "completion", "start_seconds": 191.0, "end_seconds": 191.3, "duration_seconds": 0.3}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "left", "hand_switched": null, "appears_secure": true, "notes": "Double-wrap surgeon's knot; left lead (moderate confidence)."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Single alternating throw; right lead (moderate confidence) after regrasping."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Single alternating throw; extra security throws follow, exact endpoint approximate."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 3.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No visible residual gap after tightening or after tails cut."
+  },
+  "estimated_penalties": 3.0,
+  "estimated_fls_score": 406.0,
+  "confidence_score": 0.63,
+  "technique_summary": "Task completed within time limit without drain avulsion; final knot centered with no visible gap after cutting. Main score limiter was efficiency — substantial time lost to regrasping, repeated tightening, and apparent extra security throws after the first three. Needle control and tissue handling generally safe.",
+  "improvement_suggestions": [
+    "After seating the surgeon's knot, transition directly into two alternating single throws — stop adding extra security throws.",
+    "Load and orient the needle more decisively before the first bite.",
+    "Use smaller working loops and bring the cutter in promptly once three secure throws are complete."
+  ],
+  "strengths": [
+    "No drain avulsion or gross tissue trauma.",
+    "First throw is a proper surgeon's knot.",
+    "Final closure stays approximated after cutting.",
+    "Instrument handling controlled throughout with knot stack centered."
+  ],
+  "comparison_notes": "Strong agreement with Claude V19 (ΔFLS 4.0). Both teachers converge on 191-193s total time and agree on drain closure quality (no gap, no avulsion). GPT-4o assigns almost all the excess time to a single 119.7s third_throw phase (extra security throws + retightening), while Claude distributes across placement (43s) and cut (65s). Different phase boundaries, same root cause — fatigue-driven inefficiency late in the session."
+}
