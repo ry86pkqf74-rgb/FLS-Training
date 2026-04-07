@@ -1,0 +1,70 @@
+{
+  "id": "comparison_V27_001",
+  "video_id": "V27_video",
+  "video_alias": "V27",
+  "created_at": "2026-04-08T10:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V27_video_claude-sonnet-4_20260407_173000.json",
+      "completion_time_seconds": 140.0,
+      "estimated_penalties": 6.0,
+      "estimated_fls_score": 454.0,
+      "confidence": 0.38
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V27_video_gpt-4o_20260408_100000.json",
+      "completion_time_seconds": 142.0,
+      "estimated_penalties": 2.0,
+      "estimated_fls_score": 456.0,
+      "confidence": 0.69
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 2.0,
+    "delta_penalties": 4.0,
+    "delta_fls_score": 2.0,
+    "agreement_level": "very_strong"
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "mostly_closed", "gpt4o": "complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  2.0,
+    "delta_mm": 2.0,
+    "agreement": "moderate"
+  },
+  "penalty_extra_disagreement": {
+    "claude_total_penalties": 6.0,
+    "gpt4o_total_penalties": 2.0,
+    "claude_breakdown": "4.0 placement only (no out-of-rubric penalties this time)",
+    "gpt4o_breakdown": "2.0 placement only",
+    "analysis": "Both teachers stayed inside the rubric this time. The full 4-point penalty delta is attributable to the per-mark deviation estimate (Claude 2.0mm vs GPT-4o 1.0mm). Both estimates are explicitly low-confidence due to the off-axis monitor capture."
+  },
+  "phase_attribution_disagreement": {
+    "claude_diagnosis": "Throw 3 (27s) and cutting (53s) are the loss centers; placement (18s) and throws 1+2 (40s) consolidated.",
+    "gpt4o_diagnosis": "Inter-throw tail management is the loss center; reports throw 1 11.5s, throw 2 32s, throw 3 35s, cut 17s.",
+    "analysis": "Score agreement is very strong but the per-phase timeline differs materially. Claude's split is grounded in frame-by-frame phase boundaries from the video record; GPT-4o's split appears to over-allocate time to throw 2 and under-allocate to the cut. Recommend treating Claude's phase split as canonical for V27 and using GPT-4o's score as the rubric-strict reconciled value."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 454.0,
+    "gpt4o_fls": 456.0,
+    "reconciled_fls": 456.0,
+    "reconciliation_note": "Near-exact score agreement (Δ2.0). Both teachers independently identify V27 as a fatigue regression from V26 (94s/500-tier) back into the V21–V25 plateau band, with no avulsion and a secure final knot. Rubric-strict reconciled value is 456.0 (GPT-4o)."
+  },
+  "systematic_findings": {
+    "fatigue_regression_pattern_confirmed": "V26→V27 (94→140) mirrors the V24→V25 pattern (117→150): a series-best run followed by a plateau regression on the next attempt within the same session. Both teachers flag this independently. Heaviest debris on the board in the entire series corroborates that this is deep into a practice block.",
+    "score_agreement_continues": "Two consecutive videos (V26, V27) where Claude and GPT-4o agree within 4 FLS points. Inter-teacher score reliability on this trainee is now consistently strong.",
+    "placement_estimate_drift_persists": "Claude continues to estimate placement deviation ~1mm higher per mark than GPT-4o on monitor-capture videos. Pattern is now visible across V20, V22, V25, V26, V27. Recommend either standardizing the estimate to the lower-confidence midpoint or adding a calibration note to the prompt.",
+    "phase_split_divergence_new": "V27 is the first comparison in recent memory where the per-phase timelines diverge materially while the totals agree. Worth tracking whether this recurs on future fatigued / debris-heavy attempts.",
+    "drain_agreement_continues": "V27 is another drain-closure agreement case. Running tally now: AGREE 7 (V12, V13, V18, V19, V22, V26, V27), DIVERGE 5 (V11, V14, V16, V17, V20)."
+  }
+}
