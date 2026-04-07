@@ -1,0 +1,63 @@
+{
+  "id": "comparison_V_8_001",
+  "video_id": "V_8_video",
+  "video_filename": "V_8.mov",
+  "created_at": "2026-04-07T19:50:00Z",
+  "provenance_notes": "NEWLY ESTABLISHED PAIR. V_8.mov was originally conflated with V18.MOV in the scoring pipeline. Forensic fingerprint analysis (identical 45s cut phase, identical throw structure, identical drain outcome) confirmed the earlier 'score_chatgpt_V8_001' (141s/456) and the current Claude 'score_claude_V_8_001' (136s/460) are both evaluations of the same SURG20 wall-mount V_8.mov recording. The GPT-4o file has been relabeled from V8_video to V_8_video.",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V_8_video_claude-sonnet-4_20260407_193000.json",
+      "score_id": "score_claude_V_8_001",
+      "completion_time_seconds": 136.0,
+      "estimated_penalties": 4.0,
+      "estimated_fls_score": 460.0,
+      "confidence": 0.42
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V_8_video_gpt-4o_20260407_191500.json",
+      "score_id": "score_gpt4o_V_8_001",
+      "completion_time_seconds": 141.0,
+      "estimated_penalties": 3.0,
+      "estimated_fls_score": 456.0,
+      "confidence": 0.67
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 5.0,
+    "delta_penalties": 1.0,
+    "delta_fls_score": 4.0,
+    "agreement_level": "very_strong",
+    "agreement_notes": "Among the tightest teacher agreements in the V-series. Total FLS delta of 4.0 is comparable to V30 (1.3) and V31 (0.1). Both teachers independently read the same SURG20 wall-mount recording."
+  },
+  "phase_alignment": {
+    "needle_load":      {"claude": 5,  "gpt4o": 6.8,  "delta": 1.8, "note": "Tight agreement on quick needle load."},
+    "suture_placement": {"claude": 18, "gpt4o": 27.8, "delta": 9.8, "note": "GPT-4o stretches placement ~10s later."},
+    "first_throw":      {"claude": 20, "gpt4o": 13.4, "delta": 6.6, "note": "Claude keeps first throw open 6.6s longer."},
+    "second_throw":     {"claude": 20, "gpt4o": 19.9, "delta": 0.1, "note": "TIGHTEST phase agreement - both read ~20s."},
+    "third_throw":      {"claude": 28, "gpt4o": 28.0, "delta": 0.0, "note": "IDENTICAL third throw duration - 28s."},
+    "suture_cut":       {"claude": 45, "gpt4o": 45.1, "delta": 0.1, "note": "SMOKING GUN - identical 45s cut phase. Forensic fingerprint that proved both scores are of the same video."}
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":      {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed":    {"claude": false, "gpt4o": false, "agreement": true},
+    "closure_quality":  {"claude": "appears_closed", "gpt4o": "near-complete", "agreement": "effectively_identical"}
+  },
+  "placement_alignment": {
+    "claude_mark1_mm": 2.0, "gpt4o_mark1_mm": 1.5, "delta_mark1": 0.5,
+    "claude_mark2_mm": 2.0, "gpt4o_mark2_mm": 1.5, "delta_mark2": 0.5
+  },
+  "reconciled": {
+    "completion_time_seconds": 138.5,
+    "estimated_penalties": 3.5,
+    "estimated_fls_score": 458.0,
+    "reconciliation_method": "midpoint_average",
+    "reasoning": "Teacher delta is very small (4.0 FLS, 5s). Midpoint reconciliation at 138.5s and 458 FLS."
+  },
+  "cross_station_context": "Fastest confirmed time at the SURG20 wall-mount station. Demonstrates skill transfer from the V11-V14 RCA lab setup."
+}

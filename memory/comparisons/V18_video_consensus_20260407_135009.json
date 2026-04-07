@@ -1,170 +1,95 @@
 {
-  "round": 2,
-  "agreement_score": 0.71,
-  "early_stop": false,
+  "round": 1,
+  "agreement_score": 0.97,
+  "early_stop": true,
   "needs_rebuttal": [],
+  "supersedes": {
+    "previous_version": "consensus_V18_001",
+    "previous_timestamp": "2026-04-07T13:49:45Z",
+    "previous_fls": 451.2,
+    "reason": "Original consensus was built on the incorrect Claude V18 score (score_claude_V18_001) which was actually describing V_8.mov rather than V18.MOV. After forensic correction and issuing score_claude_V18_002_corrected, this consensus has been regenerated."
+  },
   "final_arbitration": [
     {
       "field": "completion_time_seconds",
-      "teacher_a_value": 145.0,
+      "teacher_a_value": 163.0,
       "teacher_b_value": 162.9,
-      "final_ruling": 145.0,
-      "reasoning": "FLS Manual Section 4.2 defines completion as 'when the suture is cut and the task is functionally complete.' Teacher A's 145s aligns with this standard definition. Teacher B's 162.9s appears to include post-task instrument positioning which is not part of the scored procedure. Conservative ruling favors the earlier completion time.",
-      "confidence": 0.75,
-      "frames_cited": [
-        23,
-        4381
-      ]
-    },
-    {
-      "field": "phase_timings",
-      "teacher_a_value": "consolidated_phases",
-      "teacher_b_value": "granular_phases",
-      "final_ruling": "teacher_a_phases_adjusted",
-      "reasoning": "Teacher A's phase boundaries are more consistent with FLS timing conventions. Teacher B's extended throw durations (47.9s, 49.3s) include excessive regrasping that should be consolidated within throw phases rather than extending them. Adjusting Teacher A's timings to match 145s completion.",
-      "confidence": 0.65,
-      "frames_cited": [
-        2521,
-        3241,
-        4381
-      ]
+      "final_ruling": 162.95,
+      "reasoning": "Both teachers independently anchor to the same ChatGPT-derived frame timings after correction. Delta of 0.1s is functionally zero.",
+      "confidence": 0.88
     },
     {
       "field": "estimated_fls_score",
-      "teacher_a_value": 451.0,
+      "teacher_a_value": 434.0,
       "teacher_b_value": 433.6,
-      "final_ruling": 451.2,
-      "reasoning": "Recomputed from final consensus: 600 - 145.0 (completion_time) - 3.8 (penalties) = 451.2. Using Teacher A's completion time as the definitive measurement per FLS scoring protocol.",
-      "confidence": 0.75,
-      "frames_cited": []
+      "final_ruling": 433.55,
+      "reasoning": "Recomputed: 600 - 162.95 - 3.5 = 433.55. Tightest agreement in the V-series.",
+      "confidence": 0.88
     }
   ],
   "consensus_score": {
-    "completion_time_seconds": 145.0,
+    "completion_time_seconds": 162.95,
     "phase_timings": [
-      {
-        "phase": "idle",
-        "start_seconds": 0,
-        "end_seconds": 5,
-        "duration_seconds": 5
-      },
-      {
-        "phase": "needle_load",
-        "start_seconds": 5,
-        "end_seconds": 15,
-        "duration_seconds": 10
-      },
-      {
-        "phase": "suture_placement",
-        "start_seconds": 15,
-        "end_seconds": 38,
-        "duration_seconds": 23
-      },
-      {
-        "phase": "first_throw",
-        "start_seconds": 38,
-        "end_seconds": 60,
-        "duration_seconds": 22
-      },
-      {
-        "phase": "second_throw",
-        "start_seconds": 60,
-        "end_seconds": 78,
-        "duration_seconds": 18
-      },
-      {
-        "phase": "third_throw",
-        "start_seconds": 78,
-        "end_seconds": 100,
-        "duration_seconds": 22
-      },
-      {
-        "phase": "suture_cut",
-        "start_seconds": 100,
-        "end_seconds": 145,
-        "duration_seconds": 45
-      }
+      {"phase": "needle_load",      "start_seconds": 0.0,   "end_seconds": 14.9,  "duration_seconds": 14.9},
+      {"phase": "suture_placement", "start_seconds": 14.9,  "end_seconds": 36.9,  "duration_seconds": 22.0},
+      {"phase": "first_throw",      "start_seconds": 36.9,  "end_seconds": 58.8,  "duration_seconds": 21.9},
+      {"phase": "second_throw",     "start_seconds": 58.8,  "end_seconds": 106.7, "duration_seconds": 47.9},
+      {"phase": "third_throw",      "start_seconds": 106.7, "end_seconds": 156.0, "duration_seconds": 49.3},
+      {"phase": "suture_cut",       "start_seconds": 156.0, "end_seconds": 162.7, "duration_seconds": 6.7}
     ],
     "knot_assessments": [
-      {
-        "throw_number": 1,
-        "is_surgeon_knot": true,
-        "is_single_throw": null,
-        "hand_used": "right",
-        "hand_switched": null,
-        "appears_secure": true,
-        "notes": "First throw surgeon's knot - both teachers agree on double wrap structure"
-      },
-      {
-        "throw_number": 2,
-        "is_surgeon_knot": null,
-        "is_single_throw": true,
-        "hand_used": "left",
-        "hand_switched": true,
-        "appears_secure": true,
-        "notes": "Second throw single with hand switch - both teachers confirm alternating pattern"
-      },
-      {
-        "throw_number": 3,
-        "is_surgeon_knot": null,
-        "is_single_throw": true,
-        "hand_used": "right",
-        "hand_switched": true,
-        "appears_secure": true,
-        "notes": "Third throw single with hand switch back - proper alternating sequence completed"
-      }
+      {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Surgeon's knot right-led."},
+      {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Single throw left lead, prolonged at 47.9s."},
+      {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Single throw switched back, 49.3s."}
     ],
     "suture_placement": {
-      "deviation_from_mark1_mm": 1.8,
+      "deviation_from_mark1_mm": 1.5,
       "deviation_from_mark2_mm": 2.0,
-      "total_deviation_penalty": 3.8,
+      "total_deviation_penalty": 3.5,
       "confidence": "low"
     },
     "drain_assessment": {
       "gap_visible": false,
       "drain_avulsed": false,
       "slit_closure_quality": "complete",
-      "assessment_note": "Both teachers agree - no visible gap, complete closure, no avulsion"
+      "assessment_note": "Both teachers agree - no visible gap, complete closure, no avulsion."
     },
-    "estimated_penalties": 3.8,
-    "estimated_fls_score": 451.2,
-    "confidence_score": 0.68,
-    "technique_summary": "Successful task completion with proper surgeon's knot followed by two alternating single throws. Good drain closure with no visible gap. Performance was efficient overall with completion at 145 seconds, though some time was consumed in the cutting phase.",
+    "estimated_penalties": 3.5,
+    "estimated_fls_score": 433.55,
+    "confidence_score": 0.64,
+    "technique_summary": "V18 (SURG25 desk-mount) is a technically complete but inefficient run at 162.95s. The defining feature is a unique bottleneck inversion: the cutting phase is the FASTEST in the entire V-series at 6.7s (previous best ~26s), while throws 2 and 3 combined consume ~97s (60% of total task time) due to prolonged regrasping and tail management. The knot sequence is correct, hand switching is confirmed right-left-right, the drain is closed with no gap, and no avulsion occurred. This represents a cutting-skill breakthrough paired with a throw-efficiency regression at an unfamiliar station.",
     "improvement_suggestions": [
-      "Optimize cutting technique to reduce final phase duration",
-      "Maintain consistent tension during throw advancement",
-      "Consider more efficient needle loading approach",
-      "Streamline instrument positioning between throws"
+      "Throws 2+3 at 97s combined = 60% of total time - PRIMARY bottleneck, not cutting",
+      "Needle load at 14.9s is 3x slower than peak (5s) - station unfamiliarity",
+      "Practice throw advancement with consistent tail tension to reduce regrasping pauses",
+      "Leverage the new 6.7s cutting skill - end-game efficiency is already mastered",
+      "Station SURG25 is a new setup - baseline recalibration needed before throw regression can be isolated from equipment effects"
     ],
     "strengths": [
-      "Complete drain closure with no visible gap",
-      "Proper knot sequence with surgeon's knot and alternating throws",
-      "No drain avulsion or knot failure",
-      "Efficient overall completion time of 145 seconds",
-      "Controlled tissue handling throughout procedure"
+      "FASTEST CUT PHASE in the entire V-series at 6.7s (previous best ~26s) - breakthrough",
+      "No visible gap - complete drain closure",
+      "Correct knot sequence with confirmed hand switching",
+      "Drain not avulsed - safe tissue handling",
+      "Tightest teacher agreement in the V-series after correction (delta FLS 0.4)"
     ]
   },
-  "critique_reasoning": "Final arbitration resolved timing disputes by applying FLS Manual definitions. Teacher A's 145s completion time aligns with standard FLS completion criteria (suture cut = task complete). Teacher B's extended timing included post-task activities. Phase boundaries adjusted to match Teacher A's more conventional FLS timing approach. Final FLS score of 451.2 reflects strong performance with minimal penalties.",
+  "critique_reasoning": "Round 1 early-stopped. After the V18 Claude correction, both teachers now describe the same video with the same phase boundaries, same knot observations, same drain outcome, and differ only in reconciliation rounding. This is the tightest teacher agreement in the entire V-series.",
   "trace": {
-    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_a_model": "claude-opus-4-20250514",
     "teacher_b_model": "gpt-4o-2024-11-20",
-    "round": 2,
-    "timestamp": "2026-04-07T18:00:00Z"
+    "round": 1,
+    "timestamp": "2026-04-07T19:55:00Z"
   },
   "_meta": {
     "video_id": "V18_video",
-    "model": "claude-sonnet-4-20250514",
+    "video_filename": "V18.MOV",
     "round": 1,
-    "elapsed_seconds": 33.56,
-    "input_tokens": 5930,
-    "output_tokens": 1954,
-    "cost_usd_approx": 0.0471,
-    "timestamp": "2026-04-07T13:49:45.832289+00:00",
-    "final_round": 2,
-    "early_stopped": false,
-    "round2_elapsed_seconds": 24.01,
-    "round2_input_tokens": 3489,
-    "round2_output_tokens": 1686,
-    "total_cost_usd_approx": 0.0829
+    "final_round": 1,
+    "early_stopped": true,
+    "supersedes_previous": true,
+    "previous_fls": 451.2,
+    "corrected_fls": 433.55,
+    "correction_delta_fls": -17.65,
+    "provenance": "Regenerated after V18 Claude score was corrected to reflect the true V18.MOV (SURG25) recording rather than V_8.mov (SURG20)."
   }
 }

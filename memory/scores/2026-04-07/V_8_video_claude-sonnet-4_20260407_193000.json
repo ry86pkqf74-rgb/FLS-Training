@@ -1,0 +1,81 @@
+{
+  "id": "score_claude_V_8_001",
+  "video_id": "V_8_video",
+  "video_filename": "V_8.mov",
+  "video_hash": "v8_surg20_placeholder",
+  "source": "teacher_claude",
+  "model_name": "claude-opus-4-20250514",
+  "model_version": "claude-opus-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T19:30:00Z",
+  "recording_notes": "Phone filming wall-mounted RCA monitor at SURG20 station. 'SURG20 SUPPLIES DO NOT REMOVE' label visible at bottom right. 'After use, please unplug' instruction on wall at upper left. Pink/red foam block with Penrose drain. Dark (black) suture. Suture debris visible below trainer from prior attempts. Oblique camera angle - moderate visibility. 149s total video duration.",
+  "frame_analyses": [
+    {"frame_number": 1, "timestamp_seconds": 5, "phase": "idle", "description": "SURG20 wall-mounted RCA monitor visible. Drain on pink/red foam block. No instruments in field yet.", "technique_notes": "Pre-start. Camera at oblique angle to wall-mounted monitor."},
+    {"frame_number": 2, "timestamp_seconds": 10, "phase": "needle_load", "description": "First instrument enters from right with dark suture and needle visible. Needle loading underway. TIMING STARTS ~8s.", "technique_notes": "Quick entry. Needle loaded efficiently."},
+    {"frame_number": 3, "timestamp_seconds": 15, "phase": "suture_placement", "description": "Instrument at drain with needle visible approaching tissue. Suture placement beginning.", "technique_notes": "Smooth transition from load to placement."},
+    {"frame_number": 5, "timestamp_seconds": 25, "phase": "suture_placement", "description": "Both instruments at drain. Dark suture extending through tissue. Needle pass completing.", "technique_notes": "Placement appears controlled. Suture drawn through both marks."},
+    {"frame_number": 7, "timestamp_seconds": 35, "phase": "first_throw", "description": "Both instruments at drain with suture crossing pattern. First throw wrapping in progress.", "technique_notes": "First throw setup. Suture loop formation visible."},
+    {"frame_number": 10, "timestamp_seconds": 50, "phase": "first_throw_complete", "description": "Instruments at top of drain. First throw appears cinched. Slit beginning to close.", "technique_notes": "First throw seated. Good approximation visible."},
+    {"frame_number": 12, "timestamp_seconds": 60, "phase": "second_throw", "description": "Both instruments at drain working on second throw. Suture pattern visible.", "technique_notes": "Second throw in progress. Alternating direction appears preserved."},
+    {"frame_number": 15, "timestamp_seconds": 75, "phase": "second_throw_tightening", "description": "Both instruments spread laterally across drain - classic lateral pull tightening pattern.", "technique_notes": "Lateral tightening of second throw. Good technique."},
+    {"frame_number": 18, "timestamp_seconds": 90, "phase": "third_throw", "description": "Suture loop visible above drain. Instrument from right. Third throw wrapping in progress.", "technique_notes": "Third throw. Longest throw phase at ~28s."},
+    {"frame_number": 20, "timestamp_seconds": 100, "phase": "third_throw_complete", "description": "Instruments at drain. Knot stack appears complete. Suture tails extending.", "technique_notes": "Third throw seated. Knot appears secure."},
+    {"frame_number": 21, "timestamp_seconds": 105, "phase": "suture_cut", "description": "Scissors visible with open jaws at suture. Cutting phase begun.", "technique_notes": "Scissors introduced. Cutting underway ~98s task time."},
+    {"frame_number": 24, "timestamp_seconds": 120, "phase": "suture_cut", "description": "Still cutting. Instruments at drain, scissors working at suture tails.", "technique_notes": "Extended cutting. 22s into cutting phase."},
+    {"frame_number": 28, "timestamp_seconds": 140, "phase": "suture_cut", "description": "Blue cutting instrument visible at drain. Suture tails still being trimmed.", "technique_notes": "Cutting continues. 42s into cutting."},
+    {"frame_number": 30, "timestamp_seconds": 149, "phase": "completion", "description": "Final frame. Instruments withdrawn. Compact knot visible at drain center with short dark suture tails in X-pattern. Drain slit appears CLOSED - no visible gap. Drain not avulsed, centered on block. Clean result.", "technique_notes": "Completion at ~143s absolute, ~136s task time. Good quality final result."}
+  ],
+  "completion_time_seconds": 136.0,
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0, "end_seconds": 5, "duration_seconds": 5},
+    {"phase": "suture_placement", "start_seconds": 5, "end_seconds": 23, "duration_seconds": 18},
+    {"phase": "first_throw", "start_seconds": 23, "end_seconds": 43, "duration_seconds": 20},
+    {"phase": "second_throw", "start_seconds": 43, "end_seconds": 63, "duration_seconds": 20},
+    {"phase": "third_throw", "start_seconds": 63, "end_seconds": 91, "duration_seconds": 28},
+    {"phase": "suture_cut", "start_seconds": 91, "end_seconds": 136, "duration_seconds": 45}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "unclear", "hand_switched": null, "appears_secure": true, "notes": "First throw 23-43s (20s). Double throw visible in suture crossing pattern. Confidence: low (monitor angle)."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Second throw 43-63s (20s). Lateral pull visible at 75s absolute. Single throw. Confidence: low."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Third throw 63-91s (28s). Longest throw - wrapping visible at 90s absolute. Knot secure at completion. Confidence: low."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "very_low",
+    "placement_notes": "Oblique monitor angle makes mark visibility very poor. Conservative estimate. Placement appears near marks."
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "appears_closed",
+    "assessment_note": "Final frame shows compact knot with short tails. Drain slit appears well approximated. No visible gap from monitor view. Drain not avulsed."
+  },
+  "estimated_penalties": 4.0,
+  "estimated_fls_score": 460.0,
+  "confidence_score": 0.42,
+  "technique_summary": "V_8 at approximately 136 seconds is the fastest confirmed time at the SURG20 station and ranks among the top performances in the series. Needle loading is fast at 5s. Placement at 18s is efficient. Throws total 68s with a consistent pattern - first and second at 20s each, third slightly longer at 28s. Cutting at 45s (33% of total) remains the dominant bottleneck. The final result is clean: no gap, compact knot, short tails, drain not avulsed. Strong performance demonstrating skill transfer to the SURG20 station.",
+  "improvement_suggestions": [
+    "Cutting at 45s is 33% of total time - remains the #1 improvement target across all stations",
+    "Third throw at 28s is 8s slower than throws 1-2 - investigate if tightening technique differs",
+    "SURG20 wall-mount angle is hardest to score - direct camera would improve confidence",
+    "At 136s this is already a strong performance - maintaining consistency is as important as speed gains"
+  ],
+  "strengths": [
+    "FASTEST confirmed time at SURG20 station (~136s)",
+    "No visible gap - good drain closure quality",
+    "Short, well-trimmed suture tails - clean final result",
+    "Efficient first and second throws at 20s each",
+    "Fast needle loading at 5s - consistent across all equipment",
+    "Drain not avulsed - safe tissue handling maintained",
+    "31% time improvement from baseline (198s -> 136s)"
+  ],
+  "comparison_to_previous": {
+    "time_vs_pre": -62,
+    "time_vs_postV7": -6,
+    "time_vs_V12": 21,
+    "trajectory": "strong_performance_new_station",
+    "note": "THIS IS A NEWLY SCORED VIDEO. Previously the V18 project JSON incorrectly referenced V_8.mov as its source file. This is the correct independent score for V_8.mov filmed at the SURG20 wall-mounted monitor station."
+  }
+}

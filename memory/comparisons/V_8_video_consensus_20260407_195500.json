@@ -1,0 +1,82 @@
+{
+  "round": 1,
+  "agreement_score": 0.94,
+  "early_stop": true,
+  "needs_rebuttal": [],
+  "final_arbitration": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 136.0,
+      "teacher_b_value": 141.0,
+      "final_ruling": 138.5,
+      "reasoning": "Both teachers read the same SURG20 recording with similar phase structures. 5s delta within expected noise. Midpoint reconciliation.",
+      "confidence": 0.78
+    },
+    {
+      "field": "estimated_fls_score",
+      "teacher_a_value": 460.0,
+      "teacher_b_value": 456.0,
+      "final_ruling": 458.0,
+      "reasoning": "Recomputed: 600 - 138.5 - 3.5 = 458.0. Delta of 4.0 FLS among smallest in series.",
+      "confidence": 0.78
+    }
+  ],
+  "consensus_score": {
+    "completion_time_seconds": 138.5,
+    "phase_timings": [
+      {"phase": "needle_load",      "start_seconds": 0.0,   "end_seconds": 5.9,   "duration_seconds": 5.9},
+      {"phase": "suture_placement", "start_seconds": 5.9,   "end_seconds": 28.8,  "duration_seconds": 22.9},
+      {"phase": "first_throw",      "start_seconds": 28.8,  "end_seconds": 45.5,  "duration_seconds": 16.7},
+      {"phase": "second_throw",     "start_seconds": 45.5,  "end_seconds": 65.4,  "duration_seconds": 19.9},
+      {"phase": "third_throw",      "start_seconds": 65.4,  "end_seconds": 93.4,  "duration_seconds": 28.0},
+      {"phase": "suture_cut",       "start_seconds": 93.4,  "end_seconds": 138.5, "duration_seconds": 45.1}
+    ],
+    "knot_assessments": [
+      {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Surgeon's knot - both teachers agree on double wrap."},
+      {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Single throw with hand switch - both confirm alternating pattern."},
+      {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Single throw switched back. Secure knot stack."}
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.75,
+      "deviation_from_mark2_mm": 1.75,
+      "total_deviation_penalty": 3.5,
+      "confidence": "low"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "assessment_note": "Both teachers agree - no visible gap, complete closure, no avulsion."
+    },
+    "estimated_penalties": 3.5,
+    "estimated_fls_score": 458.0,
+    "confidence_score": 0.55,
+    "technique_summary": "V_8 (SURG20 wall-mount) is a strong top-tier performance at ~138s. Both teachers converge on: fast needle load, efficient placement, consistent throw pattern, and a prolonged 45s cut phase that dominates end-of-task time. Drain outcome is clean. Cross-station skill transfer demonstration.",
+    "improvement_suggestions": [
+      "45s cut phase is 33% of total time - primary bottleneck",
+      "Third throw at 28s is 8s slower than throws 1-2",
+      "Oblique wall-mount angle - direct camera would improve scoring confidence"
+    ],
+    "strengths": [
+      "Fastest confirmed SURG20 station time",
+      "Clean drain closure with no visible gap",
+      "Compact knot with short tails",
+      "Teacher agreement delta under 5% (very_strong)"
+    ]
+  },
+  "critique_reasoning": "Round 1 early-stopped due to very_strong teacher agreement. No arbitration needed beyond midpoint reconciliation.",
+  "trace": {
+    "teacher_a_model": "claude-opus-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-11-20",
+    "round": 1,
+    "timestamp": "2026-04-07T19:55:00Z"
+  },
+  "_meta": {
+    "video_id": "V_8_video",
+    "video_filename": "V_8.mov",
+    "round": 1,
+    "final_round": 1,
+    "early_stopped": true,
+    "provenance": "Generated after forensic reconciliation of conflated V8/V18 records."
+  }
+}

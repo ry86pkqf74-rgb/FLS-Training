@@ -1,14 +1,15 @@
 {
   "id": "score_gpt4o_V18_001",
   "video_id": "V18_video",
-  "video_filename": "V_8.mov",
-  "video_alias": "V18",
+  "video_filename": "V18.MOV",
+  "video_hash": "v18_surg25_placeholder",
   "source": "teacher_gpt4o",
   "model_name": "gpt-4o-2024-11-20",
   "model_version": "gpt-4o-2024-11-20",
   "prompt_version": "v001",
   "scored_at": "2026-04-08T01:00:00Z",
-  "recording_notes": "Phone filming wall-mounted RCA monitor — SURG20 station. Dark suture. Oblique monitor angle.",
+  "correction_notes": "Filename field corrected 2026-04-07T19:45 from 'V_8.mov' to 'V18.MOV'. V18.MOV is the 170s desk-mounted RCA monitor recording at SURG25 station (pegboard, 'FLS Circle Cut Training and Testing' sheet). V_8.mov is a distinct 149s wall-mounted RCA recording at SURG20 station and is now scored independently as video_id=V_8_video.",
+  "recording_notes": "Phone filming desk-mounted RCA monitor at SURG25 station. Pegboard with instruments visible to left. 'SURG 25 - FLS Circle Cut Training and Testing' instruction sheet pinned above monitor. Pink/red foam block with Penrose drain. Dark suture. Oblique monitor angle. 170s total video duration.",
   "frame_analyses": [
     {"frame_number": 100, "phase": "needle_load", "description": "~3.3s: first instrument enters from the left; scoring timer starts here.", "technique_notes": "Controlled entry; some extra tail/needle orientation work before a stable load."},
     {"frame_number": 361, "phase": "needle_load", "description": "~12.0s: needle being reoriented in front of drain for first bite.", "technique_notes": "Deliberate rather than fluid; small regrasp maneuvers cost time."},

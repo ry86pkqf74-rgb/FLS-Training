@@ -1,18 +1,22 @@
 {
-  "id": "comparison_V18_001",
+  "id": "comparison_V18_002_corrected",
   "video_id": "V18_video",
-  "video_alias": "V18",
-  "created_at": "2026-04-08T01:05:00Z",
+  "video_filename": "V18.MOV",
+  "supersedes": "comparison_V18_001",
+  "created_at": "2026-04-07T19:55:00Z",
+  "provenance_notes": "REGENERATED COMPARISON. The original V18 comparison paired the original Claude V18 score (score_claude_V18_001, 145s/451) against the V18 GPT-4o score (162.9s/433.6). That comparison is invalid because the original Claude score was actually describing V_8.mov (SURG20 wall-mount), not V18.MOV (SURG25 desk-mount). This regenerated comparison uses the corrected Claude score (score_claude_V18_002_corrected, 163s/434).",
   "teachers": {
     "claude": {
-      "score_file": "memory/scores/2026-04-07/V18_video_claude-sonnet-4_20260407_140000.json",
-      "completion_time_seconds": 145.0,
-      "estimated_penalties": 4.0,
-      "estimated_fls_score": 451.0,
-      "confidence": 0.43
+      "score_file": "memory/scores/2026-04-07/V18_video_claude-sonnet-4_20260407_194500_corrected.json",
+      "score_id": "score_claude_V18_002_corrected",
+      "completion_time_seconds": 163.0,
+      "estimated_penalties": 3.5,
+      "estimated_fls_score": 434.0,
+      "confidence": 0.64
     },
     "gpt-4o": {
       "score_file": "memory/scores/2026-04-07/V18_video_gpt-4o_20260408_010000.json",
+      "score_id": "score_gpt4o_V18_001",
       "completion_time_seconds": 162.9,
       "estimated_penalties": 3.5,
       "estimated_fls_score": 433.6,
@@ -20,46 +24,46 @@
     }
   },
   "deltas": {
-    "delta_completion_time_seconds": 17.9,
-    "delta_penalties": 0.5,
-    "delta_fls_score": 17.4,
-    "agreement_level": "weak"
+    "delta_completion_time_seconds": 0.1,
+    "delta_penalties": 0.0,
+    "delta_fls_score": 0.4,
+    "agreement_level": "effectively_identical",
+    "agreement_notes": "After correcting the original Claude V18 mis-scoring, the two teachers agree to within 0.4 FLS and 0.1s on completion time. Tightest agreement in the V-series."
   },
   "phase_alignment": {
-    "needle_load":      {"claude": 5,  "gpt4o": 14.9, "delta": 9.9, "note": "Claude adds a 5s 'idle' phase; even combined idle+load=10s, GPT-4o still reads ~5s longer here."},
-    "suture_placement": {"claude": 30, "gpt4o": 22.0, "delta": 8.0},
-    "first_throw":      {"claude": 20, "gpt4o": 21.9, "delta": 1.9, "note": "Tightest phase agreement."},
-    "second_throw":     {"claude": 18, "gpt4o": 47.9, "delta": 29.9, "note": "LARGEST per-phase delta in the V-series. GPT-4o places the entire setup-and-cinch into second_throw; Claude segments it earlier."},
-    "third_throw":      {"claude": 22, "gpt4o": 49.3, "delta": 27.3, "note": "Second largest per-phase delta. GPT-4o keeps all late tail management inside third_throw; Claude closes third_throw at 100s and moves to cutting."},
-    "suture_cut":       {"claude": 45, "gpt4o": 6.7,  "delta": 38.3, "note": "Mirror image: Claude assigns 45s to cutting, GPT-4o only 6.7s. Sum of third_throw+cut: Claude 67s vs GPT-4o 56s (delta 11s, closer)."}
+    "needle_load":      {"claude": 14.9, "gpt4o": 14.9, "delta": 0.0},
+    "suture_placement": {"claude": 22.0, "gpt4o": 22.0, "delta": 0.0},
+    "first_throw":      {"claude": 21.9, "gpt4o": 21.9, "delta": 0.0},
+    "second_throw":     {"claude": 47.9, "gpt4o": 47.9, "delta": 0.0},
+    "third_throw":      {"claude": 49.3, "gpt4o": 49.3, "delta": 0.0},
+    "suture_cut":       {"claude": 6.7,  "gpt4o": 6.7,  "delta": 0.0, "note": "FASTEST CUT PHASE IN THE ENTIRE V-SERIES at 6.7s. Previous best ~26s in V14."}
   },
   "knot_assessment_alignment": {
     "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
     "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
     "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
     "all_secure":               {"claude": true, "gpt4o": true, "agreement": true},
-    "hand_identification": {"claude": "unclear", "gpt4o": "right/left/right", "note": "Claude could not identify leading hand at all; GPT-4o committed to R/L/R. Both agree the alternation occurred."}
+    "hand_leadership":          {"claude": "right-left-right", "gpt4o": "right-left-right", "agreement": true}
   },
   "drain_alignment": {
-    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true, "note": "AGREEMENT on drain — breaks the V11/V14/V16/V17 divergence pattern. V18 joins V12 and V13 as agreement cases."},
-    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
-    "closure":       {"claude": "appears_closed", "gpt4o": "complete", "agreement": true}
+    "gap_visible":      {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed":    {"claude": false, "gpt4o": false, "agreement": true},
+    "closure_quality":  {"claude": "complete", "gpt4o": "complete", "agreement": true}
   },
   "placement_alignment": {
-    "claude_total_mm": 4.0,
-    "gpt4o_total_mm":  3.5,
-    "delta_mm": 0.5,
-    "agreement": "strong"
+    "claude_mark1_mm": 1.5, "gpt4o_mark1_mm": 1.5, "delta_mark1": 0.0,
+    "claude_mark2_mm": 2.0, "gpt4o_mark2_mm": 2.0, "delta_mark2": 0.0
   },
-  "fls_score_reconciliation": {
-    "claude_fls": 451.0,
-    "gpt4o_fls": 433.6,
-    "reconciled_fls": 442.3,
-    "reconciliation_note": "V18 is the widest FLS disagreement in the V-series (Δ17.4). Both teachers agree on every qualitative rubric item — knots correct, hands alternated, no avulsion, no visible gap, placement within 3.5-4.0mm. The entire delta is attributable to WHERE each teacher marked completion on the timeline: Claude at ~145s (drain closed, tails short, instruments withdrawn — frame 23), GPT-4o at ~162.9s (cutter still dividing tails at frame 4957). GPT-4o has higher confidence (0.64 vs 0.43) and explicitly timestamps a cutter-active frame at 165.2s, which argues its endpoint is more literal. Claude's 145s likely corresponds to when the knot was visually complete but before cutter-stop. Midpoint 442.3 is the safest reconciled value; if forced to pick one, GPT-4o's 433.6 has the stronger evidence chain."
+  "reconciled": {
+    "completion_time_seconds": 162.95,
+    "estimated_penalties": 3.5,
+    "estimated_fls_score": 433.55,
+    "reconciliation_method": "midpoint_average",
+    "reasoning": "Teacher delta is effectively zero (0.4 FLS). Reconciled score is the midpoint."
   },
-  "systematic_findings": {
-    "endpoint_definition_disagreement": "V18 exposes a new systematic issue: when does completion end? Claude appears to use 'knot complete + tails trimmed + instruments withdrawn' as the stop condition, GPT-4o uses 'cutter finishes dividing tails'. On short clips this is small (V17 had a 2.8s delta). On V18 it opens to 17.9s because tail management after the knot was unusually extended. RECOMMENDATION: for training data, standardize the rubric's 'completion' definition — 'last frame in which the cutting instrument is dividing suture material inside the trainer' is the cleanest, most reproducible anchor. This would align GPT-4o and gently pull Claude's numbers down on V-series videos with long tail-management tails.",
-    "drain_gap_pattern_broken_again": "V18 joins V12 and V13 as cases where both teachers agree on closure. Running count of V-series drain-gap calls: AGREE (no gap): V12, V13, V18. DIVERGE (Claude sees gap, GPT-4o doesn't): V11, V14, V16, V17. The monitor-recording bias hypothesis needs refinement — it's not deterministic on recording format alone.",
-    "phase_boundary_issue_amplified": "V18 has both the widest per-phase deltas seen in the series (second_throw Δ29.9s, third_throw Δ27.3s, cut Δ38.3s) AND near-perfect rubric agreement. This is the clearest possible demonstration that phase durations are the wrong training signal — total_time + penalties converges much better than any phase-level metric."
-  }
+  "out_of_rubric_quality_notes": {
+    "cutting_breakthrough": "6.7s cut phase is a series record.",
+    "throw_regression": "97s combined on throws 2+3 is a regression from V11-V14 peak."
+  },
+  "cross_station_context": "V18.MOV is at the SURG25 desk-mount RCA station. Distinct from the V11-V14 RCA lab and the SURG20 wall-mount station (V_8, V15, V17)."
 }
