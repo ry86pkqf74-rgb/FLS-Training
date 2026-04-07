@@ -1,0 +1,41 @@
+{
+  "id": "score_gpt4o_V15_001",
+  "video_id": "V15_video",
+  "video_filename": "V15.mov",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-11-20",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T15:00:00Z",
+  "phase_timings": [
+    {"phase": "needle_load", "start_seconds": 0, "end_seconds": 6, "duration_seconds": 6},
+    {"phase": "suture_placement", "start_seconds": 6, "end_seconds": 26, "duration_seconds": 20},
+    {"phase": "first_throw", "start_seconds": 26, "end_seconds": 48, "duration_seconds": 22},
+    {"phase": "second_throw", "start_seconds": 48, "end_seconds": 72, "duration_seconds": 24},
+    {"phase": "third_throw", "start_seconds": 72, "end_seconds": 131, "duration_seconds": 59},
+    {"phase": "suture_cut", "start_seconds": 131, "end_seconds": 145, "duration_seconds": 14}
+  ],
+  "completion_time_seconds": 145.0,
+  "video_length_seconds": 147.4,
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "hand_used": "unclear", "appears_secure": true, "notes": "Surgeon's knot wrap visible early."},
+    {"throw_number": 2, "is_single_throw": true, "hand_switched": true, "appears_secure": true, "notes": "Hand switch preserved."},
+    {"throw_number": 3, "is_single_throw": true, "hand_switched": true, "appears_secure": true, "notes": "Extended third throw 72-131s; biggest single time sink but knot completed cleanly."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.0,
+    "total_deviation_penalty": 2.0,
+    "confidence": "moderate"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete"
+  },
+  "estimated_penalties": 2.0,
+  "estimated_fls_score": 453.0,
+  "confidence_score": 0.64,
+  "technique_summary": "V15 is a clean successful run at 145s / 453 FLS — no gap, no avulsion, surgeon's knot + two hand-switched single throws all secure. The dominant time cost is the third throw at 59 seconds (72s-131s); needle loading (6s), suture placement (20s), and cutting (14s) are all efficient. Time loss here is technique-paced, not error-driven — the trainee completed the task correctly but spent extra seconds on the final throw, likely on wrap setup or tension confirmation.",
+  "comparison_notes": "Single-teacher entry — no Claude V15 score yet. Cannot build comparison file until Claude scores V15 independently."
+}
