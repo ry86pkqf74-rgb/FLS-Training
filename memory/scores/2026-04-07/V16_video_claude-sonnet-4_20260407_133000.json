@@ -1,0 +1,118 @@
+{
+  "id": "score_claude_V16_001",
+  "video_id": "V16_video",
+  "video_filename": "V16.mov",
+  "video_hash": "c2b6bc18287e9b06",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T13:30:00Z",
+  "recording_notes": "Direct webcam-style recording from inside FLS trainer box at 640x480 — lowest resolution in the series. Pink/red foam block (same as V15). Purple/pink suture. Mesh trainer box interior visible. Perforated base plate visible. Image quality limits detailed assessment.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "needle_load",
+      "description": "At 9 seconds, both instruments in field near drain. Dark (left) and silver (right) instruments at drain. Purple suture visible. One mark dot visible on drain.",
+      "technique_notes": "Entry at typical pace. Low resolution makes detail assessment challenging."
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "At 36 seconds, still in suture placement. One instrument visible working near drain. Curved suture visible draped across foam block.",
+      "technique_notes": "Extended suture placement — still placing at 36 seconds. Significantly slower than V12-V14 peak (22-25s)."
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "At 54 seconds, instruments appear to be above frame or repositioning. Suture loop visible through drain — placement may be completing. Suture tail extends from lower left.",
+      "technique_notes": "Very extended placement phase approaching 45-50 seconds. Comparable to V11 (50s) and pre-training baseline."
+    },
+    {
+      "frame_number": 8,
+      "phase": "first_throw",
+      "description": "At 72 seconds, both instruments visible near drain. Motion blur on right instrument suggests active wrapping/tightening. First throw in progress.",
+      "technique_notes": "First throw underway. Instruments working at drain level."
+    },
+    {
+      "frame_number": 11,
+      "phase": "third_throw",
+      "description": "At 99 seconds, right instrument visible across field. Drain narrowing — slit closing. Second or third throw in progress.",
+      "technique_notes": "Throw sequence continuing. Drain slit visibly closing."
+    },
+    {
+      "frame_number": 15,
+      "phase": "suture_cut",
+      "description": "At 135 seconds, left instrument (dark) visible from upper left. Purple suture tails visible extending from drain. Cutting in progress.",
+      "technique_notes": "Cutting phase. Already 15+ seconds into cutting at this point."
+    },
+    {
+      "frame_number": 23,
+      "phase": "completion",
+      "description": "Final frame at 179 seconds. Instruments withdrawn. Drain visible on block with knot — dark suture visible on drain surface. Drain slit appears mostly closed with possible small gap. Short suture tails. Drain not avulsed. 640x480 resolution limits detailed final assessment.",
+      "technique_notes": "Completion at approximately 175 seconds. Significant regression from V12-V15 range. Extended cutting (~55s) and placement (~45s) are the primary time sinks."
+    }
+  ],
+  "completion_time_seconds": 175.0,
+  "phase_timings": [
+    {"phase": "idle", "start_seconds": 0, "end_seconds": 5, "duration_seconds": 5},
+    {"phase": "needle_load", "start_seconds": 5, "end_seconds": 12, "duration_seconds": 7},
+    {"phase": "suture_placement", "start_seconds": 12, "end_seconds": 55, "duration_seconds": 43},
+    {"phase": "first_throw", "start_seconds": 55, "end_seconds": 78, "duration_seconds": 23},
+    {"phase": "second_throw", "start_seconds": 78, "end_seconds": 97, "duration_seconds": 19},
+    {"phase": "third_throw", "start_seconds": 97, "end_seconds": 120, "duration_seconds": 23},
+    {"phase": "suture_cut", "start_seconds": 120, "end_seconds": 175, "duration_seconds": 55}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "unclear", "hand_switched": null, "appears_secure": true, "notes": "First throw visible at ~72s. Confidence low due to resolution."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Second throw in ~78-97s range. Confidence low."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Third throw completing ~120s. Confidence low."}
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "very_low"
+  },
+  "drain_assessment": {
+    "gap_visible": true,
+    "drain_avulsed": false,
+    "slit_closure_quality": "partial_small_gap",
+    "assessment_note": "640x480 resolution limits gap assessment. Drain slit appears mostly closed but small gap likely present. Confidence low."
+  },
+  "estimated_penalties": 8.0,
+  "estimated_fls_score": 417.0,
+  "confidence_score": 0.40,
+  "technique_summary": "V16 is a significant regression at 175 seconds — the slowest since V11 (195s). Suture placement at 43 seconds and cutting at 55 seconds are both severely extended, consuming 56% of total time. The throw sequence at 65 seconds total remains reasonable. This likely represents fatigue if performed after V15 in the same session, or continued difficulty with the new trainer setup (pink foam block). The 640x480 webcam-style recording is the lowest quality in the series, limiting scoring accuracy. The suture placement regression (43s vs 22s peak) and cutting regression (55s vs 29s peak) together account for 47 seconds of excess time compared to V14's best.",
+  "improvement_suggestions": [
+    "If same session as V15: STOP — the 33-second regression (142s → 175s) indicates fatigue",
+    "Cutting at 55 seconds has returned to worst-ever levels — dedicated scissors drills essential",
+    "Suture placement at 43 seconds suggests the new setup/equipment is not yet comfortable",
+    "Consider returning to the familiar trainer setup where V12-V14 peak times were achieved",
+    "Upgrade recording to at least 720p for better AI scoring accuracy"
+  ],
+  "strengths": [
+    "All three throws completed in correct sequence with reasonable timing (65s total)",
+    "Drain not avulsed — safe tissue handling maintained",
+    "Task completed within time limit",
+    "12% time improvement from baseline maintained (198s → 175s)"
+  ],
+  "comparison_to_previous": {
+    "time_vs_pre": -23,
+    "time_vs_V14": 68,
+    "time_vs_V15": 33,
+    "score_vs_pre": 27.5,
+    "score_vs_V14": -70.0,
+    "score_vs_V15": -35.0,
+    "trajectory": "regression_fatigue_or_equipment",
+    "key_observations": [
+      "175s / 417 FLS — slowest since V11, 68s slower than V14 best",
+      "Suture placement 43s (vs 22s peak) — major regression",
+      "Cutting 55s (vs 29s peak) — back to worst-ever levels",
+      "Throws 65s total — still reasonable, not the problem",
+      "640x480 lowest resolution in series — limits scoring",
+      "If same session as V15: fatigue. If different session: equipment adjustment",
+      "Recommendation: end session, return to familiar setup, record at higher resolution"
+    ]
+  }
+}

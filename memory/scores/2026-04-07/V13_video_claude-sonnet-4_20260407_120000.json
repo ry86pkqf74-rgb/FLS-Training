@@ -1,0 +1,188 @@
+{
+  "id": "score_claude_V13_001",
+  "video_id": "V13_video",
+  "video_filename": "V13.mov",
+  "video_hash": "7ff92aedb8818ee1",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T12:00:00Z",
+  "recording_notes": "Phone filming monitor — closer framing than V11/V12, better image quality. PURPLE/PINK suture used (different from black suture in V1-V10). Suture debris visible on tape from prior attempts. Best monitor-recorded image quality in the series so far.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "needle_load",
+      "description": "At 7 seconds, both instruments in field near drain. Pink/purple curved suture clearly visible draped across drain and block. Needle loading in progress — fast entry.",
+      "technique_notes": "Fast entry at ~5 seconds. Purple suture is much more visible than the black suture used in V1-V10, improving assessment accuracy."
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "At 28 seconds, both instruments at the drain. Suture has been placed through both sides of the drain — purple suture threads visible exiting both sides. Completing placement.",
+      "technique_notes": "Suture placement completed in approximately 25 seconds — matching V12's record. Fast, confident needle driving."
+    },
+    {
+      "frame_number": 6,
+      "phase": "first_throw",
+      "description": "At 42 seconds, first throw in progress. Both suture ends (pink/purple) clearly visible extending from the drain. Instruments wrapping suture for surgeon's knot. The drain slit is still visible and open.",
+      "technique_notes": "First throw wrapping. The purple suture makes the throw mechanics much more visible than in previous videos."
+    },
+    {
+      "frame_number": 8,
+      "phase": "first_throw",
+      "description": "At 56 seconds, first throw COMPLETED and tightened. Instruments spread wide apart (left upper-left, right upper-right) in classic post-tightening posture. Knot X pattern clearly visible on drain. Drain slit beginning to close.",
+      "technique_notes": "Excellent frame showing post-tightening spread. The X pattern confirms accurate, centered knot placement. The throw tightening posture shows confident bilateral instrument control."
+    },
+    {
+      "frame_number": 10,
+      "phase": "second_throw",
+      "description": "At 70 seconds, second throw tightening. Both instruments pulling suture tails laterally in mirror posture. Knot visible on drain. Drain slit closing around the knot.",
+      "technique_notes": "Second throw completed with good bilateral tightening. The drain edges are visibly approximating."
+    },
+    {
+      "frame_number": 13,
+      "phase": "third_throw",
+      "description": "At 91 seconds, third throw in progress or completing. Right instrument across drain, left instrument at upper left. Knot clearly visible with blue/purple suture forming cross pattern. Drain slit appears mostly closed.",
+      "technique_notes": "Third throw phase. The drain closure is visibly improving through the throw sequence."
+    },
+    {
+      "frame_number": 17,
+      "phase": "suture_cut",
+      "description": "At 118 seconds, cutting phase. Both instruments holding suture tails laterally — left pulling left, right pulling right. Suture taut between instruments. Knot visible with dark cross pattern. Drain slit appears CLOSED with good approximation.",
+      "technique_notes": "Cutting underway. The suture tails are being held taut for scissors. The drain closure looks excellent at this point."
+    },
+    {
+      "frame_number": 23,
+      "phase": "completion",
+      "description": "Final frame at 139 seconds. Instruments fully withdrawn. EXCELLENT final result: compact knot clearly visible with purple suture cross pattern. Short, well-trimmed suture tails. Drain slit appears FULLY CLOSED — edges well approximated around the knot. NO VISIBLE GAP. Drain not avulsed, remains centered on suture block. Best visible final result in the monitor-recorded series.",
+      "technique_notes": "BEST quality final result assessed to date in the monitor-recorded videos. The combination of closed slit, compact knot, and short tails at 135 seconds represents a significant quality milestone."
+    }
+  ],
+  "completion_time_seconds": 135.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3
+    },
+    {
+      "phase": "needle_load",
+      "start_seconds": 3,
+      "end_seconds": 8,
+      "duration_seconds": 5
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8,
+      "end_seconds": 30,
+      "duration_seconds": 22
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 30,
+      "end_seconds": 50,
+      "duration_seconds": 20
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 50,
+      "end_seconds": 72,
+      "duration_seconds": 22
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 72,
+      "end_seconds": 95,
+      "duration_seconds": 23
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 95,
+      "end_seconds": 135,
+      "duration_seconds": 40
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "bilateral",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Clear X pattern visible after tightening at 56s. Bilateral spread-tighten posture confirms good technique. Confidence moderate."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "bilateral",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Mirror tightening posture at 70s. Drain edges approximating. Confidence moderate."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw completed by ~95s. Drain closure appears complete after this throw. Confidence moderate."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 3.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "closed",
+    "assessment_note": "Best drain closure visible in the monitor-recorded series. The final frame shows edges well approximated around a compact knot with no visible gap. Purple suture makes assessment easier than black suture in V1-V10."
+  },
+  "estimated_penalties": 3.0,
+  "estimated_fls_score": 462.0,
+  "confidence_score": 0.50,
+  "technique_summary": "V13 confirms the trainee has leveled up. At 135 seconds with NO visible gap and a compact, well-trimmed knot, this represents the best combined speed-and-quality performance in the series. While V12 was 20 seconds faster (115s), V13's superior visible quality (fully closed slit, short tails) may mean a higher true FLS score once penalties are accurately measured. The suture placement at 22 seconds is a new fastest, and all three throw phases are efficient and well-tightened. Cutting at 40 seconds remains the longest phase and the primary target for further improvement. The purple suture significantly improves scoring visibility compared to the black suture used in V1-V10.",
+  "improvement_suggestions": [
+    "Cutting at 40 seconds is still 30% of total time — the single biggest improvement opportunity",
+    "V12 (115s) showed the speed ceiling; V13 (135s) shows the quality ceiling — the target is combining both",
+    "Consider always using purple/colored suture for AI-scored videos — the visibility improvement is dramatic",
+    "All phases except cutting are now near-optimal. Dedicated scissors drills could push total time toward 100 seconds",
+    "This appears to be a fresh/early attempt — continue limiting sessions to 3 scored attempts maximum"
+  ],
+  "strengths": [
+    "BEST quality final result in the series — fully closed slit, compact knot, short tails",
+    "NO VISIBLE GAP — first confirmed no-gap result since V9",
+    "NEW FASTEST suture placement: 22 seconds (beating V12's 25s)",
+    "Needle loading stable at 5 seconds — peak efficiency maintained",
+    "All three throws completed efficiently (20s, 22s, 23s — total 65s)",
+    "Purple suture improves both execution visibility and AI scoring accuracy",
+    "135 seconds confirms new baseline well ahead of original V7/V9 peak (142-143s)"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video", "postV6_video", "postV7_video", "postV8_video", "postV9_video", "postV10_video", "V11_video", "V12_video"],
+    "time_vs_pre": -63,
+    "time_vs_postV7": -7,
+    "time_vs_V12": 20,
+    "score_vs_pre": 72.5,
+    "score_vs_postV7": 6.5,
+    "score_vs_V12": -17.5,
+    "trajectory": "CONFIRMED_NEW_PLATEAU_BEST_QUALITY",
+    "key_observations": [
+      "135s / 462 FLS — second-fastest time in the series, BEST visible quality",
+      "32% time improvement from baseline (198s → 135s)",
+      "Confirms new skill plateau: V12 (115s) was peak speed, V13 (135s) is peak quality, both far ahead of old V7/V9 plateau (142-143s)",
+      "NO GAP — first confirmed complete closure since V9",
+      "Suture placement: 22s (new fastest), Needle loading: 5s (matching V12)",
+      "Cutting at 40s improved from V10/V11 (50s) but still the primary bottleneck",
+      "Purple suture is a game-changer for AI scoring visibility",
+      "New reliable performance range: 115-135s / 462-480 FLS when fresh"
+    ]
+  }
+}

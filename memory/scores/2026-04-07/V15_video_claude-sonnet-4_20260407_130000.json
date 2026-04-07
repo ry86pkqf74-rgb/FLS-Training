@@ -1,0 +1,185 @@
+{
+  "id": "score_claude_V15_001",
+  "video_id": "V15_video",
+  "video_filename": "V15.mov",
+  "video_hash": "b8446e7343cf277c",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T13:00:00Z",
+  "recording_notes": "DIRECT CAMERA RECORDING — first since V10. Excellent image quality. Different FLS trainer box setup — pink/red foam block (no duct tape overlay), white interior. STORZ needle drivers visible. Black suture. Two black mark dots clearly visible on Penrose drain. Highest scoring confidence in the series.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "needle_load",
+      "description": "At 7 seconds, both instruments in field near Penrose drain. Right instrument with suture/needle visible at upper right. Black suture thread visible. Two black mark dots clearly visible on drain.",
+      "technique_notes": "Fast entry. Direct camera view provides excellent detail — STORZ needle driver markings visible. Clean, new foam block."
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "At 29 seconds, both instruments at drain. Curved needle visible mid-drive through drain tissue. Left instrument (STORZ needle driver) holding suture, right instrument (grasper) positioning drain. Suture thread extends from left side of drain.",
+      "technique_notes": "Suture placement in progress at 29 seconds. Needle driving through tissue is clearly visible. Placement is slower than V12-V14 (22-25s)."
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "At 44 seconds, suture placed through both marks. Both suture ends visible. Curved needle held by right instrument. Both instruments spread wide. Two marks clearly visible — suture passes through or very near both marks.",
+      "technique_notes": "Suture placement completed at approximately 40 seconds — accurate placement through both marks (confirmed by high-quality direct view). This is slower than V12-V14 peak (22-25s) but accurate."
+    },
+    {
+      "frame_number": 9,
+      "phase": "first_throw",
+      "description": "At 66 seconds, first throw tightened. Drain slit beginning to close. Knot forming on drain with suture X pattern visible. One mark dot visible. Both instruments positioned laterally.",
+      "technique_notes": "First throw completed with good tightening. The drain edges are visibly approximating. Slit closure beginning."
+    },
+    {
+      "frame_number": 12,
+      "phase": "third_throw",
+      "description": "At 88 seconds, third throw wrapping in progress. Both instruments near drain with suture loop visible on right side. Knot visible on drain. Drain slit mostly closed.",
+      "technique_notes": "Third throw in progress. The throw sequence is proceeding at reasonable but not peak pace."
+    },
+    {
+      "frame_number": 17,
+      "phase": "suture_cut",
+      "description": "At 125 seconds, cutting phase. Left instrument (STORZ needle driver) holding suture near knot. Right instrument holding suture tail to the right. Knot visible. SMALL GAP visible in upper portion of drain slit — upper drain edge slightly curled/open. Lower portion closed around knot.",
+      "technique_notes": "Cutting in progress. The gap assessment is HIGH CONFIDENCE due to direct camera view — small gap confirmed in the upper drain portion."
+    },
+    {
+      "frame_number": 23,
+      "phase": "completion",
+      "description": "Final frame at 147 seconds. Instruments fully withdrawn. Compact knot clearly visible with dark suture X pattern and SHORT, WELL-TRIMMED tails. SMALL GAP confirmed — upper portion of drain slit is slightly open/curled. Lower portion closed around knot. One mark dot visible near knot. Drain not avulsed, centered on block.",
+      "technique_notes": "HIGHEST CONFIDENCE final assessment in the series. Direct camera provides clear gap, knot, and tail assessment. The small gap is definitively confirmed. Completion at approximately 142 seconds."
+    }
+  ],
+  "completion_time_seconds": 142.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3
+    },
+    {
+      "phase": "needle_load",
+      "start_seconds": 3,
+      "end_seconds": 10,
+      "duration_seconds": 7
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 10,
+      "end_seconds": 40,
+      "duration_seconds": 30
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 40,
+      "end_seconds": 62,
+      "duration_seconds": 22
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 62,
+      "end_seconds": 78,
+      "duration_seconds": 16
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 78,
+      "end_seconds": 100,
+      "duration_seconds": 22
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 100,
+      "end_seconds": 142,
+      "duration_seconds": 42
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Clear first throw with tightening visible at 66s. X pattern confirmed on drain. High confidence."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw completed. Drain slit closing further. Moderate confidence."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw wrapping visible at 88s. Knot appears secure in final frame. Moderate confidence."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 3.0,
+    "confidence": "moderate"
+  },
+  "drain_assessment": {
+    "gap_visible": true,
+    "drain_avulsed": false,
+    "slit_closure_quality": "partial_small_gap",
+    "assessment_note": "HIGHEST CONFIDENCE gap assessment in the series. Direct camera clearly shows small gap in upper portion of drain slit — upper edge slightly curled/open. Lower portion closed around knot. This is a definitive assessment unlike the uncertain monitor-recorded videos."
+  },
+  "estimated_penalties": 6.0,
+  "estimated_fls_score": 452.0,
+  "confidence_score": 0.65,
+  "technique_summary": "V15 is critically important as the first DIRECT CAMERA recording since V10, providing the highest scoring confidence in the series (0.65). At 142 seconds, the time matches the old V7/V9 peak but represents a regression from the V12-V14 range (107-135s). The key time losses are in suture placement (30s vs 22s peak) and cutting (42s vs 29s in V14). The small gap is definitively confirmed by the excellent image quality. The throw phases remain efficient at 60 seconds total. This video serves as a HIGH-CONFIDENCE calibration point — it suggests the monitor-recorded V12-V14 times may be more accurate than their quality assessments, since direct camera V15 with similar technique shows a confirmed small gap.",
+  "improvement_suggestions": [
+    "Suture placement regressed to 30s from 22s peak — may reflect different trainer/setup or fatigue",
+    "Cutting at 42s regressed from V14's 29s — this remains the #1 improvement target",
+    "The confirmed small gap suggests knot tension consistency needs attention — ensure all throws are fully tightened before moving to next",
+    "RECORDING: This direct camera setup should be the standard for all future videos — dramatically improves scoring accuracy",
+    "If this followed V14 in the same session: fatigue explanation. If different session: the new setup/equipment may require adjustment"
+  ],
+  "strengths": [
+    "HIGHEST CONFIDENCE score in the series (0.65) due to direct camera recording",
+    "Short, well-trimmed suture tails — clean cutting despite time",
+    "Accurate suture placement through both marks (confirmed by direct view)",
+    "All three throws completed in correct sequence with reasonable timing (60s total)",
+    "Drain not avulsed — safe tissue handling",
+    "Knot appears compact and secure",
+    "Provides critical calibration data for the monitor-recorded V11-V14 assessments"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video", "postV6_video", "postV7_video", "postV8_video", "postV9_video", "postV10_video", "V11_video", "V12_video", "V13_video", "V14_video"],
+    "time_vs_pre": -56,
+    "time_vs_postV7": 0,
+    "time_vs_V14": 35,
+    "time_vs_V13": 7,
+    "score_vs_pre": 62.5,
+    "score_vs_postV7": -3.5,
+    "score_vs_V14": -35.0,
+    "score_vs_V13": -10.0,
+    "trajectory": "regression_from_peak_high_confidence_calibration",
+    "key_observations": [
+      "142s / 452 FLS — matches V7/V9 old peak but well below V12-V14 range",
+      "FIRST DIRECT CAMERA since V10 — confidence 0.65 vs 0.42-0.50 for monitor-recorded",
+      "Small gap CONFIRMED with high confidence — calibration point for monitor assessments",
+      "Suture placement: 30s (vs 22s peak) — different setup may contribute",
+      "Cutting: 42s (vs 29s V14) — regressed",
+      "Throw sequence: 60s total — reasonable, not peak",
+      "28% time improvement from baseline (198s → 142s) still maintained",
+      "Different FLS box setup (pink foam, no duct tape, STORZ instruments) — equipment change may affect performance",
+      "This is an essential calibration video for the scoring system"
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "id": "score_claude_V14_001",
+  "video_id": "V14_video",
+  "video_filename": "V14.mov",
+  "video_hash": "26b0a0ba3d9df8db",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T12:30:00Z",
+  "recording_notes": "Phone filming RCA monitor — different angle/location from V11-V13. Blue suture (new color). 'NOTICE: NO FOOD DRINK' skills lab sign visible. Resolution 1690x920. Suture debris from prior attempts visible below trainer.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "needle_load",
+      "description": "At 5 seconds, instrument in field from upper right near drain. Blue suture visible extending downward. Needle loading underway — extremely fast entry.",
+      "technique_notes": "Fast entry matching V12/V13 pace. Blue suture highly visible against white drain and red foam."
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "At 22 seconds, both instruments crossing at drain. Needle driving in progress. Active, coordinated instrument work.",
+      "technique_notes": "Suture placement progressing at peak speed. Both instruments confidently manipulating tissue."
+    },
+    {
+      "frame_number": 7,
+      "phase": "first_throw",
+      "description": "At 38 seconds, suture placed through drain. Instruments positioned for first throw wrapping. Transitioning from placement to throws.",
+      "technique_notes": "Suture placement completed in approximately 22 seconds — matching V13 record. Immediate transition to first throw."
+    },
+    {
+      "frame_number": 9,
+      "phase": "first_throw",
+      "description": "At 49 seconds, first throw tightening. Both instruments pulling suture in opposite directions.",
+      "technique_notes": "First throw completing. Fast tightening posture."
+    },
+    {
+      "frame_number": 11,
+      "phase": "second_throw",
+      "description": "At 60 seconds, second throw wrapping. Both instruments crossing near drain with suture visible.",
+      "technique_notes": "Second throw in progress. Fast pace maintained through throw sequence."
+    },
+    {
+      "frame_number": 14,
+      "phase": "third_throw",
+      "description": "At 77 seconds, third throw completing or transitioning to cutting. Knot X pattern visible on drain. Suture loop above drain.",
+      "technique_notes": "Third throw completed in approximately 16 seconds — FASTEST in the series. All three throws completed in approximately 48 seconds total."
+    },
+    {
+      "frame_number": 17,
+      "phase": "suture_cut",
+      "description": "At 93 seconds, cutting phase. Left instrument across drain holding suture. Right instrument (scissors) at lower right. Suture tails visible.",
+      "technique_notes": "Cutting underway at 93 seconds. Cutting phase beginning at ~78-80 seconds."
+    },
+    {
+      "frame_number": 21,
+      "phase": "suture_cut",
+      "description": "At 106 seconds, still actively cutting. Both instruments near knot area. Suture tails being trimmed.",
+      "technique_notes": "Late cutting phase. Instruments actively working at knot."
+    },
+    {
+      "frame_number": 23,
+      "phase": "completion",
+      "description": "At 109 seconds (final frame), instruments being withdrawn. Knot visible on drain with suture tails. Drain slit partially closed. Drain not avulsed, remains on block. Video ends at 109.4 seconds — task appears to complete at approximately 107 seconds.",
+      "technique_notes": "NEW ALL-TIME BEST TIME at approximately 107 seconds. Cutting at 29 seconds is the best since Post-2 (18s). All phases at or near record pace."
+    }
+  ],
+  "completion_time_seconds": 107.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3
+    },
+    {
+      "phase": "needle_load",
+      "start_seconds": 3,
+      "end_seconds": 8,
+      "duration_seconds": 5
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8,
+      "end_seconds": 30,
+      "duration_seconds": 22
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 30,
+      "end_seconds": 48,
+      "duration_seconds": 18
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 48,
+      "end_seconds": 62,
+      "duration_seconds": 14
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 62,
+      "end_seconds": 78,
+      "duration_seconds": 16
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 78,
+      "end_seconds": 107,
+      "duration_seconds": 29
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "unclear",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Fast first throw completed by ~48s. Bilateral tightening visible. Confidence low-moderate due to monitor quality."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw at 60s — fast 14-second throw. Confidence low."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "unclear",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw completed in 16 seconds — fastest in the series. Confidence low."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "very_low"
+  },
+  "drain_assessment": {
+    "gap_visible": true,
+    "drain_avulsed": false,
+    "slit_closure_quality": "partial",
+    "assessment_note": "Monitor recording limits gap assessment. Drain slit appears partially closed but a small gap may be present. The speed increase may come at slight quality cost compared to V13. Confidence very low."
+  },
+  "estimated_penalties": 6.0,
+  "estimated_fls_score": 487.0,
+  "confidence_score": 0.43,
+  "technique_summary": "V14 sets a NEW ALL-TIME BEST at approximately 107 seconds — the first time under 110 seconds. This beats V12 (115s) by 8 seconds and represents a 46% improvement from baseline (198s). Every phase is at or near record pace, with the third throw at 16 seconds being the fastest single throw in the entire series, and cutting at 29 seconds showing dramatic improvement from the 40-50 second times in V10-V13. The total throw sequence at 48 seconds matches V12's record. Drain closure appears partial (slight quality trade-off for speed), but the time gains far outweigh the estimated penalty increase. Sub-100 seconds is now within reach.",
+  "improvement_suggestions": [
+    "Sub-100 is the next milestone — cutting at 29s is the remaining target. Shaving 10 seconds from cutting would achieve it.",
+    "Drain closure may have slightly regressed from V13 quality — balance speed with ensuring complete slit closure",
+    "Consider using purple/colored suture (as in V13) for better AI scoring visibility",
+    "This appears to be early in a session — continue capping at 3 scored attempts",
+    "All phases now at high efficiency — marginal gains will come from transitions between phases and cutting precision"
+  ],
+  "strengths": [
+    "NEW ALL-TIME BEST TIME: 107 seconds — first sub-110",
+    "46% time improvement from baseline (198s → 107s)",
+    "NEW FASTEST third throw: 16 seconds",
+    "BEST cutting time in 6 videos: 29 seconds (down from 40-50s)",
+    "Suture placement maintained at record pace: 22 seconds",
+    "All three throws completed in 48 seconds total — matching V12 record",
+    "Drain not avulsed at high speed — safe tissue handling maintained",
+    "Sub-100 seconds now clearly achievable"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video", "postV6_video", "postV7_video", "postV8_video", "postV9_video", "postV10_video", "V11_video", "V12_video", "V13_video"],
+    "time_vs_pre": -91,
+    "time_vs_postV7": -35,
+    "time_vs_V12": -8,
+    "time_vs_V13": -28,
+    "score_vs_pre": 97.5,
+    "score_vs_postV7": 31.5,
+    "score_vs_V12": 7.5,
+    "score_vs_V13": 25.0,
+    "trajectory": "NEW_ALL_TIME_BEST_SUB_110",
+    "key_observations": [
+      "NEW ALL-TIME BEST: 107s / 487 FLS — first sub-110 second performance",
+      "46% time improvement from baseline (198s → 107s)",
+      "Cutting improved dramatically: 29s (V14) vs 40s (V13) vs 50s (V10/V11) — this was the targeted bottleneck",
+      "Third throw at 16s is fastest individual throw in the series",
+      "All three throws in 48s total — matching V12 record",
+      "Suture placement stable at 22s — locked in at peak",
+      "Slight quality trade-off: partial gap vs V13's complete closure",
+      "Sub-100 is the next target — 7 more seconds from cutting optimization",
+      "Performance trajectory: 198s → 170s → 158s → 142s → 115s → 107s — consistent improvement curve"
+    ]
+  }
+}
