@@ -10,15 +10,201 @@ import logging
 import random
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import TYPE_CHECKING, Any
 
 import yaml
 
 from src.memory.memory_store import MemoryStore
-from src.memory.learning_log import LearningLog
+
+if TYPE_CHECKING:
+    from src.memory.learning_log import LearningLog
 
 logger = logging.getLogger(__name__)
 
 FEEDBACK_DIR = Path(__file__).parent.parent.parent / "memory" / "feedback"
+SCORES_DIR = Path(__file__).parent.parent.parent / "memory" / "scores"
+COMPARISONS_DIR = Path(__file__).parent.parent.parent / "memory" / "comparisons"
+CORRECTIONS_DIR = Path(__file__).parent.parent.parent / "memory" / "corrections"
+
+
+def _parse_timestamp(value: str | None) -> datetime:
+    if not value:
+        return datetime.min.replace(tzinfo=timezone.utc)
+    normalized = value.replace("Z", "+00:00")
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except ValueError:
+        return datetime.min.replace(tzinfo=timezone.utc)
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed
+
+
+def _normalize_source(source: str | None, filename: str) -> str:
+    raw = (source or "").lower()
+    name = filename.lower()
+    if "consensus" in raw or "critique_consensus" in raw or "_consensus_" in name:
+        return "critique_consensus"
+    if "gpt" in raw or "chatgpt" in raw or "gpt-4o" in name or "gpt4o" in name:
+        return "teacher_gpt4o"
+    if "student" in raw or "_student" in name:
+        return "student_model"
+    if "correction" in raw:
+        return "expert_correction"
+    return "teacher_claude"
+
+
+def _iter_json_files(base_dir: Path) -> list[Path]:
+    if not base_dir.exists():
+        return []
+
+    files = sorted(base_dir.glob("*.json"))
+    for child in sorted(base_dir.iterdir()):
+        if child.is_dir():
+            files.extend(sorted(child.glob("*.json")))
+    return files
+
+
+def _default_video_filename(video_id: str) -> str:
+    stem = video_id[:-6] if video_id.endswith("_video") else video_id
+    return f"{stem}.mov"
+
+
+def _build_consensus_score(video_id: str, payload: dict[str, Any], file_path: Path) -> dict[str, Any] | None:
+    consensus_score = payload.get("consensus_score") or {}
+    if not consensus_score:
+        return None
+
+    del file_path
+
+    meta = payload.get("_meta") or {}
+    trace = payload.get("trace") or {}
+    scored_at = meta.get("timestamp") or trace.get("timestamp") or datetime.now(timezone.utc).isoformat()
+    timestamp_slug = scored_at.replace("-", "").replace(":", "").replace("+", "_").replace("T", "_")
+
+    return {
+        "id": f"score_consensus_{video_id}_{timestamp_slug}",
+        "video_id": video_id,
+        "video_filename": _default_video_filename(video_id),
+        "video_hash": "",
+        "source": "critique_consensus",
+        "model_name": meta.get("model") or "manual-consensus",
+        "model_version": meta.get("model") or "manual-consensus",
+        "prompt_version": "v001",
+        "scored_at": scored_at,
+        "frame_analyses": [],
+        "completion_time_seconds": consensus_score.get("completion_time_seconds", 0),
+        "phase_timings": consensus_score.get("phase_timings", []),
+        "knot_assessments": consensus_score.get("knot_assessments", []),
+        "suture_placement": consensus_score.get("suture_placement"),
+        "drain_assessment": consensus_score.get("drain_assessment"),
+        "estimated_penalties": consensus_score.get("estimated_penalties", 0),
+        "estimated_fls_score": consensus_score.get("estimated_fls_score", 0),
+        "confidence_score": consensus_score.get("confidence_score", payload.get("agreement_score", 0.0)),
+        "technique_summary": consensus_score.get("technique_summary", ""),
+        "improvement_suggestions": consensus_score.get("improvement_suggestions", []),
+        "strengths": consensus_score.get("strengths", []),
+        "comparison_to_previous": {},
+    }
+
+
+def _load_corrections_by_video() -> dict[str, dict[str, Any]]:
+    latest: dict[str, tuple[datetime, dict[str, Any]]] = {}
+    for path in _iter_json_files(CORRECTIONS_DIR):
+        try:
+            data = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+
+        video_id = data.get("video_id")
+        if not video_id:
+            continue
+
+        corrected_at = _parse_timestamp(data.get("corrected_at"))
+        current = latest.get(video_id)
+        if current is None or corrected_at >= current[0]:
+            latest[video_id] = (corrected_at, data)
+
+    return {video_id: item[1] for video_id, item in latest.items()}
+
+
+def _load_training_candidates(base_dir: Path, min_confidence: float) -> list[dict[str, Any]]:
+    del base_dir  # file-backed memory lives under the repository root paths above
+
+    latest_by_video_source: dict[tuple[str, str], tuple[datetime, dict[str, Any]]] = {}
+
+    for path in _iter_json_files(SCORES_DIR):
+        try:
+            data = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+
+        video_id = data.get("video_id")
+        if not video_id:
+            continue
+
+        source = _normalize_source(data.get("source"), path.name)
+        confidence = float(data.get("confidence_score", 0) or 0)
+        if confidence < min_confidence:
+            continue
+
+        candidate = {
+            "video_id": video_id,
+            "source": source,
+            "confidence_score": confidence,
+            "raw_json": data,
+            "score_id": data.get("id"),
+        }
+        scored_at = _parse_timestamp(data.get("scored_at"))
+        key = (video_id, source)
+        current = latest_by_video_source.get(key)
+        if current is None or scored_at >= current[0]:
+            latest_by_video_source[key] = (scored_at, candidate)
+
+    for path in _iter_json_files(COMPARISONS_DIR):
+        if "_consensus_" not in path.name:
+            continue
+        try:
+            payload = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+
+        video_id = (payload.get("_meta") or {}).get("video_id") or path.name.split("_consensus_")[0]
+        consensus = _build_consensus_score(video_id, payload, path)
+        if not consensus:
+            continue
+
+        confidence = float(consensus.get("confidence_score", 0) or 0)
+        if confidence < min_confidence:
+            continue
+
+        candidate = {
+            "video_id": video_id,
+            "source": "critique_consensus",
+            "confidence_score": confidence,
+            "raw_json": consensus,
+            "score_id": consensus.get("id"),
+        }
+        scored_at = _parse_timestamp(consensus.get("scored_at"))
+        key = (video_id, "critique_consensus")
+        current = latest_by_video_source.get(key)
+        if current is None or scored_at >= current[0]:
+            latest_by_video_source[key] = (scored_at, candidate)
+
+    corrections_by_video = _load_corrections_by_video()
+    candidates = [item[1] for item in latest_by_video_source.values()]
+    expanded_candidates: list[dict[str, Any]] = []
+    for candidate in candidates:
+        expanded_candidates.append(candidate)
+        correction = corrections_by_video.get(candidate["video_id"])
+        if correction:
+            expanded_candidates.append({
+                **candidate,
+                "source": "expert_correction",
+                "corrected_fields": correction.get("corrected_fields", {}),
+            })
+
+    return expanded_candidates
 
 
 def _load_coach_feedback(video_id: str) -> dict | None:
@@ -67,7 +253,7 @@ def prepare_dataset(
     system_prompt = (prompts_dir / "v001_task5_system.md").read_text()
 
     # Get training candidates
-    candidates = store.get_training_candidates(min_confidence)
+    candidates = _load_training_candidates(store.base, min_confidence)
     logger.info(f"Found {len(candidates)} training candidates")
 
     if not candidates:

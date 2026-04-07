@@ -55,12 +55,13 @@
   "estimated_penalties": 4.0,
   "estimated_fls_score": 460.0,
   "confidence_score": 0.42,
-  "technique_summary": "V_8 at approximately 136 seconds is the fastest confirmed time at the SURG20 station and ranks among the top performances in the series. Needle loading is fast at 5s. Placement at 18s is efficient. Throws total 68s with a consistent pattern - first and second at 20s each, third slightly longer at 28s. Cutting at 45s (33% of total) remains the dominant bottleneck. The final result is clean: no gap, compact knot, short tails, drain not avulsed. Strong performance demonstrating skill transfer to the SURG20 station.",
+  "technique_summary": "V_8 at approximately 136 seconds is the fastest confirmed time at the SURG20 station and ranks among the top performances in the series, comparable to V12 (115s RCA station) in efficiency profile though not in raw speed. Needle loading is fast at 5s. Placement at 18s is efficient. Throws total 68s with a consistent pattern - first and second at 20s each, third slightly longer at 28s. Cutting at 45s (33% of total) remains the dominant bottleneck, consistent with the pattern across all equipment. The final result is clean: no gap, compact knot, short tails, drain not avulsed. This is a strong performance that demonstrates skill transfer to the SURG20 station.",
   "improvement_suggestions": [
     "Cutting at 45s is 33% of total time - remains the #1 improvement target across all stations",
     "Third throw at 28s is 8s slower than throws 1-2 - investigate if tightening technique differs",
-    "SURG20 wall-mount angle is hardest to score - direct camera would improve confidence",
-    "At 136s this is already a strong performance - maintaining consistency is as important as speed gains"
+    "Consider colored suture for better AI scoring visibility at this oblique-angle station",
+    "SURG20 wall-mount angle is the hardest to score - direct camera would dramatically improve confidence",
+    "At 136s this is already a strong performance - maintaining this consistency is as important as speed gains"
   ],
   "strengths": [
     "FASTEST confirmed time at SURG20 station (~136s)",
@@ -75,7 +76,19 @@
     "time_vs_pre": -62,
     "time_vs_postV7": -6,
     "time_vs_V12": 21,
+    "time_vs_V13": 1,
+    "score_vs_pre": 70.5,
+    "score_vs_postV7": 4.5,
     "trajectory": "strong_performance_new_station",
+    "key_observations": [
+      "136s / 460 FLS - fastest SURG20 time, top-tier across all equipment",
+      "Placement 18s + Throws 68s + Cutting 45s - cutting is 33% of total",
+      "No gap, compact knot, short tails - high quality result",
+      "6s faster than postV7 (142s) - confirms skill above the old V7/V9 plateau",
+      "Different station (SURG20) from V11-V14 lab - demonstrates equipment transfer",
+      "31% improvement from baseline (198s -> 136s)",
+      "Throw pattern: 20+20+28 = 68s - third throw consistently slowest"
+    ],
     "note": "THIS IS A NEWLY SCORED VIDEO. Previously the V18 project JSON incorrectly referenced V_8.mov as its source file. This is the correct independent score for V_8.mov filmed at the SURG20 wall-mounted monitor station."
   }
 }

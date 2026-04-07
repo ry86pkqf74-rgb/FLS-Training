@@ -4,7 +4,7 @@
   "video_filename": "V18.MOV",
   "supersedes": "comparison_V18_001",
   "created_at": "2026-04-07T19:55:00Z",
-  "provenance_notes": "REGENERATED COMPARISON. The original V18 comparison paired the original Claude V18 score (score_claude_V18_001, 145s/451) against the V18 GPT-4o score (162.9s/433.6). That comparison is invalid because the original Claude score was actually describing V_8.mov (SURG20 wall-mount), not V18.MOV (SURG25 desk-mount). This regenerated comparison uses the corrected Claude score (score_claude_V18_002_corrected, 163s/434).",
+  "provenance_notes": "REGENERATED COMPARISON. The original V18 comparison paired the original Claude V18 score (score_claude_V18_001, 145s/451) against the V18 GPT-4o score (score_gpt4o_V18_001, 162.9s/433.6). That comparison is invalid because the original Claude score was actually describing V_8.mov (SURG20 wall-mount), not V18.MOV (SURG25 desk-mount). This regenerated comparison uses the corrected Claude score (score_claude_V18_002_corrected, 163s/434).",
   "teachers": {
     "claude": {
       "score_file": "memory/scores/2026-04-07/V18_video_claude-sonnet-4_20260407_194500_corrected.json",
@@ -28,7 +28,7 @@
     "delta_penalties": 0.0,
     "delta_fls_score": 0.4,
     "agreement_level": "effectively_identical",
-    "agreement_notes": "After correcting the original Claude V18 mis-scoring, the two teachers agree to within 0.4 FLS and 0.1s on completion time. Tightest agreement in the V-series."
+    "agreement_notes": "After correcting the original Claude V18 mis-scoring, the two teachers agree to within 0.4 FLS and 0.1s on completion time. This is the tightest agreement in the entire V-series, because the corrected Claude score was explicitly anchored to ChatGPT's native video analysis frame timings."
   },
   "phase_alignment": {
     "needle_load":      {"claude": 14.9, "gpt4o": 14.9, "delta": 0.0},
@@ -36,7 +36,7 @@
     "first_throw":      {"claude": 21.9, "gpt4o": 21.9, "delta": 0.0},
     "second_throw":     {"claude": 47.9, "gpt4o": 47.9, "delta": 0.0},
     "third_throw":      {"claude": 49.3, "gpt4o": 49.3, "delta": 0.0},
-    "suture_cut":       {"claude": 6.7,  "gpt4o": 6.7,  "delta": 0.0, "note": "FASTEST CUT PHASE IN THE ENTIRE V-SERIES at 6.7s. Previous best ~26s in V14."}
+    "suture_cut":       {"claude": 6.7,  "gpt4o": 6.7,  "delta": 0.0, "note": "FASTEST CUT PHASE IN THE ENTIRE V-SERIES at 6.7s. Previous best was ~26s in V14."}
   },
   "knot_assessment_alignment": {
     "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
@@ -59,11 +59,11 @@
     "estimated_penalties": 3.5,
     "estimated_fls_score": 433.55,
     "reconciliation_method": "midpoint_average",
-    "reasoning": "Teacher delta is effectively zero (0.4 FLS). Reconciled score is the midpoint."
+    "reasoning": "Teacher delta is effectively zero (0.4 FLS). Both scores converge on the same observations. Reconciled score is the midpoint."
   },
   "out_of_rubric_quality_notes": {
-    "cutting_breakthrough": "6.7s cut phase is a series record.",
-    "throw_regression": "97s combined on throws 2+3 is a regression from V11-V14 peak."
+    "cutting_breakthrough": "6.7s cut phase is a series record and worth flagging in training data as a positive efficiency signal.",
+    "throw_regression": "97s combined on throws 2+3 is a regression from V11-V14 peak (throws were 60s combined in V12). The SURG25 station unfamiliarity likely contributed."
   },
-  "cross_station_context": "V18.MOV is at the SURG25 desk-mount RCA station. Distinct from the V11-V14 RCA lab and the SURG20 wall-mount station (V_8, V15, V17)."
+  "cross_station_context": "V18.MOV is at the SURG25 desk-mount RCA station (pegboard, 'FLS Circle Cut Training and Testing' sheet). Distinct from both the original RCA lab (V11-V14) and the SURG20 wall-mount station (V_8, V15, V17)."
 }

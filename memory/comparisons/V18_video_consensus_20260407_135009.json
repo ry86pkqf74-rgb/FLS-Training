@@ -15,16 +15,27 @@
       "teacher_a_value": 163.0,
       "teacher_b_value": 162.9,
       "final_ruling": 162.95,
-      "reasoning": "Both teachers independently anchor to the same ChatGPT-derived frame timings after correction. Delta of 0.1s is functionally zero.",
-      "confidence": 0.88
+      "reasoning": "After Claude V18 correction, both teachers independently anchor to the same ChatGPT-derived frame timings. Delta of 0.1s is functionally zero. Midpoint reconciliation.",
+      "confidence": 0.88,
+      "frames_cited": [1, 4957]
+    },
+    {
+      "field": "phase_timings",
+      "teacher_a_value": "chatgpt_anchored_phases",
+      "teacher_b_value": "chatgpt_anchored_phases",
+      "final_ruling": "teachers_converged",
+      "reasoning": "Corrected Claude score explicitly uses the same phase boundaries as the GPT-4o score, so all six phase durations match exactly. No arbitration needed.",
+      "confidence": 0.95,
+      "frames_cited": []
     },
     {
       "field": "estimated_fls_score",
       "teacher_a_value": 434.0,
       "teacher_b_value": 433.6,
       "final_ruling": 433.55,
-      "reasoning": "Recomputed: 600 - 162.95 - 3.5 = 433.55. Tightest agreement in the V-series.",
-      "confidence": 0.88
+      "reasoning": "Recomputed from reconciled values: 600 - 162.95 - 3.5 = 433.55. Delta of 0.4 FLS is the tightest agreement in the V-series.",
+      "confidence": 0.88,
+      "frames_cited": []
     }
   ],
   "consensus_score": {
@@ -38,9 +49,9 @@
       {"phase": "suture_cut",       "start_seconds": 156.0, "end_seconds": 162.7, "duration_seconds": 6.7}
     ],
     "knot_assessments": [
-      {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Surgeon's knot right-led."},
-      {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Single throw left lead, prolonged at 47.9s."},
-      {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Single throw switched back, 49.3s."}
+      {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Surgeon's knot right-led - both teachers agree after correction."},
+      {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "left", "hand_switched": true, "appears_secure": true, "notes": "Single throw with left lead, prolonged at 47.9s - major time sink."},
+      {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "right", "hand_switched": true, "appears_secure": true, "notes": "Single throw switched back, 49.3s including tail management."}
     ],
     "suture_placement": {
       "deviation_from_mark1_mm": 1.5,
@@ -57,12 +68,12 @@
     "estimated_penalties": 3.5,
     "estimated_fls_score": 433.55,
     "confidence_score": 0.64,
-    "technique_summary": "V18 (SURG25 desk-mount) is a technically complete but inefficient run at 162.95s. The defining feature is a unique bottleneck inversion: the cutting phase is the FASTEST in the entire V-series at 6.7s (previous best ~26s), while throws 2 and 3 combined consume ~97s (60% of total task time) due to prolonged regrasping and tail management. The knot sequence is correct, hand switching is confirmed right-left-right, the drain is closed with no gap, and no avulsion occurred. This represents a cutting-skill breakthrough paired with a throw-efficiency regression at an unfamiliar station.",
+    "technique_summary": "V18 (SURG25 desk-mount) is a technically complete but inefficient run at 162.95s. The defining feature is a unique bottleneck inversion: cutting phase is the FASTEST in the entire V-series at 6.7s (previous best ~26s), while throws 2 and 3 combined consume ~97s (60% of total task time) due to prolonged regrasping and tail management. The knot sequence is correct, hand switching is confirmed right-left-right, the drain is closed with no gap, and no avulsion occurred. This represents a cutting-skill breakthrough paired with a throw-efficiency regression at an unfamiliar station.",
     "improvement_suggestions": [
       "Throws 2+3 at 97s combined = 60% of total time - PRIMARY bottleneck, not cutting",
       "Needle load at 14.9s is 3x slower than peak (5s) - station unfamiliarity",
       "Practice throw advancement with consistent tail tension to reduce regrasping pauses",
-      "Leverage the new 6.7s cutting skill - end-game efficiency is already mastered",
+      "Leverage the new 6.7s cutting skill - the end-game efficiency is already mastered",
       "Station SURG25 is a new setup - baseline recalibration needed before throw regression can be isolated from equipment effects"
     ],
     "strengths": [

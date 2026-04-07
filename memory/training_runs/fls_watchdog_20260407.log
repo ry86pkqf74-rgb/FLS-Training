@@ -1,1 +1,5 @@
 2026-04-07T16:28:31Z Watchdog started for dataset=data/training/2026-04-07_v1 config=src/configs/finetune_task5_v1.yaml
+2026-04-07T19:56:33Z Trainer not running. Restart attempt 1 using run dir /workspace/FLS-Training/memory/model_checkpoints/20260407_1619_unsloth
+2026-04-07T19:56:33Z Resuming training from /workspace/FLS-Training/memory/model_checkpoints/20260407_1619_unsloth/checkpoint-2150
+2026-04-07T19:56:33Z Started training launcher with PID 41523
+2026-04-07T19:58:33Z Training log reports completion. Watchdog exiting.
