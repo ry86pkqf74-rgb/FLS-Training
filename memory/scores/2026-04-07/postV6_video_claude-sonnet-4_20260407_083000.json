@@ -1,0 +1,73 @@
+{
+  "id": "score_claude_postV6_001",
+  "video_id": "postV6_video",
+  "video_filename": "postV6.mov",
+  "video_hash": "54de59d09b760b80",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T08:30:00Z",
+  "frame_analyses": [
+    {"frame_number": 1, "phase": "idle", "description": "Setup view — Penrose drain on red foam suture block. A roll of Microfoam tape visible in upper right corner of frame (not part of task). Standard FLS Task 5 configuration.", "technique_notes": "Standard setup. Slightly different camera angle than previous videos."},
+    {"frame_number": 2, "phase": "needle_load", "description": "At 10 seconds, both instruments in field near drain with needle and suture visible. Quick entry consistent with trained performance.", "technique_notes": "Fast instrument entry. Needle engaged promptly."},
+    {"frame_number": 5, "phase": "suture_placement", "description": "At 40 seconds, needle visible held by right instrument above drain. Suture thread extending downward. Left instrument working near drain surface.", "technique_notes": "Still in suture placement at 40 seconds. Needle driving in progress."},
+    {"frame_number": 10, "phase": "first_throw", "description": "At 91 seconds, suture wrapping visible. Right instrument has suture looped around it. Left instrument positioned to hold free end. Wrapping for first throw.", "technique_notes": "First throw starting at ~85-90 seconds is significantly slower than post-2 (58s) and comparable to the pre-training timing (85s). Extended suture placement phase consumed most of the extra time."},
+    {"frame_number": 14, "phase": "second_throw", "description": "At 131 seconds, both instruments working near drain with suture. Instrument positions suggest second or third throw in progress.", "technique_notes": "Throw phases are proceeding. The instrument positions suggest wrapping/tightening."},
+    {"frame_number": 17, "phase": "third_throw", "description": "At 161 seconds, both instruments visible with suture loop between them above the drain. Active wrapping or tightening of the third throw.", "technique_notes": "Still in throw phases at 161 seconds. This is significantly later in the video than previous post-training attempts reached the cutting phase."},
+    {"frame_number": 19, "phase": "suture_cut", "description": "At 181 seconds, SCISSORS clearly visible (ring handles in lower right). Left instrument holding suture near drain. Cutting in progress. Drain slit shows a visible gap at this point.", "technique_notes": "Cutting phase beginning at ~175s. Scissors ring handles are clearly identifiable in this frame — first time scissors are unambiguously visible across all videos."},
+    {"frame_number": 21, "phase": "completion", "description": "Final frame at 201 seconds. Instruments withdrawn. Completed knot visible on Penrose drain with dark suture thread. The drain slit shows a VISIBLE GAP — the upper portion is not approximated. One suture tail extending upward appears somewhat long. Drain remains attached to suture block (not avulsed).", "technique_notes": "Final result shows partial slit closure with a gap similar to pre-training and post-3 results. The suture tail length appears longer than ideal, suggesting cutting may not have been as close to the knot. This is the slowest post-training attempt at ~196 seconds."}
+  ],
+  "completion_time_seconds": 196.0,
+  "phase_timings": [
+    {"phase": "idle", "start_seconds": 0, "end_seconds": 5, "duration_seconds": 5},
+    {"phase": "needle_load", "start_seconds": 5, "end_seconds": 18, "duration_seconds": 13},
+    {"phase": "suture_placement", "start_seconds": 18, "end_seconds": 80, "duration_seconds": 62},
+    {"phase": "first_throw", "start_seconds": 80, "end_seconds": 110, "duration_seconds": 30},
+    {"phase": "second_throw", "start_seconds": 110, "end_seconds": 138, "duration_seconds": 28},
+    {"phase": "third_throw", "start_seconds": 138, "end_seconds": 172, "duration_seconds": 34},
+    {"phase": "suture_cut", "start_seconds": 172, "end_seconds": 196, "duration_seconds": 24}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "right", "hand_switched": null, "appears_secure": true, "notes": "Frame 10 shows wrapping around right instrument. Double-loop pattern suggests surgeon's knot. Confidence moderate."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Frame 14 shows throw in progress. Confidence low on hand determination."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": false, "notes": "Third throw completed but final result shows visible gap in drain slit. The gap suggests insufficient knot tension overall. Confidence low."}
+  ],
+  "suture_placement": {"deviation_from_mark1_mm": 2.0, "deviation_from_mark2_mm": 2.5, "total_deviation_penalty": 4.5, "confidence": "low"},
+  "drain_assessment": {"gap_visible": true, "drain_avulsed": false, "slit_closure_quality": "partial"},
+  "estimated_penalties": 12.5,
+  "estimated_fls_score": 391.5,
+  "confidence_score": 0.55,
+  "technique_summary": "This sixth video represents the most significant regression in the training series — at 196 seconds with a visible drain gap, performance has returned to near pre-training baseline levels (pre: 198s/389.5). The primary time loss is in suture placement, which took approximately 62 seconds — the longest of any attempt. The throw phases (30s, 28s, 34s) are slower than the improvements seen in post-3 (22-27s). The cutting phase at 24 seconds is an improvement over post-4's 44 seconds but still above the post-2 benchmark of 18 seconds. The visible gap in the final result suggests knot tension issues that were resolved in post-2 and post-4 have returned. Needle loading remains efficient at 13 seconds. This pattern of variable performance with regression from a peak (post-2) suggests the trainee may benefit from more deliberate, focused practice on the specific sub-skills that are regressing: suture placement speed and knot tension.",
+  "improvement_suggestions": [
+    "CRITICAL: Suture placement has regressed to 62 seconds — this is worse than any previous attempt except the very first. Practice dedicated needle driving drills outside of the full task to rebuild speed",
+    "Knot tension has regressed — the visible gap suggests throws are not being tightened sufficiently. Practice individual throw tightening with focus on pulling both ends firmly before releasing",
+    "Consider fatigue as a factor — if these attempts were done in the same session, muscle fatigue and mental fatigue could explain the regression pattern",
+    "Review the post-2 video (best attempt) and identify what was different about the approach that session vs this one",
+    "The throw phases have also slowed (30s, 28s, 34s vs 22-27s in post-3) — practice wrapping speed"
+  ],
+  "strengths": [
+    "Needle loading remains efficient at 13 seconds — this skill is solidly acquired",
+    "All three throws still completed in correct sequence",
+    "Drain not avulsed — tissue handling remains appropriate",
+    "Cutting phase (24s) improved from post-4's problematic 44 seconds",
+    "Task completion within time limit"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video", "post3_video", "post4_video"],
+    "time_vs_pre": -2,
+    "time_vs_post2": 38,
+    "score_vs_pre": 2.0,
+    "score_vs_post2": -47.5,
+    "trajectory": "regression_to_near_baseline",
+    "key_observations": [
+      "Suture placement worst ever: 62s (pre was 50s, post-2 was 40s)",
+      "Overall time nearly matches pre-training baseline (196s vs 198s)",
+      "Drain gap returned — partial closure like pre-training",
+      "Cutting improved from post-4 (24s vs 44s) but still not at post-2 level (18s)",
+      "Needle loading stable at 13s — only fully retained improvement",
+      "Score of 391.5 is essentially pre-training level (389.5)",
+      "Fatigue or loss of technique consistency likely factors"
+    ]
+  }
+}

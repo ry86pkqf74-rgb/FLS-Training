@@ -1,0 +1,70 @@
+{
+  "id": "score_claude_post3_001",
+  "video_id": "post3_video",
+  "video_filename": "post3.mov",
+  "video_hash": "c90aee64134b6ebd",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-07T07:45:00Z",
+  "frame_analyses": [
+    {"frame_number": 1, "phase": "idle", "description": "Setup view — Penrose drain on red foam suture block. Standard FLS Task 5 configuration. No instruments visible.", "technique_notes": "Standard setup."},
+    {"frame_number": 4, "phase": "suture_placement", "description": "At 28 seconds, both instruments in field working on the drain. Suture visible with needle being driven through drain tissue. Instruments actively engaged close to the drain surface.", "technique_notes": "Suture placement in progress. Instruments appear coordinated. Needle driving technique visible."},
+    {"frame_number": 9, "phase": "suture_placement", "description": "At 74 seconds, both instruments at drain with suture loop visible near the surface. Still working on completing suture placement or transitioning to first throw.", "technique_notes": "Extended time in suture placement phase — 74 seconds elapsed and potentially still placing suture. This is longer than post-2 (suture placement completed by ~58s). May indicate difficulty with needle passage through the second mark."},
+    {"frame_number": 11, "phase": "first_throw", "description": "At 93 seconds, suture wrapping visible around the left instrument. Both instruments positioned with suture going through tissue and looping above. Classic throw wrapping configuration.", "technique_notes": "First throw wrapping in progress. The surgeon's knot (double throw) pattern appears to be forming with the suture looped around the left instrument."},
+    {"frame_number": 13, "phase": "second_throw", "description": "At 111 seconds, left instrument holds suture loop, right instrument holding free end. Suture thread visible. Wrapping for second throw.", "technique_notes": "Second throw in progress. The instrument positions suggest wrapping, though hand switch is difficult to confirm definitively from this angle."},
+    {"frame_number": 17, "phase": "third_throw", "description": "At 148 seconds, both instruments working close to drain surface. Suture thread visible extending upward. The right instrument appears to have a different profile — possibly scissors have been introduced.", "technique_notes": "Late in the throw phase or transitioning to cutting. The timing suggests this could be the tail end of the third throw or early cutting."},
+    {"frame_number": 20, "phase": "suture_cut", "description": "At 176 seconds, both instruments still engaged near drain. Left instrument with suture, right instrument appears to be scissors. Suture cutting in progress.", "technique_notes": "Suture cutting phase is taking significant time — instruments still engaged at 176 seconds."},
+    {"frame_number": 23, "phase": "completion", "description": "Final frame at 185 seconds. Instruments withdrawn. Completed knot visible on Penrose drain with dark suture thread at knot site. The drain slit shows a SMALL VISIBLE GAP — the upper portion of the slit is not fully approximated, though the area around the knot is partially closed. Drain remains attached to suture block (not avulsed).", "technique_notes": "Final result shows partial slit closure with a small residual gap. This is better than the pre-training video but not as good as post-practice or post-2. The knot appears present but the gap suggests either insufficient tension on throws or slight suture placement deviation."}
+  ],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [
+    {"phase": "idle", "start_seconds": 0, "end_seconds": 5, "duration_seconds": 5},
+    {"phase": "needle_load", "start_seconds": 5, "end_seconds": 18, "duration_seconds": 13},
+    {"phase": "suture_placement", "start_seconds": 18, "end_seconds": 78, "duration_seconds": 60},
+    {"phase": "first_throw", "start_seconds": 78, "end_seconds": 105, "duration_seconds": 27},
+    {"phase": "second_throw", "start_seconds": 105, "end_seconds": 128, "duration_seconds": 23},
+    {"phase": "third_throw", "start_seconds": 128, "end_seconds": 150, "duration_seconds": 22},
+    {"phase": "suture_cut", "start_seconds": 150, "end_seconds": 180, "duration_seconds": 30}
+  ],
+  "knot_assessments": [
+    {"throw_number": 1, "is_surgeon_knot": true, "is_single_throw": null, "hand_used": "left", "hand_switched": null, "appears_secure": true, "notes": "Frame 11 shows wrapping around left instrument consistent with surgeon's knot. Confidence moderate."},
+    {"throw_number": 2, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": true, "notes": "Frame 13 shows throw wrapping. Instrument positions suggest hand change from throw 1. Confidence low — camera angle limits visibility."},
+    {"throw_number": 3, "is_surgeon_knot": null, "is_single_throw": true, "hand_used": "unclear", "hand_switched": true, "appears_secure": false, "notes": "Third throw completed but final result shows a residual gap in the drain slit, suggesting the knot construct may not be providing sufficient closure tension. Confidence low."}
+  ],
+  "suture_placement": {"deviation_from_mark1_mm": 2.0, "deviation_from_mark2_mm": 2.0, "total_deviation_penalty": 4.0, "confidence": "low"},
+  "drain_assessment": {"gap_visible": true, "drain_avulsed": false, "slit_closure_quality": "partial"},
+  "estimated_penalties": 9.0,
+  "estimated_fls_score": 411.0,
+  "confidence_score": 0.58,
+  "technique_summary": "This fourth video shows a slight regression in performance compared to post-2, though it remains improved over the pre-training baseline. Completion time of ~180 seconds is slower than post-2 (158s) and post-practice (170s). The primary time loss is in the suture placement phase, which extended to approximately 60 seconds — significantly longer than the 40 seconds achieved in the previous two post-training videos. The throw phases were actually faster (22-27 seconds each) suggesting improved knot tying mechanics, but the suture cutting phase was extended at ~30 seconds. The final result shows a small visible gap in the drain slit, indicating that the improvements in closure quality seen in post-2 were not maintained. All three throws were completed and the drain was not avulsed. This may represent normal performance variability during the learning curve.",
+  "improvement_suggestions": [
+    "Suture placement regressed to 60 seconds — focus on consistent needle driving technique to maintain the 40-second pace achieved in previous attempts",
+    "Suture cutting took ~30 seconds which is the longest of all post-training attempts — practice efficient scissors introduction and cutting",
+    "The gap in the slit closure suggests knot tension needs attention — ensure each throw is tightened before proceeding to the next",
+    "Performance variability is normal during skill acquisition — continue practicing to build consistency"
+  ],
+  "strengths": [
+    "Throw phases were individually faster than previous attempts (22-27s each vs 25-30s)",
+    "Needle loading maintained at efficient 13 seconds",
+    "All three throws completed in correct sequence",
+    "Drain not avulsed — consistent good tissue handling",
+    "Overall time (180s) still significantly better than pre-training baseline (198s)"
+  ],
+  "comparison_to_previous": {
+    "previous_video_ids": ["lap_pre_video", "post_practice_video", "post2_video"],
+    "time_vs_pre": -18,
+    "time_vs_post2": 22,
+    "score_vs_pre": 21.5,
+    "score_vs_post2": -28.0,
+    "trajectory": "regression_from_peak",
+    "key_observations": [
+      "Suture placement regression: 40s (post-2) → 60s (post-3)",
+      "Throw speed improved: 27s avg (post-2) → 24s avg (post-3)",
+      "Drain closure regressed: complete (post-2) → partial gap (post-3)",
+      "Cutting time regressed: 18s (post-2) → 30s (post-3)",
+      "Normal variability expected during learning — overall trend still positive from baseline"
+    ]
+  }
+}
