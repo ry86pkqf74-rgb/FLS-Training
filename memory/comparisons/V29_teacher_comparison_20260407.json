@@ -1,0 +1,70 @@
+{
+  "id": "comparison_V29_001",
+  "video_id": "V29_video",
+  "video_alias": "V29",
+  "created_at": "2026-04-08T11:05:00Z",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-07/V29_video_claude-sonnet-4_20260407_183000.json",
+      "completion_time_seconds": 295.0,
+      "estimated_penalties": 8.0,
+      "estimated_fls_score": 297.0,
+      "confidence": 0.30
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-07/V29_video_gpt-4o_20260408_110000.json",
+      "completion_time_seconds": 304.5,
+      "estimated_penalties": 2.5,
+      "estimated_fls_score": 293.0,
+      "confidence": 0.64
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 9.5,
+    "delta_penalties": 5.5,
+    "delta_fls_score": 4.0,
+    "agreement_level": "strong"
+  },
+  "knot_assessment_alignment": {
+    "first_throw_surgeon_knot": {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_2":      {"claude": true, "gpt4o": true, "agreement": true},
+    "hand_switch_throw_3":      {"claude": true, "gpt4o": true, "agreement": true},
+    "all_secure":               {"claude": true, "gpt4o": true, "agreement": true}
+  },
+  "drain_alignment": {
+    "gap_visible":   {"claude": false, "gpt4o": false, "agreement": true},
+    "drain_avulsed": {"claude": false, "gpt4o": false, "agreement": true},
+    "closure":       {"claude": "appears_closed", "gpt4o": "near_complete", "agreement": true}
+  },
+  "placement_alignment": {
+    "claude_total_mm": 4.0,
+    "gpt4o_total_mm":  2.5,
+    "delta_mm": 1.5,
+    "agreement": "moderate"
+  },
+  "penalty_extra_disagreement": {
+    "claude_total_penalties": 8.0,
+    "gpt4o_total_penalties": 2.5,
+    "claude_breakdown": "4.0 placement + 4.0 quality/efficiency (out-of-rubric)",
+    "gpt4o_breakdown": "2.5 placement only",
+    "analysis": "Fourth video (V20, V22, V26, V29) where Claude applies an out-of-rubric quality/efficiency penalty. GPT-4o's rubric-strict 2.5 is the correct rubric application. Recommend formalizing the rubric-allowed penalty set in the prompt and adding a separate cosmetic_quality field if Claude's signal is worth capturing."
+  },
+  "phase_attribution_disagreement": {
+    "claude_diagnosis": "Phase split: load+placement 25s, throws 175s (55+60+60), cut 95s. Cutting and throws 2/3 are the loss centers.",
+    "gpt4o_diagnosis": "Phase split: needle_load 24s, placement 36s, first_throw 20s, second_throw 65s, third_throw 61s, cut 97s. Same loss centers but first throw is moved out of throws and into the placement window.",
+    "analysis": "Same boundary-disagreement pattern as V21/V24: tails converge but Claude bundles ~35s of first-throw setup into the upstream phase while GPT-4o keeps it in first_throw. Cutting durations agree within 2s and throws 2/3 agree within 5s each. Diagnosis is functionally identical."
+  },
+  "fls_score_reconciliation": {
+    "claude_fls": 297.0,
+    "gpt4o_fls": 293.0,
+    "reconciled_fls": 293.0,
+    "reconciliation_note": "Strong score agreement (delta 4.0). Reconciled value is 293.0 (GPT-4o, rubric-strict). The 4-point delta is entirely Claude's out-of-rubric quality/efficiency penalty. Both teachers independently treat V29 as a fatigue/equipment-adaptation regression on the Vizio station rather than a skill regression."
+  },
+  "systematic_findings": {
+    "v28_v29_adaptation_arc_confirmed": "Both teachers independently identify V29 as a 70-second improvement over V28 (365 to 295/304.5) and frame it as equipment adaptation rather than skill regression. This is the strongest single-attempt improvement signal in the series.",
+    "rubric_scope_issue_recurring": "Fourth case (V20, V22, V26, V29) where Claude applies an out-of-rubric quality/efficiency penalty. Pattern is now persistent enough to recommend prompt-level formalization of the allowed penalty set.",
+    "largest_confidence_gap_in_series": "GPT-4o 0.64 vs Claude 0.30 = delta 0.34, the largest confidence gap recorded. Claude penalizes the Vizio moire/color-banding artifacts much harder than GPT-4o does. Claude's lower number is the more defensible read on this recording.",
+    "drain_agreement_continues": "V29 is another drain-closure agreement case. Running tally: AGREE 8 (V12, V13, V18, V19, V22, V26, V27, V29), DIVERGE 5 (V11, V14, V16, V17, V20).",
+    "phase_split_drift_recurs": "Boundary disagreement on first_throw vs preceding phase recurs (also seen on V21, V24). Same convergent-tails pattern: totals agree, internal allocation differs by ~30-40s on one specific boundary."
+  }
+}
