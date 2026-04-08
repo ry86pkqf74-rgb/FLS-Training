@@ -1,9 +1,14 @@
 # PETRAW — PEg TRAnsfer Workflow Recognition (EndoVis 2021)
 
-> **Status (2026-04-08):** registration pending. README + download
-> script stub committed; videos will land on the same RunPod that
-> hosts LASANA POD=A (PegTransfer + CircleCutting), since this is
-> another peg-transfer corpus.
+> **Status (2026-04-08):** ✅ **downloaded + unzipping on Mac.**
+> Synapse PAT auth + `synapseclient` walked the project tree, real
+> file IDs locked into `scripts/062_petraw_download.sh`. Both archives
+> arrived: `Training.zip` 14.40 GB (90 trials), `Test.zip` 9.72 GB
+> (60 trials), plus the published evaluation scripts
+> (`Segmentation_metrics.py`, `Workflow_metrics.py`) and
+> `PETRAW_detailed_results.zip`. On-disk layout per trial:
+> `Kinematic/`, `Procedural_description/`, `Segmentation/`, `Video/`
+> all confirmed at 90 entries on Training side.
 
 ## Source
 
