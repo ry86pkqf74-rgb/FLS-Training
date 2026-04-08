@@ -265,20 +265,44 @@ echo ""
 # --- Step 5: Launch training ---
 echo "[5/5] Starting training..."
 
-# Generate run manifest for reproducibility
+# --- Write run manifest (scripts/041_write_run_manifest.py) ---
+# Captures git state, GPU info, dataset fingerprint, and config hash.
+# Patches $RUNTIME_CONFIG with the resolved output_dir when missing so
+# finetune_vlm.py and the manifest land in the same directory.
 echo "  Writing run manifest..."
-python -m scripts.091_run_manifest \
-    --config "$RUNTIME_CONFIG" \
-    --dataset-path "$DATASET_PATH" 2>/dev/null || \
-python scripts/091_run_manifest.py \
-    --config "$RUNTIME_CONFIG" \
-    --dataset-path "$DATASET_PATH" 2>/dev/null || \
-echo "  WARNING: run manifest generation failed (non-fatal)"
+TRAINING_OUTPUT_DIR=$(
+    python scripts/041_write_run_manifest.py \
+        --config "$RUNTIME_CONFIG" \
+        --dataset-path "$DATASET_PATH" 2>/tmp/manifest_write.log
+) || {
+    echo "  WARNING: run manifest write failed — $(cat /tmp/manifest_write.log)"
+    TRAINING_OUTPUT_DIR=""
+}
 
 echo "========================================="
 echo ""
 
+# Capture the training exit code without aborting the script so the
+# finalize step always runs regardless of success or failure.
+set +e
 python -m src.training.finetune_vlm --config "$RUNTIME_CONFIG"
+TRAINING_EXIT=$?
+set -e
+
+# --- Finalize run manifest with outcome metrics ---
+if [ -n "$TRAINING_OUTPUT_DIR" ]; then
+    echo "  Finalizing run manifest (exit=$TRAINING_EXIT)..."
+    python scripts/042_finalize_run_manifest.py \
+        --output-dir "$TRAINING_OUTPUT_DIR" \
+        --exit-status "$TRAINING_EXIT" 2>&1 || \
+    echo "  WARNING: run manifest finalization failed (non-fatal)"
+fi
+
+# Re-propagate a non-zero training exit so CI/watchdog sees the failure.
+if [ "$TRAINING_EXIT" -ne 0 ]; then
+    echo "ERROR: finetune_vlm exited with status $TRAINING_EXIT" >&2
+    exit "$TRAINING_EXIT"
+fi
 
 echo ""
 echo "========================================="
