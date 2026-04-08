@@ -205,6 +205,28 @@ to flip it on after the LASANA pretrain finishes. Reason: we don't want a
 fresh clone to attempt to resume from a checkpoint that doesn't exist on a
 new pod.
 
+### W6 — `scripts/072_lasana_stream_watch.py` (NEW)
+
+Add a thin host-role watcher that turns the batch primitives into the live
+streaming path:
+
+`070 -> 071 -> 068 -> rsync -> 040`
+
+- **No core rewrites.** Reuse `070` as the downloader, `071` as the
+  archive-to-layout bridge, `068` for frame extraction, and `040` for
+  dataset materialization.
+- **Hetzner role:** run the watcher against the three non-suture tasks.
+  As each archive finishes, `071` emits `<video_id>/video.hevc`, `068`
+  extracts the new frame directory, and the watcher `rsync`s that single
+  `<video_id>/` frame tree to Contabo.
+- **Contabo role:** run the watcher against `SutureAndKnot`, let it
+  extract local frames, and gate `040` until the local
+  `data/external/lasana_processed/frames/` tree contains every LASANA
+  `video_id` backed by `memory/scores/lasana/*.json` across all four tasks.
+- **Idempotence:** persist synced frame dirs + the one-shot `040` trigger
+  under `data/external/lasana_processed/.stream_state/` so re-runs resume
+  cleanly instead of re-rsyncing or rebuilding the LASANA dataset.
+
 ## Acceptance criteria
 
 A reviewer accepting this PR should be able to verify, in order:
@@ -226,7 +248,32 @@ A reviewer accepting this PR should be able to verify, in order:
    filter) produces output byte-identical to a fresh `--ver v4` rebuild.
 5. CPU smoke test: `bash smoke_test.sh data/training/<date>_lasana_v1` runs
    to completion (4 samples, 1 epoch, no quantization).
-6. Pod launch sequence (do not actually run on GPU as part of PR review):
+6. Host streaming orchestration can be started with:
+  ```bash
+  python scripts/072_lasana_stream_watch.py \
+     --host-role hetzner \
+     --run-downloader --resume-downloads \
+     --download-task PegTransfer \
+     --download-task CircleCutting \
+     --download-task BalloonResection \
+     --raw-dir /data/fls/raw-videos/lasana \
+     --layout-dir /data/fls/lasana_layout \
+     --processed-dir /data/fls/lasana_processed \
+     --rsync-dest root@<CONTABO_HOST>:/data/fls/lasana_processed/frames \
+     --watch
+
+  python scripts/072_lasana_stream_watch.py \
+     --host-role contabo \
+     --run-downloader --resume-downloads \
+     --download-task SutureAndKnot \
+     --raw-dir /data/fls/raw-videos/lasana \
+     --layout-dir /data/fls/lasana_layout \
+     --processed-dir /data/fls/lasana_processed \
+     --prepare-when-ready \
+     --prepare-ver lasana_v1 \
+     --watch
+  ```
+7. Pod launch sequence (do not actually run on GPU as part of PR review):
    ```bash
    bash deploy/runpod_launch.sh data/training/LATEST_LASANA src/configs/pretrain_lasana.yaml
    # ...wait for completion, then flip resume_from_checkpoint in finetune_task5_standard.yaml
@@ -254,8 +301,9 @@ Flag in PR description, do not block on:
 ## What lives outside this PR
 
 - The actual LASANA HEVC download (W1's *execution*, not the script). Run
-  operationally on Contabo first, then shard additional task archives onto
-  Hetzner only after the short overlap test shows both hosts can advance.
+  operationally via the new watcher on Contabo first, then shard the other
+  three task archives onto Hetzner only after the short overlap test shows
+  both hosts can advance.
 - The downstream Stage-2 launch. That's a config flip + a `bash` command,
   not code.
 - Any change to `src/training/finetune_vlm.py`.
@@ -264,6 +312,26 @@ Flag in PR description, do not block on:
 
 _To be filled in as workstreams land. Append commit hashes, dates, and any
 deviations from the plan above._
+
+---
+
+## Outcome (appended 2026-04-08 14:20 EDT)
+
+Status advanced: `in-progress` now includes the streaming watcher architecture required for the
+host-split LASANA ingest path.
+
+- Canonical data path is now `070 -> 071 -> 068 -> rsync -> 040`.
+- `scripts/072_lasana_stream_watch.py` is the main host-role wrapper around that path. It keeps the
+  existing downloader, layout, frame-extraction, rsync, and dataset-build primitives intact while
+  making the end-to-end stream restart-safe through `.stream_state/` receipts.
+- `scripts/072_lasana_frame_watch.py`, `scripts/073_lasana_rsync_watch.py`, and
+  `scripts/074_lasana_prepare_watch.py` remain as lower-level stage helpers for debugging or
+  one-off execution, but the intended operations entrypoint is the single stream watcher above.
+- `040` remains Contabo-only because `memory/scores/lasana` is authoritative there. Hetzner is now
+  explicitly an approved parallel worker for download, unzip, frame extraction, and frame rsync,
+  but not for label storage or dataset assembly.
+- Contabo also remains responsible for the local `SutureAndKnot` branch of the stream so the full
+  four-task frame corpus converges on the same host before dataset preparation starts.
 
 
 ---
@@ -333,3 +401,83 @@ W6 shipped and the operator path changed accordingly.
 Keep the live download workers running, then start `071` in `--watch`
 mode on each host's raw archive directory so frame extraction can begin as
 soon as each zip finishes.
+
+
+---
+
+## Status update — streaming pipeline live (appended 2026-04-08 13:05 EDT)
+
+ETA collapsed from ~24h sequential to ~1.75h parallel. Hetzner cpx62 (16
+vCPU / 32 GB / 640 GB, Helsinki, ASN Hetzner Online GmbH) brought online as
+a second downloader on a distinct IP, which empirically defeated whatever
+rate-limiting the LASANA portal was applying to Contabo alone. The full
+streaming pipeline is now live on both hosts.
+
+### What shipped
+
+- `5f28e80` — `scripts/071_lasana_unzip_and_layout.py` (W6) with
+  task-qualified archive layout. `--watch` mode polls the raw download
+  directory and extracts + lays out each archive the moment it completes.
+- Hetzner: repo cloned to `/root/FLS-Training`, 071 watcher running as
+  PID 456503 against `/data/fls/data/external/lasana_layout`.
+- Contabo: 070 downloader active on SutureAndKnot, 071 watcher active,
+  plus a named background resume loop `lasana_suture_resume_watch`
+  (PID 4114118) that auto-retries `SutureAndKnot_left.zip.part` the
+  moment `SutureAndKnot_right.zip` finishes. No human babysitting needed.
+- Hetzner: three concurrent downloaders active on BalloonResection,
+  CircleCutting, PegTransfer.
+
+### Live state (observed ~13:00 EDT)
+
+| Host | Task | Partial size | ETA |
+|---|---|---|---|
+| Contabo | SutureAndKnot_right | 21.6 GB | ~23 min |
+| Contabo | SutureAndKnot_left (retry armed) | 8.1 GB | ~68 min after right finishes |
+| Hetzner | BalloonResection_left | 5.5 GB | ~44 min |
+| Hetzner | PegTransfer_left | 5.0 GB | ~51 min |
+| Hetzner | CircleCutting_left | 3.8 GB | ~1.76 hr |
+
+**Critical path: Hetzner CircleCutting at ~1.76 hr.** Contabo's total
+workload (~1.52 hr) is comfortably under the Hetzner bound.
+
+### Architectural note — per-IP not per-account
+
+The empirical result (Hetzner + Contabo downloading in parallel without
+contention) confirms the LASANA portal's rate limit is per-IP, not per
+account/token. This means future downloads of comparable volume can
+legitimately parallelize across any distinct-IP hosts we have access to.
+Do **not** try to scale this to 4+ hosts without first checking the
+portal's terms of service — polite parallelism at 2 is different from
+aggressive parallelism at 8.
+
+### Still-outstanding work before Stage 1 can launch
+
+The streaming pipeline handles `070 → 071` automatically. Everything
+downstream is still manual-trigger:
+
+1. **Auto-trigger `068 --frames-only`** on each layout directory as it
+   appears. Currently the watcher produces the layout, but nothing picks
+   up from there. Agent action: wrap 068 in a second watcher that polls
+   the layout directory the same way 071 polls the raw directory.
+2. **Hetzner → Contabo frame rsync.** 040 must run on Contabo because
+   MemoryStore (with the 1,270 LASANA labels) lives there. The ~28 GB of
+   frames extracted on Hetzner need to land on Contabo before 040 can
+   build the unified corpus. Estimated rsync time over datacenter link:
+   ~10 min per task.
+3. **040 build on Contabo** — invoked as:
+   ```bash
+   python scripts/040_prepare_training_data.py --ver lasana_v1 \
+       --include-sources lasana --respect-existing-splits \
+       --frames-dir /data/fls/data/external/lasana_processed/frames \
+       --max-frames 10
+   ```
+4. **CPU smoke test** on the resulting corpus before pod launch.
+5. **Stage 1 RunPod launch** with `pretrain_lasana.yaml`.
+
+### Full streaming pipeline (canonical)
+
+```
+Hetzner: 070 → 071 → 068 → rsync → Contabo
+Contabo: 070 → 071 → 068 → (stay local)
+Contabo: wait for all 4 task frame dirs → 040 → smoke_test → ready for Stage 1
+```

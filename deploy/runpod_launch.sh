@@ -4,7 +4,8 @@
 # Prerequisites:
 #   - GPU instance with CUDA 12.x (RTX 4090 24GB or L40S recommended)
 #   - Training data already prepared locally via:
-#       python scripts/040_prepare_training_data.py --version 1
+#       python scripts/040_prepare_training_data.py --ver v2
+#       bash scripts/045_prep_v2_training.sh
 #   - JSONL files uploaded to the instance (see LAUNCH_GUIDE.md)
 #
 # Usage:
@@ -12,12 +13,11 @@
 #   bash deploy/runpod_launch.sh [dataset_path] [config_path]
 #
 # Example:
-#   bash deploy/runpod_launch.sh data/training/2026-04-07_v1 src/configs/finetune_task5_v1.yaml
+#   bash deploy/runpod_launch.sh training/data src/configs/finetune_task5_v2.yaml
 
 set -euo pipefail
-
 DATASET_PATH="${1:-data/training/LATEST}"
-CONFIG_PATH="${2:-src/configs/finetune_task5_v1.yaml}"
+CONFIG_PATH="${2:-src/configs/finetune_task5_v2.yaml}"
 CONTINUOUS_HOURS="${CONTINUOUS_HOURS:-0}"
 SECONDS_PER_STEP_ESTIMATE="${SECONDS_PER_STEP_ESTIMATE:-7}"
 BLACKWELL_BATCH_SIZE="${BLACKWELL_BATCH_SIZE:-8}"
@@ -28,6 +28,44 @@ SKIP_DEP_INSTALL="${SKIP_DEP_INSTALL:-0}"
 BASE_MODEL_OVERRIDE="${BASE_MODEL_OVERRIDE:-}"
 OUTPUT_DIR_OVERRIDE="${OUTPUT_DIR_OVERRIDE:-}"
 RESUME_FROM_CHECKPOINT="${RESUME_FROM_CHECKPOINT:-}"
+
+maybe_prepare_named_training_dataset() {
+    local config_name target_path prep_script
+
+    config_name="$(basename "$CONFIG_PATH")"
+    case "$config_name" in
+        finetune_task5_v2.yaml)
+            target_path="training/data/v2"
+            prep_script="scripts/045_prep_v2_training.sh"
+            ;;
+        finetune_task5_v3.yaml)
+            target_path="training/data/v3"
+            prep_script="scripts/045_prep_v3_training.sh"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+
+    if [ ! -f "$prep_script" ]; then
+        return 1
+    fi
+
+    echo "  Preparing canonical dataset alias via $prep_script"
+    bash "$prep_script"
+
+    if [ "$DATASET_PATH" = "training/data" ] || [ "$DATASET_PATH" = "./training/data" ]; then
+        DATASET_PATH="$target_path"
+    fi
+
+    [ -f "$DATASET_PATH/train.jsonl" ] || [ -f "$target_path/train.jsonl" ] || return 1
+
+    if [ ! -f "$DATASET_PATH/train.jsonl" ] && [ -f "$target_path/train.jsonl" ]; then
+        DATASET_PATH="$target_path"
+    fi
+
+    return 0
+}
 
 echo "========================================="
 echo "FLS-Training: GPU Fine-Tune Launch"
@@ -127,15 +165,39 @@ PY
 fi
 
 if [ ! -f "$DATASET_PATH/train.jsonl" ]; then
+    maybe_prepare_named_training_dataset || true
+fi
+
+if [ ! -f "$DATASET_PATH/train.jsonl" ]; then
     echo "ERROR: $DATASET_PATH/train.jsonl not found."
     echo ""
-    echo "You need to prepare training data LOCALLY first:"
-    echo "  python scripts/040_prepare_training_data.py --ver v4 \\"
-    echo "      --frames-dir data/frames --max-frames 24 \\"
-    echo "      --include-coach-feedback --group-by trainee"
-    echo ""
-    echo "Then upload the output directory to this instance:"
-    echo "  rsync -avz data/training/ root@\$GPU_IP:/workspace/FLS-Training/data/training/"
+    case "$(basename "$CONFIG_PATH")" in
+        finetune_task5_v2.yaml)
+            echo "Prepare the canonical v2 alias on this host:"
+            echo "  bash scripts/045_prep_v2_training.sh"
+            echo ""
+            echo "Or rebuild the source files locally first:"
+            echo "  python scripts/040_prepare_training_data.py --ver v2"
+            echo "  rsync -avz training/data/ root@\$GPU_IP:/workspace/FLS-Training/training/data/"
+            ;;
+        finetune_task5_v3.yaml)
+            echo "Prepare the canonical v3 alias on this host:"
+            echo "  bash scripts/045_prep_v3_training.sh"
+            echo ""
+            echo "Or rebuild the source files locally first:"
+            echo "  python scripts/040_prepare_training_data.py --ver v3"
+            echo "  rsync -avz training/data/ root@\$GPU_IP:/workspace/FLS-Training/training/data/"
+            ;;
+        *)
+            echo "You need to prepare training data LOCALLY first:"
+            echo '  python scripts/040_prepare_training_data.py --ver v4 \\'
+            echo '      --frames-dir data/frames --max-frames 24 \\'
+            echo "      --include-coach-feedback --group-by trainee"
+            echo ""
+            echo "Then upload the output directory to this instance:"
+            echo "  rsync -avz data/training/ root@\$GPU_IP:/workspace/FLS-Training/data/training/"
+            ;;
+    esac
     exit 1
 fi
 

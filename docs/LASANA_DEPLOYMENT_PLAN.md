@@ -92,6 +92,37 @@ follow `RUNPOD_RUNBOOK.md` step-by-step.
    MAE > 12 after two training runs, stop spending and harvest more
    data instead of throwing more GPU at the problem.
 
+### 2026-04-08 streaming watcher update
+
+- The live LASANA ingest path is now `070 -> 071 -> 068 -> rsync -> 040`.
+- `070_lasana_download.py` remains the archive downloader and `071_lasana_unzip_and_layout.py`
+   remains the task-zip to `<video_id>/video.hevc` bridge.
+- `072_lasana_stream_watch.py` is the operational entrypoint on both hosts. It wraps the existing
+   downloader, layout, frame-extraction, rsync, and readiness stages without rewriting their core
+   logic.
+- On Hetzner, the watcher runs `070` for the non-suture task subset, lays out newly completed
+   archives through `071`, extracts frames via `068 --frames-only`, and incrementally rsyncs each
+   completed `frames/<video_id>/` tree to Contabo.
+- On Contabo, the watcher runs the local `SutureAndKnot` branch of `070`, lays out completed
+   archives through `071`, extracts frames locally via `068 --frames-only`, and triggers
+   `scripts/040_prepare_training_data.py --include-sources lasana` only after every score-backed
+   LASANA `video_id` is present locally.
+- `040_prepare_training_data.py` still runs on Contabo only because the LASANA MemoryStore labels
+   live there; no label replica is pushed back to Hetzner.
+- The lower-level helpers `072_lasana_frame_watch.py`, `073_lasana_rsync_watch.py`, and
+   `074_lasana_prepare_watch.py` remain available for single-stage debugging, but the canonical
+   production command is `072_lasana_stream_watch.py`.
+
+### Host split
+
+- Hetzner: run `070` for the remote LASANA task subset, `071 --watch` for layout, `072 --watch`
+   for frame extraction, and `073 --watch` for frame rsync to Contabo.
+- Contabo: run `070` and `071 --watch` only for the local `SutureAndKnot` subset, `072 --watch`
+   for local frame extraction, and `074 --watch` to trigger the LASANA-only `040` build after all
+   four task trees are present locally.
+- The rsync boundary is **frames only**. Hetzner never becomes a second source of truth for LASANA
+   labels or `040` output.
+
 ---
 
 ## 3. Workload inventory — what actually needs a GPU
@@ -462,17 +493,24 @@ before moving on; items marked **$** start the meter.
    resumable worker each for `PegTransfer`, `CircleCutting`, and
    `BalloonResection`, writing task archives into
    `/data/fls/raw-videos/lasana` on the Hetzner host.
-4. ☐ On each storage host, run
-   `python scripts/071_lasana_unzip_and_layout.py --raw-dir <raw-zips> --out-dir <laid-out-videos> --watch`
-   so completed `*.zip` archives are unpacked into
-   `<video_id>/video.hevc` as soon as the final rename lands.
-5. ☐ Run `python scripts/068_lasana_extract_features.py --frames-only`
-   against the laid-out W6 tree, not the raw archive directory. Example:
-   `python scripts/068_lasana_extract_features.py --frames-only --lasana-dir <laid-out-videos> --out-dir <processed-root> --fps 1`
-6. ☐ Verify frame counts and the extractor manifest before destroying any
+4. ✅ The live path is now a single watcher per host:
+   - **Hetzner** runs `070` for `PegTransfer`, `CircleCutting`, and
+     `BalloonResection`, feeds newly completed zips through `071`, runs
+     `068 --frames-only` over the laid-out `<video_id>/video.hevc` tree,
+     and `rsync`s each newly extracted `frames/<video_id>/` directory to
+     Contabo.
+   - **Contabo** runs `070` for `SutureAndKnot`, feeds newly completed zips
+     through `071`, runs local `068 --frames-only`, and is the **only**
+     host allowed to trigger `040` because `memory/scores/lasana/` lives
+     there.
+5. ✅ Hetzner command:
+   `python scripts/072_lasana_stream_watch.py --host-role hetzner --run-downloader --resume-downloads --download-task PegTransfer --download-task CircleCutting --download-task BalloonResection --raw-dir /data/fls/raw-videos/lasana --layout-dir /data/fls/lasana_layout --processed-dir /data/fls/lasana_processed --rsync-dest root@<CONTABO_HOST>:/data/fls/lasana_processed/frames --watch`
+6. ✅ Contabo command:
+   `python scripts/072_lasana_stream_watch.py --host-role contabo --run-downloader --resume-downloads --download-task SutureAndKnot --raw-dir /data/fls/raw-videos/lasana --layout-dir /data/fls/lasana_layout --processed-dir /data/fls/lasana_processed --prepare-when-ready --prepare-ver lasana_v1 --watch`
+7. ☐ Verify frame counts and the extractor manifest before destroying any
    paid pod. Archive byte counts alone are no longer the only gate.
-7. **GATE:** the processed root contains the expected JPEG frames plus a
-   manifest proving `068` consumed the task-qualified layout.
+8. **GATE:** Contabo's processed root contains all four LASANA task frame
+   trees locally and `040` is triggered there exactly once.
 
 ### Stage 2 — phase 2 small GPU ($, ~$2)
 
@@ -488,13 +526,16 @@ before moving on; items marked **$** start the meter.
 ### Stage 3 — local training data prep (free)
 
 1. ☐ Pull features from B2 to S6 (or laptop).
-2. ☐ Run `python scripts/040_prepare_training_data.py --version v4`
-   to merge LASANA + PETRAW + SimSurgSkill + JIGSAWS metadata into
+2. ✅ For LASANA-only pretrain builds, let Contabo's watcher trigger
+   `python scripts/040_prepare_training_data.py --ver lasana_v1 --include-sources lasana --respect-existing-splits --frames-dir /data/fls/lasana_processed/frames` once all four LASANA task frame trees are local.
+3. ☐ Run `python scripts/040_prepare_training_data.py --version v4`
+   separately when you want the broader multi-dataset corpus that merges
+   LASANA + PETRAW + SimSurgSkill + JIGSAWS into
    `data/training/2026-04-XX_v4/`.
-3. ☐ Run `python scripts/050_evaluate.py --dry-run` against the new
+4. ☐ Run `python scripts/050_evaluate.py --dry-run` against the new
    dataset version on CPU to confirm the data loader works.
-4. ☐ Commit + push the dataset version to GitHub.
-5. **GATE:** `train.jsonl` + `val.jsonl` + `test.jsonl` all present
+5. ☐ Commit + push the dataset version to GitHub.
+6. **GATE:** `train.jsonl` + `val.jsonl` + `test.jsonl` all present
    and `python scripts/090_status.py` shows the new corpus.
 
 ### Stage 4 — phase 3 training pod ($, ~$8 per run)
@@ -590,6 +631,7 @@ These are the conditions under which **we stop spending immediately**:
 - `scripts/070_lasana_download.py` — manifest-aware downloader for task archives
 - `scripts/071_lasana_unzip_and_layout.py` — task-archive watcher that emits `<video_id>/video.hevc`
 - `scripts/068_lasana_extract_features.py` — frame extraction + feature caching over the W6 layout
+- `scripts/072_lasana_stream_watch.py` — host-role watcher that wires `070 -> 071 -> 068 -> rsync -> 040`
 - RunPod pricing: https://www.runpod.io/pricing
 - Vast.ai pricing: https://vast.ai/pricing
 - Cloud GPU price tracker: https://getdeploying.com/gpus/nvidia-h100

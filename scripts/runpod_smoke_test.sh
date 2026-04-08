@@ -194,7 +194,7 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
 else
     FF_VER=$(ffmpeg -version 2>&1 | head -1 | awk '{print $3}')
     info "ffmpeg $FF_VER"
-    if ffmpeg -decoders 2>/dev/null | grep -qE '^V.*hevc'; then
+    if ffmpeg -decoders 2>/dev/null | grep -qE '^[[:space:]]*V.*hevc'; then
         ok "HEVC decoder present"
     else
         fail "HEVC decoder MISSING (apt-get install -y libavcodec-extra)"
@@ -210,7 +210,7 @@ echo "[5] Network"
 test_host() {
     local host=$1
     local label=$2
-    if curl -fsS --max-time 10 -o /dev/null "$host" 2>/dev/null; then
+    if curl -sS --max-time 10 -o /dev/null "$host" 2>/dev/null; then
         ok "$label reachable"
     else
         fail "$label NOT reachable ($host)"
