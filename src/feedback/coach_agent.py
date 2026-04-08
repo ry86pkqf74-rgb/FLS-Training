@@ -24,7 +24,28 @@ logger = logging.getLogger(__name__)
 PROMPT_DIR = Path(__file__).parent.parent.parent / "prompts"
 
 
+def _canonical_task_id(task: str | None) -> str:
+    task_name = str(task or "task5").strip().lower()
+    alias_map = {
+        "task1_peg_transfer": "task1",
+        "task2_pattern_cut": "task2",
+        "task3_ligating_loop": "task3",
+        "task4_extracorporeal_suture": "task4",
+        "task5_intracorporeal_suture": "task5",
+    }
+    if task_name in alias_map:
+        return alias_map[task_name]
+    if task_name.isdigit():
+        return f"task{task_name}"
+    if task_name.startswith("task"):
+        return task_name.split("_", 1)[0]
+    return "task5"
+
+
 def _load_coach_prompt(version: str = "v001") -> str:
+    if version.startswith("v002"):
+        path = PROMPT_DIR / "v002_universal_coach_system.md"
+        return path.read_text()
     path = PROMPT_DIR / f"{version}_task5_coach.md"
     return path.read_text()
 
@@ -34,10 +55,14 @@ def _build_coach_user_message(
     teacher_a_json: dict | None,
     teacher_b_json: dict | None,
     frame_timestamps: list[float],
+    task_id: str,
+    skill_level: str,
     trainee_history: list[dict] | None = None,
 ) -> str:
     """Build the text portion of the coach's user message."""
     parts = []
+
+    parts.append(f"## Task Context\n- task_id: {task_id}\n- skill_level: {skill_level}\n")
 
     parts.append("## Consensus Score (from rubric evaluation pipeline)")
     parts.append("```json")
@@ -94,6 +119,8 @@ def generate_coach_feedback(
     trainee_history: list[dict] | None = None,
     model: str | None = None,
     prompt_version: str = "v001",
+    task_id: str | None = None,
+    skill_level: str = "intermediate",
 ) -> dict:
     """Call frontier model to generate rich coaching feedback.
 
@@ -113,11 +140,12 @@ def generate_coach_feedback(
     model = model or os.getenv("COACH_MODEL", "claude-sonnet-4-20250514")
     frame_timestamps = frame_timestamps or []
     frame_b64s = frame_b64s or []
+    canonical_task_id = _canonical_task_id(task_id or consensus_json.get("task_id"))
 
     system_prompt = _load_coach_prompt(prompt_version)
     user_text = _build_coach_user_message(
         consensus_json, teacher_a_json, teacher_b_json,
-        frame_timestamps, trainee_history,
+        frame_timestamps, canonical_task_id, skill_level, trainee_history,
     )
 
     # Build message content: frames (as images) + text
@@ -169,6 +197,8 @@ def generate_coach_feedback(
     feedback["_meta"] = {
         "model": model,
         "prompt_version": prompt_version,
+        "task_id": canonical_task_id,
+        "skill_level": skill_level,
         "elapsed_seconds": round(elapsed, 2),
         "input_tokens": response.usage.input_tokens,
         "output_tokens": response.usage.output_tokens,

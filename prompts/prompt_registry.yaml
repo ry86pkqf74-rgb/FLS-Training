@@ -1,137 +1,223 @@
 prompts:
-  # ─── v001 (Task 5 only, deprecated) ───
   - id: v001_task5_system
-    task: task5_intracorporeal_suture
+    version: v001
+    task_compatibility:
+      - task5_intracorporeal_suture
     type: scoring
     path: prompts/v001_task5_system.md
-    status: deprecated
+    status: active
     created: "2026-04-07"
-    deprecated_by: v002_universal_scoring_system
-    notes: "Initial scoring prompt for Task 5 only"
-
-  - id: v001_task5_critique
-    task: task5_intracorporeal_suture
-    type: critique
-    path: prompts/v001_task5_critique.md
-    status: deprecated
-    created: "2026-04-07"
-    deprecated_by: v002_critique_system
-    notes: "Simple critique agent for dual-teacher consensus"
-
-  - id: v001_task5_chatgpt_system
-    task: task5_intracorporeal_suture
-    type: scoring
-    path: prompts/v001_task5_chatgpt_system.md
-    status: deprecated
-    created: "2026-04-07"
-    deprecated_by: v002_universal_scoring_system
-    notes: "GPT-4o variant of Task 5 scoring"
+    output_schema: legacy_scoring_result
+    deprecation_note: "Superseded by v002 universal scoring. Keep only for backward compatibility and historical rescoring comparisons."
+    notes: "Initial scoring prompt for Task 5 intracorporeal suturing."
 
   - id: v001_task5_coach
-    task: task5_intracorporeal_suture
+    version: v001
+    task_compatibility:
+      - task5_intracorporeal_suture
     type: coaching
     path: prompts/v001_task5_coach.md
-    status: deprecated
+    status: active
     created: "2026-04-07"
-    deprecated_by: v002_universal_coach_system
-    notes: "Task 5 coaching prompt"
+    output_schema: legacy_coach_feedback
+    deprecation_note: "Superseded by v002 universal coaching. Keep only until downstream consumers finish migrating."
+    notes: "Task 5-only coaching prompt."
 
   - id: v001_task5_consensus
-    task: task5_intracorporeal_suture
+    version: v001
+    task_compatibility:
+      - task5_intracorporeal_suture
     type: consensus
     path: prompts/v001_task5_consensus.md
-    status: deprecated
+    status: active
     created: "2026-04-07"
-    deprecated_by: v002_consensus_system
-    notes: "Simple consensus merge for Task 5"
+    output_schema: legacy_consensus_rounds
+    deprecation_note: "Superseded by v002 universal consensus."
+    notes: "Task 5-only consensus prompt with multi-round arbitration."
+
+  - id: v001_task5_critique
+    version: v001
+    task_compatibility:
+      - task5_intracorporeal_suture
+    type: critique
+    path: prompts/v001_task5_critique.md
+    status: active
+    created: "2026-04-07"
+    output_schema: legacy_scoring_result
+    deprecation_note: "Superseded by v002 universal critique taxonomy prompt."
+    notes: "Task 5-only critique agent for dual-teacher consensus."
 
   - id: v001_task5_feedback
-    task: task5_intracorporeal_suture
+    version: v001
+    task_compatibility:
+      - task5_intracorporeal_suture
     type: feedback
     path: prompts/v001_task5_feedback.md
-    status: deprecated
+    status: active
     created: "2026-04-07"
-    notes: "Trainee-facing feedback (folded into v002 coach)"
+    output_schema: legacy_feedback_report
+    deprecation_note: "Superseded in new development by the v002 universal coaching prompt."
+    notes: "Task 5 trainee-facing feedback prompt."
 
-  - id: v001_task5_general_critique
-    task: task5_intracorporeal_suture
-    type: critique
-    path: prompts/v001_task5_general_critique.md
-    status: deprecated
-    created: "2026-04-07"
-    deprecated_by: v002_critique_system
-    notes: "General critique variant"
-
-  - id: v001_task5_general_system
-    task: task5_intracorporeal_suture
-    type: scoring
-    path: prompts/v001_task5_general_system.md
-    status: deprecated
-    created: "2026-04-07"
-    deprecated_by: v002_universal_scoring_system
-    notes: "General scoring variant"
-
-  # ─── v002 (Universal, all 5 FLS tasks) ───
   - id: v002_universal_scoring_system
-    tasks:
+    version: v002
+    task_compatibility:
       - task1_peg_transfer
       - task2_pattern_cut
-      - task3_endoloop
+      - task3_ligating_loop
       - task4_extracorporeal_suture
       - task5_intracorporeal_suture
+    task_aliases:
+      - task1
+      - task2
+      - task3
+      - task4
+      - task5
     type: scoring
     path: prompts/v002_universal_scoring_system.md
-    status: active
+    status: testing
     created: "2026-04-08"
-    version: "2.0"
-    notes: "Universal scoring for all 5 FLS tasks. Strict JSON with confidence, frame evidence, cannot_determine. Few-shot examples."
-    input_params: [task_id, video_frames]
-    output_fields: [task_id, frame_analyses, completion_time_seconds, phase_timings, penalties, score_components, confidence, cannot_determine]
+    input_schema:
+      required:
+        - task_id
+        - frames
+      optional:
+        - prior_scores_summary
+        - visibility_notes
+        - video_metadata
+    output_schema:
+      required:
+        - task_id
+        - completion_time_seconds
+        - penalties
+        - score_components
+        - phases_detected
+        - confidence
+        - reasoning
+    notes: "Universal scorer covering all five FLS tasks with strict JSON output and explicit observability rules."
 
   - id: v002_universal_coach_system
-    tasks:
+    version: v002
+    task_compatibility:
       - task1_peg_transfer
       - task2_pattern_cut
-      - task3_endoloop
+      - task3_ligating_loop
       - task4_extracorporeal_suture
       - task5_intracorporeal_suture
+    task_aliases:
+      - task1
+      - task2
+      - task3
+      - task4
+      - task5
     type: coaching
     path: prompts/v002_universal_coach_system.md
-    status: active
+    status: testing
     created: "2026-04-08"
-    version: "2.0"
-    notes: "Universal coaching with skill-level adaptation (novice/intermediate/advanced). Task-specific drills. Practice plans."
-    input_params: [task_id, skill_level, consensus_score_json]
-    output_fields: [task_id, skill_level, overall_assessment, technique_coaching, strengths_to_reinforce, practice_plan, progress_context, confidence]
+    input_schema:
+      required:
+        - task_id
+        - skill_level
+        - scoring_output
+      optional:
+        - trainee_history
+        - teacher_notes
+    output_schema:
+      required:
+        - skill_level
+        - task_id
+        - strengths
+        - weaknesses
+        - drills
+        - progression_note
+    notes: "Universal coach prompt with task-aware drill selection and skill-level adaptation."
 
   - id: v002_consensus_system
-    tasks:
+    version: v002
+    task_compatibility:
       - task1_peg_transfer
       - task2_pattern_cut
-      - task3_endoloop
+      - task3_ligating_loop
       - task4_extracorporeal_suture
       - task5_intracorporeal_suture
+    task_aliases:
+      - task1
+      - task2
+      - task3
+      - task4
+      - task5
     type: consensus
     path: prompts/v002_consensus_system.md
-    status: active
+    status: testing
     created: "2026-04-08"
-    version: "2.0"
-    notes: "Consensus with field thresholds, arbitration protocol, disagreement log. Always recomputes score from components."
-    input_params: [teacher_a_score_json, teacher_b_score_json, task_rubric]
-    output_fields: [consensus_score, disagreements, agreement_summary, overall_confidence, trace]
+    input_schema:
+      required:
+        - task_id
+        - claude_score
+        - gpt_score
+    output_schema:
+      required:
+        - consensus_score
+        - disagreements
+        - overall_confidence
+    notes: "Universal rubric-first merger for dual-teacher scores."
 
   - id: v002_critique_system
-    tasks:
+    version: v002
+    task_compatibility:
       - task1_peg_transfer
       - task2_pattern_cut
-      - task3_endoloop
+      - task3_ligating_loop
       - task4_extracorporeal_suture
       - task5_intracorporeal_suture
+    task_aliases:
+      - task1
+      - task2
+      - task3
+      - task4
+      - task5
     type: critique
     path: prompts/v002_critique_system.md
-    status: active
+    status: testing
     created: "2026-04-08"
-    version: "2.0"
-    notes: "Phase-by-phase error analysis. FLS penalty mapping, error cascades, repeated error detection, pattern analysis."
-    input_params: [task_id, frame_analyses]
-    output_fields: [phase_analysis, error_summary, penalty_reconciliation, pattern_analysis, confidence]
+    input_schema:
+      required:
+        - task_id
+        - scoring_output
+      optional:
+        - teacher_notes
+        - frame_summaries
+    output_schema:
+      required:
+        - task_id
+        - phase_reviews
+        - error_taxonomy
+        - overall_pattern
+        - confidence
+    notes: "Universal phase-by-phase error taxonomy prompt mapped to official penalty categories."
+
+aliases:
+  - id: v002_task1_scoring_alias
+    target_prompt_id: v002_universal_scoring_system
+    selector:
+      task_id: task1
+
+  - id: v002_task2_scoring_alias
+    target_prompt_id: v002_universal_scoring_system
+    selector:
+      task_id: task2
+
+  - id: v002_task3_scoring_alias
+    target_prompt_id: v002_universal_scoring_system
+    selector:
+      task_id: task3
+
+  - id: v002_task4_scoring_alias
+    target_prompt_id: v002_universal_scoring_system
+    selector:
+      task_id: task4
+
+  - id: v002_task5_scoring_alias
+    target_prompt_id: v002_universal_scoring_system
+    selector:
+      task_id: task5

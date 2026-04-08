@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -114,6 +115,38 @@ def _should_export_merged(config: dict) -> bool:
     return bool(config.get("export_merged_16bit", True))
 
 
+def _use_wandb(config: dict) -> bool:
+    return bool(config.get("use_wandb", False))
+
+
+def _wandb_project(config: dict) -> str:
+    return str(config.get("wandb_project", "fls-training"))
+
+
+def _run_name(config: dict, output_dir: str) -> str:
+    return str(config.get("run_name") or Path(output_dir).name)
+
+
+def _maybe_finish_wandb(config: dict, metrics: dict) -> None:
+    if not _use_wandb(config):
+        return
+    try:
+        import wandb
+    except ImportError:
+        logger.warning("wandb requested but not installed")
+        return
+    if wandb.run is not None:
+        wandb.log({f"final/{key}": value for key, value in metrics.items()})
+        wandb.finish()
+
+
+def _configure_wandb_env(config: dict, output_dir: str) -> None:
+    if not _use_wandb(config):
+        return
+    os.environ.setdefault("WANDB_PROJECT", _wandb_project(config))
+    os.environ.setdefault("WANDB_NAME", _run_name(config, output_dir))
+
+
 def _finetune_unsloth(config: dict) -> dict:
     """Fine-tune using Unsloth (fast QLoRA path)."""
     try:
@@ -134,6 +167,7 @@ def _finetune_unsloth(config: dict) -> dict:
         f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_unsloth"
     )
     Path(output_dir).mkdir(parents=True, exist_ok=True)
+    _configure_wandb_env(config, output_dir)
 
     use_4bit = config.get("quantization") == "4bit"
     use_grad_ckpt = config.get("gradient_checkpointing", False)
@@ -184,6 +218,7 @@ def _finetune_unsloth(config: dict) -> dict:
         dataset_text_field="",
         remove_unused_columns=False,
         max_seq_length=config.get("max_seq_length", 2048),
+        run_name=_run_name(config, output_dir),
     )
 
     trainer = SFTTrainer(
@@ -213,6 +248,8 @@ def _finetune_unsloth(config: dict) -> dict:
     with open(Path(output_dir) / "training_config.yaml", "w") as f:
         yaml.dump(config, f)
 
+    _maybe_finish_wandb(config, eval_results)
+
     logger.info(f"[unsloth] Done. Checkpoint: {output_dir}")
     return eval_results
 
@@ -237,6 +274,7 @@ def _finetune_hf(config: dict) -> dict:
         f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_hf"
     )
     Path(output_dir).mkdir(parents=True, exist_ok=True)
+    _configure_wandb_env(config, output_dir)
 
     quant_config = None
     if config.get("quantization") == "4bit":
@@ -293,7 +331,8 @@ def _finetune_hf(config: dict) -> dict:
         save_total_limit=config.get("save_total_limit"),
         evaluation_strategy=config.get("eval_strategy", "epoch"),
         dataloader_num_workers=config.get("dataloader_num_workers", 0),
-        report_to="none",
+        report_to="wandb" if _use_wandb(config) else "none",
+        run_name=_run_name(config, output_dir),
     )
 
     trainer = Trainer(
@@ -310,6 +349,8 @@ def _finetune_hf(config: dict) -> dict:
         json.dump(eval_results, f, indent=2)
     with open(Path(output_dir) / "training_config.yaml", "w") as f:
         yaml.dump(config, f)
+
+    _maybe_finish_wandb(config, eval_results)
 
     logger.info(f"[hf_trainer] Done. Checkpoint: {output_dir}")
     return eval_results
@@ -328,9 +369,16 @@ def finetune(config: dict) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fine-tune VLM on FLS scoring data")
     parser.add_argument("--config", required=True, help="Path to training config YAML")
+    parser.add_argument("--wandb", action="store_true", help="Enable Weights & Biases logging")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
     config = load_config(args.config)
+    config.setdefault("use_wandb", False)
+    config.setdefault("wandb_project", "fls-training")
+    if args.wandb:
+        config["use_wandb"] = True
+    if _use_wandb(config):
+        config.setdefault("run_name", Path(config.get("output_dir") or "finetune_vlm").name)
     metrics = finetune(config)
     print(f"Eval metrics: {json.dumps(metrics, indent=2)}")

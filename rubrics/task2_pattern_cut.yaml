@@ -1,0 +1,58 @@
+task: task2_pattern_cut
+task_id: task2
+name: "Precision Cutting"
+fls_manual_reference: "FLS Manual Skills Written Instructions and Performance Guidelines, Revised February 2014, Task Two"
+benchmark_reference: "Wisconsin / ACOG expert-level target"
+
+max_time_seconds: 300
+proficiency_time_seconds: 98
+max_score: 300
+score_formula: "max(0, 300 - completion_time_seconds - penalty_deductions)"
+passing_score_note: "Official exam uses normalized task weights; this repo uses the raw task ceiling as the per-task score cap."
+
+timing:
+  starts_when: "the gauze is touched"
+  ends_when: "the marked circle is completely cut out from the gauze piece"
+
+equipment:
+  - "One Maryland dissector"
+  - "One pair of endoscopic scissors"
+  - "One jumbo clip"
+  - "One 4x4 two-ply gauze with a pre-marked single circle"
+  - "Two alligator clips with strings securing the lower corners"
+
+completion_requirements:
+  - "Begin cutting from an edge of the gauze."
+  - "Completely free the marked circle from the top gauze layer."
+  - "Maintain the marked circle in view well enough to judge deviation from the line."
+
+phases:
+  - name: traction_setup
+    description: "Gauze is stabilized and traction is established."
+  - name: entry_cut
+    description: "Initial cut enters the gauze from the edge toward the circle."
+  - name: circle_following
+    description: "Scissors track the pre-marked circle until nearly complete."
+  - name: circle_release
+    description: "The marked circle is fully detached."
+
+penalties:
+  - name: line_deviation
+    description: "Cut path deviates inside or outside the marked circle line."
+    scoring: "Use visible deviation only. Deduct measured or clearly observable deviation; otherwise state cannot determine."
+  - name: incomplete_circle
+    description: "Marked circle not completely freed before timeout or end of clip."
+    scoring: "Automatic zero if the task is not completed by the maximum time."
+
+definitions:
+  drop: "Not usually applicable. If the cut-out circle or gauze slips from the instrument but remains visible, treat it as a handling issue, not a drop penalty."
+  misplacement: "The scissor path leaves the marked line or removes excess gauze beyond the intended circular boundary."
+  tissue_damage: "For this task, tissue damage refers to destructive over-cutting or tearing of the marked gauze beyond the intended circle, not minor fraying at the edge."
+
+observability_rules:
+  - "If the final cut product is never shown clearly enough to judge deviation, say cannot determine for accuracy-related deductions."
+  - "If the gauze slips from the jumbo clip, the task continues; do not treat clip release itself as a penalty unless it directly causes a visible scoring error."
+
+edge_cases:
+  - "If the video is cropped so the entire circle is not visible, lower confidence and avoid precise deviation claims."
+  - "If both single- and double-circle practice gauze appear, score only the official single-circle attempt unless the video explicitly indicates a practice-only run."

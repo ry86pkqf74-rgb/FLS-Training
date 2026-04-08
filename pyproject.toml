@@ -30,6 +30,7 @@ training = [
     "datasets>=2.18",
     "accelerate>=0.28",
     "bitsandbytes>=0.43",
+    "trl>=0.9",
     "wandb>=0.16",
     "safetensors>=0.4",
 ]

@@ -1,10 +1,18 @@
 task: task5_intracorporeal_suture
+task_id: task5
 name: "Intracorporeal Suture with Knot Tying"
 fls_manual_reference: "FLS Manual Skills Guidelines, Task 5"
+benchmark_reference: "UT Southwestern proficiency target"
 
 max_time_seconds: 600
+proficiency_time_seconds: 112
+max_score: 600
 score_formula: "600 - completion_time - penalties"
 passing_score: 475  # approximate proficiency cutoff
+
+timing:
+  starts_when: "the first instrument is visible on the monitor"
+  ends_when: "both suture ends have been cut inside the trainer"
 
 equipment:
   - "FLS trainer box"
@@ -74,3 +82,17 @@ penalties:
   - name: hand_switch_failure
     description: "Failure to alternate hands between throws"
     scoring: "Penalty per missed switch"
+
+definitions:
+  drop: "The needle, suture, or workpiece leaves control and becomes unrecoverable or directly causes task failure."
+  misplacement: "The suture enters or exits off the marked targets or the final knot sits off the intended closure site."
+  tissue_damage: "Visible drain avulsion, destructive tearing, or closure damage beyond the intended slit approximation."
+
+observability_rules:
+  - "If mark visibility is poor, do not guess exact millimeter deviation."
+  - "If hand exchange occurs off camera, say cannot determine rather than inferring a switch."
+
+edge_cases:
+  - "The first throw must be a surgeon's knot or double throw; the second and third throws must be single throws."
+  - "If the final knot is off camera when tension is applied, lower confidence for knot security and closure assessment."
+

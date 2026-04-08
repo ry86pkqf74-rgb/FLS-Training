@@ -20,6 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from dotenv import load_dotenv
+import yaml
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -31,6 +32,58 @@ SCORES_DIR = Path("memory/scores")
 COMPARISONS_DIR = Path("memory/comparisons")
 PROMPTS_DIR = Path("prompts")
 LEDGER_DIR = Path("memory")
+RUBRICS_DIR = Path("rubrics")
+
+TASK_RUBRIC_FILES = {
+    "task1": "task1_peg_transfer.yaml",
+    "task2": "task2_pattern_cut.yaml",
+    "task3": "task3_ligating_loop.yaml",
+    "task4": "task4_extracorporeal_suture.yaml",
+    "task5": "task5_intracorporeal_suture.yaml",
+}
+
+
+def _canonical_task_id(task: str) -> str:
+    task_name = str(task).strip().lower()
+    alias_map = {
+        "task1_peg_transfer": "task1",
+        "task2_pattern_cut": "task2",
+        "task3_ligating_loop": "task3",
+        "task4_extracorporeal_suture": "task4",
+        "task5_intracorporeal_suture": "task5",
+    }
+    if task_name in alias_map:
+        return alias_map[task_name]
+    if task_name.isdigit():
+        return f"task{task_name}"
+    if task_name.startswith("task"):
+        return task_name.split("_", 1)[0]
+    return f"task{task_name}"
+
+
+def _load_rubric(task: str) -> dict:
+    task_id = _canonical_task_id(task)
+    rubric_path = RUBRICS_DIR / TASK_RUBRIC_FILES[task_id]
+    return yaml.safe_load(rubric_path.read_text()) or {}
+
+
+def _build_task_context(task: str) -> str:
+    rubric = _load_rubric(task)
+    penalty_names = ", ".join(p.get("name", "") for p in rubric.get("penalties", []))
+    return (
+        f"Task ID: {rubric.get('task_id', _canonical_task_id(task))}\n"
+        f"Task Name: {rubric.get('name', '')}\n"
+        f"Maximum Time: {rubric.get('max_time_seconds', 'unknown')} seconds\n"
+        f"Proficiency Target: {rubric.get('proficiency_time_seconds', 'unknown')} seconds\n"
+        f"Score Formula: {rubric.get('score_formula', '')}\n"
+        f"Penalty Categories: {penalty_names}"
+    )
+
+
+def _load_consensus_prompt(version: str, task: str) -> str:
+    if version.startswith("v002"):
+        return (PROMPTS_DIR / "v002_consensus_system.md").read_text()
+    return (PROMPTS_DIR / f"{version}_{_canonical_task_id(task)}_consensus.md").read_text()
 
 
 def find_score_file(video_id: str, source_hint: str) -> Path | None:
@@ -94,14 +147,78 @@ def run_consensus(
     gpt_json: dict,
     model: str = "claude-sonnet-4-20250514",
     temperature: float = 0.3,
+    prompt_version: str = "v001",
+    task: str = "5",
 ) -> dict:
     """Call the Critique Agent to produce consensus from two teacher scores."""
     import anthropic
 
-    system_prompt = (PROMPTS_DIR / "v001_task5_consensus.md").read_text()
+    system_prompt = _load_consensus_prompt(prompt_version, task)
+    task_context = _build_task_context(task)
+
+    if prompt_version.startswith("v002"):
+        user_message = f"""{task_context}
+
+## Claude Score JSON:
+```json
+{json.dumps(claude_json, indent=2)}
+```
+
+## GPT-4o Score JSON:
+```json
+{json.dumps(gpt_json, indent=2)}
+```
+
+Merge these into the consensus JSON."""
+
+        client = anthropic.Anthropic()
+        t0 = time.time()
+        response = client.messages.create(
+            model=model,
+            max_tokens=4096,
+            temperature=temperature,
+            system=system_prompt,
+            messages=[{"role": "user", "content": user_message}],
+        )
+        elapsed = time.time() - t0
+
+        raw_text = response.content[0].text.strip()
+        if raw_text.startswith("```"):
+            lines = raw_text.split("\n")
+            raw_text = "\n".join(
+                lines[1:-1] if lines[-1].strip() == "```" else lines[1:]
+            ).strip()
+
+        try:
+            result = json.loads(raw_text)
+        except json.JSONDecodeError as e:
+            logger.error(f"Consensus returned invalid JSON for {video_id}: {e}")
+            return {
+                "error": "json_parse_failure",
+                "video_id": video_id,
+                "raw_response": raw_text[:3000],
+            }
+
+        result["_meta"] = {
+            "video_id": video_id,
+            "model": model,
+            "final_round": 1,
+            "elapsed_seconds": round(elapsed, 2),
+            "input_tokens": response.usage.input_tokens,
+            "output_tokens": response.usage.output_tokens,
+            "cost_usd_approx": round(
+                response.usage.input_tokens * 3 / 1_000_000
+                + response.usage.output_tokens * 15 / 1_000_000, 4
+            ),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "prompt_version": prompt_version,
+        }
+        return result
 
     # Build round 1 prompt
-    user_message = f"""## Teacher A (Claude Sonnet 4):
+    user_message = f"""{task_context}
+
+## Teacher A (Claude Sonnet 4):
 ```json
 {json.dumps(claude_json, indent=2)}
 ```
@@ -247,16 +364,23 @@ Make your final ruling on each disputed field. Output the definitive consensus J
 
 def append_ledger(video_id: str, consensus: dict):
     """Append consensus event to learning ledger."""
+    score_payload = consensus.get("consensus_score", {}) or {}
+    fls_score = score_payload.get("estimated_fls_score")
+    if fls_score is None:
+        fls_score = (score_payload.get("score_components") or {}).get("total_fls_score")
+
+    agreement_score = consensus.get("agreement_score")
+    if agreement_score is None:
+        agreement_score = consensus.get("overall_confidence")
+
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "event_type": "consensus_generated",
         "data": {
             "video_id": video_id,
-            "agreement_score": consensus.get("agreement_score"),
+            "agreement_score": agreement_score,
             "rounds": consensus.get("_meta", {}).get("final_round", 1),
-            "fls_score": (consensus.get("consensus_score", {}) or {}).get(
-                "estimated_fls_score"
-            ),
+            "fls_score": fls_score,
             "cost_usd": consensus.get("_meta", {}).get("cost_usd_approx"),
         },
     }
@@ -268,6 +392,8 @@ def append_ledger(video_id: str, consensus: dict):
 def main():
     parser = argparse.ArgumentParser(description="Generate consensus from dual teacher scores")
     parser.add_argument("--video-id", help="Run for a single video")
+    parser.add_argument("--task", default="5", help="Task id or task number")
+    parser.add_argument("--prompt-version", default="v001")
     parser.add_argument("--dry-run", action="store_true", help="List eligible videos, don't call API")
     parser.add_argument("--force", action="store_true", help="Re-run even if consensus exists")
     parser.add_argument("--model", default=None)
@@ -337,7 +463,14 @@ def main():
         gpt_json = json.loads(target["gpt_path"].read_text())
 
         try:
-            consensus = run_consensus(vid, claude_json, gpt_json, model=model)
+            consensus = run_consensus(
+                vid,
+                claude_json,
+                gpt_json,
+                model=model,
+                prompt_version=args.prompt_version,
+                task=args.task,
+            )
         except Exception as e:
             logger.error(f"  {vid}: API call failed: {e}")
             failures += 1
@@ -357,8 +490,13 @@ def main():
         append_ledger(vid, consensus)
 
         meta = consensus.get("_meta", {})
-        agreement = consensus.get("agreement_score", 0)
-        fls = (consensus.get("consensus_score", {}) or {}).get("estimated_fls_score", "?")
+        agreement = consensus.get("agreement_score")
+        if agreement is None:
+            agreement = consensus.get("overall_confidence", 0)
+        score_payload = consensus.get("consensus_score", {}) or {}
+        fls = score_payload.get("estimated_fls_score")
+        if fls is None:
+            fls = (score_payload.get("score_components") or {}).get("total_fls_score", "?")
         cost = meta.get("cost_usd_approx", meta.get("total_cost_usd_approx", 0))
         total_cost += cost
         successes += 1

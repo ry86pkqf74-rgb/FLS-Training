@@ -71,6 +71,9 @@ def main():
     parser.add_argument("--with-frames", help="Path to video file (extracts frames for richer coaching)")
     parser.add_argument("--output", help="Output JSON path (default: memory/feedback/{video_id}_coach.json)")
     parser.add_argument("--model", help="Override coach model")
+    parser.add_argument("--task", help="Explicit task override (task1-task5)")
+    parser.add_argument("--skill-level", default="intermediate", choices=["novice", "intermediate", "advanced"])
+    parser.add_argument("--prompt-version", default="v001")
     parser.add_argument("--no-history", action="store_true", help="Skip trainee history context")
     parser.add_argument("--db", default="data/fls_training.duckdb")
     args = parser.parse_args()
@@ -134,6 +137,9 @@ def main():
         frame_timestamps=frame_timestamps,
         trainee_history=trainee_history,
         model=args.model,
+        prompt_version=args.prompt_version,
+        task_id=args.task or consensus.get("task_id"),
+        skill_level=args.skill_level,
     )
 
     if "error" in feedback:
@@ -152,28 +158,48 @@ def main():
 
     # Print summary
     console.print(f"\n[bold]═══ Coach Feedback Summary ═══[/bold]")
-    oa = feedback.get("overall_assessment", {})
-    console.print(f"  {oa.get('session_headline', '')}")
+    if {"strengths", "weaknesses", "drills", "progression_note"}.issubset(feedback.keys()):
+        console.print(f"  Task: {feedback.get('task_id', '?')} | Skill Level: {feedback.get('skill_level', '?')}")
 
-    console.print(f"\n[bold]Strengths:[/bold]")
-    for s in feedback.get("strengths_to_reinforce", [])[:3]:
-        console.print(f"  ✅ {s.get('observation', '')}")
+        console.print(f"\n[bold]Strengths:[/bold]")
+        for item in feedback.get("strengths", [])[:3]:
+            console.print(f"  ✅ {item}")
 
-    console.print(f"\n[bold]Priority Technique Coaching:[/bold]")
-    for tc in feedback.get("technique_coaching", [])[:3]:
-        pri = tc.get("priority", "")
-        icon = "🔴" if pri == "high" else "🟡" if pri == "medium" else "🟢"
-        console.print(f"  {icon} [{tc.get('category', '')}] {tc.get('observation', '')}")
-        console.print(f"     → {tc.get('correction', '')}")
-        if tc.get("drill"):
-            console.print(f"     🏋️ Drill: {tc['drill']}")
+        console.print(f"\n[bold]Weaknesses:[/bold]")
+        for item in feedback.get("weaknesses", [])[:3]:
+            console.print(f"  • {item}")
 
-    pp = feedback.get("practice_plan", {})
-    if pp:
-        console.print(f"\n[bold]Next Session Focus:[/bold] {pp.get('session_focus', '')}")
-        pd = pp.get("primary_drill", {})
-        if pd:
-            console.print(f"  Drill: {pd.get('name', '')} ({pd.get('target_time_minutes', '?')} min)")
+        console.print(f"\n[bold]Drills:[/bold]")
+        for drill in feedback.get("drills", [])[:3]:
+            console.print(
+                f"  • {drill.get('name', '')} ({drill.get('duration_minutes', '?')} min): "
+                f"{drill.get('targets_weakness', '')}"
+            )
+
+        console.print(f"\n[bold]Progression Note:[/bold] {feedback.get('progression_note', '')}")
+    else:
+        oa = feedback.get("overall_assessment", {})
+        console.print(f"  {oa.get('session_headline', '')}")
+
+        console.print(f"\n[bold]Strengths:[/bold]")
+        for s in feedback.get("strengths_to_reinforce", [])[:3]:
+            console.print(f"  ✅ {s.get('observation', '')}")
+
+        console.print(f"\n[bold]Priority Technique Coaching:[/bold]")
+        for tc in feedback.get("technique_coaching", [])[:3]:
+            pri = tc.get("priority", "")
+            icon = "🔴" if pri == "high" else "🟡" if pri == "medium" else "🟢"
+            console.print(f"  {icon} [{tc.get('category', '')}] {tc.get('observation', '')}")
+            console.print(f"     → {tc.get('correction', '')}")
+            if tc.get("drill"):
+                console.print(f"     🏋️ Drill: {tc['drill']}")
+
+        pp = feedback.get("practice_plan", {})
+        if pp:
+            console.print(f"\n[bold]Next Session Focus:[/bold] {pp.get('session_focus', '')}")
+            pd = pp.get("primary_drill", {})
+            if pd:
+                console.print(f"  Drill: {pd.get('name', '')} ({pd.get('target_time_minutes', '?')} min)")
 
     meta = feedback.get("_meta", {})
     console.print(f"\n[dim]Model: {meta.get('model', '?')} | "

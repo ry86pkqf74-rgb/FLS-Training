@@ -1,0 +1,56 @@
+task: task1_peg_transfer
+task_id: task1
+name: "Peg Transfer"
+fls_manual_reference: "FLS Manual Skills Written Instructions and Performance Guidelines, Revised February 2014, Task One"
+benchmark_reference: "UT Southwestern / ACOG proficiency target"
+
+max_time_seconds: 300
+proficiency_time_seconds: 48
+max_score: 300
+score_formula: "max(0, 300 - completion_time_seconds - penalty_deductions)"
+passing_score_note: "Official exam uses normalized task weights; this repo uses the raw task ceiling as the per-task score cap."
+
+timing:
+  starts_when: "the first object is touched"
+  ends_when: "the last object is released on the original side of the pegboard"
+
+equipment:
+  - "Two Maryland dissectors"
+  - "Pegboard"
+  - "Six rubber ring objects"
+
+completion_requirements:
+  - "Transfer all six objects from the nondominant side to the dominant side."
+  - "Return all six objects from the dominant side to the original side."
+  - "Each transfer must occur mid-air without using the board or pegs for assistance."
+
+phases:
+  - name: setup_and_first_pickup
+    description: "First object is grasped and lifted from the starting side."
+  - name: outbound_transfers
+    description: "Objects are moved from nondominant side to dominant side."
+  - name: return_transfers
+    description: "Objects are moved back to the original side."
+  - name: final_release
+    description: "The last object is released and the task ends."
+
+penalties:
+  - name: lost_object
+    description: "Object dropped outside the field of view or otherwise unretrievable."
+    scoring: "Count one penalty event per lost object. Use the official lost-object penalty bucket; do not invent additional deductions for visible drops that are successfully retrieved."
+  - name: incomplete_task
+    description: "Maximum time reached before all required transfers are completed."
+    scoring: "Automatic zero for the task."
+
+definitions:
+  drop: "An object is released unintentionally and either exits the field of view or cannot be retrieved. A retrievable in-field bobble is not a scored drop."
+  misplacement: "The object is placed on the wrong peg or wrong side but remains in play and can be corrected."
+  tissue_damage: "Not applicable for this task. Do not label routine peg contact as tissue damage."
+
+observability_rules:
+  - "If the field of view does not show whether an object left the workspace, say cannot determine and do not assign a lost-object deduction."
+  - "If transfer assistance is suspected but the board edge is off camera, note it in reasoning instead of deducting."
+
+edge_cases:
+  - "If the clip begins after the first object has already been touched, completion_time_seconds may be reported as cannot determine in reasoning and confidence should be reduced."
+  - "If multiple attempts appear in one video, score only the clearly signaled official attempt; otherwise report cannot determine which attempt is scorable."

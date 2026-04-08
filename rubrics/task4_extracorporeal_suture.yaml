@@ -1,0 +1,68 @@
+task: task4_extracorporeal_suture
+task_id: task4
+name: "Suture with Extracorporeal Knot"
+fls_manual_reference: "FLS Manual Skills Written Instructions and Performance Guidelines, Revised February 2014, Task Four"
+benchmark_reference: "UT Southwestern proficiency target"
+
+max_time_seconds: 420
+proficiency_time_seconds: 136
+max_score: 420
+score_formula: "max(0, 420 - completion_time_seconds - penalty_deductions)"
+passing_score_note: "Official exam uses normalized task weights; this repo uses the raw task ceiling as the per-task score cap."
+
+timing:
+  starts_when: "the first instrument is visible on the monitor"
+  ends_when: "both suture ends have been cut inside the trainer"
+
+equipment:
+  - "Two needle drivers, or one needle driver plus one Maryland dissector"
+  - "One knot pusher"
+  - "One 2-0 silk suture of 90cm or 120cm"
+  - "One pair of endoscopic scissors"
+  - "One Penrose drain with marked targets"
+  - "One suture block"
+
+completion_requirements:
+  - "Pass the suture through both marked targets in the Penrose drain."
+  - "Tie three single throws extracorporeally using a knot pusher."
+  - "Close the slit in the Penrose drain."
+  - "Cut both suture ends inside the trainer."
+
+phases:
+  - name: suture_introduction
+    description: "Suture enters the box and the needle is oriented."
+  - name: target_passes
+    description: "Needle passes through both marked targets."
+  - name: extracorporeal_throws
+    description: "Three single throws are formed outside the box and advanced with the knot pusher."
+  - name: slit_closure_assessment
+    description: "Final knot tension closes the slit in the drain."
+  - name: suture_cut
+    description: "Both suture ends are cut inside the trainer."
+
+penalties:
+  - name: suture_deviation
+    description: "Visible deviation of the suture from the two marked targets."
+    scoring: "Measure or estimate only if clearly visible; within-1mm placement is the proficiency target."
+  - name: slit_not_closed
+    description: "Drain slit remains visibly gapped after knot completion."
+    scoring: "Deduct according to visible residual gap severity."
+  - name: knot_slippage
+    description: "Knot slips or comes apart when tension is applied."
+    scoring: "Major penalty."
+  - name: drain_avulsion
+    description: "Penrose drain is avulsed or separated from the suture block."
+    scoring: "Automatic zero for the task."
+
+definitions:
+  drop: "The needle, suture, or workpiece leaves control and becomes unrecoverable or directly causes task failure."
+  misplacement: "The suture enters or exits off the marked targets or the final knot sits off the intended closure site."
+  tissue_damage: "Visible drain avulsion, destructive tearing, or closure damage beyond the intended slit approximation."
+
+observability_rules:
+  - "If final tension testing is not shown, do not invent knot-security certainty. Use cannot determine in reasoning and reduce confidence."
+  - "If target marks are blurred or out of frame, do not fabricate millimeter measurements."
+
+edge_cases:
+  - "If the suture is introduced by grasping the needle rather than the thread and this is visible, note the rule violation in reasoning."
+  - "If the tail length is long or short but the knot is secure, do not score tail length; it is not relevant for this task."

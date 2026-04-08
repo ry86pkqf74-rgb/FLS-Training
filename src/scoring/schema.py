@@ -65,6 +65,18 @@ class DrainAssessment(BaseModel):
     assessment_note: str = ""
 
 
+class PenaltyItem(BaseModel):
+    type: str
+    count: int = 1
+    description: str = ""
+
+
+class ScoreComponents(BaseModel):
+    time_score: float = 0.0
+    penalty_deductions: float = 0.0
+    total_fls_score: float = 0.0
+
+
 class ScoringResult(BaseModel):
     """Complete scoring output from a teacher model."""
     id: str
@@ -76,6 +88,12 @@ class ScoringResult(BaseModel):
     model_version: str
     prompt_version: str = "v001"
     scored_at: datetime = Field(default_factory=datetime.utcnow)
+
+    task_id: str = ""
+    penalties: list[PenaltyItem] = []
+    score_components: Optional[ScoreComponents] = None
+    phases_detected: list[str] = []
+    reasoning: str = ""
 
     frame_analyses: list[FrameAnalysis] = []
     completion_time_seconds: float
