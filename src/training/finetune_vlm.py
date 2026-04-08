@@ -29,22 +29,63 @@ def load_config(config_path: str) -> dict:
         return yaml.safe_load(f)
 
 
+def _example_to_messages(example: dict) -> list[dict]:
+    """Normalize either chat-style or instruction-style data into chat messages."""
+    messages = example.get("messages")
+    if messages:
+        return messages
+
+    instruction = str(example.get("instruction") or "").strip()
+    input_text = str(example.get("input") or "").strip()
+    output_text = str(example.get("output") or "").strip()
+
+    user_parts = [part for part in [instruction, input_text] if part]
+    if not user_parts:
+        raise KeyError("Expected either 'messages' or instruction-style fields")
+
+    normalized = [{"role": "user", "content": "\n\n".join(user_parts)}]
+    if output_text:
+        normalized.append({"role": "assistant", "content": output_text})
+    return normalized
+
+
 def _format_chat_examples(batch: dict, tokenizer) -> list[str]:
     """Render chat-style training examples into plain text for SFT trainers."""
-    if batch["messages"] and isinstance(batch["messages"][0], dict):
-        return [
-            tokenizer.apply_chat_template(
-                batch["messages"],
-                tokenize=False,
-                add_generation_prompt=False,
+    if "messages" in batch:
+        if batch["messages"] and isinstance(batch["messages"][0], dict):
+            return [
+                tokenizer.apply_chat_template(
+                    batch["messages"],
+                    tokenize=False,
+                    add_generation_prompt=False,
+                )
+            ]
+
+        rendered = []
+        for messages in batch["messages"]:
+            rendered.append(
+                tokenizer.apply_chat_template(
+                    messages,
+                    tokenize=False,
+                    add_generation_prompt=False,
+                )
             )
-        ]
+        return rendered
+
+    if isinstance(batch.get("instruction"), list):
+        examples = []
+        total = len(batch["instruction"])
+        for index in range(total):
+            example = {key: value[index] for key, value in batch.items() if isinstance(value, list)}
+            examples.append(example)
+    else:
+        examples = [batch]
 
     rendered = []
-    for messages in batch["messages"]:
+    for example in examples:
         rendered.append(
             tokenizer.apply_chat_template(
-                messages,
+                _example_to_messages(example),
                 tokenize=False,
                 add_generation_prompt=False,
             )
@@ -55,7 +96,7 @@ def _format_chat_examples(batch: dict, tokenizer) -> list[str]:
 def _tokenize_hf_example(example: dict, tokenizer, max_seq_length: int) -> dict:
     """Tokenize one chat-style example for the fallback HF Trainer path."""
     rendered = tokenizer.apply_chat_template(
-        example["messages"],
+        _example_to_messages(example),
         tokenize=False,
         add_generation_prompt=False,
     )
@@ -161,7 +202,10 @@ def _finetune_unsloth(config: dict) -> dict:
 
     if _should_export_merged(config):
         merged_dir = str(Path(output_dir) / "merged_16bit")
-        model.save_pretrained_merged(merged_dir, tokenizer, save_method="merged_16bit")
+        try:
+            model.save_pretrained_merged(merged_dir, tokenizer, save_method="merged_16bit")
+        except Exception as exc:
+            logger.warning("Merged 16-bit export failed; keeping adapter checkpoint only: %s", exc)
 
     eval_results = trainer.evaluate()
     with open(Path(output_dir) / "eval_results.json", "w") as f:

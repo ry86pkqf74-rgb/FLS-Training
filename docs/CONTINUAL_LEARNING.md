@@ -19,9 +19,9 @@
 When you have ~50-100 scored videos (ideally with some corrections):
 
 ```bash
-python scripts/040_prepare_training_data.py --version 1
-# Then on RunPod:
-python -m src.training.finetune_vlm --config configs/finetune_task5_v1.yaml
+python scripts/040_prepare_training_data.py --ver <version>
+# Then on RunPod, follow deploy/LAUNCH_GUIDE.md or docs/RUNPOD_RUNBOOK.md
+bash deploy/runpod_launch.sh <dataset_path> <config_path>
 ```
 
 ### Phase 4: Student Takes Over

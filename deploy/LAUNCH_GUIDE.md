@@ -2,126 +2,136 @@
 
 ## Overview
 
-Fine-tune Qwen2.5-VL-7B-Instruct on your FLS scoring data using LoRA via Unsloth.
-Expected cost: ~$3-5 on RunPod H200 spot.
+This guide now reflects the path that actually worked on the live RunPod deployment, including the resume and watchdog fixes that prevented idle GPU time.
+
+Primary references:
+- `docs/RUNPOD_RUNBOOK.md` for the full operational record
+- `deploy/runpod_launch.sh` for one-shot launch
+- `deploy/runpod_watchdog.sh` for restartable continuous training
 
 ## Prerequisites
 
-1. **Scored videos**: At least 15-20 videos with consensus scores in DuckDB
-2. **API keys**: Not needed on GPU server (training is local)
-3. **RunPod or Vast.ai account** with payment method
+1. Training data already prepared locally and pushed to GitHub
+2. RunPod account with payment method
+3. A single high-VRAM GPU pod
 
 ## Step-by-Step
 
-### 1. Prepare Training Data (LOCAL machine)
+### 1. Prepare Training Data Locally
 
 ```bash
 cd ~/projects/FLS-Training
-
-# Basic (score-only training examples)
-python scripts/040_prepare_training_data.py --version 1 --min-confidence 0.5
-
-# With coach feedback (student learns both scoring + coaching)
-python scripts/040_prepare_training_data.py --version 1 --min-confidence 0.5 --include-coach
+python scripts/040_prepare_training_data.py --ver <version>
+git add training/data/
+git commit -m "prepare training dataset"
+git push origin main
 ```
 
-This creates `data/training/YYYY-MM-DD_v1/` with `train.jsonl`, `val.jsonl`, `test.jsonl`.
+If you are reproducing the successful April 2026 run, use the matching dataset/config revision that produced the pod-side `training/data/v2` path.
 
-### 2. Launch GPU Instance
+### 2. Launch RunPod Instance
 
-**RunPod (recommended for spot pricing):**
-- Template: `runpod/pytorch:2.4.0-py3.11-cuda12.4.0-devel-ubuntu22.04`
-- GPU: H200 SXM (141GB) — ~$3-4/hr spot, best quality
-- Disk: 80GB (model weights ~15GB bf16 + dataset + checkpoint)
-- 
+Recommended shape:
+- single GPU only
+- `A100 80GB` when you want the stable documented path
+- `RTX PRO 6000 Blackwell Server Edition` is also proven and supported by the launcher
+- PyTorch + CUDA 12.x image
+- at least 30 GB persistent disk
 
-**Vast.ai alternative:**
-- Search for H200 SXM or H100 SXM
-- Use PyTorch 2.4+ CUDA 12.4 template
-- H200 ~$3-4/hr, H100 ~$2-3/hr
-
-### 3. Upload Repo + Data to GPU Instance
+### 3. Clone And Setup On The Pod
 
 ```bash
-# From your local machine:
-GPU_IP="your-instance-ip"
-
-# Clone repo on the instance
-ssh root@$GPU_IP "cd /workspace && git clone https://github.com/ry86pkqf74-rgb/FLS-Training.git"
-
-# Upload training data (not in git)
-rsync -avz data/training/ root@$GPU_IP:/workspace/FLS-Training/data/training/
+cd /workspace
+git clone https://github.com/ry86pkqf74-rgb/FLS-Training.git
+cd FLS-Training
+bash scripts/runpod_setup.sh
 ```
 
-Or if you prefer a single rsync of everything:
-```bash
-rsync -avz --exclude='.venv' --exclude='__pycache__' \
-    ~/projects/FLS-Training/ root@$GPU_IP:/workspace/FLS-Training/
-```
-
-### 4. Run Training
+If the pod is reusing an older volume or stale repo state:
 
 ```bash
-ssh root@$GPU_IP
-cd /workspace/FLS-Training
-
-# One-shot: installs deps + validates data + trains
-bash deploy/runpod_launch.sh data/training/2026-04-07_v1
-
-# Or step-by-step if you prefer:
-pip install -e ".[training]"
-pip install "unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.git"
-python -m src.training.finetune_vlm --config src/configs/finetune_task5_v1.yaml
+git fetch origin
+git checkout main
+git pull --ff-only origin main
 ```
 
-Training takes ~15-20 minutes on H200 for 26 videos × 2 epochs.
+### 4. Start Training
 
-### 5. Download Checkpoint
+Normal one-shot path:
 
 ```bash
-# From local machine:
-rsync -avz root@$GPU_IP:/workspace/FLS-Training/memory/model_checkpoints/ \
-    ~/projects/FLS-Training/memory/model_checkpoints/
+bash deploy/runpod_launch.sh <dataset_path> <config_path>
 ```
 
-### 6. Evaluate & Promote
+Example for the config that exists in this branch today:
 
 ```bash
-# Run student model on held-out videos (requires the checkpoint)
-# Then compare against frontier consensus:
-python scripts/050_evaluate.py \
-    --student-scores data/eval/student_predictions.jsonl \
-    --frontier-scores data/eval/frontier_consensus.jsonl \
-    --config src/configs/finetune_task5_v1.yaml
+bash deploy/runpod_launch.sh training/data src/configs/finetune_task5_v1.yaml
 ```
 
-Promotion criteria (from config):
-- Field agreement ≥ 90%
-- FLS score MAE ≤ 15 points
+Continuous/resume path:
 
-### 7. Shut Down Instance
+```bash
+nohup env \
+  CONTINUOUS_HOURS=2 \
+  WATCHDOG_POLL_SECONDS=15 \
+  WATCHDOG_MAX_RESTARTS=20 \
+  RUN_DIR_OVERRIDE=<checkpoint_run_dir> \
+  TRAIN_LOG=/workspace/fls_train_continuous.log \
+  WATCHDOG_LOG=/workspace/fls_watchdog.log \
+  PYTHONUNBUFFERED=1 \
+  bash deploy/runpod_watchdog.sh <dataset_path> <config_path> \
+  > /workspace/fls_watchdog.stdout 2>&1 < /dev/null &
+```
 
-**Don't forget!** Spot instances charge even when idle.
+Why this matters:
+- the launcher now skips `flash-attn` source builds during restart
+- the watchdog injects `SKIP_DEP_INSTALL=1` automatically on resume
+- this is the fix that restored real GPU usage on the live pod
 
-## Cost Estimates
+### 5. Verify Real GPU Work
 
-| Phase | Cost |
-|-------|------|
-| API scoring (26 videos × Claude + GPT-4o) | ~$15-25 |
-| Coach feedback (26 videos × Claude) | ~$5-10 |
-| GPU training (H200 spot, ~20 min) | ~$1-2 |
-| Evaluation inference | ~$2-5 |
-| **Total** | **~$25-42** |
+```bash
+pgrep -af "runpod_watchdog|runpod_launch|finetune_vlm"
+tail -n 100 /workspace/fls_train_continuous.log
+nvidia-smi --query-gpu=name,utilization.gpu,memory.used,memory.total,power.draw --format=csv,noheader
+nvidia-smi pmon -c 1
+```
+
+Healthy run:
+- active `finetune_vlm` process
+- non-idle GPU utilization
+- nontrivial VRAM use
+
+### 6. Push Artifacts Back To GitHub
+
+```bash
+git add models/ training/runs/ memory/model_checkpoints/
+git commit -m "feat: training artifacts from RunPod"
+git push origin main
+```
+
+### 7. Stop The Pod
+
+Do not leave the pod idle after training or push.
 
 ## Troubleshooting
 
-**"Unsloth install failed"**: The launch script falls back to `hf_trainer` automatically. Edit `src/configs/finetune_task5_v1.yaml` and set `framework: hf_trainer`.
+**GPU looks idle after a restart:** check for stuck dependency builds with:
 
-**OOM (shouldn't happen on H200): If on a smaller GPU, set quantization: "4bit", batch_size: 1, lora_r: 16, gradient_checkpointing: true.
+```bash
+pgrep -af "pip install|flash-attn|nvcc|cicc"
+```
 
-**"No training candidates found"**: Your DuckDB doesn't have scored videos above the confidence threshold. Lower `--min-confidence` or score more videos.
+If you see `flash-attn` builds during resume, kill the stale launcher and restart through `deploy/runpod_watchdog.sh`.
 
-**Training loss not decreasing**: Try `learning_rate: 5.0e-5` (lower) or increase `lora_r` to 32.
+**"Unsloth install failed"**: the launcher falls back to `hf_trainer` automatically.
+
+**Blackwell host fails on stock Torch:** let `deploy/runpod_launch.sh` upgrade Torch/TorchVision; that path is now built into the launcher.
+
+**Merged 16-bit export fails at the end:** keep the adapter checkpoint. The trainer now treats merged export failure as non-fatal.
+
+See `docs/RUNPOD_RUNBOOK.md` for the full proven recovery path.
 
 ## Using Docker (Alternative)
 

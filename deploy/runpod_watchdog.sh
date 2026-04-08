@@ -7,7 +7,7 @@ RUN_DIR_OVERRIDE="${RUN_DIR_OVERRIDE:-}"
 BASE_MODEL_OVERRIDE="${BASE_MODEL_OVERRIDE:-}"
 CONTINUOUS_HOURS="${CONTINUOUS_HOURS:-0}"
 SECONDS_PER_STEP_ESTIMATE="${SECONDS_PER_STEP_ESTIMATE:-7}"
-WATCHDOG_POLL_SECONDS="${WATCHDOG_POLL_SECONDS:-60}"
+WATCHDOG_POLL_SECONDS="${WATCHDOG_POLL_SECONDS:-15}"
 WATCHDOG_MAX_RESTARTS="${WATCHDOG_MAX_RESTARTS:-10}"
 TRAIN_LOG="${TRAIN_LOG:-/workspace/fls_train_continuous.log}"
 WATCHDOG_LOG="${WATCHDOG_LOG:-/workspace/fls_watchdog.log}"
@@ -19,7 +19,8 @@ log() {
 }
 
 trainer_running() {
-    pgrep -f "python -m src.training.finetune_vlm --config /tmp/finetune_runtime.yaml" >/dev/null 2>&1
+    pgrep -f "finetune_vlm.*--config /tmp/finetune_runtime.yaml" >/dev/null 2>&1 || \
+        pgrep -f "finetune_vlm.*--config ${CONFIG_PATH}" >/dev/null 2>&1
 }
 
 launcher_running() {
@@ -30,9 +31,36 @@ training_complete() {
     grep -q "Training complete!" "$TRAIN_LOG" 2>/dev/null
 }
 
+configured_run_dir() {
+    python - "$CONFIG_PATH" <<'PY'
+import sys
+from pathlib import Path
+
+import yaml
+
+config_path = Path(sys.argv[1])
+if not config_path.exists():
+    raise SystemExit(0)
+
+with config_path.open() as handle:
+    config = yaml.safe_load(handle) or {}
+
+output_dir = str(config.get("output_dir") or "").strip()
+if output_dir:
+    print(output_dir)
+PY
+}
+
 latest_run_dir() {
     if [[ -n "$RUN_DIR_OVERRIDE" ]]; then
         printf '%s\n' "$RUN_DIR_OVERRIDE"
+        return 0
+    fi
+
+    local configured_dir
+    configured_dir="$(configured_run_dir || true)"
+    if [[ -n "$configured_dir" ]]; then
+        printf '%s\n' "$configured_dir"
         return 0
     fi
 
@@ -64,6 +92,7 @@ start_or_resume_training() {
     if [[ -n "$BASE_MODEL_OVERRIDE" ]]; then
         launch_env+=("BASE_MODEL_OVERRIDE=$BASE_MODEL_OVERRIDE")
     fi
+    launch_env+=("SKIP_DEP_INSTALL=1")
     launch_env+=("CONTINUOUS_HOURS=$CONTINUOUS_HOURS")
     launch_env+=("SECONDS_PER_STEP_ESTIMATE=$SECONDS_PER_STEP_ESTIMATE")
 

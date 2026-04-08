@@ -25,7 +25,7 @@ AI system that scores FLS Task 5 (intracorporeal suture) videos using a Teacher-
 - **Gate**: 90% frame detection, reduced teacher disagreement
 
 ## Phase 3: Fine-Tune Student (Weeks 4-5)
-- Use V1 (Vast.ai H200, ~$2.07/hr) for training runs
+- Use the current RunPod single-GPU path documented in `deploy/LAUNCH_GUIDE.md` and `docs/RUNPOD_RUNBOOK.md`
 - 80/20 split stratified by trainee, one trainee fully held out
 - **Gate**: MAE ≤12 FLS points on held-out trainee
 

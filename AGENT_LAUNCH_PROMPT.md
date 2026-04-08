@@ -1,202 +1,175 @@
-# FLS-Training: Autonomous RunPod Training Launch
+RunPod Launch Prompt - FLS-Training v2
 
-## Context
+Copy-paste this whole document as the prompt for the RunPod-side agent (Cursor / VSC / Claude Code) once the pod is up. It encodes the full prelaunch state, the run config, the success criteria, and the post-run handoff. Nothing in here should require the agent to guess.
 
-You are operating on the FLS-Training repo: https://github.com/ry86pkqf74-rgb/FLS-Training
+Context
 
-This is an AI surgical skills training system for FLS Task 5 (intracorporeal suturing). It has a teacher-critique-student architecture where Claude + GPT-4o score videos as teachers, and we're fine-tuning a student model to take over scoring AND generate coaching feedback.
+You are launching the first end-to-end student-model training run for the FLS-Training project (ry86pkqf74-rgb/FLS-Training). The repo is a teacher-critique-student architecture for FLS Task 5 (intracorporeal suture) scoring. Your job is to clone, train both LoRA heads on RunPod, evaluate against the held-out trainee gate, and push the artifacts back to GitHub. Then stop the pod.
 
-The repo already contains:
-- 31 scored videos (V1-V31) with both Claude and GPT-4o scores in `memory/scores/`
-- 31 consensus comparisons in `memory/comparisons/`
-- Pre-built training data in `data/training/` (train/val/test JSONL)
-- A fine-tuning config at `src/configs/finetune_task5_v1.yaml` targeting Qwen2.5-VL-7B-Instruct with Unsloth LoRA
-- A Dockerfile at `deploy/Dockerfile.trainer`
-- Launch scripts at `deploy/runpod_launch.sh` and `scripts/runpod_setup.sh`
-- A launch guide at `deploy/LAUNCH_GUIDE.md`
-- Dual training objectives: scoring accuracy (frames → FLS score JSON) AND coaching feedback (frames + history → FeedbackReport with progression insights, drill recommendations, fatigue detection)
-- The feedback schema is at `src/feedback/schema.py` — the student must learn to produce FeedbackReport objects, not just scores
+A prelaunch fix commit (fix(data): rglob memory, dedupe by video, stratified val split, tighter trainer defaults) has already landed on main. It fixed five real bugs in the data and training pipeline, materialized training/data/v2/, and tightened the trainer defaults. You must train against --ver v2, not v1. v1 was built from a broken pipeline that silently dropped 65 trainee video scores and never filtered the superseded V18 record.
 
-## Your Mission
+Pod requirements
 
-Autonomously launch a full training cycle on RunPod. Execute every step — do not ask me to do anything manually. Here's what to do:
+Hardware: single A100 80GB (RunPod Community Cloud is fine). Do not request a multi-GPU pod. Florence-2-large + LoRA r=16 fits comfortably; multi-GPU adds NCCL overhead with no speedup at this corpus size (66 videos / ~200 examples).
+Image: RunPod's PyTorch 2.x CUDA 12.x template (e.g. runpod/pytorch:2.1.0-py3.10-cuda12.1.1).
+Disk: >=30 GB persistent volume. Florence-2-large weights are ~3.5 GB; checkpoints will be ~150 MB each (LoRA only) but base model gets cached.
+Network: allow outbound to huggingface.co, github.com, wandb.ai (if you use W&B).
 
-### Phase 1: Select GPU and Create Pod
+Step-by-step launch
 
-Use the RunPod API or CLI to provision the BEST GPU for this workload:
-
-**Optimal choice (ranked):**
-1. **H200 SXM 141GB** — if available, ideal. Qwen2.5-VL-7B fits in full bf16 with room for large batch. ~$3-4/hr.
-2. **H100 SXM 80GB** — excellent. Full bf16 LoRA fits. ~$2.69/hr on-demand, ~$1.99 community.
-3. **A100 SXM 80GB** — very good. bf16 LoRA fits comfortably. ~$1.39/hr secure, ~$0.89 community.
-4. **A100 PCIe 80GB** — good fallback. ~$1.19/hr.
-5. **L40S 48GB** — minimum viable. May need 4-bit quantization. ~$0.79/hr.
-
-Selection criteria: Pick the best available GPU that's actually in stock. Prefer community cloud for cost. The training run will take 30-90 minutes depending on GPU, so total cost should be $1.50-$5.00.
-
-**Pod configuration:**
-- Template: `runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04`
-- Container disk: 20GB
-- Volume disk: 50GB (persistent, mount at /workspace)
-- Expose HTTP port 8888 (Jupyter) and SSH port 22
-- Set env var: `GITHUB_TOKEN=<your_token>` (for git push back)
-
-If you don't have RunPod API access, generate the exact `runpodctl` CLI commands or the curl API calls I can paste. If you can access RunPod directly through a browser tool, do it.
-
-### Phase 2: Setup on the Pod
-
-Once the pod is running, SSH in and execute:
+1. Clone and install
 
 ```bash
 cd /workspace
 git clone https://github.com/ry86pkqf74-rgb/FLS-Training.git
 cd FLS-Training
+git log -1 --oneline   # MUST show the "fix(data): rglob memory..." commit at HEAD
+pip install -e '.[training]'
+```
+
+If .[training] isn't defined in pyproject.toml, fall back to:
+
+```bash
+pip install -e .
+pip install torch transformers peft datasets accelerate bitsandbytes wandb rich
+```
+
+2. Sanity check the data and the GPU
+
+```bash
 bash scripts/runpod_setup.sh
 ```
 
-Then verify:
-- GPU is detected and has sufficient VRAM
-- Training data exists in `data/training/`
-- The manifest.yaml confirms the dataset (train/val/test splits)
-- All Python dependencies installed (torch, transformers, peft, unsloth, datasets, accelerate)
+This script verifies CUDA + VRAM and counts files in training/data/. It should print at minimum:
 
-### Phase 3: Prepare Enhanced Training Data
+- A100 detected with >=40 GB VRAM
+- Training data files for v2 present (scoring_train_v2.jsonl, scoring_val_v2.jsonl, coaching_train_v2.jsonl, coaching_val_v2.jsonl)
 
-The existing training data in `data/training/` may only cover scoring. We need BOTH heads:
-
-1. **Check if coaching training data exists.** Look for files matching `coaching_*.jsonl` in `data/training/` or `training/data/`.
-
-2. **If coaching data is missing, generate it:**
-   ```bash
-   python scripts/040_prepare_training_data.py --ver v2
-   ```
-   This should produce both `scoring_train_v2.jsonl` AND `coaching_train_v2.jsonl`.
-
-3. **If the 040 script doesn't produce coaching data**, run the feedback generator across all scored videos first:
-   ```bash
-   python scripts/080_generate_feedback_report.py --video-id <each_video>
-   ```
-   Or write a quick batch script to iterate over all video IDs in `memory/scores/`.
-
-4. **Verify the training data has both objectives:**
-   - Scoring examples: input = frame descriptions → output = ScoringResult JSON
-   - Coaching examples: input = frame descriptions + trainee history → output = FeedbackReport JSON
-   - Minimum 25+ training examples per head
-
-### Phase 4: Run Training
-
-Execute the training using the repo's config:
+Then verify the v2 corpus is what we expect:
 
 ```bash
-# Option A: Use the existing launch script
-bash deploy/runpod_launch.sh data/training/2026-04-07_v1 src/configs/finetune_task5_v1.yaml
-
-# Option B: Use the Python trainer directly
-python -m src.training.runpod_trainer
-
-# Option C: If Unsloth is the configured backend, use its workflow
-python src/training/finetune_vlm.py --config src/configs/finetune_task5_v1.yaml
+PYTHONPATH=. python scripts/090_status.py
+cat training/data/meta_v2.json
 ```
 
-Pick whichever script actually exists and works. Check `deploy/LAUNCH_GUIDE.md` for the recommended approach.
+You should see, in meta_v2.json:
 
-**Training config overrides if needed:**
-- If VRAM < 80GB: set `quantization: "4bit"` in the config
-- If VRAM >= 80GB: keep `quantization: "none"` for best quality
-- LoRA r=16, alpha=32, dropout=0.05
-- Learning rate: 2e-4 with cosine schedule
-- Epochs: 3-5 (with 31 videos / ~30 examples, 5 epochs is fine)
-- Batch size: 2 with gradient_accumulation=4 (effective batch 8)
-- Enable gradient checkpointing
-- Log to wandb if WANDB_API_KEY is set
+- raw_score_count: 192 (not 128 - if it says 128, the rglob fix did not land; abort and investigate)
+- after_video_dedupe: 66
+- scoring_train_count: 56, scoring_val_count: 10
+- seed: 42
+- split_strategy: "stratified_by_video_id"
+- val_video_ids should include V13_video, V22_video, V31_video (real trainee held-outs)
 
-**Monitor training:**
-- Watch loss curves — training loss should decrease smoothly
-- Val loss should decrease then flatten (stop if it increases for 2+ eval steps)
-- Expected: ~20-60 min on H100/H200, ~60-90 min on A100
+If any of these are wrong, stop. Re-run `python scripts/040_prepare_training_data.py --ver v2 --seed 42` and inspect the output before training.
 
-### Phase 5: Evaluate
-
-After training completes:
+3. Launch training
 
 ```bash
-python scripts/060_evaluate_student.py
-# or
-python scripts/050_evaluate.py
+# W&B optional but recommended; skip with --no-wandb if you don't have a key
+export WANDB_API_KEY=<your key>   # or omit and pass --no-wandb below
+
+python scripts/050_runpod_train.py \
+   --ver v2 \
+   --epochs 3 \
+   --lr 1e-4 \
+   --batch-size 2 \
+   --grad-accum 8 \
+   --lora-r 16 \
+   --seed 42
 ```
 
-Check:
-- Time estimation agreement: >85% within 10s of teacher
-- FLS score agreement: >85% within 20 points of teacher
-- Phase detection accuracy
-- If coaching head was trained: verify feedback quality on 2-3 held-out videos
+These flags match the new TrainingConfig defaults exactly, but pass them explicitly so the run is self-documenting in `models/student_v2/scoring/run_meta.json`.
 
-### Phase 6: Push Results to GitHub
+Expected behavior during training:
 
-This is critical — GitHub is the persistent brain. Push everything back:
+- Two heads train sequentially: scoring first, then coaching.
+- Each head loads `microsoft/Florence-2-large` fresh, applies a LoRA adapter (`r=16`, `alpha=32`, target modules `q/k/v/o + gate/up/down`), and trains for up to 3 epochs.
+- Effective batch size: `2 x 8 = 16`. With ~56 train examples that's ~3.5 optimizer steps/epoch ~= 10-11 total steps. Eval every 25 steps means you'll get an eval at the end of each head.
+- Early stopping: patience 1 on eval_loss (`load_best_model_at_end=True`). If val loss starts climbing, the trainer reverts to the previous checkpoint.
+- Wall-clock estimate: 6-12 minutes per head on a single A100 80GB (model load ~90s, train ~3-6 min, eval ~1 min, save ~30s). Total run including both heads: ~15-25 minutes. If you blow past 45 minutes, something is wrong - investigate before letting it keep burning.
+- VRAM: with bf16, gradient checkpointing on, batch 2, you should sit around 35-45 GB used. If you OOM, drop `--batch-size 1 --grad-accum 16` and rerun.
+
+4. Evaluate against the Phase 3 gate
 
 ```bash
-cd /workspace/FLS-Training
-git config user.email "logan.glosser@gmail.com"
-git config user.name "FLS Training Agent"
-git add models/ training/runs/ memory/ data/
-git commit -m "training: student v1 — Qwen2.5-VL-7B scoring+coaching heads
+python scripts/060_evaluate_student.py --ver v2
+```
 
-- GPU: $(nvidia-smi --query-gpu=name --format=csv,noheader)
-- Training time: $(cat training/runs/*/run_summary.json 2>/dev/null | python3 -c 'import json,sys; d=json.load(sys.stdin); print(f"{d.get(\"scoring\",{}).get(\"elapsed_seconds\",0)/60:.0f}min scoring + {d.get(\"coaching\",{}).get(\"elapsed_seconds\",0)/60:.0f}min coaching")' 2>/dev/null || echo 'see logs')
-- Scoring agreement: $(cat training/runs/*/eval_*.json 2>/dev/null | python3 -c 'import json,sys; d=json.load(sys.stdin); print(f"{d.get(\"fls_agreement_pct\",\"?\")}")' 2>/dev/null || echo 'pending')%
-- LoRA adapters saved to models/"
+The Phase 3 gate from `docs/EXECUTION_PLAN.md` is MAE <= 12 FLS points on a held-out trainee. The val set (`val_video_ids` in `meta_v2.json`) contains three real trainee videos: `V13_video`, `V22_video`, `V31_video`. The eval script should report aggregate val MAE plus per-video MAE.
 
+Decision matrix:
+
+- Aggregate val MAE <= 12 AND each held-out trainee video MAE <= 15 -> promote. Proceed to step 5.
+- Aggregate <= 12 but one trainee video > 20 -> likely overfitting / leakage on that trainee. Do NOT promote. Capture the per-video numbers, file an issue, and stop.
+- Aggregate > 12 -> underfit. Try one rerun with `--epochs 5 --lr 5e-5`. If still failing, the corpus is the problem (66 videos may simply be insufficient); report and stop.
+
+5. Commit and push
+
+```bash
+git config user.email "<your email>"
+git config user.name "<your name>"
+git add models/student_v2/ training/runs/
+git commit -m "feat: student model v2 trained on 56-video corpus
+
+Run config: epochs=3 lr=1e-4 batch=2 grad_accum=8 lora_r=16 seed=42
+Val MAE (held-out trainee): <FILL IN from 060 output>
+Per-video val MAE: V13=<...> V22=<...> V31=<...>"
 git push origin main
 ```
 
-If git push fails (large files), use Git LFS:
+6. Stop the pod
+
 ```bash
-git lfs install
-git lfs track "models/**/*.safetensors" "models/**/*.bin"
-git add .gitattributes
-git add -A
-git commit --amend --no-edit
-git push origin main
+runpodctl stop pod $RUNPOD_POD_ID    # or use the web UI
 ```
 
-If push still fails due to sandbox/size limits, use the GitHub Git Data API pattern (see `scripts/` for examples or the repo's existing push patterns).
+Do not skip this. Idle A100 time is the largest cost in this project.
 
-### Phase 7: Shutdown
+What "ready" looks like for the next training cycle
 
-After confirming the push succeeded:
-1. Verify on GitHub that `models/` contains the LoRA adapters
-2. Verify `training/runs/` contains the run summary
-3. Stop the RunPod pod (don't delete the volume — keep for next iteration)
+After this run, the user will start collecting more trainee videos and YouTube harvest. Cycle N+1 should:
 
-## Key Constraints
+- Re-run `scripts/040_prepare_training_data.py --ver vN+1 --seed 42` locally
+- Re-run drift check (`scripts/075_check_drift.py`) against the new student
+- Only train again if drift > threshold OR >=20 new ACCEPTED videos have landed since v2
+- Use the same `--ver vN+1 --epochs 3 --lr 1e-4 --batch-size 2 --grad-accum 8 --seed 42` invocation
 
-- **Total budget: $5 max.** Pick community cloud GPUs. Training should take 30-90 min.
-- **GitHub is the brain.** Every artifact (adapters, logs, eval results) MUST be pushed back.
-- **Dual objectives are non-negotiable.** The student must learn BOTH scoring AND coaching. If you can only train one, train scoring first, then coaching as a second LoRA adapter on the same base.
-- **Don't modify scored data.** The files in `memory/scores/` and `memory/comparisons/` are ground truth — read-only.
-- **Use what exists.** The repo has deploy scripts, configs, and training code. Read them first. Only write new code if the existing scripts don't cover the need.
+Things you should NOT do
 
-## Repo Structure Reference
+- Do not run `--ver v1`. v1 is from the broken pipeline.
+- Do not raise `--epochs` above 5 without a sweep. With 56 train examples you will overfit.
+- Do not request multi-GPU. Florence-2-large LoRA does not need it; you'll pay 5x for nothing.
+- Do not delete `memory/scores/2026-04-07/V18_video_claude-sonnet-4_20260407_140000.json`. It is the superseded V18 record; it's retained intentionally as audit history. The data pipeline filters it via the `superseded: true` flag.
+- Do not push without W&B URLs (or no-wandb confirmation) in the commit body. Future you will want to find the run.
+- Do not leave the pod running after git push.
 
+Known caveats / TODOs (don't fix as part of this run)
+
+- Coaching dataset is small (27 train / 7 val) because feedback only exists for the YouTube subset. Trainee video coaching data is the main backlog item - flag this in the post-run summary if val MAE on coaching looks weak.
+- `MemoryStore.get_stats()` now reports active vs superseded; the old DuckDB-based stats query in `_load_from_disk` is fine as-is because it now skips superseded too.
+- `pyproject.toml` should pin `transformers`, `peft`, `accelerate`, `torch` versions before the next run. Not blocking for v2 but will bite you in 6 weeks.
+
+Success summary template
+
+When you're done, post this back:
+
+```text
+FLS-Training v2 student trained ✓
+   Run name:           <run_name>
+   W&B URL:            <link or "no-wandb">
+   Wall clock:         <NN min>  (scoring <NN>m + coaching <NN>m)
+   Train loss:         scoring=<x.xxx>  coaching=<x.xxx>
+   Val loss:           scoring=<x.xxx>  coaching=<x.xxx>
+   Val MAE (held-out trainee, scoring head):
+      aggregate:        <NN.N> FLS pts
+      V13_video:        <NN.N>
+      V22_video:        <NN.N>
+      V31_video:        <NN.N>
+   Phase 3 gate (<=12 MAE):  PASS / FAIL
+   Promoted to production:  YES / NO
+   Pod stopped:             YES
+   Commit:                  <sha>
+
+   API key for RunPod and SSH public key available locally
 ```
-FLS-Training/
-├── data/training/           # Pre-built JSONL datasets
-├── deploy/                  # Dockerfile, launch scripts, guide
-├── memory/scores/           # 62 scored video JSONs (Claude+GPT)
-├── memory/comparisons/      # 31 consensus comparisons
-├── memory/feedback/         # Coaching reports (may need generating)
-├── models/                  # LoRA adapters (output target)
-├── prompts/                 # System prompts for scoring + coaching
-├── rubrics/                 # FLS Task 5 rubric
-├── scripts/                 # CLI scripts (010-090)
-├── src/configs/             # finetune_task5_v1.yaml
-├── src/feedback/schema.py   # FeedbackReport, PhaseCoaching, TraineeProfile
-├── src/scoring/schema.py    # ScoringResult, VideoRecord
-├── src/training/            # runpod_trainer.py, data_prep.py, evaluator.py
-└── training/runs/           # Training run logs (output target)
-```
-
-## Start Now
-
-Read `deploy/LAUNCH_GUIDE.md` and `src/configs/finetune_task5_v1.yaml` first. Then provision the GPU and execute. Report back with: GPU selected, training time, final loss, evaluation metrics, and the git commit SHA of the pushed results.

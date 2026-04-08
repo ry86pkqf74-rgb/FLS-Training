@@ -194,8 +194,8 @@ This feeds into more objective scoring that doesn't rely on VLM interpretation.
 │  4. python scripts/080_generate_feedback_report.py       │
 │                                                          │
 │  After ~50 videos:                                       │
-│  5. python scripts/040_prepare_training_data.py --ver 1  │
-│  6. Fine-tune on RunPod                                  │
+│  5. python scripts/040_prepare_training_data.py --ver X  │
+│  6. Fine-tune on RunPod via LAUNCH_GUIDE / RUNBOOK       │
 │  7. Evaluate → promote → student takes over              │
 │                                                          │
 │  Ongoing:                                                │

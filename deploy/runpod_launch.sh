@@ -21,8 +21,10 @@ CONFIG_PATH="${2:-src/configs/finetune_task5_v1.yaml}"
 CONTINUOUS_HOURS="${CONTINUOUS_HOURS:-0}"
 SECONDS_PER_STEP_ESTIMATE="${SECONDS_PER_STEP_ESTIMATE:-7}"
 BLACKWELL_BATCH_SIZE="${BLACKWELL_BATCH_SIZE:-8}"
-BLACKWELL_GRAD_ACCUM="${BLACKWELL_GRAD_ACCUM:-2}"
+BLACKWELL_GRAD_ACCUM="${BLACKWELL_GRAD_ACCUM:-1}"
 BLACKWELL_WORKERS="${BLACKWELL_WORKERS:-8}"
+BLACKWELL_LORA_DROPOUT="${BLACKWELL_LORA_DROPOUT:-0}"
+SKIP_DEP_INSTALL="${SKIP_DEP_INSTALL:-0}"
 BASE_MODEL_OVERRIDE="${BASE_MODEL_OVERRIDE:-}"
 OUTPUT_DIR_OVERRIDE="${OUTPUT_DIR_OVERRIDE:-}"
 RESUME_FROM_CHECKPOINT="${RESUME_FROM_CHECKPOINT:-}"
@@ -49,6 +51,10 @@ echo ""
 # --- Step 2: Install dependencies ---
 echo "[2/5] Installing dependencies..."
 
+if [[ "$SKIP_DEP_INSTALL" == "1" ]]; then
+    echo "Skipping dependency installation for resume/continuous relaunch."
+else
+
 if python -c 'import src.training.finetune_vlm, yaml' >/dev/null 2>&1; then
     echo "Project training package already importable; skipping editable reinstall."
 else
@@ -74,8 +80,7 @@ fi
 if python -c 'import flash_attn' >/dev/null 2>&1; then
     echo "flash-attn already installed; skipping reinstall."
 else
-    pip install --quiet --break-system-packages flash-attn --no-build-isolation 2>/dev/null || \
-        echo "WARNING: flash-attn not installed (OK, training will still work)"
+    echo "WARNING: flash-attn not installed; skipping build during launch (training will still work)"
 fi
 
 # The base RunPod Torch stack in this image does not support Blackwell GPUs.
@@ -90,6 +95,8 @@ if [[ "$GPU_NAME" == *"Blackwell"* ]]; then
         echo "Blackwell PyTorch stack already correct; skipping reinstall."
     fi
     python -m pip uninstall -y torchaudio >/dev/null 2>&1 || true
+fi
+
 fi
 
 echo ""
@@ -124,7 +131,7 @@ echo "[4/5] Updating config with dataset path..."
 RUNTIME_CONFIG="/tmp/finetune_runtime.yaml"
 export DATASET_PATH CONFIG_PATH RUNTIME_CONFIG TRAIN_COUNT VAL_COUNT GPU_NAME CONTINUOUS_HOURS \
     SECONDS_PER_STEP_ESTIMATE BLACKWELL_BATCH_SIZE BLACKWELL_GRAD_ACCUM BLACKWELL_WORKERS \
-    BASE_MODEL_OVERRIDE
+    BLACKWELL_LORA_DROPOUT BASE_MODEL_OVERRIDE OUTPUT_DIR_OVERRIDE RESUME_FROM_CHECKPOINT
 python - <<'PY'
 import math
 import os
@@ -154,9 +161,10 @@ gpu_name = os.environ.get("GPU_NAME", "")
 train_count = max(int(os.environ.get("TRAIN_COUNT", "0")), 1)
 
 if "Blackwell" in gpu_name:
-    config["batch_size"] = max(int(config.get("batch_size", 1)), int(os.environ.get("BLACKWELL_BATCH_SIZE", "8")))
-    config["gradient_accumulation"] = max(int(config.get("gradient_accumulation", 1)), int(os.environ.get("BLACKWELL_GRAD_ACCUM", "2")))
+    config["batch_size"] = int(os.environ.get("BLACKWELL_BATCH_SIZE", str(config.get("batch_size", 8))))
+    config["gradient_accumulation"] = int(os.environ.get("BLACKWELL_GRAD_ACCUM", str(config.get("gradient_accumulation", 1))))
     config["dataloader_num_workers"] = max(int(config.get("dataloader_num_workers", 0)), int(os.environ.get("BLACKWELL_WORKERS", "8")))
+    config["lora_dropout"] = float(os.environ.get("BLACKWELL_LORA_DROPOUT", str(config.get("lora_dropout", 0.0))))
     config["save_strategy"] = "steps"
     config["save_steps"] = int(config.get("save_steps", 200))
     config["save_total_limit"] = int(config.get("save_total_limit", 2))
