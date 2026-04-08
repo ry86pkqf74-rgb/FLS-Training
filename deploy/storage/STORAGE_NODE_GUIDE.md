@@ -80,19 +80,38 @@ Runs at **02:00 UTC** daily. Output at `/data/fls/logs/cron.log` and per-run log
 ssh root@207.244.235.10
 ```
 
-No special port; uses default port 22. Add your public key to `/root/.ssh/authorized_keys` to allow passwordless access from new machines (required for rsync sync scripts).
+No special port; uses default port 22.
 
-### Allow storage node to pull from S1
+### Storage node → S1 trust (completed 2026-04-08)
 
-On S1 (217.77.2.114):
-```bash
-cat /data/fls-storage-node.pub >> /root/.ssh/authorized_keys
+The storage node's ed25519 public key has been installed in S1's `authorized_keys`.
+Verified working:
+
 ```
-Generate a key on the storage node first if needed:
-```bash
-ssh-keygen -t ed25519 -f /root/.ssh/id_ed25519 -N ""
-cat /root/.ssh/id_ed25519.pub   # copy this to S1 and GPU nodes
+storage (207.244.235.10) → S1 (217.77.2.114)  AUTH_OK
 ```
+
+Storage node public key (`/root/.ssh/id_ed25519.pub`):
+```
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIEJs7on7VwPl6nmYLNvFIWaTgwAqoQQCwtxPzmnT6a8 root@m66910.contaboserver.net
+```
+
+`sync_from_s1.sh` runs fully passwordless — no further action needed.
+
+### Storage node → GPU nodes (required per RunPod pod)
+
+GPU pods are ephemeral. When a new pod is launched, authorize the storage node once:
+
+```bash
+# From your Mac — install the storage node key into the new GPU pod
+ssh-copy-id -f -i /tmp/storage_node.pub -p <PORT> root@<RUNPOD_IP>
+
+# Or add to the RunPod pod template's startup script:
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIEJs7on7VwPl6nmYLNvFIWaTgwAqoQQCwtxPzmnT6a8 root@m66910.contaboserver.net" \
+  >> /root/.ssh/authorized_keys
+```
+
+After that, `sync_to_gpu.sh` routes through S1 as ProxyJump and transfers without passwords.
 
 ---
 
