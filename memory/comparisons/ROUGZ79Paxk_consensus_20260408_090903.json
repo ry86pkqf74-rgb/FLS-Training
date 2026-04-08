@@ -1,0 +1,84 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 300.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Maximum time reached before completion - task appears to transition to different exercises without completing peg transfer."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup"
+    ],
+    "confidence": 0.2,
+    "reasoning": "Major disagreement between models on task completion. Claude identified this as a demonstration video showing multiple FLS tasks with incomplete peg transfer, while GPT-4o scored it as a completed task with lost objects. Given the fundamental disagreement on whether the task was completed, and Claude's detailed observation of task transitions, the incomplete task assessment is more defensible under the rubric."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 300.0,
+      "gpt_value": 62.7,
+      "resolution": "Used Claude's 300.0 seconds",
+      "rationale": "If the task was not completed as Claude observed, then maximum time (300s) is the appropriate completion time under the rubric."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Maximum time reached before completion - task appears to transition to different exercises without completing peg transfer."
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "lost_object",
+          "count": 2,
+          "description": "Two objects left the field of view and were not retrievable."
+        }
+      ],
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Incomplete task is a more fundamental penalty than lost objects. If the task was not completed, lost object penalties become moot."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's minimal phase detection",
+      "rationale": "If the task was incomplete as Claude observed, then only the initial phase would be legitimately detected for peg transfer."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 217.3,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task results in automatic zero score under the rubric, regardless of other factors."
+    }
+  ],
+  "overall_confidence": 0.2,
+  "_meta": {
+    "video_id": "ROUGZ79Paxk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.65,
+    "input_tokens": 2051,
+    "output_tokens": 755,
+    "cost_usd_approx": 0.0175,
+    "timestamp": "2026-04-08T09:09:03.320930+00:00",
+    "prompt_version": "v002"
+  }
+}

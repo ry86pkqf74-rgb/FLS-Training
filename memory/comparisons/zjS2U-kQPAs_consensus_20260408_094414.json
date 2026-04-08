@@ -1,0 +1,55 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 42.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 258.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 258.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers",
+      "final_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion without penalties and identical phase detection. Claude's timing appears more accurate based on the detailed observation of completion, while GPT's 210-second timing seems inconsistent with typical peg transfer performance. Both confirmed all objects successfully transferred without drops or board assistance."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 42.0,
+      "gpt_value": 210.0,
+      "resolution": "Used Claude's 42.0 seconds",
+      "rationale": "Claude's timing is consistent with proficiency target of 48 seconds and typical peg transfer performance, while GPT's 210 seconds would indicate poor performance inconsistent with both models' agreement on successful completion"
+    },
+    {
+      "field": "score_components.time_score",
+      "claude_value": 258.0,
+      "gpt_value": 90.0,
+      "resolution": "Recalculated as 258.0 based on consensus timing",
+      "rationale": "Time score = 300 - 42 = 258, matching Claude's calculation with the consensus completion time"
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 258.0,
+      "gpt_value": 90.0,
+      "resolution": "Recalculated as 258.0 based on consensus components",
+      "rationale": "Total score = 258 - 0 = 258, following the consensus time score and zero penalties"
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "zjS2U-kQPAs",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.66,
+    "input_tokens": 1951,
+    "output_tokens": 538,
+    "cost_usd_approx": 0.0139,
+    "timestamp": "2026-04-08T09:44:14.267279+00:00",
+    "prompt_version": "v002"
+  }
+}

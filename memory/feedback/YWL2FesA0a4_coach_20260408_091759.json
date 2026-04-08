@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Established proper traction with Maryland grasper before cutting",
+    "Maintained steady instrument control throughout the cutting phases",
+    "Demonstrated good coordination between both instruments during circle following"
+  ],
+  "weaknesses": [
+    "Failed to complete the circle within the time limit",
+    "Cutting pace was too slow for intermediate level performance",
+    "May have lost focus or momentum during the final portion of the circle"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, focusing on consistent pace throughout each segment.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the circle within the time limit."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and cutting efficiency.",
+      "duration_minutes": 8,
+      "targets_weakness": "Cutting pace was too slow for intermediate level performance."
+    },
+    {
+      "name": "Continuous cutting rhythm drill",
+      "description": "Practice maintaining steady cutting rhythm without pauses, completing partial circles in timed segments.",
+      "duration_minutes": 10,
+      "targets_weakness": "May have lost focus or momentum during the final portion of the circle."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid technique into faster execution. Your instrument control is good, but you need to maintain cutting momentum to complete tasks within time limits.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.95,
+    "input_tokens": 18356,
+    "output_tokens": 406,
+    "cost_usd_approx": 0.0612
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 60.25,
+    "penalties": [],
+    "score_components": {
+      "time_score": 119.75,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 119.75
+    },
+    "phases_detected": [
+      "loop_introduction",
+      "loop_positioning",
+      "pusher_break_and_advancement",
+      "tail_cut"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models detected all required phases and agreed on successful task completion. GPT reported a loop_off_mark penalty while Claude did not. Given the subjective nature of mark positioning assessment and Claude's specific observation that the loop was 'at or very close to the marked site', the penalty was not carried forward. Completion time averaged between the two close estimates."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 60.0,
+      "gpt_value": 60.5,
+      "resolution": "Averaged to 60.25",
+      "rationale": "Both times were very close, so averaging provides the most balanced estimate."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "loop_off_mark",
+        "count": 1,
+        "description": "The loop is secured slightly above the marked site."
+      },
+      "resolution": "Dropped the penalty",
+      "rationale": "Claude specifically noted the loop was 'at or very close to the marked site' with no visible deviations. Without clear visual evidence of significant deviation from the mark, the conservative approach is to not apply the penalty."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "WhUtStkkYHU",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 8.48,
+    "input_tokens": 1936,
+    "output_tokens": 452,
+    "cost_usd_approx": 0.0126,
+    "timestamp": "2026-04-08T09:14:52.986140+00:00",
+    "prompt_version": "v002"
+  }
+}

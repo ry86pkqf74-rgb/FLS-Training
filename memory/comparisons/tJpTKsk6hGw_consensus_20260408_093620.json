@@ -1,0 +1,33 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 34.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 266.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 266.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.9,
+    "reasoning": "Both models agreed on all key scoring elements: 34-second completion time, no penalties, and successful progression through all four phases. The task was completed well within the maximum time with systematic cutting of all 6 green ropes as confirmed by the counter progression and exercise completion message."
+  },
+  "disagreements": [],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "tJpTKsk6hGw",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 4.15,
+    "input_tokens": 1991,
+    "output_tokens": 223,
+    "cost_usd_approx": 0.0093,
+    "timestamp": "2026-04-08T09:36:20.391672+00:00",
+    "prompt_version": "v002"
+  }
+}

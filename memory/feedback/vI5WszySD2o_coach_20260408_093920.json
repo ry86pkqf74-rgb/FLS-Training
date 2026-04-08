@@ -1,0 +1,40 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task2",
+  "strengths": [
+    "Completed all required phases with clean circle excision",
+    "Maintained excellent cutting precision throughout the circumference",
+    "Achieved strong time score of 249 points with 51-second completion",
+    "Demonstrated consistent instrument control and steady cutting technique"
+  ],
+  "weaknesses": [
+    "Completion time of 51 seconds falls short of advanced benchmark expectations",
+    "Could optimize cutting speed while maintaining precision",
+    "May benefit from more efficient traction repositioning during cutting"
+  ],
+  "drills": [
+    {
+      "name": "Speed-precision balance drill",
+      "description": "Cut practice circles at progressively faster speeds while maintaining zero deviations, targeting sub-45 second completion times.",
+      "duration_minutes": 12,
+      "targets_weakness": "Completion time optimization for advanced level."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "Focus on minimal traction repositioning by optimizing Maryland placement angles to maintain cutting efficiency throughout the circle.",
+      "duration_minutes": 8,
+      "targets_weakness": "Efficient traction repositioning during cutting."
+    }
+  ],
+  "progression_note": "At the advanced level, focus on approaching the 30-40 second benchmark while maintaining your excellent precision. Your technique is solid - now optimize for speed without sacrificing accuracy.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "advanced",
+    "elapsed_seconds": 10.05,
+    "input_tokens": 18296,
+    "output_tokens": 352,
+    "cost_usd_approx": 0.0602
+  }
+}

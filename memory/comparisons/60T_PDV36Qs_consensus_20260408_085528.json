@@ -1,0 +1,88 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "No FLS Peg Transfer task performance is visible in the provided frames - only presentation slides about FES exam curriculum are shown."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.0,
+    "reasoning": "Claude correctly identified that the video contains only presentation slides about FES exam curriculum, not actual FLS Peg Transfer task performance. GPT-4o appears to have hallucinated task content that is not present in the video frames."
+  },
+  "disagreements": [
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "No FLS Peg Transfer task performance is visible in the provided frames - only presentation slides about FES exam curriculum are shown."
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "lost_object",
+          "count": 2,
+          "description": "Two rings left the field of view and were not retrievable."
+        }
+      ],
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Claude's assessment that only presentation slides are visible is consistent with both models' frame_analyses being empty. GPT's detection of task phases and lost objects appears to be hallucinated content."
+    },
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 65.0,
+      "resolution": "Used Claude's 0.0 seconds",
+      "rationale": "If no task performance is visible as Claude states, then completion time must be 0.0 seconds rather than 65.0 seconds."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's empty array",
+      "rationale": "No phases can be detected if no task performance is present in the video content."
+    },
+    {
+      "field": "score_components",
+      "claude_value": {
+        "time_score": 0.0,
+        "penalty_deductions": 0.0,
+        "total_fls_score": 0.0
+      },
+      "gpt_value": {
+        "time_score": 235.0,
+        "penalty_deductions": 20.0,
+        "total_fls_score": 215.0
+      },
+      "resolution": "Used Claude's zero scores",
+      "rationale": "Incomplete task results in automatic zero score per FLS rubric. GPT's positive scores are inconsistent with the absence of actual task performance."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "60T_PDV36Qs",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.71,
+    "input_tokens": 1951,
+    "output_tokens": 764,
+    "cost_usd_approx": 0.0173,
+    "timestamp": "2026-04-08T08:55:28.570610+00:00",
+    "prompt_version": "v002"
+  }
+}

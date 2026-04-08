@@ -1,0 +1,55 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 162.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 138.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 138.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers",
+      "final_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion with all six objects successfully transferred outbound and returned with no penalties. Major disagreement on timing (162s vs 55s) resolved in favor of Claude's more conservative estimate given the significant difference suggests potential frame counting uncertainty."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 162.0,
+      "gpt_value": 55.0,
+      "resolution": "Used Claude's 162.0 seconds",
+      "rationale": "The 107-second difference is too large to be measurement error. Claude's timing is more conservative and closer to typical peg transfer performance ranges, while 55 seconds would be exceptionally fast."
+    },
+    {
+      "field": "score_components.time_score",
+      "claude_value": 138.0,
+      "gpt_value": 245.0,
+      "resolution": "Recalculated as 138.0 based on consensus timing",
+      "rationale": "time_score = 300 - 162 = 138, following the consensus completion time"
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 138.0,
+      "gpt_value": 245.0,
+      "resolution": "Recalculated as 138.0 based on consensus timing",
+      "rationale": "total_fls_score = 138 - 0 = 138, following the consensus time score and no penalties"
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "19FRvCm3NWI",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.76,
+    "input_tokens": 1957,
+    "output_tokens": 530,
+    "cost_usd_approx": 0.0138,
+    "timestamp": "2026-04-08T08:52:18.237355+00:00",
+    "prompt_version": "v002"
+  }
+}

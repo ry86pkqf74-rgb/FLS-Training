@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Previous sessions show consistent completion times around 88-90 seconds",
+    "Historical scores indicate solid understanding of basic peg transfer mechanics"
+  ],
+  "weaknesses": [
+    "No task performance was visible in this session - only educational content was shown",
+    "Unable to assess current skill execution due to lack of actual task footage"
+  ],
+  "drills": [
+    {
+      "name": "Camera centering reset",
+      "description": "3 minutes of centering and re-centering the work target before the first move to ensure proper video capture of task performance",
+      "duration_minutes": 3,
+      "targets_weakness": "Ensuring proper task setup and video documentation"
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "12 full transfers without touching the pegboard for support to maintain previous performance level",
+      "duration_minutes": 10,
+      "targets_weakness": "Maintaining consistent transfer technique from previous sessions"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your consistent 88-90 second completion times into faster clean repetitions while maintaining precision. Ensure proper task setup and video capture for accurate performance assessment.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.1,
+    "input_tokens": 18316,
+    "output_tokens": 301,
+    "cost_usd_approx": 0.0595
+  }
+}

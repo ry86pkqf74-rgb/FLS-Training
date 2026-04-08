@@ -1,0 +1,75 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional demonstration video rather than a timed performance attempt."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.8,
+    "reasoning": "This is clearly a demonstration video showing proper technique for the peg transfer task, not an actual timed performance. The video shows step-by-step instruction with text overlays explaining each movement. No timing clock is visible, no completion is achieved, and the format indicates this is educational material rather than a scored attempt."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 65.0,
+      "resolution": "Used 0.0 seconds",
+      "rationale": "Claude correctly identified this as a demonstration video without timing, while GPT incorrectly attempted to score it as a performance attempt."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional demonstration video rather than a timed performance attempt."
+      },
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One polo mint left the field of view and was not retrievable."
+      },
+      "resolution": "Used incomplete_task penalty",
+      "rationale": "The fundamental issue is that this is not a scoreable performance attempt but rather instructional content, making the incomplete_task penalty more appropriate than scoring individual technical errors."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's shorter list",
+      "rationale": "Since this is a demonstration video that does not show a complete timed performance, the more conservative phase detection is more accurate."
+    }
+  ],
+  "overall_confidence": 0.8,
+  "_meta": {
+    "video_id": "xLRgwP5lHXs",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.4,
+    "input_tokens": 2022,
+    "output_tokens": 635,
+    "cost_usd_approx": 0.0156,
+    "timestamp": "2026-04-08T09:41:59.051066+00:00",
+    "prompt_version": "v002"
+  }
+}

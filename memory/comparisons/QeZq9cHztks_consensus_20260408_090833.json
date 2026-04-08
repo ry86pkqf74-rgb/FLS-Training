@@ -1,0 +1,86 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_circle",
+        "count": 1,
+        "description": "Video appears to be educational content rather than a complete FLS Task 2 performance, preventing verification of task completion."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut"
+    ],
+    "confidence": 0.0,
+    "reasoning": "Major disagreement between models on video content interpretation. Claude identified this as educational content without complete task performance, while GPT-4o scored it as a completed task. Given the fundamental disagreement about whether a scorable task performance occurred, the conservative approach is to treat this as incomplete educational content that cannot be scored according to FLS rubric requirements."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 150.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Fundamental disagreement about whether video shows complete task performance versus educational content. Conservative approach requires clear task completion evidence."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_circle",
+          "count": 1,
+          "description": "Cannot determine if the marked circle was completely cut out as the video shows educational content rather than a complete task performance."
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "line_deviation",
+          "count": 1,
+          "description": "The cut deviated from the marked line on the circle."
+        }
+      ],
+      "resolution": "Used Claude's incomplete_circle penalty",
+      "rationale": "If the video content is ambiguous about task completion, incomplete_circle is the appropriate penalty rather than line_deviation which assumes completion occurred."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "traction_setup",
+        "entry_cut"
+      ],
+      "gpt_value": [
+        "traction_setup",
+        "entry_cut",
+        "circle_following",
+        "circle_release"
+      ],
+      "resolution": "Used Claude's shorter list",
+      "rationale": "Conservative approach given disagreement about task completion - only include phases that are clearly observable."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 145.0,
+      "resolution": "Used 0.0",
+      "rationale": "Follows from incomplete task determination - no score can be assigned without clear task completion."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "QeZq9cHztks",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.65,
+    "input_tokens": 2008,
+    "output_tokens": 711,
+    "cost_usd_approx": 0.0167,
+    "timestamp": "2026-04-08T09:08:33.039502+00:00",
+    "prompt_version": "v002"
+  }
+}

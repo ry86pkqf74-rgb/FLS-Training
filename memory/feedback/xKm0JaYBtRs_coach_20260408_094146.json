@@ -1,0 +1,43 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task5",
+  "strengths": [
+    "Demonstrated task recognition awareness by attempting the correct intracorporeal suturing setup",
+    "Maintained consistent instrument control throughout the session"
+  ],
+  "weaknesses": [
+    "Performed task3 (Ligating Loop) instead of the assigned task5 (Intracorporeal Suture)",
+    "Failed to verify task requirements before beginning the procedure"
+  ],
+  "drills": [
+    {
+      "name": "Task verification protocol",
+      "description": "Before starting any procedure, spend 30 seconds identifying the correct materials and setup for the assigned task.",
+      "duration_minutes": 5,
+      "targets_weakness": "Task misidentification and setup errors."
+    },
+    {
+      "name": "Needle driving angle practice",
+      "description": "Load the needle at a stable driving angle and practice 10 passes through the Penrose drain before any knot tying.",
+      "duration_minutes": 10,
+      "targets_weakness": "Preparation for correct intracorporeal suturing technique."
+    },
+    {
+      "name": "Double-then-single sequence drill",
+      "description": "Rehearse one surgeon's knot followed by two single throws without time pressure to master the task5 sequence.",
+      "duration_minutes": 12,
+      "targets_weakness": "Intracorporeal knot tying sequence execution."
+    }
+  ],
+  "progression_note": "At the advanced level, task identification errors are critical failures that prevent skill assessment. Focus on procedural verification protocols before pursuing benchmark times.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task5",
+    "skill_level": "advanced",
+    "elapsed_seconds": 13.06,
+    "input_tokens": 19148,
+    "output_tokens": 382,
+    "cost_usd_approx": 0.0632
+  }
+}

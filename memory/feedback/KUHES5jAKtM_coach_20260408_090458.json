@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated consistent grasp control throughout the attempt",
+    "Maintained steady camera positioning during transfers",
+    "Successfully completed multiple ring transfers before time limit"
+  ],
+  "weaknesses": [
+    "Failed to complete the task within the 300-second time limit",
+    "Inefficient movement patterns led to time management issues",
+    "Excessive regrasping and repositioning slowed overall progress"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges.",
+      "duration_minutes": 12,
+      "targets_weakness": "Inefficient movement patterns and excessive regrasping"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task phase slowly with minimal wasted regrasping, emphasizing direct paths between pegs.",
+      "duration_minutes": 10,
+      "targets_weakness": "Time management through streamlined movements"
+    },
+    {
+      "name": "Timed completion drill",
+      "description": "Complete full 6-ring transfers in progressive time targets: 180s, 150s, then 120s.",
+      "duration_minutes": 15,
+      "targets_weakness": "Task completion within time limit"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid grasp mechanics into faster, more efficient transfer sequences. Your technique is sound but needs streamlining to consistently complete within time limits.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 12.6,
+    "input_tokens": 19122,
+    "output_tokens": 407,
+    "cost_usd_approx": 0.0635
+  }
+}

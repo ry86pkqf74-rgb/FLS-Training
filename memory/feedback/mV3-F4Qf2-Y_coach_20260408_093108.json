@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated smooth bilateral instrument coordination during transfer phases",
+    "Maintained consistent camera positioning throughout most of the attempt",
+    "Showed good spatial awareness when navigating between pegboard positions"
+  ],
+  "weaknesses": [
+    "Task completion remains uncertain with conflicting evidence on final object placement",
+    "May have lost track of transferred objects during the final phases",
+    "Exceeded the time limit significantly, indicating inefficient movement patterns"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on secure handoffs between instruments",
+      "duration_minutes": 10,
+      "targets_weakness": "Task completion remains uncertain with conflicting evidence on final object placement"
+    },
+    {
+      "name": "Lost-object recovery awareness",
+      "description": "Perform slow-motion transfer sets with deliberate pauses to verify object security before releasing grip",
+      "duration_minutes": 8,
+      "targets_weakness": "May have lost track of transferred objects during the final phases"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Complete the transfer sequence slowly with minimal wasted regrasping and direct path planning",
+      "duration_minutes": 12,
+      "targets_weakness": "Exceeded the time limit significantly, indicating inefficient movement patterns"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your good coordination skills into reliable task completion with faster, more direct movement paths. Verify each transfer completion before proceeding to the next object.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 13.01,
+    "input_tokens": 19105,
+    "output_tokens": 416,
+    "cost_usd_approx": 0.0636
+  }
+}

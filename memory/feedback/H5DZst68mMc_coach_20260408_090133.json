@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Shows understanding of proper setup and instrument positioning",
+    "Demonstrates familiarity with the task environment and equipment"
+  ],
+  "weaknesses": [
+    "No actual peg transfer activity was performed in this video",
+    "Unable to assess transfer technique, timing, or precision from instructional content"
+  ],
+  "drills": [
+    {
+      "name": "Complete transfer sequence practice",
+      "description": "Perform 10 full six-peg transfers focusing on consistent pickup and placement technique without time pressure.",
+      "duration_minutes": 15,
+      "targets_weakness": "No actual peg transfer activity was performed in this video."
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, emphasizing stable release and regrasp angles.",
+      "duration_minutes": 10,
+      "targets_weakness": "Unable to assess transfer technique from instructional content."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on performing complete task sequences to build upon your existing setup knowledge and convert familiarity into measurable performance.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.91,
+    "input_tokens": 18292,
+    "output_tokens": 288,
+    "cost_usd_approx": 0.0592
+  }
+}

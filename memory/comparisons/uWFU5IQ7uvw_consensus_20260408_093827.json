@@ -1,0 +1,45 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 180.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task was not completed within the maximum time limit. Video appears to be instructional content rather than a complete task performance."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "loop_introduction",
+      "loop_positioning"
+    ],
+    "confidence": 0.0,
+    "reasoning": "Both models identified this as incomplete task performance. The video shows instructional content about ligating loop technique but lacks clear timing markers, visible appendage targets, and completion of required task elements (securing loop on marked appendage and cutting tail). Given the incomplete nature, maximum time is used for scoring purposes."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 180.0,
+      "resolution": "Used 180.0 seconds",
+      "rationale": "For incomplete tasks, the rubric requires using maximum time for scoring calculations rather than zero time, as the task was attempted but not completed within the time limit."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "uWFU5IQ7uvw",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 6.82,
+    "input_tokens": 2036,
+    "output_tokens": 371,
+    "cost_usd_approx": 0.0117,
+    "timestamp": "2026-04-08T09:38:27.699209+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Familiar with LapAR Pro system interface and setup procedures"
+  ],
+  "weaknesses": [
+    "No actual task performance to evaluate",
+    "Unable to assess precision cutting technique",
+    "Cannot determine instrument handling proficiency"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction on actual gauze material.",
+      "duration_minutes": 10,
+      "targets_weakness": "Need to practice actual cutting technique on task materials."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle during precision cuts.",
+      "duration_minutes": 8,
+      "targets_weakness": "Develop proper instrument coordination for cutting tasks."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting system familiarity into actual task performance with gauze cutting and precision control.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 9.25,
+    "input_tokens": 19103,
+    "output_tokens": 261,
+    "cost_usd_approx": 0.0612
+  }
+}

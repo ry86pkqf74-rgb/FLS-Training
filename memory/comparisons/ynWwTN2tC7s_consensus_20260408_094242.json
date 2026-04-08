@@ -1,0 +1,73 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 147.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task incomplete - only outbound transfers completed, return transfers not performed within the video timeframe."
+      }
+    ],
+    "score_components": {
+      "time_score": 153.0,
+      "penalty_deductions": 153.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on completion time of 147 seconds. Major disagreement on task completion status: Claude identified incomplete task (no return transfers), while GPT-4o claimed return transfers occurred but with one lost object. Given that Claude's phases_detected only shows outbound transfers and the FLS rubric requires complete bidirectional transfer, the incomplete_task penalty takes precedence over lost_object penalty, resulting in zero score."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task incomplete - only outbound transfers completed, return transfers not performed within the video timeframe."
+      },
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One object was dropped outside the field of view and was unretrievable."
+      },
+      "resolution": "Applied incomplete_task penalty",
+      "rationale": "Claude's phase detection shows only outbound transfers, which aligns with incomplete task assessment. FLS rubric requires complete bidirectional transfer; incomplete task penalty (zero score) supersedes lost object penalty."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "resolution": "Used Claude's phase detection",
+      "rationale": "Claude's phase detection is consistent with incomplete task penalty and provides more detailed breakdown including setup phase."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 143.0,
+      "resolution": "Applied zero score",
+      "rationale": "Incomplete task penalty results in automatic zero score per FLS rubric, regardless of time performance or other penalties."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "ynWwTN2tC7s",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.43,
+    "input_tokens": 1990,
+    "output_tokens": 652,
+    "cost_usd_approx": 0.0158,
+    "timestamp": "2026-04-08T09:42:42.143361+00:00",
+    "prompt_version": "v002"
+  }
+}

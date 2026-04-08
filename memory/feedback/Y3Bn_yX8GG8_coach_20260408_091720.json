@@ -1,0 +1,39 @@
+{
+  "skill_level": "novice",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated successful bilateral instrument coordination during initial transfers",
+    "Maintained stable grasp control throughout observed transfer sequences",
+    "Showed consistent peg-to-pin placement accuracy during the outbound phase"
+  ],
+  "weaknesses": [
+    "Failed to complete the full task sequence, leaving 4 objects on the right side",
+    "Took excessive time (245 seconds) indicating inefficient movement patterns",
+    "Did not maintain task awareness to ensure all transfers were completed"
+  ],
+  "drills": [
+    {
+      "name": "Complete Cycle Rehearsal",
+      "description": "Practice the full 6-object transfer sequence slowly, counting aloud each completed transfer to maintain task awareness.",
+      "duration_minutes": 10,
+      "targets_weakness": "Failed to complete the full task sequence."
+    },
+    {
+      "name": "Economy-of-Motion Ladder",
+      "description": "Perform single object transfers with minimal regrasping, focusing on direct pickup-to-placement movements.",
+      "duration_minutes": 8,
+      "targets_weakness": "Took excessive time indicating inefficient movement patterns."
+    }
+  ],
+  "progression_note": "At the novice level, prioritize completing the full task sequence consistently before focusing on speed improvements.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "novice",
+    "elapsed_seconds": 10.2,
+    "input_tokens": 19147,
+    "output_tokens": 335,
+    "cost_usd_approx": 0.0625
+  }
+}

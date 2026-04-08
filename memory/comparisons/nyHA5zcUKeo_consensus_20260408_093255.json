@@ -1,0 +1,84 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task was not completed within the observable frames. All six objects were successfully transferred to the opposite side but the return transfers back to the original side were not completed."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 300.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.6,
+    "reasoning": "Major disagreement between models on task completion. Claude observed only outbound transfers without return phase completion, while GPT reported full completion with lost objects. Given the fundamental disagreement on whether the task was completed, and that incomplete_task is an automatic zero condition in the rubric, the more conservative incomplete assessment is adopted."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 240.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "If task is incomplete per rubric, completion time is irrelevant as score becomes zero regardless"
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "lost_object",
+          "count": 2
+        }
+      ],
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Incomplete task is an automatic zero condition that supersedes other penalties. The fundamental disagreement on completion status requires conservative assessment"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's phase list",
+      "rationale": "Consistent with incomplete task assessment - if return transfers were not clearly observable, they should not be listed as detected phases"
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 40.0,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task results in automatic zero score per FLS rubric, regardless of other performance metrics"
+    }
+  ],
+  "overall_confidence": 0.6,
+  "_meta": {
+    "video_id": "nyHA5zcUKeo",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.53,
+    "input_tokens": 2062,
+    "output_tokens": 680,
+    "cost_usd_approx": 0.0164,
+    "timestamp": "2026-04-08T09:32:55.470330+00:00",
+    "prompt_version": "v002"
+  }
+}

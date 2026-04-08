@@ -1,16 +1,20 @@
 {
-  "created_at": "2026-04-08T07:02:44.664546+00:00",
+  "created_at": "2026-04-08T09:45:01.512758+00:00",
   "seed": 42,
   "val_split": 0.15,
-  "total_pairs": 44,
-  "train_pairs": 37,
-  "val_pairs": 7,
-  "avg_score_delta": 4.6471,
+  "total_pairs": 149,
+  "train_pairs": 127,
+  "val_pairs": 22,
+  "avg_score_delta": 2.4639,
   "task_distribution": {
-    "task5": 44
+    "task5": 64,
+    "task3": 19,
+    "task2": 20,
+    "task1": 31,
+    "task4": 15
   },
   "pair_type_distribution": {
-    "scoring": 17,
+    "scoring": 122,
     "coaching": 27
   }
 }

@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated proper traction setup and maintained good visualization throughout the cutting process",
+    "Successfully initiated entry cuts and followed the circle path for most of the procedure",
+    "Showed consistent instrument control during the circle following phase"
+  ],
+  "weaknesses": [
+    "Failed to complete the circle within the 300-second time limit",
+    "Cutting speed was insufficient to finish the task despite proper technique",
+    "May have spent excessive time on precision at the expense of efficiency"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, focusing on steady cutting speed rather than perfect precision.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the circle within the time limit"
+    },
+    {
+      "name": "Timed circle completion drill",
+      "description": "Practice complete circle cuts with a 2-minute target, gradually reducing time while maintaining quality.",
+      "duration_minutes": 15,
+      "targets_weakness": "Cutting speed was insufficient to finish the task"
+    },
+    {
+      "name": "Efficiency over perfection practice",
+      "description": "Perform circle cuts prioritizing completion speed while maintaining acceptable quality standards.",
+      "duration_minutes": 10,
+      "targets_weakness": "May have spent excessive time on precision at the expense of efficiency"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on balancing precision with speed to consistently complete tasks within time limits. Your technique is sound, but efficiency needs improvement to achieve passing scores.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.77,
+    "input_tokens": 19115,
+    "output_tokens": 415,
+    "cost_usd_approx": 0.0636
+  }
+}

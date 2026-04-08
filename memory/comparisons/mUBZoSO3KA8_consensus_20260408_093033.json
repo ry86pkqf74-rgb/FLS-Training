@@ -1,0 +1,61 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 104.5,
+    "penalties": [
+      {
+        "type": "line_deviation",
+        "count": 1,
+        "description": "Cut deviates from the marked circle at multiple points during circle following phase."
+      }
+    ],
+    "score_components": {
+      "time_score": 195.5,
+      "penalty_deductions": 12.5,
+      "total_fls_score": 183.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion and detected line deviations during circle following. Completion time was averaged due to disagreement. Both models identified the same penalty type with similar descriptions, so penalty was retained with averaged deduction amount."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 89.0,
+      "gpt_value": 120.0,
+      "resolution": "Used average of 104.5 seconds",
+      "rationale": "Significant timing disagreement with no clear rubric guidance on which is more accurate, so conservative averaging approach was used."
+    },
+    {
+      "field": "penalties[0].description",
+      "claude_value": "Cut deviates from the marked circle at multiple points, particularly visible in the final frames where the cut line goes inside and outside the circle boundary.",
+      "gpt_value": "The cut deviated from the marked circle at multiple points.",
+      "resolution": "Used simplified consensus description",
+      "rationale": "Both identified same penalty type and general issue, merged into common description."
+    },
+    {
+      "field": "score_components.penalty_deductions",
+      "claude_value": 15.0,
+      "gpt_value": 10.0,
+      "resolution": "Used average of 12.5",
+      "rationale": "Both models agreed on line deviation penalty but differed on deduction amount, averaged for conservative consensus."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "mUBZoSO3KA8",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.94,
+    "input_tokens": 2083,
+    "output_tokens": 550,
+    "cost_usd_approx": 0.0145,
+    "timestamp": "2026-04-08T09:30:33.384141+00:00",
+    "prompt_version": "v002"
+  }
+}

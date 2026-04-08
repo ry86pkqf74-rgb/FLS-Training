@@ -1,0 +1,39 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Successfully completed all six object transfers without penalties",
+    "Demonstrated consistent bimanual coordination throughout the task",
+    "Maintained stable camera positioning during transfers"
+  ],
+  "weaknesses": [
+    "Completion time of 162 seconds significantly exceeds intermediate benchmarks",
+    "Excessive regrasping and repositioning movements reducing efficiency",
+    "Inconsistent transfer rhythm suggesting hesitation in movement planning"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges",
+      "duration_minutes": 10,
+      "targets_weakness": "Excessive regrasping and repositioning movements reducing efficiency"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task slowly with minimal wasted regrasping, counting and reducing the number of instrument adjustments per transfer",
+      "duration_minutes": 8,
+      "targets_weakness": "Inconsistent transfer rhythm suggesting hesitation in movement planning"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your consistent completion ability into faster, more fluid movements. Target sub-120 second completion times while maintaining your current accuracy.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 12.85,
+    "input_tokens": 18281,
+    "output_tokens": 341,
+    "cost_usd_approx": 0.06
+  }
+}

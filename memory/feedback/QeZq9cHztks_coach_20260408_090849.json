@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated proper instrument positioning and traction setup techniques",
+    "Showed controlled entry cutting technique with appropriate Maryland grasp"
+  ],
+  "weaknesses": [
+    "Unable to complete the full circle cutting sequence",
+    "Video content appears to be educational demonstration rather than complete task performance"
+  ],
+  "drills": [
+    {
+      "name": "Complete circle tracking drill",
+      "description": "Practice cutting complete circles on gauze material, focusing on maintaining continuous cutting motion around the entire circumference without stopping",
+      "duration_minutes": 15,
+      "targets_weakness": "Unable to complete the full circle cutting sequence"
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and maintain optimal cutting position throughout the circle",
+      "duration_minutes": 10,
+      "targets_weakness": "Incomplete task performance due to suboptimal cutting technique"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on completing full task sequences consistently before working on speed improvements. Practice complete circle cuts to build confidence in continuous cutting motion.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 16.42,
+    "input_tokens": 18339,
+    "output_tokens": 288,
+    "cost_usd_approx": 0.0593
+  }
+}

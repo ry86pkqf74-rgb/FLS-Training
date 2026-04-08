@@ -1,0 +1,38 @@
+{
+  "skill_level": "novice",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated proper traction setup with Maryland grasper",
+    "Maintained steady camera view throughout the attempt"
+  ],
+  "weaknesses": [
+    "Failed to complete the circle cutting task",
+    "Cut progress was minimal before stopping",
+    "Did not maintain continuous cutting motion around the circle"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, focusing on completing each quarter before moving to the next.",
+      "duration_minutes": 10,
+      "targets_weakness": "Failed to complete the circle cutting task."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and maintain optimal cutting position throughout the circle.",
+      "duration_minutes": 8,
+      "targets_weakness": "Cut progress was minimal before stopping."
+    }
+  ],
+  "progression_note": "At the novice level, focus on completing the full circle even if it takes longer rather than stopping partway through. Practice maintaining continuous motion and repositioning traction as needed to support the scissors throughout the entire cutting path.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "novice",
+    "elapsed_seconds": 10.05,
+    "input_tokens": 19098,
+    "output_tokens": 302,
+    "cost_usd_approx": 0.0618
+  }
+}

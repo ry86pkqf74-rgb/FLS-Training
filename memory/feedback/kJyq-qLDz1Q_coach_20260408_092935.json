@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated consistent ability to pick up and manipulate objects with both instruments",
+    "Maintained steady camera positioning throughout most transfer attempts",
+    "Showed good bilateral coordination during mid-air transfers"
+  ],
+  "weaknesses": [
+    "Failed to complete the full task cycle by returning all objects to their original positions",
+    "Lost track of task completion requirements during the transfer sequence",
+    "Did not establish a clear systematic approach to ensure all six objects were properly transferred"
+  ],
+  "drills": [
+    {
+      "name": "Complete cycle rehearsal",
+      "description": "Practice the full task sequence slowly, counting objects aloud and verifying all six return to starting positions before considering the task complete.",
+      "duration_minutes": 10,
+      "targets_weakness": "Failed to complete the full task cycle."
+    },
+    {
+      "name": "Object tracking checkpoint drill",
+      "description": "Transfer three objects to the opposite side, pause to count and verify positions, then complete the return transfers with verbal confirmation.",
+      "duration_minutes": 8,
+      "targets_weakness": "Lost track of task completion requirements."
+    },
+    {
+      "name": "Systematic transfer pattern practice",
+      "description": "Establish a consistent left-to-right or right-to-left transfer order and practice maintaining this pattern for both outbound and return phases.",
+      "duration_minutes": 7,
+      "targets_weakness": "Did not establish a clear systematic approach."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on developing reliable task completion habits and systematic approaches rather than speed. Your transfer mechanics are solid, but task awareness needs improvement to ensure consistent scoring.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.38,
+    "input_tokens": 18358,
+    "output_tokens": 424,
+    "cost_usd_approx": 0.0614
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Maintained consistent traction with Maryland grasper throughout the cutting process",
+    "Demonstrated good scissor control with steady cutting motions",
+    "Successfully followed the circular pattern for most of the circumference"
+  ],
+  "weaknesses": [
+    "Failed to complete the circle within the 300-second time limit",
+    "Left multiple connection points that prevented full circle removal",
+    "Appeared to lose momentum in the final cutting phases"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, focusing on complete separation of each segment.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the circle within time limit."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle for more efficient cutting.",
+      "duration_minutes": 8,
+      "targets_weakness": "Left multiple connection points preventing removal."
+    },
+    {
+      "name": "Edge-entry rehearsal",
+      "description": "15 starts from the gauze edge to a marked line without overshoot, emphasizing clean entry and exit points.",
+      "duration_minutes": 10,
+      "targets_weakness": "Lost momentum in final cutting phases."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your good cutting technique into complete task execution within time limits. Practice breaking the circle into manageable segments while maintaining cutting efficiency throughout.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 13.74,
+    "input_tokens": 19119,
+    "output_tokens": 407,
+    "cost_usd_approx": 0.0635
+  }
+}

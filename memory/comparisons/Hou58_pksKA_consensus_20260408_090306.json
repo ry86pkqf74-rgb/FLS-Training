@@ -1,0 +1,94 @@
+{
+  "consensus_score": {
+    "task_id": "task5",
+    "completion_time_seconds": 180.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task appears incomplete - suture ends were not cut inside the trainer and final knot security cannot be confirmed from the visible frames."
+      }
+    ],
+    "score_components": {
+      "time_score": 420.0,
+      "penalty_deductions": 420.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "needle_load",
+      "suture_placement",
+      "first_throw",
+      "second_throw"
+    ],
+    "confidence": 0.3,
+    "reasoning": "Major disagreement between models on task completion status. Claude identified incomplete task with suture ends not cut inside trainer, while GPT reported full completion with specific penalties. Given the fundamental disagreement and Claude's specific observation about suture material extending outside the trainer in final frames, the incomplete task assessment is more defensible under the rubric's completion requirements."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 180.0,
+      "gpt_value": 550.0,
+      "resolution": "Used Claude's 180.0 seconds",
+      "rationale": "With incomplete task determination, the earlier timing when activity ceased is more appropriate than continuing to count time for incomplete work."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "suture_deviation",
+          "count": 1
+        },
+        {
+          "type": "slit_not_closed",
+          "count": 1
+        }
+      ],
+      "resolution": "Used incomplete_task penalty only",
+      "rationale": "Incomplete task is an automatic zero condition that supersedes other penalty assessments. Cannot score technique penalties on an incomplete task."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw",
+        "second_throw"
+      ],
+      "gpt_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw",
+        "second_throw",
+        "third_throw",
+        "suture_cut"
+      ],
+      "resolution": "Used Claude's phase list without third_throw and suture_cut",
+      "rationale": "Consistent with incomplete task determination - if task was not completed, final phases should not be marked as detected."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 42.0,
+      "resolution": "Score of 0.0",
+      "rationale": "Incomplete task results in automatic zero score regardless of time or other penalties."
+    }
+  ],
+  "overall_confidence": 0.3,
+  "_meta": {
+    "video_id": "Hou58_pksKA",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 13.31,
+    "input_tokens": 2114,
+    "output_tokens": 724,
+    "cost_usd_approx": 0.0172,
+    "timestamp": "2026-04-08T09:03:06.677791+00:00",
+    "prompt_version": "v002"
+  }
+}

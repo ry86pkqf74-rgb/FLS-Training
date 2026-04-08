@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated proper instrument handling and grasping technique",
+    "Showed understanding of the mid-air transfer requirement",
+    "Maintained good camera positioning throughout the demonstration"
+  ],
+  "weaknesses": [
+    "This appears to be an instructional video rather than a timed performance attempt",
+    "No clear start and end timing markers for scoring",
+    "Unable to assess actual task completion speed or efficiency"
+  ],
+  "drills": [
+    {
+      "name": "Timed Performance Setup",
+      "description": "Practice establishing clear start and end timing markers for formal task attempts, beginning when instruments first appear on screen.",
+      "duration_minutes": 5,
+      "targets_weakness": "No clear start and end timing markers for scoring."
+    },
+    {
+      "name": "Mid-air Transfer Ladder",
+      "description": "Complete 12 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges.",
+      "duration_minutes": 10,
+      "targets_weakness": "Unable to assess actual task completion speed or efficiency."
+    },
+    {
+      "name": "Economy-of-Motion Practice",
+      "description": "Perform complete task cycles slowly with minimal wasted regrasping, emphasizing efficient movement patterns.",
+      "duration_minutes": 8,
+      "targets_weakness": "Unable to assess actual task completion speed or efficiency."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your demonstrated technique into timed performance attempts with clear scoring markers. Your handling skills appear solid, but formal assessment requires measurable completion times.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 13.66,
+    "input_tokens": 19118,
+    "output_tokens": 389,
+    "cost_usd_approx": 0.0632
+  }
+}

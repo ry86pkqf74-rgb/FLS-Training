@@ -1,0 +1,44 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task3",
+  "strengths": [
+    "Demonstrated loop introduction and positioning phases",
+    "Maintained instrument control during visible portions of the attempt"
+  ],
+  "weaknesses": [
+    "Excessive motion blur prevented clear assessment of task completion",
+    "Unable to verify proper loop securing and tail cutting due to video quality",
+    "Camera stability issues compromised visual feedback throughout the procedure"
+  ],
+  "drills": [
+    {
+      "name": "Camera centering reset",
+      "description": "3 minutes of centering and re-centering the work target before the first move",
+      "duration_minutes": 3,
+      "targets_weakness": "Camera stability issues compromised visual feedback throughout the procedure"
+    },
+    {
+      "name": "Loop opening and parking",
+      "description": "10 repetitions of opening the loop and parking it around the target appendage before tightening",
+      "duration_minutes": 8,
+      "targets_weakness": "Unable to verify proper loop securing and tail cutting due to video quality"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task phase slowly with minimal wasted regrasping to reduce motion blur",
+      "duration_minutes": 10,
+      "targets_weakness": "Excessive motion blur prevented clear assessment of task completion"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on maintaining stable camera positioning and deliberate movements to ensure clear visual feedback. Practice the complete sequence slowly before attempting to increase speed.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task3",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 12.15,
+    "input_tokens": 19120,
+    "output_tokens": 386,
+    "cost_usd_approx": 0.0631
+  }
+}

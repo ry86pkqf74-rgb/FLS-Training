@@ -1,0 +1,80 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task appears to be incomplete as the video shows ongoing transfers but no clear completion state with all objects returned to original side."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.3,
+    "reasoning": "Major disagreement between models on task completion. Claude identified incomplete task with no clear completion state, while GPT-4o reported successful completion in 72.3 seconds. Given the fundamental disagreement on whether the task was completed, and Claude's specific observation that objects were not all returned to original side as required, the conservative interpretation is that the task was incomplete, resulting in automatic zero score per FLS rubric."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 72.3,
+      "resolution": "Used Claude's 0.0 seconds",
+      "rationale": "Claude's assessment of incomplete task takes precedence as it identified specific rubric violation - objects not returned to original side as required for task completion"
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Task appears to be incomplete as the video shows ongoing transfers but no clear completion state with all objects returned to original side."
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Kept Claude's incomplete_task penalty",
+      "rationale": "Incomplete task results in automatic zero score per FLS rubric. Claude's specific observation about final object placement supports this penalty"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's shorter phase list",
+      "rationale": "Consistent with incomplete task assessment - if task was not completed, return_transfers and final_release phases would not have occurred"
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 227.7,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task penalty results in automatic zero score regardless of time performance"
+    }
+  ],
+  "overall_confidence": 0.3,
+  "_meta": {
+    "video_id": "kJyq-qLDz1Q",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.6,
+    "input_tokens": 1978,
+    "output_tokens": 721,
+    "cost_usd_approx": 0.0167,
+    "timestamp": "2026-04-08T09:29:24.166400+00:00",
+    "prompt_version": "v002"
+  }
+}

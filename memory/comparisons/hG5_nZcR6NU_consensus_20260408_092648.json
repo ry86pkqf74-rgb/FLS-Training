@@ -1,0 +1,33 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 189.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 111.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 111.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers",
+      "final_release"
+    ],
+    "confidence": 0.9,
+    "reasoning": "Both models agreed on all key scoring elements: 189-second completion time, no penalties, and successful task completion with all six objects transferred from right to left and back to original positions. All transfers performed mid-air without board assistance, no objects dropped or lost."
+  },
+  "disagreements": [],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "hG5_nZcR6NU",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 4.0,
+    "input_tokens": 2021,
+    "output_tokens": 223,
+    "cost_usd_approx": 0.0094,
+    "timestamp": "2026-04-08T09:26:48.986447+00:00",
+    "prompt_version": "v002"
+  }
+}

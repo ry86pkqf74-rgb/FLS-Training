@@ -1,0 +1,75 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 280.0,
+    "penalties": [
+      {
+        "type": "lost_object",
+        "count": 2,
+        "description": "Two objects were dropped out of view and were not retrievable."
+      }
+    ],
+    "score_components": {
+      "time_score": 20.0,
+      "penalty_deductions": 20.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.3,
+    "reasoning": "Major disagreement on completion time and lost objects. GPT-4o reported 280 seconds with 2 lost objects, while Claude reported 30 seconds with no penalties. Given the extreme timing difference and GPT's specific penalty description, the conservative approach is to accept the longer time and penalties, as lost objects are automatic deductions that cannot be overlooked if they occurred."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 30.0,
+      "gpt_value": 280.0,
+      "resolution": "Used GPT value of 280.0",
+      "rationale": "Extreme timing difference suggests different interpretation of task completion. Conservative approach favors longer time given uncertainty."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [],
+      "gpt_value": [
+        {
+          "type": "lost_object",
+          "count": 2,
+          "description": "Two objects were dropped out of view and were not retrievable."
+        }
+      ],
+      "resolution": "Kept GPT penalties",
+      "rationale": "Lost object penalties are automatic deductions per rubric. If objects were lost, penalty must be applied regardless of other factors."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "resolution": "Used GPT phases without final_release",
+      "rationale": "If objects were lost, final release phase may not have been properly completed."
+    }
+  ],
+  "overall_confidence": 0.3,
+  "_meta": {
+    "video_id": "NA0hZhKQfrk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 13.68,
+    "input_tokens": 1994,
+    "output_tokens": 599,
+    "cost_usd_approx": 0.015,
+    "timestamp": "2026-04-08T09:06:45.539282+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated good instrument handling and coordination throughout the attempt",
+    "Maintained steady camera positioning and workspace organization",
+    "Successfully completed multiple object transfers showing basic laparoscopic skills"
+  ],
+  "weaknesses": [
+    "Failed to identify the correct task setup - performed peg transfer instead of precision cutting",
+    "Did not recognize or utilize the gauze material required for Task 2",
+    "Missed the fundamental task objective of cutting a marked circle",
+    "Exceeded the 300-second time limit without task completion"
+  ],
+  "drills": [
+    {
+      "name": "Task identification rehearsal",
+      "description": "Practice identifying Task 2 setup by locating the gauze with printed circle and positioning Maryland grasper for traction before any cutting begins.",
+      "duration_minutes": 5,
+      "targets_weakness": "Failed to identify the correct task setup."
+    },
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction with the Maryland grasper to improve scissor entry angle.",
+      "duration_minutes": 10,
+      "targets_weakness": "Missed the fundamental task objective of cutting a marked circle."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of positioning the Maryland grasper to provide optimal traction while the scissors approach the cutting line.",
+      "duration_minutes": 8,
+      "targets_weakness": "Did not recognize or utilize the gauze material required for Task 2."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on task recognition before instrument manipulation. Review the FLS Task 2 setup requirements and practice identifying the correct materials before attempting the cutting sequence.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 13.92,
+    "input_tokens": 19120,
+    "output_tokens": 451,
+    "cost_usd_approx": 0.0641
+  }
+}

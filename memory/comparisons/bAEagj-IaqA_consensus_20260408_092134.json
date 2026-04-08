@@ -1,0 +1,81 @@
+{
+  "consensus_score": {
+    "task_id": "task4",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video rather than a performance attempt. No actual task completion or timing can be assessed."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "suture_introduction"
+    ],
+    "confidence": 0.0,
+    "reasoning": "This is clearly an educational module from Washington University showing proper technique for extracorporeal knot tying. The frames show instructional content with captions describing needle manipulation techniques, not an actual FLS task performance. No timing markers, completion endpoints, or scorable performance events are present."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video rather than a performance attempt. No actual task completion or timing can be assessed."
+      },
+      "gpt_value": {
+        "type": "slit_not_closed",
+        "count": 1,
+        "description": "Visible residual slit gap after the final knot was tied."
+      },
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Claude correctly identified this as an instructional video rather than a performance attempt. GPT's assessment of task completion and penalties is invalid for educational content."
+    },
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 150.0,
+      "resolution": "Used Claude's 0.0 seconds",
+      "rationale": "No actual performance timing can be measured from instructional content."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "suture_introduction"
+      ],
+      "gpt_value": [
+        "suture_introduction",
+        "target_passes",
+        "extracorporeal_throws",
+        "slit_closure_assessment",
+        "suture_cut"
+      ],
+      "resolution": "Used Claude's minimal phase detection",
+      "rationale": "Educational demonstrations show techniques but not actual performance phases that can be scored."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 250.0,
+      "resolution": "Used Claude's 0.0 score",
+      "rationale": "Instructional videos cannot receive performance scores as they are not actual task attempts."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "bAEagj-IaqA",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.89,
+    "input_tokens": 2080,
+    "output_tokens": 701,
+    "cost_usd_approx": 0.0168,
+    "timestamp": "2026-04-08T09:21:34.190678+00:00",
+    "prompt_version": "v002"
+  }
+}

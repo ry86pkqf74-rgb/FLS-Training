@@ -1,0 +1,60 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 225.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task not completed within maximum time - return transfers incomplete"
+      }
+    ],
+    "score_components": {
+      "time_score": 75.0,
+      "penalty_deductions": 300.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.9,
+    "reasoning": "Both models agreed that the task was incomplete within the 225-second timeframe, triggering the incomplete_task penalty which results in automatic zero score per FLS rubric. Claude detected partial return transfers while GPT did not, but both confirmed the task was not completed."
+  },
+  "disagreements": [
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "resolution": "Included return_transfers phase",
+      "rationale": "Claude's observation of partial return transfers beginning is consistent with the incomplete task finding and provides more complete phase detection"
+    },
+    {
+      "field": "score_components.penalty_deductions",
+      "claude_value": 75.0,
+      "gpt_value": 300.0,
+      "resolution": "Used 300.0 penalty deduction",
+      "rationale": "Incomplete task penalty should equal maximum time (300 seconds) per FLS rubric, making GPT's calculation correct"
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "bowpTZqnQOI",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 7.88,
+    "input_tokens": 2042,
+    "output_tokens": 470,
+    "cost_usd_approx": 0.0132,
+    "timestamp": "2026-04-08T09:22:35.748074+00:00",
+    "prompt_version": "v002"
+  }
+}

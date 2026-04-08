@@ -1,0 +1,52 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 615.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Maximum time of 300 seconds was exceeded without task completion."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.9,
+    "reasoning": "Both models agreed that the task exceeded the 300-second maximum time limit at 615 seconds, triggering an automatic zero score per FLS rules. The task was incomplete at the time limit. High confidence due to clear timing agreement and unambiguous automatic-zero condition."
+  },
+  "disagreements": [
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "resolution": "Used Claude's phases",
+      "rationale": "Since the task was incomplete and exceeded time limits, the more conservative phase detection that does not include return_transfers is more appropriate given the incomplete status."
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "2u0lqjXCiNk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 6.96,
+    "input_tokens": 2065,
+    "output_tokens": 379,
+    "cost_usd_approx": 0.0119,
+    "timestamp": "2026-04-08T08:53:50.019719+00:00",
+    "prompt_version": "v002"
+  }
+}

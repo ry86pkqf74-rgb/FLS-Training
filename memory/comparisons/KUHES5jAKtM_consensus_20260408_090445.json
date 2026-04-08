@@ -1,0 +1,74 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 300.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task was not completed within the 300-second time limit. Only partial transfers were completed."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Major disagreement between models on task completion status. Claude reported incomplete task with only 4/6 rings transferred, while GPT reported full completion in 78.5 seconds. Given the fundamental nature of this disagreement and the automatic-zero condition for incomplete tasks in the rubric, the conservative approach is to treat this as incomplete, resulting in zero score."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 300.0,
+      "gpt_value": 78.5,
+      "resolution": "Used 300.0 (incomplete)",
+      "rationale": "Fundamental disagreement on task completion. Claude's incomplete assessment takes precedence due to automatic-zero rubric condition."
+    },
+    {
+      "field": "penalties[0].type",
+      "claude_value": "incomplete_task",
+      "gpt_value": "lost_object",
+      "resolution": "Used incomplete_task",
+      "rationale": "Incomplete task penalty supersedes lost object penalty in the rubric hierarchy."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's phases",
+      "rationale": "Consistent with incomplete task assessment - return phases would not be present if task was incomplete."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 211.5,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task results in automatic zero score per rubric requirements."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "KUHES5jAKtM",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.67,
+    "input_tokens": 2094,
+    "output_tokens": 637,
+    "cost_usd_approx": 0.0158,
+    "timestamp": "2026-04-08T09:04:45.371634+00:00",
+    "prompt_version": "v002"
+  }
+}

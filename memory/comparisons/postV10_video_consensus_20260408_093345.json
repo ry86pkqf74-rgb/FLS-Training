@@ -1,0 +1,72 @@
+{
+  "consensus_score": {
+    "task_id": "task5",
+    "completion_time_seconds": 213.4,
+    "penalties": [
+      {
+        "type": "suture_deviation",
+        "count": 1,
+        "description": "Minor placement deviation from marks",
+        "deduction": 2.5
+      }
+    ],
+    "score_components": {
+      "time_score": 386.6,
+      "penalty_deductions": 2.5,
+      "total_fls_score": 384.1
+    },
+    "phases_detected": [
+      "needle_load",
+      "suture_placement",
+      "first_throw",
+      "second_throw",
+      "third_throw",
+      "suture_cut",
+      "completion"
+    ],
+    "confidence": 0.6,
+    "reasoning": "Both models agreed on completion time within 3.3 seconds and detected the same phases. Major disagreement on drain gap visibility: Claude reported visible gap with partial closure (12.5 total penalties), GPT-4o reported complete closure (2.5 penalties only). Final knot assessment was not clearly visible enough to definitively support gap penalty, so conservative scoring applied only rubric-specified placement deviation."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 215.0,
+      "gpt_value": 211.7,
+      "resolution": "Split the difference at 213.4",
+      "rationale": "Both times are reasonable given frame analysis differences; consensus uses midpoint"
+    },
+    {
+      "field": "drain_assessment.gap_visible",
+      "claude_value": true,
+      "gpt_value": false,
+      "resolution": "No gap penalty applied",
+      "rationale": "Gap visibility disagreement without clear visual evidence in either analysis to definitively support the penalty"
+    },
+    {
+      "field": "estimated_penalties",
+      "claude_value": 12.5,
+      "gpt_value": 2.5,
+      "resolution": "Applied 2.5 placement penalty only",
+      "rationale": "Claude's additional 8.0 in quality/efficiency penalties are not specified in the official rubric categories"
+    },
+    {
+      "field": "estimated_fls_score",
+      "claude_value": 372.5,
+      "gpt_value": 385.8,
+      "resolution": "Recomputed as 384.1",
+      "rationale": "Used consensus time and penalty values with official scoring formula"
+    }
+  ],
+  "overall_confidence": 0.6,
+  "_meta": {
+    "video_id": "postV10_video",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 14.25,
+    "input_tokens": 6719,
+    "output_tokens": 637,
+    "cost_usd_approx": 0.0297,
+    "timestamp": "2026-04-08T09:33:45.106807+00:00",
+    "prompt_version": "v002"
+  }
+}

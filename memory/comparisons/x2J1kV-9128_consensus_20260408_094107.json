@@ -1,0 +1,83 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "No actual FLS peg transfer task performance visible in the provided frames."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.0,
+    "reasoning": "The provided frames contain only presentation slides about FLS automation and machine vision systems. No actual peg transfer task performance is visible. This appears to be educational content rather than a scorable FLS performance video."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 95.0,
+      "resolution": "Used 0.0",
+      "rationale": "Claude's assessment that this is presentation slides rather than actual task performance is more consistent with the incomplete_task penalty and lack of visible FLS equipment or performance."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "No actual FLS peg transfer task performance visible in the provided frames."
+      },
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One block left the field of view and was not retrievable."
+      },
+      "resolution": "Used incomplete_task penalty",
+      "rationale": "If no actual FLS task performance is visible as Claude reports, then a lost_object penalty cannot be assessed. The incomplete_task penalty is the appropriate automatic-zero condition."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [],
+      "gpt_value": [
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used empty array",
+      "rationale": "Consistent with incomplete_task assessment - no phases can be detected if no actual task performance is visible."
+    },
+    {
+      "field": "score_components",
+      "claude_value": {
+        "time_score": 0.0,
+        "penalty_deductions": 0.0,
+        "total_fls_score": 0.0
+      },
+      "gpt_value": {
+        "time_score": 205.0,
+        "penalty_deductions": 10.0,
+        "total_fls_score": 195.0
+      },
+      "resolution": "Used all zeros",
+      "rationale": "Incomplete_task penalty results in automatic zero score regardless of timing calculations."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "x2J1kV-9128",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.38,
+    "input_tokens": 1944,
+    "output_tokens": 702,
+    "cost_usd_approx": 0.0164,
+    "timestamp": "2026-04-08T09:41:07.772671+00:00",
+    "prompt_version": "v002"
+  }
+}

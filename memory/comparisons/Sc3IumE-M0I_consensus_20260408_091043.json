@@ -1,0 +1,74 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task completion cannot be verified due to unclear timing boundaries and missing final state verification."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.2,
+    "reasoning": "Major disagreement between models on task completion status. Claude reports incomplete task with no observable timing, while GPT reports 75-second completion with lost object penalty. Given the fundamental disagreement on whether the task was completed at all, the conservative approach is to treat this as incomplete until clear timing boundaries and final state can be verified."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 75.0,
+      "resolution": "Used 0.0 (incomplete)",
+      "rationale": "Fundamental disagreement on task completion status requires conservative scoring until timing boundaries can be clearly established."
+    },
+    {
+      "field": "penalties[0].type",
+      "claude_value": "incomplete_task",
+      "gpt_value": "lost_object",
+      "resolution": "Used incomplete_task",
+      "rationale": "If task completion cannot be verified, lost object penalties become moot as the primary issue is incomplete execution."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's shorter list",
+      "rationale": "Conservative approach given disagreement on completion - only include phases both models can agree were clearly observable."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 215.0,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task results in zero score regardless of timing or other penalties."
+    }
+  ],
+  "overall_confidence": 0.2,
+  "_meta": {
+    "video_id": "Sc3IumE-M0I",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.35,
+    "input_tokens": 2077,
+    "output_tokens": 630,
+    "cost_usd_approx": 0.0157,
+    "timestamp": "2026-04-08T09:10:43.942581+00:00",
+    "prompt_version": "v002"
+  }
+}

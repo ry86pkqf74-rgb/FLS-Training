@@ -1,0 +1,69 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This is an instructional video showing demonstration techniques, not a scored performance attempt of the ligating loop task."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.9,
+    "reasoning": "Claude correctly identified this as an instructional video containing demonstration clips for FLS tasks 4 and 5, not a scoreable attempt at task 3 (ligating loop). GPT-4o incorrectly scored what appears to be demonstration content as a performance attempt."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This is an instructional video showing demonstration techniques, not a scored performance attempt of the ligating loop task."
+      },
+      "gpt_value": {
+        "type": "loop_off_mark",
+        "count": 1,
+        "description": "The loop was slightly distal to the target mark upon final inspection."
+      },
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Claude's identification of instructional content rather than performance attempt is more consistent with the video containing demonstration clips for tasks 4 and 5, not task 3."
+    },
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 64.7,
+      "resolution": "Used Claude's 0.0 seconds",
+      "rationale": "No actual task 3 performance occurred to time, only instructional demonstration content."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [],
+      "gpt_value": [
+        "loop_introduction",
+        "loop_positioning",
+        "pusher_break_and_advancement",
+        "tail_cut"
+      ],
+      "resolution": "Used Claude's empty array",
+      "rationale": "No ligating loop task phases were performed since this was instructional content, not a performance attempt."
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "_5IukH0SX7E",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 8.74,
+    "input_tokens": 2001,
+    "output_tokens": 603,
+    "cost_usd_approx": 0.015,
+    "timestamp": "2026-04-08T09:18:53.175203+00:00",
+    "prompt_version": "v002"
+  }
+}

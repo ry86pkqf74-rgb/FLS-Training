@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task5",
+  "strengths": [
+    "Previous sessions show consistent completion times around 88-90 seconds",
+    "Historical scores indicate solid foundational suturing technique"
+  ],
+  "weaknesses": [
+    "No actual task performance captured in this video session",
+    "Unable to assess current skill execution or identify specific technical issues"
+  ],
+  "drills": [
+    {
+      "name": "Task setup verification drill",
+      "description": "Practice proper camera positioning and lighting setup before beginning suturing to ensure clear documentation of performance.",
+      "duration_minutes": 5,
+      "targets_weakness": "No actual task performance captured in this video session."
+    },
+    {
+      "name": "Needle driving angle practice",
+      "description": "10 passes loading the needle at a stable driving angle before entering the drain to maintain consistent technique.",
+      "duration_minutes": 8,
+      "targets_weakness": "Unable to assess current skill execution or identify specific technical issues."
+    }
+  ],
+  "progression_note": "At the intermediate level, consistent documentation of practice sessions is essential for tracking progress. Focus on proper setup before attempting the task to ensure meaningful feedback can be provided.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task5",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.6,
+    "input_tokens": 19080,
+    "output_tokens": 282,
+    "cost_usd_approx": 0.0615
+  }
+}

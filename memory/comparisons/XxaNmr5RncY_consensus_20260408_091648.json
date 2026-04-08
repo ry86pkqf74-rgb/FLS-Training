@@ -1,0 +1,54 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 123.5,
+    "penalties": [
+      {
+        "type": "line_deviation",
+        "count": 2,
+        "description": "Visible deviations from the marked circle line, with cutting extending outside the marked boundary in multiple locations."
+      }
+    ],
+    "score_components": {
+      "time_score": 176.5,
+      "penalty_deductions": 12.0,
+      "total_fls_score": 164.5
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.75,
+    "reasoning": "Both models agreed on task completion and phase detection. There was disagreement on exact completion time (Claude: 126s, GPT: 121s) and penalty severity (Claude: 3 deviations/15pts, GPT: 1 deviation/10pts). Consensus uses averaged timing and moderate penalty assessment based on both models observing line deviations outside the marked boundary."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 126.0,
+      "gpt_value": 121.0,
+      "resolution": "Used average of 123.5 seconds",
+      "rationale": "Both models identified clear start and end points but differed by 5 seconds. Averaging provides reasonable compromise given frame-based timing uncertainty."
+    },
+    {
+      "field": "penalties[0].count",
+      "claude_value": 3,
+      "gpt_value": 1,
+      "resolution": "Used count of 2 with 12-point deduction",
+      "rationale": "Both models observed line deviations outside the marked boundary. Claude's detailed frame analysis suggests multiple deviations, while GPT noted general deviation. Consensus reflects moderate penalty between the two assessments."
+    }
+  ],
+  "overall_confidence": 0.75,
+  "_meta": {
+    "video_id": "XxaNmr5RncY",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.16,
+    "input_tokens": 2076,
+    "output_tokens": 508,
+    "cost_usd_approx": 0.0138,
+    "timestamp": "2026-04-08T09:16:48.031489+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated proper instrument handling and basic transfer mechanics",
+    "Maintained steady camera positioning throughout the attempt",
+    "Showed persistence and continued working methodically despite time pressure"
+  ],
+  "weaknesses": [
+    "Exceeded the 300-second time limit resulting in automatic task failure",
+    "Appeared to struggle with efficient object manipulation and transfer sequences",
+    "Lost significant time during setup and initial pickup phases"
+  ],
+  "drills": [
+    {
+      "name": "Speed ladder transfers",
+      "description": "Practice 10 complete peg-to-peg transfers focusing on minimizing hesitation between pickup and release phases.",
+      "duration_minutes": 12,
+      "targets_weakness": "Exceeded the 300-second time limit resulting in automatic task failure"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task phase slowly with minimal wasted regrasping, focusing on direct paths and efficient instrument positioning.",
+      "duration_minutes": 10,
+      "targets_weakness": "Lost significant time during setup and initial pickup phases"
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, emphasizing smooth hand-to-hand exchanges.",
+      "duration_minutes": 8,
+      "targets_weakness": "Appeared to struggle with efficient object manipulation and transfer sequences"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid fundamentals into faster execution. The 300-second time limit requires efficient movement patterns and minimal hesitation between phases.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.99,
+    "input_tokens": 19098,
+    "output_tokens": 419,
+    "cost_usd_approx": 0.0636
+  }
+}

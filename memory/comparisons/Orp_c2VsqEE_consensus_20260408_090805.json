@@ -1,0 +1,71 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 65.2,
+    "penalties": [
+      {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One object was dropped and left the field of view."
+      }
+    ],
+    "score_components": {
+      "time_score": 234.8,
+      "penalty_deductions": 10.0,
+      "total_fls_score": 224.8
+    },
+    "phases_detected": [
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.6,
+    "reasoning": "GPT-4o identified a lost object penalty that Claude missed. Given the significant timing difference (21s vs 65.2s) and GPT's specific observation of an object leaving the field of view, the penalty appears valid. The longer completion time is more consistent with a performance that included object recovery."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 21.0,
+      "gpt_value": 65.2,
+      "resolution": "Used GPT's timing of 65.2 seconds",
+      "rationale": "The 21-second time from Claude appears unrealistically fast for peg transfer and is inconsistent with GPT's observation of a lost object requiring recovery time."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One object was dropped and left the field of view."
+      },
+      "resolution": "Kept the lost object penalty",
+      "rationale": "GPT's specific observation of an object leaving the field of view is a clear rubric violation that warrants the 10-point penalty deduction."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "gpt_value": [
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "resolution": "Used GPT's more conservative phase detection",
+      "rationale": "GPT's simpler phase detection aligns better with the observed performance that included object recovery."
+    }
+  ],
+  "overall_confidence": 0.6,
+  "_meta": {
+    "video_id": "Orp_c2VsqEE",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.09,
+    "input_tokens": 2005,
+    "output_tokens": 592,
+    "cost_usd_approx": 0.0149,
+    "timestamp": "2026-04-08T09:08:05.549754+00:00",
+    "prompt_version": "v002"
+  }
+}

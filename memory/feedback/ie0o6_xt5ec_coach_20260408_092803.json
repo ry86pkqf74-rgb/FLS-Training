@@ -1,0 +1,38 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task4",
+  "strengths": [
+    "Demonstrated proper needle loading technique in the needle driver",
+    "Showed understanding of extracorporeal knot tying fundamentals"
+  ],
+  "weaknesses": [
+    "Unable to assess performance due to tutorial format rather than timed attempt",
+    "No clear demonstration of complete task execution from start to finish",
+    "Cannot evaluate accuracy or efficiency metrics without proper performance structure"
+  ],
+  "drills": [
+    {
+      "name": "Complete task execution drill",
+      "description": "Perform full task4 attempts with clear start and end points, focusing on smooth transitions from needle pass to knot completion.",
+      "duration_minutes": 15,
+      "targets_weakness": "Lack of complete task demonstration structure."
+    },
+    {
+      "name": "Timed performance assessment",
+      "description": "Execute task4 with deliberate timing markers - start when instruments enter field, end when suture is cut.",
+      "duration_minutes": 10,
+      "targets_weakness": "Need for measurable performance attempts."
+    }
+  ],
+  "progression_note": "At the advanced level, focus on converting your technical knowledge into consistent, measurable performance attempts that can be properly evaluated against FLS benchmarks.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task4",
+    "skill_level": "advanced",
+    "elapsed_seconds": 9.94,
+    "input_tokens": 18325,
+    "output_tokens": 301,
+    "cost_usd_approx": 0.0595
+  }
+}

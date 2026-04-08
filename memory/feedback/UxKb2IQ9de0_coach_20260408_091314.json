@@ -1,0 +1,38 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated proper traction setup technique by positioning hands appropriately on the gauze",
+    "Maintained steady hand positioning throughout the manipulation phase"
+  ],
+  "weaknesses": [
+    "Failed to initiate any cutting action despite proper setup",
+    "Did not use laparoscopic instruments to perform the required circle cutting",
+    "Task remained incomplete with zero cutting progress observed"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction with the Maryland forceps.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to initiate cutting action"
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and cutting initiation.",
+      "duration_minutes": 8,
+      "targets_weakness": "Did not use laparoscopic instruments properly"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on transitioning from setup to active cutting with proper instrument coordination. Your traction technique is solid, but you need to engage the cutting instruments to complete the task.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.01,
+    "input_tokens": 19114,
+    "output_tokens": 321,
+    "cost_usd_approx": 0.0622
+  }
+}

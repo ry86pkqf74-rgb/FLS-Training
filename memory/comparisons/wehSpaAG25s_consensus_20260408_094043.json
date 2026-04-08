@@ -1,0 +1,86 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task completion cannot be verified due to insufficient visibility of final state"
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.1,
+    "reasoning": "Major disagreement between models on task completion status. Claude reports incomplete task with no timing, while GPT reports completion in 115 seconds with lost objects. Given the fundamental disagreement and both models citing visibility issues, the conservative approach is to score as incomplete since task completion cannot be reliably verified."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 115.0,
+      "resolution": "Used 0.0 (incomplete)",
+      "rationale": "Fundamental disagreement on whether task was completed. Without clear visual confirmation of completion state, incomplete scoring is more conservative and rubric-appropriate."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "lost_object",
+          "count": 2
+        }
+      ],
+      "resolution": "Used incomplete_task penalty",
+      "rationale": "If task completion cannot be verified, incomplete_task penalty takes precedence over lost_object penalties per rubric hierarchy."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Excluded final_release phase",
+      "rationale": "If task completion is disputed, final_release phase cannot be confirmed as genuinely completed."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 145.0,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task results in zero score regardless of timing or other penalties."
+    }
+  ],
+  "overall_confidence": 0.1,
+  "_meta": {
+    "video_id": "wehSpaAG25s",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.44,
+    "input_tokens": 1994,
+    "output_tokens": 663,
+    "cost_usd_approx": 0.0159,
+    "timestamp": "2026-04-08T09:40:43.895401+00:00",
+    "prompt_version": "v002"
+  }
+}

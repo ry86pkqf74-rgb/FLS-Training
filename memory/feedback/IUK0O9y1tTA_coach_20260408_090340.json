@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Completed all six transfers successfully without dropping any objects",
+    "Maintained good instrument control throughout the task",
+    "Achieved a solid time of 53.2 seconds with no penalties"
+  ],
+  "weaknesses": [
+    "Time performance is below intermediate benchmark expectations",
+    "Some inefficient instrument movements and repositioning observed",
+    "Could improve transfer sequence planning for better flow"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges",
+      "duration_minutes": 8,
+      "targets_weakness": "Inefficient instrument movements and repositioning"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the complete task slowly with minimal wasted regrasping, emphasizing direct paths between pegs",
+      "duration_minutes": 10,
+      "targets_weakness": "Transfer sequence planning and flow"
+    },
+    {
+      "name": "Nondominant pickup rehearsal",
+      "description": "Practice first-hand pickups using the nondominant hand only to improve bilateral coordination",
+      "duration_minutes": 5,
+      "targets_weakness": "Time performance below benchmark"
+    }
+  ],
+  "progression_note": "Good technical execution with room for speed improvement. Focus on converting your consistent completion into faster, more efficient movement patterns to reach the intermediate benchmark of under 48 seconds.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 14.0,
+    "input_tokens": 18288,
+    "output_tokens": 395,
+    "cost_usd_approx": 0.0608
+  }
+}

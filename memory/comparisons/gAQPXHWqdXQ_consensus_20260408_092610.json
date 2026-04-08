@@ -1,0 +1,82 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Video appears to be tutorial/demonstration content rather than a timed performance attempt. No clear start/completion timing can be established."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.2,
+    "reasoning": "Major disagreement between models on whether this is a scorable performance attempt. Claude identified this as tutorial content with instructional slides and no clear timing markers, while GPT-4o scored it as a completed task in 65.5 seconds. Given the fundamental disagreement about video content type and the lack of clear timing markers described by Claude, the conservative approach is to treat this as incomplete/non-scorable content."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 65.5,
+      "resolution": "Set to 0.0",
+      "rationale": "Claude's identification of tutorial content with instructional slides suggests this is not a timed performance attempt, making timing measurement inappropriate."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "This appears to be a tutorial or demonstration video rather than a timed performance attempt. No clear start or completion timing can be established."
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Applied incomplete_task penalty",
+      "rationale": "When one model identifies fundamental issues with video content type that would invalidate scoring, the conservative approach is to apply the incomplete_task penalty."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 234.5,
+      "resolution": "Set to 0.0",
+      "rationale": "Incomplete task penalty results in zero score regardless of timing."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's phase list",
+      "rationale": "If the video is tutorial content as Claude suggests, the final_release phase may not represent actual task completion."
+    }
+  ],
+  "overall_confidence": 0.2,
+  "_meta": {
+    "video_id": "gAQPXHWqdXQ",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.85,
+    "input_tokens": 2132,
+    "output_tokens": 723,
+    "cost_usd_approx": 0.0172,
+    "timestamp": "2026-04-08T09:26:10.046290+00:00",
+    "prompt_version": "v002"
+  }
+}

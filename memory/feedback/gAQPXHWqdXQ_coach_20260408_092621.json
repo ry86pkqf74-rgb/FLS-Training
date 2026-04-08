@@ -1,0 +1,37 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated consistent performance across multiple sessions with scores in the 500+ range",
+    "Shows familiarity with proper peg transfer technique and setup"
+  ],
+  "weaknesses": [
+    "Current session appears to be tutorial content rather than a performance attempt",
+    "Unable to establish clear timing markers for scoring"
+  ],
+  "drills": [
+    {
+      "name": "Performance focus drill",
+      "description": "Execute complete peg transfer attempts with clear start and stop timing markers, focusing on maintaining your established 88-90 second performance window.",
+      "duration_minutes": 15,
+      "targets_weakness": "Establishing clear performance attempts versus tutorial content."
+    },
+    {
+      "name": "Consistency maintenance ladder",
+      "description": "Perform 5 consecutive attempts targeting your established 88-90 second baseline while maintaining precision.",
+      "duration_minutes": 12,
+      "targets_weakness": "Maintaining performance consistency in formal assessment conditions."
+    }
+  ],
+  "progression_note": "At the advanced level with your established 500+ FLS baseline, focus on delivering consistent performance attempts rather than tutorial demonstrations. Your historical performance suggests strong technical competency that needs formal assessment validation.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "advanced",
+    "elapsed_seconds": 11.06,
+    "input_tokens": 18368,
+    "output_tokens": 299,
+    "cost_usd_approx": 0.0596
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task4",
+  "strengths": [
+    "Shows understanding of proper suture material selection and preparation",
+    "Demonstrates knowledge of extracorporeal knot tying technique fundamentals"
+  ],
+  "weaknesses": [
+    "This appears to be an instructional video rather than a performance attempt",
+    "No actual task completion timing or execution can be evaluated",
+    "Unable to assess practical application of demonstrated techniques"
+  ],
+  "drills": [
+    {
+      "name": "Mark-to-mark needle path drill",
+      "description": "Practice 10 passes through both target marks before any knot tying to build muscle memory for accurate placement.",
+      "duration_minutes": 8,
+      "targets_weakness": "Need to transition from theory to practical execution."
+    },
+    {
+      "name": "Knot-pusher sequencing drill",
+      "description": "Complete 10 three-throw extracorporeal sequences with deliberate pusher advancement, focusing on consistent technique.",
+      "duration_minutes": 10,
+      "targets_weakness": "Converting instructional knowledge into timed performance."
+    },
+    {
+      "name": "Slit-closure check drill",
+      "description": "Practice tightening just enough to close the slit without tissue damage, then visually inspect before proceeding.",
+      "duration_minutes": 7,
+      "targets_weakness": "Developing practical assessment skills during execution."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid theoretical understanding into consistent timed performances. Practice complete task runs to build the rhythm needed for reliable execution under time pressure.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task4",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 12.66,
+    "input_tokens": 18336,
+    "output_tokens": 388,
+    "cost_usd_approx": 0.0608
+  }
+}

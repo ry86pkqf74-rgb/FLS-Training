@@ -1,0 +1,61 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 137.5,
+    "penalties": [
+      {
+        "type": "line_deviation",
+        "count": 2,
+        "description": "Visible deviations from the marked circle line observed during cutting phases."
+      }
+    ],
+    "score_components": {
+      "time_score": 162.5,
+      "penalty_deductions": 10.0,
+      "total_fls_score": 152.5
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.6,
+    "reasoning": "Both models confirmed task completion with circle successfully cut out and released. Significant disagreement on timing (75s vs 200s) resolved by averaging. Both models detected line deviations but disagreed on severity - consensus reflects moderate deviation penalty based on both observations."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 200.0,
+      "gpt_value": 75.0,
+      "resolution": "Averaged to 137.5 seconds",
+      "rationale": "Extreme timing disagreement with no clear rubric guidance for resolution - conservative averaging approach taken given both models acknowledged uncertainty in timing estimation."
+    },
+    {
+      "field": "penalties[0].count",
+      "claude_value": 3,
+      "gpt_value": 1,
+      "resolution": "Set to 2 deviations",
+      "rationale": "Both models observed line deviations but disagreed on count - consensus reflects moderate penalty between the two assessments given both detected visible deviations."
+    },
+    {
+      "field": "score_components.penalty_deductions",
+      "claude_value": 15.0,
+      "gpt_value": 10.0,
+      "resolution": "Set to 10.0",
+      "rationale": "Used standard 5-point per deviation penalty structure with consensus count of 2 deviations, but capped at 10 points to avoid over-penalization given disagreement on severity."
+    }
+  ],
+  "overall_confidence": 0.6,
+  "_meta": {
+    "video_id": "c0nZGs2Szvc",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.44,
+    "input_tokens": 2039,
+    "output_tokens": 561,
+    "cost_usd_approx": 0.0145,
+    "timestamp": "2026-04-08T09:22:59.547686+00:00",
+    "prompt_version": "v002"
+  }
+}

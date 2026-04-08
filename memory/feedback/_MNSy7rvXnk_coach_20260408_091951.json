@@ -1,0 +1,39 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task3",
+  "strengths": [
+    "Demonstrated proper loop opening and positioning techniques during the tutorial phases",
+    "Showed good instrument coordination when advancing the pusher mechanism",
+    "Maintained steady camera work throughout the demonstration"
+  ],
+  "weaknesses": [
+    "Failed to complete an actual timed performance attempt",
+    "Did not demonstrate the full task sequence from start to finish",
+    "Lack of clear timing markers suggests insufficient focus on benchmark performance"
+  ],
+  "drills": [
+    {
+      "name": "Complete task rehearsal with timing",
+      "description": "Perform 5 complete ligating loop sequences from instrument entry to tail cut, timing each attempt and aiming for sub-53 second completion.",
+      "duration_minutes": 15,
+      "targets_weakness": "Failed to complete an actual timed performance attempt"
+    },
+    {
+      "name": "Mark-centering drill",
+      "description": "Place the loop at the target mark, pause, and verify alignment before cinching to ensure precise positioning under time pressure.",
+      "duration_minutes": 10,
+      "targets_weakness": "Did not demonstrate the full task sequence from start to finish"
+    }
+  ],
+  "progression_note": "At the advanced level, you should be consistently completing full task sequences while approaching the 53-second benchmark. Focus on converting your technical knowledge into timed performance execution.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task3",
+    "skill_level": "advanced",
+    "elapsed_seconds": 12.41,
+    "input_tokens": 18359,
+    "output_tokens": 348,
+    "cost_usd_approx": 0.0603
+  }
+}

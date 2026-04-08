@@ -1,0 +1,76 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video showing different FLS tasks rather than a performance attempt to be scored."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.7,
+    "reasoning": "Claude identified this as instructional content showing multiple FLS tasks rather than a single peg transfer performance. GPT-4o attempted to score it as a performance with timing and penalties. Given the fundamental disagreement about video content type, Claude's assessment that this is educational material rather than a scoreable performance attempt is more conservative and appropriate."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 75.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "If this is instructional content as Claude identified, no completion time should be recorded for a performance attempt."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video showing different FLS tasks rather than a performance attempt to be scored."
+      },
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One object dropped outside the field of view and was unretrievable."
+      },
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "The fundamental question is whether this video contains a scoreable performance attempt. Claude's identification of instructional content is more conservative and appropriate."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's empty array",
+      "rationale": "If no actual performance attempt occurred, no performance phases should be detected."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 220.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Instructional content cannot receive a performance score. The incomplete_task condition results in automatic zero."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "E6d80uknJAc",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.89,
+    "input_tokens": 1958,
+    "output_tokens": 691,
+    "cost_usd_approx": 0.0162,
+    "timestamp": "2026-04-08T08:59:38.527553+00:00",
+    "prompt_version": "v002"
+  }
+}

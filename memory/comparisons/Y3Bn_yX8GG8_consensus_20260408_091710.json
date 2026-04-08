@@ -1,0 +1,66 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 245.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task was not completed - only 2 of 6 objects were transferred back to the left side when the video ended."
+      }
+    ],
+    "score_components": {
+      "time_score": 55.0,
+      "penalty_deductions": 55.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Claude identified incomplete task completion with only 2 of 6 objects returned to the left side by video end, while GPT-4o reported full completion. Given the specific frame-by-frame analysis provided by Claude and the automatic zero penalty for incomplete tasks in the rubric, the incomplete task penalty is applied. This results in a total penalty deduction equal to the time score, yielding zero points."
+  },
+  "disagreements": [
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Task was not completed - only 2 of 6 objects were transferred back to the left side when the video ended."
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Applied incomplete task penalty",
+      "rationale": "Claude provided specific frame-level evidence of incomplete return transfers. The rubric requires all objects to be returned to complete the task, and incomplete task results in automatic zero score."
+    },
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 245.0,
+      "gpt_value": 248.0,
+      "resolution": "Used Claude's timing of 245.0 seconds",
+      "rationale": "Claude's timing aligns with the detailed frame analysis showing task incompletion at frame 22 (4:05), providing more specific temporal evidence."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 52.0,
+      "resolution": "Applied zero score due to incomplete task penalty",
+      "rationale": "Incomplete task penalty results in automatic zero score per rubric, regardless of completion time."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "Y3Bn_yX8GG8",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.82,
+    "input_tokens": 2052,
+    "output_tokens": 624,
+    "cost_usd_approx": 0.0155,
+    "timestamp": "2026-04-08T09:17:10.063663+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "skill_level": "novice",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated proper left-hand pickup technique as required by the task instructions",
+    "Successfully completed all six outbound transfers with stable mid-air handoffs",
+    "Maintained good instrument control throughout the transfer sequence"
+  ],
+  "weaknesses": [
+    "Failed to complete the return transfer phase, leaving the task incomplete",
+    "Did not recognize that the task requires bidirectional movement of all pegs",
+    "Stopped after outbound transfers without attempting the return sequence"
+  ],
+  "drills": [
+    {
+      "name": "Complete Task Sequence Rehearsal",
+      "description": "Practice the full bidirectional sequence: move all pegs left-to-right, then immediately return all pegs right-to-left without pausing.",
+      "duration_minutes": 10,
+      "targets_weakness": "Failed to complete the return transfer phase."
+    },
+    {
+      "name": "Task Instruction Review",
+      "description": "Read the complete task instructions aloud before each attempt, emphasizing the bidirectional requirement.",
+      "duration_minutes": 5,
+      "targets_weakness": "Did not recognize that the task requires bidirectional movement."
+    }
+  ],
+  "progression_note": "At the novice level, focus on understanding the complete task requirements before pursuing speed. Your transfer mechanics are solid, but task completion is essential for any FLS score.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "novice",
+    "elapsed_seconds": 9.67,
+    "input_tokens": 19137,
+    "output_tokens": 356,
+    "cost_usd_approx": 0.0628
+  }
+}

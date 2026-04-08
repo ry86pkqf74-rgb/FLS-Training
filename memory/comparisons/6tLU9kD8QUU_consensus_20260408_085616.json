@@ -1,0 +1,54 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 110.5,
+    "penalties": [
+      {
+        "type": "line_deviation",
+        "count": 1,
+        "description": "Cut path shows visible deviation from the marked circle boundaries."
+      }
+    ],
+    "score_components": {
+      "time_score": 189.5,
+      "penalty_deductions": 10.0,
+      "total_fls_score": 179.5
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion and detected line deviation penalties. Minor timing difference (110s vs 111s) was averaged. Claude's penalty deduction of 10 points was used over GPT's 4 points as it aligns with standard FLS scoring where line deviations typically carry 10-point penalties."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 110.0,
+      "gpt_value": 111.0,
+      "resolution": "Averaged to 110.5",
+      "rationale": "Minor 1-second difference likely due to frame interpretation variance; averaged for consensus."
+    },
+    {
+      "field": "score_components.penalty_deductions",
+      "claude_value": 10.0,
+      "gpt_value": 4.0,
+      "resolution": "Used Claude's 10.0",
+      "rationale": "Standard FLS scoring typically assigns 10 points per line deviation penalty, making Claude's deduction more consistent with official rubric."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "6tLU9kD8QUU",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.36,
+    "input_tokens": 2069,
+    "output_tokens": 455,
+    "cost_usd_approx": 0.013,
+    "timestamp": "2026-04-08T08:56:16.679632+00:00",
+    "prompt_version": "v002"
+  }
+}

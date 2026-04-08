@@ -1,0 +1,69 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup"
+    ],
+    "confidence": 0.0,
+    "reasoning": "Claude identified this as an instructional overview video showing multiple FLS tasks rather than a single task performance, with only setup visible for Peg Transfer and no actual transfer activity performed. GPT-4o scored it as a completed task with timing and penalties, but this appears to be a misinterpretation of the video content. Without clear evidence of actual task performance and timing, the task cannot be scored."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 75.0,
+      "resolution": "Used Claude's value of 0.0",
+      "rationale": "Claude's identification of this as an instructional overview rather than a timed performance is more consistent with the video showing multiple different FLS tasks without clear timing boundaries."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One object was dropped outside the field of view and was unretrievable."
+      },
+      "resolution": "No penalties applied",
+      "rationale": "If no actual task performance occurred as Claude identified, then penalties for lost objects during performance would not apply."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup"
+      ],
+      "gpt_value": [
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's phases",
+      "rationale": "Claude's identification of only setup phase is consistent with the video being an instructional overview rather than a complete task performance."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 215.0,
+      "resolution": "Used Claude's score of 0.0",
+      "rationale": "Without clear task performance and timing, no score can be assigned according to FLS scoring requirements."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "H5DZst68mMc",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.96,
+    "input_tokens": 2041,
+    "output_tokens": 635,
+    "cost_usd_approx": 0.0156,
+    "timestamp": "2026-04-08T09:01:22.447281+00:00",
+    "prompt_version": "v002"
+  }
+}

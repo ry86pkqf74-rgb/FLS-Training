@@ -1,0 +1,44 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated good initial setup and instrument positioning",
+    "Showed controlled movement patterns during early transfer attempts"
+  ],
+  "weaknesses": [
+    "Failed to complete the full task sequence within the video timeframe",
+    "Inconsistent execution compared to previous successful attempts",
+    "Lost momentum during outbound transfer phase"
+  ],
+  "drills": [
+    {
+      "name": "Complete sequence rehearsal",
+      "description": "Practice the full 6-object transfer sequence at moderate pace, focusing on completing all transfers without stopping",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the full task sequence"
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "12 full transfers without touching the pegboard for support, emphasizing smooth handoffs",
+      "duration_minutes": 8,
+      "targets_weakness": "Lost momentum during outbound transfer phase"
+    },
+    {
+      "name": "Consistency timing drill",
+      "description": "Perform 5 consecutive complete runs, aiming for similar completion times within 10-second range",
+      "duration_minutes": 15,
+      "targets_weakness": "Inconsistent execution compared to previous successful attempts"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your demonstrated technical skills into consistent complete runs. Your history shows capability for 500+ FLS scores, so prioritize maintaining rhythm throughout the entire sequence.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.8,
+    "input_tokens": 18322,
+    "output_tokens": 380,
+    "cost_usd_approx": 0.0607
+  }
+}

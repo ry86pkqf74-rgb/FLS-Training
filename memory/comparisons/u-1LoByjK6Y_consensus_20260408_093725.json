@@ -1,0 +1,53 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_circle",
+        "count": 1,
+        "description": "Task could not be completed or verified from available video evidence"
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.0,
+    "reasoning": "Both models reported inability to score the task due to insufficient video evidence. Claude detected some activity but noted incomplete circle cutting, while GPT found no task-specific activity visible. Given the fundamental disagreement about what was visible, the conservative approach is to score as incomplete with zero points."
+  },
+  "disagreements": [
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "traction_setup",
+        "entry_cut",
+        "circle_following"
+      ],
+      "gpt_value": [],
+      "resolution": "Used empty array",
+      "rationale": "GPT reported no visible task activity while Claude detected phases. Without clear visual evidence both models can agree on, the conservative approach is to report no confirmed phases."
+    },
+    {
+      "field": "penalties[0].type",
+      "claude_value": "incomplete_circle",
+      "gpt_value": "cannot determine",
+      "resolution": "Used incomplete_circle",
+      "rationale": "Both models agree the task cannot be properly scored, but incomplete_circle is the appropriate rubric category for unfinished tasks rather than a meta-penalty type."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "u-1LoByjK6Y",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.05,
+    "input_tokens": 1994,
+    "output_tokens": 440,
+    "cost_usd_approx": 0.0126,
+    "timestamp": "2026-04-08T09:37:25.434660+00:00",
+    "prompt_version": "v002"
+  }
+}

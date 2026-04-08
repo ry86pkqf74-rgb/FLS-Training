@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated consistent instrument control throughout multiple transfer attempts",
+    "Maintained steady camera positioning and workspace organization",
+    "Showed persistence in attempting multiple transfer strategies"
+  ],
+  "weaknesses": [
+    "Failed to complete the task within the 300-second time limit",
+    "Struggled with efficient mid-air transfer technique",
+    "Spent excessive time on individual transfer attempts without adapting strategy"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete task within time limit due to inefficient transfers"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform transfer sequences slowly with minimal wasted regrasping, emphasizing direct pickup and release movements",
+      "duration_minutes": 10,
+      "targets_weakness": "Spent excessive time on individual transfer attempts"
+    },
+    {
+      "name": "Timed transfer sets",
+      "description": "Complete 6-object transfer cycles in under 60 seconds, building speed while maintaining control",
+      "duration_minutes": 8,
+      "targets_weakness": "Struggled with efficient mid-air transfer technique"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid instrument control into faster, more efficient transfer sequences. Work on reducing hesitation between transfers and developing a consistent rhythm to meet time benchmarks.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 14.46,
+    "input_tokens": 19114,
+    "output_tokens": 410,
+    "cost_usd_approx": 0.0635
+  }
+}

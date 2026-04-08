@@ -1,0 +1,47 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 120.0,
+    "penalties": [
+      {
+        "type": "line_deviation",
+        "count": 2,
+        "description": "Cut deviations from the marked circle line visible during cutting sequence."
+      }
+    ],
+    "score_components": {
+      "time_score": 180.0,
+      "penalty_deductions": 10.0,
+      "total_fls_score": 170.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.6,
+    "reasoning": "Both models agreed on timing and task completion with all phases detected. Claude identified 3 line deviations while GPT-4o identified 1. Given both models observed deviations but disagreed on count, consensus uses intermediate penalty of 2 deviations (10 points) as both models confirmed visible deviations occurred during the cutting sequence."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0].count",
+      "claude_value": 3,
+      "gpt_value": 1,
+      "resolution": "Set to 2 deviations",
+      "rationale": "Both models confirmed line deviations occurred but disagreed on count. Without frame-by-frame analysis capability, used intermediate value between the two assessments as both models provided specific evidence of deviations."
+    }
+  ],
+  "overall_confidence": 0.6,
+  "_meta": {
+    "video_id": "EzlQwSuPryI",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 7.7,
+    "input_tokens": 2068,
+    "output_tokens": 393,
+    "cost_usd_approx": 0.0121,
+    "timestamp": "2026-04-08T08:59:58.815533+00:00",
+    "prompt_version": "v002"
+  }
+}

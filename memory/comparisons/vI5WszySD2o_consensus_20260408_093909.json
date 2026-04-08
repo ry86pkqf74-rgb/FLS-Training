@@ -1,0 +1,52 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 51.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 249.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 249.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on successful task completion through all phases. There was significant disagreement on completion time (30s vs 72s) and penalty assessment. Given the large time discrepancy, the consensus uses the average. The line deviation penalty reported by GPT was dropped due to insufficient visual evidence and Claude's contradictory assessment of accurate cutting."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 30.0,
+      "gpt_value": 72.0,
+      "resolution": "Used average of 51.0 seconds",
+      "rationale": "Significant disagreement with no clear rubric guidance on frame-level timing disputes. Conservative approach using midpoint."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "line_deviation",
+        "count": 1,
+        "description": "The cut line deviates slightly inside the marked circle in one segment."
+      },
+      "resolution": "Dropped the penalty",
+      "rationale": "Claude explicitly noted accurate cutting with no visible deviation. GPT's penalty lacks specific frame reference or clear visual evidence to override Claude's detailed assessment."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "vI5WszySD2o",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 8.66,
+    "input_tokens": 1947,
+    "output_tokens": 443,
+    "cost_usd_approx": 0.0125,
+    "timestamp": "2026-04-08T09:39:09.897706+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 102.5,
+    "penalties": [
+      {
+        "type": "loop_off_mark",
+        "count": 1,
+        "description": "The loop is secured on the appendage but positioned away from the target mark."
+      }
+    ],
+    "score_components": {
+      "time_score": 77.5,
+      "penalty_deductions": 7.0,
+      "total_fls_score": 70.5
+    },
+    "phases_detected": [
+      "loop_introduction",
+      "loop_positioning",
+      "pusher_break_and_advancement",
+      "tail_cut"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion and loop_off_mark penalty. Significant disagreement on completion time (75s vs 130s) was resolved by averaging. Both confirmed the loop was secured but off the target mark, supporting the penalty deduction."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 75.0,
+      "gpt_value": 130.0,
+      "resolution": "Used average of 102.5 seconds",
+      "rationale": "Large timing disagreement with no clear rubric guidance for resolution, so averaged the values to balance both assessments."
+    },
+    {
+      "field": "penalties[0].count",
+      "claude_value": 1,
+      "gpt_value": 1,
+      "resolution": "Kept penalty count of 1",
+      "rationale": "Both models agreed on the loop_off_mark penalty, confirming the deduction is warranted."
+    },
+    {
+      "field": "penalty_deductions",
+      "claude_value": 4.0,
+      "gpt_value": 10.0,
+      "resolution": "Used 7.0 points",
+      "rationale": "Averaged the penalty values since both agreed on the violation but disagreed on severity, and rubric does not specify exact deduction amounts."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "bGXqlue469c",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.05,
+    "input_tokens": 2061,
+    "output_tokens": 536,
+    "cost_usd_approx": 0.0142,
+    "timestamp": "2026-04-08T09:21:53.888850+00:00",
+    "prompt_version": "v002"
+  }
+}

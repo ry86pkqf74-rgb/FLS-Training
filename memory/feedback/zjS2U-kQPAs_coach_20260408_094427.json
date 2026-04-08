@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Completed all transfers without drops or board assistance",
+    "Maintained smooth bilateral coordination throughout the task",
+    "Achieved solid time performance at 42 seconds"
+  ],
+  "weaknesses": [
+    "Excessive regrasping and repositioning during transfers",
+    "Inconsistent pickup angles leading to unstable object control",
+    "Inefficient hand positioning causing unnecessary instrument adjustments"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on stable release and regrasp angles",
+      "duration_minutes": 10,
+      "targets_weakness": "Excessive regrasping and repositioning during transfers"
+    },
+    {
+      "name": "Nondominant pickup rehearsal",
+      "description": "Spend 5 minutes practicing first-hand pickups using only the nondominant hand to improve pickup consistency",
+      "duration_minutes": 5,
+      "targets_weakness": "Inconsistent pickup angles leading to unstable object control"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task slowly with minimal wasted regrasping, focusing on optimal hand positioning from the start",
+      "duration_minutes": 8,
+      "targets_weakness": "Inefficient hand positioning causing unnecessary instrument adjustments"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your consistent completion into faster, cleaner repetitions by eliminating unnecessary movements and improving initial object control.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 12.68,
+    "input_tokens": 18287,
+    "output_tokens": 411,
+    "cost_usd_approx": 0.061
+  }
+}

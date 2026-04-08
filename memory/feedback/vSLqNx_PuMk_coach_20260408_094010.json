@@ -1,0 +1,45 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task2",
+  "strengths": [
+    "Maintained steady traction throughout the cutting sequence",
+    "Completed the circle cut within reasonable time parameters",
+    "Demonstrated consistent instrument control during the procedure"
+  ],
+  "weaknesses": [
+    "Cut deviated from the marked circle at multiple points",
+    "Precision suffered during curved sections of the pattern",
+    "Line following accuracy needs refinement for benchmark performance"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, pausing between sections to verify alignment with the marked line.",
+      "duration_minutes": 12,
+      "targets_weakness": "Cut deviated from the marked circle at multiple points"
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle during curved cuts, focusing on maintaining optimal cutting geometry.",
+      "duration_minutes": 8,
+      "targets_weakness": "Precision suffered during curved sections of the pattern"
+    },
+    {
+      "name": "Edge-entry rehearsal",
+      "description": "15 starts from the gauze edge to marked reference points without overshoot, emphasizing precise initial positioning and controlled advancement.",
+      "duration_minutes": 10,
+      "targets_weakness": "Line following accuracy needs refinement"
+    }
+  ],
+  "progression_note": "At the advanced level, focus on eliminating line deviations to achieve consistent sub-5 point penalty scores. Your time is competitive but precision refinements will push you toward benchmark performance.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "advanced",
+    "elapsed_seconds": 17.0,
+    "input_tokens": 18337,
+    "output_tokens": 414,
+    "cost_usd_approx": 0.0612
+  }
+}

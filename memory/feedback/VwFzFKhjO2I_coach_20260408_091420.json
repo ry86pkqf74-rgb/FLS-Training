@@ -1,0 +1,39 @@
+{
+  "skill_level": "novice",
+  "task_id": "task1",
+  "strengths": [
+    "Successfully completed the outbound transfer phase, moving all 6 objects to the left side",
+    "Demonstrated proper bimanual coordination during mid-air transfers",
+    "Maintained steady camera positioning throughout the exercise"
+  ],
+  "weaknesses": [
+    "Failed to complete the return transfer phase within the time limit",
+    "Took excessive time (236 seconds) compared to the 300-second benchmark",
+    "Showed inefficient movement patterns during object manipulation"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges",
+      "duration_minutes": 10,
+      "targets_weakness": "Inefficient movement patterns during object manipulation"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the complete task slowly with minimal wasted regrasping, emphasizing direct pickup and placement movements",
+      "duration_minutes": 8,
+      "targets_weakness": "Excessive time and inefficient movements"
+    }
+  ],
+  "progression_note": "At the novice level, focus on completing the full task sequence consistently before pursuing speed improvements. Practice the basic transfer mechanics until you can reliably finish all 12 transfers within the time limit.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "novice",
+    "elapsed_seconds": 10.08,
+    "input_tokens": 19113,
+    "output_tokens": 353,
+    "cost_usd_approx": 0.0626
+  }
+}
