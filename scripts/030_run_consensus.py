@@ -18,6 +18,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 from dotenv import load_dotenv
 import yaml
@@ -106,6 +107,15 @@ def _score_file_meta(payload: dict) -> dict:
         "confidence": payload.get("confidence_score", payload.get("confidence")),
         "task_id": payload.get("task_id"),
     }
+
+
+def _extract_response_text(content: list[Any]) -> str:
+    parts: list[str] = []
+    for block in content:
+        text = getattr(block, "text", None)
+        if isinstance(text, str) and text.strip():
+            parts.append(text.strip())
+    return "\n".join(parts).strip()
 
 
 def _agreement_level(delta_fls: float) -> str:
@@ -366,7 +376,7 @@ Merge these into the consensus JSON."""
         )
         elapsed = time.time() - t0
 
-        raw_text = response.content[0].text.strip()
+        raw_text = _extract_response_text(response.content)
         if raw_text.startswith("```"):
             lines = raw_text.split("\n")
             raw_text = "\n".join(
@@ -434,7 +444,7 @@ This is Round 1. Produce the consensus JSON."""
     )
     elapsed = time.time() - t0
 
-    raw_text = response.content[0].text.strip()
+    raw_text = _extract_response_text(response.content)
 
     # Strip markdown fences
     if raw_text.startswith("```"):
@@ -507,7 +517,7 @@ Make your final ruling on each disputed field. Output the definitive consensus J
         )
         r2_elapsed = time.time() - t0
 
-        r2_text = r2_response.content[0].text.strip()
+        r2_text = _extract_response_text(r2_response.content)
         if r2_text.startswith("```"):
             lines = r2_text.split("\n")
             r2_text = "\n".join(

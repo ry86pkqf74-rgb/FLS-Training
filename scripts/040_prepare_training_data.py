@@ -5,6 +5,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from src.memory.learning_log import LearningLog
 from src.memory.memory_store import MemoryStore
 from src.training.prepare_dataset import prepare_dataset
 from src.training.data_prep import prepare_training_data
@@ -13,20 +14,6 @@ from src.training.data_prep import prepare_training_data
 def _coerce_version_tag(ver: str) -> int:
     digits = "".join(ch for ch in str(ver) if ch.isdigit())
     return int(digits) if digits else 1
-
-
-class _ScriptLearningLog:
-    def __init__(self, memory_dir: Path):
-        self.ledger_path = memory_dir / "learning_ledger.jsonl"
-
-    def append_event(self, event_type: str, data: dict) -> None:
-        entry = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "event_type": event_type,
-            "data": data,
-        }
-        with self.ledger_path.open("a") as handle:
-            handle.write(json.dumps(entry) + "\n")
 
 
 def main():
@@ -42,7 +29,7 @@ def main():
 
     if args.include_coach_feedback:
         store = MemoryStore(args.base_dir)
-        log = _ScriptLearningLog(Path(args.base_dir) / "memory")
+        log = LearningLog(Path(args.base_dir) / "memory")
         output_dir = args.output_dir or "data/training"
         meta = prepare_dataset(
             store=store,
