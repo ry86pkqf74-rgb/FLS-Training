@@ -146,7 +146,7 @@ def _fetch_latest_teacher_scores(
 
 def _fetch_video_duration(conn: duckdb.DuckDBPyConnection, video_id: str) -> Optional[float]:
     row = conn.execute(
-        "SELECT duration_seconds FROM videos WHERE video_id = ?",
+        "SELECT duration_seconds FROM videos WHERE id = ?",
         [video_id],
     ).fetchone()
     if row and row[0]:
