@@ -1,0 +1,55 @@
+{
+  "id": "score_gpt_g8RpYG9fLoQ_20260408084058",
+  "video_id": "g8RpYG9fLoQ",
+  "video_filename": "g8RpYG9fLoQ.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:40:58.212980",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "count": 1,
+      "description": "Visible deviation from the two marked targets during the suture pass."
+    },
+    {
+      "type": "hand_switch_failure",
+      "count": 1,
+      "description": "A required hand exchange between throws was clearly missed."
+    }
+  ],
+  "score_components": {
+    "time_score": 440.0,
+    "penalty_deductions": 8.0,
+    "total_fls_score": 432.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw",
+    "suture_cut"
+  ],
+  "reasoning": "The task phases were clearly visible. Penalties were applied for suture deviation and hand switch failure. Knot and suture cut appear completed adequately.",
+  "frame_analyses": [],
+  "completion_time_seconds": 160.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The task phases were clearly visible. Penalties were applied for suture deviation and hand switch failure. Knot and suture cut appear completed adequately.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

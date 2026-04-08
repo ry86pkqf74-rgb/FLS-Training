@@ -1,0 +1,49 @@
+{
+  "id": "score_claude_SfTYRZb8ILM_20260408084356",
+  "video_id": "SfTYRZb8ILM",
+  "video_filename": "SfTYRZb8ILM.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:43:56.361964",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears incomplete - no clear completion visible with suture cut inside trainer."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw"
+  ],
+  "reasoning": "The video shows intracorporeal knot tying technique with visible suture work and multiple throws being performed. However, the final completion state with both suture ends cut inside the trainer is not clearly visible. The video appears to end before task completion, making it impossible to determine final timing or assess completion requirements. The presence of title cards at the end suggests this may be a demonstration rather than a complete timed performance.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows intracorporeal knot tying technique with visible suture work and multiple throws being performed. However, the final completion state with both suture ends cut inside the trainer is not clearly visible. The video appears to end before task completion, making it impossible to determine final timing or assess completion requirements. The presence of title cards at the end suggests this may be a demonstration rather than a complete timed performance.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -1,0 +1,49 @@
+{
+  "id": "score_claude_MRS9ileP5tg_20260408084324",
+  "video_id": "MRS9ileP5tg",
+  "video_filename": "MRS9ileP5tg.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:43:24.155347",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached before completion. Final suture cut was not observed within the time limit."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw"
+  ],
+  "reasoning": "The video shows clear needle loading, suture placement through targets, and multiple throws with hand exchanges between throws. However, the final suture cut phase is not visible, indicating the task was not completed within the maximum time limit. Since completion was not achieved, the total score is zero per the incomplete task penalty rules.",
+  "frame_analyses": [],
+  "completion_time_seconds": 600.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows clear needle loading, suture placement through targets, and multiple throws with hand exchanges between throws. However, the final suture cut phase is not visible, indicating the task was not completed within the maximum time limit. Since completion was not achieved, the total score is zero per the incomplete task penalty rules.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

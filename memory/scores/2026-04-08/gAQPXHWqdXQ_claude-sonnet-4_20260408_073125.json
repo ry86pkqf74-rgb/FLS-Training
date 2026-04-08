@@ -1,0 +1,47 @@
+{
+  "id": "score_claude_gAQPXHWqdXQ_20260408073125",
+  "video_id": "gAQPXHWqdXQ",
+  "video_filename": "gAQPXHWqdXQ.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:31:25.980795",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be a tutorial or demonstration video rather than a timed performance attempt. No clear start or completion timing can be established."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers"
+  ],
+  "reasoning": "This video shows tutorial content with instructional text slides followed by demonstration of peg transfer technique. The initial frames are instructional slides explaining task requirements. The actual demonstration begins around frame 6 but appears to be for educational purposes rather than a scored performance attempt. No clear timing start point or completion can be identified. The orange object (likely representing one of the six objects to be transferred) is moved during the demonstration but the video does not show a complete task cycle with all six objects being transferred to the right and back to the left side. Without identifiable start/stop timing and complete task execution, this cannot be scored as a performance attempt.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "This video shows tutorial content with instructional text slides followed by demonstration of peg transfer technique. The initial frames are instructional slides explaining task requirements. The actual demonstration begins around frame 6 but appears to be for educational purposes rather than a scored performance attempt. No clear timing start point or completion can be identified. The orange object (likely representing one of the six objects to be transferred) is moved during the demonstration but the video does not show a complete task cycle with all six objects being transferred to the right and back to the left side. Without identifiable start/stop timing and complete task execution, this cannot be scored as a performance attempt.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -1,0 +1,43 @@
+{
+  "id": "score_gpt_GzeTQZ7niok_20260408084546",
+  "video_id": "GzeTQZ7niok",
+  "video_filename": "GzeTQZ7niok.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:45:46.612212",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "cannot_determine",
+      "count": 1,
+      "description": "The video is too dark to assess the task accurately."
+    }
+  ],
+  "score_components": {
+    "time_score": 300.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 300.0
+  },
+  "phases_detected": [],
+  "reasoning": "Due to the poor lighting in the video, it is not possible to determine any observable penalties or phases accurately. The task completion and details could not be verified.",
+  "frame_analyses": [],
+  "completion_time_seconds": 300.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Due to the poor lighting in the video, it is not possible to determine any observable penalties or phases accurately. The task completion and details could not be verified.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

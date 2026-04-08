@@ -1,0 +1,28 @@
+{
+  "id": "score_consensus_a0-W5oX_I5s_20260408_092026",
+  "video_id": "a0-W5oX_I5s",
+  "video_filename": "a0-W5oX_I5s.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:20:26.844842+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 89.3,
+  "penalties": [],
+  "score_components": {
+    "time_score": 210.7,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 210.7
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "confidence": 0.6,
+  "reasoning": "Major disagreement between models on task completion status. GPT-4o reported complete circle release with minor line deviation, while Claude reported incomplete circle cutting. Given GPT's detection of circle_release phase and significantly faster completion time (89.3s vs 180s), the task appears to have been completed successfully. The line deviation penalty was dropped due to insufficient visual evidence to support the deduction.",
+  "confidence_score": 0.6
+}

@@ -1,0 +1,48 @@
+{
+  "id": "score_claude_Aub-ajP_qWI_20260408075155",
+  "video_id": "Aub-ajP_qWI",
+  "video_filename": "Aub-ajP_qWI.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:51:55.295707",
+  "task_id": "task2",
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "count": 1,
+      "description": "Cut path deviates outside the marked circle in multiple sections, particularly visible in the final frames where the cutting line extends beyond the circle boundary."
+    }
+  ],
+  "score_components": {
+    "time_score": 120.0,
+    "penalty_deductions": 15.0,
+    "total_fls_score": 105.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "reasoning": "The marked circle and cutting progression are clearly visible throughout the sequence. The task appears to be completed with the circle fully cut out by the final frame. However, there are visible deviations from the marked line where the cut extends outside the circle boundary, particularly noticeable in the later cutting phases. The gauze remains properly positioned in the clip throughout the procedure.",
+  "frame_analyses": [],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The marked circle and cutting progression are clearly visible throughout the sequence. The task appears to be completed with the circle fully cut out by the final frame. However, there are visible deviations from the marked line where the cut extends outside the circle boundary, particularly noticeable in the later cutting phases. The gauze remains properly positioned in the clip throughout the procedure.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

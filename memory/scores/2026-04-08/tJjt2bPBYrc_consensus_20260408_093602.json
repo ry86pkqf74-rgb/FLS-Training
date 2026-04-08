@@ -1,0 +1,31 @@
+{
+  "id": "score_consensus_tJjt2bPBYrc_20260408_093602",
+  "video_id": "tJjt2bPBYrc",
+  "video_filename": "tJjt2bPBYrc.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:36:02.333297+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional video rather than a performance attempt. No complete task execution with timing is observable."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction"
+  ],
+  "confidence": 0.1,
+  "reasoning": "Claude correctly identified this as an instructional video with title credits, not a performance attempt. GPT-4o attempted to score it as a performance but provided inconsistent timing (415 seconds with 5.0 time_score doesn't match the 420-second maximum). The presence of educational credits supports Claude's assessment that this is not a scoreable performance.",
+  "confidence_score": 0.1
+}

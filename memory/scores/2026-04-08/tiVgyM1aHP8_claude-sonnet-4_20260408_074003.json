@@ -1,0 +1,45 @@
+{
+  "id": "score_claude_tiVgyM1aHP8_20260408074003",
+  "video_id": "tiVgyM1aHP8",
+  "video_filename": "tiVgyM1aHP8.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:40:03.483587",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be a needle transfer training exercise, not the standard FLS Peg Transfer task with six objects requiring bidirectional transfer."
+    }
+  ],
+  "score_components": {
+    "time_score": 167.0,
+    "penalty_deductions": 167.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "cannot determine"
+  ],
+  "reasoning": "The video shows a needle transfer exercise with instructional text about suturing techniques, which is not the official FLS Peg Transfer task. The Peg Transfer task requires transferring six objects (rings or beads) between pegs in both directions without assistance. Since this is fundamentally a different task, it cannot be scored using Peg Transfer criteria, resulting in an automatic zero score.",
+  "frame_analyses": [],
+  "completion_time_seconds": 133.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows a needle transfer exercise with instructional text about suturing techniques, which is not the official FLS Peg Transfer task. The Peg Transfer task requires transferring six objects (rings or beads) between pegs in both directions without assistance. Since this is fundamentally a different task, it cannot be scored using Peg Transfer criteria, resulting in an automatic zero score.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

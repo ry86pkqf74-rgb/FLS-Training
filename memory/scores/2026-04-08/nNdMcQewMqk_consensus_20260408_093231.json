@@ -1,0 +1,35 @@
+{
+  "id": "score_consensus_nNdMcQewMqk_20260408_093231",
+  "video_id": "nNdMcQewMqk",
+  "video_filename": "nNdMcQewMqk.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:32:31.038540+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 180.0,
+  "penalties": [
+    {
+      "type": "slit_not_closed",
+      "count": 1,
+      "description": "Visible gap remains in the Penrose drain slit after the final knot, as confirmed by both models."
+    }
+  ],
+  "score_components": {
+    "time_score": 240.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 230.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws",
+    "slit_closure_assessment",
+    "suture_cut"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models agreed on task completion and slit_not_closed penalty. Significant timing disagreement (150s vs 210s) was resolved by taking the midpoint. Both models confirmed the slit gap was visible in final assessment frames.",
+  "confidence_score": 0.7
+}

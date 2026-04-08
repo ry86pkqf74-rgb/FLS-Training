@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_M4PSjXlHvi4_20260408_090522",
+  "video_id": "M4PSjXlHvi4",
+  "video_filename": "M4PSjXlHvi4.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:05:22.517309+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Video shows only setup materials and instructions, no peg transfer task performance visible."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 1.0,
+  "reasoning": "Both models agreed that the video shows only FLS setup materials and instructions without any actual peg transfer task performance. No pegs, rings, or transfer board are visible. This constitutes an incomplete task with automatic zero score per rubric.",
+  "confidence_score": 1.0
+}

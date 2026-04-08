@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_Sc3IumE-M0I_20260408_091043",
+  "video_id": "Sc3IumE-M0I",
+  "video_filename": "Sc3IumE-M0I.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:10:43.942581+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task completion cannot be verified due to unclear timing boundaries and missing final state verification."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "confidence": 0.2,
+  "reasoning": "Major disagreement between models on task completion status. Claude reports incomplete task with no observable timing, while GPT reports 75-second completion with lost object penalty. Given the fundamental disagreement on whether the task was completed at all, the conservative approach is to treat this as incomplete until clear timing boundaries and final state can be verified.",
+  "confidence_score": 0.2
+}

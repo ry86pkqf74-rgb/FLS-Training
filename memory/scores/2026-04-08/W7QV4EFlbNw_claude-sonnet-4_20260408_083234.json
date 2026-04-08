@@ -1,0 +1,47 @@
+{
+  "id": "score_claude_W7QV4EFlbNw_20260408083234",
+  "video_id": "W7QV4EFlbNw",
+  "video_filename": "W7QV4EFlbNw.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:32:34.228666",
+  "task_id": "task4",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached without completion. Final suture cutting not observed within time limit."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws"
+  ],
+  "reasoning": "Video shows suture manipulation and extracorporeal knot tying work, but no clear completion is visible within the frame sequence. The task appears to timeout at maximum allowable time without showing final suture cutting inside the trainer, resulting in incomplete task penalty and zero score.",
+  "frame_analyses": [],
+  "completion_time_seconds": 420.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Video shows suture manipulation and extracorporeal knot tying work, but no clear completion is visible within the frame sequence. The task appears to timeout at maximum allowable time without showing final suture cutting inside the trainer, resulting in incomplete task penalty and zero score.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

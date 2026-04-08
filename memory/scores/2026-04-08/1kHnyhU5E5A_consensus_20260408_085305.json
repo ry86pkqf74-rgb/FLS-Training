@@ -1,0 +1,34 @@
+{
+  "id": "score_consensus_1kHnyhU5E5A_20260408_085305",
+  "video_id": "1kHnyhU5E5A",
+  "video_filename": "1kHnyhU5E5A.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:53:05.297323+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 100.16,
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "count": 1,
+      "description": "Deviation observed inside the marked circle during cutting."
+    }
+  ],
+  "score_components": {
+    "time_score": 199.84,
+    "penalty_deductions": 5.0,
+    "total_fls_score": 194.84
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "confidence": 0.7,
+  "reasoning": "GPT-4o detected task completion with circle_release phase while Claude did not observe final separation. Given GPT's detection of the complete circle release and final product visibility, the task was completed. A line deviation penalty was applied as observed by GPT-4o during the cutting process.",
+  "confidence_score": 0.7
+}

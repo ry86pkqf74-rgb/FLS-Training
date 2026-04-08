@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_cxIOhJC-fUk_20260408_092437",
+  "video_id": "cxIOhJC-fUk",
+  "video_filename": "cxIOhJC-fUk.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:24:37.763132+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "No FLS task performance was visible in the provided frames. All frames show educational content about electrosurgical safety rather than peg transfer activity."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.9,
+  "reasoning": "Claude correctly identified that the video contains only educational slides about electrosurgical safety, not FLS peg transfer performance. GPT-4o incorrectly interpreted the content as showing actual task performance with timing and penalties. The incomplete_task penalty applies when no valid task performance is visible.",
+  "confidence_score": 0.9
+}

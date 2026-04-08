@@ -1,0 +1,31 @@
+{
+  "id": "score_consensus_Ogo4tZPqc_s_20260408_090740",
+  "video_id": "Ogo4tZPqc_s",
+  "video_filename": "Ogo4tZPqc_s.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:07:40.367465+00:00",
+  "task_id": "task5",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears to be a knot tying demonstration rather than complete FLS Task 5. No visible suture placement through marked targets or completion."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "knot_demonstration"
+  ],
+  "confidence": 0.9,
+  "reasoning": "Claude correctly identified this as an incomplete task - a knot tying demonstration without the required FLS Task 5 components (Penrose drain with marked targets, suture placement through targets). GPT-4o incorrectly scored this as a completed task with 58-second completion time. The video shows only knot tying technique without the official FLS Task 5 setup and requirements.",
+  "confidence_score": 0.9
+}

@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_tiVgyM1aHP8_20260408_093704",
+  "video_id": "tiVgyM1aHP8",
+  "video_filename": "tiVgyM1aHP8.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:37:04.573979+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 133.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task was not completed - not all objects were successfully transferred in both directions as required by FLS Peg Transfer protocol."
+    }
+  ],
+  "score_components": {
+    "time_score": 167.0,
+    "penalty_deductions": 167.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models agreed on completion time (133 seconds) and that the task was not completed successfully. While Claude identified this as a different exercise entirely, GPT-4o recognized it as an incomplete Peg Transfer attempt. The consensus applies the incomplete_task penalty resulting in automatic zero score, as the FLS protocol requires all six objects to be transferred bidirectionally for successful completion.",
+  "confidence_score": 0.7
+}

@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_scr0WOc0pVU_20260408_093517",
+  "video_id": "scr0WOc0pVU",
+  "video_filename": "scr0WOc0pVU.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:35:17.657129+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 12.0,
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "The circle was not fully cut out. Both models confirmed the task ended with incomplete cutting progress."
+    }
+  ],
+  "score_components": {
+    "time_score": 288.0,
+    "penalty_deductions": 288.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut"
+  ],
+  "confidence": 0.9,
+  "reasoning": "Both models agreed the circle was not completed, triggering the incomplete_circle penalty. The task ended early with minimal cutting progress visible. Since the circle was not freed from the gauze, this results in a zero score per the automatic-zero condition for incomplete tasks.",
+  "confidence_score": 0.9
+}

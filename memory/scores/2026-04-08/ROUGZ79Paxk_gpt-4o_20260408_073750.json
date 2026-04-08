@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt_ROUGZ79Paxk_20260408073750",
+  "video_id": "ROUGZ79Paxk",
+  "video_filename": "ROUGZ79Paxk.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:37:50.774529",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "lost_object",
+      "count": 2,
+      "description": "Two objects left the field of view and were not retrievable."
+    }
+  ],
+  "score_components": {
+    "time_score": 237.3,
+    "penalty_deductions": 20.0,
+    "total_fls_score": 217.3
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "The timing start and finish were visible. Two objects were lost out of view. Assisted transfers could not be clearly confirmed.",
+  "frame_analyses": [],
+  "completion_time_seconds": 62.7,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The timing start and finish were visible. Two objects were lost out of view. Assisted transfers could not be clearly confirmed.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

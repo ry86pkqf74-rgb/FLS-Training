@@ -1,0 +1,28 @@
+{
+  "id": "score_consensus_8x0UYpC5b6U_20260408_085707",
+  "video_id": "8x0UYpC5b6U",
+  "video_filename": "8x0UYpC5b6U.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:57:07.040307+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 258.5,
+  "penalties": [],
+  "score_components": {
+    "time_score": 41.5,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 41.5
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models agreed on task completion with no penalties. Claude reported completion at 248 seconds (4:08) while GPT-4o reported 269 seconds (4:29). Given the 21-second difference and both models citing different frame references, the consensus uses the average timing. Both models confirmed all six objects were successfully transferred without drops or losses.",
+  "confidence_score": 0.7
+}

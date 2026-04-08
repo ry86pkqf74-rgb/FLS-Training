@@ -1,0 +1,34 @@
+{
+  "id": "score_consensus_l6gQg2VbGcc_20260408_093010",
+  "video_id": "l6gQg2VbGcc",
+  "video_filename": "l6gQg2VbGcc.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:30:10.315652+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 150.0,
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "count": 2,
+      "description": "Visible deviations from the marked circle line observed in curved sections where the cut strayed outside the target boundary."
+    }
+  ],
+  "score_components": {
+    "time_score": 150.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 140.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models detected line deviations but disagreed on timing and severity. Claude reported 180 seconds with 3 deviations, GPT reported 120 seconds with 1 deviation. Given the disagreement on timing precision and deviation counts, consensus timing was set to the midpoint and deviation count was averaged. Both confirmed task completion with circle successfully cut out.",
+  "confidence_score": 0.7
+}

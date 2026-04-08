@@ -1,0 +1,42 @@
+{
+  "id": "score_claude_JQznLrebcXE_20260408082009",
+  "video_id": "JQznLrebcXE",
+  "video_filename": "JQznLrebcXE.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:20:09.300966",
+  "task_id": "task3",
+  "penalties": [],
+  "score_components": {
+    "time_score": 138.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 138.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement",
+    "tail_cut"
+  ],
+  "reasoning": "The video shows a complete ligating loop task. The loop is introduced and positioned around the middle green appendage, secured with a knot pusher technique, and the tail is cut inside the trainer. The final knot appears to be positioned appropriately at the base of the appendage near the expected mark location. No penalties were observed - the loop remains secured on the appendage and the positioning appears accurate.",
+  "frame_analyses": [],
+  "completion_time_seconds": 42.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows a complete ligating loop task. The loop is introduced and positioned around the middle green appendage, secured with a knot pusher technique, and the tail is cut inside the trainer. The final knot appears to be positioned appropriately at the base of the appendage near the expected mark location. No penalties were observed - the loop remains secured on the appendage and the positioning appears accurate.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

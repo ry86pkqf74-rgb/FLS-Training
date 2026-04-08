@@ -1,0 +1,46 @@
+{
+  "id": "score_claude_2u0lqjXCiNk_20260408074500",
+  "video_id": "2u0lqjXCiNk",
+  "video_filename": "2u0lqjXCiNk.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:45:00.834977",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time of 300 seconds was exceeded. Task appears to continue beyond the time limit without completion."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "reasoning": "The video shows clear peg transfer activity with instruments visible and objects being manipulated on the peg board. However, the completion time of 10:15 (615 seconds) far exceeds the maximum allowed time of 300 seconds for this task. The task appears incomplete as there is no clear final release of all objects back to the original side. Due to exceeding maximum time, this results in an automatic zero score per FLS scoring rules.",
+  "frame_analyses": [],
+  "completion_time_seconds": 615.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows clear peg transfer activity with instruments visible and objects being manipulated on the peg board. However, the completion time of 10:15 (615 seconds) far exceeds the maximum allowed time of 300 seconds for this task. The task appears incomplete as there is no clear final release of all objects back to the original side. Due to exceeding maximum time, this results in an automatic zero score per FLS scoring rules.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -1,0 +1,43 @@
+{
+  "id": "score_gpt_LjX9cDnroi8_20260408082141",
+  "video_id": "LjX9cDnroi8",
+  "video_filename": "LjX9cDnroi8.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:21:41.559559",
+  "task_id": "task3",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached without completion."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "The video is too dark and obstructed to observe any task actions or completion. The clip appears to contain only introductory screens without clearly showing the task phases.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video is too dark and obstructed to observe any task actions or completion. The clip appears to contain only introductory screens without clearly showing the task phases.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

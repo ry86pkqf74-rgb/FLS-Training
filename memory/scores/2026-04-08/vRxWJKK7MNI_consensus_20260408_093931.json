@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_vRxWJKK7MNI_20260408_093931",
+  "video_id": "vRxWJKK7MNI",
+  "video_filename": "vRxWJKK7MNI.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:39:31.115823+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 300.0,
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "Video content does not match FLS Precision Cutting task requirements - shows paper crafting tutorial instead of laparoscopic circle cutting on gauze"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.9,
+  "reasoning": "Claude correctly identified this as a non-FLS video showing paper crafting, while GPT-4o incorrectly attempted to score it as an FLS task. The video clearly shows paper fan making with no laparoscopic equipment, gauze, or FLS trainer box visible. This results in automatic zero score due to wrong task content.",
+  "confidence_score": 0.9
+}

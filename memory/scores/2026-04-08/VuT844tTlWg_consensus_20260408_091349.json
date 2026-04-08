@@ -1,0 +1,34 @@
+{
+  "id": "score_consensus_VuT844tTlWg_20260408_091349",
+  "video_id": "VuT844tTlWg",
+  "video_filename": "VuT844tTlWg.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:13:49.651441+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 75.0,
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "count": 1,
+      "description": "The cut deviated outside the marked circle slightly at one point."
+    }
+  ],
+  "score_components": {
+    "time_score": 225.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 215.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "confidence": 0.6,
+  "reasoning": "GPT-4o reported task completion with circle release phase while Claude reported incomplete circle. Given GPT's detection of circle_release phase and specific completion time of 75 seconds versus Claude's maximum time assumption, the task appears to have been completed. Retained the line deviation penalty as reported by GPT-4o.",
+  "confidence_score": 0.6
+}

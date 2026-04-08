@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_b0W7eW8LBKU_20260408_092048",
+  "video_id": "b0W7eW8LBKU",
+  "video_filename": "b0W7eW8LBKU.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:20:48.248583+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 215.0,
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "The marked circle was not completely cut out by the end of the video. Final state shows incomplete cutting."
+    }
+  ],
+  "score_components": {
+    "time_score": 85.0,
+    "penalty_deductions": 85.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following"
+  ],
+  "confidence": 0.3,
+  "reasoning": "Both models agreed on timing (215 seconds) but disagreed on task completion. Claude identified incomplete circle cutting which is an automatic zero condition per the rubric, while GPT assessed only line deviation penalties. Given that both models noted uncertainty about final circle release and Claude's reasoning aligns with the incomplete_circle penalty category, the incomplete task assessment takes precedence.",
+  "confidence_score": 0.3
+}

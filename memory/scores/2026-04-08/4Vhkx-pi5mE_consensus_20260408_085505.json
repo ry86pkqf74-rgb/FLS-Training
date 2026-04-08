@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_4Vhkx-pi5mE_20260408_085505",
+  "video_id": "4Vhkx-pi5mE",
+  "video_filename": "4Vhkx-pi5mE.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:55:05.530190+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 180.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached without completing the tail cut inside the trainer."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement"
+  ],
+  "confidence": 0.6,
+  "reasoning": "Major disagreement on task completion. Claude reported incomplete task at 180 seconds while GPT reported completion at 65 seconds with tail cut phase. Given the fundamental nature of this disagreement and the automatic zero condition for incomplete tasks, the more conservative incomplete assessment is adopted.",
+  "confidence_score": 0.6
+}

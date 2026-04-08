@@ -1,0 +1,47 @@
+{
+  "id": "score_claude_wTsqvpJOEmk_20260408084003",
+  "video_id": "wTsqvpJOEmk",
+  "video_filename": "wTsqvpJOEmk.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:40:03.893669",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional video about intracorporeal suturing techniques rather than a performance attempt. No clear start and finish timing markers are visible."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw"
+  ],
+  "reasoning": "This video contains educational content about intracorporeal suturing with multiple demonstration segments, promotional overlays, and no clear official task attempt timing. Some suturing technique is visible in frames 5-14 and 18-19, but cannot isolate a single scoreable performance attempt. The final frames show promotional content rather than task completion. Cannot determine completion time or assess specific rubric penalties due to the instructional nature of the content.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "This video contains educational content about intracorporeal suturing with multiple demonstration segments, promotional overlays, and no clear official task attempt timing. Some suturing technique is visible in frames 5-14 and 18-19, but cannot isolate a single scoreable performance attempt. The final frames show promotional content rather than task completion. Cannot determine completion time or assess specific rubric penalties due to the instructional nature of the content.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

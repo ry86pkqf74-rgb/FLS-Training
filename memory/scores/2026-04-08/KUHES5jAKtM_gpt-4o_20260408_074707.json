@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt_KUHES5jAKtM_20260408074707",
+  "video_id": "KUHES5jAKtM",
+  "video_filename": "KUHES5jAKtM.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:47:07.894610",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "lost_object",
+      "count": 1,
+      "description": "One ring was dropped and not visible in the field of view afterwards."
+    }
+  ],
+  "score_components": {
+    "time_score": 221.5,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 211.5
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "The timing start and end points were clear. One ring was lost outside the view, resulting in a penalty. The entire task was completed within 78.5 seconds.",
+  "frame_analyses": [],
+  "completion_time_seconds": 78.5,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The timing start and end points were clear. One ring was lost outside the view, resulting in a penalty. The entire task was completed within 78.5 seconds.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

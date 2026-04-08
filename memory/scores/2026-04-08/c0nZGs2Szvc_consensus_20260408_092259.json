@@ -1,0 +1,34 @@
+{
+  "id": "score_consensus_c0nZGs2Szvc_20260408_092259",
+  "video_id": "c0nZGs2Szvc",
+  "video_filename": "c0nZGs2Szvc.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:22:59.547686+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 137.5,
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "count": 2,
+      "description": "Visible deviations from the marked circle line observed during cutting phases."
+    }
+  ],
+  "score_components": {
+    "time_score": 162.5,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 152.5
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "confidence": 0.6,
+  "reasoning": "Both models confirmed task completion with circle successfully cut out and released. Significant disagreement on timing (75s vs 200s) resolved by averaging. Both models detected line deviations but disagreed on severity - consensus reflects moderate deviation penalty based on both observations.",
+  "confidence_score": 0.6
+}

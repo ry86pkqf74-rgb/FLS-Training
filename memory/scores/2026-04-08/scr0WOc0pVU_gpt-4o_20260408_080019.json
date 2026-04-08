@@ -1,0 +1,46 @@
+{
+  "id": "score_gpt_scr0WOc0pVU_20260408080019",
+  "video_id": "scr0WOc0pVU",
+  "video_filename": "scr0WOc0pVU.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:00:19.410497",
+  "task_id": "task2",
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "The circle was not fully cut out within the marked lines by the end of the video."
+    }
+  ],
+  "score_components": {
+    "time_score": 289.0,
+    "penalty_deductions": 20.0,
+    "total_fls_score": 269.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut"
+  ],
+  "reasoning": "The video ended before completion, and only partial cutting was visible. The cutting line appears to have not reached the minimum required circle release phase. Completion time and visible progress suggest the circle was not fully released.",
+  "frame_analyses": [],
+  "completion_time_seconds": 11.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video ended before completion, and only partial cutting was visible. The cutting line appears to have not reached the minimum required circle release phase. Completion time and visible progress suggest the circle was not fully released.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

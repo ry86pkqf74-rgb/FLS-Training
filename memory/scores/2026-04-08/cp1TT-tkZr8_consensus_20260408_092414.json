@@ -1,0 +1,34 @@
+{
+  "id": "score_consensus_cp1TT-tkZr8_20260408_092414",
+  "video_id": "cp1TT-tkZr8",
+  "video_filename": "cp1TT-tkZr8.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:24:14.559213+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 420.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached before both suture ends were cut inside the trainer."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws",
+    "slit_closure_assessment"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Major disagreement on task completion status. Claude reports incomplete task due to missing suture cutting phase, while GPT reports completion at 145 seconds. Given that Claude specifically notes the video ends without showing both suture ends being cut inside the trainer, and this is a required completion criterion, the incomplete task determination takes precedence. The automatic zero score applies for incomplete tasks regardless of other performance aspects.",
+  "confidence_score": 0.7
+}

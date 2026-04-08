@@ -1,0 +1,48 @@
+{
+  "id": "score_claude_6tLU9kD8QUU_20260408080357",
+  "video_id": "6tLU9kD8QUU",
+  "video_filename": "6tLU9kD8QUU.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:03:57.732037",
+  "task_id": "task2",
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "count": 1,
+      "description": "Cut path shows visible deviation from the marked circle in multiple areas, particularly noticeable in the final frames where the cut line goes both inside and outside the circle boundaries."
+    }
+  ],
+  "score_components": {
+    "time_score": 190.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 180.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "reasoning": "The timer is clearly visible and shows completion at 01:50 (110 seconds). The task appears to be completed with the circle fully cut out as shown in the final frames. However, the cut path shows visible deviations from the marked circle boundaries throughout the cutting process, warranting a line deviation penalty. The final product appears to be released from the gauze, indicating successful completion of the circle cutting task.",
+  "frame_analyses": [],
+  "completion_time_seconds": 110.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The timer is clearly visible and shows completion at 01:50 (110 seconds). The task appears to be completed with the circle fully cut out as shown in the final frames. However, the cut path shows visible deviations from the marked circle boundaries throughout the cutting process, warranting a line deviation penalty. The final product appears to be released from the gauze, indicating successful completion of the circle cutting task.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

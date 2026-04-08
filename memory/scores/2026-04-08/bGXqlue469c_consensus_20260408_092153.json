@@ -1,0 +1,34 @@
+{
+  "id": "score_consensus_bGXqlue469c_20260408_092153",
+  "video_id": "bGXqlue469c",
+  "video_filename": "bGXqlue469c.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:21:53.888850+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 102.5,
+  "penalties": [
+    {
+      "type": "loop_off_mark",
+      "count": 1,
+      "description": "The loop is secured on the appendage but positioned away from the target mark."
+    }
+  ],
+  "score_components": {
+    "time_score": 77.5,
+    "penalty_deductions": 7.0,
+    "total_fls_score": 70.5
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement",
+    "tail_cut"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models agreed on task completion and loop_off_mark penalty. Significant disagreement on completion time (75s vs 130s) was resolved by averaging. Both confirmed the loop was secured but off the target mark, supporting the penalty deduction.",
+  "confidence_score": 0.7
+}

@@ -1,0 +1,28 @@
+{
+  "id": "score_consensus_jfW3H_KKOHM_20260408_092835",
+  "video_id": "jfW3H_KKOHM",
+  "video_filename": "jfW3H_KKOHM.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:28:35.594813+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 35.0,
+  "penalties": [],
+  "score_components": {
+    "time_score": 145.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 145.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement",
+    "tail_cut"
+  ],
+  "confidence": 0.7,
+  "reasoning": "GPT-4o detected task completion with tail cut at 35 seconds, while Claude reported incomplete task at 180 seconds. GPT's detection of the tail_cut phase and successful completion is accepted as it provides specific completion criteria that Claude missed. The task was completed successfully within the time limit.",
+  "confidence_score": 0.7
+}

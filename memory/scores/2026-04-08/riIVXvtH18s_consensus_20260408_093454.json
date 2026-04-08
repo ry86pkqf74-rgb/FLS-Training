@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_riIVXvtH18s_20260408_093454",
+  "video_id": "riIVXvtH18s",
+  "video_filename": "riIVXvtH18s.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:34:54.775399+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "No actual task performance visible - only static display of instruments and materials without any suturing activity."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.0,
+  "reasoning": "Claude correctly identified this as a static equipment display with no actual task performance. GPT-4o incorrectly scored what appears to be a non-performance video. The video shows only instruments laid out without any suturing activity, timing markers, or task execution.",
+  "confidence_score": 0.0
+}

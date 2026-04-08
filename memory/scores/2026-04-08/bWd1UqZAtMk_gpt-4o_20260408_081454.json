@@ -1,0 +1,47 @@
+{
+  "id": "score_gpt_bWd1UqZAtMk_20260408081454",
+  "video_id": "bWd1UqZAtMk",
+  "video_filename": "bWd1UqZAtMk.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:14:54.138210",
+  "task_id": "task3",
+  "penalties": [
+    {
+      "type": "unsecured_loop",
+      "count": 1,
+      "description": "The loop was not secured properly as it is visibly loose and not tightened on the marked area."
+    }
+  ],
+  "score_components": {
+    "time_score": 50.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 40.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement"
+  ],
+  "reasoning": "The loop was introduced and positioned, but the final knot was not adequately secured. The video quality was sufficient for identifying an unsecured loop, although the specific visibility of the mark made accurate alignment assessment difficult.",
+  "frame_analyses": [],
+  "completion_time_seconds": 130.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The loop was introduced and positioned, but the final knot was not adequately secured. The video quality was sufficient for identifying an unsecured loop, although the specific visibility of the mark made accurate alignment assessment difficult.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

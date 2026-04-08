@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus__G7tKmkr_Zc_20260408_091915",
+  "video_id": "_G7tKmkr_Zc",
+  "video_filename": "_G7tKmkr_Zc.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:19:15.961820+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears to be a demonstration or practice session without clear completion. No final suture cut or completion state visible."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "extracorporeal_throws"
+  ],
+  "confidence": 0.2,
+  "reasoning": "Major disagreement between models on task completion. Claude identified this as an incomplete demonstration video with no clear start/end points or target passes, while GPT-4o scored it as a completed task with timing and penalties. Given the fundamental disagreement on whether the task was actually completed, and Claude's detailed reasoning about the demonstration nature of the video, the incomplete task assessment is more defensible under FLS scoring requirements.",
+  "confidence_score": 0.2
+}

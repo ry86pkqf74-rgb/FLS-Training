@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_xLRgwP5lHXs_20260408_094159",
+  "video_id": "xLRgwP5lHXs",
+  "video_filename": "xLRgwP5lHXs.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:41:59.051066+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional demonstration video rather than a timed performance attempt."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "confidence": 0.8,
+  "reasoning": "This is clearly a demonstration video showing proper technique for the peg transfer task, not an actual timed performance. The video shows step-by-step instruction with text overlays explaining each movement. No timing clock is visible, no completion is achieved, and the format indicates this is educational material rather than a scored attempt.",
+  "confidence_score": 0.8
+}

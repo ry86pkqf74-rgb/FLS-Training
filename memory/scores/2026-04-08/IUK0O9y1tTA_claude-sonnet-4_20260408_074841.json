@@ -1,0 +1,42 @@
+{
+  "id": "score_claude_IUK0O9y1tTA_20260408074841",
+  "video_id": "IUK0O9y1tTA",
+  "video_filename": "IUK0O9y1tTA.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:48:41.262133",
+  "task_id": "task1",
+  "penalties": [],
+  "score_components": {
+    "time_score": 246.8,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 246.8
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "Clear task completion observed. All six objects were successfully transferred from green pegs to orange pegs (outbound phase) and then back to green pegs (return phase). Final completion timing at 53:20 shows when the last object was released on the original green side. No objects were dropped or left the field of view. All transfers appeared to be mid-air without assisted contact with the board or pegs. Task completed successfully within the time limit.",
+  "frame_analyses": [],
+  "completion_time_seconds": 53.2,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Clear task completion observed. All six objects were successfully transferred from green pegs to orange pegs (outbound phase) and then back to green pegs (return phase). Final completion timing at 53:20 shows when the last object was released on the original green side. No objects were dropped or left the field of view. All transfers appeared to be mid-air without assisted contact with the board or pegs. Task completed successfully within the time limit.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

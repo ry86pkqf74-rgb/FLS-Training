@@ -1,0 +1,54 @@
+{
+  "id": "score_gpt_z2NvlsMTY9Q_20260408083522",
+  "video_id": "z2NvlsMTY9Q",
+  "video_filename": "z2NvlsMTY9Q.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:35:22.436500",
+  "task_id": "task4",
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "count": 1,
+      "description": "The suture deviates visibly from the marked targets."
+    },
+    {
+      "type": "knot_slippage",
+      "count": 1,
+      "description": "The knot slips slightly under tension during assessment."
+    }
+  ],
+  "score_components": {
+    "time_score": 230.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 220.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws",
+    "slit_closure_assessment",
+    "suture_cut"
+  ],
+  "reasoning": "The suture deviation and knot slippage were observable. The final suture cut was completed inside the trainer. Lighting and frame transitions were clear, though minor angle changes limited some visibility.",
+  "frame_analyses": [],
+  "completion_time_seconds": 190.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The suture deviation and knot slippage were observable. The final suture cut was completed inside the trainer. Lighting and frame transitions were clear, though minor angle changes limited some visibility.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -1,0 +1,43 @@
+{
+  "id": "score_claude_x2J1kV-9128_20260408072913",
+  "video_id": "x2J1kV-9128",
+  "video_filename": "x2J1kV-9128.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:29:13.648918",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "No actual FLS peg transfer task performance visible in the provided frames."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "The provided frames contain only presentation slides about FLS automation and machine vision systems. No actual peg transfer task performance, timing start, timing end, object transfers, or task completion is visible. This appears to be educational/research content rather than a scorable FLS performance video.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The provided frames contain only presentation slides about FLS automation and machine vision systems. No actual peg transfer task performance, timing start, timing end, object transfers, or task completion is visible. This appears to be educational/research content rather than a scorable FLS performance video.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

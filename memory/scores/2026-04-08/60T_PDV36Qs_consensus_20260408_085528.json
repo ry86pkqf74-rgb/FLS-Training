@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_60T_PDV36Qs_20260408_085528",
+  "video_id": "60T_PDV36Qs",
+  "video_filename": "60T_PDV36Qs.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:55:28.570610+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "No FLS Peg Transfer task performance is visible in the provided frames - only presentation slides about FES exam curriculum are shown."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.0,
+  "reasoning": "Claude correctly identified that the video contains only presentation slides about FES exam curriculum, not actual FLS Peg Transfer task performance. GPT-4o appears to have hallucinated task content that is not present in the video frames.",
+  "confidence_score": 0.0
+}

@@ -1,0 +1,47 @@
+{
+  "id": "score_gpt_H5DZst68mMc_20260408073309",
+  "video_id": "H5DZst68mMc",
+  "video_filename": "H5DZst68mMc.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:33:09.279323",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "lost_object",
+      "count": 1,
+      "description": "One object was dropped outside the field of view and was unretrievable."
+    }
+  ],
+  "score_components": {
+    "time_score": 225.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 215.0
+  },
+  "phases_detected": [
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "The timing started with the first object touched and ended with the last object released to the original side. One object left the field of view and did not return, leading to a lost_object penalty. Lighting and visibility were clear throughout the task.",
+  "frame_analyses": [],
+  "completion_time_seconds": 75.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The timing started with the first object touched and ended with the last object released to the original side. One object left the field of view and did not return, leading to a lost_object penalty. Lighting and visibility were clear throughout the task.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

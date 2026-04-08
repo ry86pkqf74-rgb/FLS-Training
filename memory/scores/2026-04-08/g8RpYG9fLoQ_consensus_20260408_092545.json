@@ -1,0 +1,35 @@
+{
+  "id": "score_consensus_g8RpYG9fLoQ_20260408_092545",
+  "video_id": "g8RpYG9fLoQ",
+  "video_filename": "g8RpYG9fLoQ.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:25:45.295075+00:00",
+  "task_id": "task5",
+  "completion_time_seconds": 300.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Cannot determine if task was completed as the final frames show marketing content rather than completion of suturing and cutting."
+    }
+  ],
+  "score_components": {
+    "time_score": 300.0,
+    "penalty_deductions": 600.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw"
+  ],
+  "confidence": 0.2,
+  "reasoning": "Major disagreement on task completion. Claude reports incomplete task due to marketing content obscuring completion, while GPT reports completed task with penalties. Given that incomplete_task is an automatic zero condition and Claude's reasoning about marketing content is specific and verifiable, the incomplete assessment takes precedence per rubric hierarchy.",
+  "confidence_score": 0.2
+}

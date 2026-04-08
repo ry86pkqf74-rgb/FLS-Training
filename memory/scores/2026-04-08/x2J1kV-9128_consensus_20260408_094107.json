@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_x2J1kV-9128_20260408_094107",
+  "video_id": "x2J1kV-9128",
+  "video_filename": "x2J1kV-9128.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:41:07.772671+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "No actual FLS peg transfer task performance visible in the provided frames."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.0,
+  "reasoning": "The provided frames contain only presentation slides about FLS automation and machine vision systems. No actual peg transfer task performance is visible. This appears to be educational content rather than a scorable FLS performance video.",
+  "confidence_score": 0.0
+}

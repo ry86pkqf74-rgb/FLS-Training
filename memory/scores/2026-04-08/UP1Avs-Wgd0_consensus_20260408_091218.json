@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_UP1Avs-Wgd0_20260408_091218",
+  "video_id": "UP1Avs-Wgd0",
+  "video_filename": "UP1Avs-Wgd0.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:12:18.341541+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 300.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task was not completed within the maximum time limit of 300 seconds"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Major disagreement on task completion. Claude reported incomplete task at 300 seconds while GPT reported completion at 65 seconds. Given the automatic-zero rule for incomplete tasks and Claude's detailed description of partial completion, the incomplete task penalty takes precedence.",
+  "confidence_score": 0.7
+}

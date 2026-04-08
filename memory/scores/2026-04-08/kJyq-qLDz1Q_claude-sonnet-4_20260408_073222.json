@@ -1,0 +1,46 @@
+{
+  "id": "score_claude_kJyq-qLDz1Q_20260408073222",
+  "video_id": "kJyq-qLDz1Q",
+  "video_filename": "kJyq-qLDz1Q.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:32:22.219627",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears to be incomplete as the video shows ongoing transfers but no clear completion state with all objects returned to original side."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "reasoning": "Video shows peg transfer activity with instruments moving objects between green and orange pegs. However, the video appears to capture only a portion of the task execution without showing clear start timing or task completion. The final state shows objects distributed across both sides rather than all returned to the original side as required. Cannot determine exact completion time or final success state from these frames.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Video shows peg transfer activity with instruments moving objects between green and orange pegs. However, the video appears to capture only a portion of the task execution without showing clear start timing or task completion. The final state shows objects distributed across both sides rather than all returned to the original side as required. Cannot determine exact completion time or final success state from these frames.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

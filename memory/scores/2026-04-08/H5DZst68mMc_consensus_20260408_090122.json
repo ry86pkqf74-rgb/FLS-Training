@@ -1,0 +1,25 @@
+{
+  "id": "score_consensus_H5DZst68mMc_20260408_090122",
+  "video_id": "H5DZst68mMc",
+  "video_filename": "H5DZst68mMc.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:01:22.447281+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup"
+  ],
+  "confidence": 0.0,
+  "reasoning": "Claude identified this as an instructional overview video showing multiple FLS tasks rather than a single task performance, with only setup visible for Peg Transfer and no actual transfer activity performed. GPT-4o scored it as a completed task with timing and penalties, but this appears to be a misinterpretation of the video content. Without clear evidence of actual task performance and timing, the task cannot be scored.",
+  "confidence_score": 0.0
+}
