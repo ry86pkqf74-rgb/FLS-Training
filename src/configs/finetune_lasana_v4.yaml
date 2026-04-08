@@ -1,0 +1,80 @@
+# Fine-tuning config v4: LASANA + PETRAW + SimSurgSkill + JIGSAWS metadata
+# Target: Qwen2.5-VL-7B-Instruct with LoRA via Unsloth
+# Hardware: A100 80GB on Vast.ai (primary) or RunPod (fallback).
+#           Also runs on the proven Blackwell RTX PRO 6000 path from v3.
+#
+# Differences from v3:
+#   - Dataset is ~1500x larger (1270+ LASANA trials + PETRAW + SimSurgSkill +
+#     JIGSAWS metadata, vs 78 hand-scored videos in v3)
+#   - LoRA rank dropped from 64 → 32 because we now have far more data and
+#     don't need the extra adapter capacity to memorize a tiny corpus
+#   - Epochs dropped from 5 → 2 — with the larger corpus, 2 epochs is
+#     plenty and avoids overfitting
+#   - Batch size + grad-accum reshaped for 80GB VRAM (vs 97GB Blackwell):
+#     batch_size 2 + grad_accum 4 = effective batch 8, fits with bf16 + LoRA
+#   - max_frames_per_sample 24 (was 20) — LASANA has longer trials and
+#     phase-rich content
+#
+# IMPORTANT: this config assumes the dataset has been prepared by:
+#   python scripts/040_prepare_training_data.py --version v4
+# which expects features cached at data/training/2026-04-XX_v4/features/
+# (output of scripts/068_lasana_extract_features.py).
+
+base_model: "Qwen/Qwen2.5-VL-7B-Instruct"
+dataset_path: "data/training/LATEST"
+framework: "unsloth"
+
+# bf16, no quantization. The 7B model + LoRA + activations fits in 80GB
+# with batch_size=2 and gradient checkpointing off. If a smaller GPU
+# ever runs this config, set quantization: "4bit" and batch_size: 1.
+quantization: "none"
+bnb_4bit_compute_dtype: "bfloat16"
+bnb_4bit_quant_type: "nf4"
+
+# LoRA — smaller rank than v3 because the corpus is much larger
+lora_r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - v_proj
+  - k_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Training — sized for ~30k frame-text pairs across 4 datasets
+num_epochs: 2
+batch_size: 2
+gradient_accumulation: 4   # effective batch 8
+learning_rate: 3.0e-5      # slightly lower than v3 (5e-5) due to bigger corpus
+warmup_ratio: 0.05
+bf16: true
+flash_attention_2: true
+gradient_checkpointing: false
+logging_steps: 25
+save_strategy: "steps"
+save_steps: 200
+eval_strategy: "steps"
+eval_steps: 200
+save_total_limit: 3
+max_seq_length: 2048
+packing: false
+export_merged_16bit: true
+dataloader_num_workers: 4
+
+# Frames
+max_frames_per_sample: 24
+
+# Promotion criteria — same as v3 (this is the project-wide bar)
+promotion_threshold_field_agreement: 0.85
+promotion_threshold_score_mae: 12.0
+
+# Output
+output_dir: "memory/model_checkpoints/v4_multi_dataset"
+
+# Start fresh — do NOT resume from v1/v2/v3 checkpoint. The v4 corpus
+# is qualitatively different (cross-domain LASANA + PETRAW vs single-task
+# v3 hand-scored set) and resuming would bias the model toward v3 priors.
+resume_from_checkpoint: null
