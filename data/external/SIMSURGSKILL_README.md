@@ -1,10 +1,12 @@
 # SimSurgSkill 2021 — MICCAI EndoVis Sub-Challenge
 
-> **Status (2026-04-08):** ✅ **publicly downloadable, no
-> registration**. Single 4.61 GB ZIP at
-> `gs://isi-simsurgskill-2021/simsurgskill_2021_dataset.zip`.
-> Download script `scripts/065_simsurgskill_download.sh` added in
-> this PR; can run on Mac or any RunPod with no auth.
+> **Status (2026-04-08):** ✅ **downloaded + unzipped on Mac**.
+> 4.61 GB ZIP fetched from `gs://isi-simsurgskill-2021/`, extracted to
+> `data/external/simsurgskill/simsurgskill_2021_dataset/` (~3.3 GB on
+> disk). Three splits: `train_v1` (48 trials, 723 MB), `train_v2`
+> (107 trials, 280 MB), `test` (167 trials, 2.3 GB) — **322 trials
+> total**. Each trial provides paired `fps1/` + `fps30/` videos and
+> a `bounding_box_gt/` annotation file.
 
 ## Source
 
@@ -81,29 +83,45 @@ The script:
   (4,613,059,266) before unzipping.
 - Unpacks into `${DEST}/simsurgskill_2021_dataset/`.
 
-## Expected on-disk layout (post-unzip)
+## On-disk layout (verified 2026-04-08)
 
 ```
-data/external/simsurgskill/
-├── _meta/
-│   └── README.* / LICENSE.*    # bundled with the zip
-├── simsurgskill_2021_dataset/
-│   ├── train/
-│   │   ├── videos/             # *.mp4
-│   │   ├── annotations/        # OPI CSVs + tool bboxes
-│   │   └── ...
-│   └── test/
-│       ├── videos/
-│       ├── annotations/
-│       └── ...
+data/external/simsurgskill/simsurgskill_2021_dataset/
+├── train_v1/                    #  723 MB,  48 trials
+│   ├── videos/
+│   │   ├── fps1/                # 48 *.mp4 (1 fps, lightweight)
+│   │   └── fps30/               # 48 *.mp4 (30 fps, full)
+│   └── annotations/
+│       └── bounding_box_gt/     # 48 files (per-frame tool bboxes)
+├── train_v2/                    #  280 MB, 107 trials
+│   ├── videos/
+│   │   ├── fps1/                # 107 *.mp4
+│   │   └── fps30/               #  23 *.mp4  (subset only)
+│   └── annotations/
+│       └── bounding_box_gt/     # 107 files
+└── test/                        #  2.3 GB, 167 trials
+    ├── videos/
+    │   ├── fps1/                # 167 *.mp4
+    │   └── fps30/               # 167 *.mp4
+    └── annotations/
+        └── bounding_box_gt/     # 167 files
 ```
 
-(Exact internal layout will be confirmed once the zip is unpacked.)
+**Note:** The published distribution we received does **not** ship a
+separate OPI CSV per trial — the only annotation modality on disk is
+`bounding_box_gt/` (per-frame tool bounding boxes). OPIs (needle drop
+count, economy of motion, etc.) referenced in the paper will need to
+be either (a) recomputed from the bbox tracks + video, or (b) sourced
+from the official Synapse leaderboard if/when it's released.
 
 ## Integration TODO
 
-- [ ] Run `065_simsurgskill_download.sh` on the target host.
-- [ ] Unzip and document the actual internal layout in this README.
+- [x] Run `065_simsurgskill_download.sh` on the target host.
+- [x] Unzip and document the actual internal layout in this README.
+- [ ] Inspect a sample `bounding_box_gt/*` file to confirm format
+      (CSV vs JSON vs per-frame text).
+- [ ] Decide whether to recompute OPIs from bbox tracks or pull from
+      Synapse leaderboard.
 - [ ] Write `scripts/066_ingest_simsurgskill.py`:
     - Read the OPI CSV per trial, emit one record per OPI as a
       separate scalar absolute-score target.
