@@ -104,11 +104,23 @@ echo ""
 # --- Step 3: Validate dataset ---
 echo "[3/5] Validating dataset at $DATASET_PATH..."
 
-# If the user passed data/training/LATEST, resolve it to the newest
-# timestamped directory so stale symlinks don't silently train on old data.
-if [[ "$DATASET_PATH" == *"LATEST" ]]; then
-    RESOLVED=$(ls -1dt data/training/*_v* 2>/dev/null | head -1 || true)
-    if [ -n "$RESOLVED" ] && [ -f "$RESOLVED/train.jsonl" ]; then
+# If the user passed data/training/LATEST-style aliases, resolve them to
+# either the symlink target or the newest matching timestamped directory.
+if [[ "$DATASET_PATH" == *"LATEST"* ]]; then
+    if [ -L "$DATASET_PATH" ]; then
+        RESOLVED="$(python3 - <<'PY' "$DATASET_PATH"
+import os
+import sys
+
+print(os.path.realpath(sys.argv[1]))
+PY
+)"
+    elif [[ "$DATASET_PATH" == *"LATEST_LASANA" ]]; then
+        RESOLVED=$(ls -1dt data/training/*_lasana_v* 2>/dev/null | head -1 || true)
+    else
+        RESOLVED=$(ls -1dt data/training/*_v* 2>/dev/null | head -1 || true)
+    fi
+    if [ -n "${RESOLVED:-}" ] && [ -f "$RESOLVED/train.jsonl" ]; then
         DATASET_PATH="$RESOLVED"
         echo "  LATEST resolved to: $DATASET_PATH"
     fi

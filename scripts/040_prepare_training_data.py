@@ -72,6 +72,19 @@ def _coerce_version_tag(ver: str) -> int:
     return int(digits) if digits else 1
 
 
+def _parse_csv_arg(value: str | None) -> list[str]:
+    if not value:
+        return []
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def _refresh_symlink(link_path: Path, target_path: Path) -> None:
+    link_path.parent.mkdir(parents=True, exist_ok=True)
+    if link_path.exists() or link_path.is_symlink():
+        link_path.unlink()
+    link_path.symlink_to(target_path.resolve())
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Prepare FLS training datasets")
     parser.add_argument(
@@ -125,6 +138,21 @@ def main() -> int:
             "the eval set never leaks into train."
         ),
     )
+    parser.add_argument(
+        "--include-sources",
+        default=None,
+        help="Comma-separated source allowlist applied before all other dataset processing.",
+    )
+    parser.add_argument(
+        "--exclude-sources",
+        default=None,
+        help="Comma-separated source denylist applied before all other dataset processing.",
+    )
+    parser.add_argument(
+        "--respect-existing-splits",
+        action="store_true",
+        help="Honor pre-existing score-record split fields instead of re-randomizing them.",
+    )
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -148,6 +176,7 @@ def main() -> int:
         video_dir=str(base),
         output_dir=args.output_dir,
         version=_coerce_version_tag(args.ver),
+        version_tag=args.ver,
         min_confidence=args.min_confidence,
         train_split=args.train_split,
         val_split=args.val_split,
@@ -157,6 +186,9 @@ def main() -> int:
         max_frames_per_sample=args.max_frames,
         group_by=args.group_by,
         exclude_video_ids=exclude_ids,
+        include_sources=_parse_csv_arg(args.include_sources),
+        exclude_sources=_parse_csv_arg(args.exclude_sources),
+        respect_existing_splits=args.respect_existing_splits,
     )
 
     # Lineage sidecars: write <name>.meta.json next to every train/val/test jsonl.
@@ -164,6 +196,10 @@ def main() -> int:
     # actually materialised to; fall back to args.output_dir if the manifest
     # does not expose it.
     dataset_dir = Path(manifest.get("output_dir") or args.output_dir)
+    include_sources = {item.lower() for item in _parse_csv_arg(args.include_sources)}
+    if include_sources == {"lasana"}:
+        _refresh_symlink(base / "data" / "training" / "LATEST_LASANA", dataset_dir)
+        logging.getLogger(__name__).info("Updated LASANA dataset symlink: %s", base / "data" / "training" / "LATEST_LASANA")
     try:
         sidecars = write_sidecars(
             output_dir=dataset_dir,

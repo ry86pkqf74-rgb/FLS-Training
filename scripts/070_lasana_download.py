@@ -338,7 +338,7 @@ def run() -> int:
             status_rows[record.trial_id] = manifest_row(
                 record,
                 destination=destination,
-                status="downloaded",
+                status="ok",
                 bytes_written=bytes_written,
                 sha256=digest,
             )

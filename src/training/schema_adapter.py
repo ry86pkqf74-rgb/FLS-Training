@@ -62,6 +62,7 @@ from typing import Any, Iterable
 # --------------------------------------------------------------------------- #
 
 CANONICAL_TASK_IDS = {"task1", "task2", "task3", "task4", "task5"}
+SPECIAL_TASK_PREFIXES = ("lasana_",)
 
 _TASK_ALIASES = {
     "task1_peg_transfer": "task1",
@@ -110,6 +111,15 @@ def _float_or_zero(value: Any) -> float:
         return 0.0
 
 
+def _int_or_none(value: Any) -> int | None:
+    try:
+        if value is None:
+            return None
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def canonical_task_id(task_id: Any, *, default: str | None = None) -> str:
     """Normalize a task id string.
 
@@ -123,6 +133,8 @@ def canonical_task_id(task_id: Any, *, default: str | None = None) -> str:
     if raw in _TASK_ALIASES:
         return _TASK_ALIASES[raw]
     if raw in CANONICAL_TASK_IDS:
+        return raw
+    if any(raw.startswith(prefix) for prefix in SPECIAL_TASK_PREFIXES):
         return raw
     if raw.startswith("task"):
         prefix = raw.split("_", 1)[0]
@@ -268,9 +280,10 @@ def get_penalty_labels(record: Any) -> set[str]:
         labels.add("hand_switch_failure")
 
     throw_map = {
-        int(item.get("throw_number")): item
+        throw_number: item
         for item in knots
-        if item.get("throw_number") is not None
+        for throw_number in [_int_or_none(item.get("throw_number"))]
+        if throw_number is not None
     }
     if throw_map:
         first = throw_map.get(1) or {}

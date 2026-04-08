@@ -68,4 +68,6 @@ dataloader_num_workers: 4
 
 # Output
 output_dir: "memory/model_checkpoints/task5_standard"
+# Uncomment after LASANA Stage 1 finishes and the checkpoint exists on the pod.
+# resume_from_checkpoint: "memory/model_checkpoints/lasana_pretrain"
 resume_from_checkpoint: null

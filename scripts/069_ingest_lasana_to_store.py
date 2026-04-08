@@ -61,6 +61,11 @@ def parse_args() -> argparse.Namespace:
         default=0,
         help="Limit ingested trials for smoke testing; 0 means all matched rows",
     )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Summarize what would be written without modifying memory/scores or the ledger.",
+    )
     return parser.parse_args()
 
 
@@ -290,18 +295,22 @@ def build_score_record(
 
 def ingest_task(
     *,
-    store: MemoryStore,
+    store: MemoryStore | None,
     annotations_dir: Path,
     frames_root: str,
     task_name: str,
     max_trials: int,
-) -> tuple[int, int]:
+    dry_run: bool,
+) -> dict[str, Any]:
     main_rows = read_semicolon_csv(annotations_dir / f"{task_name}.csv")
     split_rows = load_split_rows(annotations_dir, task_name)
     rater_rows = load_rater_rows(annotations_dir, task_name)
 
     written = 0
     skipped = 0
+    split_counts = {"train": 0, "val": 0, "test": 0}
+    nonzero_score_std = 0
+    confidence_values: list[float] = []
     for index, main_row in enumerate(main_rows, start=1):
         if max_trials and index > max_trials:
             break
@@ -323,13 +332,31 @@ def ingest_task(
             frames_root=frames_root,
         )
 
-        output_path = score_output_path(store, trial_id)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        remove_legacy_duplicates(store, trial_id, output_path)
-        output_path.write_text(json.dumps(record, indent=2, default=str))
+        split_counts[split] += 1
+        if float(record.get("score_std") or 0.0) > 0.0:
+            nonzero_score_std += 1
+        confidence_values.append(float(record.get("confidence_score") or 0.0))
+
+        if not dry_run:
+            if store is None:
+                raise RuntimeError("store is required when not running in dry-run mode")
+            output_path = score_output_path(store, trial_id)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            remove_legacy_duplicates(store, trial_id, output_path)
+            output_path.write_text(json.dumps(record, indent=2, default=str))
         written += 1
 
-    return written, skipped
+    confidence_min = min(confidence_values) if confidence_values else 0.0
+    confidence_max = max(confidence_values) if confidence_values else 0.0
+    return {
+        "task": task_name,
+        "written": written,
+        "skipped": skipped,
+        "split_counts": split_counts,
+        "nonzero_score_std": nonzero_score_std,
+        "confidence_min": confidence_min,
+        "confidence_max": confidence_max,
+    }
 
 
 def main() -> int:
@@ -341,21 +368,46 @@ def main() -> int:
     if not annotations_dir.is_dir():
         raise SystemExit(f"Annotations dir not found: {annotations_dir}")
 
-    store = MemoryStore(base_dir)
+    store = None if args.dry_run else MemoryStore(base_dir)
     tasks = [args.task] if args.task else list(TASK_MAP)
 
     total_written = 0
     total_skipped = 0
+    aggregate_split_counts = {"train": 0, "val": 0, "test": 0}
+    total_nonzero_score_std = 0
+    confidence_mins: list[float] = []
+    confidence_maxs: list[float] = []
     for task_name in tasks:
-        written, skipped = ingest_task(
+        summary = ingest_task(
             store=store,
             annotations_dir=annotations_dir,
             frames_root=frames_root,
             task_name=task_name,
             max_trials=args.max_trials,
+            dry_run=args.dry_run,
         )
-        total_written += written
-        total_skipped += skipped
+        total_written += int(summary["written"])
+        total_skipped += int(summary["skipped"])
+        total_nonzero_score_std += int(summary["nonzero_score_std"])
+        for split_name, count in summary["split_counts"].items():
+            aggregate_split_counts[split_name] += int(count)
+        confidence_mins.append(float(summary["confidence_min"]))
+        confidence_maxs.append(float(summary["confidence_max"]))
+
+    if args.dry_run:
+        min_confidence = min(confidence_mins) if confidence_mins else 0.0
+        max_confidence = max(confidence_maxs) if confidence_maxs else 0.0
+        print(
+            "LASANA ingest dry-run: "
+            f"would write {total_written} records, skip {total_skipped}; "
+            f"splits train={aggregate_split_counts['train']} val={aggregate_split_counts['val']} test={aggregate_split_counts['test']}; "
+            f"nonzero score_std={total_nonzero_score_std}; "
+            f"confidence range={min_confidence:.3f}-{max_confidence:.3f}"
+        )
+        return 0
+
+    if store is None:
+        raise RuntimeError("store unexpectedly missing for non-dry-run ingest")
 
     store._append_ledger(
         "lasana_ingested",

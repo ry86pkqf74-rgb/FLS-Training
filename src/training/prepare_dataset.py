@@ -61,6 +61,10 @@ TASK_LABELS = {
     "task3": "FLS Task 3 ligating loop",
     "task4": "FLS Task 4 extracorporeal suture",
     "task5": "FLS Task 5 intracorporeal suture",
+    "lasana_balloon": "LASANA balloon resection task",
+    "lasana_circle": "LASANA circle cutting task",
+    "lasana_peg": "LASANA peg transfer task",
+    "lasana_suture": "LASANA suture and knot task",
 }
 
 # Task id is resolved via the schema adapter now. The local helper is a
@@ -156,6 +160,20 @@ def _normalize_source(source: str | None, filename: str) -> str:
     return "teacher_claude"
 
 
+def _normalize_source_filters(values: Iterable[str] | None) -> set[str]:
+    return {str(value).strip().lower() for value in (values or []) if str(value).strip()}
+
+
+def _declared_split(example: dict[str, Any]) -> str | None:
+    metadata = example.get("metadata") or {}
+    if not isinstance(metadata, dict):
+        return None
+    split = str(metadata.get("split") or "").strip().lower()
+    if split in {"train", "val", "test"}:
+        return split
+    return None
+
+
 def _iter_json_files(base_dir: Path) -> list[Path]:
     if not base_dir.exists():
         return []
@@ -231,8 +249,17 @@ def _load_corrections_by_video() -> dict[str, dict[str, Any]]:
     return {video_id: item[1] for video_id, item in latest.items()}
 
 
-def _load_training_candidates(base_dir: Path, min_confidence: float) -> list[dict[str, Any]]:
+def _load_training_candidates(
+    base_dir: Path,
+    min_confidence: float,
+    *,
+    include_sources: Iterable[str] | None = None,
+    exclude_sources: Iterable[str] | None = None,
+) -> list[dict[str, Any]]:
     del base_dir  # file-backed memory lives under the repository root paths above
+
+    include_set = _normalize_source_filters(include_sources)
+    exclude_set = _normalize_source_filters(exclude_sources)
 
     latest_by_video_source: dict[tuple[str, str], tuple[datetime, dict[str, Any]]] = {}
 
@@ -247,6 +274,11 @@ def _load_training_candidates(base_dir: Path, min_confidence: float) -> list[dic
             continue
 
         source = _normalize_source(data.get("source"), path.name)
+        if include_set and source not in include_set:
+            continue
+        if source in exclude_set:
+            continue
+
         confidence = float(data.get("confidence_score", 0) or 0)
         if confidence < min_confidence:
             continue
@@ -277,13 +309,19 @@ def _load_training_candidates(base_dir: Path, min_confidence: float) -> list[dic
         if not consensus:
             continue
 
+        source = "critique_consensus"
+        if include_set and source not in include_set:
+            continue
+        if source in exclude_set:
+            continue
+
         confidence = float(consensus.get("confidence_score", 0) or 0)
         if confidence < min_confidence:
             continue
 
         candidate = {
             "video_id": video_id,
-            "source": "critique_consensus",
+            "source": source,
             "confidence_score": confidence,
             "raw_json": consensus,
             "score_id": consensus.get("id"),
@@ -337,6 +375,7 @@ def _split_examples(
     val_split: float,
     seed: int,
     group_by: str,
+    respect_existing_splits: bool = False,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     """Resident-aware train/val/test split.
 
@@ -348,6 +387,28 @@ def _split_examples(
     """
     rng = random.Random(seed)
 
+    declared_train: list[dict[str, Any]] = []
+    declared_val: list[dict[str, Any]] = []
+    declared_test: list[dict[str, Any]] = []
+    pending_examples = examples
+    if respect_existing_splits:
+        pending_examples = []
+        for ex in examples:
+            split = _declared_split(ex)
+            if split == "train":
+                declared_train.append(ex)
+                continue
+            if split == "val":
+                declared_val.append(ex)
+                continue
+            if split == "test":
+                declared_test.append(ex)
+                continue
+            pending_examples.append(ex)
+
+        if not pending_examples:
+            return declared_train, declared_val, declared_test
+
     def _group_key(ex: dict[str, Any]) -> str:
         meta = ex.get("metadata") or {}
         if group_by == "trainee" and meta.get("trainee_id"):
@@ -355,7 +416,7 @@ def _split_examples(
         return f"video::{meta.get('video_id', 'unknown')}"
 
     groups: dict[str, list[dict[str, Any]]] = {}
-    for ex in examples:
+    for ex in pending_examples:
         groups.setdefault(_group_key(ex), []).append(ex)
 
     trainee_groups = [k for k in groups if k.startswith("trainee::")]
@@ -366,11 +427,12 @@ def _split_examples(
             len(trainee_groups),
         )
         return _split_examples(
-            examples,
+            pending_examples,
             train_split=train_split,
             val_split=val_split,
             seed=seed,
             group_by="video",
+            respect_existing_splits=False,
         )
 
     keys = sorted(groups.keys())
@@ -383,9 +445,9 @@ def _split_examples(
     val_keys = set(keys[n_train : n_train + n_val])
     test_keys = set(keys[n_train + n_val :])
 
-    train = [ex for k in train_keys for ex in groups[k]]
-    val = [ex for k in val_keys for ex in groups[k]]
-    test = [ex for k in test_keys for ex in groups[k]]
+    train = declared_train + [ex for k in train_keys for ex in groups[k]]
+    val = declared_val + [ex for k in val_keys for ex in groups[k]]
+    test = declared_test + [ex for k in test_keys for ex in groups[k]]
     return train, val, test
 
 
@@ -395,6 +457,7 @@ def prepare_dataset(
     video_dir: str | Path,
     output_dir: str | Path,
     version: int = 1,
+    version_tag: str | None = None,
     min_confidence: float = 0.7,
     train_split: float = 0.8,
     val_split: float = 0.1,
@@ -404,6 +467,9 @@ def prepare_dataset(
     max_frames_per_sample: int = 24,
     group_by: str = "trainee",
     exclude_video_ids: Iterable[str] | None = None,
+    include_sources: Iterable[str] | None = None,
+    exclude_sources: Iterable[str] | None = None,
+    respect_existing_splits: bool = False,
 ) -> dict:
     """Build train/val/test JSONL files from scored videos.
 
@@ -432,7 +498,12 @@ def prepare_dataset(
     system_prompt = universal_prompt.read_text() if universal_prompt.exists() else (prompts_dir / "v001_task5_system.md").read_text()
 
     # Get training candidates
-    candidates = _load_training_candidates(store.base, min_confidence)
+    candidates = _load_training_candidates(
+        store.base,
+        min_confidence,
+        include_sources=include_sources,
+        exclude_sources=exclude_sources,
+    )
     logger.info(f"Found {len(candidates)} training candidates")
 
     if not candidates:
@@ -524,23 +595,39 @@ def prepare_dataset(
         elif vision_mode:
             text_fallback_samples += 1
 
+        declared_split = None
+        if respect_existing_splits:
+            declared_split = str(
+                score_data.get("split")
+                or ((score_data.get("metadata") or {}).get("split") if isinstance(score_data.get("metadata"), dict) else "")
+            ).strip().lower()
+            if declared_split not in {"train", "val", "test"}:
+                declared_split = None
+
+        task_id = _canonical_task_id(score_data.get("task_id"))
+        metadata = {
+            "video_id": sample["video_id"],
+            "source": sample.get("source", "unknown"),
+            "confidence": sample.get("confidence_score", 0),
+            "task_id": task_id,
+            "trainee_id": get_trainee_id(score_data),
+            "source_domain": get_source_domain(score_data),
+            "target_score": get_total_score(score_data),
+            "num_frames": len(frame_paths),
+            "vision": bool(frame_paths),
+        }
+        if declared_split:
+            metadata["split"] = declared_split
+        if task_id.startswith("lasana_"):
+            metadata["task"] = task_id
+
         example = {
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_content},
                 {"role": "assistant", "content": assistant_content},
             ],
-            "metadata": {
-                "video_id": sample["video_id"],
-                "source": sample.get("source", "unknown"),
-                "confidence": sample.get("confidence_score", 0),
-                "task_id": _canonical_task_id(score_data.get("task_id")),
-                "trainee_id": get_trainee_id(score_data),
-                "source_domain": get_source_domain(score_data),
-                "target_score": get_total_score(score_data),
-                "num_frames": len(frame_paths),
-                "vision": bool(frame_paths),
-            },
+            "metadata": metadata,
         }
         examples.append(example)
 
@@ -561,11 +648,13 @@ def prepare_dataset(
         val_split=val_split,
         seed=seed,
         group_by=group_by,
+        respect_existing_splits=respect_existing_splits,
     )
 
     # Write output
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    out_dir = Path(output_dir) / f"{date_str}_v{version}"
+    version_dir_tag = version_tag or f"v{version}"
+    out_dir = Path(output_dir) / f"{date_str}_{version_dir_tag}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     for split_name, split_data in [("train", train), ("val", val), ("test", test)]:
@@ -590,7 +679,9 @@ def prepare_dataset(
         "vision_fallback_examples": text_fallback_samples,
         "frames_dir": str(frames_root) if frames_root else None,
         "max_frames_per_sample": max_frames_per_sample if vision_mode else 0,
-        "split_strategy": group_by,
+        "split_strategy": (
+            f"existing_split+{group_by}" if respect_existing_splits and any(_declared_split(ex) for ex in examples) else group_by
+        ),
         "sources": {},
         "source_domains": {},
         "unique_trainees": 0,
@@ -617,5 +708,7 @@ def prepare_dataset(
         **manifest,
     })
 
-    logger.info(f"Dataset v{version}: {len(train)} train, {len(val)} val, {len(test)} test")
-    return manifest
+    logger.info(f"Dataset {version_dir_tag}: {len(train)} train, {len(val)} val, {len(test)} test")
+    result = dict(manifest)
+    result["output_dir"] = str(out_dir)
+    return result
