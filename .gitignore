@@ -4,8 +4,22 @@
 __pycache__/
 *.pyc
 *.egg-info/
+fls_training.egg-info/
 dist/
 build/
+
+# ── Intentionally tracked data files (DO NOT add to .gitignore) ──
+# These are append-only data files consumed by the harvest / scoring
+# pipeline and must stay in version control:
+#   harvest_log.jsonl             — used by 011_harvest_youtube.py,
+#                                   011c_harvest_from_csv.py,
+#                                   021_batch_score.py, 030_run_consensus.py
+#   playlist_classification.jsonl — used by 012_harvest_playlist.py
+#   memory/learning_ledger.jsonl  — LearningLog append-only event log
+#   memory/scores/**/*.json       — per-video score JSONs backing DuckDB
+# If a future cleanup pass wants to move these, update every consumer
+# first; do not just gitignore them.
+
 *.duckdb
 *.duckdb.wal
 *.mov

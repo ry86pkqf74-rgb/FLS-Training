@@ -38,12 +38,13 @@ python scripts/090_status.py
 
 1. `python scripts/010_ingest_video.py --video X.mov --task 5`
 2. `python scripts/020_score_frontier.py --video-id X --video X.mov`
-3. `python scripts/080_generate_feedback_report.py --video-id X`
-4. `python scripts/040_prepare_training_data.py --ver <version>` → git push
-5. On RunPod: `bash deploy/runpod_launch.sh data/training/LATEST src/configs/config_standard.yaml`
-6. `bash scripts/095_contabo_sync.sh push-checkpoints` (save to durable storage)
-7. `python scripts/060_evaluate_student_v2.py <checkpoint_a> [checkpoint_b ...]`
-8. `python scripts/075_check_drift.py` → retrain when triggered
+3. `python scripts/026_auto_validate.py --all` (dual-teacher self-consistency + time-anchor validation)
+4. `python scripts/080_generate_feedback_report.py --video-id X`
+5. `python scripts/040_prepare_training_data.py --ver <version>` → git push
+6. On RunPod: `bash deploy/runpod_launch.sh data/training/LATEST src/configs/config_standard.yaml`
+7. `bash scripts/095_contabo_sync.sh push-checkpoints` (save to durable storage)
+8. `python scripts/060_evaluate_student_v2.py <checkpoint_a> [checkpoint_b ...]`
+9. `python scripts/075_check_drift.py` → retrain when triggered
 
 ## Artifact Sync (Contabo S8)
 
@@ -72,6 +73,8 @@ Student inference after: ~$0.001/video.
 ## Docs
 
 - `deploy/LAUNCH_GUIDE.md` — concise launch path
+- `docs/AGENT_LAUNCH_PROMPT.md` — copy-paste runbook for a RunPod-side agent
 - `docs/RUNPOD_RUNBOOK.md` — proven server setup, resume flow, shutdown
 - `docs/EXECUTION_PLAN.md` — phased roadmap with gates
 - `docs/DATA_SCALING_PLAN.md` — corpus growth strategy
+- `data/DATA_INVENTORY.md` — per-source data inventory and license posture
