@@ -16,9 +16,10 @@ Two modes (run separately, on different boxes):
                      for cost reasons — the CPU phase wastes GPU time.
 
 Layout assumed:
-  ${LASANA_DIR}/<task>/<bitstream>/<trial>.h265        ← input
-  ${OUT_DIR}/frames/<task>/<trial>/frame_NNNN.jpg      ← phase 1 output
-  ${OUT_DIR}/features/<task>/<trial>.npy               ← phase 2 output
+    ${LASANA_DIR}/<video_id>/video.hevc                  ← input (W6 layout)
+    ${LASANA_DIR}/<task>/<trial>.hevc                    ← input (legacy tolerated)
+    ${OUT_DIR}/frames/<video_id>/frame_NNNN.jpg          ← phase 1 output
+    ${OUT_DIR}/features/<video_id>.npy                   ← phase 2 output
   ${OUT_DIR}/manifest.csv                              ← bookkeeping
 
 Usage:
@@ -68,6 +69,14 @@ def find_bitstreams(lasana_dir: Path) -> list[Path]:
     for ext in exts:
         out.extend(sorted(lasana_dir.rglob(f"*{ext}")))
     return out
+
+
+def video_id_from_relpath(rel: Path) -> str:
+    """Resolve a stable video_id from a bitstream path relative to LASANA_DIR."""
+    stem = rel.stem.lower()
+    if stem == "video" and rel.parent != Path("."):
+        return rel.parent.name
+    return "_".join(rel.with_suffix("").parts)
 
 
 def decode_one_trial(
@@ -129,9 +138,8 @@ def phase1_frames(args) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     rows = []
     for i, bs in enumerate(bitstreams, 1):
-        # video_id is parent dir(s) + filename stem, slashes → underscores
         rel = bs.relative_to(lasana_dir)
-        video_id = "_".join(rel.with_suffix("").parts)
+        video_id = video_id_from_relpath(rel)
         out_subdir = frames_root / video_id
         if out_subdir.exists() and any(out_subdir.glob("frame_*.jpg")):
             n = len(list(out_subdir.glob("frame_*.jpg")))

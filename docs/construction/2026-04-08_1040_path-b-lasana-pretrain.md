@@ -7,6 +7,8 @@ related_commits: []
 related_files:
   - scripts/070_lasana_download.py
   - scripts/069_ingest_lasana_to_store.py
+  - scripts/068_lasana_extract_features.py
+  - scripts/071_lasana_unzip_and_layout.py
   - scripts/040_prepare_training_data.py
   - src/configs/pretrain_lasana.yaml
   - src/configs/finetune_task5_standard.yaml
@@ -41,10 +43,13 @@ flagging them in the PR description.
 - `scripts/040_prepare_training_data.py` reads from `MemoryStore` and has
   **no source filter**. Without one, any LASANA ingest will silently
   contaminate Task5 builds.
-- `scripts/068_lasana_extract_features.py --frames-only` already extracts
-  JPEG frames at 1 fps from HEVC into
-  `data/external/lasana_processed/frames/<trial_id>/*.jpg`. Reuse this — do
-  not write a new frame extractor.
+- `scripts/068_lasana_extract_features.py --frames-only` extracts JPEG
+  frames at 1 fps from HEVC into
+  `data/external/lasana_processed/frames/<video_id>/*.jpg`, where
+  `video_id` is task-qualified (for example `lasana_suture_kiourf`).
+- `scripts/071_lasana_unzip_and_layout.py` is the bridge between HAL's
+  task-level zip archives and the frame extractor: it watches for
+  completed `*.zip` downloads and emits `<video_id>/video.hevc`.
 - The trainer (`src/training/finetune_vlm.py`) reads only this set of flat
   keys: `num_epochs`, `warmup_ratio`, `logging_steps`, `save_strategy`,
   `eval_strategy`, `save_total_limit`, `dataset_path`,
@@ -52,10 +57,14 @@ flagging them in the PR description.
 
 ## Infrastructure constraint
 
-There is **one** Contabo box for this project. No Hetzner, no fleet. All
-download, ingest, and frame-extraction work that doesn't fit on the Mac runs
-sequentially on that single host. Plan W1/W2/068 accordingly — no
-parallelism across machines.
+There is one Contabo box for this project plus S5 (Hetzner) available as a
+parallel download/unzip worker. The safe operating pattern is:
+
+- Contabo remains the primary manifest-driven downloader.
+- Hetzner is allowed to run additional task-scoped archive downloads only
+  after a short overlap test proves both hosts advance bytes concurrently.
+- Frame extraction still consumes the laid-out `<video_id>/video.hevc`
+  tree produced by W6; do not point `068` at raw task zips.
 
 ## Non-goals
 
@@ -74,9 +83,10 @@ Parse `data/external/lasana/_meta/bitstreams.json` (HAL format with
 `_embedded`, `page`, `_links`) and download the HEVC bitstreams to
 `<--out-dir>/<trial_id>.hevc`.
 
-- **Run target:** the Contabo box, NOT the Mac. ~1,260 trials × ~5 min HEVC
-  ≈ several hundred GB. Verify free disk on Contabo before kicking off
-  (`df -h`); abort if <500 GB available.
+- **Run target:** Contabo first, with Hetzner S5 available for parallel
+  task sharding once the per-IP-vs-per-account overlap check passes.
+  Verify free disk on both hosts before kicking off (`df -h`); keep at
+  least ~500 GB free on whichever box is receiving a large task archive.
 - **CLI:** `--out-dir`, `--max-trials` (testing), `--resume` (skip existing),
   `--task` (optional filter on procedure name).
 - **Resilience:** retry on transient HTTP errors, write a `manifest.csv`
@@ -244,8 +254,8 @@ Flag in PR description, do not block on:
 ## What lives outside this PR
 
 - The actual LASANA HEVC download (W1's *execution*, not the script). Run
-  separately on the Contabo box when ready. There is only one Contabo
-  server — no fleet to spread across.
+  operationally on Contabo first, then shard additional task archives onto
+  Hetzner only after the short overlap test shows both hosts can advance.
 - The downstream Stage-2 launch. That's a config flip + a `bash` command,
   not code.
 - Any change to `src/training/finetune_vlm.py`.
@@ -302,19 +312,24 @@ Fix: task-qualify the score_id, video_id, and frame-dir name in
   is **empty**. Frame extraction has not been attempted yet — it's blocked
   on the unzip step which is itself blocked on the download finishing.
 
-### What's still blocking the LASANA pretrain run
+### Outcome (appended 2026-04-08 16:30 UTC)
 
-A new workstream that did NOT exist in the original design:
+W6 shipped and the operator path changed accordingly.
 
-**W6 — Unzip + frame-extraction pipeline.** The HAL manifest delivers
-LASANA as `<task>_left.zip` archives, not loose HEVC files. Before
-`068_lasana_extract_features.py --frames-only` can run, each zip needs to
-be unpacked into the per-trial layout the frame extractor expects, with
-filenames task-qualified to match the IDs from the d04b4f6 fix. This is
-a small script (probably ~50 LOC) but is on the critical path.
+- `scripts/071_lasana_unzip_and_layout.py` now watches completed
+  task-level archives and materializes the task-qualified
+  `<video_id>/video.hevc` layout required by `068`.
+- `scripts/068_lasana_extract_features.py` now accepts that W6 layout in
+  addition to the legacy tree, with regression coverage in
+  `tests/test_lasana_extract_features.py`.
+- A 60-second overlap test between Contabo and Hetzner showed both hosts
+  could grow their `.part` files concurrently, so Hetzner was promoted
+  from "out of scope" to an approved parallel downloader for
+  `PegTransfer`, `CircleCutting`, and `BalloonResection` while Contabo
+  continues `SutureAndKnot`.
 
 ### Next operational step
 
-Frame availability, not more label-side code. See the
-`2026-04-08_1110_lasana-frame-pipeline.md` entry (queued — write next
-when the unzip + frame pipeline is being scoped).
+Keep the live download workers running, then start `071` in `--watch`
+mode on each host's raw archive directory so frame extraction can begin as
+soon as each zip finishes.

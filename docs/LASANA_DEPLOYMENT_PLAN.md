@@ -57,7 +57,7 @@ grown from 31 single-trainee videos to four research datasets:
 
 | Dataset       | Status                                  | Bytes  | Has labels? |
 |---------------|-----------------------------------------|--------|-------------|
-| LASANA        | not yet downloaded (RunPod target)      | 185 GB | yes (z-GRS) |
+| LASANA        | download in flight on Contabo + Hetzner | 185 GB | yes (z-GRS) |
 | PETRAW        | downloading on Mac (Synapse)            | 24 GB  | yes (workflow + segmentation) |
 | SimSurgSkill  | downloaded + unzipped on Mac            |  5 GB  | yes (bbox + orientation) |
 | JIGSAWS       | metadata-only (no video archive exists) | <5 MB  | yes (GRS, kinematics) |
@@ -435,31 +435,44 @@ before moving on; items marked **$** start the meter.
 1. ✅ Push 4-dataset README + ingestion scripts (already done in PR #1).
 2. ☐ Finish PETRAW Test.zip download on Mac (in flight, ~10 min).
 3. ☐ Verify PETRAW + SimSurgSkill checksums on Mac.
-4. ☐ Write `scripts/068_lasana_extract_features.py` (CPU-friendly,
-   tested on a 2-trial sample first).
-5. ☐ Write `scripts/069_train_head.py` (frozen-backbone regression
+4. ✅ Write `scripts/068_lasana_extract_features.py` and teach it the
+   task-qualified W6 layout (`<video_id>/video.hevc`), with regression
+   coverage for the new path.
+5. ✅ Write `scripts/071_lasana_unzip_and_layout.py` so completed
+   task-level zip archives are unpacked into per-trial video folders as
+   downloads finish.
+6. ☐ Write `scripts/069_train_head.py` (frozen-backbone regression
    head, runnable on CPU with 2 samples).
-6. ☐ Decide which Hugging Face base model we're fine-tuning; record
+7. ☐ Decide which Hugging Face base model we're fine-tuning; record
    in `src/configs/finetune_lasana_v1.yaml`.
-7. ☐ Set `HF_TOKEN`, `WANDB_API_KEY`, `BACKBLAZE_KEY` in `.env.example`
+8. ☐ Set `HF_TOKEN`, `WANDB_API_KEY`, `BACKBLAZE_KEY` in `.env.example`
    (placeholders, not real values).
-8. **GATE:** the two new scripts both run end-to-end on the Mac with
-   the 2-trial sample. If they don't, do not pay for any GPU.
+9. **GATE:** the new archive-layout + frame-extraction scripts run
+   end-to-end on a 2-trial sample before any paid pod work starts.
+   If they don't, do not pay for any GPU.
 
 ### Stage 1 — phase 1 ingest pod ($, ~$2)
 
-1. ☐ Pick Vast.ai CPU-only listing: ≥16 vCPU, ≥32 GB RAM, ≥300 GB disk,
-   driver ≥ 535, Ubuntu 22.04, no GPU. Target rate ≤ $0.20/hr.
-2. ☐ SSH in, run smoke-test from §8 (no GPU lines apply, but the
-   ffmpeg/python lines must pass).
-3. ☐ Clone repo, run `pip install -e .` (no `[training]`, no GPU deps).
-4. ☐ Run `bash scripts/061_lasana_download_runpod.sh POD=ALL`
-   (already in repo) into `/workspace/lasana`.
-5. ☐ Verify byte counts against the manifest in `LASANA_README.md`.
-6. ☐ Run `python scripts/068_lasana_extract_features.py --frames-only`
-   to decode 1 fps left-channel JPEGs. Sync to B2 as it goes.
-7. ☐ Destroy the pod when done. **Stop the meter.**
-8. **GATE:** B2 bucket contains ~8 GB of JPEG frames + the manifest CSV.
+1. ✅ Contabo is the primary manifest downloader for the straggler task:
+   `python scripts/070_lasana_download.py --manifest-path data/external/lasana/_meta/bitstreams.json --out-dir /data/fls/raw-videos/lasana --resume --task SutureAndKnot`
+2. ✅ Before adding a second box, run a 60-second per-IP-vs-per-account
+   overlap check from Hetzner S5 while Contabo is already downloading.
+   If both `.part` files grow, parallelize across hosts.
+3. ✅ Hetzner S5 can carry the other three tasks in parallel. Launch one
+   resumable worker each for `PegTransfer`, `CircleCutting`, and
+   `BalloonResection`, writing task archives into
+   `/data/fls/raw-videos/lasana` on the Hetzner host.
+4. ☐ On each storage host, run
+   `python scripts/071_lasana_unzip_and_layout.py --raw-dir <raw-zips> --out-dir <laid-out-videos> --watch`
+   so completed `*.zip` archives are unpacked into
+   `<video_id>/video.hevc` as soon as the final rename lands.
+5. ☐ Run `python scripts/068_lasana_extract_features.py --frames-only`
+   against the laid-out W6 tree, not the raw archive directory. Example:
+   `python scripts/068_lasana_extract_features.py --frames-only --lasana-dir <laid-out-videos> --out-dir <processed-root> --fps 1`
+6. ☐ Verify frame counts and the extractor manifest before destroying any
+   paid pod. Archive byte counts alone are no longer the only gate.
+7. **GATE:** the processed root contains the expected JPEG frames plus a
+   manifest proving `068` consumed the task-qualified layout.
 
 ### Stage 2 — phase 2 small GPU ($, ~$2)
 
@@ -574,7 +587,9 @@ These are the conditions under which **we stop spending immediately**:
 - `data/external/CITATIONS.md` — required citations for all 4 datasets
 - `deploy/runpod_launch.sh` — provider-agnostic one-shot launcher
 - `deploy/runpod_watchdog.sh` — continuous mode + checkpoint resume
-- `scripts/061_lasana_download_runpod.sh` — phase 1 ingest script
+- `scripts/070_lasana_download.py` — manifest-aware downloader for task archives
+- `scripts/071_lasana_unzip_and_layout.py` — task-archive watcher that emits `<video_id>/video.hevc`
+- `scripts/068_lasana_extract_features.py` — frame extraction + feature caching over the W6 layout
 - RunPod pricing: https://www.runpod.io/pricing
 - Vast.ai pricing: https://vast.ai/pricing
 - Cloud GPU price tracker: https://getdeploying.com/gpus/nvidia-h100
