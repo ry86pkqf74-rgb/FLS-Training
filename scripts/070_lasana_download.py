@@ -27,7 +27,7 @@ from urllib import error, request
 
 LOG = logging.getLogger("lasana_download")
 DEFAULT_MANIFEST = Path("data/external/lasana/_meta/bitstreams.json")
-MIN_FREE_BYTES = 500 * 1024 * 1024 * 1024
+DEFAULT_MIN_FREE_GB = 500.0
 RETRYABLE_STATUS_CODES = {408, 429, 500, 502, 503, 504}
 
 
@@ -165,11 +165,17 @@ def ensure_free_disk(out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     usage = shutil.disk_usage(out_dir)
     free_gb = usage.free / (1024 ** 3)
+    min_free_gb_raw = os.getenv("LASANA_MIN_FREE_GB", str(DEFAULT_MIN_FREE_GB)).strip()
+    try:
+        min_free_gb = float(min_free_gb_raw)
+    except ValueError as exc:
+        raise SystemExit(f"LASANA_MIN_FREE_GB must be numeric, got: {min_free_gb_raw!r}") from exc
+    min_free_bytes = int(min_free_gb * 1024 ** 3)
     LOG.info("Disk free at %s: %.1f GiB", out_dir, free_gb)
-    if usage.free < MIN_FREE_BYTES:
+    if usage.free < min_free_bytes:
         raise SystemExit(
             f"Refusing to start download with only {free_gb:.1f} GiB free at {out_dir}; "
-            "need at least 500 GiB on the Contabo host"
+            f"need at least {min_free_gb:.1f} GiB free"
         )
 
 
