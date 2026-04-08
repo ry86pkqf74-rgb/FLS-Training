@@ -1,0 +1,110 @@
+{
+  "id": "score_consensus_yt_XaZ_6wsUsiM_20260408045348",
+  "video_id": "yt_XaZ_6wsUsiM",
+  "video_filename": "XaZ_6wsUsiM.f136.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:53:48.930075",
+  "frame_analyses": [],
+  "completion_time_seconds": 21.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 4.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 4.0,
+      "end_seconds": 7.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 7.0,
+      "end_seconds": 11.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 11.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 15.0,
+      "end_seconds": 19.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 19.0,
+      "end_seconds": 21.0,
+      "duration_seconds": 2.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot with double throw executed with stability"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand switching"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final knot held securely with proper hand switching"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.8,
+    "total_deviation_penalty": 3.3,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain appears properly closed with no visible gaps"
+  },
+  "estimated_penalties": 3.3,
+  "estimated_fls_score": 513.0,
+  "confidence_score": 0.72,
+  "technique_summary": "This appears to be a demonstration video showing excellent technical execution of FLS Task 5. Major disagreement between teachers on timing (21s vs 147s) - favored the more plausible shorter duration typical of skilled performance. Both teachers agreed on proper surgeon's knot formation, correct hand switching pattern, and complete slit closure. Suture placement showed minimal deviation from target marks.",
+  "improvement_suggestions": [
+    "Demonstration video - technique appears optimal for instructional purposes"
+  ],
+  "strengths": [
+    "Excellent technical demonstration",
+    "Proper surgeon's knot formation",
+    "Correct hand switching technique",
+    "Complete slit closure without gaps"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

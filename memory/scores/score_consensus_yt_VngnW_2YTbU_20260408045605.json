@@ -1,0 +1,111 @@
+{
+  "id": "score_consensus_yt_VngnW_2YTbU_20260408045605",
+  "video_id": "yt_VngnW_2YTbU",
+  "video_filename": "VngnW_2YTbU.f136.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:56:05.629852",
+  "frame_analyses": [],
+  "completion_time_seconds": 277.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 35.0,
+      "duration_seconds": 35.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 35.0,
+      "end_seconds": 126.0,
+      "duration_seconds": 91.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 126.0,
+      "end_seconds": 173.0,
+      "duration_seconds": 47.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 173.0,
+      "end_seconds": 207.0,
+      "duration_seconds": 34.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 207.0,
+      "end_seconds": 242.0,
+      "duration_seconds": 35.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 242.0,
+      "end_seconds": 277.0,
+      "duration_seconds": 35.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot (double throw) executed with good technique"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Correct hand switching and single throw execution"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final throw with proper hand switching maintained"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.25,
+    "total_deviation_penalty": 4.25,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain appears well-closed with no visible gaps after knot tightening"
+  },
+  "estimated_penalties": 4.25,
+  "estimated_fls_score": 337.0,
+  "confidence_score": 0.8,
+  "technique_summary": "Solid performance with proper surgeon's knot sequence and hand switching technique. Major disagreement resolved: Claude's 277s completion time favored over GPT-4o's 240s due to more realistic phase breakdown. Suture placement penalties averaged between the two assessments. Both teachers agreed on excellent knot technique and drain closure.",
+  "improvement_suggestions": [
+    "Work on reducing overall completion time",
+    "Focus on more precise suture placement to minimize deviation penalties"
+  ],
+  "strengths": [
+    "Proper knot sequence execution",
+    "Consistent hand switching between throws",
+    "Good instrument control throughout procedure",
+    "Secure and stable knot tying"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

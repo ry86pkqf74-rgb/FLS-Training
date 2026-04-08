@@ -1,0 +1,169 @@
+{
+  "feedback_id": "feedback_yt_vjSoFfEkeMg_20260408044519",
+  "video_id": "yt_vjSoFfEkeMg",
+  "score_id": "score_consensus_yt_vjSoFfEkeMg_20260408044519",
+  "generated_at": "2026-04-08T04:45:19.244015",
+  "generator": "teacher",
+  "headline": "Strong improvement: 24s faster (126s / 472 FLS)",
+  "fls_score": 471.5,
+  "completion_time": 126.0,
+  "attempt_number": 178,
+  "phase_coaching": [
+    {
+      "phase": "needle_load",
+      "duration_seconds": 20.0,
+      "benchmark_seconds": 8.0,
+      "expert_seconds": 5.0,
+      "status": "regressing",
+      "trend_last_5": [
+        25.0,
+        18.0,
+        5.0,
+        20.0
+      ],
+      "coaching_note": "Regressed from recent average of 14s. Check for fatigue or equipment change.",
+      "recommended_drill": "needle_loading"
+    },
+    {
+      "phase": "suture_placement",
+      "duration_seconds": 25.0,
+      "benchmark_seconds": 22.0,
+      "expert_seconds": 15.0,
+      "status": "regressing",
+      "trend_last_5": [
+        35.0,
+        27.0,
+        15.0,
+        10.0,
+        29.0
+      ],
+      "coaching_note": "Regressed from recent average of 18s. Check for fatigue or equipment change.",
+      "recommended_drill": "needle_driving_angle"
+    },
+    {
+      "phase": "first_throw",
+      "duration_seconds": 30.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "regressing",
+      "trend_last_5": [
+        40.0,
+        30.0,
+        8.0,
+        10.0,
+        19.0
+      ],
+      "coaching_note": "Regressed from recent average of 12s. Check for fatigue or equipment change.",
+      "recommended_drill": "wrapping_speed"
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 20.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        40.0,
+        30.0,
+        7.0,
+        10.0,
+        19.0
+      ],
+      "coaching_note": "Regressed from recent average of 12s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 20.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "regressing",
+      "trend_last_5": [
+        40.0,
+        30.0,
+        10.0,
+        10.0,
+        19.0
+      ],
+      "coaching_note": "Regressed from recent average of 13s. Check for fatigue or equipment change.",
+      "recommended_drill": "hand_switching"
+    },
+    {
+      "phase": "suture_cut",
+      "duration_seconds": 11.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 10.0,
+      "status": "improving",
+      "trend_last_5": [
+        30.0,
+        12.0,
+        10.0,
+        39.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "medium",
+      "phase": "needle_load",
+      "current_value": "20s",
+      "target_value": "8s",
+      "description": "needle_load: 20s → target 8s (12s potential savings)",
+      "drill": "needle_loading",
+      "expected_time_savings": "~12s"
+    },
+    {
+      "rank": 2,
+      "priority": "low",
+      "phase": "first_throw",
+      "current_value": "30s",
+      "target_value": "20s",
+      "description": "first_throw: 30s → target 20s (10s potential savings)",
+      "drill": "wrapping_speed",
+      "expected_time_savings": "~10s"
+    },
+    {
+      "rank": 3,
+      "priority": "low",
+      "phase": "suture_placement",
+      "current_value": "25s",
+      "target_value": "22s",
+      "description": "suture_placement: 25s → target 22s (3s potential savings)",
+      "drill": "needle_driving_angle",
+      "expected_time_savings": "~3s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "35% improvement from baseline (195s → 126s)",
+      "evidence": "Baseline: 195s, Current: 126s, Best: 0s",
+      "actionable": true,
+      "recommendation": ""
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~3 consecutive attempts",
+      "evidence": "10 instances of >30% slowdown within 3-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 2 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Perfect knot sequence with surgeon's knot and proper hand switching",
+    "Accurate suture placement with minimal deviation",
+    "Efficient completion time showing good skill progression",
+    "Drain not avulsed — safe tissue handling maintained",
+    "24s faster than previous attempt"
+  ],
+  "fatigue_risk": "moderate",
+  "fatigue_evidence": "Time increased 20%+ over last 3 attempts: ['45s', '150s', '126s']",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "~4 points below typical proficiency cutoff (475)",
+  "next_session_plan": "REST before next session — fatigue detected. When fresh, limit to 2-3 scored attempts. Warm up with 5 minutes of needle_loading drills before scoring. Primary focus: needle_load (currently 20s, target 8s). Consider recording with direct camera for highest scoring confidence."
+}

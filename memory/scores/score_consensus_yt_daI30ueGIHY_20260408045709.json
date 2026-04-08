@@ -1,0 +1,52 @@
+{
+  "id": "score_consensus_yt_daI30ueGIHY_20260408045709",
+  "video_id": "yt_daI30ueGIHY",
+  "video_filename": "daI30ueGIHY.f135.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:57:09.132291",
+  "frame_analyses": [],
+  "completion_time_seconds": 600.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 18.0,
+      "duration_seconds": 18.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.0,
+    "deviation_from_mark2_mm": 0.0,
+    "total_deviation_penalty": 0.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "unknown",
+    "assessment_note": "No actual task performance visible - instructional video only"
+  },
+  "estimated_penalties": 600.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.8,
+  "technique_summary": "This is an instructional video demonstrating laparoscopic suturing techniques rather than an actual FLS Task 5 performance. While Teacher B identified some needle loading activity in the first 18 seconds, both teachers agreed no complete task execution occurred. The maximum penalty is applied as no meaningful task completion was achieved. Disagreement resolved by favoring Claude's assessment that this is purely educational content.",
+  "improvement_suggestions": [
+    "This is an educational video, not a task performance",
+    "To score FLS Task 5, need video of actual task execution with complete suturing and knot tying"
+  ],
+  "strengths": [
+    "Educational content appears well-structured",
+    "Demonstrates proper technique principles",
+    "Good instructional details on physical principles"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

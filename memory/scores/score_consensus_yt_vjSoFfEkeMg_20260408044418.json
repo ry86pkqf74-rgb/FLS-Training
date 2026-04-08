@@ -1,0 +1,112 @@
+{
+  "id": "score_consensus_yt_vjSoFfEkeMg_20260408044418",
+  "video_id": "yt_vjSoFfEkeMg",
+  "video_filename": "vjSoFfEkeMg.f136.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:44:18.244902",
+  "frame_analyses": [],
+  "completion_time_seconds": 165.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 22.5,
+      "duration_seconds": 22.5
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 23.0,
+      "end_seconds": 57.5,
+      "duration_seconds": 34.5
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 58.0,
+      "end_seconds": 82.5,
+      "duration_seconds": 24.5
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 83.0,
+      "end_seconds": 102.5,
+      "duration_seconds": 19.5
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 103.0,
+      "end_seconds": 125.0,
+      "duration_seconds": 22.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 125.5,
+      "end_seconds": 165.0,
+      "duration_seconds": 39.5
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot with double wrap visible and well-executed"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand switching, knot tight"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final single throw completing knot sequence without slippage"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.8,
+    "deviation_from_mark2_mm": 2.2,
+    "total_deviation_penalty": 4.0,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Slit properly closed with no visible gaps after knot tightening"
+  },
+  "estimated_penalties": 4.0,
+  "estimated_fls_score": 431.0,
+  "confidence_score": 0.7,
+  "technique_summary": "Teachers disagreed on completion time (180s vs 150s) and suture placement accuracy. Claude noted video quality issues with title screen overlay affecting assessment, while GPT-4o provided more confident scoring. Consensus favors middle ground on penalties and timings. Both agreed on proper knot sequence with surgeon's knot first throw and appropriate hand switching.",
+  "improvement_suggestions": [
+    "Focus on more precise suture placement to minimize deviation from marks",
+    "Improve speed while maintaining accuracy to reduce completion time",
+    "Ensure uninterrupted video recording for complete assessment"
+  ],
+  "strengths": [
+    "Proper surgeon's knot formation on first throw",
+    "Appropriate hand switching between throws",
+    "Good knot tying technique with secure results",
+    "Effective slit closure with no gaps"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

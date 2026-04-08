@@ -1,0 +1,53 @@
+{
+  "feedback_id": "feedback_yt_daI30ueGIHY_20260408045647",
+  "video_id": "yt_daI30ueGIHY",
+  "score_id": "score_consensus_yt_daI30ueGIHY_20260408045647",
+  "generated_at": "2026-04-08T04:56:47.751803",
+  "generator": "teacher",
+  "headline": "Strong improvement: 180s faster (0s / 0 FLS)",
+  "fls_score": 0.0,
+  "completion_time": 0.0,
+  "attempt_number": 222,
+  "phase_coaching": [
+    {
+      "phase": "idle",
+      "duration_seconds": 0.0,
+      "benchmark_seconds": 25.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "100% improvement from baseline (195s → 0s)",
+      "evidence": "Baseline: 195s, Current: 0s, Best: 0s",
+      "actionable": true,
+      "recommendation": ""
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~3 consecutive attempts",
+      "evidence": "16 instances of >30% slowdown within 3-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 2 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Comprehensive educational content",
+    "Clear demonstration of proper techniques",
+    "Drain not avulsed — safe tissue handling maintained",
+    "180s faster than previous attempt"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "~475 points below typical proficiency cutoff (475)",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Consider recording with direct camera for highest scoring confidence."
+}

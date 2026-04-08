@@ -1,0 +1,105 @@
+{
+  "id": "score_consensus_yt_d8zTqbRFF0s_20260408045137",
+  "video_id": "yt_d8zTqbRFF0s",
+  "video_filename": "d8zTqbRFF0s.f136.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "critique_agent",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:51:37.219642",
+  "frame_analyses": [],
+  "completion_time_seconds": 45.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 5.0,
+      "end_seconds": 30.0,
+      "duration_seconds": 25.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 30.0,
+      "end_seconds": 40.0,
+      "duration_seconds": 10.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 40.0,
+      "end_seconds": 43.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 43.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 2.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot with double throw clearly executed"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand switching"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final single throw with hand switching completed"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 1.8,
+    "total_deviation_penalty": 3.3,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain slit appears properly closed with no visible gap"
+  },
+  "estimated_penalties": 3.3,
+  "estimated_fls_score": 525.0,
+  "confidence_score": 0.8,
+  "technique_summary": "Excellent technique demonstrated with proper surgeon's knot formation, correct hand switching between throws, and good knot security. Major disagreement resolved: Claude's 45-second timing deemed more plausible than GPT-4o's 147 seconds. Suture placement penalties averaged between the two assessments. Task completed efficiently with minimal penalties.",
+  "improvement_suggestions": [
+    "Focus on more precise suture placement at the marked locations",
+    "Consider optimizing instrument movements for even faster completion"
+  ],
+  "strengths": [
+    "Proper surgeon's knot technique",
+    "Correct hand switching sequence",
+    "Secure knot formation",
+    "Efficient completion time"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

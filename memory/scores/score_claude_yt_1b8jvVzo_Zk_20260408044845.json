@@ -1,0 +1,171 @@
+{
+  "id": "score_claude_yt_1b8jvVzo_Zk_20260408044845",
+  "video_id": "yt_1b8jvVzo_Zk",
+  "video_filename": "1b8jvVzo_Zk.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:48:45.020681",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Setup screen with dialog box asking to close right handle completely",
+      "technique_notes": "System initialization, no surgical activity yet"
+    },
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Needle driver visible with suture already loaded, positioned near Penrose drain with visible black marks",
+      "technique_notes": "Good needle loading technique, proper positioning"
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Text overlay instructs to pierce through two black dots, needle positioned for first mark",
+      "technique_notes": "Clear visualization of target marks, proper approach angle"
+    },
+    {
+      "frame_number": 4,
+      "phase": "first_throw",
+      "description": "Text overlay indicates to make double-throw knot, instruments actively manipulating suture",
+      "technique_notes": "Beginning surgeon's knot formation, appropriate hand positioning"
+    },
+    {
+      "frame_number": 5,
+      "phase": "first_throw",
+      "description": "Suture passes through both marks, knot formation in progress with instruments tying",
+      "technique_notes": "Good suture placement accuracy, active knot tying technique"
+    },
+    {
+      "frame_number": 6,
+      "phase": "second_throw",
+      "description": "Text overlay instructs single-throw knot, second throw being executed",
+      "technique_notes": "Proper progression to second throw, hands appear to have switched"
+    },
+    {
+      "frame_number": 7,
+      "phase": "third_throw",
+      "description": "Text overlay indicates another single-throw knot, third throw in progress",
+      "technique_notes": "Consistent technique for final throw, proper hand switching"
+    },
+    {
+      "frame_number": 8,
+      "phase": "suture_cut",
+      "description": "Dialog asks about changing to shears, cutting phase initiated",
+      "technique_notes": "Proper transition to cutting instruments"
+    },
+    {
+      "frame_number": 9,
+      "phase": "suture_cut",
+      "description": "Text overlay instructs cutting from both sides, scissors positioned for cutting",
+      "technique_notes": "Appropriate cutting technique, bilateral approach"
+    },
+    {
+      "frame_number": 21,
+      "phase": "completion",
+      "description": "Final view showing completed knot with drain closed, suture ends cut",
+      "technique_notes": "Task completed successfully, drain slit appears well closed"
+    }
+  ],
+  "completion_time_seconds": 245.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 15.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 45.0,
+      "end_seconds": 95.0,
+      "duration_seconds": 50.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 95.0,
+      "end_seconds": 140.0,
+      "duration_seconds": 45.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 140.0,
+      "end_seconds": 190.0,
+      "duration_seconds": 50.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 190.0,
+      "end_seconds": 245.0,
+      "duration_seconds": 55.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot with double throw executed"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw with proper hand switching"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final single throw with hand switching, knot appears secure"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain slit appears well closed with no visible gap, knot properly tightened"
+  },
+  "estimated_penalties": 4.0,
+  "estimated_fls_score": 351.0,
+  "confidence_score": 0.75,
+  "technique_summary": "Trainee demonstrated proper FLS Task 5 technique with correct surgeon's knot followed by appropriate single throws with hand switching. The suture placement was reasonably accurate and the knot appears secure with good drain closure.",
+  "improvement_suggestions": [
+    "Work on speed efficiency - 245 seconds is significantly above optimal performance",
+    "Focus on more precise suture placement to minimize deviation penalties"
+  ],
+  "strengths": [
+    "Proper knot sequence execution",
+    "Appropriate hand switching between throws",
+    "Good final knot security and drain closure"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

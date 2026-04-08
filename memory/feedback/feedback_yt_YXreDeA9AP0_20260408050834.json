@@ -1,0 +1,101 @@
+{
+  "feedback_id": "feedback_yt_YXreDeA9AP0_20260408050834",
+  "video_id": "yt_YXreDeA9AP0",
+  "score_id": "score_consensus_yt_YXreDeA9AP0_20260408050834",
+  "generated_at": "2026-04-08T05:08:34.571221",
+  "generator": "teacher",
+  "headline": "Strong improvement: 135s faster (45s / 555 FLS)",
+  "fls_score": 555.0,
+  "completion_time": 45.0,
+  "attempt_number": 234,
+  "phase_coaching": [
+    {
+      "phase": "first_throw",
+      "duration_seconds": 18.0,
+      "benchmark_seconds": 20.0,
+      "expert_seconds": 15.0,
+      "status": "improving",
+      "trend_last_5": [
+        20.0,
+        20.0,
+        19.0,
+        30.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "second_throw",
+      "duration_seconds": 14.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "improving",
+      "trend_last_5": [
+        20.0,
+        20.0,
+        19.0,
+        20.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "third_throw",
+      "duration_seconds": 8.0,
+      "benchmark_seconds": 18.0,
+      "expert_seconds": 12.0,
+      "status": "improving",
+      "trend_last_5": [
+        30.0,
+        20.0,
+        19.0,
+        20.0
+      ],
+      "coaching_note": "Trending down — keep current approach.",
+      "recommended_drill": null
+    },
+    {
+      "phase": "completion",
+      "duration_seconds": 5.0,
+      "benchmark_seconds": 25.0,
+      "expert_seconds": 15.0,
+      "status": "on_track",
+      "trend_last_5": [
+        20.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": null
+    }
+  ],
+  "top_priorities": [],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "77% improvement from baseline (195s → 45s)",
+      "evidence": "Baseline: 195s, Current: 45s, Best: 0s",
+      "actionable": true,
+      "recommendation": ""
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~3 consecutive attempts",
+      "evidence": "17 instances of >30% slowdown within 3-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 2 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Perfect knot tying technique demonstration",
+    "Clear hand switching between throws",
+    "Secure surgeon's knot formation",
+    "Drain not avulsed — safe tissue handling maintained",
+    "135s faster than previous attempt"
+  ],
+  "fatigue_risk": "none",
+  "fatigue_evidence": "",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "At or above proficiency level",
+  "next_session_plan": "Good to continue — aim for 3-4 scored attempts next session. Consider recording with direct camera for highest scoring confidence."
+}

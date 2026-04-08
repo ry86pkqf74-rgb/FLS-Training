@@ -1,0 +1,70 @@
+{
+  "feedback_id": "feedback_yt_daI30ueGIHY_20260408045709",
+  "video_id": "yt_daI30ueGIHY",
+  "score_id": "score_consensus_yt_daI30ueGIHY_20260408045709",
+  "generated_at": "2026-04-08T04:57:09.151075",
+  "generator": "teacher",
+  "headline": "Regression: 420s slower — check fatigue or equipment change",
+  "fls_score": 0.0,
+  "completion_time": 600.0,
+  "attempt_number": 222,
+  "phase_coaching": [
+    {
+      "phase": "needle_load",
+      "duration_seconds": 18.0,
+      "benchmark_seconds": 8.0,
+      "expert_seconds": 5.0,
+      "status": "on_track",
+      "trend_last_5": [
+        20.0,
+        10.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "coaching_note": "",
+      "recommended_drill": "needle_loading"
+    }
+  ],
+  "top_priorities": [
+    {
+      "rank": 1,
+      "priority": "low",
+      "phase": "needle_load",
+      "current_value": "18s",
+      "target_value": "8s",
+      "description": "needle_load: 18s → target 8s (10s potential savings)",
+      "drill": "needle_loading",
+      "expected_time_savings": "~10s"
+    }
+  ],
+  "progression_insights": [
+    {
+      "insight_type": "overall_progress",
+      "description": "-208% improvement from baseline (195s → 600s)",
+      "evidence": "Baseline: 195s, Current: 600s, Best: 0s",
+      "actionable": true,
+      "recommendation": "Performance below baseline — check equipment or fatigue."
+    },
+    {
+      "insight_type": "fatigue_pattern",
+      "description": "Fatigue crashes detected after ~3 consecutive attempts",
+      "evidence": "17 instances of >30% slowdown within 3-attempt blocks",
+      "actionable": true,
+      "recommendation": "Limit sessions to 2 scored attempts, then rest."
+    }
+  ],
+  "equipment_note": null,
+  "strengths": [
+    "Educational content appears well-structured",
+    "Demonstrates proper technique principles",
+    "Good instructional details on physical principles",
+    "Drain not avulsed — safe tissue handling maintained"
+  ],
+  "fatigue_risk": "moderate",
+  "fatigue_evidence": "Time increased 20%+ over last 3 attempts: ['150s', '180s', '600s']",
+  "session_recommendation": "",
+  "percentile_estimate": null,
+  "distance_to_proficiency": "~475 points below typical proficiency cutoff (475)",
+  "next_session_plan": "REST before next session — fatigue detected. When fresh, limit to 2-3 scored attempts. Warm up with 5 minutes of needle_loading drills before scoring. Primary focus: needle_load (currently 18s, target 8s). Consider recording with direct camera for highest scoring confidence."
+}

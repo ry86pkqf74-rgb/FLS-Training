@@ -1,0 +1,158 @@
+{
+  "id": "score_gpt_yt_XaZ_6wsUsiM_20260408045325",
+  "video_id": "yt_XaZ_6wsUsiM",
+  "video_filename": "XaZ_6wsUsiM.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:53:25.900102",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "needle_load",
+      "description": "Preparing to load needle on instruments.",
+      "technique_notes": "Positioning looks appropriate."
+    },
+    {
+      "frame_number": 2,
+      "phase": "suture_placement",
+      "description": "Suture being placed through the marks on the Penrose drain.",
+      "technique_notes": "Proper supination and alignment seen."
+    },
+    {
+      "frame_number": 3,
+      "phase": "first_throw",
+      "description": "Initiating the first throw by alternating instruments.",
+      "technique_notes": "Gradual motion and control observed."
+    },
+    {
+      "frame_number": 5,
+      "phase": "first_throw",
+      "description": "Incorrect traction applied while securing the first throw.",
+      "technique_notes": "Could potentially lead to improper tightening of the knot."
+    },
+    {
+      "frame_number": 7,
+      "phase": "second_throw",
+      "description": "Beginning the second throw after successful first throw completion.",
+      "technique_notes": "Appropriate hand switching observed."
+    },
+    {
+      "frame_number": 9,
+      "phase": "third_throw",
+      "description": "Final throw being performed, switching hands again.",
+      "technique_notes": "Stable instrument handling."
+    },
+    {
+      "frame_number": 10,
+      "phase": "third_throw",
+      "description": "Tightening of third throw being finalized.",
+      "technique_notes": "No visible gap in the drain slit."
+    },
+    {
+      "frame_number": 21,
+      "phase": "suture_cut",
+      "description": "Cutting both suture ends to complete the task.",
+      "technique_notes": "Completes with no hesitation."
+    }
+  ],
+  "completion_time_seconds": 147.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 18.0,
+      "duration_seconds": 18.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 18.0,
+      "end_seconds": 36.0,
+      "duration_seconds": 18.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 36.0,
+      "end_seconds": 60.0,
+      "duration_seconds": 24.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 60.0,
+      "end_seconds": 90.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 90.0,
+      "end_seconds": 120.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 120.0,
+      "end_seconds": 147.0,
+      "duration_seconds": 27.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "First throw executed with stability."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Hand switching correctly followed on second throw."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final knot held securely without slipping."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 2.5,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No visible gap after completion."
+  },
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 450.5,
+  "confidence_score": 0.78,
+  "technique_summary": "The trainee followed correct procedures with minimal deviation in suture placement. The task was completed securely without any gaps visible in the slit, indicating a good knot tension. Hand switching was appropriately done.",
+  "improvement_suggestions": [
+    "Improve traction in first throw to ensure optimal knot tightening.",
+    "Maintain even steadiness throughout all suture actions."
+  ],
+  "strengths": [
+    "Correct hand switching technique.",
+    "Consistent knot security without slippage."
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

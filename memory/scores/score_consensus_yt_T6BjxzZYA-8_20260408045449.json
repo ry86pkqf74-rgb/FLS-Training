@@ -1,0 +1,165 @@
+{
+  "id": "score_consensus_yt_T6BjxzZYA-8_20260408045449",
+  "video_id": "yt_T6BjxzZYA-8",
+  "video_filename": "T6BjxzZYA-8.f136.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "fallback_claude",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:54:41.146072",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "suture_placement",
+      "description": "Task in progress with instruments visible grasping suture through Penrose drain. Suture appears to be placed through both marks on the drain.",
+      "technique_notes": "Good visualization of suture placement through the slit drain"
+    },
+    {
+      "frame_number": 2,
+      "phase": "first_throw",
+      "description": "Educational overlay showing 'Critical Steps: 1. C Loop' - demonstrating the formation of the initial C-loop for the surgeon's knot first throw",
+      "technique_notes": "Instructional frame highlighting proper C-loop technique for surgeon's knot"
+    },
+    {
+      "frame_number": 3,
+      "phase": "first_throw",
+      "description": "Educational demonstration of 'REVERSE C LOOP' technique with anatomical hand model showing proper hand positioning",
+      "technique_notes": "Clear demonstration of reverse C-loop formation which is part of surgeon's knot technique"
+    },
+    {
+      "frame_number": 4,
+      "phase": "first_throw",
+      "description": "Continuing first throw with instruction to 'SLIDE KNOT DOWN THE POST' - showing proper knot tightening technique",
+      "technique_notes": "Good emphasis on sliding knot down to secure the first throw properly"
+    },
+    {
+      "frame_number": 5,
+      "phase": "second_throw",
+      "description": "Transitioning to subsequent throws with text 'CONTINUE TO TIE KNOTS USING C LOOP AND REVERSE C LOOP' showing ongoing knot tying",
+      "technique_notes": "Proper continuation of knot sequence with alternating loop techniques"
+    },
+    {
+      "frame_number": 6,
+      "phase": "third_throw",
+      "description": "Final phases of knot tying visible with instruments manipulating suture to complete the knot sequence",
+      "technique_notes": "Final throw completion with appropriate instrument handling"
+    },
+    {
+      "frame_number": 7,
+      "phase": "completion",
+      "description": "Educational overlay stating 'SOLUTION 2: Snug the knot before performing knot roll and slide' - showing troubleshooting technique",
+      "technique_notes": "Instructional content on proper knot securing technique"
+    },
+    {
+      "frame_number": 8,
+      "phase": "completion",
+      "description": "Final knot positioning and securing phase with instruments properly positioned for knot finalization",
+      "technique_notes": "Good final positioning of knot on the drain"
+    },
+    {
+      "frame_number": 9,
+      "phase": "suture_cut",
+      "description": "Suture cutting phase with scissors positioned to cut excess suture material",
+      "technique_notes": "Appropriate scissors positioning for clean suture cutting"
+    },
+    {
+      "frame_number": 10,
+      "phase": "suture_cut",
+      "description": "Final cutting of suture ends with proper scissors technique to complete the task",
+      "technique_notes": "Clean cutting technique to finish the procedure"
+    }
+  ],
+  "completion_time_seconds": 300.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 0.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 45.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 45.0,
+      "end_seconds": 135.0,
+      "duration_seconds": 90.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 135.0,
+      "end_seconds": 195.0,
+      "duration_seconds": 60.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 195.0,
+      "end_seconds": 255.0,
+      "duration_seconds": 60.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 255.0,
+      "end_seconds": 300.0,
+      "duration_seconds": 45.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Proper surgeon's knot formation with C-loop and reverse C-loop technique demonstrated"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Good hand switching and single throw technique"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Proper final throw with appropriate hand switching"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Drain appears well-secured with no visible gaps after knot tightening"
+  },
+  "estimated_penalties": 4.0,
+  "estimated_fls_score": 296.0,
+  "confidence_score": 0.72,
+  "technique_summary": "This appears to be an educational demonstration video showing proper FLS Task 5 technique with clear instructional overlays. The performance demonstrates good fundamental technique with proper surgeon's knot formation and hand switching.",
+  "improvement_suggestions": [
+    "Focus on more precise suture placement to minimize deviation from marks",
+    "Work on speed while maintaining technique quality"
+  ],
+  "strengths": [
+    "Excellent demonstration of surgeon's knot technique",
+    "Proper hand switching between throws",
+    "Good educational value with clear technique demonstration"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

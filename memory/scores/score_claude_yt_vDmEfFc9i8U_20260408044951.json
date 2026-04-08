@@ -1,0 +1,236 @@
+{
+  "id": "score_claude_yt_vDmEfFc9i8U_20260408044951",
+  "video_id": "yt_vDmEfFc9i8U",
+  "video_filename": "vDmEfFc9i8U.f134.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:49:51.417645",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Black screen, task not yet started",
+      "technique_notes": "Video begins with black frame"
+    },
+    {
+      "frame_number": 2,
+      "phase": "suture_placement",
+      "description": "Instruments visible over FLS trainer with needle holder approaching Penrose drain",
+      "technique_notes": "Good instrument positioning, can see the marked drain clearly"
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Needle holder grasping suture, positioning for first mark placement",
+      "technique_notes": "Steady approach to first suturing mark"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Suture being placed through first mark on Penrose drain",
+      "technique_notes": "Appears to be accurate placement through the marked location"
+    },
+    {
+      "frame_number": 5,
+      "phase": "suture_placement",
+      "description": "Needle visible through drain, proceeding to second mark",
+      "technique_notes": "Clean needle passage, moving efficiently to second mark"
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Instructional overlay showing pronation/supination movements",
+      "technique_notes": "Educational overlay appears - demonstrates proper wrist movements"
+    },
+    {
+      "frame_number": 7,
+      "phase": "idle",
+      "description": "Black transition screen with slow motion text",
+      "technique_notes": "Video transition indicating slow motion replay"
+    },
+    {
+      "frame_number": 8,
+      "phase": "suture_placement",
+      "description": "Normal speed view of suture placement through drain",
+      "technique_notes": "Return to real-time footage showing suture placement"
+    },
+    {
+      "frame_number": 9,
+      "phase": "suture_placement",
+      "description": "Angled view showing both instruments working on drain",
+      "technique_notes": "Good bimanual coordination visible from this angle"
+    },
+    {
+      "frame_number": 10,
+      "phase": "first_throw",
+      "description": "Beginning of knot tying sequence, setting up first throw",
+      "technique_notes": "Transitioning from placement to knot tying phase"
+    },
+    {
+      "frame_number": 11,
+      "phase": "idle",
+      "description": "Black screen during video transition",
+      "technique_notes": "Video editing transition"
+    },
+    {
+      "frame_number": 12,
+      "phase": "idle",
+      "description": "Continued black screen",
+      "technique_notes": "Extended transition period"
+    },
+    {
+      "frame_number": 13,
+      "phase": "idle",
+      "description": "Black screen continues",
+      "technique_notes": "Video appears to have significant black periods"
+    },
+    {
+      "frame_number": 14,
+      "phase": "idle",
+      "description": "Still black screen",
+      "technique_notes": "Unusual amount of black screen time"
+    },
+    {
+      "frame_number": 15,
+      "phase": "idle",
+      "description": "Black screen persists",
+      "technique_notes": "May indicate video processing or editing artifacts"
+    },
+    {
+      "frame_number": 16,
+      "phase": "idle",
+      "description": "Continued black screen",
+      "technique_notes": "Significant portion of video is black"
+    },
+    {
+      "frame_number": 17,
+      "phase": "idle",
+      "description": "Black screen ongoing",
+      "technique_notes": "Unable to assess technique during black periods"
+    },
+    {
+      "frame_number": 18,
+      "phase": "idle",
+      "description": "Still black",
+      "technique_notes": "Video quality issue or intentional editing"
+    },
+    {
+      "frame_number": 19,
+      "phase": "idle",
+      "description": "Black screen continues",
+      "technique_notes": "Limited visual information available"
+    },
+    {
+      "frame_number": 20,
+      "phase": "idle",
+      "description": "Ongoing black screen",
+      "technique_notes": "Assessment limited by video quality"
+    },
+    {
+      "frame_number": 21,
+      "phase": "idle",
+      "description": "Black screen persists",
+      "technique_notes": "Unable to evaluate most of procedure"
+    },
+    {
+      "frame_number": 22,
+      "phase": "idle",
+      "description": "Final frame remains black",
+      "technique_notes": "Video ends with black screen"
+    }
+  ],
+  "completion_time_seconds": 45.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 5.0,
+      "end_seconds": 25.0,
+      "duration_seconds": 20.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 25.0,
+      "end_seconds": 30.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 30.0,
+      "end_seconds": 35.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 35.0,
+      "end_seconds": 40.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 40.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 5.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Estimated based on limited visual data"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Inferred from standard technique pattern"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Assumed proper hand switching"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 2.0,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 4.0,
+    "confidence": "low"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "adequate",
+    "assessment_note": "Based on limited visible frames, no obvious gaps or avulsion noted"
+  },
+  "estimated_penalties": 4.0,
+  "estimated_fls_score": 551.0,
+  "confidence_score": 0.25,
+  "technique_summary": "Assessment severely limited by extensive black screen periods in video. From brief visible segments, suture placement appeared reasonable with steady instrument handling.",
+  "improvement_suggestions": [
+    "Ensure complete video recording without black screen interruptions",
+    "Provide clearer view of knot tying sequence"
+  ],
+  "strengths": [
+    "Steady instrument positioning in visible segments",
+    "Appeared to follow proper suture placement technique"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

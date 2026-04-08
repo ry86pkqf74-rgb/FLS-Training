@@ -1,0 +1,148 @@
+{
+  "id": "score_claude_yt_vDmEfFc9i8U_20260408044934",
+  "video_id": "yt_vDmEfFc9i8U",
+  "video_filename": "vDmEfFc9i8U.f134.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T04:49:34.742078",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Black screen, video has not started",
+      "technique_notes": "No visible activity yet"
+    },
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "First instrument visible in frame with suture material on FLS trainer board",
+      "technique_notes": "Task timing begins here with first instrument appearance"
+    },
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Both instruments visible, needle loading appears to be in progress with suture material",
+      "technique_notes": "Proper bimanual instrument positioning observed"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Instruments positioned over Penrose drain, preparing for suture placement",
+      "technique_notes": "Good visualization of target marks on drain"
+    },
+    {
+      "frame_number": 5,
+      "phase": "suture_placement",
+      "description": "Needle being positioned for placement through drain at marked locations",
+      "technique_notes": "Precise targeting of the marked spots visible"
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Instructional overlay showing proper technique - 'USE ALL DEGREES OF FREEDOM PRONATE AND SUPINATE'",
+      "technique_notes": "Educational content demonstrating ideal wrist motion techniques"
+    },
+    {
+      "frame_number": 7,
+      "phase": "idle",
+      "description": "Text overlay 'LET'S WATCH THAT AGAIN IN SLOW MOTION'",
+      "technique_notes": "Video transition indicating replay sequence"
+    },
+    {
+      "frame_number": 8,
+      "phase": "suture_placement",
+      "description": "Replay showing needle placement through Penrose drain, good visualization of technique",
+      "technique_notes": "Clear view of proper needle driver positioning and angle"
+    },
+    {
+      "frame_number": 9,
+      "phase": "suture_placement",
+      "description": "Overhead view showing completed suture placement through both marks on drain",
+      "technique_notes": "Excellent positioning accuracy visible from this angle"
+    },
+    {
+      "frame_number": 10,
+      "phase": "first_throw",
+      "description": "Both instruments visible with suture ends, beginning knot tying sequence",
+      "technique_notes": "Proper setup for intracorporeal knot tying"
+    },
+    {
+      "frame_number": 11,
+      "phase": "completion",
+      "description": "Black screen indicating end of visible content",
+      "technique_notes": "Video appears to end after demonstrating suture placement"
+    }
+  ],
+  "completion_time_seconds": 30.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "needle_load",
+      "start_seconds": 5.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 10.0,
+      "end_seconds": 25.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 25.0,
+      "end_seconds": 30.0,
+      "duration_seconds": 5.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": null,
+      "is_single_throw": null,
+      "hand_used": "unknown",
+      "hand_switched": null,
+      "appears_secure": false,
+      "notes": "Video ends before knot tying completion, unable to assess knot quality"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.0,
+    "total_deviation_penalty": 2.0,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "unknown",
+    "assessment_note": "Video ends before final knot assessment possible"
+  },
+  "estimated_penalties": 570.0,
+  "estimated_fls_score": 28.0,
+  "confidence_score": 0.95,
+  "technique_summary": "This appears to be an instructional video demonstrating proper suture placement technique rather than a complete FLS Task 5 performance. The video shows excellent needle positioning and suture placement accuracy but ends before knot tying completion.",
+  "improvement_suggestions": [
+    "Complete the full task including all three throws",
+    "Demonstrate proper hand switching between throws",
+    "Show final knot security assessment"
+  ],
+  "strengths": [
+    "Excellent suture placement accuracy",
+    "Good instrument positioning",
+    "Clear demonstration of proper needle driving technique"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

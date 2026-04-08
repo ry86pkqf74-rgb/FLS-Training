@@ -1,0 +1,21 @@
+{
+  "trainee_id": "default",
+  "total_attempts": 244,
+  "first_attempt_date": "2026-04-07T06:15:00Z",
+  "last_attempt_date": "2026-04-08T15:00:00Z",
+  "best_time_seconds": 0.0,
+  "best_fls_score": 600.0,
+  "current_plateau_time": 237.51999999999998,
+  "baseline_time": 198.0,
+  "avg_placement_last5": 36.2,
+  "avg_throws_last5": 49.22,
+  "avg_cutting_last5": 37.519999999999996,
+  "equipment_used": [],
+  "equipment_best_times": {},
+  "fatigue_crash_count": 0,
+  "typical_crash_threshold": 0,
+  "identified_plateaus": [],
+  "consistent_strengths": [],
+  "persistent_weaknesses": [],
+  "bottleneck_phase": "throws"
+}
