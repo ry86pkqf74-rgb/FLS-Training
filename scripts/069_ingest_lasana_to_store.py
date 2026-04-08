@@ -157,15 +157,39 @@ def load_split_rows(annotations_dir: Path, task_name: str) -> dict[str, str]:
     return {row["id"].strip(): row["split"].strip() for row in rows if row.get("id")}
 
 
-def deterministic_score_id(trial_id: str) -> str:
-    return f"score_lasana_{trial_id}"
+def task_slug(task_name: str) -> str:
+    return TASK_MAP[task_name]
 
 
-def score_output_path(store: MemoryStore, trial_id: str) -> Path:
-    return store.scores_dir / "lasana" / f"{deterministic_score_id(trial_id)}.json"
+def deterministic_record_key(task_name: str, trial_id: str) -> str:
+    return f"{task_slug(task_name)}_{trial_id}"
 
 
-def remove_legacy_duplicates(store: MemoryStore, trial_id: str, canonical_path: Path) -> None:
+def deterministic_score_id(task_name: str, trial_id: str) -> str:
+    return f"score_{deterministic_record_key(task_name, trial_id)}"
+
+
+def deterministic_video_id(task_name: str, trial_id: str) -> str:
+    return deterministic_record_key(task_name, trial_id)
+
+
+def score_output_path(store: MemoryStore, task_name: str, trial_id: str) -> Path:
+    return store.scores_dir / "lasana" / f"{deterministic_score_id(task_name, trial_id)}.json"
+
+
+def frame_dir_name(task_name: str, trial_id: str) -> str:
+    return deterministic_record_key(task_name, trial_id)
+
+
+def remove_legacy_duplicates(
+    store: MemoryStore,
+    task_name: str,
+    trial_id: str,
+    canonical_path: Path,
+) -> None:
+    canonical_score_id = deterministic_score_id(task_name, trial_id)
+    canonical_video_id = deterministic_video_id(task_name, trial_id)
+    legacy_score_id = f"score_lasana_{trial_id}"
     for path in store.scores_dir.rglob("*.json"):
         if path == canonical_path:
             continue
@@ -177,7 +201,17 @@ def remove_legacy_duplicates(store: MemoryStore, trial_id: str, canonical_path: 
             continue
         metadata = payload.get("metadata") or {}
         payload_trial = metadata.get("trial_id") or payload.get("trial_id")
-        if payload_trial == trial_id:
+        payload_task_name = metadata.get("task_name") or payload.get("task_name")
+        payload_id = str(payload.get("id") or "")
+        payload_video_id = str(payload.get("video_id") or "")
+        if payload_id == canonical_score_id or payload_video_id == canonical_video_id:
+            path.unlink(missing_ok=True)
+            continue
+        if (
+            payload_trial == trial_id
+            and payload_task_name == task_name
+            and payload_id == legacy_score_id
+        ):
             path.unlink(missing_ok=True)
 
 
@@ -208,7 +242,7 @@ def build_score_record(
     normalized_rater_std = clip(score_std / RATER_STD_NORMALIZER, 0.0, 1.0)
     confidence = clip(1.0 - normalized_rater_std, 0.5, 1.0)
     grs_rescaled = clip(3.0 + float(grs_z or 0.0), 1.0, 5.0)
-    frame_dir = str(Path(frames_root) / trial_id)
+    frame_dir = str(Path(frames_root) / frame_dir_name(task_name, trial_id))
 
     metadata = {
         "trial_id": trial_id,
@@ -248,8 +282,8 @@ def build_score_record(
     }
 
     return {
-        "id": deterministic_score_id(trial_id),
-        "video_id": f"lasana_{trial_id}",
+        "id": deterministic_score_id(task_name, trial_id),
+        "video_id": deterministic_video_id(task_name, trial_id),
         "video_filename": f"{trial_id}.mkv",
         "video_hash": "",
         "source": "lasana",
@@ -340,9 +374,9 @@ def ingest_task(
         if not dry_run:
             if store is None:
                 raise RuntimeError("store is required when not running in dry-run mode")
-            output_path = score_output_path(store, trial_id)
+            output_path = score_output_path(store, task_name, trial_id)
             output_path.parent.mkdir(parents=True, exist_ok=True)
-            remove_legacy_duplicates(store, trial_id, output_path)
+            remove_legacy_duplicates(store, task_name, trial_id, output_path)
             output_path.write_text(json.dumps(record, indent=2, default=str))
         written += 1
 
