@@ -264,6 +264,17 @@ echo ""
 
 # --- Step 5: Launch training ---
 echo "[5/5] Starting training..."
+
+# Generate run manifest for reproducibility
+echo "  Writing run manifest..."
+python -m scripts.091_run_manifest \
+    --config "$RUNTIME_CONFIG" \
+    --dataset-path "$DATASET_PATH" 2>/dev/null || \
+python scripts/091_run_manifest.py \
+    --config "$RUNTIME_CONFIG" \
+    --dataset-path "$DATASET_PATH" 2>/dev/null || \
+echo "  WARNING: run manifest generation failed (non-fatal)"
+
 echo "========================================="
 echo ""
 

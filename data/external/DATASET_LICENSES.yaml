@@ -1,0 +1,85 @@
+# Dataset License Lineage
+#
+# Every external dataset used in training must be listed here with its
+# license, commercial usability, and verification status. The training
+# data prep script (scripts/040_prepare_training_data.py) should log
+# which datasets contributed to each run — cross-reference against this
+# file before any commercial deployment.
+#
+# Status values:
+#   verified    — license text read and confirmed
+#   assumed     — license inferred from platform defaults, not yet read
+#   unknown     — needs investigation before use
+#   restricted  — confirmed non-commercial or copyleft
+
+datasets:
+
+  youtube_harvest:
+    source: "YouTube (various channels)"
+    license: "YouTube ToS — fair use for research"
+    commercial_ok: false
+    verification: "assumed"
+    notes: >
+      Downloaded via yt-dlp for research purposes. Cannot distribute
+      raw videos. Model trained on extracted features/scores only.
+      Review each channel's license before any commercial deployment.
+
+  lasana:
+    source: "TU Dresden — LASANA dataset (2026)"
+    url: "https://opara.zih.tu-dresden.de"
+    license: "TBD — verify on download page"
+    commercial_ok: null   # unknown until license verified
+    verification: "unknown"
+    notes: >
+      1,270 stereo video clips. GRS skill ratings included. License
+      must be verified before model weights can be distributed.
+      If CC BY-NC, model weights cannot be sold commercially.
+
+  petraw:
+    source: "Synapse — PEg TRAnsfer Workflow (PETRAW)"
+    url: "https://www.synapse.org/#!Synapse:syn25147789"
+    license: "Non-commercial research only"
+    commercial_ok: false
+    verification: "verified"
+    notes: >
+      Synapse challenge dataset. Explicitly non-commercial.
+      Model trained on this data should not be deployed commercially.
+
+  jigsaws:
+    source: "JHU — JIGSAWS (da Vinci surgical activities)"
+    url: "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/"
+    license: "CC BY-NC-SA 3.0"
+    commercial_ok: false
+    verification: "verified"
+    notes: >
+      Classic surgical skill dataset. Non-commercial share-alike.
+      Fine for research training; cannot ship commercial weights.
+
+  simsurgskill:
+    source: "SimSurgSkill (2021, GCS-hosted)"
+    license: "Non-commercial"
+    commercial_ok: false
+    verification: "assumed"
+    notes: >
+      Simulated surgery skill assessment dataset. Verify full license
+      terms on the publication/dataset page before use.
+
+  spd_fls1:
+    source: "Virginia Tech — SPD-FLS1 Peg Transfer"
+    url: "https://data.lib.vt.edu/articles/dataset/29421842"
+    license: "CC BY 4.0 (Figshare default — verify)"
+    commercial_ok: true
+    verification: "assumed"
+    notes: >
+      If Figshare CC BY 4.0 is confirmed, this is the only external
+      dataset currently cleared for commercial use.
+
+  physionet_eeg_fls:
+    source: "PhysioNet — EEG + Eye-Gaze for FLS Tasks"
+    url: "https://physionet.org/content/eeg-eye-gaze-for-fls-tasks/1.0.0/"
+    license: "PhysioNet Credentialed Health Data License 1.5.0"
+    commercial_ok: false
+    verification: "assumed"
+    notes: >
+      No video — sensor data only. Useful for scorer calibration,
+      not direct training. Requires PhysioNet credentialed access.

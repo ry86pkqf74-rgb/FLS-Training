@@ -18,6 +18,23 @@ outputs/
 memory/frames/
 .tmp_*
 
+# ── Large artifacts: NEVER push to GitHub ──
+# Checkpoints (use Contabo S8 or object storage)
+memory/model_checkpoints/*/checkpoint-*/
+memory/model_checkpoints/*/*.safetensors
+memory/model_checkpoints/*/*.bin
+*.safetensors
+*.bin
+*.gguf
+
+# Extracted frames (regenerate from video)
+data/frames/
+frames/
+
+# Large training data exports (the JSONL manifests are fine; raw frames are not)
+training/data/*/frames/
+training/data/*/images/
+
 # LASANA bulk data (annotations CSVs and metadata are committed; everything else is local-only)
 data/external/lasana/videos/
 data/external/lasana/samples/example_videos.zip

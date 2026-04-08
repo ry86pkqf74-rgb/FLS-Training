@@ -1,5 +1,30 @@
 # FLS-Training: System Architecture
 
+> **Last updated:** 2026-04-08.
+
+## Storage Tiers
+
+GitHub is **not** artifact storage. The repo holds code, configs, manifests,
+and small JSONL score files. Large artifacts live on durable storage.
+
+| Tier | Location | Contents | Sync mechanism |
+|------|----------|----------|----------------|
+| **Code / Config** | GitHub | Scripts, configs, prompts, rubrics, manifests, training JSONL | `git push` |
+| **Durable artifacts** | Contabo S8 (`/srv/fls-training/`) | Checkpoints, extracted frames, raw videos, large logs | `scripts/095_contabo_sync.sh` |
+| **Ephemeral GPU** | RunPod / Vast.ai | Training only — clone → train → sync → shutdown | `deploy/runpod_launch.sh` |
+
+> Object storage (B2/R2) deferred until 500+ videos. See
+> `docs/BACKBLAZE_SETUP.md` for the migration path when needed.
+
+## Separation of Concerns
+
+- **Scoring pipeline** (API-based: Claude + GPT-4o) runs locally or on a
+  cheap CPU instance. Never on a GPU pod.
+- **Training pipeline** (GPU fine-tuning) runs on ephemeral GPU pods.
+  Pulls data from GitHub + Contabo, pushes checkpoints back to Contabo.
+- **Evaluation / feedback** runs locally against checkpoints synced from
+  Contabo.
+
 ## Agent / Model Roles
 
 ```

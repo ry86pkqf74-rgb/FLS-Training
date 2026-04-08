@@ -1,0 +1,47 @@
+# Config family: STANDARD — default training runs
+# Use for: routine fine-tuning with current corpus (<200 examples)
+# Hardware: A100 80 GB or RTX PRO 6000 Blackwell 97 GB (single GPU)
+# Expected wall time: 1–2 hours
+#
+# Usage:
+#   bash deploy/runpod_launch.sh data/training/LATEST src/configs/config_standard.yaml
+
+base_model: "Qwen/Qwen2.5-VL-7B-Instruct"
+framework: "unsloth"
+config_family: "standard"
+
+quantization: "none"
+bnb_4bit_compute_dtype: "bfloat16"
+bnb_4bit_quant_type: "nf4"
+
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - v_proj
+  - k_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+num_epochs: 5
+batch_size: 4
+gradient_accumulation: 2
+learning_rate: 5.0e-5
+warmup_ratio: 0.1
+bf16: true
+flash_attention_2: true
+gradient_checkpointing: false
+logging_steps: 5
+save_strategy: "steps"
+save_steps: 50
+eval_strategy: "steps"
+eval_steps: 50
+save_total_limit: 3
+max_seq_length: 2048
+packing: false
+export_merged_16bit: true
+dataloader_num_workers: 4
+max_frames_per_sample: 20
