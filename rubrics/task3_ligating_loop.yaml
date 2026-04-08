@@ -1,0 +1,62 @@
+task: task3_ligating_loop
+task_id: task3
+name: "Ligating Loop"
+fls_manual_reference: "FLS Manual Skills Written Instructions and Performance Guidelines, Revised February 2014, Task Three"
+benchmark_reference: "Wisconsin expert-level target"
+
+max_time_seconds: 180
+proficiency_time_seconds: 53
+max_score: 180
+score_formula: "max(0, 180 - completion_time_seconds - penalty_deductions)"
+passing_score_note: "Official exam uses normalized task weights; this repo uses the raw task ceiling as the per-task score cap."
+
+timing:
+  starts_when: "either the instrument or the loop material is visible on the monitor"
+  ends_when: "the end of the loop material has been cut inside the trainer"
+
+equipment:
+  - "One grasper or Maryland dissector"
+  - "One pair of endoscopic scissors"
+  - "One jumbo clip"
+  - "One pre-tied ligating loop or endoloop"
+  - "One red foam organ with appendages"
+
+completion_requirements:
+  - "Place the ligating loop around the marked middle appendage."
+  - "Break the plastic pusher at the scored mark outside the trainer."
+  - "Advance and secure the knot at the provided mark near the appendage base."
+  - "Cut the end of the loop material inside the trainer."
+
+phases:
+  - name: loop_introduction
+    description: "Loop and instrument enter the field and orient toward the target appendage."
+  - name: loop_positioning
+    description: "Loop is opened and guided to the marked site."
+  - name: pusher_break_and_advancement
+    description: "The pusher is broken and advanced to secure the loop."
+  - name: tail_cut
+    description: "Loop tail is cut inside the trainer."
+
+penalties:
+  - name: loop_off_mark
+    description: "Knot is secured away from the provided mark on the appendage."
+    scoring: "Deduct visible deviation from the target mark."
+  - name: unsecured_loop
+    description: "Knot is not secured on the appendage or slips off the tissue surrogate."
+    scoring: "Major penalty; if the loop does not remain secured at the marked site, treat as task failure-level performance."
+  - name: incomplete_task
+    description: "Maximum time reached before the tail is cut with the loop secured."
+    scoring: "Automatic zero for the task."
+
+definitions:
+  drop: "The loop or foam target leaves effective control and cannot be recovered into a secure final state."
+  misplacement: "The loop is secured on the wrong appendage, wrong level, or clearly off the provided mark."
+  tissue_damage: "Visible tearing, transection, or destructive compression of the foam appendage beyond expected cinching."
+
+observability_rules:
+  - "If the final knot site is not shown clearly enough to judge mark alignment, say cannot determine instead of estimating millimeters."
+  - "Do not infer a secure loop from hand motion alone; require final-state visual evidence or explicit teacher evidence."
+
+edge_cases:
+  - "If the loop was pre-broken or preloaded before timing begins and this is visible, record it in reasoning as a rule violation."
+  - "If the tail cut occurs but the loop position is off camera, confidence must be reduced for final security judgments."

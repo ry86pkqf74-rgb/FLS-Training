@@ -7,11 +7,36 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
+import yaml
+
 from src.scoring.schema import ScoringResult
 from src.ingest.frame_extractor import frames_to_base64
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+RUBRICS_ROOT = REPO_ROOT / "rubrics"
+
+TASK_RUBRIC_FILES = {
+    "task1": "task1_peg_transfer.yaml",
+    "task2": "task2_pattern_cut.yaml",
+    "task3": "task3_ligating_loop.yaml",
+    "task4": "task4_extracorporeal_suture.yaml",
+    "task5": "task5_intracorporeal_suture.yaml",
+}
+TASK_ID_ALIASES = {
+    "task1": "task1",
+    "task1_peg_transfer": "task1",
+    "task2": "task2",
+    "task2_pattern_cut": "task2",
+    "task3": "task3",
+    "task3_ligating_loop": "task3",
+    "task4": "task4",
+    "task4_extracorporeal": "task4",
+    "task4_extracorporeal_suture": "task4",
+    "task5": "task5",
+    "task5_intracorporeal": "task5",
+    "task5_intracorporeal_suture": "task5",
+}
 
 
 def _extract_anthropic_text(response: Any) -> str:
@@ -58,16 +83,95 @@ def _strip_managed_scoring_fields(data: dict) -> dict:
     return cleaned
 
 
-def _normalize_task_name(task: int | str) -> str:
-    task_name = str(task)
+def _canonical_task_id(task: int | str) -> str:
+    task_name = str(task).strip().lower()
     if task_name.isdigit():
         return f"task{task_name}"
+    if task_name in TASK_ID_ALIASES:
+        return TASK_ID_ALIASES[task_name]
     if task_name.startswith("task"):
-        return task_name
+        return task_name.split("_", 1)[0]
     return f"task{task_name}"
 
 
+def _normalize_task_name(task: int | str) -> str:
+    return _canonical_task_id(task)
+
+
+def _load_rubric(task: int | str) -> dict:
+    task_id = _canonical_task_id(task)
+    rubric_name = TASK_RUBRIC_FILES.get(task_id)
+    if not rubric_name:
+        raise FileNotFoundError(f"No rubric configured for task: {task}")
+    rubric_path = RUBRICS_ROOT / rubric_name
+    return yaml.safe_load(rubric_path.read_text()) or {}
+
+
+def _build_task_context(task: int | str) -> str:
+    rubric = _load_rubric(task)
+    phases = ", ".join(phase.get("name", "") for phase in rubric.get("phases", []))
+    penalties = ", ".join(penalty.get("name", "") for penalty in rubric.get("penalties", []))
+    return (
+        f"Task ID: {rubric.get('task_id', _canonical_task_id(task))}\n"
+        f"Task Name: {rubric.get('name', '')}\n"
+        f"Maximum Time: {rubric.get('max_time_seconds', 'unknown')} seconds\n"
+        f"Proficiency Target: {rubric.get('proficiency_time_seconds', 'unknown')} seconds\n"
+        f"Score Formula: {rubric.get('score_formula', '')}\n"
+        f"Observed Penalty Categories: {penalties}\n"
+        f"Task Phases: {phases}"
+    )
+
+
+def _prepare_scoring_payload(data: dict, task: int | str) -> dict:
+    cleaned = dict(data)
+    cleaned.setdefault("task_id", _canonical_task_id(task))
+
+    score_components = cleaned.get("score_components") or {}
+    if score_components:
+        cleaned.setdefault(
+            "estimated_penalties",
+            float(score_components.get("penalty_deductions", 0.0) or 0.0),
+        )
+        cleaned.setdefault(
+            "estimated_fls_score",
+            float(score_components.get("total_fls_score", 0.0) or 0.0),
+        )
+
+    if "confidence" in cleaned and "confidence_score" not in cleaned:
+        cleaned["confidence_score"] = float(cleaned.get("confidence") or 0.0)
+
+    if cleaned.get("reasoning") and not cleaned.get("technique_summary"):
+        cleaned["technique_summary"] = str(cleaned["reasoning"])
+
+    return cleaned
+
+
+def _prepare_consensus_payload(data: dict, task: int | str) -> dict:
+    if "consensus_score" not in data:
+        return _prepare_scoring_payload(data, task)
+
+    cleaned = _prepare_scoring_payload(data.get("consensus_score") or {}, task)
+    cleaned["comparison_to_previous"] = {
+        "disagreements": data.get("disagreements", []),
+        "overall_confidence": data.get("overall_confidence"),
+    }
+
+    overall_confidence = data.get("overall_confidence")
+    if overall_confidence is not None:
+        cleaned["confidence_score"] = float(overall_confidence)
+
+    if not cleaned.get("reasoning") and cleaned["comparison_to_previous"]["disagreements"]:
+        cleaned["reasoning"] = "Consensus resolved field-level disagreements; see comparison_to_previous.disagreements."
+        cleaned["technique_summary"] = cleaned["reasoning"]
+
+    return cleaned
+
+
 def _load_prompt(version: str = "v001", task: int | str = 5) -> str:
+    if version.startswith("v002"):
+        prompt_path = REPO_ROOT / "prompts" / "v002_universal_scoring_system.md"
+        if prompt_path.exists():
+            return prompt_path.read_text()
     task_name = _normalize_task_name(task)
     prompt_path = REPO_ROOT / "prompts" / f"{version}_{task_name}_system.md"
     if prompt_path.exists():
@@ -76,6 +180,10 @@ def _load_prompt(version: str = "v001", task: int | str = 5) -> str:
 
 
 def _load_critique_prompt(version: str = "v001", task: int | str = 5) -> str:
+    if version.startswith("v002"):
+        prompt_path = REPO_ROOT / "prompts" / "v002_consensus_system.md"
+        if prompt_path.exists():
+            return prompt_path.read_text()
     task_name = _normalize_task_name(task)
     prompt_path = REPO_ROOT / "prompts" / f"{version}_{task_name}_critique.md"
     if prompt_path.exists():
@@ -97,6 +205,7 @@ def score_with_claude(
 
     client = anthropic.Anthropic()
     system_prompt = _load_prompt(prompt_version, task)
+    task_context = _build_task_context(task)
 
     if previous_scores_summary:
         system_prompt += f"\n\n## Trainee History\n{previous_scores_summary}"
@@ -109,7 +218,10 @@ def score_with_claude(
         })
         content.append({"type": "text", "text": f"Frame {i+1} of {len(frames_b64)}"})
 
-    content.append({"type": "text", "text": "Analyze all frames and produce the scoring JSON."})
+    content.append({
+        "type": "text",
+        "text": f"{task_context}\nAnalyze all frames and produce the scoring JSON.",
+    })
 
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
@@ -119,7 +231,10 @@ def score_with_claude(
     )
 
     raw_text = _extract_anthropic_text(response)
-    data = _strip_managed_scoring_fields(_parse_json_payload(raw_text))
+    data = _prepare_scoring_payload(
+        _strip_managed_scoring_fields(_parse_json_payload(raw_text)),
+        task,
+    )
 
     score_id = f"score_claude_{video_id}_{datetime.utcnow().strftime('%Y%m%d%H%M%S')}"
     return ScoringResult(
@@ -149,6 +264,7 @@ def score_with_gpt(
 
     client = OpenAI()
     system_prompt = _load_prompt(prompt_version, task)
+    task_context = _build_task_context(task)
 
     if previous_scores_summary:
         system_prompt += f"\n\n## Trainee History\n{previous_scores_summary}"
@@ -161,7 +277,10 @@ def score_with_gpt(
         })
         content.append({"type": "text", "text": f"Frame {i+1} of {len(frames_b64)}"})
 
-    content.append({"type": "text", "text": "Analyze all frames and produce the scoring JSON."})
+    content.append({
+        "type": "text",
+        "text": f"{task_context}\nAnalyze all frames and produce the scoring JSON.",
+    })
 
     response = client.chat.completions.create(
         model="gpt-4o",
@@ -174,7 +293,10 @@ def score_with_gpt(
 
     raw_content = response.choices[0].message.content or ""
     raw_text = raw_content.strip()
-    data = _strip_managed_scoring_fields(_parse_json_payload(raw_text))
+    data = _prepare_scoring_payload(
+        _strip_managed_scoring_fields(_parse_json_payload(raw_text)),
+        task,
+    )
 
     score_id = f"score_gpt_{video_id}_{datetime.utcnow().strftime('%Y%m%d%H%M%S')}"
     return ScoringResult(
@@ -202,11 +324,14 @@ def run_critique(
 
     client = anthropic.Anthropic()
     critique_prompt = _load_critique_prompt(prompt_version, task)
+    task_context = _build_task_context(task)
 
     teacher_a = score_a.model_dump(mode="json", exclude={"frame_analyses"})
     teacher_b = score_b.model_dump(mode="json", exclude={"frame_analyses"})
 
-    message = f"""## Teacher A (Claude) Score:
+    message = f"""{task_context}
+
+## Teacher A (Claude) Score:
 {json.dumps(teacher_a, indent=2)}
 
 ## Teacher B (GPT-4o) Score:
@@ -222,7 +347,10 @@ Produce a consensus score resolving any disagreements."""
     )
 
     raw_text = _extract_anthropic_text(response)
-    data = _strip_managed_scoring_fields(_parse_json_payload(raw_text))
+    data = _prepare_consensus_payload(
+        _strip_managed_scoring_fields(_parse_json_payload(raw_text)),
+        task,
+    )
 
     score_id = f"score_consensus_{video_id}_{datetime.utcnow().strftime('%Y%m%d%H%M%S')}"
     return ScoringResult(
