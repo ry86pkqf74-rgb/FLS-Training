@@ -38,6 +38,7 @@ data/external/petraw/download.log
 # (small text files needed for training) are tracked.
 data/external/jigsaws/**/video/
 data/external/jigsaws/**/kinematics/
+data/external/jigsaws/Experimental_setup/
 data/external/jigsaws/**/*.avi
 data/external/jigsaws/**/*.mp4
 data/external/jigsaws/*.zip
