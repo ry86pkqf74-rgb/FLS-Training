@@ -17,3 +17,30 @@ outputs/
 *.log
 memory/frames/
 .tmp_*
+
+# LASANA bulk data (annotations CSVs and metadata are committed; everything else is local-only)
+data/external/lasana/videos/
+data/external/lasana/samples/example_videos.zip
+data/external/lasana/samples/example_videos/
+data/external/lasana/annotations/Annotation.zip
+*.mkv
+
+# PETRAW bulk data (Synapse, non-commercial). READMEs + scripts committed; videos local-only.
+data/external/petraw/videos/
+data/external/petraw/segmentation/
+data/external/petraw/kinematics/
+data/external/petraw/_meta/
+data/external/petraw/*.zip
+data/external/petraw/download.log
+
+# JIGSAWS bulk data (academic only). Videos + kinematics local-only.
+data/external/jigsaws/Suturing/
+data/external/jigsaws/Knot_Tying/
+data/external/jigsaws/Needle_Passing/
+data/external/jigsaws/*.zip
+data/external/jigsaws/download.log
+
+# SimSurgSkill bulk data (non-commercial GCS). Videos + zip local-only.
+data/external/simsurgskill/simsurgskill_2021_dataset/
+data/external/simsurgskill/*.zip
+data/external/simsurgskill/download.log
