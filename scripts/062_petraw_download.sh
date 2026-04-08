@@ -25,12 +25,14 @@ if [ -z "${SYNAPSE_AUTH_TOKEN:-}" ]; then
   exit 2
 fi
 
-# TODO: fill in after accepting DUA at https://www.synapse.org/PETRAW
-# Inspect the project Files tab and copy the syn IDs of the parent folders
-# (training data, test data, kinematics, segmentation, annotations).
+# Real Synapse IDs walked from project syn25147789 on 2026-04-08.
+# Total payload: 24.13 GB across 5 files. License: non-commercial research.
 SYN_IDS=(
-  # "syn26134741"   # PETRAW training (placeholder — verify)
-  # "syn26134742"   # PETRAW test     (placeholder — verify)
+  "syn25871182"   # data/Training.zip          14.40 GB  (kinematics+video+segmentation+workflow, 90 cases)
+  "syn27021898"   # data/Test.zip               9.72 GB  (60 cases)
+  "syn27026293"   # PETRAW_detailed_results.zip 0.68 MB  (per-team scoring details)
+  "syn27026295"   # Evaluation/Segmentation_metrics.py
+  "syn27026296"   # Evaluation/Workflow_metrics.py
 )
 
 if [ ${#SYN_IDS[@]} -eq 0 ]; then
