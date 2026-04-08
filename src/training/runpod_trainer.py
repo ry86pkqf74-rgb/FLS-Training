@@ -35,15 +35,21 @@ class TrainingConfig:
     ])
 
     # Training
-    num_epochs: int = 5
-    learning_rate: float = 2e-4
+    # Defaults tuned for the v2 corpus (~150-250 examples after dedupe).
+    # 5 epochs at 2e-4 was overfitting territory; 3 epochs at 1e-4 with
+    # effective batch 16 (2 * grad_accum 8) gives stabler convergence
+    # and lets early stopping pick the best checkpoint.
+    num_epochs: int = 3
+    learning_rate: float = 1e-4
     batch_size: int = 2
-    gradient_accumulation_steps: int = 4
+    gradient_accumulation_steps: int = 8
     warmup_ratio: float = 0.1
     weight_decay: float = 0.01
     max_seq_length: int = 2048
     bf16: bool = True
     gradient_checkpointing: bool = True
+    seed: int = 42
+    early_stopping_patience: int = 1
 
     # Data
     scoring_train_path: str = "training/data/scoring_train_v1.jsonl"
@@ -72,7 +78,8 @@ def train_scoring_head(config: TrainingConfig) -> dict:
     try:
         import torch
         from transformers import (
-            AutoModelForCausalLM, AutoProcessor, TrainingArguments, Trainer
+            AutoModelForCausalLM, AutoProcessor, TrainingArguments, Trainer,
+            EarlyStoppingCallback,
         )
         from peft import LoraConfig, get_peft_model, TaskType
         from datasets import load_dataset
@@ -157,6 +164,10 @@ def train_scoring_head(config: TrainingConfig) -> dict:
         eval_strategy="steps",
         save_total_limit=2,
         load_best_model_at_end=True,
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
+        seed=config.seed,
+        data_seed=config.seed,
         report_to="wandb" if config.use_wandb else "none",
         run_name=f"{config.run_name}_scoring",
     )
@@ -166,6 +177,7 @@ def train_scoring_head(config: TrainingConfig) -> dict:
         args=training_args,
         train_dataset=train_ds,
         eval_dataset=val_ds,
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=config.early_stopping_patience)],
     )
 
     print("Starting training...")
@@ -206,7 +218,8 @@ def train_coaching_head(config: TrainingConfig) -> dict:
     try:
         import torch
         from transformers import (
-            AutoModelForCausalLM, AutoProcessor, TrainingArguments, Trainer
+            AutoModelForCausalLM, AutoProcessor, TrainingArguments, Trainer,
+            EarlyStoppingCallback,
         )
         from peft import LoraConfig, get_peft_model, TaskType
         from datasets import load_dataset
@@ -278,6 +291,10 @@ def train_coaching_head(config: TrainingConfig) -> dict:
         eval_strategy="steps",
         save_total_limit=2,
         load_best_model_at_end=True,
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
+        seed=config.seed,
+        data_seed=config.seed,
         report_to="wandb" if config.use_wandb else "none",
         run_name=f"{config.run_name}_coaching",
     )
@@ -285,6 +302,7 @@ def train_coaching_head(config: TrainingConfig) -> dict:
     trainer = Trainer(
         model=model, args=training_args,
         train_dataset=train_ds, eval_dataset=val_ds,
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=config.early_stopping_patience)],
     )
 
     result = trainer.train()

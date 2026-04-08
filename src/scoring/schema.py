@@ -94,6 +94,15 @@ class ScoringResult(BaseModel):
 
     comparison_to_previous: dict = {}
 
+    # Supersession metadata: when a score is forensically corrected,
+    # the stale record is retained on disk for audit but flagged here
+    # so that downstream pipelines (data_prep, drift, profile rebuild)
+    # can skip it. See memory_store.get_all_scores(skip_superseded=True).
+    superseded: bool = False
+    superseded_by: Optional[str] = None
+    superseded_at: Optional[datetime] = None
+    superseded_reason: str = ""
+
 
 class VideoRecord(BaseModel):
     """Metadata for an ingested video."""

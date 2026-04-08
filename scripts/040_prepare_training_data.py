@@ -9,6 +9,7 @@ def main():
     parser.add_argument("--ver", default="v1", help="Dataset version tag")
     parser.add_argument("--val-split", type=float, default=0.15)
     parser.add_argument("--min-confidence", type=float, default=0.3)
+    parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--base-dir", default=".")
     args = parser.parse_args()
 
@@ -17,6 +18,7 @@ def main():
         version=args.ver,
         val_split=args.val_split,
         min_confidence=args.min_confidence,
+        seed=args.seed,
     )
 
     print(f"\nReady for RunPod. Next steps:")

@@ -76,10 +76,17 @@ class MemoryStore:
         """)
 
     def _load_from_disk(self):
-        """Rebuild DuckDB tables from JSON files on disk."""
-        for f in self.scores_dir.glob("*.json"):
+        """Rebuild DuckDB tables from JSON files on disk.
+
+        Recursive: picks up date-partitioned subdirectories such as
+        memory/scores/2026-04-07/*.json. Skips records flagged
+        superseded=True (kept as audit artifacts only).
+        """
+        for f in self.scores_dir.rglob("*.json"):
             try:
                 data = json.loads(f.read_text())
+                if data.get("superseded") is True:
+                    continue
                 self.db.execute(
                     "INSERT OR REPLACE INTO scores VALUES (?,?,?,?,?,?,?,?)",
                     [data.get("id"), data.get("video_id"), data.get("source"),
@@ -110,19 +117,43 @@ class MemoryStore:
             return ScoringResult.model_validate_json(path.read_text())
         return None
 
-    def get_scores_for_video(self, video_id: str) -> list[ScoringResult]:
+    def get_scores_for_video(self, video_id: str, skip_superseded: bool = True) -> list[ScoringResult]:
         results = []
-        for f in self.scores_dir.glob("*.json"):
-            data = json.loads(f.read_text())
-            if data.get("video_id") == video_id:
+        for f in self.scores_dir.rglob("*.json"):
+            try:
+                data = json.loads(f.read_text())
+            except Exception:
+                continue
+            if data.get("video_id") != video_id:
+                continue
+            if skip_superseded and data.get("superseded") is True:
+                continue
+            try:
                 results.append(ScoringResult.model_validate(data))
+            except Exception:
+                pass
         return results
 
-    def get_all_scores(self) -> list[ScoringResult]:
+    def get_all_scores(self, skip_superseded: bool = True) -> list[ScoringResult]:
+        """Return all scores from disk.
+
+        Recursive over date-partitioned subdirectories. By default skips
+        records with superseded=True so the forensically corrected
+        records take effect end-to-end. Pass skip_superseded=False for
+        audit/debugging.
+        """
         results = []
-        for f in sorted(self.scores_dir.glob("*.json")):
+        for f in sorted(self.scores_dir.rglob("*.json")):
             try:
-                results.append(ScoringResult.model_validate_json(f.read_text()))
+                raw = f.read_text()
+                if skip_superseded and '"superseded": true' in raw:
+                    # Cheap fast path; the schema check below would also
+                    # catch it but skipping the parse is faster.
+                    continue
+                result = ScoringResult.model_validate_json(raw)
+                if skip_superseded and result.superseded:
+                    continue
+                results.append(result)
             except Exception:
                 pass
         return results
@@ -239,13 +270,19 @@ class MemoryStore:
     # === Stats ===
 
     def get_stats(self) -> dict:
-        n_scores = len(list(self.scores_dir.glob("*.json")))
-        n_feedback = len(list(self.feedback_dir.glob("*.json")))
-        n_corrections = len(list(self.corrections_dir.glob("*.json")))
+        score_files = list(self.scores_dir.rglob("*.json"))
+        n_scores_total = len(score_files)
+        n_scores_superseded = sum(
+            1 for f in score_files
+            if '"superseded": true' in f.read_text()
+        )
+        n_scores_active = n_scores_total - n_scores_superseded
         return {
-            "total_scores": n_scores,
-            "total_feedback": n_feedback,
-            "total_corrections": n_corrections,
+            "total_scores": n_scores_active,
+            "total_scores_with_superseded": n_scores_total,
+            "superseded_scores": n_scores_superseded,
+            "total_feedback": len(list(self.feedback_dir.rglob("*.json"))),
+            "total_corrections": len(list(self.corrections_dir.rglob("*.json"))),
             "ledger_entries": sum(1 for _ in open(self.ledger_path)) if self.ledger_path.exists() else 0,
             "profile_exists": self.profile_path.exists(),
         }

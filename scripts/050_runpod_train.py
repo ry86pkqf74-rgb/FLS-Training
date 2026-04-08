@@ -17,10 +17,12 @@ from src.training.runpod_trainer import TrainingConfig, run_full_training
 def main():
     parser = argparse.ArgumentParser(description="Train FLS student model on RunPod")
     parser.add_argument("--ver", default="v1", help="Data version to train on")
-    parser.add_argument("--epochs", type=int, default=5)
-    parser.add_argument("--lr", type=float, default=2e-4)
+    parser.add_argument("--epochs", type=int, default=3)
+    parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--lora-r", type=int, default=16)
     parser.add_argument("--batch-size", type=int, default=2)
+    parser.add_argument("--grad-accum", type=int, default=8)
+    parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--no-wandb", action="store_true")
     parser.add_argument("--base-model", default="microsoft/Florence-2-large")
     args = parser.parse_args()
@@ -31,6 +33,8 @@ def main():
         learning_rate=args.lr,
         lora_r=args.lora_r,
         batch_size=args.batch_size,
+        gradient_accumulation_steps=args.grad_accum,
+        seed=args.seed,
         use_wandb=not args.no_wandb,
         scoring_train_path=f"training/data/scoring_train_{args.ver}.jsonl",
         scoring_val_path=f"training/data/scoring_val_{args.ver}.jsonl",

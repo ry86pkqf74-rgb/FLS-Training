@@ -9,13 +9,84 @@ Output format: JSONL files compatible with HuggingFace datasets.
 from __future__ import annotations
 
 import json
-from datetime import datetime
+import random
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
+
+
+def _ts(s) -> datetime:
+    """Normalize ScoringResult.scored_at to UTC-aware for safe comparison.
+
+    Older score files were written with naive datetimes (datetime.utcnow);
+    newer YouTube-harvest files include explicit UTC offsets. Mixing them
+    in a sort raises TypeError, so we coerce naive values to UTC.
+    """
+    dt = s.scored_at if hasattr(s, "scored_at") else s
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
 
 from src.memory.memory_store import MemoryStore
 from src.scoring.schema import ScoringResult
 from src.feedback.schema import FeedbackReport
+
+
+# Source preference order when the same video has multiple scores.
+# Consensus is the highest-quality teacher signal because it has been
+# reconciled across Claude + GPT; raw teacher scores are fallback.
+_SOURCE_PRIORITY = {
+    "consensus": 0,
+    "teacher_claude_corrected": 1,
+    "teacher_claude": 2,
+    "teacher_gpt": 3,
+    "student": 99,
+}
+
+
+def _dedupe_by_video(scores: list[ScoringResult]) -> list[ScoringResult]:
+    """Collapse multiple scores for the same video to a single record.
+
+    Selection rule:
+        1. Lowest source-priority value (consensus > corrected > claude > gpt).
+        2. Tiebreak: latest scored_at.
+
+    Drops zero records (other than dropping duplicates) and preserves
+    deterministic ordering by video_id.
+    """
+    by_video: dict[str, ScoringResult] = {}
+    for s in scores:
+        key = s.video_id
+        prev = by_video.get(key)
+        if prev is None:
+            by_video[key] = s
+            continue
+        prio_new = _SOURCE_PRIORITY.get(s.source, 50)
+        prio_prev = _SOURCE_PRIORITY.get(prev.source, 50)
+        if prio_new < prio_prev or (prio_new == prio_prev and _ts(s) > _ts(prev)):
+            by_video[key] = s
+    return [by_video[k] for k in sorted(by_video.keys())]
+
+
+def _stratified_video_split(
+    scores: list[ScoringResult],
+    val_split: float,
+    seed: int,
+) -> tuple[list[ScoringResult], list[ScoringResult]]:
+    """Split by video_id with a fixed seed.
+
+    Holds out whole videos for validation rather than slicing the
+    chronological tail. This produces an honest generalization signal
+    for the Phase-3 gate (MAE on held-out trainee).
+    """
+    rng = random.Random(seed)
+    video_ids = sorted({s.video_id for s in scores})
+    rng.shuffle(video_ids)
+    n_val = max(1, int(round(len(video_ids) * val_split)))
+    val_ids = set(video_ids[:n_val])
+    train = [s for s in scores if s.video_id not in val_ids]
+    val = [s for s in scores if s.video_id in val_ids]
+    return train, val
 
 
 def prepare_training_data(
@@ -24,6 +95,7 @@ def prepare_training_data(
     version: str = "v1",
     val_split: float = 0.15,
     min_confidence: float = 0.3,
+    seed: int = 42,
 ) -> dict:
     """Prepare training datasets from scored memory.
 
@@ -35,19 +107,29 @@ def prepare_training_data(
     out.mkdir(parents=True, exist_ok=True)
 
     store = MemoryStore(base)
-    all_scores = store.get_all_scores()
+    all_scores = store.get_all_scores()  # already filters superseded
     all_feedback = store.get_all_feedback()
 
     # Filter by confidence
     valid_scores = [s for s in all_scores if s.confidence_score >= min_confidence]
-    valid_scores.sort(key=lambda s: s.scored_at)
 
-    print(f"Total scores: {len(all_scores)}, above confidence threshold: {len(valid_scores)}")
+    # Dedupe by video_id (consensus > corrected > raw teacher; latest wins on ties)
+    pre_dedupe = len(valid_scores)
+    valid_scores = _dedupe_by_video(valid_scores)
+    post_dedupe = len(valid_scores)
 
-    # Split train/val
-    split_idx = max(1, int(len(valid_scores) * (1 - val_split)))
-    train_scores = valid_scores[:split_idx]
-    val_scores = valid_scores[split_idx:]
+    print(
+        f"Total scores: {len(all_scores)} | "
+        f"above conf {min_confidence}: {pre_dedupe} | "
+        f"after video dedupe: {post_dedupe}"
+    )
+
+    # Stratified train/val split by video_id with fixed seed
+    train_scores, val_scores = _stratified_video_split(valid_scores, val_split, seed)
+    print(
+        f"Split (seed={seed}): {len(train_scores)} train videos / "
+        f"{len(val_scores)} val videos"
+    )
 
     # === Scoring dataset ===
     scoring_train = _build_scoring_dataset(train_scores)
@@ -73,6 +155,14 @@ def prepare_training_data(
         "created_at": datetime.utcnow().isoformat(),
         "min_confidence": min_confidence,
         "val_split": val_split,
+        "seed": seed,
+        "split_strategy": "stratified_by_video_id",
+        "dedup_strategy": "source_priority_then_latest",
+        "raw_score_count": len(all_scores),
+        "after_confidence_filter": pre_dedupe,
+        "after_video_dedupe": post_dedupe,
+        "train_video_ids": sorted({s.video_id for s in train_scores}),
+        "val_video_ids": sorted({s.video_id for s in val_scores}),
         "scoring_train_count": len(scoring_train),
         "scoring_val_count": len(scoring_val),
         "coaching_train_count": len(coaching_train),
@@ -145,7 +235,7 @@ def _build_coaching_dataset(
     """
     # Build lookup for feedback
     feedback_by_video = {f.video_id: f for f in all_feedback}
-    scores_by_time = sorted(all_scores, key=lambda s: s.scored_at)
+    scores_by_time = sorted(all_scores, key=_ts)
 
     examples = []
     for score in current_scores:
@@ -163,8 +253,9 @@ def _build_coaching_dataset(
 
         # Build history summary (all scores before this one)
         history_lines = []
+        score_ts = _ts(score)
         for prev in scores_by_time:
-            if prev.scored_at >= score.scored_at:
+            if _ts(prev) >= score_ts:
                 break
             history_lines.append(
                 f"  {prev.video_id}: {prev.completion_time_seconds:.0f}s / "
