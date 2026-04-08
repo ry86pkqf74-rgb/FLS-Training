@@ -254,3 +254,67 @@ Flag in PR description, do not block on:
 
 _To be filled in as workstreams land. Append commit hashes, dates, and any
 deviations from the plan above._
+
+
+---
+
+## Outcome (appended 2026-04-08 11:05 EDT)
+
+Status promoted: `proposed` → `in-progress`. All five code workstreams have
+shipped to `main` and a non-trivial design bug was caught and fixed during
+implementation. Vision-dataset build is blocked on frame availability, not
+on code.
+
+### Commits that landed against this design
+
+| Commit | Workstream | Notes |
+|---|---|---|
+| `2c1b2a4` | W1 — `070_lasana_download.py` | HAL manifest downloader, 368 LOC |
+| `4046428` | W2 — `069_ingest_lasana_to_store.py` initial | 375 LOC |
+| `3cc3bbb` | W3+W4+W5 bundle | `040` source filters + `LATEST_LASANA` symlink, `pretrain_lasana.yaml` (matches design exactly), `finetune_task5_standard.yaml` `resume_from_checkpoint` wired and commented out by default, `prepare_dataset.py` + `schema_adapter.py` updated to honor `include_sources` / `exclude_sources` / `respect_existing_splits` / pre-existing splits, `runpod_launch.sh` updated, regression tests in `tests/test_prepare_dataset.py` (non-regression byte-identical check + filter behavior check) |
+| `d04b4f6` | W2 fix | Cross-task trial-id collision fix; added `tests/test_lasana_ingest.py` |
+
+### Design deviations and discoveries
+
+**Trial-ID collision (real bug, design assumed unique IDs).** During
+implementation, the agent discovered that LASANA trial IDs are unique only
+*within* a task, not across all tasks. Concrete example: `kiourf` appears
+in both `BalloonResection.csv` and `SutureAndKnot.csv` as different trials.
+The original ingest script keyed records on `(source, trial_id)` per the
+design — this design is **wrong** for LASANA and would have silently
+overwritten ~half the records on the second-task pass.
+
+Fix: task-qualify the score_id, video_id, and frame-dir name in
+`069_ingest_lasana_to_store.py`. Regression coverage in
+`tests/test_lasana_ingest.py`. **Update the design key to
+`(source, task, trial_id)` if this doc is ever cloned for another dataset.**
+
+### Operational state on Contabo
+
+- Durable LASANA labels ingested into `/data/fls/memory/scores/lasana`:
+  **1,270 score files**.
+- Published splits honored: **train=944, val=121, test=205**. Note this is
+  ~74/10/16, not the conventional 80/10/10. This is what LASANA published;
+  do not re-balance.
+- Raw HEVC download still in flight: `/data/fls/raw-videos/lasana/BalloonResection_left.zip.part`
+  at ~2.5 GB. Downloader is one-archive-at-a-time, no parallel fetches.
+- LASANA frame directory `/data/fls/data/external/lasana_processed/frames/`
+  is **empty**. Frame extraction has not been attempted yet — it's blocked
+  on the unzip step which is itself blocked on the download finishing.
+
+### What's still blocking the LASANA pretrain run
+
+A new workstream that did NOT exist in the original design:
+
+**W6 — Unzip + frame-extraction pipeline.** The HAL manifest delivers
+LASANA as `<task>_left.zip` archives, not loose HEVC files. Before
+`068_lasana_extract_features.py --frames-only` can run, each zip needs to
+be unpacked into the per-trial layout the frame extractor expects, with
+filenames task-qualified to match the IDs from the d04b4f6 fix. This is
+a small script (probably ~50 LOC) but is on the critical path.
+
+### Next operational step
+
+Frame availability, not more label-side code. See the
+`2026-04-08_1110_lasana-frame-pipeline.md` entry (queued — write next
+when the unzip + frame pipeline is being scoped).
