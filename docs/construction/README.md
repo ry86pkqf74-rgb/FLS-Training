@@ -51,7 +51,8 @@ Newest first. Update this when adding an entry.
 
 | Date | Time | Slug | Status | Overview |
 |---|---|---|---|---|
-| 2026-04-08 | 10:40 EDT | [path-b-lasana-pretrain](2026-04-08_1040_path-b-lasana-pretrain.md) | in-progress | Two-stage training: pre-train on LASANA's 4 tasks (real human GRS labels), then fine-tune on FLS Task5 v4. W1-W5 shipped (`2c1b2a4`, `4046428`, `3cc3bbb`, `d04b4f6`); 1,270 labels durable on Contabo; blocked on raw HEVC download + frame extraction. |
+| 2026-04-08 | 13:05 EDT | [task5-baseline-runpod-launch](2026-04-08_1305_task5-baseline-runpod-launch.md) | proposed | Standalone Task5 baseline on RunPod, in parallel with the LASANA pipeline. ~$15, ~3-4h, fits exactly in the window while LASANA streaming pipeline is self-driving. Includes full pre-launch checklist, kill criteria, success criteria. Required for comparison against the LASANA-pretrained run either way. |
+| 2026-04-08 | 10:40 EDT | [path-b-lasana-pretrain](2026-04-08_1040_path-b-lasana-pretrain.md) | in-progress | Two-stage training: pre-train on LASANA's 4 tasks (real human GRS labels), then fine-tune on FLS Task5 v4. W1-W6 shipped (`2c1b2a4`, `4046428`, `3cc3bbb`, `d04b4f6`, `5f28e80`); streaming pipeline live on Contabo + Hetzner in parallel; ETA collapsed from ~24h to ~1.76h bounded by Hetzner CircleCutting. |
 | 2026-04-08 | 10:15 EDT | [task5-config-fix](2026-04-08_1015_task5-config-fix.md) | shipped | Patched `finetune_task5_standard.yaml` so the v4 144-sample run actually evals and checkpoints. The previous config would have produced zero evals over the entire run. Commit `b83161a`. |
 
 ## How to add an entry
