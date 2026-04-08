@@ -13,6 +13,7 @@ from src.memory.memory_store import MemoryStore
 def main():
     parser = argparse.ArgumentParser(description="Ingest an FLS video")
     parser.add_argument("--video", required=True, help="Path to video file")
+    parser.add_argument("--video-id", help="Explicit video ID to use instead of deriving from filename")
     parser.add_argument("--task", default="5", help="FLS task number or variant (default: 5)")
     parser.add_argument("--note", default="", help="Recording note")
     parser.add_argument("--base-dir", default=".", help="Repo base directory")
@@ -26,7 +27,7 @@ def main():
     print(f"Extracting frames from {video_path.name}...")
     frames, metadata = extract_frames(video_path)
 
-    video_id = video_path.stem.lower().replace(" ", "_").replace("-", "_")
+    video_id = args.video_id or video_path.stem.lower().replace(" ", "_").replace("-", "_")
 
     task_value = str(args.task)
     if task_value == "5_general":

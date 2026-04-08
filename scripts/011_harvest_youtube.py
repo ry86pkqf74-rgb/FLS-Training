@@ -32,6 +32,7 @@ import re
 import subprocess
 import sys
 import hashlib
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -202,12 +203,25 @@ def download_video(url: str, output_dir: Path) -> dict | None:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_template = str(output_dir / "%(id)s.%(ext)s")
 
+    ffmpeg_available = shutil.which("ffmpeg") is not None
+    if ffmpeg_available:
+        format_selector = (
+            f"bestvideo[height<={MAX_RESOLUTION}][vcodec!=none]+"
+            f"bestaudio[acodec!=none]/best[height<={MAX_RESOLUTION}][vcodec!=none]"
+        )
+    else:
+        # Without ffmpeg, prefer single-file MP4 video+audio assets that OpenCV can read.
+        format_selector = (
+            f"best[ext=mp4][height<={MAX_RESOLUTION}][vcodec!=none][acodec!=none]/"
+            f"best[ext=mp4][vcodec!=none][acodec!=none]/"
+            f"best[vcodec!=none][acodec!=none]"
+        )
+
     cmd = [
         *YT_DLP_CMD,
         url,
         "--output", output_template,
-        "--format", f"bestvideo[height<={MAX_RESOLUTION}]+bestaudio/best[height<={MAX_RESOLUTION}]/best",
-        "--merge-output-format", "mp4",
+        "--format", format_selector,
         "--write-info-json",          # Save metadata JSON alongside video
         "--no-playlist",              # Single video only
         "--socket-timeout", "30",
@@ -215,6 +229,9 @@ def download_video(url: str, output_dir: Path) -> dict | None:
         "--quiet",
         "--print-json",              # Print final metadata as JSON
     ]
+
+    if ffmpeg_available:
+        cmd.extend(["--merge-output-format", "mp4"])
 
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
@@ -288,7 +305,14 @@ def score_video(filepath: str, video_id: str) -> dict | None:
     # 1. Ingest
     print(f"  Ingesting {video_id}...")
     result = subprocess.run(
-        [sys.executable, str(ingest_script), "--base-dir", str(REPO_ROOT), "--video", filepath, "--task", "5"],
+            [
+                sys.executable,
+                str(ingest_script),
+                "--base-dir", str(REPO_ROOT),
+                "--video", filepath,
+                "--video-id", video_id,
+                "--task", "5",
+            ],
         capture_output=True, text=True, timeout=120
     )
     if result.returncode != 0:

@@ -14,6 +14,13 @@ from src.memory.memory_store import MemoryStore
 console = Console()
 
 
+def _sort_ts(score):
+    dt = score.scored_at
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=None)
+    return dt.astimezone().replace(tzinfo=None)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Score video with frontier models")
     parser.add_argument("--video-id", required=True)
@@ -42,7 +49,7 @@ def main():
     # Build history summary
     all_scores = store.get_all_scores()
     history_lines = []
-    for s in sorted(all_scores, key=lambda x: x.scored_at)[-10:]:
+    for s in sorted(all_scores, key=_sort_ts)[-10:]:
         history_lines.append(f"{s.video_id}: {s.completion_time_seconds:.0f}s / {s.estimated_fls_score:.0f} FLS")
     history_summary = "\n".join(history_lines) if history_lines else ""
     score_b = None
@@ -142,7 +149,8 @@ def main():
     # Generate feedback
     console.print("\n[bold]Generating coaching feedback...[/bold]")
     from src.feedback.generator import generate_feedback
-    previous = [s for s in all_scores if s.scored_at < consensus.scored_at]
+    consensus_ts = _sort_ts(consensus)
+    previous = [s for s in all_scores if _sort_ts(s) < consensus_ts]
     report = generate_feedback(consensus, previous, store.get_trainee_profile())
     store.save_feedback(report)
     console.print(f"  Headline: {report.headline}")

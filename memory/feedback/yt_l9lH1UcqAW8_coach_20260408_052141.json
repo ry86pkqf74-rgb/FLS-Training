@@ -1,0 +1,138 @@
+{
+  "video_id": "yt_l9lH1UcqAW8",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "Your 477 FLS score represents solid intermediate performance with excellent knot technique but room for improvement in speed and precision.",
+    "session_headline": "Excellent surgeon's knot execution with proper hand switching - focus next on placement accuracy and efficiency gains"
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "120-second completion time is respectable but leaves significant points on the table - you're losing ~123 points to time alone",
+      "frames_referenced": [
+        1,
+        16
+      ],
+      "impact_on_score": "Time penalty of approximately 120 points from the 600-point maximum"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "Combined deviation of 2.7mm from both marks shows good but not excellent placement accuracy",
+      "frames_referenced": [
+        2
+      ],
+      "impact_on_score": "Lost 2.7 points due to placement deviation - minimal but perfectible"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Outstanding knot technique with proper surgeon's knot, hand switching, and secure final construct",
+      "frames_referenced": [
+        4,
+        5,
+        6,
+        7,
+        10,
+        15
+      ],
+      "impact_on_score": "Full points earned for knot quality - this is a major strength"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "suture_placement",
+      "observation": "In frame 2, suture appears positioned but with slight deviation from optimal mark placement - this suggests either initial placement inaccuracy or tissue distortion during passage",
+      "frames_referenced": [
+        2
+      ],
+      "why_it_matters": "Precise placement is critical for real surgical applications and represents easy points to capture",
+      "correction": "Focus on perpendicular needle entry at exact mark centers, using the mark as a bullseye rather than general target area",
+      "drill": "Practice 20 needle passes through paper targets with 2mm circles - aim for dead center entry and exit",
+      "priority": "medium"
+    },
+    {
+      "category": "economy_of_motion",
+      "observation": "Phase timing shows 35 seconds for initial suture placement - this suggests either hesitation or inefficient needle handling during the setup phase",
+      "frames_referenced": [
+        2,
+        3
+      ],
+      "why_it_matters": "Efficient setup directly translates to faster overall times and better OR flow",
+      "correction": "Develop a consistent pre-planned approach: visualize both entry and exit points before first needle grasp",
+      "drill": "Practice 10 rapid suture placements focusing only on speed of initial pass - target under 20 seconds for placement phase",
+      "priority": "high"
+    },
+    {
+      "category": "knot_tying",
+      "observation": "Excellent surgeon's knot formation in frames 4-6 with proper double throw technique and good instrument control throughout wrapping sequence",
+      "frames_referenced": [
+        4,
+        5,
+        6
+      ],
+      "why_it_matters": "This technique is already at proficiency level - maintaining this quality while increasing speed is the goal",
+      "correction": "Continue current technique but work on smoother transitions between wraps to eliminate micro-pauses",
+      "drill": "Practice 15 surgeon's knots on a peg board focusing on continuous motion during wrapping - no stops between wraps",
+      "priority": "low"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Outstanding surgeon's knot execution in frames 4-6 with textbook double throw technique and controlled tensioning",
+      "frames_referenced": [
+        4,
+        5,
+        6
+      ],
+      "why_it_matters": "This is advanced technique that many trainees struggle with - you've mastered the most challenging aspect of this task",
+      "encouragement": "Your knot quality is genuinely excellent - this level of technique will serve you well in actual surgery"
+    },
+    {
+      "observation": "Proper hand switching between throws visible in frames 7 and 10, demonstrating good understanding of alternating tension principles",
+      "frames_referenced": [
+        7,
+        10
+      ],
+      "why_it_matters": "Hand switching prevents knot slippage and is essential for secure knot construction",
+      "encouragement": "Your consistent hand switching shows you understand the biomechanics of secure knot tying"
+    },
+    {
+      "observation": "Clean, controlled cutting technique in frames 13-14 with appropriate distance from knot and complete suture removal",
+      "frames_referenced": [
+        13,
+        14
+      ],
+      "why_it_matters": "Proper cutting prevents knot loosening and ensures clean wound closure",
+      "encouragement": "Your cutting technique is precise and safe - no wasted motion or risk of knot damage"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Reduce suture placement time from 35s to under 20s while maintaining current excellent knot quality",
+    "warmup_drill": "5 minutes of rapid needle loading practice - focus on consistent 2/3 grasp point",
+    "primary_drill": {
+      "name": "Speed Placement Challenge",
+      "description": "Set up 5 Penrose drains with marks. Time yourself placing suture through both marks on each drain. Focus on: 1) Pre-visualizing entry/exit, 2) Single smooth needle pass, 3) Immediate setup for knot tying. Reset and repeat.",
+      "target_reps": 15,
+      "target_time_minutes": 15,
+      "success_criteria": "Achieve placement in under 20 seconds with deviation under 2mm on 80% of attempts"
+    },
+    "cooldown": "Review your fastest successful placement - what made it smooth? Note any hesitation points for next session.",
+    "estimated_sessions_to_improvement": "3-4 focused sessions should get you consistently under 100 seconds total time"
+  },
+  "progress_context": {
+    "trend": "plateaued",
+    "vs_baseline": "Significant improvement from early attempts - you've mastered the fundamental techniques",
+    "vs_peak": "Current performance matches your recent best scores in the 508-509 range",
+    "milestone_note": "Next target: Sub-100 second completion with current knot quality for 550+ FLS score"
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "Camera angle during initial suture placement (frame 2) makes it difficult to assess exact needle entry angle - recommendations based on timing and final position only",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 638.62,
+    "input_tokens": 3720,
+    "output_tokens": 1644,
+    "cost_usd_approx": 0.0358
+  }
+}

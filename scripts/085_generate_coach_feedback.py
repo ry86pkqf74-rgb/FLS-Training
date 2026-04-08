@@ -35,42 +35,33 @@ console = Console()
 
 def _load_score_json(score_dir: Path, video_id: str, source_hint: str) -> dict | None:
     """Find and load a score JSON from memory/scores/."""
-    for date_dir in sorted(score_dir.iterdir(), reverse=True):
-        if not date_dir.is_dir():
-            continue
-        for f in date_dir.iterdir():
-            if video_id in f.name and source_hint in f.name and f.suffix == ".json":
-                return json.loads(f.read_text())
+    for f in sorted(score_dir.rglob("*.json"), reverse=True):
+        if video_id in f.name and source_hint in f.name:
+            return json.loads(f.read_text())
     return None
 
 
 def _load_trainee_history(score_dir: Path) -> list[dict]:
     """Load summary of all scored videos for progress context."""
     history = []
-    for date_dir in sorted(score_dir.iterdir()):
-        if not date_dir.is_dir():
+    seen_videos = set()
+    for f in sorted(score_dir.rglob("*.json")):
+        if "claude" not in f.name:
             continue
-        seen_videos = set()
-        for f in sorted(date_dir.iterdir()):
-            if not f.name.endswith(".json"):
+        try:
+            data = json.loads(f.read_text())
+            vid = data.get("video_id") or f.stem.split("_claude")[0]
+            if vid in seen_videos:
                 continue
-            # Prefer claude scores for consistency
-            if "claude" not in f.name:
-                continue
-            try:
-                data = json.loads(f.read_text())
-                vid = data.get("video_id") or f.stem.split("_claude")[0]
-                if vid in seen_videos:
-                    continue
-                seen_videos.add(vid)
-                history.append({
-                    "video_id": vid,
-                    "fls_score": data.get("estimated_fls_score"),
-                    "completion_time_seconds": data.get("completion_time_seconds"),
-                    "confidence": data.get("confidence_score"),
-                })
-            except (json.JSONDecodeError, KeyError):
-                continue
+            seen_videos.add(vid)
+            history.append({
+                "video_id": vid,
+                "fls_score": data.get("estimated_fls_score"),
+                "completion_time_seconds": data.get("completion_time_seconds"),
+                "confidence": data.get("confidence_score"),
+            })
+        except (json.JSONDecodeError, KeyError):
+            continue
     return history
 
 

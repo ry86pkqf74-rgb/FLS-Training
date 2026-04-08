@@ -7,7 +7,7 @@ The JSON files in memory/ are the source of truth.
 from __future__ import annotations
 
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -15,6 +15,13 @@ import duckdb
 
 from src.scoring.schema import ScoringResult, VideoRecord, CorrectionRecord
 from src.feedback.schema import FeedbackReport, TraineeProfile
+
+
+def _score_ts(score: ScoringResult | datetime) -> datetime:
+    dt = score.scored_at if isinstance(score, ScoringResult) else score
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
 
 
 class MemoryStore:
@@ -211,14 +218,14 @@ class MemoryStore:
         if not scores:
             return TraineeProfile()
 
-        scores_sorted = sorted(scores, key=lambda s: s.scored_at)
+        scores_sorted = sorted(scores, key=_score_ts)
         times = [s.completion_time_seconds for s in scores_sorted]
         fls_scores = [s.estimated_fls_score for s in scores_sorted]
 
         profile = TraineeProfile(
             total_attempts=len(scores_sorted),
-            first_attempt_date=scores_sorted[0].scored_at,
-            last_attempt_date=scores_sorted[-1].scored_at,
+            first_attempt_date=_score_ts(scores_sorted[0]),
+            last_attempt_date=_score_ts(scores_sorted[-1]),
             best_time_seconds=min(times),
             best_fls_score=max(fls_scores),
             baseline_time=times[0] if times else 0,
@@ -250,8 +257,9 @@ class MemoryStore:
             "throws": profile.avg_throws_last5,
             "cutting": profile.avg_cutting_last5,
         }
-        if any(phase_avgs.values()):
-            profile.bottleneck_phase = max(phase_avgs, key=phase_avgs.get)
+        non_null_phase_avgs = {key: value for key, value in phase_avgs.items() if value is not None}
+        if non_null_phase_avgs:
+            profile.bottleneck_phase = max(non_null_phase_avgs, key=lambda key: non_null_phase_avgs[key])
 
         self.save_trainee_profile(profile)
         return profile
