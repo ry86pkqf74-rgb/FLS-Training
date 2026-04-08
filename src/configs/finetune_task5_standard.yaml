@@ -46,19 +46,20 @@ lora_target_modules:
   - down_proj
 
 # Training
-num_epochs: 3
+# Sized for v4 dataset (~144 train, effective batch 8 = 18 steps/epoch).
+# 3 epochs = 54 steps was too thin; eval/save_steps=100 would have produced
+# zero evals/checkpoints over the run. Patched 2026-04-08.
+num_epochs: 5                     # was 3; 5 epochs ≈ 90 optimizer steps
 batch_size: 2
-gradient_accumulation: 4  # effective batch size 8
+gradient_accumulation: 4          # effective batch size 8
 learning_rate: 2.0e-5
-warmup_ratio: 0.05
+warmup_ratio: 0.1                 # was 0.05; ~9 steps over 90, healthier
 bf16: true
 flash_attention_2: true
 gradient_checkpointing: true
-logging_steps: 5
-save_strategy: "steps"
-save_steps: 100
-eval_strategy: "steps"
-eval_steps: 100
+logging_steps: 1                  # was 5; want every step visible at this scale
+save_strategy: "epoch"            # was "steps"/100 — would have saved 0 times
+eval_strategy: "epoch"            # was "steps"/100 — would have eval'd 0 times
 save_total_limit: 3
 max_seq_length: 2048
 packing: false
