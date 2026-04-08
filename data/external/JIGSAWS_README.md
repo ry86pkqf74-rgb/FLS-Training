@@ -1,9 +1,17 @@
 # JIGSAWS — JHU-ISI Gesture and Skill Assessment Working Set
 
-> **Status (2026-04-08):** registration pending. README + download
-> script stub committed; expected size ~12 GB so it can land on
-> either RunPod alongside LASANA POD=B (SutureAndKnot) since it's
-> the same surgical task family.
+> **Status (2026-04-08):** ✅ **3 sample AVI clips downloaded locally**
+> (one short clip per task, ~3.4 MB total, in
+> `data/external/jigsaws/samples/`). These are the only files JHU-CIRL
+> exposes without the access form. The full ~12 GB dataset (103 trials
+> + kinematics + GRS labels + transcriptions) **still requires the
+> access request form**, after which the email contains a download
+> URL list — drop it into `JIGSAWS_URLS_FILE` and run
+> `MODE=full bash scripts/064_jigsaws_download.sh`.
+>
+> ⚠️ **License:** academic / non-commercial research only. The user has
+> confirmed FLS-Training is being used as a research project, which is
+> within the JIGSAWS DUA scope.
 
 ## Source
 
