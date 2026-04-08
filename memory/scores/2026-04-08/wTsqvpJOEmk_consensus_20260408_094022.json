@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_wTsqvpJOEmk_20260408_094022",
+  "video_id": "wTsqvpJOEmk",
+  "video_filename": "wTsqvpJOEmk.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:40:22.804564+00:00",
+  "task_id": "task5",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Video appears to be instructional content rather than a scoreable task performance attempt"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw"
+  ],
+  "confidence": 0.2,
+  "reasoning": "Major disagreement between models on whether this is a scoreable performance attempt. Claude identified this as instructional content with promotional overlays and no clear timing markers. GPT-4o scored it as a completed task in 175 seconds. Given the fundamental disagreement about video content type and the lack of clear task attempt boundaries, the conservative approach is to treat this as non-scoreable instructional content per Claude's assessment.",
+  "confidence_score": 0.2
+}

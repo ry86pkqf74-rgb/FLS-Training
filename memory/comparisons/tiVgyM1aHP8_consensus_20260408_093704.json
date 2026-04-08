@@ -1,0 +1,68 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 133.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task was not completed - not all objects were successfully transferred in both directions as required by FLS Peg Transfer protocol."
+      }
+    ],
+    "score_components": {
+      "time_score": 167.0,
+      "penalty_deductions": 167.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on completion time (133 seconds) and that the task was not completed successfully. While Claude identified this as a different exercise entirely, GPT-4o recognized it as an incomplete Peg Transfer attempt. The consensus applies the incomplete_task penalty resulting in automatic zero score, as the FLS protocol requires all six objects to be transferred bidirectionally for successful completion."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be a needle transfer training exercise, not the standard FLS Peg Transfer task with six objects requiring bidirectional transfer."
+      },
+      "gpt_value": null,
+      "resolution": "Applied incomplete_task penalty",
+      "rationale": "Both models agreed the task was not completed successfully. Whether it was a different exercise or incomplete attempt, the FLS rubric requires automatic zero for incomplete tasks."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "cannot determine"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "resolution": "Used GPT-4o phases",
+      "rationale": "GPT-4o provided more specific phase identification that aligns with observable activity, while Claude's assessment was overly broad."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 167.0,
+      "resolution": "Applied zero score",
+      "rationale": "FLS rubric requires automatic zero for incomplete tasks. GPT-4o's score calculation ignored the incomplete task condition."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "tiVgyM1aHP8",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.77,
+    "input_tokens": 1980,
+    "output_tokens": 615,
+    "cost_usd_approx": 0.0152,
+    "timestamp": "2026-04-08T09:37:04.573979+00:00",
+    "prompt_version": "v002"
+  }
+}

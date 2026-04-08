@@ -1,0 +1,50 @@
+{
+  "id": "score_gpt_Ogo4tZPqc_s_20260408084235",
+  "video_id": "Ogo4tZPqc_s",
+  "video_filename": "Ogo4tZPqc_s.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:42:35.828597",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "hand_switch_failure",
+      "count": 1,
+      "description": "Hand switch was not clearly visible after the first throw."
+    }
+  ],
+  "score_components": {
+    "time_score": 542.0,
+    "penalty_deductions": 5.0,
+    "total_fls_score": 537.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw",
+    "suture_cut"
+  ],
+  "reasoning": "The procedure was clearly visible, with all throws and suture placements correctly executed. However, the hand switch between throws was not clearly visible, resulting in one penalty.",
+  "frame_analyses": [],
+  "completion_time_seconds": 58.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The procedure was clearly visible, with all throws and suture placements correctly executed. However, the hand switch between throws was not clearly visible, resulting in one penalty.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

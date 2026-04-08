@@ -1,0 +1,43 @@
+{
+  "id": "score_claude_E6d80uknJAc_20260408073703",
+  "video_id": "E6d80uknJAc",
+  "video_filename": "E6d80uknJAc.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:37:03.382571",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional video showing different FLS tasks rather than a performance attempt to be scored."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "The video shows educational content demonstrating multiple FLS tasks including peg transfer setup, precision cutting, ligating loop, and suturing techniques. This is clearly instructional material rather than a single task1 performance attempt. No actual peg transfer performance with timing start/end points was observed.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows educational content demonstrating multiple FLS tasks including peg transfer setup, precision cutting, ligating loop, and suturing techniques. This is clearly instructional material rather than a single task1 performance attempt. No actual peg transfer performance with timing start/end points was observed.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

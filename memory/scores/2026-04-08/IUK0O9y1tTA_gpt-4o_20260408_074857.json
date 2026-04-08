@@ -1,0 +1,41 @@
+{
+  "id": "score_gpt_IUK0O9y1tTA_20260408074857",
+  "video_id": "IUK0O9y1tTA",
+  "video_filename": "IUK0O9y1tTA.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:48:57.924919",
+  "task_id": "task1",
+  "penalties": [],
+  "score_components": {
+    "time_score": 246.8,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 246.8
+  },
+  "phases_detected": [
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "The video showed clear outbound and return transfers, finishing with the final release. No objects were lost out of view, and the task was completed efficiently. However, slight shadow obscuration reduces confidence slightly.",
+  "frame_analyses": [],
+  "completion_time_seconds": 53.2,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video showed clear outbound and return transfers, finishing with the final release. No objects were lost out of view, and the task was completed efficiently. However, slight shadow obscuration reduces confidence slightly.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

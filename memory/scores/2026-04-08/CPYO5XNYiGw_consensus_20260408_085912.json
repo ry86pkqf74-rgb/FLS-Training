@@ -1,0 +1,27 @@
+{
+  "id": "score_consensus_CPYO5XNYiGw_20260408_085912",
+  "video_id": "CPYO5XNYiGw",
+  "video_filename": "CPYO5XNYiGw.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:59:12.803706+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 195.3,
+  "penalties": [],
+  "score_components": {
+    "time_score": 224.7,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 224.7
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws"
+  ],
+  "confidence": 0.3,
+  "reasoning": "GPT-4o reported task completion with a slit_not_closed penalty, while Claude indicated the final state was not visible for assessment. Given Claude's explicit statement that completion confirmation is not observable and the final product state cannot be assessed, the penalty cannot be reliably verified. The completion time from GPT-4o is accepted as it represents the visible activity duration, but without clear evidence of the final state, no penalties can be confidently applied.",
+  "confidence_score": 0.3
+}

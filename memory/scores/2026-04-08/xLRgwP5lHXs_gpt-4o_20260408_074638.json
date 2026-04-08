@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt_xLRgwP5lHXs_20260408074638",
+  "video_id": "xLRgwP5lHXs",
+  "video_filename": "xLRgwP5lHXs.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:46:38.097614",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "lost_object",
+      "count": 1,
+      "description": "One polo mint left the field of view and was not retrievable."
+    }
+  ],
+  "score_components": {
+    "time_score": 235.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 225.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "The sequence of transfers was clearly visible. A lost object deduction was applied due to a mint leaving the field of view. Final placement was confirmed, and no additional penalties were noted.",
+  "frame_analyses": [],
+  "completion_time_seconds": 65.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The sequence of transfers was clearly visible. A lost object deduction was applied due to a mint leaving the field of view. Final placement was confirmed, and no additional penalties were noted.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -1,0 +1,38 @@
+{
+  "id": "score_consensus_postV10_video_20260408_093345",
+  "video_id": "postV10_video",
+  "video_filename": "postV10_video.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:33:45.106807+00:00",
+  "task_id": "task5",
+  "completion_time_seconds": 213.4,
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "count": 1,
+      "description": "Minor placement deviation from marks",
+      "deduction": 2.5
+    }
+  ],
+  "score_components": {
+    "time_score": 386.6,
+    "penalty_deductions": 2.5,
+    "total_fls_score": 384.1
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw",
+    "suture_cut",
+    "completion"
+  ],
+  "confidence": 0.6,
+  "reasoning": "Both models agreed on completion time within 3.3 seconds and detected the same phases. Major disagreement on drain gap visibility: Claude reported visible gap with partial closure (12.5 total penalties), GPT-4o reported complete closure (2.5 penalties only). Final knot assessment was not clearly visible enough to definitively support gap penalty, so conservative scoring applied only rubric-specified placement deviation.",
+  "confidence_score": 0.6
+}

@@ -1,0 +1,80 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Cannot determine completion as this appears to be a promotional video for the LapAR Pro system, not an actual task performance."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.9,
+    "reasoning": "Claude correctly identified this as promotional content for the LapAR Pro system rather than an actual FLS task performance. GPT-4o incorrectly scored what appears to be demonstration footage as a completed task. The video shows equipment setup and system demonstrations, not a scoreable Precision Cutting task with gauze material and marked circle cutting."
+  },
+  "disagreements": [
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Cannot determine completion as this appears to be a promotional video for the LapAR Pro system, not an actual task performance."
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "line_deviation",
+          "count": 1,
+          "description": "Cut deviated slightly outside the marked line in one section."
+        }
+      ],
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Claude correctly identified this as promotional/demonstration content rather than an actual FLS task performance. GPT-4o appears to have misinterpreted demonstration footage as a completed task."
+    },
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 120.0,
+      "resolution": "Used Claude's 0.0 seconds",
+      "rationale": "No actual task was performed, so completion time should be 0.0 seconds."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [],
+      "gpt_value": [
+        "traction_setup",
+        "entry_cut",
+        "circle_following",
+        "circle_release"
+      ],
+      "resolution": "Used Claude's empty array",
+      "rationale": "No actual task phases occurred in promotional content."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 170.0,
+      "resolution": "Used Claude's 0.0 score",
+      "rationale": "Promotional content cannot receive a task performance score."
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "kwTUebJtGN8",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.43,
+    "input_tokens": 2023,
+    "output_tokens": 691,
+    "cost_usd_approx": 0.0164,
+    "timestamp": "2026-04-08T09:29:46.186163+00:00",
+    "prompt_version": "v002"
+  }
+}

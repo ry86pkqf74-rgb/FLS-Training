@@ -1,0 +1,79 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 300.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task appears incomplete - conflicting evidence on completion status with one model reporting lost object and partial completion, other reporting incomplete task."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "outbound_transfers"
+    ],
+    "confidence": 0.4,
+    "reasoning": "Major disagreement between models on task completion status. Claude reported incomplete task with 300s timing, while GPT reported 116s completion with lost object penalty. Given the conflicting evidence and both models expressing uncertainty about final state visibility, the conservative approach is to treat as incomplete task, resulting in zero score."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 300.0,
+      "gpt_value": 116.0,
+      "resolution": "Used 300.0 (incomplete task timing)",
+      "rationale": "With incomplete task penalty, timing becomes moot as score is zero regardless."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task appears incomplete"
+      },
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One ring was dropped"
+      },
+      "resolution": "Applied incomplete_task penalty",
+      "rationale": "Both models expressed uncertainty about final state. Incomplete task is the more conservative penalty when completion status is unclear."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "resolution": "Used ['outbound_transfers'] only",
+      "rationale": "Only outbound transfers were consistently observed by both models."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 174.0,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task penalty results in zero score regardless of timing."
+    }
+  ],
+  "overall_confidence": 0.4,
+  "_meta": {
+    "video_id": "mV3-F4Qf2-Y",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.42,
+    "input_tokens": 2094,
+    "output_tokens": 639,
+    "cost_usd_approx": 0.0159,
+    "timestamp": "2026-04-08T09:30:55.444915+00:00",
+    "prompt_version": "v002"
+  }
+}

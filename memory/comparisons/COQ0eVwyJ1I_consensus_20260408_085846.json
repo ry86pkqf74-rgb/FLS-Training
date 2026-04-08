@@ -1,0 +1,82 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 300.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task not completed within maximum time limit"
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.3,
+    "reasoning": "Major disagreement between models on task completion. Claude reported incomplete task at maximum time (300s) while GPT reported completion at 52s. Given the fundamental nature of this disagreement and the automatic-zero condition for incomplete tasks, the conservative interpretation is applied. Without clear visual evidence of complete task finish, the incomplete_task penalty is retained."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 300.0,
+      "gpt_value": 52.0,
+      "resolution": "Used Claude's 300.0 seconds",
+      "rationale": "Fundamental disagreement on task completion status. Conservative approach applied due to automatic-zero condition for incomplete tasks."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Maximum time reached before completion. Task appears to show ongoing transfers but does not show all objects returned to original side."
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Retained incomplete_task penalty",
+      "rationale": "Task completion is a binary condition with automatic-zero consequences. Without definitive visual evidence of completion, the conservative penalty is maintained."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 248.0,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task penalty results in automatic zero score regardless of timing."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Excluded final_release phase",
+      "rationale": "Final_release phase contradicts incomplete_task determination. Conservative approach excludes this phase."
+    }
+  ],
+  "overall_confidence": 0.3,
+  "_meta": {
+    "video_id": "COQ0eVwyJ1I",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.68,
+    "input_tokens": 2018,
+    "output_tokens": 681,
+    "cost_usd_approx": 0.0163,
+    "timestamp": "2026-04-08T08:58:46.867485+00:00",
+    "prompt_version": "v002"
+  }
+}

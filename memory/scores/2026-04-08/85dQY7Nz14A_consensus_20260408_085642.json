@@ -1,0 +1,28 @@
+{
+  "id": "score_consensus_85dQY7Nz14A_20260408_085642",
+  "video_id": "85dQY7Nz14A",
+  "video_filename": "85dQY7Nz14A.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:56:42.869137+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 38.0,
+  "penalties": [],
+  "score_components": {
+    "time_score": 262.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 262.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Major disagreement on completion time (38s vs 238s). Claude's timing aligns with the description of expert demonstration technique and proficiency target of 48s. GPT's 238s timing would indicate poor performance inconsistent with expert demonstration context. Claude's phases are more comprehensive and consistent with complete task execution.",
+  "confidence_score": 0.7
+}

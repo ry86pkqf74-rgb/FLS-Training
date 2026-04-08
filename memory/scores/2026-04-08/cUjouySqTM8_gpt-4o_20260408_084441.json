@@ -1,0 +1,50 @@
+{
+  "id": "score_gpt_cUjouySqTM8_20260408084441",
+  "video_id": "cUjouySqTM8",
+  "video_filename": "cUjouySqTM8.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:44:41.294407",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "count": 1,
+      "description": "The suture path deviated slightly from the marked target."
+    }
+  ],
+  "score_components": {
+    "time_score": 420.0,
+    "penalty_deductions": 5.0,
+    "total_fls_score": 415.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw",
+    "suture_cut"
+  ],
+  "reasoning": "All task phases and suture were clearly visible. One minor deviation from the marked target was noted, causing a small deduction.",
+  "frame_analyses": [],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "All task phases and suture were clearly visible. One minor deviation from the marked target was noted, causing a small deduction.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

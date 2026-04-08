@@ -1,0 +1,39 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated proper technique for mid-air transfers",
+    "Maintained stable camera positioning throughout demonstration",
+    "Showed correct instrument handling and positioning"
+  ],
+  "weaknesses": [
+    "This was a demonstration video rather than a performance attempt",
+    "No completion time recorded for assessment",
+    "Unable to evaluate speed or efficiency metrics"
+  ],
+  "drills": [
+    {
+      "name": "Timed performance attempts",
+      "description": "Complete full peg transfer sequences under time pressure to establish baseline performance metrics.",
+      "duration_minutes": 15,
+      "targets_weakness": "No completion time recorded for assessment."
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task phase slowly with minimal wasted regrasping to optimize movement efficiency.",
+      "duration_minutes": 10,
+      "targets_weakness": "Unable to evaluate speed or efficiency metrics."
+    }
+  ],
+  "progression_note": "At the advanced level, focus on converting demonstrated technique knowledge into consistent sub-48 second performances with minimal penalty deductions.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "advanced",
+    "elapsed_seconds": 8.41,
+    "input_tokens": 19110,
+    "output_tokens": 273,
+    "cost_usd_approx": 0.0614
+  }
+}

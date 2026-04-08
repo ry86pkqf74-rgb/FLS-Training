@@ -1,0 +1,46 @@
+{
+  "id": "score_claude_ie0o6_xt5ec_20260408082830",
+  "video_id": "ie0o6_xt5ec",
+  "video_filename": "ie0o6_xt5ec.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:28:30.086634",
+  "task_id": "task4",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be a tutorial demonstration rather than a timed performance attempt. No clear start and end timing markers are visible."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "extracorporeal_throws"
+  ],
+  "reasoning": "The video shows tutorial content with instructional text frames followed by demonstration footage showing hands working outside the laparoscopic trainer. No clear timing start/end points are visible, and the demonstration appears to be educational rather than a scored performance attempt. Cannot determine completion time or assess final task completion status.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows tutorial content with instructional text frames followed by demonstration footage showing hands working outside the laparoscopic trainer. No clear timing start/end points are visible, and the demonstration appears to be educational rather than a scored performance attempt. Cannot determine completion time or assess final task completion status.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

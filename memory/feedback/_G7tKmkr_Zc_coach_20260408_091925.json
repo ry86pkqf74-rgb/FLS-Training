@@ -1,0 +1,38 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task4",
+  "strengths": [
+    "Demonstrates proper extracorporeal knot tying technique with good hand positioning",
+    "Shows consistent suture handling and instrument control throughout the demonstration"
+  ],
+  "weaknesses": [
+    "Failed to complete the task with clear target passes through both marks",
+    "No evidence of proper task setup or completion sequence",
+    "Appears to be practicing technique without following the structured FLS protocol"
+  ],
+  "drills": [
+    {
+      "name": "Mark-to-mark needle path drill",
+      "description": "Practice 10 complete passes through both target marks before attempting any knot tying to establish proper task sequence.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the task with clear target passes through both marks"
+    },
+    {
+      "name": "Complete task sequence rehearsal",
+      "description": "Perform the full task from setup to completion including needle passes, knot tying, and final cut without time pressure.",
+      "duration_minutes": 15,
+      "targets_weakness": "No evidence of proper task setup or completion sequence"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on completing the full task sequence consistently before refining speed. Your knot tying technique shows promise, but you need to integrate it with proper needle passes through the target marks.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task4",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 9.7,
+    "input_tokens": 19135,
+    "output_tokens": 346,
+    "cost_usd_approx": 0.0626
+  }
+}

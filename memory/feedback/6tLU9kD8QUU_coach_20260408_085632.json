@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Maintained steady traction throughout the cutting sequence",
+    "Completed the full circle path without stopping or hesitation",
+    "Demonstrated good instrument coordination during the cutting motion"
+  ],
+  "weaknesses": [
+    "Cut path deviated visibly from the marked circle boundaries",
+    "Completion time of 110 seconds exceeds intermediate target range",
+    "Inconsistent precision in following the circular guideline"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, pausing between sections to verify alignment with the marked boundary.",
+      "duration_minutes": 12,
+      "targets_weakness": "Cut path deviated visibly from the marked circle boundaries"
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and maintain optimal cutting geometry throughout the circle.",
+      "duration_minutes": 8,
+      "targets_weakness": "Inconsistent precision in following the circular guideline"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the circle cutting task slowly with minimal wasted regrasping, focusing on smooth continuous motion to improve time efficiency.",
+      "duration_minutes": 10,
+      "targets_weakness": "Completion time of 110 seconds exceeds intermediate target range"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your consistent cutting motion into precise boundary following while reducing completion time to under 90 seconds.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 15.59,
+    "input_tokens": 18337,
+    "output_tokens": 418,
+    "cost_usd_approx": 0.0613
+  }
+}

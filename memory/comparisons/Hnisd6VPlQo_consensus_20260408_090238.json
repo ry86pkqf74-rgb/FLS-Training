@@ -1,0 +1,82 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video rather than a timed performance. No actual task completion with timing start and end points is visible."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Fundamental disagreement on video content type. Claude identified this as an instructional video without scoreable performance, while GPT-4o scored it as a completed task. Given the absence of clear timing markers and the educational context described by Claude, this appears to be training material rather than a performance attempt."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 55.6,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Without clear start/end timing markers visible in an instructional context, completion time cannot be reliably determined"
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video rather than a timed performance. No actual task completion with timing start and end points is visible."
+      },
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One object was dropped outside the field of view and was not retrievable."
+      },
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "If the video is instructional material rather than a performance attempt, task completion assessment takes precedence over object handling penalties"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's partial phase list",
+      "rationale": "Consistent with incomplete task determination - only initial phases would be visible in instructional snippets"
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 239.4,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Incomplete task results in zero score regardless of other factors"
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "Hnisd6VPlQo",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.04,
+    "input_tokens": 1998,
+    "output_tokens": 716,
+    "cost_usd_approx": 0.0167,
+    "timestamp": "2026-04-08T09:02:38.568384+00:00",
+    "prompt_version": "v002"
+  }
+}

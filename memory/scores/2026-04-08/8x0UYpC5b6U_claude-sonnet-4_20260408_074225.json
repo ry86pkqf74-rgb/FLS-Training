@@ -1,0 +1,42 @@
+{
+  "id": "score_claude_8x0UYpC5b6U_20260408074225",
+  "video_id": "8x0UYpC5b6U",
+  "video_filename": "8x0UYpC5b6U.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:42:25.032863",
+  "task_id": "task1",
+  "penalties": [],
+  "score_components": {
+    "time_score": 52.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 52.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "Clear task completion visible with all six objects transferred to left side then returned to original right side positions. Timing starts at 00:05 when first object is grasped and ends at 04:28 when final object is released on right side. All transfers appear to be proper mid-air handoffs between instruments. No objects were dropped or lost from view. Task completed successfully within time limit.",
+  "frame_analyses": [],
+  "completion_time_seconds": 248.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Clear task completion visible with all six objects transferred to left side then returned to original right side positions. Timing starts at 00:05 when first object is grasped and ends at 04:28 when final object is released on right side. All transfers appear to be proper mid-air handoffs between instruments. No objects were dropped or lost from view. Task completed successfully within time limit.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

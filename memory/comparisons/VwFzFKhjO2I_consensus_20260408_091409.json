@@ -1,0 +1,53 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 236.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task incomplete - not all 6 objects were successfully transferred back to the original side within the time limit."
+      }
+    ],
+    "score_components": {
+      "time_score": 64.0,
+      "penalty_deductions": 64.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers"
+    ],
+    "confidence": 0.85,
+    "reasoning": "Both models agreed on timing (236 seconds) and that the task was incomplete. Claude correctly applied the automatic zero rule for incomplete tasks, while GPT-4o incorrectly calculated the penalty deduction. The official rubric states incomplete tasks receive automatic zero scores."
+  },
+  "disagreements": [
+    {
+      "field": "score_components.penalty_deductions",
+      "claude_value": 64.0,
+      "gpt_value": 0.0,
+      "resolution": "Used Claude's value of 64.0",
+      "rationale": "For incomplete tasks in FLS Peg Transfer, the rubric requires an automatic zero score. Claude correctly applied this rule while GPT-4o failed to apply the penalty deduction despite identifying the incomplete task."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 64.0,
+      "resolution": "Used Claude's value of 0.0",
+      "rationale": "Incomplete tasks automatically receive zero points according to FLS scoring rules. GPT-4o's calculation of 64.0 violates this fundamental rule."
+    }
+  ],
+  "overall_confidence": 0.85,
+  "_meta": {
+    "video_id": "VwFzFKhjO2I",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 8.68,
+    "input_tokens": 2075,
+    "output_tokens": 494,
+    "cost_usd_approx": 0.0136,
+    "timestamp": "2026-04-08T09:14:09.954132+00:00",
+    "prompt_version": "v002"
+  }
+}

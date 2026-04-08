@@ -1,0 +1,44 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task4",
+  "strengths": [
+    "Demonstrated proper needle loading and initial suture introduction",
+    "Maintained good instrument control during target passes"
+  ],
+  "weaknesses": [
+    "Failed to complete the task within the time limit",
+    "Did not progress to suture cutting and final completion",
+    "May have struggled with knot tying efficiency"
+  ],
+  "drills": [
+    {
+      "name": "Mark-to-mark needle path drill",
+      "description": "Practice 10 passes through both targets before any knot tying to build muscle memory for accurate placement.",
+      "duration_minutes": 8,
+      "targets_weakness": "Failed to complete the task within the time limit"
+    },
+    {
+      "name": "Knot-pusher sequencing drill",
+      "description": "Practice 10 three-throw extracorporeal sequences with deliberate pusher advancement to improve knot tying speed.",
+      "duration_minutes": 10,
+      "targets_weakness": "May have struggled with knot tying efficiency"
+    },
+    {
+      "name": "Slit-closure check drill",
+      "description": "Tighten just enough to close the slit without avulsion, then visually inspect before proceeding to cutting.",
+      "duration_minutes": 5,
+      "targets_weakness": "Did not progress to suture cutting and final completion"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your accurate needle placement into faster knot sequences. Work on completing the full task workflow before chasing speed improvements.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task4",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 13.41,
+    "input_tokens": 18330,
+    "output_tokens": 383,
+    "cost_usd_approx": 0.0607
+  }
+}

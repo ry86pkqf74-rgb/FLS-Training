@@ -1,0 +1,28 @@
+{
+  "id": "score_consensus_19FRvCm3NWI_20260408_085218",
+  "video_id": "19FRvCm3NWI",
+  "video_filename": "19FRvCm3NWI.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:52:18.237355+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 162.0,
+  "penalties": [],
+  "score_components": {
+    "time_score": 138.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 138.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models agreed on task completion with all six objects successfully transferred outbound and returned with no penalties. Major disagreement on timing (162s vs 55s) resolved in favor of Claude's more conservative estimate given the significant difference suggests potential frame counting uncertainty.",
+  "confidence_score": 0.7
+}

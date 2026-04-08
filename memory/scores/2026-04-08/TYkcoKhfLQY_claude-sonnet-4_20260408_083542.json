@@ -1,0 +1,43 @@
+{
+  "id": "score_claude_TYkcoKhfLQY_20260408083542",
+  "video_id": "TYkcoKhfLQY",
+  "video_filename": "TYkcoKhfLQY.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:35:42.797244",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "No actual FLS intracorporeal suturing task performance is visible in the provided frames."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "The provided frames contain only presentation slides from a SAGES conference about automatic scoring of laparoscopic suturing tasks. No actual task performance, instruments, suture materials, Penrose drain, or FLS trainer setup is visible. This appears to be academic presentation content rather than a scorable FLS task performance video.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The provided frames contain only presentation slides from a SAGES conference about automatic scoring of laparoscopic suturing tasks. No actual task performance, instruments, suture materials, Penrose drain, or FLS trainer setup is visible. This appears to be academic presentation content rather than a scorable FLS task performance video.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

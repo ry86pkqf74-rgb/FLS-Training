@@ -1,0 +1,49 @@
+{
+  "id": "score_gpt_ciGLex6_Tjc_20260408082926",
+  "video_id": "ciGLex6_Tjc",
+  "video_filename": "ciGLex6_Tjc.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:29:26.924934",
+  "task_id": "task4",
+  "penalties": [
+    {
+      "type": "slit_not_closed",
+      "count": 1,
+      "description": "Residual slit gap visible after the final knot."
+    }
+  ],
+  "score_components": {
+    "time_score": 205.0,
+    "penalty_deductions": 8.0,
+    "total_fls_score": 197.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws",
+    "slit_closure_assessment",
+    "suture_cut"
+  ],
+  "reasoning": "The slit closure was not fully achieved, resulting in a penalty. All task phases were clearly visible, with sufficient light and focus to evaluate performance.",
+  "frame_analyses": [],
+  "completion_time_seconds": 215.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The slit closure was not fully achieved, resulting in a penalty. All task phases were clearly visible, with sufficient light and focus to evaluate performance.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

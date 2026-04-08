@@ -1,0 +1,84 @@
+{
+  "consensus_score": {
+    "task_id": "task5",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Video appears to be instructional content rather than a scoreable task performance attempt"
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "needle_load",
+      "suture_placement",
+      "first_throw"
+    ],
+    "confidence": 0.2,
+    "reasoning": "Major disagreement between models on whether this is a scoreable performance attempt. Claude identified this as instructional content with promotional overlays and no clear timing markers. GPT-4o scored it as a completed task in 175 seconds. Given the fundamental disagreement about video content type and the lack of clear task attempt boundaries, the conservative approach is to treat this as non-scoreable instructional content per Claude's assessment."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 175.0,
+      "resolution": "Used Claude's 0.0 seconds",
+      "rationale": "Claude's identification of instructional content with promotional overlays takes precedence over GPT's timing assessment when video content type is disputed"
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "This appears to be an instructional video about intracorporeal suturing techniques rather than a performance attempt"
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Kept Claude's incomplete_task penalty",
+      "rationale": "When one model identifies fundamental task completion issues, the conservative approach is to preserve the incomplete_task designation"
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 425.0,
+      "resolution": "Used 0.0",
+      "rationale": "Score follows from incomplete_task penalty determination"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw"
+      ],
+      "gpt_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw",
+        "second_throw",
+        "third_throw",
+        "suture_cut"
+      ],
+      "resolution": "Used Claude's shorter list",
+      "rationale": "Conservative approach when video content type is disputed - only include phases both models can clearly identify"
+    }
+  ],
+  "overall_confidence": 0.2,
+  "_meta": {
+    "video_id": "wTsqvpJOEmk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.18,
+    "input_tokens": 2068,
+    "output_tokens": 699,
+    "cost_usd_approx": 0.0167,
+    "timestamp": "2026-04-08T09:40:22.804564+00:00",
+    "prompt_version": "v002"
+  }
+}

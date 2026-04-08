@@ -1,0 +1,47 @@
+{
+  "id": "score_claude_VwFzFKhjO2I_20260408074257",
+  "video_id": "VwFzFKhjO2I",
+  "video_filename": "VwFzFKhjO2I.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:42:57.430913",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears incomplete as only 4 of 6 objects were successfully transferred back to the original side by the end of the video sequence."
+    }
+  ],
+  "score_components": {
+    "time_score": 64.0,
+    "penalty_deductions": 64.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers"
+  ],
+  "reasoning": "The timing is clearly visible from the counter. All 6 objects were successfully transferred to the left side during the outbound phase. However, during the return transfers, only 4 objects were moved back to the original right side by frame 22 at 03:56. The task requires all 6 objects to be returned to complete the exercise. Since the task was not completed, this results in an automatic zero score despite the reasonable time performance.",
+  "frame_analyses": [],
+  "completion_time_seconds": 236.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The timing is clearly visible from the counter. All 6 objects were successfully transferred to the left side during the outbound phase. However, during the return transfers, only 4 objects were moved back to the original right side by frame 22 at 03:56. The task requires all 6 objects to be returned to complete the exercise. Since the task was not completed, this results in an automatic zero score despite the reasonable time performance.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

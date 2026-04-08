@@ -1,0 +1,49 @@
+{
+  "id": "score_claude_g8RpYG9fLoQ_20260408084040",
+  "video_id": "g8RpYG9fLoQ",
+  "video_filename": "g8RpYG9fLoQ.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:40:40.438984",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Cannot determine if task was completed as the final frames show marketing content rather than completion of suturing and cutting."
+    }
+  ],
+  "score_components": {
+    "time_score": 300.0,
+    "penalty_deductions": 600.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw"
+  ],
+  "reasoning": "The video shows intracorporeal suturing technique with multiple throws being performed on a Penrose drain. However, the video transitions to marketing content before showing completion of the task (final suture cutting). Cannot determine final slit closure, hand exchanges between throws, or exact completion time. Marking as incomplete task due to inability to verify task completion.",
+  "frame_analyses": [],
+  "completion_time_seconds": 300.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows intracorporeal suturing technique with multiple throws being performed on a Penrose drain. However, the video transitions to marketing content before showing completion of the task (final suture cutting). Cannot determine final slit closure, hand exchanges between throws, or exact completion time. Marking as incomplete task due to inability to verify task completion.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

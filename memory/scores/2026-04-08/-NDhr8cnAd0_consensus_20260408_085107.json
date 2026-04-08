@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_-NDhr8cnAd0_20260408_085107",
+  "video_id": "-NDhr8cnAd0",
+  "video_filename": "-NDhr8cnAd0.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:51:07.784451+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 111.0,
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "The marked circle was not fully cut out and freed from the gauze material."
+    }
+  ],
+  "score_components": {
+    "time_score": 189.0,
+    "penalty_deductions": 189.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models agreed on timing (111 seconds) and detected an incomplete circle penalty. However, they disagreed on penalty severity - Claude applied the automatic zero rule while GPT applied a 25-point deduction. Per the rubric, incomplete_circle penalties result in automatic task failure and zero score when the circle is not freed from the material.",
+  "confidence_score": 0.7
+}

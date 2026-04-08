@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_IwrNTRVXuJQ_20260408_090354",
+  "video_id": "IwrNTRVXuJQ",
+  "video_filename": "IwrNTRVXuJQ.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:03:54.886897+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 180.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional video showing task setup and technique demonstration rather than a timed performance. No actual task completion is observable."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning"
+  ],
+  "confidence": 0.9,
+  "reasoning": "Claude correctly identified this as an instructional video showing task demonstrations rather than a scoreable performance attempt. GPT-4o appears to have misinterpreted the educational content as an actual task performance. The video shows setup and demonstration phases but no actual timed completion of the ligating loop task.",
+  "confidence_score": 0.9
+}

@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_ie0o6_xt5ec_20260408_092753",
+  "video_id": "ie0o6_xt5ec",
+  "video_filename": "ie0o6_xt5ec.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:27:53.577096+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Video appears to be tutorial/demonstration content without clear timing markers or performance attempt structure"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "extracorporeal_throws"
+  ],
+  "confidence": 0.1,
+  "reasoning": "Major disagreement between models on whether this is a scorable performance attempt. Claude identified tutorial content without timing markers, while GPT scored as completed task. Given the fundamental uncertainty about video content type, the conservative approach is to treat as non-scorable until timing and performance structure can be clearly established.",
+  "confidence_score": 0.1
+}

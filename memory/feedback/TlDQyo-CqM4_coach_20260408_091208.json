@@ -1,0 +1,39 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Successfully completed the circle cut and removed the gauze piece",
+    "Maintained adequate traction throughout most of the cutting sequence",
+    "Demonstrated good instrument coordination during the cutting phases"
+  ],
+  "weaknesses": [
+    "Cut path deviated outside the marked circle boundary in multiple sections",
+    "Inconsistent precision when following the circular guideline",
+    "Lost cutting accuracy particularly in the middle sections of the circle"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, pausing between each quarter to verify alignment with the circle boundary.",
+      "duration_minutes": 12,
+      "targets_weakness": "Cut path deviated outside the marked circle boundary in multiple sections."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and maintain consistent tension on the gauze edge.",
+      "duration_minutes": 8,
+      "targets_weakness": "Inconsistent precision when following the circular guideline."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your successful completion into precise boundary adherence. Work on maintaining consistent cutting accuracy throughout the entire circle rather than just completing the task.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.16,
+    "input_tokens": 18354,
+    "output_tokens": 347,
+    "cost_usd_approx": 0.0603
+  }
+}

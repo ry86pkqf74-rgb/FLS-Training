@@ -1,10 +1,5 @@
 # JIGSAWS — JHU-ISI Gesture and Skill Assessment Working Set
 
-> **Status (2026-04-08):** registration pending. README + download
-> script stub committed; expected size ~12 GB so it can land on
-> either RunPod alongside LASANA POD=B (SutureAndKnot) since it's
-> the same surgical task family.
-
 ## ⚠️ MANDATORY CITATION
 
 JHU-CIRL requires that any work using JIGSAWS cite the publication
@@ -22,6 +17,25 @@ every paper, blog post, and model card derived from this work.
 If you use the gesture or skill labels (i.e., almost certainly), also
 cite the 2017 benchmark paper (Ahmidi et al., IEEE TBME 64(9), PMC5559351).
 
+---
+
+> **Status (2026-04-08):** ✅ **All 4 JIGSAWS archives downloaded
+> via Chrome and integrated as metadata-only / kinematics-only.**
+>
+> **Important:** JHU-CIRL only released kinematics + meta files +
+> gesture transcriptions + experimental setup splits. **There is no
+> video archive available** — the 3 short sample AVI clips in
+> `samples/` are the only frames JHU exposes publicly. We're
+> integrating JIGSAWS as a metadata + kinematics + GRS-label signal
+> source, not as a visual training corpus.
+>
+> Total trial count: **103** (Suturing 39 + Knot_Tying 36 + Needle_Passing 28),
+> exactly matching the published numbers.
+>
+> ⚠️ **License:** academic / non-commercial research only. The user has
+> confirmed FLS-Training is being used as a research project, which is
+> within the JIGSAWS DUA scope.
+
 ## Source
 
 - **Official release:** https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/
@@ -33,30 +47,64 @@ cite the 2017 benchmark paper (Ahmidi et al., IEEE TBME 64(9), PMC5559351).
   Companion paper: PMC5559351 (2017 benchmark report).
 - **License:** academic research only. ⚠️ Not commercial.
 
-## What it contains
+## What it contains (verified locally 2026-04-08)
 
 **103 trials of basic surgical skills** performed by 8 right-handed
-surgeons spanning 3 self-reported skill levels (novice / intermediate /
-expert), recorded on a da Vinci Surgical System:
+surgeons spanning 3 self-reported skill levels:
 
-| Task          | Trials |
-|---------------|-------:|
-| Suturing      |     39 |
-| Knot Tying    |     36 |
-| Needle Passing|     28 |
-| **Total**     | **103** |
+| Task          | Trials | Novice | Intermediate | Expert |
+|---------------|-------:|-------:|-------------:|-------:|
+| Suturing      |     39 |     19 |           10 |     10 |
+| Knot_Tying    |     36 |     16 |           10 |     10 |
+| Needle_Passing|     28 |     11 |            8 |      9 |
+| **Total**     | **103**|   **46** |       **28** |   **29** |
 
-Per trial:
-- **Stereo endoscope video** (left + right cameras, ~30 fps).
-- **Kinematic data** at 30 Hz from both Master Tool Manipulators and
-  both Patient-Side Manipulators (76 channels: positions, rotation
-  matrices, linear/angular velocities, gripper angles).
-- **Manual gesture annotation:** atomic surgical-gesture segments
-  (G1...G15 vocabulary).
-- **Skill annotation:** Modified Global Operative Assessment of
-  Laparoscopic Skills (M-GOALS) Global Rating Score per trial, plus
-  self-reported skill level of the operator.
-- **Standardized cross-validation splits** (LOSO + LOUO).
+Per trial **what's actually in the JIGSAWS public release**:
+- **Kinematic data** at 30 Hz, 76 channels (positions, rotation
+  matrices, linear/angular velocities, gripper angles for both Master
+  Tool Manipulators and both Patient-Side Manipulators). See per-task
+  `readme.txt` for the full channel layout.
+- **Manual gesture annotation:** per-trial frame-range labels using
+  the G1...G15 vocabulary (`transcriptions/<trial>.txt`, format:
+  `<start_frame> <end_frame> <gesture_id>`).
+- **Skill annotation:** GRS per trial (sum of 6 sub-scores, range
+  6-30) plus self-reported skill level. Format in `meta_file_<task>.txt`:
+  ```
+  <trial_id>  <skill_level (E/I/N)>  <GRS>  <r1> <r2> <r3> <r4> <r5> <r6>
+  ```
+  Sub-scores in order: respect-for-tissue, suture/needle-handling,
+  time-and-motion, flow-of-operation, overall-performance,
+  quality-of-final-product (each 1-5).
+- **Standardized cross-validation splits** in `Experimental_setup/`
+  (LOSO / LOUO / OneTrialOut / UserOut variants for both Gesture
+  Classification and Skill Detection tasks). 16,328 small Test.txt /
+  Train.txt files arranged by `Task / Balanced or unBalanced /
+  Classification or Detection / OneTrialOut or UserOut / N_Out / itr_M /`.
+
+**NOT in the public release:**
+- ❌ Stereo endoscope video (only 3 short sample clips total in `samples/`).
+
+## Aggregate GRS statistics (computed locally)
+
+Across all 103 trials:
+
+| Task           | n  | mean | sd  | min | max |
+|----------------|---:|-----:|----:|----:|----:|
+| Suturing       | 39 | 19.13 | 5.40 |   8 |  30 |
+| Knot_Tying     | 36 | 14.42 | 5.11 |   6 |  22 |
+| Needle_Passing | 28 | 14.29 | 4.82 |   7 |  24 |
+| **All**        | 103 | 16.17 | 5.60 |   6 |  30 |
+
+Per-component (1-5 scale, all 103 trials pooled):
+
+| Component             | mean | sd  |
+|-----------------------|-----:|----:|
+| Respect for tissue    | 2.58 | 1.11 |
+| Suture/needle handling| 2.50 | 1.04 |
+| Time and motion       | 2.24 | 1.04 |
+| Flow of operation     | 3.17 | 0.98 |
+| Overall performance   | 2.56 | 1.03 |
+| Quality of final product | 3.12 | 1.05 |
 
 ## FLS task mapping
 

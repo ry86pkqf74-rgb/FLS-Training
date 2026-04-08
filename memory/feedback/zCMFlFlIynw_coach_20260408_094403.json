@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Established proper traction with Maryland forceps",
+    "Maintained steady cutting motion through most of the circle",
+    "Demonstrated good instrument coordination during the cutting phase"
+  ],
+  "weaknesses": [
+    "Failed to complete the full circle cut",
+    "Did not free the marked circle from the gauze",
+    "Lost momentum in the final portion of the task"
+  ],
+  "drills": [
+    {
+      "name": "Complete circle tracking drill",
+      "description": "Cut practice circles in four controlled quadrants, ensuring each quadrant connects smoothly to the next without stopping until the circle is fully freed.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the full circle cut"
+    },
+    {
+      "name": "Circle liberation check drill",
+      "description": "After cutting each practice circle, verify the piece can be lifted free from the gauze before considering the task complete.",
+      "duration_minutes": 8,
+      "targets_weakness": "Did not free the marked circle from the gauze"
+    },
+    {
+      "name": "Sustained cutting rhythm practice",
+      "description": "Practice maintaining consistent cutting speed and pressure throughout the entire circle without pausing or slowing in the final quarter.",
+      "duration_minutes": 10,
+      "targets_weakness": "Lost momentum in the final portion of the task"
+    }
+  ],
+  "progression_note": "At the intermediate level, task completion is non-negotiable - focus on finishing the full circle cut before working on speed optimization. Your cutting technique shows promise but needs to be sustained through the entire circumference.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 14.55,
+    "input_tokens": 19119,
+    "output_tokens": 391,
+    "cost_usd_approx": 0.0632
+  }
+}

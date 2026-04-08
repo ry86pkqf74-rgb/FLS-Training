@@ -1,0 +1,39 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task5",
+  "strengths": [
+    "Demonstrated proper needle loading technique",
+    "Showed correct C-loop formation mechanics",
+    "Maintained good instrument positioning throughout the demonstration"
+  ],
+  "weaknesses": [
+    "Unable to complete the task within time constraints",
+    "Demonstration format suggests lack of confidence in performing under pressure",
+    "Missing the transition from practice to timed performance"
+  ],
+  "drills": [
+    {
+      "name": "Timed sequence completion drill",
+      "description": "Practice the complete intracorporeal sequence from needle loading to final knot in 3-minute intervals, focusing on smooth transitions between phases.",
+      "duration_minutes": 15,
+      "targets_weakness": "Unable to complete the task within time constraints"
+    },
+    {
+      "name": "Performance pressure simulation",
+      "description": "Execute 10 complete knot sequences with a timer visible, gradually reducing target time from 4 minutes to 2.5 minutes.",
+      "duration_minutes": 12,
+      "targets_weakness": "Missing the transition from practice to timed performance"
+    }
+  ],
+  "progression_note": "Your technique fundamentals are solid, but you need to bridge the gap between demonstration and performance. Focus on completing full timed attempts rather than step-by-step practice to build confidence and speed.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task5",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.27,
+    "input_tokens": 18358,
+    "output_tokens": 320,
+    "cost_usd_approx": 0.0599
+  }
+}

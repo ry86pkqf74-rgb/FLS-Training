@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_uw7jeHbWil4_20260408_093849",
+  "video_id": "uw7jeHbWil4",
+  "video_filename": "uw7jeHbWil4.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:38:49.847090+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 128.0,
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "The marked circle was not completely freed from the gauze."
+    }
+  ],
+  "score_components": {
+    "time_score": 172.0,
+    "penalty_deductions": 20.0,
+    "total_fls_score": 152.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Both models detected the core cutting phases but disagreed on completion status. GPT-4o's assessment of incomplete circle is more defensible given the fundamental task requirement. Claude's line deviation penalties are dropped as they conflict with the incomplete circle finding. Timing averaged between the two estimates.",
+  "confidence_score": 0.7
+}

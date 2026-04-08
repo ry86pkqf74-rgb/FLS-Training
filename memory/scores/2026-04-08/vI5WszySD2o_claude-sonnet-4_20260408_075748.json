@@ -1,0 +1,42 @@
+{
+  "id": "score_claude_vI5WszySD2o_20260408075748",
+  "video_id": "vI5WszySD2o",
+  "video_filename": "vI5WszySD2o.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:57:48.023717",
+  "task_id": "task2",
+  "penalties": [],
+  "score_components": {
+    "time_score": 270.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 270.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "reasoning": "The task shows clear progression through all phases. The marked circle is completely cut out and freed from the gauze by frame 20-21. The cutting appears to follow the marked line accurately with no visible deviation outside or inside the circle boundary. The final product shows a cleanly cut circular piece that matches the marked target.",
+  "frame_analyses": [],
+  "completion_time_seconds": 30.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The task shows clear progression through all phases. The marked circle is completely cut out and freed from the gauze by frame 20-21. The cutting appears to follow the marked line accurately with no visible deviation outside or inside the circle boundary. The final product shows a cleanly cut circular piece that matches the marked target.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

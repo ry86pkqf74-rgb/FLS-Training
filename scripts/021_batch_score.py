@@ -158,8 +158,7 @@ def main() -> None:
     for index, item in enumerate(to_score, start=1):
         video_id = str(item["video_id"])
         filepath = str(item["filepath"])
-        task_num_value = item.get("task_num")
-        task_num = task_num_value if isinstance(task_num_value, int) else int(str(task_num_value))
+        task_num = int(item["task_num"])
 
         print(f"\n{'=' * 72}")
         print(f"[{index}/{len(to_score)}] {video_id} (Task {task_num})")

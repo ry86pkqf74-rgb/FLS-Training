@@ -1,0 +1,82 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 180.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Maximum time reached before completion. The loop was not successfully secured on the middle appendage and the tail was not cut inside the trainer."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "loop_introduction",
+      "loop_positioning",
+      "pusher_break_and_advancement"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Major disagreement between models on task completion. Claude reported incomplete task at maximum time (180s) with no tail cutting observed, while GPT reported successful completion at 120s with tail cutting. Given the fundamental nature of this disagreement and the automatic-zero condition for incomplete tasks, Claude's assessment takes precedence as incomplete task penalties are binary and critical to scoring validity."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 180.0,
+      "gpt_value": 120.0,
+      "resolution": "Used Claude's 180.0 seconds",
+      "rationale": "Claude's assessment of reaching maximum time aligns with incomplete task penalty. If task was truly complete at 120s, no incomplete penalty would apply."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Maximum time reached before completion. The loop was not successfully secured on the middle appendage and the tail was not cut inside the trainer."
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Kept Claude's incomplete_task penalty",
+      "rationale": "Incomplete task is an automatic-zero condition that takes precedence. The disagreement on completion status makes this the most conservative and rubric-appropriate assessment."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "loop_introduction",
+        "loop_positioning",
+        "pusher_break_and_advancement"
+      ],
+      "gpt_value": [
+        "loop_introduction",
+        "loop_positioning",
+        "pusher_break_and_advancement",
+        "tail_cut"
+      ],
+      "resolution": "Excluded tail_cut phase",
+      "rationale": "If tail cutting was not completed as Claude assessed, then this phase should not be marked as detected."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 60.0,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task penalty results in automatic zero score regardless of time performance."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "-7iWDuqJBjs",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.63,
+    "input_tokens": 2036,
+    "output_tokens": 728,
+    "cost_usd_approx": 0.017,
+    "timestamp": "2026-04-08T08:50:47.684064+00:00",
+    "prompt_version": "v002"
+  }
+}

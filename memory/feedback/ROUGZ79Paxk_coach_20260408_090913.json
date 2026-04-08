@@ -1,0 +1,38 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated proper instrument handling and grip throughout the session",
+    "Maintained good camera positioning and workspace organization"
+  ],
+  "weaknesses": [
+    "Failed to complete the peg transfer task within the time limit",
+    "Transitioned between different FLS exercises without finishing the primary task",
+    "Showed inconsistent focus on task completion versus exploration"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on completion rather than speed",
+      "duration_minutes": 15,
+      "targets_weakness": "Failed to complete the peg transfer task within the time limit"
+    },
+    {
+      "name": "Single-task focus drill",
+      "description": "Set up peg transfer and commit to completing all 6 objects before any other activity",
+      "duration_minutes": 10,
+      "targets_weakness": "Transitioned between different FLS exercises without finishing the primary task"
+    }
+  ],
+  "progression_note": "At the intermediate level, prioritize task completion over exploration of multiple exercises. Your instrument handling shows competence, but you need to develop the discipline to finish what you start before moving to other tasks.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.17,
+    "input_tokens": 19116,
+    "output_tokens": 329,
+    "cost_usd_approx": 0.0623
+  }
+}

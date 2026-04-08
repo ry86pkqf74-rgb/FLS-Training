@@ -1,0 +1,55 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 258.5,
+    "penalties": [],
+    "score_components": {
+      "time_score": 41.5,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 41.5
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers",
+      "final_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion with no penalties. Claude reported completion at 248 seconds (4:08) while GPT-4o reported 269 seconds (4:29). Given the 21-second difference and both models citing different frame references, the consensus uses the average timing. Both models confirmed all six objects were successfully transferred without drops or losses."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 248.0,
+      "gpt_value": 269.0,
+      "resolution": "Used average of 258.5 seconds",
+      "rationale": "Both models identified task completion but with different timing endpoints. Without frame-by-frame verification, the conservative approach is to average the reported times."
+    },
+    {
+      "field": "score_components.time_score",
+      "claude_value": 52.0,
+      "gpt_value": 31.0,
+      "resolution": "Recalculated as 41.5 based on consensus timing",
+      "rationale": "Time score must be recomputed using consensus completion time: 300 - 258.5 = 41.5"
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 52.0,
+      "gpt_value": 31.0,
+      "resolution": "Recalculated as 41.5 based on consensus components",
+      "rationale": "Total FLS score equals time_score minus penalty_deductions: 41.5 - 0.0 = 41.5"
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "8x0UYpC5b6U",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.89,
+    "input_tokens": 1995,
+    "output_tokens": 551,
+    "cost_usd_approx": 0.0142,
+    "timestamp": "2026-04-08T08:57:07.040307+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,568 @@
+{
+  "_embedded" : {
+    "bitstreams" : [ {
+      "id" : "aad0a7eb-fdc3-421e-9f03-2fa4eb211e2c",
+      "uuid" : "aad0a7eb-fdc3-421e-9f03-2fa4eb211e2c",
+      "name" : "Annotation.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Annotation.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 69958,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "2339e7cd12ba6291e9162119ba068439"
+      },
+      "sequenceId" : 1,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/aad0a7eb-fdc3-421e-9f03-2fa4eb211e2c/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/aad0a7eb-fdc3-421e-9f03-2fa4eb211e2c/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/aad0a7eb-fdc3-421e-9f03-2fa4eb211e2c/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/aad0a7eb-fdc3-421e-9f03-2fa4eb211e2c/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/aad0a7eb-fdc3-421e-9f03-2fa4eb211e2c"
+        }
+      }
+    }, {
+      "id" : "08bc523e-b123-47d2-82b6-564e6b6551b1",
+      "uuid" : "08bc523e-b123-47d2-82b6-564e6b6551b1",
+      "name" : "BalloonResection_left.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "BalloonResection_left.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 24762889690,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "a41a2b8bf2e988cf82e4592b37f02fa8"
+      },
+      "sequenceId" : 2,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/08bc523e-b123-47d2-82b6-564e6b6551b1/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/08bc523e-b123-47d2-82b6-564e6b6551b1/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/08bc523e-b123-47d2-82b6-564e6b6551b1/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/08bc523e-b123-47d2-82b6-564e6b6551b1/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/08bc523e-b123-47d2-82b6-564e6b6551b1"
+        }
+      }
+    }, {
+      "id" : "7f522ef6-dafc-4761-b614-1ef3d405f853",
+      "uuid" : "7f522ef6-dafc-4761-b614-1ef3d405f853",
+      "name" : "BalloonResection_right.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "BalloonResection_right.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 25417710965,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "5b8f9ab4d5e96ed27d3f44005d748085"
+      },
+      "sequenceId" : 3,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/7f522ef6-dafc-4761-b614-1ef3d405f853/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/7f522ef6-dafc-4761-b614-1ef3d405f853/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/7f522ef6-dafc-4761-b614-1ef3d405f853/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/7f522ef6-dafc-4761-b614-1ef3d405f853/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/7f522ef6-dafc-4761-b614-1ef3d405f853"
+        }
+      }
+    }, {
+      "id" : "c527ce4a-c79f-4950-9af2-b1e87020195f",
+      "uuid" : "c527ce4a-c79f-4950-9af2-b1e87020195f",
+      "name" : "camera_calibration.yaml",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "camera_calibration.yaml",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 867,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "a02f30e3626cb0564656f7f75b1937aa"
+      },
+      "sequenceId" : 4,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/c527ce4a-c79f-4950-9af2-b1e87020195f/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/c527ce4a-c79f-4950-9af2-b1e87020195f/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/c527ce4a-c79f-4950-9af2-b1e87020195f/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/c527ce4a-c79f-4950-9af2-b1e87020195f/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/c527ce4a-c79f-4950-9af2-b1e87020195f"
+        }
+      }
+    }, {
+      "id" : "da15f935-03bf-4483-aab2-10315f53cdc8",
+      "uuid" : "da15f935-03bf-4483-aab2-10315f53cdc8",
+      "name" : "CircleCutting_left.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "CircleCutting_left.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 23159194626,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "524eeb40f50f32cd5b83038eb9140678"
+      },
+      "sequenceId" : 5,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/da15f935-03bf-4483-aab2-10315f53cdc8/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/da15f935-03bf-4483-aab2-10315f53cdc8/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/da15f935-03bf-4483-aab2-10315f53cdc8/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/da15f935-03bf-4483-aab2-10315f53cdc8/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/da15f935-03bf-4483-aab2-10315f53cdc8"
+        }
+      }
+    }, {
+      "id" : "71209477-b015-442c-a3e9-b35957f37203",
+      "uuid" : "71209477-b015-442c-a3e9-b35957f37203",
+      "name" : "CircleCutting_right.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "CircleCutting_right.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 23928074782,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "b7a245188c19d55ebd168f131363f495"
+      },
+      "sequenceId" : 6,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/71209477-b015-442c-a3e9-b35957f37203/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/71209477-b015-442c-a3e9-b35957f37203/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/71209477-b015-442c-a3e9-b35957f37203/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/71209477-b015-442c-a3e9-b35957f37203/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/71209477-b015-442c-a3e9-b35957f37203"
+        }
+      }
+    }, {
+      "id" : "b58fc1a1-91ea-4934-bb61-16a8f1674d4e",
+      "uuid" : "b58fc1a1-91ea-4934-bb61-16a8f1674d4e",
+      "name" : "example_videos.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "example_videos.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 142613558,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "a8b8c559c00721bd7d9ca65ba40e01f6"
+      },
+      "sequenceId" : 7,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/b58fc1a1-91ea-4934-bb61-16a8f1674d4e/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/b58fc1a1-91ea-4934-bb61-16a8f1674d4e/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/b58fc1a1-91ea-4934-bb61-16a8f1674d4e/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/b58fc1a1-91ea-4934-bb61-16a8f1674d4e/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/b58fc1a1-91ea-4934-bb61-16a8f1674d4e"
+        }
+      }
+    }, {
+      "id" : "f577d564-0745-45b9-ac88-f82e0b7fdbee",
+      "uuid" : "f577d564-0745-45b9-ac88-f82e0b7fdbee",
+      "name" : "PegTransfer_left.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "PegTransfer_left.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 16210543747,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "8de8150beae2eaf6e6451a1f90c08263"
+      },
+      "sequenceId" : 8,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/f577d564-0745-45b9-ac88-f82e0b7fdbee/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/f577d564-0745-45b9-ac88-f82e0b7fdbee/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/f577d564-0745-45b9-ac88-f82e0b7fdbee/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/f577d564-0745-45b9-ac88-f82e0b7fdbee/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/f577d564-0745-45b9-ac88-f82e0b7fdbee"
+        }
+      }
+    }, {
+      "id" : "e9b58d48-2465-4ee2-a3ca-1bb8259b81da",
+      "uuid" : "e9b58d48-2465-4ee2-a3ca-1bb8259b81da",
+      "name" : "PegTransfer_right.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "PegTransfer_right.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 16605142693,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "2374379ec7608221ca3889da2f653162"
+      },
+      "sequenceId" : 9,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/e9b58d48-2465-4ee2-a3ca-1bb8259b81da/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/e9b58d48-2465-4ee2-a3ca-1bb8259b81da/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/e9b58d48-2465-4ee2-a3ca-1bb8259b81da/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/e9b58d48-2465-4ee2-a3ca-1bb8259b81da/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/e9b58d48-2465-4ee2-a3ca-1bb8259b81da"
+        }
+      }
+    }, {
+      "id" : "005bdc22-ca88-47d7-b998-22c70dc73f80",
+      "uuid" : "005bdc22-ca88-47d7-b998-22c70dc73f80",
+      "name" : "SutureAndKnot_left.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "SutureAndKnot_left.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 27315215612,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "7193317d3646176086a938328cc302f7"
+      },
+      "sequenceId" : 10,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/005bdc22-ca88-47d7-b998-22c70dc73f80/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/005bdc22-ca88-47d7-b998-22c70dc73f80/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/005bdc22-ca88-47d7-b998-22c70dc73f80/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/005bdc22-ca88-47d7-b998-22c70dc73f80/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/005bdc22-ca88-47d7-b998-22c70dc73f80"
+        }
+      }
+    }, {
+      "id" : "cc8e197b-c96e-440b-b813-9a6e39e738ab",
+      "uuid" : "cc8e197b-c96e-440b-b813-9a6e39e738ab",
+      "name" : "SutureAndKnot_right.zip",
+      "handle" : null,
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "SutureAndKnot_right.zip",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 27965799273,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "2839cf73534595f84e3213eadfc0f7b2"
+      },
+      "sequenceId" : 11,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/cc8e197b-c96e-440b-b813-9a6e39e738ab/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/cc8e197b-c96e-440b-b813-9a6e39e738ab/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/cc8e197b-c96e-440b-b813-9a6e39e738ab/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/cc8e197b-c96e-440b-b813-9a6e39e738ab/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/cc8e197b-c96e-440b-b813-9a6e39e738ab"
+        }
+      }
+    }, {
+      "id" : "93d6cd40-fefa-49f3-8dbc-69e1b6f27508",
+      "uuid" : "93d6cd40-fefa-49f3-8dbc-69e1b6f27508",
+      "name" : "Readme.md",
+      "handle" : null,
+      "metadata" : {
+        "dc.source" : [ {
+          "value" : "Readme.md",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Readme.md",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 6812,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "62540f163aa8ec9777601a043d1e62f2"
+      },
+      "sequenceId" : 12,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/93d6cd40-fefa-49f3-8dbc-69e1b6f27508/content"
+        },
+        "bundle" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/93d6cd40-fefa-49f3-8dbc-69e1b6f27508/bundle"
+        },
+        "format" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/93d6cd40-fefa-49f3-8dbc-69e1b6f27508/format"
+        },
+        "thumbnail" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/93d6cd40-fefa-49f3-8dbc-69e1b6f27508/thumbnail"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/core/bitstreams/93d6cd40-fefa-49f3-8dbc-69e1b6f27508"
+        }
+      }
+    } ]
+  },
+  "page" : {
+    "number" : 0,
+    "size" : 200,
+    "totalPages" : 1,
+    "totalElements" : 12
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://opara.zih.tu-dresden.de/server/api/core/bundles/9f04342d-2378-4aa7-972e-9a0f19f0f572/bitstreams?size=200"
+    }
+  }
+}

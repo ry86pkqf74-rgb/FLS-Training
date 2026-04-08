@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated proper traction setup with Maryland grasper positioning",
+    "Maintained steady instrument control throughout the cutting sequence",
+    "Showed good circle-following technique with consistent path tracking"
+  ],
+  "weaknesses": [
+    "Failed to complete the circle cut, leaving the marked area attached to the gauze",
+    "Did not achieve full separation of the circular piece from the material",
+    "May have insufficient cutting depth or incomplete perimeter coverage"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, ensuring each segment is fully separated before moving to the next.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the circle cut."
+    },
+    {
+      "name": "Edge-entry rehearsal",
+      "description": "Practice 15 starts from the gauze edge to a marked line, focusing on cutting depth and complete material separation.",
+      "duration_minutes": 8,
+      "targets_weakness": "Incomplete perimeter coverage and cutting depth."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and maintain optimal cutting tension.",
+      "duration_minutes": 10,
+      "targets_weakness": "Did not achieve full separation of the circular piece."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid cutting technique into complete task execution. The incomplete circle penalty indicates you need to ensure full material separation before considering the task finished.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 14.06,
+    "input_tokens": 18338,
+    "output_tokens": 417,
+    "cost_usd_approx": 0.0613
+  }
+}

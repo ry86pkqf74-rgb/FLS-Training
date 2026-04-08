@@ -1,0 +1,31 @@
+{
+  "id": "score_consensus_u18oEiWhFEI_20260408_093747",
+  "video_id": "u18oEiWhFEI",
+  "video_filename": "u18oEiWhFEI.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:37:47.629414+00:00",
+  "task_id": "task5",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional video demonstrating technique rather than a timed performance attempt."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Major disagreement between models on whether this is a scoreable task attempt. Claude identified this as instructional content with text overlays explaining technique, while GPT-4o scored it as a completed task. Given Claude's specific observation of instructional text overlays and the absence of clear timing markers, this appears to be educational content rather than an official FLS performance attempt.",
+  "confidence_score": 0.7
+}

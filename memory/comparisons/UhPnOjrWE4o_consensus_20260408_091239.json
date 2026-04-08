@@ -1,0 +1,53 @@
+{
+  "consensus_score": {
+    "task_id": "task5",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Video content is instructional with no observable FLS task performance."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.0,
+    "reasoning": "Both models identified this as instructional content rather than an actual FLS task performance. No task completion elements were visible, resulting in automatic zero score for incomplete task."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0].type",
+      "claude_value": "incomplete_task",
+      "gpt_value": "cannot_determine",
+      "resolution": "Used incomplete_task",
+      "rationale": "Both models agree no task was performed, but incomplete_task is the standard FLS penalty category for non-attempts, while cannot_determine is not a recognized penalty type in the rubric."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw"
+      ],
+      "gpt_value": [],
+      "resolution": "Used empty array",
+      "rationale": "GPT's assessment that no actual task phases were observable in instructional content is more accurate than detecting phases in demonstration footage."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "UhPnOjrWE4o",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 8.43,
+    "input_tokens": 2040,
+    "output_tokens": 417,
+    "cost_usd_approx": 0.0124,
+    "timestamp": "2026-04-08T09:12:39.885528+00:00",
+    "prompt_version": "v002"
+  }
+}

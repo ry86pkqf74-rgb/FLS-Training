@@ -1,0 +1,47 @@
+{
+  "id": "score_claude_-NDhr8cnAd0_20260408080616",
+  "video_id": "-NDhr8cnAd0",
+  "video_filename": "-NDhr8cnAd0.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:06:16.480959",
+  "task_id": "task2",
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "The task appears to end without the marked circle being completely cut out and freed from the gauze material."
+    }
+  ],
+  "score_components": {
+    "time_score": 189.0,
+    "penalty_deductions": 189.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following"
+  ],
+  "reasoning": "The video shows clear manipulation of gauze material with cutting instruments from frames 2-16, ending at approximately 111 seconds. However, the final frames show company branding rather than a completion state, and no freed circular piece is visible in the final working frame. The circle appears to be partially cut but not completely freed, warranting an incomplete_circle penalty with associated zero score.",
+  "frame_analyses": [],
+  "completion_time_seconds": 111.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows clear manipulation of gauze material with cutting instruments from frames 2-16, ending at approximately 111 seconds. However, the final frames show company branding rather than a completion state, and no freed circular piece is visible in the final working frame. The circle appears to be partially cut but not completely freed, warranting an incomplete_circle penalty with associated zero score.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

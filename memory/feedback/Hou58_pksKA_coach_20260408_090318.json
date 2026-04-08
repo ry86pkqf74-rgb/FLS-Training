@@ -1,0 +1,45 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task5",
+  "strengths": [
+    "Demonstrated proper needle loading technique",
+    "Executed suture placement through the Penrose drain",
+    "Completed multiple throw sequences"
+  ],
+  "weaknesses": [
+    "Failed to complete the task by cutting suture ends inside the trainer",
+    "Task completion appears incomplete based on final frames",
+    "Did not achieve the final step required for full task completion"
+  ],
+  "drills": [
+    {
+      "name": "Complete sequence rehearsal",
+      "description": "Practice the full task sequence including final suture cutting inside the trainer to ensure task completion",
+      "duration_minutes": 15,
+      "targets_weakness": "Failed to complete the task by cutting suture ends inside the trainer"
+    },
+    {
+      "name": "End-phase verification drill",
+      "description": "Focus specifically on the final steps of intracorporeal suturing, ensuring proper knot security and suture trimming",
+      "duration_minutes": 10,
+      "targets_weakness": "Task completion appears incomplete based on final frames"
+    },
+    {
+      "name": "Benchmark completion drill",
+      "description": "Execute complete task attempts under time pressure while maintaining all completion requirements",
+      "duration_minutes": 12,
+      "targets_weakness": "Did not achieve the final step required for full task completion"
+    }
+  ],
+  "progression_note": "At the advanced level, task completion is non-negotiable regardless of technical skill demonstrated in earlier phases. Focus on executing the complete sequence including final suture cutting to achieve the published benchmark.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task5",
+    "skill_level": "advanced",
+    "elapsed_seconds": 12.05,
+    "input_tokens": 19135,
+    "output_tokens": 376,
+    "cost_usd_approx": 0.063
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_LjX9cDnroi8_20260408_090506",
+  "video_id": "LjX9cDnroi8",
+  "video_filename": "LjX9cDnroi8.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:05:06.740943+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Video contains only tutorial/instructional content without actual task performance."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.0,
+  "reasoning": "Both models agreed this video shows tutorial/instructional content rather than actual task performance. No timing information, task phases, or completion can be identified. The incomplete_task penalty results in automatic zero score per FLS rubric.",
+  "confidence_score": 0.0
+}

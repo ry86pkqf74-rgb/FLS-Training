@@ -1,0 +1,96 @@
+{
+  "consensus_score": {
+    "task_id": "task5",
+    "completion_time_seconds": 300.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Cannot determine if task was completed as the final frames show marketing content rather than completion of suturing and cutting."
+      }
+    ],
+    "score_components": {
+      "time_score": 300.0,
+      "penalty_deductions": 600.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "needle_load",
+      "suture_placement",
+      "first_throw",
+      "second_throw",
+      "third_throw"
+    ],
+    "confidence": 0.2,
+    "reasoning": "Major disagreement on task completion. Claude reports incomplete task due to marketing content obscuring completion, while GPT reports completed task with penalties. Given that incomplete_task is an automatic zero condition and Claude's reasoning about marketing content is specific and verifiable, the incomplete assessment takes precedence per rubric hierarchy."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 300.0,
+      "gpt_value": 160.0,
+      "resolution": "Used Claude's 300.0 seconds",
+      "rationale": "If task completion cannot be verified due to video content issues, the completion time becomes moot as incomplete_task penalty applies automatic zero score."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "suture_deviation",
+          "count": 1
+        },
+        {
+          "type": "hand_switch_failure",
+          "count": 1
+        }
+      ],
+      "resolution": "Used incomplete_task penalty only",
+      "rationale": "Incomplete_task is an automatic zero condition that supersedes all other penalties. Claude's specific observation about marketing content preventing completion verification is more conservative and rubric-aligned."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw",
+        "second_throw",
+        "third_throw"
+      ],
+      "gpt_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw",
+        "second_throw",
+        "third_throw",
+        "suture_cut"
+      ],
+      "resolution": "Excluded suture_cut phase",
+      "rationale": "If completion cannot be verified due to video content issues, the suture_cut phase should not be included in detected phases."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 432.0,
+      "resolution": "Used 0.0 score",
+      "rationale": "Incomplete_task penalty results in automatic zero score regardless of time or other penalties."
+    }
+  ],
+  "overall_confidence": 0.2,
+  "_meta": {
+    "video_id": "g8RpYG9fLoQ",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.34,
+    "input_tokens": 2116,
+    "output_tokens": 734,
+    "cost_usd_approx": 0.0174,
+    "timestamp": "2026-04-08T09:25:45.295075+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 240.0,
+    "penalties": [
+      {
+        "type": "lost_object",
+        "count": 2,
+        "description": "Two objects were dropped out of view and could not be retrieved."
+      }
+    ],
+    "score_components": {
+      "time_score": 60.0,
+      "penalty_deductions": 20.0,
+      "total_fls_score": 40.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers",
+      "final_release"
+    ],
+    "confidence": 0.6,
+    "reasoning": "Task completion disputed between models. GPT-4o reported two lost objects with specific penalty deductions, while Claude reported complete task with no penalties. Given the significant timing difference (61s vs 240s) and GPT's specific lost object count, the penalty-based assessment appears more defensible under the rubric."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 61.0,
+      "gpt_value": 240.0,
+      "resolution": "Used GPT value of 240.0 seconds",
+      "rationale": "The 61-second timing from Claude is inconsistent with a task that had lost objects and incomplete transfers, while 240 seconds aligns with the penalty assessment."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [],
+      "gpt_value": [
+        {
+          "type": "lost_object",
+          "count": 2,
+          "description": "Two objects were dropped out of view and could not be retrieved."
+        }
+      ],
+      "resolution": "Kept GPT penalties",
+      "rationale": "GPT provided specific lost object count and description consistent with incomplete task completion, while Claude's no-penalty assessment conflicts with the timing evidence."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 239.0,
+      "gpt_value": 40.0,
+      "resolution": "Used calculated score of 40.0",
+      "rationale": "Recomputed based on consensus timing and penalties: 300 - 240 - 20 = 40."
+    }
+  ],
+  "overall_confidence": 0.6,
+  "_meta": {
+    "video_id": "Z999qFPLfGs",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.71,
+    "input_tokens": 1959,
+    "output_tokens": 589,
+    "cost_usd_approx": 0.0147,
+    "timestamp": "2026-04-08T09:18:31.827084+00:00",
+    "prompt_version": "v002"
+  }
+}

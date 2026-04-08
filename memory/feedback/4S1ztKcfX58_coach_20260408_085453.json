@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task5",
+  "strengths": [
+    "Demonstrated proper needle loading technique with consistent driving angle",
+    "Successfully completed multiple suture passes through the Penrose drain",
+    "Maintained good visualization and camera positioning throughout the procedure"
+  ],
+  "weaknesses": [
+    "Failed to complete the task within the 10-minute time limit",
+    "Struggled with knot tying efficiency and sequence completion",
+    "Showed hesitation and rework during the suturing process"
+  ],
+  "drills": [
+    {
+      "name": "Timed knot completion drill",
+      "description": "Practice completing the full three-throw sequence (surgeon's knot plus two single throws) within 2 minutes after suture placement",
+      "duration_minutes": 15,
+      "targets_weakness": "Failed to complete the task within time limit"
+    },
+    {
+      "name": "Double-then-single sequence drill",
+      "description": "Rehearse one surgeon's knot followed by two single throws without time pressure to build muscle memory",
+      "duration_minutes": 10,
+      "targets_weakness": "Struggled with knot tying efficiency"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the complete task slowly with minimal wasted regrasping and instrument repositioning",
+      "duration_minutes": 12,
+      "targets_weakness": "Showed hesitation and rework during suturing"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid technical foundation into faster, more decisive execution. Your needle driving is competent, but knot tying efficiency needs targeted practice to achieve consistent task completion within the time limit.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task5",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 14.76,
+    "input_tokens": 19135,
+    "output_tokens": 429,
+    "cost_usd_approx": 0.0638
+  }
+}

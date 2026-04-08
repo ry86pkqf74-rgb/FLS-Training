@@ -1,0 +1,54 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 93.0,
+    "penalties": [
+      {
+        "type": "line_deviation",
+        "count": 1,
+        "description": "The cut noticeably deviates from the marked circle at several points."
+      }
+    ],
+    "score_components": {
+      "time_score": 207.0,
+      "penalty_deductions": 5.0,
+      "total_fls_score": 202.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion and phases detected. GPT-4o's completion time of 93 seconds is more consistent with the proficiency target of 98 seconds. Both models identified line deviation penalties, with GPT-4o's 5-point deduction being more conservative than Claude's 15-point deduction."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 180.0,
+      "gpt_value": 93.0,
+      "resolution": "Used GPT-4o's timing of 93 seconds",
+      "rationale": "GPT-4o's completion time aligns better with the proficiency target of 98 seconds and is more consistent with successful task completion within reasonable time bounds."
+    },
+    {
+      "field": "penalties[0].count",
+      "claude_value": 15.0,
+      "gpt_value": 5.0,
+      "resolution": "Used GPT-4o's 5-point deduction",
+      "rationale": "Both models identified line deviation but Claude's 15-point penalty appears excessive. GPT-4o's 5-point deduction is more proportionate for minor deviations that still result in successful circle completion."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "Aub-ajP_qWI",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 7.9,
+    "input_tokens": 2034,
+    "output_tokens": 506,
+    "cost_usd_approx": 0.0137,
+    "timestamp": "2026-04-08T08:58:22.151581+00:00",
+    "prompt_version": "v002"
+  }
+}

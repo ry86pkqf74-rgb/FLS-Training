@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt_JQznLrebcXE_20260408082024",
+  "video_id": "JQznLrebcXE",
+  "video_filename": "JQznLrebcXE.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:20:24.929168",
+  "task_id": "task3",
+  "penalties": [
+    {
+      "type": "loop_off_mark",
+      "count": 1,
+      "description": "The loop is positioned slightly away from the marked site on the appendage base."
+    }
+  ],
+  "score_components": {
+    "time_score": 105.0,
+    "penalty_deductions": 4.0,
+    "total_fls_score": 101.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement",
+    "tail_cut"
+  ],
+  "reasoning": "The loop introduction, positioning, and tail cut are clearly visible. There is a slight misplacement of the loop from the marked site, warranting a deduction.",
+  "frame_analyses": [],
+  "completion_time_seconds": 75.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The loop introduction, positioning, and tail cut are clearly visible. There is a slight misplacement of the loop from the marked site, warranting a deduction.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

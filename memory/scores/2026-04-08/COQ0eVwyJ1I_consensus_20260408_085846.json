@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_COQ0eVwyJ1I_20260408_085846",
+  "video_id": "COQ0eVwyJ1I",
+  "video_filename": "COQ0eVwyJ1I.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:58:46.867485+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 300.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task not completed within maximum time limit"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers"
+  ],
+  "confidence": 0.3,
+  "reasoning": "Major disagreement between models on task completion. Claude reported incomplete task at maximum time (300s) while GPT reported completion at 52s. Given the fundamental nature of this disagreement and the automatic-zero condition for incomplete tasks, the conservative interpretation is applied. Without clear visual evidence of complete task finish, the incomplete_task penalty is retained.",
+  "confidence_score": 0.3
+}

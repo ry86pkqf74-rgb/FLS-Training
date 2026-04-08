@@ -1,0 +1,55 @@
+{
+  "id": "score_gpt_TYkcoKhfLQY_20260408083558",
+  "video_id": "TYkcoKhfLQY",
+  "video_filename": "TYkcoKhfLQY.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:35:58.954049",
+  "task_id": "task5",
+  "penalties": [
+    {
+      "type": "hand_switch_failure",
+      "count": 1,
+      "description": "Clear hand switch between throws was not observed."
+    },
+    {
+      "type": "suture_deviation",
+      "count": 1,
+      "description": "The suture placement visibly deviated from the marked targets."
+    }
+  ],
+  "score_components": {
+    "time_score": 15.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 5.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw",
+    "suture_cut"
+  ],
+  "reasoning": "The video provided clear views of all key phases, although the hand switch was not clearly visible. The deviation from the target was apparent. Lighting varied across frames, slightly reducing confidence.",
+  "frame_analyses": [],
+  "completion_time_seconds": 585.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video provided clear views of all key phases, although the hand switch was not clearly visible. The deviation from the target was apparent. Lighting varied across frames, slightly reducing confidence.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

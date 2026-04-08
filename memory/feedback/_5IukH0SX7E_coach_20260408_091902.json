@@ -1,0 +1,36 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task3",
+  "strengths": [
+    "Has access to quality instructional content demonstrating proper technique"
+  ],
+  "weaknesses": [
+    "Submitted instructional video instead of actual task performance",
+    "Cannot assess current skill level without performance data"
+  ],
+  "drills": [
+    {
+      "name": "Loop opening and parking",
+      "description": "Practice opening the ligating loop and positioning it around the target appendage before tightening, using the techniques shown in the instructional video.",
+      "duration_minutes": 10,
+      "targets_weakness": "Need to demonstrate actual task performance rather than viewing instruction."
+    },
+    {
+      "name": "Mark-centering drill",
+      "description": "Place the loop at the target mark, pause to verify proper alignment, then cinch down while maintaining position accuracy.",
+      "duration_minutes": 8,
+      "targets_weakness": "Building confidence to attempt the actual task after instruction."
+    }
+  ],
+  "progression_note": "At the intermediate level, you should transition from studying technique to performing the actual task. Submit a performance attempt of task 3 to receive targeted feedback on your ligating loop skills.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task3",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 9.35,
+    "input_tokens": 18306,
+    "output_tokens": 285,
+    "cost_usd_approx": 0.0592
+  }
+}

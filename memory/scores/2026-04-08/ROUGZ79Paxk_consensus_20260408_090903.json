@@ -1,0 +1,31 @@
+{
+  "id": "score_consensus_ROUGZ79Paxk_20260408_090903",
+  "video_id": "ROUGZ79Paxk",
+  "video_filename": "ROUGZ79Paxk.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:09:03.320930+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 300.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached before completion - task appears to transition to different exercises without completing peg transfer."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup"
+  ],
+  "confidence": 0.2,
+  "reasoning": "Major disagreement between models on task completion. Claude identified this as a demonstration video showing multiple FLS tasks with incomplete peg transfer, while GPT-4o scored it as a completed task with lost objects. Given the fundamental disagreement on whether the task was completed, and Claude's detailed observation of task transitions, the incomplete task assessment is more defensible under the rubric.",
+  "confidence_score": 0.2
+}

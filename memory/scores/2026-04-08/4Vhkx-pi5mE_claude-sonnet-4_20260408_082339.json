@@ -1,0 +1,47 @@
+{
+  "id": "score_claude_4Vhkx-pi5mE_20260408082339",
+  "video_id": "4Vhkx-pi5mE",
+  "video_filename": "4Vhkx-pi5mE.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:23:39.833792",
+  "task_id": "task3",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached without completing the tail cut inside the trainer."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement"
+  ],
+  "reasoning": "The video shows loop placement around the middle appendage and knot positioning near the base mark. However, the final tail cut phase is not completed within the visible frames, suggesting the task was not finished within the maximum time limit. The incomplete task results in a zero score regardless of other performance aspects.",
+  "frame_analyses": [],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows loop placement around the middle appendage and knot positioning near the base mark. However, the final tail cut phase is not completed within the visible frames, suggesting the task was not finished within the maximum time limit. The incomplete task results in a zero score regardless of other performance aspects.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

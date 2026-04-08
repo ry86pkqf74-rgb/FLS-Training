@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated smooth bilateral instrument control during outbound transfers",
+    "Maintained stable camera positioning throughout the visible portion of the task",
+    "Showed good coordination between both hands during object manipulation"
+  ],
+  "weaknesses": [
+    "Failed to complete the full task cycle - objects remained on the right side without return transfers",
+    "Did not demonstrate the complete bilateral transfer sequence required for task completion",
+    "Time management issues led to incomplete task within the allowed timeframe"
+  ],
+  "drills": [
+    {
+      "name": "Complete cycle rehearsal",
+      "description": "Practice full peg transfer cycles focusing on both outbound and return transfers without time pressure to establish the complete movement pattern.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the full task cycle."
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Perform 15 full transfers without touching the pegboard for support, emphasizing stable release and regrasp angles.",
+      "duration_minutes": 10,
+      "targets_weakness": "Incomplete bilateral transfer sequence."
+    },
+    {
+      "name": "Timed completion drill",
+      "description": "Complete full peg transfer cycles with a 2-minute target, building speed while maintaining task completion.",
+      "duration_minutes": 8,
+      "targets_weakness": "Time management issues led to incomplete task."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on completing the full task cycle consistently before pursuing faster times. Your bilateral coordination shows promise, but task completion must be prioritized over speed.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.15,
+    "input_tokens": 18358,
+    "output_tokens": 393,
+    "cost_usd_approx": 0.061
+  }
+}

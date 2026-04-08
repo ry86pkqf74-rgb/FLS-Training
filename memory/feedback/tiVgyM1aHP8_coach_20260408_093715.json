@@ -1,0 +1,40 @@
+{
+  "skill_level": "novice",
+  "task_id": "task1",
+  "strengths": [
+    "Successfully picked up the needle initially",
+    "Demonstrated basic instrument control during early transfers",
+    "Showed understanding of the transfer concept"
+  ],
+  "weaknesses": [
+    "Failed to complete the full task protocol",
+    "Did not transfer all six objects in both directions",
+    "Struggled with consistent transfer execution",
+    "Lost focus or momentum partway through the exercise"
+  ],
+  "drills": [
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 12 full transfers without touching the pegboard for support, focusing on completing each transfer before moving to the next",
+      "duration_minutes": 10,
+      "targets_weakness": "Failed to complete the full task protocol"
+    },
+    {
+      "name": "Nondominant pickup rehearsal",
+      "description": "3 minutes of first-hand pickups using the nondominant hand only to build confidence in object handling",
+      "duration_minutes": 5,
+      "targets_weakness": "Struggled with consistent transfer execution"
+    }
+  ],
+  "progression_note": "At the novice level, focus on completing the full six-object bidirectional transfer sequence before worrying about speed. Build confidence through repetitive practice of the complete protocol.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "novice",
+    "elapsed_seconds": 10.56,
+    "input_tokens": 18353,
+    "output_tokens": 311,
+    "cost_usd_approx": 0.0597
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "score_claude_Z999qFPLfGs_20260408073429",
+  "video_id": "Z999qFPLfGs",
+  "video_filename": "Z999qFPLfGs.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:34:29.704714",
+  "task_id": "task1",
+  "penalties": [],
+  "score_components": {
+    "time_score": 239.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 239.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "Task appears complete with all six objects successfully transferred to the opposite side and back to the original side. All objects remain visible and controlled throughout the sequence. Final state shows all six objects back on the original side. No objects were lost out of view or became unretrievable. Timing estimated from first object contact to final release.",
+  "frame_analyses": [],
+  "completion_time_seconds": 61.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Task appears complete with all six objects successfully transferred to the opposite side and back to the original side. All objects remain visible and controlled throughout the sequence. Final state shows all six objects back on the original side. No objects were lost out of view or became unretrievable. Timing estimated from first object contact to final release.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

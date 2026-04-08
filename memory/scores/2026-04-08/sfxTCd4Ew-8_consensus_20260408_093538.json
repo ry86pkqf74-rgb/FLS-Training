@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_sfxTCd4Ew-8_20260408_093538",
+  "video_id": "sfxTCd4Ew-8",
+  "video_filename": "sfxTCd4Ew-8.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:35:38.190198+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task mismatch: video shows vessel clipping procedure rather than ligating loop task"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 180.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.9,
+  "reasoning": "Claude correctly identified this as a vessel clipping procedure rather than the ligating loop task. The video shows clips being applied to tubular structures followed by cutting with scissors, which does not match the required ligating loop procedure that involves placing a loop around a marked appendage, securing with a knot pusher, and cutting the tail. This constitutes an incomplete task penalty resulting in zero score.",
+  "confidence_score": 0.9
+}

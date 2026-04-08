@@ -1,0 +1,38 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task1",
+  "strengths": [
+    "Has demonstrated consistent performance in previous sessions with scores around 508-556 FLS",
+    "Shows familiarity with FLS training materials and educational content"
+  ],
+  "weaknesses": [
+    "Failed to perform the actual peg transfer task in this session",
+    "Submitted tutorial content instead of task execution",
+    "May have confusion about assessment requirements"
+  ],
+  "drills": [
+    {
+      "name": "Task execution verification drill",
+      "description": "Before starting any session, verbally confirm the task requirements and demonstrate the first peg transfer to ensure proper setup and understanding.",
+      "duration_minutes": 5,
+      "targets_weakness": "Failed to perform the actual peg transfer task in this session."
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task phase slowly with minimal wasted regrasping to maintain your established skill level.",
+      "duration_minutes": 10,
+      "targets_weakness": "May have confusion about assessment requirements."
+    }
+  ],
+  "progression_note": "At the advanced level, your previous scores of 508-556 FLS demonstrate solid competency, but this session shows a fundamental error in task execution. Focus on maintaining your established performance standards while ensuring proper task setup and execution verification.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "advanced",
+    "elapsed_seconds": 9.26,
+    "input_tokens": 18313,
+    "output_tokens": 319,
+    "cost_usd_approx": 0.0597
+  }
+}

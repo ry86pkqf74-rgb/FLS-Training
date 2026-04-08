@@ -1,0 +1,41 @@
+{
+  "id": "score_consensus_z-IJlHmdUUo_20260408_094304",
+  "video_id": "z-IJlHmdUUo",
+  "video_filename": "z-IJlHmdUUo.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:43:04.153301+00:00",
+  "task_id": "task5",
+  "completion_time_seconds": 234.0,
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "count": 1,
+      "description": "Suture placement was off target by approximately 2 mm from one marked site."
+    },
+    {
+      "type": "hand_switch_failure",
+      "count": 1,
+      "description": "A required hand exchange was clearly missed between the first and second throws."
+    }
+  ],
+  "score_components": {
+    "time_score": 366.0,
+    "penalty_deductions": 8.0,
+    "total_fls_score": 358.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw",
+    "suture_cut"
+  ],
+  "confidence": 0.7,
+  "reasoning": "GPT-4o detected complete task execution with all phases including final suture cut, while Claude marked as incomplete. Given GPT's specific identification of the suture_cut phase and detailed penalty descriptions with verification claims, the task appears completed. Applied GPT's penalties for suture deviation and hand switch failure as they were specifically described and verified.",
+  "confidence_score": 0.7
+}

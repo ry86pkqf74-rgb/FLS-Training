@@ -1,0 +1,60 @@
+{
+  "consensus_score": {
+    "task_id": "task4",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "knot_slippage",
+        "count": 1,
+        "description": "Video title explicitly states 'SLIPPING KNOT' indicating knot failure under tension."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "suture_introduction",
+      "target_passes",
+      "extracorporeal_throws"
+    ],
+    "confidence": 0.9,
+    "reasoning": "Both models identified knot slippage. Claude correctly identified this as a demonstration video rather than a timed performance based on the video title. GPT incorrectly attempted to score an incomplete demonstration. Following Claude's interpretation that this is an educational demonstration of knot failure, not a scoreable performance."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 298.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Claude correctly identified this as a demonstration video showing knot failure, not a timed performance attempt. The video title indicates this is educational content about slipping knots."
+    },
+    {
+      "field": "score_components.time_score",
+      "claude_value": 0.0,
+      "gpt_value": 122.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "No time score should be awarded for a demonstration video that is not a performance attempt."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 112.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Demonstration videos showing technique failures should not receive performance scores."
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "1f3MIPOCZsQ",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.49,
+    "input_tokens": 2052,
+    "output_tokens": 556,
+    "cost_usd_approx": 0.0145,
+    "timestamp": "2026-04-08T08:52:41.726321+00:00",
+    "prompt_version": "v002"
+  }
+}

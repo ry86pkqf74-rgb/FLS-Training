@@ -1,0 +1,44 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Maintained stable camera positioning throughout the attempt",
+    "Demonstrated proper instrument handling and grip"
+  ],
+  "weaknesses": [
+    "Unable to complete the circle cutting task as evidenced by scoring",
+    "Insufficient engagement with the gauze material for effective cutting",
+    "Task execution was not clearly visible or verifiable from video evidence"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction on the gauze material",
+      "duration_minutes": 12,
+      "targets_weakness": "Unable to complete the circle cutting task"
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland forceps to improve scissor entry angle and maintain gauze tension",
+      "duration_minutes": 8,
+      "targets_weakness": "Insufficient engagement with the gauze material"
+    },
+    {
+      "name": "Edge-entry rehearsal",
+      "description": "15 starts from the gauze edge to a marked line without overshoot, focusing on clear visual confirmation of cutting progress",
+      "duration_minutes": 10,
+      "targets_weakness": "Task execution not clearly visible or verifiable"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your stable instrument handling into effective tissue manipulation and complete task execution. Ensure clear visual confirmation of each cutting phase before progressing.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.91,
+    "input_tokens": 19075,
+    "output_tokens": 371,
+    "cost_usd_approx": 0.0628
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated consistent bilateral instrument control throughout the attempt",
+    "Maintained steady camera positioning and workspace organization"
+  ],
+  "weaknesses": [
+    "Failed to complete all six transfers within the 5-minute time limit",
+    "Appears to have encountered difficulty with final transfer sequences",
+    "Time management insufficient for advanced-level expectations"
+  ],
+  "drills": [
+    {
+      "name": "Speed ladder progression",
+      "description": "Complete full six-transfer sequences with decreasing time targets: 4 minutes, 3 minutes, then 2 minutes.",
+      "duration_minutes": 15,
+      "targets_weakness": "Failed to complete all six transfers within the time limit."
+    },
+    {
+      "name": "Final transfer rehearsal",
+      "description": "Practice only the last two transfers repeatedly, focusing on efficient pickup and release mechanics.",
+      "duration_minutes": 8,
+      "targets_weakness": "Difficulty with final transfer sequences."
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform complete task sequences slowly with minimal wasted regrasping and instrument repositioning.",
+      "duration_minutes": 10,
+      "targets_weakness": "Time management insufficient for advanced-level expectations."
+    }
+  ],
+  "progression_note": "At the advanced level, consistent sub-2-minute completion times are expected. Focus on eliminating any hesitation in the transfer sequence and achieving the published benchmark of 48 seconds.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "advanced",
+    "elapsed_seconds": 13.35,
+    "input_tokens": 19103,
+    "output_tokens": 367,
+    "cost_usd_approx": 0.0628
+  }
+}

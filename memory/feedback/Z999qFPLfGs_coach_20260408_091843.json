@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated systematic approach to peg-to-peg transfers",
+    "Maintained reasonable instrument coordination during most phases",
+    "Successfully completed multiple transfer sequences before encountering difficulties"
+  ],
+  "weaknesses": [
+    "Lost two objects out of view during the task execution",
+    "Struggled with object recovery after drops",
+    "Completion time of 240 seconds indicates inefficient movement patterns"
+  ],
+  "drills": [
+    {
+      "name": "Lost-object recovery awareness",
+      "description": "Practice slow-motion transfer sets emphasizing stable release and regrasp angle to prevent drops",
+      "duration_minutes": 12,
+      "targets_weakness": "Lost two objects out of view during the task execution"
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Perform 15 full transfers without touching the pegboard for support, focusing on controlled handoffs",
+      "duration_minutes": 10,
+      "targets_weakness": "Struggled with object recovery after drops"
+    },
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Complete the task phase slowly with minimal wasted regrasping and deliberate instrument positioning",
+      "duration_minutes": 8,
+      "targets_weakness": "Completion time of 240 seconds indicates inefficient movement patterns"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your systematic approach into more reliable object control to prevent drops. Work on anticipating and preventing object loss rather than recovering from it.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.53,
+    "input_tokens": 18341,
+    "output_tokens": 401,
+    "cost_usd_approx": 0.061
+  }
+}

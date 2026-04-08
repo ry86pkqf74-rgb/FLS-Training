@@ -1,0 +1,82 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task appears to be a training demonstration rather than a completed performance attempt with clear timing markers."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.2,
+    "reasoning": "Fundamental disagreement on task completion status. Claude identified this as a training demonstration without clear timing markers, while GPT-4o scored it as a completed task. Given the lack of visible timing start/end points and the presence of instructional elements, the incomplete_task classification is more defensible under the rubric."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 79.5,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Without clear timing markers visible in the video, completion time cannot be reliably measured per rubric requirements."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Training demonstration"
+      },
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 2,
+        "description": "Two rings left field of view"
+      },
+      "resolution": "Used incomplete_task penalty",
+      "rationale": "Incomplete task is a more fundamental issue that supersedes object-specific penalties when timing cannot be established."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's shorter list",
+      "rationale": "Without clear task completion, later phases cannot be reliably confirmed as part of a scored performance."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 200.5,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task penalty results in zero score per rubric automatic-zero conditions."
+    }
+  ],
+  "overall_confidence": 0.2,
+  "_meta": {
+    "video_id": "n2N4neAV_-w",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.59,
+    "input_tokens": 2044,
+    "output_tokens": 670,
+    "cost_usd_approx": 0.0162,
+    "timestamp": "2026-04-08T09:32:08.863655+00:00",
+    "prompt_version": "v002"
+  }
+}

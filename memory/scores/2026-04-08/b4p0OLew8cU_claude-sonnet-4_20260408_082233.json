@@ -1,0 +1,47 @@
+{
+  "id": "score_claude_b4p0OLew8cU_20260408082233",
+  "video_id": "b4p0OLew8cU",
+  "video_filename": "b4p0OLew8cU.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:22:33.089767",
+  "task_id": "task3",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached without completing the task. The loop tail was never cut inside the trainer."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement"
+  ],
+  "reasoning": "The video shows clear phases of loop introduction around the middle appendage, loop positioning at the marked site, and pusher advancement to secure the loop. However, the final tail cut phase is never completed - the task ends with instruments returning to home position without the loop tail being cut inside the trainer. The exercise completion message confirms the task timed out. Since the maximum time was reached without completion, this results in an automatic zero score per the incomplete_task penalty rules.",
+  "frame_analyses": [],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows clear phases of loop introduction around the middle appendage, loop positioning at the marked site, and pusher advancement to secure the loop. However, the final tail cut phase is never completed - the task ends with instruments returning to home position without the loop tail being cut inside the trainer. The exercise completion message confirms the task timed out. Since the maximum time was reached without completion, this results in an automatic zero score per the incomplete_task penalty rules.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

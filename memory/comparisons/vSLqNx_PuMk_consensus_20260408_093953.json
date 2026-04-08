@@ -1,0 +1,70 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 140.0,
+    "penalties": [
+      {
+        "type": "line_deviation",
+        "count": 1,
+        "description": "The cut deviated from the marked circle at several points."
+      }
+    ],
+    "score_components": {
+      "time_score": 160.0,
+      "penalty_deductions": 5.0,
+      "total_fls_score": 155.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.75,
+    "reasoning": "Both models agreed on completion time and detected line deviations. Claude detected circle_release phase while GPT did not, but both confirmed task completion. Penalty deduction amount differed between models - using GPT's more conservative 5-point deduction as both models agreed deviations occurred but exact severity assessment varied."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0].description",
+      "claude_value": "Visible cutting deviations from the marked circle line, particularly in the final quarter of the circle.",
+      "gpt_value": "The cut deviated from the marked circle at several points.",
+      "resolution": "Used GPT's description",
+      "rationale": "GPT's description was more general and both models agreed deviations occurred, so the more conservative description was retained."
+    },
+    {
+      "field": "score_components.penalty_deductions",
+      "claude_value": 10.0,
+      "gpt_value": 5.0,
+      "resolution": "Used GPT's 5.0 deduction",
+      "rationale": "Both models detected line deviations but disagreed on severity. Without clear visual evidence to support the higher penalty, the more conservative 5-point deduction was applied."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "traction_setup",
+        "entry_cut",
+        "circle_following",
+        "circle_release"
+      ],
+      "gpt_value": [
+        "traction_setup",
+        "entry_cut",
+        "circle_following"
+      ],
+      "resolution": "Included circle_release phase",
+      "rationale": "Claude's detection of circle_release is consistent with task completion confirmation from both models, so the more complete phase detection was retained."
+    }
+  ],
+  "overall_confidence": 0.75,
+  "_meta": {
+    "video_id": "vSLqNx_PuMk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.92,
+    "input_tokens": 2037,
+    "output_tokens": 611,
+    "cost_usd_approx": 0.0153,
+    "timestamp": "2026-04-08T09:39:53.321341+00:00",
+    "prompt_version": "v002"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 180.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video showing task setup and technique demonstration rather than a timed performance. No actual task completion is observable."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "loop_introduction",
+      "loop_positioning"
+    ],
+    "confidence": 0.9,
+    "reasoning": "Claude correctly identified this as an instructional video showing task demonstrations rather than a scoreable performance attempt. GPT-4o appears to have misinterpreted the educational content as an actual task performance. The video shows setup and demonstration phases but no actual timed completion of the ligating loop task."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 180.0,
+      "gpt_value": 60.5,
+      "resolution": "Used Claude's 180.0 (maximum time)",
+      "rationale": "Since this is an instructional video with no actual task performance, the standard practice is to assign maximum time for incomplete tasks per FLS scoring protocol."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "This appears to be an instructional video showing task setup and technique demonstration rather than a timed performance. No actual task completion is observable."
+      },
+      "gpt_value": {
+        "type": "loop_off_mark",
+        "count": 1,
+        "description": "The final loop is positioned slightly distal to the target mark."
+      },
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Claude's assessment that this is instructional content rather than a performance attempt is more consistent with the video description showing educational demonstrations across multiple FLS tasks."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "loop_introduction",
+        "loop_positioning"
+      ],
+      "gpt_value": [
+        "loop_introduction",
+        "loop_positioning",
+        "pusher_break_and_advancement",
+        "tail_cut"
+      ],
+      "resolution": "Used Claude's shorter phase list",
+      "rationale": "If this is instructional content showing setup rather than performance, only introductory phases would be visible, not completion phases."
+    },
+    {
+      "field": "score_components.total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 115.5,
+      "resolution": "Used 0.0 for incomplete task",
+      "rationale": "Incomplete tasks receive zero score per FLS protocol, regardless of any observed technique elements in instructional content."
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "IwrNTRVXuJQ",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 13.35,
+    "input_tokens": 2145,
+    "output_tokens": 745,
+    "cost_usd_approx": 0.0176,
+    "timestamp": "2026-04-08T09:03:54.886897+00:00",
+    "prompt_version": "v002"
+  }
+}

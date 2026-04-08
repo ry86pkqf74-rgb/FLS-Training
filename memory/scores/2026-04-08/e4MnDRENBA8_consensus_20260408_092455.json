@@ -1,0 +1,28 @@
+{
+  "id": "score_consensus_e4MnDRENBA8_20260408_092455",
+  "video_id": "e4MnDRENBA8",
+  "video_filename": "e4MnDRENBA8.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:24:55.961338+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 35.0,
+  "penalties": [],
+  "score_components": {
+    "time_score": 265.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 265.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "confidence": 0.1,
+  "reasoning": "Both models agreed on completion time of 35 seconds and no penalties. However, Claude identified this as a VR simulation of basic cutting rather than standard FLS Precision Cutting with gauze and marked circle, while GPT-4o treated it as standard FLS task. Given the fundamental disagreement about task authenticity, confidence is very low despite numerical agreement.",
+  "confidence_score": 0.1
+}

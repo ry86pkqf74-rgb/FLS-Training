@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt_cxIOhJC-fUk_20260408073919",
+  "video_id": "cxIOhJC-fUk",
+  "video_filename": "cxIOhJC-fUk.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T07:39:19.162716",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "lost_object",
+      "count": 2,
+      "description": "Two rings were seen exiting the field of view and were unretrievable."
+    }
+  ],
+  "score_components": {
+    "time_score": 127.5,
+    "penalty_deductions": 20.0,
+    "total_fls_score": 107.5
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "Timing start and finish were both visible. Two unretrievable drops were observed clearly. No additional penalties were detected, but low lighting in some sections affected the clarity of object handling.",
+  "frame_analyses": [],
+  "completion_time_seconds": 172.5,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Timing start and finish were both visible. Two unretrievable drops were observed clearly. No additional penalties were detected, but low lighting in some sections affected the clarity of object handling.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_ciGLex6_Tjc_20260408_092346",
+  "video_id": "ciGLex6_Tjc",
+  "video_filename": "ciGLex6_Tjc.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:23:46.936536+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 215.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears incomplete - fundamental disagreement on task completion status requires conservative assessment"
+    }
+  ],
+  "score_components": {
+    "time_score": 205.0,
+    "penalty_deductions": 205.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws"
+  ],
+  "confidence": 0.2,
+  "reasoning": "Major disagreement between models on task completion status. Claude reported incomplete task with ligating loop material instead of expected suture setup, while GPT reported completed task with slit closure penalty. Given the fundamental disagreement on whether the correct task was performed, conservative incomplete_task penalty applied.",
+  "confidence_score": 0.2
+}

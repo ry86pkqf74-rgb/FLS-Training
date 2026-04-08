@@ -1,0 +1,34 @@
+{
+  "id": "score_consensus_Z999qFPLfGs_20260408_091831",
+  "video_id": "Z999qFPLfGs",
+  "video_filename": "Z999qFPLfGs.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:18:31.827084+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 240.0,
+  "penalties": [
+    {
+      "type": "lost_object",
+      "count": 2,
+      "description": "Two objects were dropped out of view and could not be retrieved."
+    }
+  ],
+  "score_components": {
+    "time_score": 60.0,
+    "penalty_deductions": 20.0,
+    "total_fls_score": 40.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "confidence": 0.6,
+  "reasoning": "Task completion disputed between models. GPT-4o reported two lost objects with specific penalty deductions, while Claude reported complete task with no penalties. Given the significant timing difference (61s vs 240s) and GPT's specific lost object count, the penalty-based assessment appears more defensible under the rubric.",
+  "confidence_score": 0.6
+}

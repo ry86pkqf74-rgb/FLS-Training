@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_1f3MIPOCZsQ_20260408_085241",
+  "video_id": "1f3MIPOCZsQ",
+  "video_filename": "1f3MIPOCZsQ.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:52:41.726321+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "knot_slippage",
+      "count": 1,
+      "description": "Video title explicitly states 'SLIPPING KNOT' indicating knot failure under tension."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws"
+  ],
+  "confidence": 0.9,
+  "reasoning": "Both models identified knot slippage. Claude correctly identified this as a demonstration video rather than a timed performance based on the video title. GPT incorrectly attempted to score an incomplete demonstration. Following Claude's interpretation that this is an educational demonstration of knot failure, not a scoreable performance.",
+  "confidence_score": 0.9
+}

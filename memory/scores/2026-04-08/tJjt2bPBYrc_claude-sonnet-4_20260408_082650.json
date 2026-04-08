@@ -1,0 +1,45 @@
+{
+  "id": "score_claude_tJjt2bPBYrc_20260408082650",
+  "video_id": "tJjt2bPBYrc",
+  "video_filename": "tJjt2bPBYrc.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:26:50.841239",
+  "task_id": "task4",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional video rather than a performance attempt. No complete task execution with timing is observable."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "suture_introduction"
+  ],
+  "reasoning": "The video shows suture material and demonstrates some preparation and introduction phases, but this appears to be an educational demonstration rather than a timed performance attempt. The final frames show title credits identifying this as an instructional video by Krisztina Bajzak, MD and Jen Mercer, MD. No clear start time, completion time, or final assessment of task completion can be determined from the footage shown.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video shows suture material and demonstrates some preparation and introduction phases, but this appears to be an educational demonstration rather than a timed performance attempt. The final frames show title credits identifying this as an instructional video by Krisztina Bajzak, MD and Jen Mercer, MD. No clear start time, completion time, or final assessment of task completion can be determined from the footage shown.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -1,0 +1,13 @@
+created_at: '2026-04-08T09:45:00.945410+00:00'
+include_coach_feedback: true
+min_confidence: 0.25
+n_test: 9
+n_train: 144
+n_val: 27
+seed: 42
+sources:
+  critique_consensus: 170
+  teacher_claude: 9
+  teacher_gpt4o: 1
+total_examples: 180
+version: 4

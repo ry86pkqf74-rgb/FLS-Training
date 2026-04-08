@@ -1,0 +1,38 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task2",
+  "strengths": [
+    "Maintained steady cutting progression around the circle",
+    "Achieved good completion time of 104.5 seconds",
+    "Demonstrated consistent instrument control throughout the task"
+  ],
+  "weaknesses": [
+    "Cut deviates from the marked circle at multiple points during circle following",
+    "Precision tracking needs refinement for benchmark performance"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, pausing at each quarter to verify alignment before proceeding.",
+      "duration_minutes": 8,
+      "targets_weakness": "Cut deviates from the marked circle at multiple points during circle following."
+    },
+    {
+      "name": "Traction-angle practice",
+      "description": "10 repetitions of repositioning the Maryland to improve scissor entry angle and maintain optimal cutting trajectory.",
+      "duration_minutes": 6,
+      "targets_weakness": "Precision tracking needs refinement for benchmark performance."
+    }
+  ],
+  "progression_note": "At the advanced level, focus on eliminating line deviations to achieve consistent sub-100 second times with minimal penalties. Your speed is competitive but precision refinements will push you toward the published benchmark.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "advanced",
+    "elapsed_seconds": 9.36,
+    "input_tokens": 18321,
+    "output_tokens": 334,
+    "cost_usd_approx": 0.06
+  }
+}

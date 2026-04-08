@@ -1,0 +1,49 @@
+{
+  "consensus_score": {
+    "task_id": "task4",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Video content is not suitable for scoring - either too dark to evaluate or educational material rather than performance attempt"
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.0,
+    "reasoning": "Both models agreed that this video cannot be scored as a task performance. Claude identified it as educational material with static images, while GPT-4o reported the video as too dark to evaluate. In either case, no actual task execution is visible, resulting in incomplete task status and zero score."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0].description",
+      "claude_value": "This appears to be an instructional video showing knot tying technique rather than a timed performance attempt. No timing markers, instruments, or actual task execution are visible.",
+      "gpt_value": "The video is too dark to evaluate any task completion.",
+      "resolution": "Combined both observations into general unsuitability description",
+      "rationale": "Both models identified fundamental inability to score the video, though for different technical reasons. The consensus captures that the video is not scoreable regardless of the specific cause."
+    },
+    {
+      "field": "score_components.penalty_deductions",
+      "claude_value": 0.0,
+      "gpt_value": 420.0,
+      "resolution": "Used 0.0 penalty deductions",
+      "rationale": "Incomplete task results in automatic zero score without additional penalty deductions. The 420.0 deduction appears to be a calculation error as incomplete tasks receive zero total score through the automatic-zero condition, not through penalty arithmetic."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "yYnpKTGNKxc",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 10.04,
+    "input_tokens": 1993,
+    "output_tokens": 513,
+    "cost_usd_approx": 0.0137,
+    "timestamp": "2026-04-08T09:42:18.761172+00:00",
+    "prompt_version": "v002"
+  }
+}

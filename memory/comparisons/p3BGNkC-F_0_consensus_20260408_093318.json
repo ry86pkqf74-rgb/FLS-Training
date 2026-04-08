@@ -1,0 +1,80 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 180.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task not completed - objects remain on the right side and have not been transferred back to the original left side."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Major disagreement on task completion. Claude identified incomplete task with objects remaining on right side, while GPT-4o claimed full completion. Given that Claude provided specific details about incomplete return transfers and GPT-4o's completion time of 82.3 seconds seems implausibly fast for full peg transfer completion, Claude's assessment of incomplete task is more credible. Incomplete tasks receive zero score per FLS rules."
+  },
+  "disagreements": [
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Task not completed - objects remain on the right side and have not been transferred back to the original left side."
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Kept Claude's incomplete_task penalty",
+      "rationale": "Claude provided specific observation that objects remained on right side without return transfers. GPT-4o's 82.3 second completion time is implausibly fast for full peg transfer cycle, supporting Claude's incomplete assessment."
+    },
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 180.0,
+      "gpt_value": 82.3,
+      "resolution": "Used Claude's 180.0 seconds",
+      "rationale": "GPT-4o's 82.3 seconds is inconsistent with incomplete task finding. Claude's 180.0 seconds aligns with partial completion observation."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's phases",
+      "rationale": "GPT-4o claimed return_transfers and final_release phases occurred, but this contradicts the incomplete task penalty. Claude's phases align with partial completion."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 217.7,
+      "resolution": "Used 0.0 score",
+      "rationale": "Incomplete tasks receive zero score per FLS rules, regardless of time or partial completion."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "p3BGNkC-F_0",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 11.79,
+    "input_tokens": 1962,
+    "output_tokens": 752,
+    "cost_usd_approx": 0.0172,
+    "timestamp": "2026-04-08T09:33:18.437704+00:00",
+    "prompt_version": "v002"
+  }
+}

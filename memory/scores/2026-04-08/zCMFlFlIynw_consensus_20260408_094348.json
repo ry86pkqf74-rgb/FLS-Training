@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_zCMFlFlIynw_20260408_094348",
+  "video_id": "zCMFlFlIynw",
+  "video_filename": "zCMFlFlIynw.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:43:48.906537+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 106.0,
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "The marked circle was not completely cut out and freed from the gauze by the end of the visible footage."
+    }
+  ],
+  "score_components": {
+    "time_score": 194.0,
+    "penalty_deductions": 194.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following"
+  ],
+  "confidence": 0.3,
+  "reasoning": "Both models agreed on timing (106 seconds). Critical disagreement on task completion: Claude reported incomplete circle (automatic zero), while GPT reported successful completion with minor line deviation. Given the fundamental nature of task completion as a binary requirement in the rubric, the incomplete_circle penalty takes precedence and results in zero score.",
+  "confidence_score": 0.3
+}

@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Previous sessions show consistent completion times around 88-90 seconds",
+    "Historical scores indicate developing proficiency with multiple successful attempts"
+  ],
+  "weaknesses": [
+    "No actual task performance visible in current session",
+    "Unable to assess current technical execution or identify specific skill gaps"
+  ],
+  "drills": [
+    {
+      "name": "Camera centering reset",
+      "description": "3 minutes of centering and re-centering the work target before the first move to ensure proper setup",
+      "duration_minutes": 3,
+      "targets_weakness": "Proper task setup and execution visibility"
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "12 full transfers without touching the pegboard for support to build consistent transfer mechanics",
+      "duration_minutes": 10,
+      "targets_weakness": "Maintaining transfer proficiency without current performance data"
+    }
+  ],
+  "progression_note": "Cannot assess current performance as only educational slides were provided. Focus on returning to hands-on practice to maintain your established 88-90 second completion times.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.6,
+    "input_tokens": 18283,
+    "output_tokens": 280,
+    "cost_usd_approx": 0.059
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "comparison_mV3-F4Qf2-Y_20260408_093055",
+  "video_id": "mV3-F4Qf2-Y",
+  "task_id": "task1",
+  "created_at": "2026-04-08T09:30:55.445474+00:00",
+  "teachers": {
+    "claude": {
+      "score_file": "memory/scores/2026-04-08/mV3-F4Qf2-Y_claude-sonnet-4_20260408_072810.json",
+      "completion_time_seconds": 300.0,
+      "estimated_penalties": 0.0,
+      "estimated_fls_score": 0.0,
+      "confidence": 0.65,
+      "task_id": "task1"
+    },
+    "gpt-4o": {
+      "score_file": "memory/scores/2026-04-08/mV3-F4Qf2-Y_gpt-4o_20260408_072927.json",
+      "completion_time_seconds": 116.0,
+      "estimated_penalties": 0.0,
+      "estimated_fls_score": 0.0,
+      "confidence": 0.0,
+      "task_id": "task1"
+    }
+  },
+  "deltas": {
+    "delta_completion_time_seconds": 184.0,
+    "delta_penalties": 0.0,
+    "delta_fls_score": 0.0,
+    "agreement_level": "very_strong"
+  },
+  "consensus_summary": {
+    "estimated_fls_score": null,
+    "completion_time_seconds": 300.0,
+    "confidence_score": 0.4
+  }
+}

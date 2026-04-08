@@ -1,0 +1,88 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 180.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Task appears to be a tutorial demonstration rather than a timed performance. No clear timing start or completion sequence is visible."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "loop_introduction",
+      "loop_positioning",
+      "pusher_break_and_advancement"
+    ],
+    "confidence": 0.1,
+    "reasoning": "Major disagreement between models on task completion status. Claude identified this as a tutorial video with no clear timing markers or completion sequence, while GPT-4o scored it as a completed task in 68 seconds. Given the fundamental disagreement on whether the task was actually performed versus demonstrated, and Claude's specific observation about lack of timing markers, the more conservative incomplete_task assessment is applied."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 180.0,
+      "gpt_value": 68.0,
+      "resolution": "Used Claude's 180.0 (max time)",
+      "rationale": "If task is incomplete as Claude assessed, completion time defaults to maximum allowed time per FLS scoring rules"
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Task appears to be a tutorial demonstration rather than a timed performance. No clear timing start or completion sequence is visible."
+        }
+      ],
+      "gpt_value": [
+        {
+          "type": "loop_off_mark",
+          "count": 1,
+          "description": "The loop was secured slightly distal to the target mark."
+        }
+      ],
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Incomplete task is a more fundamental assessment than positioning accuracy. If the task wasn't actually performed as a timed attempt, positioning penalties are not applicable"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "loop_introduction",
+        "loop_positioning",
+        "pusher_break_and_advancement"
+      ],
+      "gpt_value": [
+        "loop_introduction",
+        "loop_positioning",
+        "pusher_break_and_advancement",
+        "tail_cut"
+      ],
+      "resolution": "Excluded tail_cut phase",
+      "rationale": "If task is incomplete, the final tail_cut phase should not be counted as successfully completed"
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 107.0,
+      "resolution": "Used 0.0",
+      "rationale": "Incomplete task results in zero score regardless of other factors"
+    }
+  ],
+  "overall_confidence": 0.1,
+  "_meta": {
+    "video_id": "_MNSy7rvXnk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.35,
+    "input_tokens": 2084,
+    "output_tokens": 744,
+    "cost_usd_approx": 0.0174,
+    "timestamp": "2026-04-08T09:19:39.109888+00:00",
+    "prompt_version": "v002"
+  }
+}

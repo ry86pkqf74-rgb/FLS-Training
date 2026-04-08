@@ -1,0 +1,70 @@
+{
+  "consensus_score": {
+    "task_id": "task5",
+    "completion_time_seconds": 0.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.9,
+    "reasoning": "Claude correctly identified this as an instructional video rather than an actual FLS task performance. The video contains educational content with titles and technical illustrations, not a timed performance. GPT-4o incorrectly scored this as a completed task with phases and penalties. Following the rubric requirement for actual task performance, this video cannot be scored as an FLS attempt."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 185.9,
+      "resolution": "Used Claude's value of 0.0",
+      "rationale": "This is an instructional video, not an actual FLS task performance, so no completion time can be measured"
+    },
+    {
+      "field": "penalties",
+      "claude_value": [],
+      "gpt_value": [
+        {
+          "type": "knot_slippage",
+          "count": 1,
+          "description": "The knot slipped when tension was applied after the third throw."
+        }
+      ],
+      "resolution": "Used Claude's empty penalties array",
+      "rationale": "No actual task performance occurred to assess for penalties"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [],
+      "gpt_value": [
+        "needle_load",
+        "suture_placement",
+        "first_throw",
+        "second_throw",
+        "third_throw",
+        "suture_cut"
+      ],
+      "resolution": "Used Claude's empty phases array",
+      "rationale": "Educational content showing technique illustrations cannot be scored as actual task phases"
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 409.1,
+      "resolution": "Used Claude's value of 0.0",
+      "rationale": "Instructional videos cannot receive FLS scores as they are not actual task performances"
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "iI1bj7-6btE",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.13,
+    "input_tokens": 2082,
+    "output_tokens": 591,
+    "cost_usd_approx": 0.0151,
+    "timestamp": "2026-04-08T09:27:32.696411+00:00",
+    "prompt_version": "v002"
+  }
+}

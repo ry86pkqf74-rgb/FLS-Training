@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_eOoeqEaoyiw_20260408_092520",
+  "video_id": "eOoeqEaoyiw",
+  "video_filename": "eOoeqEaoyiw.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:25:20.153383+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 150.0,
+  "penalties": [],
+  "score_components": {
+    "time_score": 270.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 270.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws",
+    "slit_closure_assessment",
+    "suture_cut"
+  ],
+  "confidence": 0.6,
+  "reasoning": "GPT-4o detected completion through suture_cut phase at 150 seconds while Claude estimated 300 seconds without clear completion visibility. GPT-4o reported adequate slit closure while Claude identified a visible gap. Given GPT-4o's detection of the suture_cut phase and more detailed completion assessment, the earlier completion time and no-penalty assessment is carried forward, though confidence remains moderate due to the disagreement on slit closure.",
+  "confidence_score": 0.6
+}

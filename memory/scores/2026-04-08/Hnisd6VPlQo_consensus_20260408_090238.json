@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_Hnisd6VPlQo_20260408_090238",
+  "video_id": "Hnisd6VPlQo",
+  "video_filename": "Hnisd6VPlQo.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:02:38.568384+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "This appears to be an instructional video rather than a timed performance. No actual task completion with timing start and end points is visible."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Fundamental disagreement on video content type. Claude identified this as an instructional video without scoreable performance, while GPT-4o scored it as a completed task. Given the absence of clear timing markers and the educational context described by Claude, this appears to be training material rather than a performance attempt.",
+  "confidence_score": 0.7
+}

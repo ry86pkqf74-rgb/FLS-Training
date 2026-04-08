@@ -1,0 +1,463 @@
+{
+  "id" : null,
+  "scope" : null,
+  "query" : "LASANA",
+  "appliedFilters" : null,
+  "sort" : null,
+  "configuration" : null,
+  "type" : "discover",
+  "_links" : {
+    "self" : {
+      "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item"
+    }
+  },
+  "_embedded" : {
+    "searchResult" : {
+      "_embedded" : {
+        "objects" : [ {
+          "hitHighlights" : {
+            "dc.description.abstract" : [ "The <em>LASANA</em> video dataset comprises 1270 trimmed and synchronized stereo video recordings of four basic laparoscopic training tasks (peg transfer, circle cutting, balloon resection, and suture & knot). Per task, there are at least 311 recordings", " task, or puncturing the inner balloon during the balloon resection task).\nThe <em>LASANA</em> video dataset is intended to support the development and evaluation of methods for automatic video-based laparoscopic skill analysis. For benchmarking, a fixed" ],
+            "dc.title" : [ "<em>LASANA</em>: Laparoscopic Skill Analysis and Assessment video dataset" ]
+          },
+          "type" : "discover",
+          "_links" : {
+            "indexableObject" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4"
+            }
+          },
+          "_embedded" : {
+            "indexableObject" : {
+              "id" : "629966ba-4d11-475c-a689-9959204f3be4",
+              "uuid" : "629966ba-4d11-475c-a689-9959204f3be4",
+              "name" : "LASANA: Laparoscopic Skill Analysis and Assessment video dataset",
+              "handle" : "123456789/1907",
+              "metadata" : {
+                "datacite.description.TechnicalInfo" : [ {
+                  "value" : "see Readme.md",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "datacite.geolocation.iso3166" : [ {
+                  "value" : "GERMANY",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "datacite.resourceType" : [ {
+                  "value" : "see Readme.md",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "datacite.resourceTypeGeneral" : [ {
+                  "value" : "Dataset",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "datacite.size" : [ {
+                  "value" : "185507266534",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.contributor.author" : [ {
+                  "value" : "Funke, Isabel",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Bodenstedt, Sebastian",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "von Bechtolsheim, Felix",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                }, {
+                  "value" : "Oehme, Florian",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 3
+                }, {
+                  "value" : "Maruschke, Michael",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 4
+                }, {
+                  "value" : "Petzsch, Stefanie",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 5
+                }, {
+                  "value" : "Weitz, Jürgen",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 6
+                }, {
+                  "value" : "Distler, Marius",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 7
+                }, {
+                  "value" : "Mees, Sören Torge",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 8
+                }, {
+                  "value" : "Speidel, Stefanie",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 9
+                } ],
+                "dc.date.accessioned" : [ {
+                  "value" : "2025-12-26T15:23:18Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.available" : [ {
+                  "value" : "2025-12-26T15:23:18Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.issued" : [ {
+                  "value" : "2025-12-26",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.description.abstract" : [ {
+                  "value" : "The LASANA video dataset comprises 1270 trimmed and synchronized stereo video recordings of four basic laparoscopic training tasks (peg transfer, circle cutting, balloon resection, and suture & knot). Per task, there are at least 311 recordings in the dataset.\nEach recording is annotated with a structured skill rating, aggregated across three independent raters, as well as binary labels indicating the presence or absence of task-specific errors (for example, dropping an object during the peg transfer task, or puncturing the inner balloon during the balloon resection task).\nThe LASANA video dataset is intended to support the development and evaluation of methods for automatic video-based laparoscopic skill analysis. For benchmarking, a fixed datasplit into training, validation, and test videos is provided for each task.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.identifier.uri" : [ {
+                  "value" : "https://opara.zih.tu-dresden.de/handle/123456789/1907",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "https://doi.org/10.25532/OPARA-1046",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                } ],
+                "dc.publisher" : [ {
+                  "value" : "Technische Universität Dresden",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.rights" : [ {
+                  "value" : "Attribution 4.0 International",
+                  "language" : "en",
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.rights.uri" : [ {
+                  "value" : "http://creativecommons.org/licenses/by/4.0/",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.subject.classification" : [ {
+                  "value" : "4::44::409::409-05",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "2::22::205::205-07",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "2::22::205::205-25",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                } ],
+                "dc.title" : [ {
+                  "value" : "LASANA: Laparoscopic Skill Analysis and Assessment video dataset",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "opara.descriptionInstrument" : [ {
+                  "value" : "Karl Storz TIPCAM 1 S 3D LAP 30° endoscope",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "opara.project.fundingAcknowledgement" : [ {
+                  "value" : "Funded by the German Research Foundation (DFG, Deutsche Forschungsgemeinschaft) as part of Germany’s Excellence Strategy – EXC 2050/1 – Project ID 390696704 – Cluster of Excellence \"Centre for Tactile Internet with Human-in-the-Loop\" (CeTI) of Technische Universität Dresden.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ]
+              },
+              "inArchive" : true,
+              "discoverable" : true,
+              "withdrawn" : false,
+              "lastModified" : "2025-12-26T15:25:16.895+00:00",
+              "entityType" : null,
+              "type" : "item",
+              "_links" : {
+                "accessStatus" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/accessStatus"
+                },
+                "bundles" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/bundles"
+                },
+                "identifiers" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/identifiers"
+                },
+                "mappedCollections" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/mappedCollections"
+                },
+                "owningCollection" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/owningCollection"
+                },
+                "relationships" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/relationships"
+                },
+                "version" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/version"
+                },
+                "templateItemOf" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/templateItemOf"
+                },
+                "thumbnail" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4/thumbnail"
+                },
+                "self" : {
+                  "href" : "https://opara.zih.tu-dresden.de/server/api/core/items/629966ba-4d11-475c-a689-9959204f3be4"
+                }
+              }
+            }
+          }
+        } ]
+      },
+      "page" : {
+        "number" : 0,
+        "size" : 20,
+        "totalPages" : 1,
+        "totalElements" : 1
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item"
+        }
+      }
+    },
+    "facets" : [ {
+      "name" : "author",
+      "facetType" : "text",
+      "facetLimit" : 5,
+      "minValue" : "Adamczyk, Alexander",
+      "maxValue" : "Zvyagin, Sergei A.",
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "next" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/discover/facets/author?query=LASANA&dsoType=item&page=1&size=5"
+        },
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/discover/facets/author?query=LASANA&dsoType=item&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "Bodenstedt, Sebastian",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.author=Bodenstedt,%20Sebastian,equals"
+            }
+          }
+        }, {
+          "label" : "Distler, Marius",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.author=Distler,%20Marius,equals"
+            }
+          }
+        }, {
+          "label" : "Funke, Isabel",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.author=Funke,%20Isabel,equals"
+            }
+          }
+        }, {
+          "label" : "Maruschke, Michael",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.author=Maruschke,%20Michael,equals"
+            }
+          }
+        }, {
+          "label" : "Mees, Sören Torge",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.author=Mees,%20S%C3%B6ren%20Torge,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "subject",
+      "facetType" : "hierarchical",
+      "facetLimit" : 5,
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/discover/facets/subject?query=LASANA&dsoType=item&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "22",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.subject=22,equals"
+            }
+          }
+        }, {
+          "label" : "44",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.subject=44,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "dateIssued",
+      "facetType" : "date",
+      "facetLimit" : 5,
+      "minValue" : "2024-03-15",
+      "maxValue" : "today",
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/discover/facets/dateIssued?query=LASANA&dsoType=item&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "2024 - 2026",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.dateIssued=%5B2024%20TO%202026%5D,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "has_content_in_original_bundle",
+      "facetType" : "standard",
+      "facetLimit" : 2,
+      "page" : {
+        "number" : 0,
+        "size" : 2
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/discover/facets/has_content_in_original_bundle?query=LASANA&dsoType=item&size=2"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "true",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://opara.zih.tu-dresden.de/server/api/discover/search/objects?query=LASANA&dsoType=item&f.has_content_in_original_bundle=true,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "entityType",
+      "facetType" : "text",
+      "facetLimit" : 5,
+      "_links" : {
+        "self" : {
+          "href" : "https://opara.zih.tu-dresden.de/server/api/discover/facets/entityType?query=LASANA&dsoType=item"
+        }
+      },
+      "_embedded" : {
+        "values" : [ ]
+      }
+    } ]
+  }
+}

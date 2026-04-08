@@ -1,0 +1,63 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 38.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 262.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 262.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers",
+      "final_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Major disagreement on completion time (38s vs 238s). Claude's timing aligns with the description of expert demonstration technique and proficiency target of 48s. GPT's 238s timing would indicate poor performance inconsistent with expert demonstration context. Claude's phases are more comprehensive and consistent with complete task execution."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 38.0,
+      "gpt_value": 238.0,
+      "resolution": "Used Claude's 38.0 seconds",
+      "rationale": "Claude's timing is consistent with expert demonstration context and proficiency target, while GPT's 238s would indicate poor performance contradicting the demonstration nature"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "gpt_value": [
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "resolution": "Used Claude's more complete phase detection",
+      "rationale": "Claude identified all four standard phases of peg transfer task, while GPT missed setup and final release phases"
+    },
+    {
+      "field": "score_components.time_score",
+      "claude_value": 262.0,
+      "gpt_value": 62.0,
+      "resolution": "Used 262.0 based on consensus completion time",
+      "rationale": "Recomputed as 300 - 38 = 262, consistent with Claude's completion time assessment"
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "85dQY7Nz14A",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.43,
+    "input_tokens": 1935,
+    "output_tokens": 539,
+    "cost_usd_approx": 0.0139,
+    "timestamp": "2026-04-08T08:56:42.869137+00:00",
+    "prompt_version": "v002"
+  }
+}

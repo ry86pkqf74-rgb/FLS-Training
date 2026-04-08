@@ -1,0 +1,33 @@
+{
+  "id": "score_consensus_Y3Bn_yX8GG8_20260408_091710",
+  "video_id": "Y3Bn_yX8GG8",
+  "video_filename": "Y3Bn_yX8GG8.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:17:10.063663+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 245.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task was not completed - only 2 of 6 objects were transferred back to the left side when the video ended."
+    }
+  ],
+  "score_components": {
+    "time_score": 55.0,
+    "penalty_deductions": 55.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Claude identified incomplete task completion with only 2 of 6 objects returned to the left side by video end, while GPT-4o reported full completion. Given the specific frame-by-frame analysis provided by Claude and the automatic zero penalty for incomplete tasks in the rubric, the incomplete task penalty is applied. This results in a total penalty deduction equal to the time score, yielding zero points.",
+  "confidence_score": 0.7
+}

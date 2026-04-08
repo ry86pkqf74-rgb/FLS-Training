@@ -1,0 +1,38 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task3",
+  "strengths": [
+    "Demonstrated proper loop handling techniques",
+    "Showed good instrument coordination during positioning phases"
+  ],
+  "weaknesses": [
+    "Unable to complete the formal FLS task structure",
+    "Lacked clear timing boundaries and completion markers",
+    "Performance appeared more instructional than assessment-focused"
+  ],
+  "drills": [
+    {
+      "name": "Loop opening and parking",
+      "description": "Practice 10 repetitions of opening the loop and parking it around the target appendage before tightening, focusing on completing the full task sequence.",
+      "duration_minutes": 12,
+      "targets_weakness": "Unable to complete the formal FLS task structure"
+    },
+    {
+      "name": "Mark-centering drill",
+      "description": "Place the loop at the target mark, pause, and verify alignment before cinching, emphasizing clear start and completion states.",
+      "duration_minutes": 8,
+      "targets_weakness": "Lacked clear timing boundaries and completion markers"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your technical knowledge into complete, timed task performances with clear start and end points.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task3",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 9.35,
+    "input_tokens": 19131,
+    "output_tokens": 292,
+    "cost_usd_approx": 0.0618
+  }
+}

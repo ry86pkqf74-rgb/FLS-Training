@@ -1,0 +1,43 @@
+{
+  "id": "score_claude_hL5V05gAW-Y_20260408083347",
+  "video_id": "hL5V05gAW-Y",
+  "video_filename": "hL5V05gAW-Y.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:33:47.881106",
+  "task_id": "task4",
+  "penalties": [],
+  "score_components": {
+    "time_score": 240.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 240.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws",
+    "slit_closure_assessment",
+    "suture_cut"
+  ],
+  "reasoning": "The task appears complete with visible suture placement through both targets and knot formation. The final frames show a closed slit with multiple secure knots. However, the exact accuracy of target placement and final slit closure state are difficult to assess definitively due to camera angle and resolution limitations. No clear penalties were observed, but subtle deviations or incomplete closure cannot be ruled out completely.",
+  "frame_analyses": [],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The task appears complete with visible suture placement through both targets and knot formation. The final frames show a closed slit with multiple secure knots. However, the exact accuracy of target placement and final slit closure state are difficult to assess definitively due to camera angle and resolution limitations. No clear penalties were observed, but subtle deviations or incomplete closure cannot be ruled out completely.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

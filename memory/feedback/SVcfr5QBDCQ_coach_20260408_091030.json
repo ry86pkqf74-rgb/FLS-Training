@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Has demonstrated consistent performance in previous sessions with scores around 508-556 FLS",
+    "Shows ability to complete task within reasonable timeframes based on training history"
+  ],
+  "weaknesses": [
+    "Current session shows no detectable task performance",
+    "Unable to demonstrate skills during this educational presentation format"
+  ],
+  "drills": [
+    {
+      "name": "Camera centering reset",
+      "description": "3 minutes of centering and re-centering the work target before the first move to ensure proper setup",
+      "duration_minutes": 3,
+      "targets_weakness": "Proper task setup and execution visibility"
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "12 full transfers without touching the pegboard for support to rebuild fundamental transfer mechanics",
+      "duration_minutes": 10,
+      "targets_weakness": "Return to active skill demonstration"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on returning to active practice after this educational session. Your previous scores of 508-556 FLS show solid competency - now work on converting that consistency into faster, cleaner repetitions.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 15.64,
+    "input_tokens": 18313,
+    "output_tokens": 295,
+    "cost_usd_approx": 0.0594
+  }
+}

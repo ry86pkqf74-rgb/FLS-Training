@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt_l6gQg2VbGcc_20260408081110",
+  "video_id": "l6gQg2VbGcc",
+  "video_filename": "l6gQg2VbGcc.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:11:10.991511",
+  "task_id": "task2",
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "count": 1,
+      "description": "The cut deviated outside the marked circle at several points."
+    }
+  ],
+  "score_components": {
+    "time_score": 180.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 170.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut",
+    "circle_following",
+    "circle_release"
+  ],
+  "reasoning": "The start and end times were visible. Line deviation was observed, but the circle was eventually cut out. The video quality was clear enough to ascertain these results.",
+  "frame_analyses": [],
+  "completion_time_seconds": 120.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The start and end times were visible. Line deviation was observed, but the circle was eventually cut out. The video quality was clear enough to ascertain these results.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

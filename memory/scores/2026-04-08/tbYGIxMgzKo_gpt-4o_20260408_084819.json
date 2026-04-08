@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt_tbYGIxMgzKo_20260408084819",
+  "video_id": "tbYGIxMgzKo",
+  "video_filename": "tbYGIxMgzKo.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:48:19.616505",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "lost_object",
+      "count": 2,
+      "description": "Two objects left the field of view and were not retrievable."
+    }
+  ],
+  "score_components": {
+    "time_score": 55.0,
+    "penalty_deductions": 20.0,
+    "total_fls_score": 35.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "reasoning": "The start and end of the task were visible. Two objects were unretrievable outside the field, which were counted as penalties. Although clarity was occasionally reduced by camera angle fluctuations, major task events were identifiable.",
+  "frame_analyses": [],
+  "completion_time_seconds": 245.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The start and end of the task were visible. Two objects were unretrievable outside the field, which were counted as penalties. Although clarity was occasionally reduced by camera angle fluctuations, major task events were identifiable.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

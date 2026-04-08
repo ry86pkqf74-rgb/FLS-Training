@@ -1,0 +1,35 @@
+{
+  "id": "score_consensus_MRS9ileP5tg_20260408_090546",
+  "video_id": "MRS9ileP5tg",
+  "video_filename": "MRS9ileP5tg.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:05:46.702199+00:00",
+  "task_id": "task5",
+  "completion_time_seconds": 600.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time reached before completion. Final suture cut was not observed within the time limit."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Major disagreement on task completion. Claude reported incomplete task at 600 seconds while GPT reported completion at 210 seconds. Given the fundamental disagreement and Claude's specific observation that the final suture cut was not visible, the incomplete task determination takes precedence per rubric rules.",
+  "confidence_score": 0.7
+}

@@ -1,0 +1,53 @@
+{
+  "consensus_score": {
+    "task_id": "task4",
+    "completion_time_seconds": 190.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 230.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 230.0
+    },
+    "phases_detected": [
+      "suture_introduction",
+      "target_passes",
+      "extracorporeal_throws",
+      "slit_closure_assessment",
+      "suture_cut"
+    ],
+    "confidence": 0.6,
+    "reasoning": "Both models detected task completion with all required phases. Claude noted difficulty assessing target accuracy due to camera limitations, while GPT reported visible deviation. Given the acknowledged visual constraints and lack of clear evidence, the suture deviation penalty was dropped. Completion time was averaged between the two estimates."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 180.0,
+      "gpt_value": 200.0,
+      "resolution": "Used average of 190.0 seconds",
+      "rationale": "Both timing estimates were reasonable; averaged to account for measurement uncertainty in video analysis."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "suture_deviation",
+        "count": 1,
+        "description": "Visible deviation from the marked targets."
+      },
+      "resolution": "Dropped the penalty",
+      "rationale": "Claude explicitly noted difficulty assessing target accuracy due to camera angle and resolution limitations. Without clear visual evidence of deviation, the penalty cannot be reliably applied."
+    }
+  ],
+  "overall_confidence": 0.6,
+  "_meta": {
+    "video_id": "hL5V05gAW-Y",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.12,
+    "input_tokens": 2077,
+    "output_tokens": 431,
+    "cost_usd_approx": 0.0127,
+    "timestamp": "2026-04-08T09:27:10.228871+00:00",
+    "prompt_version": "v002"
+  }
+}

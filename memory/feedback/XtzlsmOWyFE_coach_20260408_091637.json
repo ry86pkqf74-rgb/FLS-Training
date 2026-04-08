@@ -1,0 +1,39 @@
+{
+  "skill_level": "advanced",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated good instrument coordination and cutting technique throughout most of the circle",
+    "Maintained appropriate traction with the Maryland grasper during cutting phases",
+    "Showed efficient time management with completion in 116 seconds"
+  ],
+  "weaknesses": [
+    "Failed to complete the final separation of the circular piece from the gauze",
+    "Did not verify complete circle closure before ending the task",
+    "Incomplete task execution resulted in automatic zero score despite good technique"
+  ],
+  "drills": [
+    {
+      "name": "Complete Circle Verification Drill",
+      "description": "Cut practice circles and pause before the final 10% to verify the starting point connection, then complete with deliberate overlap verification.",
+      "duration_minutes": 10,
+      "targets_weakness": "Failed to complete the final separation of the circular piece."
+    },
+    {
+      "name": "Circle Closure Inspection Protocol",
+      "description": "After cutting any circle, use the Maryland to gently test if the piece separates completely before considering the task finished.",
+      "duration_minutes": 5,
+      "targets_weakness": "Did not verify complete circle closure before ending the task."
+    }
+  ],
+  "progression_note": "At the advanced level, technical execution must be paired with meticulous task completion verification. The incomplete circle resulted in zero points despite otherwise competent cutting technique.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "advanced",
+    "elapsed_seconds": 10.6,
+    "input_tokens": 19137,
+    "output_tokens": 354,
+    "cost_usd_approx": 0.0627
+  }
+}

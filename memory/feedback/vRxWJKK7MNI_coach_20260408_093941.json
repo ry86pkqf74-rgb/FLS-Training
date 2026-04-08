@@ -1,0 +1,35 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [],
+  "weaknesses": [
+    "Submitted video content that does not match FLS Task 2 requirements",
+    "Video shows paper crafting tutorial instead of laparoscopic precision cutting",
+    "No laparoscopic equipment, gauze, or FLS trainer box visible in submission"
+  ],
+  "drills": [
+    {
+      "name": "Task identification review",
+      "description": "Review FLS Task 2 requirements: cutting a 2cm circle from gauze using laparoscopic scissors and Maryland grasper in an FLS trainer box.",
+      "duration_minutes": 5,
+      "targets_weakness": "Submitted incorrect task content"
+    },
+    {
+      "name": "Equipment setup verification",
+      "description": "Set up FLS trainer box with gauze, laparoscopic camera, scissors, and Maryland grasper before recording any attempts.",
+      "duration_minutes": 10,
+      "targets_weakness": "No laparoscopic equipment visible in submission"
+    }
+  ],
+  "progression_note": "At the intermediate level, ensure you are practicing the correct FLS task with proper laparoscopic equipment before focusing on technique refinements.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.18,
+    "input_tokens": 19109,
+    "output_tokens": 299,
+    "cost_usd_approx": 0.0618
+  }
+}

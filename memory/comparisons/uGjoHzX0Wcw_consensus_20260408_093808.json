@@ -1,0 +1,68 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 22.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 278.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 278.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers",
+      "return_transfers",
+      "final_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Claude reported complete task execution with all objects returned to original positions and no penalties. GPT-4o reported a lost object penalty and longer completion time. Given Claude's detailed observation of final completion state showing all objects properly positioned, and the significant timing discrepancy, Claude's assessment appears more accurate for this peg transfer task."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 22.0,
+      "gpt_value": 57.2,
+      "resolution": "Used Claude's timing of 22.0 seconds",
+      "rationale": "Claude's timing is consistent with its observation of complete task execution, while GPT's longer timing conflicts with standard peg transfer completion patterns"
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "lost_object",
+        "count": 1,
+        "description": "One object was dropped and not retrievable."
+      },
+      "resolution": "Dropped the penalty",
+      "rationale": "Claude's detailed reasoning about final completion state with all objects properly positioned contradicts the lost object penalty claim"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers"
+      ],
+      "resolution": "Included final_release phase",
+      "rationale": "Claude's observation of complete task with final positioning supports inclusion of final_release phase"
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "uGjoHzX0Wcw",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.55,
+    "input_tokens": 1958,
+    "output_tokens": 549,
+    "cost_usd_approx": 0.0141,
+    "timestamp": "2026-04-08T09:38:08.602210+00:00",
+    "prompt_version": "v002"
+  }
+}

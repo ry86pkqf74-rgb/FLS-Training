@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_2u0lqjXCiNk_20260408_085350",
+  "video_id": "2u0lqjXCiNk",
+  "video_filename": "2u0lqjXCiNk.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:53:50.019719+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 615.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Maximum time of 300 seconds was exceeded without task completion."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "confidence": 0.9,
+  "reasoning": "Both models agreed that the task exceeded the 300-second maximum time limit at 615 seconds, triggering an automatic zero score per FLS rules. The task was incomplete at the time limit. High confidence due to clear timing agreement and unambiguous automatic-zero condition.",
+  "confidence_score": 0.9
+}

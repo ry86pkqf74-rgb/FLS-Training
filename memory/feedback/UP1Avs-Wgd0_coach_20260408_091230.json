@@ -1,0 +1,45 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated good bilateral coordination during transfer sequences",
+    "Maintained stable grasping throughout most object manipulations",
+    "Successfully completed multiple transfer cycles before time expiration"
+  ],
+  "weaknesses": [
+    "Failed to complete the full task within the 300-second time limit",
+    "Showed inefficient movement patterns that consumed excessive time",
+    "Appeared to struggle with consistent pacing throughout the attempt"
+  ],
+  "drills": [
+    {
+      "name": "Economy-of-motion ladder",
+      "description": "Perform the task phase slowly with minimal wasted regrasping and direct instrument paths between pegs.",
+      "duration_minutes": 12,
+      "targets_weakness": "Inefficient movement patterns that consumed excessive time."
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Practice 15 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges.",
+      "duration_minutes": 10,
+      "targets_weakness": "Inconsistent pacing and transfer efficiency."
+    },
+    {
+      "name": "Timed completion segments",
+      "description": "Break the task into 6-transfer segments with 60-second targets to build consistent pacing awareness.",
+      "duration_minutes": 15,
+      "targets_weakness": "Failed to complete within time limit."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid transfer mechanics into faster, more efficient sequences. Work on eliminating hesitation and developing a steady rhythm that can complete the full task within time constraints.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 12.0,
+    "input_tokens": 19103,
+    "output_tokens": 412,
+    "cost_usd_approx": 0.0635
+  }
+}

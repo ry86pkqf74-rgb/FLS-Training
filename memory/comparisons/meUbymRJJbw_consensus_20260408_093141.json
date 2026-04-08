@@ -1,0 +1,52 @@
+{
+  "consensus_score": {
+    "task_id": "task2",
+    "completion_time_seconds": 81.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 219.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 219.0
+    },
+    "phases_detected": [
+      "traction_setup",
+      "entry_cut",
+      "circle_following",
+      "circle_release"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models detected successful task completion with all required phases. There was disagreement on completion time (67s vs 95s) and line deviation penalties. The average completion time of 81s was used. The line deviation penalty was dropped due to conflicting visual assessments and insufficient evidence to definitively support the deduction."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 67.0,
+      "gpt_value": 95.0,
+      "resolution": "Used average of 81.0 seconds",
+      "rationale": "Significant timing disagreement with no clear rubric guidance for resolution, so averaged the two measurements"
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "line_deviation",
+        "count": 1,
+        "description": "The cut deviated outside the marked circle at multiple points."
+      },
+      "resolution": "Dropped the penalty",
+      "rationale": "Conflicting visual assessments of line adherence with Claude reporting close following and GPT reporting deviations. Without clear visual evidence, the more conservative no-penalty assessment was used"
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "meUbymRJJbw",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.42,
+    "input_tokens": 1948,
+    "output_tokens": 441,
+    "cost_usd_approx": 0.0125,
+    "timestamp": "2026-04-08T09:31:41.571578+00:00",
+    "prompt_version": "v002"
+  }
+}

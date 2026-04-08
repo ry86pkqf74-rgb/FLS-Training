@@ -1,0 +1,49 @@
+{
+  "id": "score_gpt_cp1TT-tkZr8_20260408083121",
+  "video_id": "cp1TT-tkZr8",
+  "video_filename": "cp1TT-tkZr8.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:31:21.461762",
+  "task_id": "task4",
+  "penalties": [
+    {
+      "type": "slit_not_closed",
+      "count": 1,
+      "description": "Visible residual slit gap after the final knot."
+    }
+  ],
+  "score_components": {
+    "time_score": 275.0,
+    "penalty_deductions": 10.0,
+    "total_fls_score": 265.0
+  },
+  "phases_detected": [
+    "suture_introduction",
+    "target_passes",
+    "extracorporeal_throws",
+    "slit_closure_assessment",
+    "suture_cut"
+  ],
+  "reasoning": "The completion time was well within the maximum limit, and all phases were clearly visible. A visible slit remained after the last throw, resulting in one penalty. There were no other observable penalties.",
+  "frame_analyses": [],
+  "completion_time_seconds": 145.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The completion time was well within the maximum limit, and all phases were clearly visible. A visible slit remained after the last throw, resulting in one penalty. There were no other observable penalties.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

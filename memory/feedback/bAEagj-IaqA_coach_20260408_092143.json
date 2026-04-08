@@ -1,0 +1,37 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task4",
+  "strengths": [
+    "Accessing high-quality instructional content to understand proper technique",
+    "Learning correct needle manipulation and tissue handling principles"
+  ],
+  "weaknesses": [
+    "Not performing actual task attempts for skill development",
+    "Missing hands-on practice with timing and performance pressure"
+  ],
+  "drills": [
+    {
+      "name": "Mark-to-mark needle path drill",
+      "description": "Practice 15 needle passes through both marked targets before attempting any knot tying to build muscle memory.",
+      "duration_minutes": 10,
+      "targets_weakness": "Not performing actual task attempts for skill development."
+    },
+    {
+      "name": "Knot-pusher sequencing drill",
+      "description": "Complete 10 three-throw extracorporeal sequences with deliberate pusher advancement to develop consistent technique.",
+      "duration_minutes": 12,
+      "targets_weakness": "Missing hands-on practice with timing and performance pressure."
+    }
+  ],
+  "progression_note": "At the intermediate level, transition from studying technique to active practice sessions with actual task performance and timing measurement.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task4",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 9.39,
+    "input_tokens": 18320,
+    "output_tokens": 280,
+    "cost_usd_approx": 0.0592
+  }
+}

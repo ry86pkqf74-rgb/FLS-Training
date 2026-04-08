@@ -1,0 +1,39 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task2",
+  "strengths": [
+    "Demonstrated proper traction setup with Maryland forceps positioning",
+    "Maintained steady cutting progression around most of the circle",
+    "Showed good instrument coordination during the cutting phases"
+  ],
+  "weaknesses": [
+    "Failed to complete the full circle cut, leaving the gauze piece attached",
+    "Did not verify complete separation before finishing the task",
+    "May have rushed the final portion without ensuring thorough completion"
+  ],
+  "drills": [
+    {
+      "name": "Circle tracking quarter-cuts",
+      "description": "Cut the circle in four controlled quadrants while maintaining traction, pausing between each quarter to verify progress and completion.",
+      "duration_minutes": 12,
+      "targets_weakness": "Failed to complete the full circle cut."
+    },
+    {
+      "name": "Completion verification drill",
+      "description": "Practice lifting and checking the cut piece at multiple points during cutting to ensure complete separation before declaring the task finished.",
+      "duration_minutes": 8,
+      "targets_weakness": "Did not verify complete separation before finishing."
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your solid cutting technique into complete task execution. Always verify full separation of the target piece before considering the task finished.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task2",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 10.23,
+    "input_tokens": 19101,
+    "output_tokens": 329,
+    "cost_usd_approx": 0.0622
+  }
+}

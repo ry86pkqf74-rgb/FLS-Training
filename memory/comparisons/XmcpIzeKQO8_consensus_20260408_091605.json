@@ -1,0 +1,76 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "No actual task performance observed - only promotional/instructional material shown"
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.9,
+    "reasoning": "Claude correctly identified this as promotional/instructional material with no actual task performance. GPT-4o incorrectly scored what appears to be demonstration content as a completed task. The absence of actual task execution takes precedence over any perceived completion."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 0.0,
+      "gpt_value": 95.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "No actual task performance was visible to time; promotional content cannot be scored as task completion"
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "No actual task performance observed - only promotional/instructional material shown"
+      },
+      "gpt_value": {
+        "type": "loop_off_mark",
+        "count": 1,
+        "description": "The loop was placed partially off the mark towards the distal side."
+      },
+      "resolution": "Used Claude's incomplete_task penalty",
+      "rationale": "Incomplete task penalty takes precedence when no actual performance is observable; cannot assess loop placement on promotional material"
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [],
+      "gpt_value": [
+        "loop_introduction",
+        "loop_positioning",
+        "pusher_break_and_advancement",
+        "tail_cut"
+      ],
+      "resolution": "Used Claude's empty array",
+      "rationale": "No actual task phases can be detected in promotional/instructional content"
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 80.0,
+      "resolution": "Used Claude's 0.0",
+      "rationale": "Incomplete task results in automatic zero score per rubric"
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_meta": {
+    "video_id": "XmcpIzeKQO8",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.48,
+    "input_tokens": 1995,
+    "output_tokens": 636,
+    "cost_usd_approx": 0.0155,
+    "timestamp": "2026-04-08T09:16:05.695428+00:00",
+    "prompt_version": "v002"
+  }
+}

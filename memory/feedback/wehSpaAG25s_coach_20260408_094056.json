@@ -1,0 +1,44 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Demonstrated consistent instrument handling and grip control throughout the attempt",
+    "Showed good spatial awareness when navigating between pegs during transfers"
+  ],
+  "weaknesses": [
+    "Task completion cannot be verified due to poor camera positioning and visibility issues",
+    "Appears to have lost track of objects during the transfer sequence",
+    "Inconsistent performance pattern suggests difficulty maintaining focus under time pressure"
+  ],
+  "drills": [
+    {
+      "name": "Camera centering reset",
+      "description": "3 minutes of centering and re-centering the work target before the first move",
+      "duration_minutes": 3,
+      "targets_weakness": "Poor camera positioning and visibility issues"
+    },
+    {
+      "name": "Lost-object recovery awareness",
+      "description": "Slow-motion transfer sets emphasizing stable release and regrasp angle",
+      "duration_minutes": 10,
+      "targets_weakness": "Lost track of objects during transfer sequence"
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "12 full transfers without touching the pegboard for support",
+      "duration_minutes": 8,
+      "targets_weakness": "Inconsistent performance under pressure"
+    }
+  ],
+  "progression_note": "At the intermediate level, focus on converting your demonstrated technical skills into reliable task completion. Your instrument control is solid, but you need better visual management and object tracking to achieve consistent results.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 11.46,
+    "input_tokens": 18329,
+    "output_tokens": 377,
+    "cost_usd_approx": 0.0606
+  }
+}

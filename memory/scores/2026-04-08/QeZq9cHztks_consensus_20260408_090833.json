@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_QeZq9cHztks_20260408_090833",
+  "video_id": "QeZq9cHztks",
+  "video_filename": "QeZq9cHztks.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:08:33.039502+00:00",
+  "task_id": "task2",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_circle",
+      "count": 1,
+      "description": "Video appears to be educational content rather than a complete FLS Task 2 performance, preventing verification of task completion."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "traction_setup",
+    "entry_cut"
+  ],
+  "confidence": 0.0,
+  "reasoning": "Major disagreement between models on video content interpretation. Claude identified this as educational content without complete task performance, while GPT-4o scored it as a completed task. Given the fundamental disagreement about whether a scorable task performance occurred, the conservative approach is to treat this as incomplete educational content that cannot be scored according to FLS rubric requirements.",
+  "confidence_score": 0.0
+}

@@ -1,0 +1,28 @@
+{
+  "id": "score_consensus_uGjoHzX0Wcw_20260408_093808",
+  "video_id": "uGjoHzX0Wcw",
+  "video_filename": "uGjoHzX0Wcw.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:38:08.602210+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 22.0,
+  "penalties": [],
+  "score_components": {
+    "time_score": 278.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 278.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers",
+    "return_transfers",
+    "final_release"
+  ],
+  "confidence": 0.7,
+  "reasoning": "Claude reported complete task execution with all objects returned to original positions and no penalties. GPT-4o reported a lost object penalty and longer completion time. Given Claude's detailed observation of final completion state showing all objects properly positioned, and the significant timing discrepancy, Claude's assessment appears more accurate for this peg transfer task.",
+  "confidence_score": 0.7
+}

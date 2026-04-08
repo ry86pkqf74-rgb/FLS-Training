@@ -1,0 +1,80 @@
+{
+  "consensus_score": {
+    "task_id": "task1",
+    "completion_time_seconds": 300.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Maximum time reached before completion. Task appears incomplete based on video evidence."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [
+      "setup_and_first_pickup",
+      "outbound_transfers"
+    ],
+    "confidence": 0.3,
+    "reasoning": "Major disagreement between models on task completion. Claude reported incomplete task with maximum time penalty, while GPT reported successful completion in 72 seconds. Given the fundamental nature of this disagreement and the automatic-zero condition for incomplete tasks, the conservative interpretation (incomplete) is applied per rubric requirements."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 300.0,
+      "gpt_value": 72.0,
+      "resolution": "Used Claude's 300.0 seconds",
+      "rationale": "Task completion is binary - either all objects are transferred and returned or not. Claude's assessment of incomplete task takes precedence as incomplete tasks automatically receive maximum time penalty per rubric."
+    },
+    {
+      "field": "penalties",
+      "claude_value": [
+        {
+          "type": "incomplete_task",
+          "count": 1,
+          "description": "Maximum time reached before completion. The task appears to end with objects still on the opposite side and not returned to the original positions."
+        }
+      ],
+      "gpt_value": [],
+      "resolution": "Applied incomplete_task penalty",
+      "rationale": "Incomplete task is an automatic-zero condition per rubric. When one model reports incomplete and another reports complete, the incomplete assessment must be verified against video evidence and applied conservatively."
+    },
+    {
+      "field": "phases_detected",
+      "claude_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers"
+      ],
+      "gpt_value": [
+        "setup_and_first_pickup",
+        "outbound_transfers",
+        "return_transfers",
+        "final_release"
+      ],
+      "resolution": "Used Claude's shorter phase list",
+      "rationale": "If task was incomplete as determined, then return_transfers and final_release phases would not have occurred. Phase detection must align with completion assessment."
+    },
+    {
+      "field": "total_fls_score",
+      "claude_value": 0.0,
+      "gpt_value": 228.0,
+      "resolution": "Applied 0.0 score",
+      "rationale": "Incomplete task results in automatic zero score per rubric, regardless of time calculations."
+    }
+  ],
+  "overall_confidence": 0.3,
+  "_meta": {
+    "video_id": "q5lS0G3udjU",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 12.62,
+    "input_tokens": 1998,
+    "output_tokens": 707,
+    "cost_usd_approx": 0.0166,
+    "timestamp": "2026-04-08T09:34:30.265904+00:00",
+    "prompt_version": "v002"
+  }
+}

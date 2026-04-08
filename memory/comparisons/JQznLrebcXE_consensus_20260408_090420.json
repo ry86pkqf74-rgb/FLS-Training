@@ -1,0 +1,52 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 42.0,
+    "penalties": [],
+    "score_components": {
+      "time_score": 138.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 138.0
+    },
+    "phases_detected": [
+      "loop_introduction",
+      "loop_positioning",
+      "pusher_break_and_advancement",
+      "tail_cut"
+    ],
+    "confidence": 0.7,
+    "reasoning": "Both models agreed on task completion and phases. Major disagreement on completion time (42s vs 75s) resolved in favor of Claude's timing which appears more consistent with the task description. GPT reported loop positioning penalty but Claude did not; without clear visual evidence of mark deviation, the penalty was not carried forward."
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "claude_value": 42.0,
+      "gpt_value": 75.0,
+      "resolution": "Used Claude's 42.0 seconds",
+      "rationale": "Significant timing difference requires resolution. Claude's time is closer to proficiency target and more consistent with efficient task execution."
+    },
+    {
+      "field": "penalties[0]",
+      "claude_value": null,
+      "gpt_value": {
+        "type": "loop_off_mark",
+        "count": 1,
+        "description": "The loop is positioned slightly away from the marked site on the appendage base."
+      },
+      "resolution": "Dropped the penalty",
+      "rationale": "Without clear visual evidence of mark deviation visible in the video analysis, the positioning penalty cannot be definitively supported."
+    }
+  ],
+  "overall_confidence": 0.7,
+  "_meta": {
+    "video_id": "JQznLrebcXE",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 9.86,
+    "input_tokens": 2012,
+    "output_tokens": 438,
+    "cost_usd_approx": 0.0126,
+    "timestamp": "2026-04-08T09:04:20.835160+00:00",
+    "prompt_version": "v002"
+  }
+}

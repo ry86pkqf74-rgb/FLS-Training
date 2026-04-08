@@ -1,0 +1,42 @@
+{
+  "consensus_score": {
+    "task_id": "task3",
+    "completion_time_seconds": 0.0,
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "count": 1,
+        "description": "Video contains only tutorial/instructional content without actual task performance."
+      }
+    ],
+    "score_components": {
+      "time_score": 0.0,
+      "penalty_deductions": 0.0,
+      "total_fls_score": 0.0
+    },
+    "phases_detected": [],
+    "confidence": 0.0,
+    "reasoning": "Both models agreed this video shows tutorial/instructional content rather than actual task performance. No timing information, task phases, or completion can be identified. The incomplete_task penalty results in automatic zero score per FLS rubric."
+  },
+  "disagreements": [
+    {
+      "field": "penalties[0].description",
+      "claude_value": "The video shows tutorial content and branding screens but no actual task performance or timing information.",
+      "gpt_value": "Maximum time reached without completion.",
+      "resolution": "Used Claude's description",
+      "rationale": "Claude's description more accurately reflects that this is tutorial content rather than a timed attempt that reached maximum time."
+    }
+  ],
+  "overall_confidence": 0.0,
+  "_meta": {
+    "video_id": "LjX9cDnroi8",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 7.67,
+    "input_tokens": 2007,
+    "output_tokens": 339,
+    "cost_usd_approx": 0.0111,
+    "timestamp": "2026-04-08T09:05:06.740943+00:00",
+    "prompt_version": "v002"
+  }
+}

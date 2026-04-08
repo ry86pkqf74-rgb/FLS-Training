@@ -1,0 +1,29 @@
+{
+  "id": "score_consensus_yYnpKTGNKxc_20260408_094218",
+  "video_id": "yYnpKTGNKxc",
+  "video_filename": "yYnpKTGNKxc.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:42:18.761172+00:00",
+  "task_id": "task4",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Video content is not suitable for scoring - either too dark to evaluate or educational material rather than performance attempt"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "confidence": 0.0,
+  "reasoning": "Both models agreed that this video cannot be scored as a task performance. Claude identified it as educational material with static images, while GPT-4o reported the video as too dark to evaluate. In either case, no actual task execution is visible, resulting in incomplete task status and zero score.",
+  "confidence_score": 0.0
+}

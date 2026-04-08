@@ -1,0 +1,39 @@
+{
+  "skill_level": "intermediate",
+  "task_id": "task1",
+  "strengths": [
+    "Successfully completed all six outbound transfers with controlled movements",
+    "Maintained stable grasp throughout the transfer sequence",
+    "Demonstrated good bimanual coordination during object handoffs"
+  ],
+  "weaknesses": [
+    "Failed to complete the return transfer phase of the task",
+    "Did not demonstrate full task understanding or time management",
+    "Incomplete execution resulted in automatic zero score despite technical proficiency"
+  ],
+  "drills": [
+    {
+      "name": "Complete cycle rehearsal",
+      "description": "Practice full 12-transfer sequences (6 out, 6 back) with emphasis on recognizing when the outbound phase is complete and immediately beginning return transfers.",
+      "duration_minutes": 15,
+      "targets_weakness": "Failed to complete the return transfer phase of the task."
+    },
+    {
+      "name": "Mid-air transfer ladder",
+      "description": "Perform 12 full transfers without touching the pegboard for support, focusing on smooth hand-to-hand exchanges.",
+      "duration_minutes": 10,
+      "targets_weakness": "Incomplete execution resulted in automatic zero score despite technical proficiency."
+    }
+  ],
+  "progression_note": "Your transfer mechanics are solid, but task completion is critical at the intermediate level. Focus on understanding the full task requirements and executing complete cycles before optimizing for speed.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 9.95,
+    "input_tokens": 18345,
+    "output_tokens": 350,
+    "cost_usd_approx": 0.0603
+  }
+}

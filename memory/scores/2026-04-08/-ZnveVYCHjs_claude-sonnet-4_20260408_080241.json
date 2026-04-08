@@ -1,0 +1,43 @@
+{
+  "id": "score_claude_-ZnveVYCHjs_20260408080241",
+  "video_id": "-ZnveVYCHjs",
+  "video_filename": "-ZnveVYCHjs.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:02:41.937740",
+  "task_id": "task2",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "No actual cutting performance was observed in the video frames. Only instructional content and FLS equipment overview were shown."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "The video appears to be an instructional or overview video showing FLS equipment and materials, but does not contain an actual task2 precision cutting performance. No gauze cutting, circle tracking, or completion was observed. Without a performance to evaluate, this cannot be scored as a valid FLS task attempt.",
+  "frame_analyses": [],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The video appears to be an instructional or overview video showing FLS equipment and materials, but does not contain an actual task2 precision cutting performance. No gauze cutting, circle tracking, or completion was observed. Without a performance to evaluate, this cannot be scored as a valid FLS task attempt.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

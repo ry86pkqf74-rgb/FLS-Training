@@ -1,0 +1,48 @@
+{
+  "id": "score_gpt__MNSy7rvXnk_20260408081600",
+  "video_id": "_MNSy7rvXnk",
+  "video_filename": "_MNSy7rvXnk.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T08:16:00.086296",
+  "task_id": "task3",
+  "penalties": [
+    {
+      "type": "loop_off_mark",
+      "count": 1,
+      "description": "The loop was secured slightly distal to the target mark."
+    }
+  ],
+  "score_components": {
+    "time_score": 112.0,
+    "penalty_deductions": 5.0,
+    "total_fls_score": 107.0
+  },
+  "phases_detected": [
+    "loop_introduction",
+    "loop_positioning",
+    "pusher_break_and_advancement",
+    "tail_cut"
+  ],
+  "reasoning": "All task actions and final loop position were visible. The loop was observed to be off-mark by a small margin. Actions were completed within a visible time frame.",
+  "frame_analyses": [],
+  "completion_time_seconds": 68.0,
+  "phase_timings": [],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "All task actions and final loop position were visible. The loop was observed to be off-mark by a small margin. Actions were completed within a visible time frame.",
+  "improvement_suggestions": [],
+  "strengths": [],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

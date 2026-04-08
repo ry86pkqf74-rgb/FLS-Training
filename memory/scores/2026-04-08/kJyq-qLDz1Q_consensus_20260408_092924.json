@@ -1,0 +1,32 @@
+{
+  "id": "score_consensus_kJyq-qLDz1Q_20260408_092924",
+  "video_id": "kJyq-qLDz1Q",
+  "video_filename": "kJyq-qLDz1Q.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-08T09:29:24.166400+00:00",
+  "task_id": "task1",
+  "completion_time_seconds": 0.0,
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears to be incomplete as the video shows ongoing transfers but no clear completion state with all objects returned to original side."
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [
+    "setup_and_first_pickup",
+    "outbound_transfers"
+  ],
+  "confidence": 0.3,
+  "reasoning": "Major disagreement between models on task completion. Claude identified incomplete task with no clear completion state, while GPT-4o reported successful completion in 72.3 seconds. Given the fundamental disagreement on whether the task was completed, and Claude's specific observation that objects were not all returned to original side as required, the conservative interpretation is that the task was incomplete, resulting in automatic zero score per FLS rubric.",
+  "confidence_score": 0.3
+}
