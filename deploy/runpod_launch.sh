@@ -103,11 +103,24 @@ echo ""
 
 # --- Step 3: Validate dataset ---
 echo "[3/5] Validating dataset at $DATASET_PATH..."
+
+# If the user passed data/training/LATEST, resolve it to the newest
+# timestamped directory so stale symlinks don't silently train on old data.
+if [[ "$DATASET_PATH" == *"LATEST" ]]; then
+    RESOLVED=$(ls -1dt data/training/*_v* 2>/dev/null | head -1 || true)
+    if [ -n "$RESOLVED" ] && [ -f "$RESOLVED/train.jsonl" ]; then
+        DATASET_PATH="$RESOLVED"
+        echo "  LATEST resolved to: $DATASET_PATH"
+    fi
+fi
+
 if [ ! -f "$DATASET_PATH/train.jsonl" ]; then
     echo "ERROR: $DATASET_PATH/train.jsonl not found."
     echo ""
     echo "You need to prepare training data LOCALLY first:"
-    echo "  python scripts/040_prepare_training_data.py --version 1"
+    echo "  python scripts/040_prepare_training_data.py --ver v4 \\"
+    echo "      --frames-dir data/frames --max-frames 24 \\"
+    echo "      --include-coach-feedback --group-by trainee"
     echo ""
     echo "Then upload the output directory to this instance:"
     echo "  rsync -avz data/training/ root@\$GPU_IP:/workspace/FLS-Training/data/training/"
@@ -123,6 +136,46 @@ if [ "$TRAIN_COUNT" -lt 5 ]; then
     echo "WARNING: Very few training examples ($TRAIN_COUNT). Results may be poor."
     echo "Consider scoring more videos first."
 fi
+
+# Vision-mode validation: if the config declares require_vision: true,
+# check that the first training example actually contains image blocks
+# AND that at least one of those image paths exists on the pod.
+REQUIRE_VISION=$(grep -E '^require_vision:' "$CONFIG_PATH" 2>/dev/null | awk '{print $2}' || true)
+if [ "$REQUIRE_VISION" = "true" ]; then
+    python3 - <<PY
+import json, sys
+from pathlib import Path
+with open("$DATASET_PATH/train.jsonl") as handle:
+    first = json.loads(handle.readline())
+has_image = False
+first_image = None
+for message in first.get("messages", []):
+    content = message.get("content")
+    if isinstance(content, list):
+        for block in content:
+            if isinstance(block, dict) and block.get("type") == "image":
+                has_image = True
+                first_image = block.get("image")
+                break
+    if has_image:
+        break
+if not has_image:
+    print("ERROR: config has require_vision: true but train.jsonl has no image blocks.")
+    print("Re-run scripts/040_prepare_training_data.py with --frames-dir set.")
+    sys.exit(1)
+if first_image and not Path(first_image).is_file():
+    print(f"ERROR: first image path does not resolve on this pod: {first_image}")
+    print("rsync the frames directory onto the pod before launching training.")
+    sys.exit(1)
+print(f"  Vision check: first image OK ({first_image})")
+PY
+    if [ $? -ne 0 ]; then
+        echo ""
+        echo "Vision validation failed. Aborting launch before GPU allocation."
+        exit 1
+    fi
+fi
+
 echo ""
 
 # --- Step 4: Update config with actual dataset path ---

@@ -50,6 +50,51 @@ def _example_to_messages(example: dict) -> list[dict]:
     return normalized
 
 
+def _example_has_images(example: dict) -> bool:
+    """Does any message in this example carry an image content block?"""
+    messages = example.get("messages") or []
+    for message in messages:
+        content = message.get("content")
+        if isinstance(content, list):
+            for block in content:
+                if isinstance(block, dict) and block.get("type") == "image":
+                    return True
+    return False
+
+
+def _load_pil_images_from_messages(messages: list[dict]):
+    """Extract and open every image referenced by a chat-message record.
+
+    Returns a list of PIL.Image objects in the order they appear across
+    user messages. Raises FileNotFoundError if any referenced path is
+    missing — we'd rather fail fast at training startup than feed a
+    partial image list to the processor and silently misalign examples.
+    """
+    from PIL import Image
+
+    images = []
+    for message in messages:
+        content = message.get("content")
+        if not isinstance(content, list):
+            continue
+        for block in content:
+            if not isinstance(block, dict):
+                continue
+            if block.get("type") != "image":
+                continue
+            path = block.get("image") or block.get("image_url") or block.get("path")
+            if not path:
+                continue
+            if not Path(path).is_file():
+                raise FileNotFoundError(
+                    f"Image path missing at train time: {path}. "
+                    "Confirm the frames directory is rsync'd onto the GPU pod "
+                    "and that the paths in train.jsonl resolve on this host."
+                )
+            images.append(Image.open(path).convert("RGB"))
+    return images
+
+
 def _format_chat_examples(batch: dict, tokenizer) -> list[str]:
     """Render chat-style training examples into plain text for SFT trainers."""
     if "messages" in batch:
@@ -199,6 +244,22 @@ def _finetune_unsloth(config: dict) -> dict:
         "validation": str(Path(dataset_path) / "val.jsonl"),
     })
 
+    # Detect whether this dataset contains real image content blocks. If
+    # it does, we switch to Unsloth's vision data collator which uses the
+    # processor to encode images alongside text. If it does not (legacy
+    # text-only path), we fall back to the old SFTTrainer formatting_func
+    # path. This is the lever that guarantees a "vision" config with
+    # empty image paths cannot silently train as text-only.
+    first_example = dataset["train"][0] if len(dataset["train"]) else {}
+    has_images = _example_has_images(first_example)
+    logger.info("Dataset vision mode: %s", has_images)
+    if config.get("require_vision", False) and not has_images:
+        raise RuntimeError(
+            "require_vision=True in config, but the first training example "
+            "has no image blocks. Re-run scripts/040_prepare_training_data.py "
+            "with --frames-dir pointing at extracted frames."
+        )
+
     sft_config = SFTConfig(
         output_dir=output_dir,
         num_train_epochs=config.get("num_epochs", 2),
@@ -221,13 +282,40 @@ def _finetune_unsloth(config: dict) -> dict:
         run_name=_run_name(config, output_dir),
     )
 
-    trainer = SFTTrainer(
-        model=model, args=sft_config,
-        train_dataset=dataset["train"],
-        eval_dataset=dataset["validation"],
-        tokenizer=tokenizer,
-        formatting_func=lambda batch: _format_chat_examples(batch, tokenizer),
-    )
+    if has_images:
+        # Unsloth ships UnslothVisionDataCollator, which expects a list of
+        # examples each carrying "messages" with image blocks. It uses
+        # the FastVisionModel processor (tokenizer arg) to encode both
+        # vision and text into the batch tensors the Qwen2.5-VL backbone
+        # expects.
+        try:
+            from unsloth.trainer import UnslothVisionDataCollator
+        except ImportError as exc:  # pragma: no cover - runtime
+            raise RuntimeError(
+                "Vision training requires a recent Unsloth that exposes "
+                "UnslothVisionDataCollator. Upgrade with:\n"
+                "  pip install -U 'unsloth @ git+https://github.com/unslothai/unsloth.git'"
+            ) from exc
+
+        FastVisionModel.for_training(model)  # flip into train-ready state
+        vision_collator = UnslothVisionDataCollator(model, tokenizer)
+
+        trainer = SFTTrainer(
+            model=model,
+            args=sft_config,
+            train_dataset=dataset["train"],
+            eval_dataset=dataset["validation"],
+            tokenizer=tokenizer,
+            data_collator=vision_collator,
+        )
+    else:
+        trainer = SFTTrainer(
+            model=model, args=sft_config,
+            train_dataset=dataset["train"],
+            eval_dataset=dataset["validation"],
+            tokenizer=tokenizer,
+            formatting_func=lambda batch: _format_chat_examples(batch, tokenizer),
+        )
 
     logger.info("Starting Unsloth QLoRA training...")
     trainer.train(resume_from_checkpoint=config.get("resume_from_checkpoint"))

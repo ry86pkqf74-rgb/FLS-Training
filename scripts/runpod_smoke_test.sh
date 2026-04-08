@@ -118,6 +118,12 @@ if [ "$PHASE" = "gpu" ]; then
     check_import peft "peft" optional
     check_import accelerate "accelerate" optional
     check_import bitsandbytes "bitsandbytes" optional
+    # Vision-specific dependencies for the v4 path
+    check_import PIL "Pillow" optional
+    check_import qwen_vl_utils "qwen-vl-utils" optional
+    check_import unsloth "unsloth" optional
+    check_import trl "trl" optional
+    check_import datasets "datasets" optional
 
     # CUDA reachability via torch
     if python3 -c "import torch" 2>/dev/null; then
@@ -128,11 +134,54 @@ if [ "$PHASE" = "gpu" ]; then
             fail "torch installed but cuda not available"
         fi
     fi
+
+    # UnslothVisionDataCollator presence — the lever finetune_vlm.py pulls
+    # when the first training example has image blocks. Missing collator =
+    # broken vision path = we will abort before training.
+    if python3 -c "import unsloth" 2>/dev/null; then
+        if python3 -c "from unsloth.trainer import UnslothVisionDataCollator" 2>/dev/null; then
+            ok "UnslothVisionDataCollator importable"
+        else
+            fail "unsloth installed but UnslothVisionDataCollator missing — upgrade unsloth"
+        fi
+    fi
 fi
 
 if [ "$PHASE" = "cpu" ]; then
     check_import numpy "numpy" optional
     check_import PIL "Pillow" optional
+    check_import b2sdk "b2sdk" optional
+fi
+
+# Hardening-sprint project sanity: the quarantined modules must raise,
+# and schema_adapter must import. This catches a revert before it ships.
+echo ""
+echo "[3a] Project sanity (hardening sprint)"
+if [ -d "src" ]; then
+    if python3 -c "from src.training import schema_adapter; schema_adapter.get_total_score({'estimated_fls_score': 450})" 2>/dev/null; then
+        ok "schema_adapter importable + functional"
+    else
+        fail "schema_adapter broken — cannot read score records"
+    fi
+
+    # Quarantined modules should raise on first call, not silently work.
+    if python3 -c "
+import sys
+try:
+    from src.training.data_prep import prepare_training_data
+    try:
+        prepare_training_data()
+    except RuntimeError as e:
+        if 'quarantined' in str(e).lower():
+            sys.exit(0)
+    sys.exit(1)
+except Exception:
+    sys.exit(1)
+" 2>/dev/null; then
+        ok "data_prep quarantine stub raises as expected"
+    else
+        fail "data_prep stub does not guard against the dead code path"
+    fi
 fi
 
 echo ""

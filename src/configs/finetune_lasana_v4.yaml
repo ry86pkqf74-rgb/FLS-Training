@@ -1,28 +1,40 @@
 # ==============================================================================
-# !! DO NOT LAUNCH !!  (2026-04-08)
+# HARDENING SPRINT STATUS  (2026-04-08)
 #
-# This config is GATED behind the hardening sprint. Do not spend GPU budget
-# on this run until ALL of the following are green:
+# Code gates CLEARED:
 #
-#   [ ] src/training/data_prep.py emits vision records (image_paths +
-#       DINOv2 feature_path), NOT flattened text from frame_analyses.
-#       The current data_prep tokenizes narration strings — training this
-#       config as-is fine-tunes a 7B language model to imitate teacher
-#       prose and ignores pixels entirely.
+#   [x] src/training/data_prep.py QUARANTINED under archive/deprecated/.
+#       Live path is src/training/prepare_dataset.py which emits real
+#       image content blocks ([{type:image, image:path}, {type:text,...}])
+#       from --frames-dir, not flattened narration strings.
 #
-#   [ ] scripts/050_runpod_train.py dispatches to finetune_vlm.py (VLM
-#       trainer), not runpod_trainer.py (causal-LM text trainer).
+#   [x] scripts/050_runpod_train.py QUARANTINED under archive/deprecated/.
+#       deploy/runpod_launch.sh dispatches to src.training.finetune_vlm
+#       (VLM trainer) exclusively.
 #
-#   [ ] src/training/eval_v2.py reads scores through
-#       src.training.schema_adapter.get_total_score (DONE 2026-04-08).
+#   [x] src/training/eval_v2.py reads scores through
+#       src.training.schema_adapter.get_total_score (v001/v002 compatible).
+#
+#   [x] src/training/finetune_vlm.py detects vision mode from the first
+#       example, uses FastVisionModel.for_training +
+#       UnslothVisionDataCollator, and aborts pre-GPU when
+#       require_vision=True and no image blocks are present.
+#
+#   [x] deploy/runpod_launch.sh resolves data/training/LATEST to the
+#       newest versioned dir and runs an inline vision-validation check
+#       before GPU allocation.
+#
+#   [x] Abort criterion in docs/LASANA_DEPLOYMENT_PLAN.md revised from
+#       "MAE > 12" to tiered 15/22 per memory/baselines/2026-04-08 report
+#       (teacher-vs-teacher MAE is ≈21.6 → 12 was below the noise floor).
+#
+# Data gate STILL OPEN:
 #
 #   [ ] Held-out gold-set of ≥100 videos with at least two teacher scores
-#       each exists under data/training/<ver>/test.jsonl, drawn from
-#       lasana + petraw + simsurg (not the n=37 consensus corpus).
-#
-#   [ ] Abort criterion in docs/LASANA_DEPLOYMENT_PLAN.md revised from
-#       "MAE > 12" to "MAE > 22" per memory/baselines/2026-04-08 report
-#       (teacher-vs-teacher MAE is ≈21.6 → 12 was below the noise floor).
+#       each. Current gold set (scripts/047_build_gold_set.py) selects
+#       only 5/78 videos — corpus is too thin. Run
+#       scripts/025_rescore_missing_gpt.py --execute (~$1.45) and rebuild,
+#       or gate-train on LASANA/PETRAW/SimSurg with native labels.
 #
 # Owner: Logan. See memory/baselines/2026-04-08_teacher_mae_baseline.md
 # for the data that triggered this gate.
@@ -53,6 +65,12 @@
 base_model: "Qwen/Qwen2.5-VL-7B-Instruct"
 dataset_path: "data/training/LATEST"
 framework: "unsloth"
+
+# Hard-require that the dataset contains real image content blocks. If
+# this is True and train.jsonl has only text prompts, finetune_vlm.py
+# aborts before touching the GPU. Flip to False only if you are
+# deliberately running a text-only ablation and know what you're doing.
+require_vision: true
 
 # bf16, no quantization. The 7B model + LoRA + activations fits in 80GB
 # with batch_size=2 and gradient checkpointing off. If a smaller GPU

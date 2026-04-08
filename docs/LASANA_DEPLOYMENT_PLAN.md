@@ -1,14 +1,38 @@
 # LASANA + Multi-Dataset GPU Deployment Plan
 
-> ## ⛔ GATED 2026-04-08 — hardening sprint in progress
+> ## 🟡 PARTIALLY GATED 2026-04-08 — hardening sprint code-complete
 >
-> Do not launch Phase 3 (A100 training) until the gates listed in
-> `src/configs/finetune_lasana_v4.yaml` are green. Summary of why:
-> `src/training/data_prep.py` currently flattens `frame_analyses` into
-> text strings, and `runpod_trainer.py` tokenizes them as plain text.
-> Training this plan as-written would fine-tune a language model on
-> teacher narration instead of a VLM on surgical video. Phases 1 and 2
-> (CPU ingest + feature extraction) are still valid and can proceed.
+> Code gates CLEARED (2026-04-08):
+>   - `src/training/schema_adapter.py` is the single source of truth for
+>     v001/v002 score records; `eval_v2.py` reads scores through it.
+>   - `src/training/data_prep.py` + `runpod_trainer.py` +
+>     `scripts/050_runpod_train.py` are quarantined under
+>     `archive/deprecated/` with stubs that raise `RuntimeError`. The
+>     live training path is `src/training/prepare_dataset.py` →
+>     `src/training/finetune_vlm.py` → `deploy/runpod_launch.sh`.
+>   - `prepare_dataset.py` now emits real image content blocks
+>     (`[{"type":"image","image":path}, {"type":"text",...}]`) from
+>     `--frames-dir`, attaches `trainee_id` + `source_domain` metadata,
+>     and supports resident-aware splits via `--group-by trainee`.
+>   - `finetune_vlm.py` detects vision mode from the first example,
+>     switches to `FastVisionModel.for_training` +
+>     `UnslothVisionDataCollator`, and aborts before GPU allocation when
+>     `require_vision: true` and no image blocks are present.
+>   - `deploy/runpod_launch.sh` resolves `LATEST` to the newest
+>     `data/training/*_v*` dir and runs an inline vision-content +
+>     image-path-exists check before touching the GPU.
+>   - `scripts/runpod_smoke_test.sh` asserts `schema_adapter` is
+>     functional and the quarantined `data_prep` stub raises, so a
+>     silent revert can't sneak onto a pod.
+>
+> Data gate STILL OPEN: the locked gold set built by
+> `scripts/047_build_gold_set.py` currently contains only 5 videos
+> (41 no_consensus, 16 single_teacher, 11 teacher_disagreement,
+> 5 low_confidence out of 78 candidates). Before launching Phase 3,
+> either (a) run `scripts/025_rescore_missing_gpt.py --execute`
+> (~$1.45 for the 29 Claude-only videos) and rebuild the gold set, or
+> (b) gate-train on the LASANA/PETRAW/SimSurg corpus where labels come
+> from the source datasets rather than reconciled teacher scores.
 >
 > Baseline teacher-vs-teacher MAE is **≈21.6** (see
 > `memory/baselines/2026-04-08_teacher_mae_baseline.md`). The "MAE > 12"
