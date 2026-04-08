@@ -24,12 +24,17 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from src.feedback.coach_agent import generate_coach_feedback
+
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
 SCORES_DIR = Path("memory/scores")
 COMPARISONS_DIR = Path("memory/comparisons")
+FEEDBACK_DIR = Path("memory/feedback")
+FRAMES_DIR = Path("memory/frames")
+HARVEST_LOG = Path("harvest_log.jsonl")
 PROMPTS_DIR = Path("prompts")
 LEDGER_DIR = Path("memory")
 RUBRICS_DIR = Path("rubrics")
@@ -48,8 +53,11 @@ def _canonical_task_id(task: str) -> str:
     alias_map = {
         "task1_peg_transfer": "task1",
         "task2_pattern_cut": "task2",
+        "task3_endoloop": "task3",
         "task3_ligating_loop": "task3",
+        "task4_extracorporeal_knot": "task4",
         "task4_extracorporeal_suture": "task4",
+        "task5_intracorporeal_suturing": "task5",
         "task5_intracorporeal_suture": "task5",
     }
     if task_name in alias_map:
@@ -78,6 +86,182 @@ def _build_task_context(task: str) -> str:
         f"Score Formula: {rubric.get('score_formula', '')}\n"
         f"Penalty Categories: {penalty_names}"
     )
+
+
+def _infer_task(claude_json: dict, gpt_json: dict, cli_task: str | None) -> str:
+    if cli_task:
+        return _canonical_task_id(cli_task)
+    for payload in (claude_json, gpt_json):
+        task_id = payload.get("task_id") or payload.get("task")
+        if task_id:
+            return _canonical_task_id(str(task_id))
+    return "task5"
+
+
+def _score_file_meta(payload: dict) -> dict:
+    return {
+        "completion_time_seconds": payload.get("completion_time_seconds"),
+        "estimated_penalties": payload.get("estimated_penalties"),
+        "estimated_fls_score": payload.get("estimated_fls_score"),
+        "confidence": payload.get("confidence_score", payload.get("confidence")),
+        "task_id": payload.get("task_id"),
+    }
+
+
+def _agreement_level(delta_fls: float) -> str:
+    if delta_fls <= 1.0:
+        return "very_strong"
+    if delta_fls <= 5.0:
+        return "strong"
+    if delta_fls <= 12.0:
+        return "moderate"
+    return "weak"
+
+
+def _build_teacher_comparison(
+    video_id: str,
+    claude_json: dict,
+    gpt_json: dict,
+    claude_path: Path,
+    gpt_path: Path,
+    consensus: dict,
+    task_id: str,
+) -> dict:
+    claude_score = float(claude_json.get("estimated_fls_score") or 0.0)
+    gpt_score = float(gpt_json.get("estimated_fls_score") or 0.0)
+    claude_time = float(claude_json.get("completion_time_seconds") or 0.0)
+    gpt_time = float(gpt_json.get("completion_time_seconds") or 0.0)
+    claude_penalties = float(claude_json.get("estimated_penalties") or 0.0)
+    gpt_penalties = float(gpt_json.get("estimated_penalties") or 0.0)
+
+    consensus_score = consensus.get("consensus_score") or {}
+    return {
+        "id": f"comparison_{video_id}_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}",
+        "video_id": video_id,
+        "task_id": task_id,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "teachers": {
+            "claude": {
+                "score_file": str(claude_path),
+                **_score_file_meta(claude_json),
+            },
+            "gpt-4o": {
+                "score_file": str(gpt_path),
+                **_score_file_meta(gpt_json),
+            },
+        },
+        "deltas": {
+            "delta_completion_time_seconds": round(abs(claude_time - gpt_time), 2),
+            "delta_penalties": round(abs(claude_penalties - gpt_penalties), 2),
+            "delta_fls_score": round(abs(claude_score - gpt_score), 2),
+            "agreement_level": _agreement_level(abs(claude_score - gpt_score)),
+        },
+        "consensus_summary": {
+            "estimated_fls_score": consensus_score.get("estimated_fls_score"),
+            "completion_time_seconds": consensus_score.get("completion_time_seconds"),
+            "confidence_score": consensus_score.get("confidence_score", consensus.get("overall_confidence")),
+        },
+    }
+
+
+def _save_consensus_score(video_id: str, consensus: dict, task_id: str, prompt_version: str) -> Path | None:
+    consensus_score = consensus.get("consensus_score") or {}
+    if not consensus_score:
+        return None
+
+    meta = consensus.get("_meta") or {}
+    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    out_dir = SCORES_DIR / date_str
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    payload = {
+        "id": f"score_consensus_{video_id}_{timestamp}",
+        "video_id": video_id,
+        "video_filename": f"{video_id}.mp4",
+        "video_hash": "",
+        "source": "consensus",
+        "model_name": meta.get("model") or "claude-sonnet-4-20250514",
+        "model_version": meta.get("model") or "claude-sonnet-4-20250514",
+        "prompt_version": prompt_version,
+        "scored_at": meta.get("timestamp") or datetime.now(timezone.utc).isoformat(),
+        "task_id": task_id,
+        **consensus_score,
+    }
+    if "confidence_score" not in payload:
+        payload["confidence_score"] = consensus.get("overall_confidence", consensus.get("agreement_score", 0.0))
+
+    out_path = out_dir / f"{video_id}_consensus_{timestamp}.json"
+    out_path.write_text(json.dumps(payload, indent=2, default=str))
+    return out_path
+
+
+def _load_cached_frames(video_id: str) -> tuple[list[str], list[float]]:
+    cache_path = FRAMES_DIR / video_id / "frames.json"
+    if not cache_path.exists():
+        return [], []
+    try:
+        cache = json.loads(cache_path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return [], []
+    return cache.get("frames_b64", []), cache.get("frame_timestamps", [])
+
+
+def _load_harvest_entry(video_id: str) -> dict:
+    if not HARVEST_LOG.exists():
+        return {}
+    for line in HARVEST_LOG.read_text().splitlines():
+        if not line.strip():
+            continue
+        try:
+            entry = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if entry.get("video_id") == video_id:
+            return entry
+    return {}
+
+
+def _coach_skill_level(raw_skill: str) -> str:
+    raw = (raw_skill or "").strip().lower()
+    if raw in {"novice", "intermediate", "advanced"}:
+        return raw
+    if raw == "expert":
+        return "advanced"
+    return "intermediate"
+
+
+def _load_trainee_history() -> list[dict]:
+    history = []
+    seen_videos = set()
+    for path in sorted(SCORES_DIR.rglob("*.json")):
+        if "claude" not in path.name:
+            continue
+        try:
+            data = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        video_id = data.get("video_id")
+        if not video_id or video_id in seen_videos:
+            continue
+        seen_videos.add(video_id)
+        history.append(
+            {
+                "video_id": video_id,
+                "fls_score": data.get("estimated_fls_score"),
+                "completion_time_seconds": data.get("completion_time_seconds"),
+                "confidence": data.get("confidence_score"),
+            }
+        )
+    return history
+
+
+def _save_coach_feedback(video_id: str, feedback: dict) -> Path:
+    FEEDBACK_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    out_path = FEEDBACK_DIR / f"{video_id}_coach_{timestamp}.json"
+    out_path.write_text(json.dumps(feedback, indent=2, default=str))
+    return out_path
 
 
 def _load_consensus_prompt(version: str, task: str) -> str:
@@ -148,7 +332,7 @@ def run_consensus(
     model: str = "claude-sonnet-4-20250514",
     temperature: float = 0.3,
     prompt_version: str = "v001",
-    task: str = "5",
+    task: str = "task5",
 ) -> dict:
     """Call the Critique Agent to produce consensus from two teacher scores."""
     import anthropic
@@ -232,13 +416,6 @@ Merge these into the consensus JSON."""
 - Video ID: {video_id}
 - Duration: {claude_json.get('completion_time_seconds', 'unknown')}s (Teacher A estimate)
 - Frame timestamps from Teacher A's frame_analyses
-
-## FLS Task 5 Rubric Summary:
-- Max time: 600s (score = 600 - time - penalties)
-- 3 throws required: first is surgeon's knot (double), throws 2-3 are single
-- Hand must switch between throws
-- Suture through marked points, drain slit must close
-- Penalties: deviation from marks, gap in drain, insecure knot, avulsed drain
 
 This is Round 1. Produce the consensus JSON."""
 
@@ -392,14 +569,16 @@ def append_ledger(video_id: str, consensus: dict):
 def main():
     parser = argparse.ArgumentParser(description="Generate consensus from dual teacher scores")
     parser.add_argument("--video-id", help="Run for a single video")
-    parser.add_argument("--task", default="5", help="Task id or task number")
-    parser.add_argument("--prompt-version", default="v001")
+    parser.add_argument("--task", help="Task id or task number override")
+    parser.add_argument("--prompt-version", default="v002")
     parser.add_argument("--dry-run", action="store_true", help="List eligible videos, don't call API")
     parser.add_argument("--force", action="store_true", help="Re-run even if consensus exists")
+    parser.add_argument("--with-coach-feedback", action="store_true", help="Generate coach feedback JSON after each consensus")
     parser.add_argument("--model", default=None)
     args = parser.parse_args()
 
     COMPARISONS_DIR.mkdir(parents=True, exist_ok=True)
+    FEEDBACK_DIR.mkdir(parents=True, exist_ok=True)
 
     model = args.model or os.getenv("CRITIQUE_MODEL", "claude-sonnet-4-20250514")
 
@@ -461,6 +640,7 @@ def main():
 
         claude_json = json.loads(target["claude_path"].read_text())
         gpt_json = json.loads(target["gpt_path"].read_text())
+        task_id = _infer_task(claude_json, gpt_json, args.task)
 
         try:
             consensus = run_consensus(
@@ -469,7 +649,7 @@ def main():
                 gpt_json,
                 model=model,
                 prompt_version=args.prompt_version,
-                task=args.task,
+                task=task_id,
             )
         except Exception as e:
             logger.error(f"  {vid}: API call failed: {e}")
@@ -485,6 +665,18 @@ def main():
         ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         out_path = COMPARISONS_DIR / f"{vid}_consensus_{ts}.json"
         out_path.write_text(json.dumps(consensus, indent=2, default=str))
+        comparison = _build_teacher_comparison(
+            vid,
+            claude_json,
+            gpt_json,
+            target["claude_path"],
+            target["gpt_path"],
+            consensus,
+            task_id,
+        )
+        comparison_path = COMPARISONS_DIR / f"{vid}_teacher_comparison_{ts}.json"
+        comparison_path.write_text(json.dumps(comparison, indent=2, default=str))
+        consensus_score_path = _save_consensus_score(vid, consensus, task_id, args.prompt_version)
 
         # Ledger
         append_ledger(vid, consensus)
@@ -506,6 +698,32 @@ def main():
             f"rounds={meta.get('final_round', '?')} | "
             f"${cost:.4f} | saved → {out_path.name}"
         )
+        print(f"     comparison → {comparison_path.name}")
+        if consensus_score_path:
+            print(f"     score → {consensus_score_path.name}")
+
+        if args.with_coach_feedback:
+            harvest_entry = _load_harvest_entry(vid)
+            frames_b64, frame_timestamps = _load_cached_frames(vid)
+            try:
+                coach_feedback = generate_coach_feedback(
+                    consensus_json=consensus.get("consensus_score") or {},
+                    teacher_a_json=claude_json,
+                    teacher_b_json=gpt_json,
+                    frame_b64s=frames_b64,
+                    frame_timestamps=frame_timestamps,
+                    trainee_history=_load_trainee_history(),
+                    prompt_version=args.prompt_version,
+                    task_id=task_id,
+                    skill_level=_coach_skill_level(str(harvest_entry.get("estimated_skill_level") or "intermediate")),
+                )
+                if "error" in coach_feedback:
+                    logger.warning(f"  {vid}: coach feedback failed: {coach_feedback['error']}")
+                else:
+                    coach_path = _save_coach_feedback(vid, coach_feedback)
+                    print(f"     coach → {coach_path.name}")
+            except Exception as exc:
+                logger.warning(f"  {vid}: coach feedback exception: {exc}")
 
         # Rate limit courtesy
         if i < len(targets):

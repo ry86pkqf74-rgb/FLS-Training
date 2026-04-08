@@ -98,6 +98,36 @@ def _normalize_task_name(task: int | str) -> str:
     return _canonical_task_id(task)
 
 
+def _coerce_float(value: Any, default: float = 0.0) -> float:
+    if value is None:
+        return default
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        try:
+            return float(value.strip())
+        except ValueError:
+            return default
+    return default
+
+
+def _coerce_int(value: Any, default: int = 0) -> int:
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return int(value)
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        try:
+            return int(float(value.strip()))
+        except ValueError:
+            return default
+    return default
+
+
 def _load_rubric(task: int | str) -> dict:
     task_id = _canonical_task_id(task)
     rubric_name = TASK_RUBRIC_FILES.get(task_id)
@@ -126,19 +156,46 @@ def _prepare_scoring_payload(data: dict, task: int | str) -> dict:
     cleaned = dict(data)
     cleaned.setdefault("task_id", _canonical_task_id(task))
 
+    for numeric_field in [
+        "completion_time_seconds",
+        "estimated_penalties",
+        "estimated_fls_score",
+        "confidence_score",
+    ]:
+        if cleaned.get(numeric_field) is None:
+            cleaned[numeric_field] = 0.0
+
     score_components = cleaned.get("score_components") or {}
     if score_components:
         cleaned.setdefault(
             "estimated_penalties",
-            float(score_components.get("penalty_deductions", 0.0) or 0.0),
+            _coerce_float(score_components.get("penalty_deductions", 0.0)),
         )
         cleaned.setdefault(
             "estimated_fls_score",
-            float(score_components.get("total_fls_score", 0.0) or 0.0),
+            _coerce_float(score_components.get("total_fls_score", 0.0)),
         )
 
+        if score_components.get("time_score") is not None:
+            score_components["time_score"] = _coerce_float(score_components.get("time_score"))
+        if score_components.get("penalty_deductions") is not None:
+            score_components["penalty_deductions"] = _coerce_float(score_components.get("penalty_deductions"))
+        if score_components.get("total_fls_score") is not None:
+            score_components["total_fls_score"] = _coerce_float(score_components.get("total_fls_score"))
+        cleaned["score_components"] = score_components
+
     if "confidence" in cleaned and "confidence_score" not in cleaned:
-        cleaned["confidence_score"] = float(cleaned.get("confidence") or 0.0)
+        cleaned["confidence_score"] = _coerce_float(cleaned.get("confidence"))
+
+    penalties = cleaned.get("penalties") or []
+    for penalty in penalties:
+        if isinstance(penalty, dict):
+            penalty["count"] = _coerce_int(penalty.get("count"), default=1)
+
+    cleaned["completion_time_seconds"] = _coerce_float(cleaned.get("completion_time_seconds"))
+    cleaned["estimated_penalties"] = _coerce_float(cleaned.get("estimated_penalties"))
+    cleaned["estimated_fls_score"] = _coerce_float(cleaned.get("estimated_fls_score"))
+    cleaned["confidence_score"] = _coerce_float(cleaned.get("confidence_score"))
 
     if cleaned.get("reasoning") and not cleaned.get("technique_summary"):
         cleaned["technique_summary"] = str(cleaned["reasoning"])

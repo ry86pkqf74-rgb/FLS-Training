@@ -46,6 +46,35 @@ FEEDBACK_STRIP_KEYS = {
     "generator",
 }
 
+TASK_LABELS = {
+    "task1": "FLS Task 1 peg transfer",
+    "task2": "FLS Task 2 pattern cut",
+    "task3": "FLS Task 3 ligating loop",
+    "task4": "FLS Task 4 extracorporeal suture",
+    "task5": "FLS Task 5 intracorporeal suture",
+}
+
+
+def _canonical_task_id(task_id: str | None) -> str:
+    raw = str(task_id or "task5").strip().lower()
+    aliases = {
+        "task1_peg_transfer": "task1",
+        "task2_pattern_cut": "task2",
+        "task3_endoloop": "task3",
+        "task3_ligating_loop": "task3",
+        "task4_extracorporeal_knot": "task4",
+        "task4_extracorporeal_suture": "task4",
+        "task5_intracorporeal_suturing": "task5",
+        "task5_intracorporeal_suture": "task5",
+    }
+    if raw in aliases:
+        return aliases[raw]
+    if raw.isdigit():
+        return f"task{raw}"
+    if raw.startswith("task"):
+        return raw.split("_", 1)[0]
+    return "task5"
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Prepare DPO preference data from repo memory")
@@ -104,11 +133,13 @@ def _normalize_feedback_payload(payload: dict[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in payload.items() if key not in FEEDBACK_STRIP_KEYS}
 
 
-def _render_scoring_prompt(system_prompt: str, video_id: str) -> str:
+def _render_scoring_prompt(system_prompt: str, video_id: str, task_id: str | None) -> str:
+    canonical = _canonical_task_id(task_id)
+    label = TASK_LABELS.get(canonical, TASK_LABELS["task5"])
     return (
         f"{system_prompt}\n\n"
         "User:\n"
-        f"[FRAMES_PLACEHOLDER] Score this FLS Task 5 video.\nVideo ID: {video_id}"
+        f"[FRAMES_PLACEHOLDER] Score this {label} video.\nTask ID: {canonical}\nVideo ID: {video_id}"
     )
 
 
@@ -117,7 +148,9 @@ def _render_coaching_prompt(
     video_id: str,
     consensus_payload: dict[str, Any] | None,
 ) -> str:
+    task_id = _canonical_task_id((consensus_payload or {}).get("task_id"))
     parts = [f"Video ID: {video_id}"]
+    parts.append(f"Task ID: {task_id}")
     if consensus_payload:
         parts.extend([
             "Consensus Score JSON:",
@@ -230,13 +263,13 @@ def _build_scoring_pairs(
 
         pairs.append(
             {
-                "prompt": _render_scoring_prompt(system_prompt, video_id),
+                "prompt": _render_scoring_prompt(system_prompt, video_id, consensus_payload.get("task_id")),
                 "chosen": json.dumps(_normalize_score_payload(chosen_payload), ensure_ascii=True),
                 "rejected": json.dumps(_normalize_score_payload(rejected_payload), ensure_ascii=True),
                 "metadata": {
                     "video_id": video_id,
                     "pair_type": "scoring",
-                    "task": "task5_intracorporeal_suture",
+                    "task": _canonical_task_id(consensus_payload.get("task_id")),
                 },
             }
         )
@@ -282,7 +315,7 @@ def _build_feedback_pairs(
                 "metadata": {
                     "video_id": video_id,
                     "pair_type": "coaching",
-                    "task": "task5_intracorporeal_suture",
+                    "task": _canonical_task_id((consensus_payload or {}).get("task_id") or (chosen_payload.get("_meta") or {}).get("task_id")),
                 },
             }
         )
@@ -324,7 +357,8 @@ def main() -> None:
     output_dir = base_dir / args.output_dir
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    system_prompt = (base_dir / "prompts" / "v001_task5_system.md").read_text()
+    universal_prompt = base_dir / "prompts" / "v002_universal_scoring_system.md"
+    system_prompt = universal_prompt.read_text() if universal_prompt.exists() else (base_dir / "prompts" / "v001_task5_system.md").read_text()
     coach_prompt = (base_dir / "prompts" / "v001_task5_coach.md").read_text()
 
     scoring_pairs, score_deltas = _build_scoring_pairs(base_dir, comparisons_dir, system_prompt)

@@ -32,6 +32,44 @@ from src.scoring.schema import ScoringResult
 from src.feedback.schema import FeedbackReport
 
 
+_TASK_LABELS = {
+    "task1": "FLS Task 1 peg transfer",
+    "task2": "FLS Task 2 pattern cut",
+    "task3": "FLS Task 3 ligating loop",
+    "task4": "FLS Task 4 extracorporeal suture",
+    "task5": "FLS Task 5 intracorporeal suture",
+}
+
+
+def _canonical_task_id(task_id: str | None) -> str:
+    raw = str(task_id or "task5").strip().lower()
+    aliases = {
+        "task1_peg_transfer": "task1",
+        "task2_pattern_cut": "task2",
+        "task3_endoloop": "task3",
+        "task3_ligating_loop": "task3",
+        "task4_extracorporeal_knot": "task4",
+        "task4_extracorporeal_suture": "task4",
+        "task5_intracorporeal_suturing": "task5",
+        "task5_intracorporeal_suture": "task5",
+    }
+    if raw in aliases:
+        return aliases[raw]
+    if raw.startswith("task"):
+        return raw.split("_", 1)[0]
+    if raw.isdigit():
+        return f"task{raw}"
+    return "task5"
+
+
+def _task_instruction(task_id: str | None, action: str) -> str:
+    canonical = _canonical_task_id(task_id)
+    label = _TASK_LABELS.get(canonical, _TASK_LABELS["task5"])
+    if action == "score":
+        return f"Score this {label} attempt. Analyze the frames and produce a structured scoring result."
+    return f"Analyze this {label} attempt and generate detailed coaching feedback. Consider the trainee's history to provide progression-aware recommendations."
+
+
 # Source preference order when the same video has multiple scores.
 # Consensus is the highest-quality teacher signal because it has been
 # reconciled across Claude + GPT; raw teacher scores are fallback.
@@ -214,11 +252,12 @@ def _build_scoring_dataset(scores: list[ScoringResult]) -> list[dict]:
         }
 
         examples.append({
-            "instruction": "Score this FLS Task 5 intracorporeal suture attempt. Analyze the frames and produce a structured scoring result.",
+            "instruction": _task_instruction(score.task_id, "score"),
             "input": input_text,
             "output": json.dumps(output_data),
             "video_id": score.video_id,
             "confidence": score.confidence_score,
+            "task_id": _canonical_task_id(score.task_id),
         })
 
     return examples
@@ -273,11 +312,12 @@ def _build_coaching_dataset(
             output_data.pop(key, None)
 
         examples.append({
-            "instruction": "Analyze this FLS Task 5 attempt and generate detailed coaching feedback. Consider the trainee's history to provide progression-aware recommendations.",
+            "instruction": _task_instruction(score.task_id, "coach"),
             "input": input_text,
             "output": json.dumps(output_data),
             "video_id": score.video_id,
             "confidence": score.confidence_score,
+            "task_id": _canonical_task_id(score.task_id),
         })
 
     return examples
