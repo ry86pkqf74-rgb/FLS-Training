@@ -17,3 +17,10 @@ outputs/
 *.log
 memory/frames/
 .tmp_*
+
+# LASANA bulk data (annotations CSVs and metadata are committed; everything else is local-only)
+data/external/lasana/videos/
+data/external/lasana/samples/example_videos.zip
+data/external/lasana/samples/example_videos/
+data/external/lasana/annotations/Annotation.zip
+*.mkv
