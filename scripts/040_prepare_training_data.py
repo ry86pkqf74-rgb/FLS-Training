@@ -28,6 +28,7 @@ from pathlib import Path
 
 from src.memory.learning_log import LearningLog
 from src.memory.memory_store import MemoryStore
+from src.training.lineage import write_sidecars
 from src.training.prepare_dataset import prepare_dataset
 
 
@@ -157,6 +158,24 @@ def main() -> int:
         group_by=args.group_by,
         exclude_video_ids=exclude_ids,
     )
+
+    # Lineage sidecars: write <name>.meta.json next to every train/val/test jsonl.
+    # The output directory is the version-stamped subdir that prepare_dataset
+    # actually materialised to; fall back to args.output_dir if the manifest
+    # does not expose it.
+    dataset_dir = Path(manifest.get("output_dir") or args.output_dir)
+    try:
+        sidecars = write_sidecars(
+            output_dir=dataset_dir,
+            version=args.ver,
+            split_strategy=manifest.get("split_strategy", args.group_by),
+            held_out_trainees=exclude_ids,
+        )
+        logging.getLogger(__name__).info(
+            "Wrote %d dataset lineage sidecars under %s", len(sidecars), dataset_dir
+        )
+    except Exception as exc:  # pragma: no cover — never fail the whole build on lineage
+        logging.getLogger(__name__).warning("Lineage sidecar write failed: %s", exc)
 
     print()
     print(f"=== Dataset {args.ver} ready ===")
