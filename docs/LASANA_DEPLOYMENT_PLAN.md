@@ -1,5 +1,20 @@
 # LASANA + Multi-Dataset GPU Deployment Plan
 
+> ## ⛔ GATED 2026-04-08 — hardening sprint in progress
+>
+> Do not launch Phase 3 (A100 training) until the gates listed in
+> `src/configs/finetune_lasana_v4.yaml` are green. Summary of why:
+> `src/training/data_prep.py` currently flattens `frame_analyses` into
+> text strings, and `runpod_trainer.py` tokenizes them as plain text.
+> Training this plan as-written would fine-tune a language model on
+> teacher narration instead of a VLM on surgical video. Phases 1 and 2
+> (CPU ingest + feature extraction) are still valid and can proceed.
+>
+> Baseline teacher-vs-teacher MAE is **≈21.6** (see
+> `memory/baselines/2026-04-08_teacher_mae_baseline.md`). The "MAE > 12"
+> abort threshold below was set blind and sits below the teacher noise
+> floor. Revised thresholds are at the bottom of §11.
+
 > **Status:** plan, not yet executed.
 > **Budget ceiling:** **$200 total**, target spend **$70–110**.
 > **Companion docs:** `docs/RUNPOD_RUNBOOK.md` (proven April 2026 path),
@@ -485,8 +500,15 @@ before moving on; items marked **$** start the meter.
 
 These are the conditions under which **we stop spending immediately**:
 
-1. **Held-out MAE > 12 after two training runs.** Diagnosis is data,
-   not GPU. Stop pods, harvest more YouTube.
+1. **Held-out MAE thresholds (revised 2026-04-08 from baseline report):**
+   - MAE > **22** → abort. This is above teacher-vs-teacher noise; it is
+     a data problem, not a training problem. Stop pods, harvest + rescore.
+   - MAE 15–22 → training is learning but inside teacher noise. At most
+     one additional run; do NOT scale, do NOT keep buying GPU hours.
+   - MAE < 15 → genuine signal. Further GPU spend is justified.
+   The original "MAE > 12" threshold in this doc was set before the
+   baseline was computed and is below the teacher noise floor; ignore it
+   wherever it still appears in this file.
 2. **Smoke test fails on a fresh pod.** Destroy and pick a different
    host. Do not debug a broken host.
 3. **GPU utilization < 50% for > 5 min during training.** Almost

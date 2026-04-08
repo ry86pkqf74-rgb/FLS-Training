@@ -17,6 +17,13 @@ from typing import Any
 
 import numpy as np
 
+from src.training.schema_adapter import (
+    CANONICAL_PENALTY_KEYS as PENALTY_KEYS,
+    get_penalty_labels,
+    get_phase_presence,
+    get_total_score,
+)
+
 logger = logging.getLogger(__name__)
 
 CANONICAL_PHASES = [
@@ -28,15 +35,6 @@ CANONICAL_PHASES = [
     "third_throw",
     "suture_cut",
     "completion",
-]
-
-PENALTY_KEYS = [
-    "suture_deviation",
-    "slit_not_closed",
-    "drain_avulsion",
-    "hand_switch_failure",
-    "throw_sequence_error",
-    "knot_security_issue",
 ]
 
 
@@ -280,63 +278,24 @@ def build_coaching_messages(
     ]
 
 
+# Phase/penalty/score helpers are now defined in src.training.schema_adapter
+# to keep train-time and eval-time code in lockstep. Local thin wrappers remain
+# so the existing call sites in this file stay unchanged.
+
 def derive_phase_presence(payload: dict[str, Any]) -> set[str]:
-    phases = set()
-    for phase in payload.get("phases_detected", []) or []:
-        phases.add(str(phase))
-    for phase in payload.get("phase_timings", []) or []:
-        phase_name = phase.get("phase") if isinstance(phase, dict) else None
-        if phase_name:
-            phases.add(str(phase_name))
-    return phases
+    return get_phase_presence(payload)
 
 
 def derive_penalty_labels(payload: dict[str, Any]) -> set[str]:
-    penalties = set()
-
-    placement = payload.get("suture_placement") or {}
-    if float(placement.get("total_deviation_penalty") or 0) > 0:
-        penalties.add("suture_deviation")
-
-    drain = payload.get("drain_assessment") or {}
-    closure = str(drain.get("slit_closure_quality") or "").lower()
-    if bool(drain.get("gap_visible")) or closure in {"partial", "poor", "incomplete"}:
-        penalties.add("slit_not_closed")
-    if bool(drain.get("drain_avulsed")):
-        penalties.add("drain_avulsion")
-
-    knot_assessments = payload.get("knot_assessments") or []
-    if any(item.get("appears_secure") is False for item in knot_assessments if isinstance(item, dict)):
-        penalties.add("knot_security_issue")
-    if any(
-        item.get("throw_number") in {2, 3} and item.get("hand_switched") is False
-        for item in knot_assessments
-        if isinstance(item, dict)
-    ):
-        penalties.add("hand_switch_failure")
-
-    throw_map = {
-        int(item.get("throw_number")): item
-        for item in knot_assessments
-        if isinstance(item, dict) and item.get("throw_number") is not None
-    }
-    if throw_map:
-        first = throw_map.get(1) or {}
-        second = throw_map.get(2) or {}
-        third = throw_map.get(3) or {}
-        sequence_error = (
-            first.get("is_surgeon_knot") is False
-            or second.get("is_single_throw") is False
-            or third.get("is_single_throw") is False
-        )
-        if sequence_error:
-            penalties.add("throw_sequence_error")
-
-    return penalties
+    return get_penalty_labels(payload)
 
 
 def _get_score(payload: dict[str, Any]) -> float:
-    return float(payload.get("estimated_fls_score") or 0.0)
+    # Reads v002 score_components.total_fls_score first, falls back to v001
+    # estimated_fls_score. Using the adapter is mandatory — do NOT inline
+    # payload.get('estimated_fls_score') here because it silently reads zero
+    # from fresh v002 records and poisons the MAE.
+    return get_total_score(payload)
 
 
 def _get_phase_accuracy(predicted: dict[str, Any], target: dict[str, Any]) -> float:

@@ -1,3 +1,33 @@
+# ==============================================================================
+# !! DO NOT LAUNCH !!  (2026-04-08)
+#
+# This config is GATED behind the hardening sprint. Do not spend GPU budget
+# on this run until ALL of the following are green:
+#
+#   [ ] src/training/data_prep.py emits vision records (image_paths +
+#       DINOv2 feature_path), NOT flattened text from frame_analyses.
+#       The current data_prep tokenizes narration strings — training this
+#       config as-is fine-tunes a 7B language model to imitate teacher
+#       prose and ignores pixels entirely.
+#
+#   [ ] scripts/050_runpod_train.py dispatches to finetune_vlm.py (VLM
+#       trainer), not runpod_trainer.py (causal-LM text trainer).
+#
+#   [ ] src/training/eval_v2.py reads scores through
+#       src.training.schema_adapter.get_total_score (DONE 2026-04-08).
+#
+#   [ ] Held-out gold-set of ≥100 videos with at least two teacher scores
+#       each exists under data/training/<ver>/test.jsonl, drawn from
+#       lasana + petraw + simsurg (not the n=37 consensus corpus).
+#
+#   [ ] Abort criterion in docs/LASANA_DEPLOYMENT_PLAN.md revised from
+#       "MAE > 12" to "MAE > 22" per memory/baselines/2026-04-08 report
+#       (teacher-vs-teacher MAE is ≈21.6 → 12 was below the noise floor).
+#
+# Owner: Logan. See memory/baselines/2026-04-08_teacher_mae_baseline.md
+# for the data that triggered this gate.
+# ==============================================================================
+
 # Fine-tuning config v4: LASANA + PETRAW + SimSurgSkill + JIGSAWS metadata
 # Target: Qwen2.5-VL-7B-Instruct with LoRA via Unsloth
 # Hardware: A100 80GB on Vast.ai (primary) or RunPod (fallback).
