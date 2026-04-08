@@ -107,21 +107,37 @@ data/external/simsurgskill/simsurgskill_2021_dataset/
         └── bounding_box_gt/     # 167 files
 ```
 
-**Note:** The published distribution we received does **not** ship a
-separate OPI CSV per trial — the only annotation modality on disk is
-`bounding_box_gt/` (per-frame tool bounding boxes). OPIs (needle drop
-count, economy of motion, etc.) referenced in the paper will need to
-be either (a) recomputed from the bbox tracks + video, or (b) sourced
-from the official Synapse leaderboard if/when it's released.
+**Annotation format (verified):** each `caseid_NNNNNN_fps1.json` is a
+flat dict keyed by integer object index. Each entry carries:
+
+```json
+{
+  "obj_class":   "needle" | "needle driver" | ...,
+  "label_type":  "box",
+  "coordinate":  "{\"h\":63,\"w\":55,\"x\":600,\"y\":345}",
+  "orientation": "left" | "right" | "dropped" | ...,
+  "frame_id":    1.0,
+  "objects":     true,
+  "case_id":     70,
+  "fps":         1
+}
+```
+
+The `orientation` field is the gold here: `"orientation":"dropped"`
+on a `needle` object **directly encodes the needle-drop OPI** —
+no recomputation needed. Economy of motion + out-of-view count can
+be derived from the bbox tracks. Total task time = `max(frame_id)/fps`.
+So all the paper-cited OPIs except "excessive force events" are
+recoverable from the on-disk annotations alone.
 
 ## Integration TODO
 
 - [x] Run `065_simsurgskill_download.sh` on the target host.
 - [x] Unzip and document the actual internal layout in this README.
-- [ ] Inspect a sample `bounding_box_gt/*` file to confirm format
-      (CSV vs JSON vs per-frame text).
-- [ ] Decide whether to recompute OPIs from bbox tracks or pull from
-      Synapse leaderboard.
+- [x] Inspect a sample `bounding_box_gt/*` file → JSON, see above.
+- [x] OPI strategy: derive from bbox annotations directly
+      (needle-drop from `orientation`, economy-of-motion from bbox
+      centroid path, time from `max(frame_id)`).
 - [ ] Write `scripts/066_ingest_simsurgskill.py`:
     - Read the OPI CSV per trial, emit one record per OPI as a
       separate scalar absolute-score target.
