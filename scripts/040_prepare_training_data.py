@@ -25,7 +25,11 @@ def main():
     print(f"  1. git add training/data/")
     print(f"  2. git commit -m 'feat: training data {args.ver}'")
     print(f"  3. git push")
-    print(f"  4. On RunPod: python scripts/050_runpod_train.py --ver {args.ver}")
+    if args.ver == "v2":
+        print(f"  4. On RunPod: bash scripts/045_prep_v2_training.sh")
+        print(f"  5. On RunPod: bash deploy/runpod_launch.sh training/data/v2 src/configs/finetune_task5_v2.yaml")
+    else:
+        print(f"  4. On RunPod: bash deploy/runpod_launch.sh <dataset_path> <config_path>")
 
 
 if __name__ == "__main__":

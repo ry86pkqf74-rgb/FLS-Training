@@ -67,10 +67,11 @@ cd /workspace/FLS-Training
 bash deploy/runpod_launch.sh <dataset_path> <config_path>
 ```
 
-Example using the config that exists in this branch today:
+Example using the current supported v2 config:
 
 ```bash
-bash deploy/runpod_launch.sh training/data src/configs/finetune_task5_v1.yaml
+bash scripts/045_prep_v2_training.sh
+bash deploy/runpod_launch.sh training/data/v2 src/configs/finetune_task5_v2.yaml
 ```
 
 What the launcher now handles automatically:

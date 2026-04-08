@@ -21,11 +21,11 @@ RUN pip install --no-cache-dir --break-system-packages -e ".[training]"
 RUN pip install --no-cache-dir --break-system-packages "unsloth[cu124-torch240] @ git+https://github.com/unslothai/unsloth.git" || \
     echo "Unsloth install failed — hf_trainer fallback available"
 
-# Install flash-attention (optional but recommended)
+# Install flash-attention (optional but not required)
 RUN pip install --no-cache-dir --break-system-packages flash-attn --no-build-isolation || true
 
 # Copy project
 COPY . .
 
 ENTRYPOINT ["python", "-m", "src.training.finetune_vlm"]
-CMD ["--config", "src/configs/finetune_task5_v1.yaml"]
+CMD ["--config", "src/configs/finetune_task5_v2.yaml"]

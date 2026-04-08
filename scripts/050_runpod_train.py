@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Run training on RunPod GPU pod.
+"""Legacy Florence-based RunPod trainer.
+
+This entrypoint is retained for historical reference only.
+The current supported RunPod path uses:
+    bash scripts/045_prep_v2_training.sh
+    bash deploy/runpod_launch.sh training/data/v2 src/configs/finetune_task5_v2.yaml
 
 Usage (on RunPod pod after git clone):
     pip install -e '.[training]'
@@ -15,7 +20,7 @@ from src.training.runpod_trainer import TrainingConfig, run_full_training
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Train FLS student model on RunPod")
+    parser = argparse.ArgumentParser(description="Legacy Florence RunPod trainer")
     parser.add_argument("--ver", default="v1", help="Data version to train on")
     parser.add_argument("--epochs", type=int, default=3)
     parser.add_argument("--lr", type=float, default=1e-4)
