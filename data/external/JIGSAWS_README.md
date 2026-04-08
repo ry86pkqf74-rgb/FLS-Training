@@ -1,5 +1,24 @@
 # JIGSAWS — JHU-ISI Gesture and Skill Assessment Working Set
 
+## ⚠️ MANDATORY CITATION
+
+JHU-CIRL requires that any work using JIGSAWS cite the publication
+listed on their release page. This is a **condition of access**, not
+a courtesy. The full citation block is in
+`data/external/CITATIONS.md` and is reproduced below — copy it into
+every paper, blog post, and model card derived from this work.
+
+> Gao, Y., Vedula, S.S., Reiley, C.E., Ahmidi, N., Varadarajan, B.,
+> Lin, H.C., Tao, L., Zappella, L., Béjar, B., Yuh, D.D., Chen,
+> C.C.G., Vidal, R., Khudanpur, S., Hager, G.D. *JHU-ISI Gesture and
+> Skill Assessment Working Set (JIGSAWS): A Surgical Activity Dataset
+> for Human Motion Modeling.* MICCAI Workshop: M2CAI, 2014.
+
+If you use the gesture or skill labels (i.e., almost certainly), also
+cite the 2017 benchmark paper (Ahmidi et al., IEEE TBME 64(9), PMC5559351).
+
+---
+
 > **Status (2026-04-08):** ✅ **3 sample AVI clips downloaded locally**
 > (one short clip per task, ~3.4 MB total, in
 > `data/external/jigsaws/samples/`). These are the only files JHU-CIRL
