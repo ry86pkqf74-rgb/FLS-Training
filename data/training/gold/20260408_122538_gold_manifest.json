@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-04-08T12:25:38.926105+00:00",
+  "git_head": "18b2d10eaecb40186c821790ceb7676ad2102fb9",
+  "min_confidence": 0.7,
+  "max_teacher_delta": 25.0,
+  "max_videos": 30,
+  "total_candidates": 216,
+  "selected": 24,
+  "video_id_hash": "9296091be684",
+  "video_ids": [
+    "2u0lqjXCiNk",
+    "6tLU9kD8QUU",
+    "7xzmqwazzgg.f136",
+    "8x0UYpC5b6U",
+    "IUK0O9y1tTA",
+    "M4PSjXlHvi4",
+    "TYkcoKhfLQY",
+    "WhUtStkkYHU",
+    "XxaNmr5RncY",
+    "Y4QNDNwaeQc",
+    "bowpTZqnQOI",
+    "c43cjf8yyii.f136",
+    "hG5_nZcR6NU",
+    "i_catfutvxa.f136",
+    "tJpTKsk6hGw",
+    "uw7jeHbWil4",
+    "vSLqNx_PuMk",
+    "vyck0myliiu.f136",
+    "wgf_nibpjig.f136",
+    "yt_5HeQHDxDWQA",
+    "yt_KxYnF3YAZJU",
+    "yt_XaZ_6wsUsiM",
+    "yt_daI30ueGIHY",
+    "yt_vjSoFfEkeMg"
+  ],
+  "rejections": {
+    "no_consensus": 40,
+    "low_confidence": 70,
+    "teacher_disagreement": 82
+  },
+  "jsonl_path": "data/training/gold/20260408_122538_gold.jsonl"
+}

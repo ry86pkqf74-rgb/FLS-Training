@@ -1,0 +1,145 @@
+{
+  "id": "score_gpt_yt_T6BjxzZYA-8_20260408122117",
+  "video_id": "yt_T6BjxzZYA-8",
+  "video_filename": "T6BjxzZYA-8.f136.mp4",
+  "video_hash": "aa2d56275e7a608e",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T12:21:17.245860",
+  "task_id": "task5",
+  "penalties": [],
+  "score_components": null,
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "first_throw",
+      "description": "Surgeon's knot being formed with initial loop in progress.",
+      "technique_notes": "Proper 'C' loop formation is visible."
+    },
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Needle being placed at the starting position.",
+      "technique_notes": "Needle holder positioning appears controlled."
+    },
+    {
+      "frame_number": 4,
+      "phase": "first_throw",
+      "description": "Reverse 'C' loop formation for initial throw.",
+      "technique_notes": "Effective use of needle holder for guiding suture."
+    },
+    {
+      "frame_number": 9,
+      "phase": "second_throw",
+      "description": "Setting up for second throw of the single knot.",
+      "technique_notes": "Proper hand placement observed for the second throw."
+    },
+    {
+      "frame_number": 14,
+      "phase": "third_throw",
+      "description": "Attempting third throw to complete knot.",
+      "technique_notes": "Switching of hands is evident for this throw."
+    },
+    {
+      "frame_number": 19,
+      "phase": "completion",
+      "description": "Final suture cut to complete task.",
+      "technique_notes": "Ends of the suture are being securely cut."
+    }
+  ],
+  "completion_time_seconds": 142.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 15.0,
+      "end_seconds": 65.0,
+      "duration_seconds": 50.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 65.0,
+      "end_seconds": 100.0,
+      "duration_seconds": 35.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 100.0,
+      "end_seconds": 130.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 130.0,
+      "end_seconds": 142.0,
+      "duration_seconds": 12.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Completed with a double throw as required."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw successfully completed."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Successfully completed the third throw and secured the knot."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.5,
+    "deviation_from_mark2_mm": 1.0,
+    "total_deviation_penalty": 1.5,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Slit is fully closed without a visible gap."
+  },
+  "estimated_penalties": 1.5,
+  "estimated_fls_score": 456.5,
+  "confidence_score": 0.85,
+  "technique_summary": "The task was completed within a reasonable time frame with secure knot tying and minimal deviation from marked targets. The practitioner effectively switched hands, ensuring the knot integrity.",
+  "improvement_suggestions": [
+    "Practice faster hand switching between throws to reduce time.",
+    "Refine needle placement technique to further minimize suture deviation."
+  ],
+  "strengths": [
+    "Effective use of instruments for knot tying.",
+    "Secure completion of suture throws with proper hand switching."
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

@@ -134,10 +134,10 @@ def main() -> int:
         print("ABORT: --video-dir is required for --execute.")
         return 3
 
-    # Deferred import so dry-run works without the OpenAI SDK installed
-    from src.scoring.frontier_scorer import FrontierScorer  # type: ignore
+    # Deferred imports so dry-run works without the OpenAI SDK / opencv installed
+    from src.scoring.frontier_scorer import score_with_gpt  # type: ignore
+    from src.ingest.frame_extractor import extract_frames, frames_to_base64  # type: ignore
 
-    scorer = FrontierScorer(provider="openai")
     video_dir = Path(args.video_dir)
     scores_dir = base / "memory" / "scores"
     successes = 0
@@ -148,7 +148,15 @@ def main() -> int:
             failures.append((entry["video_id"], f"video file missing: {video_path}"))
             continue
         try:
-            result = scorer.score(video_path, task=entry["task_id"])
+            frames, metadata = extract_frames(video_path)
+            frames_b64 = frames_to_base64(frames)
+            result = score_with_gpt(
+                frames_b64=frames_b64,
+                video_id=entry["video_id"],
+                video_filename=entry["video_filename"],
+                video_hash=metadata.get("file_hash", ""),
+                task=entry["task_id"],
+            )
         except Exception as exc:  # pragma: no cover - runtime
             failures.append((entry["video_id"], str(exc)))
             continue

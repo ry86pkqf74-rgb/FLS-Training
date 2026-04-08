@@ -1,0 +1,145 @@
+{
+  "id": "score_gpt_c43cjf8yyii.f136_20260408121707",
+  "video_id": "c43cjf8yyii.f136",
+  "video_filename": "c43cjF8yYII.f136.mp4",
+  "video_hash": "9e7243263e9f1c0d",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T12:17:07.113524",
+  "task_id": "task5",
+  "penalties": [],
+  "score_components": null,
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "suture_placement",
+      "description": "Initial suture placement on the Penrose drain.",
+      "technique_notes": "Suture appears to be placed through mark."
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Continuation of suture placement, needle is being inserted through the marks.",
+      "technique_notes": "Appropriate needle handling."
+    },
+    {
+      "frame_number": 7,
+      "phase": "first_throw",
+      "description": "Performing the first throw with double loop.",
+      "technique_notes": "Right hand used for knot tying. Double throw confirmed for surgeon's knot."
+    },
+    {
+      "frame_number": 9,
+      "phase": "second_throw",
+      "description": "Second throw is being performed.",
+      "technique_notes": "Hand switched from right to left for single throw."
+    },
+    {
+      "frame_number": 12,
+      "phase": "third_throw",
+      "description": "Final throw in progress.",
+      "technique_notes": "Hand correctly switched from left to right for final throw."
+    },
+    {
+      "frame_number": 20,
+      "phase": "suture_cut",
+      "description": "Cutting the suture ends.",
+      "technique_notes": "Both ends cut to finish the task."
+    }
+  ],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 0.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 45.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 46.0,
+      "end_seconds": 70.0,
+      "duration_seconds": 24.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 71.0,
+      "end_seconds": 100.0,
+      "duration_seconds": 29.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 101.0,
+      "end_seconds": 130.0,
+      "duration_seconds": 29.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 131.0,
+      "end_seconds": 180.0,
+      "duration_seconds": 49.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Initial surgeon's knot held well."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Second throw completed correctly."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Third throw secures the knot."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 0.5,
+    "deviation_from_mark2_mm": 0.8,
+    "total_deviation_penalty": 1.3,
+    "confidence": "high"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No gap visible post knot tying."
+  },
+  "estimated_penalties": 1.3,
+  "estimated_fls_score": 418.7,
+  "confidence_score": 0.85,
+  "technique_summary": "The procedure was performed correctly with minimal penalty. All knot throws were secure and hand switching was done as required.",
+  "improvement_suggestions": [
+    "Focus on increasing speed while maintaining accuracy.",
+    "Practice hand coordination to improve switch efficiency."
+  ],
+  "strengths": [
+    "Secure knot tying",
+    "Accurate suture placement with minimal deviation"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

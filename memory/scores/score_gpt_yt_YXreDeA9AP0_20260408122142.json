@@ -1,0 +1,163 @@
+{
+  "id": "score_gpt_yt_YXreDeA9AP0_20260408122142",
+  "video_id": "yt_YXreDeA9AP0",
+  "video_filename": "YXreDeA9AP0.f18.mp4",
+  "video_hash": "46e2a0b3e7f080ac",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T12:21:42.114402",
+  "task_id": "task5",
+  "penalties": [],
+  "score_components": null,
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "idle",
+      "description": "Initial screen",
+      "technique_notes": "No activity"
+    },
+    {
+      "frame_number": 2,
+      "phase": "idle",
+      "description": "Introduction slide",
+      "technique_notes": "No activity"
+    },
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Hands holding suture, positioning",
+      "technique_notes": "Proper handling of suture materials"
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Suture thread held, preparing for placement",
+      "technique_notes": "Precise movements for suture placement"
+    },
+    {
+      "frame_number": 10,
+      "phase": "first_throw",
+      "description": "First surgical knot throw initiated",
+      "technique_notes": "Double throw observed"
+    },
+    {
+      "frame_number": 15,
+      "phase": "second_throw",
+      "description": "Hands repositioned, second throw",
+      "technique_notes": "Correct hand-switch observed"
+    },
+    {
+      "frame_number": 17,
+      "phase": "third_throw",
+      "description": "Switch hands for third throw",
+      "technique_notes": "Good coordination maintaining tension"
+    },
+    {
+      "frame_number": 21,
+      "phase": "suture_cut",
+      "description": "Sutures being cut",
+      "technique_notes": "Accurate cut inside trainer"
+    }
+  ],
+  "completion_time_seconds": 125.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 20.0,
+      "duration_seconds": 20.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 21.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 24.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 46.0,
+      "end_seconds": 65.0,
+      "duration_seconds": 19.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 66.0,
+      "end_seconds": 85.0,
+      "duration_seconds": 19.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 86.0,
+      "end_seconds": 105.0,
+      "duration_seconds": 19.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 106.0,
+      "end_seconds": 125.0,
+      "duration_seconds": 19.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Firm surgeon's knot"
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Proper hand switch and tension maintained"
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final knot secured"
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 2.5,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No gaps observed, slit fully closed"
+  },
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 472.5,
+  "confidence_score": 0.82,
+  "technique_summary": "The task was performed with strong adherence to procedural steps, maintaining secure knots and proper suture placement. The timely hand-switching and firm knot securing highlight proficient technique.",
+  "improvement_suggestions": [
+    "Ensure minimal deviation from placement marks",
+    "Consistently maintain tension throughout all suture throws"
+  ],
+  "strengths": [
+    "Accurate and secure knot tying",
+    "Effective hand coordination and switching"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

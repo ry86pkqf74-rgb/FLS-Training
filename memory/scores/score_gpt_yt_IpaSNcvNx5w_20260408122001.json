@@ -1,0 +1,157 @@
+{
+  "id": "score_gpt_yt_IpaSNcvNx5w_20260408122001",
+  "video_id": "yt_IpaSNcvNx5w",
+  "video_filename": "IpaSNcvNx5w.f136.mp4",
+  "video_hash": "0d59d0ff91b40dae",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T12:20:01.913535",
+  "task_id": "task5",
+  "penalties": [],
+  "score_components": null,
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Instrunments positioned to grasp the needle.",
+      "technique_notes": "Proper grip at the stiffest part of the needle approximately 1cm from the tip."
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Suture being placed through the marks on the Penrose drain.",
+      "technique_notes": "Smooth insertion through both marks."
+    },
+    {
+      "frame_number": 13,
+      "phase": "first_throw",
+      "description": "Suture wrapped around instrument to form the first throw.",
+      "technique_notes": "Proper double wrap for the surgeon's knot."
+    },
+    {
+      "frame_number": 16,
+      "phase": "first_throw",
+      "description": "Knot being tightened for the first throw.",
+      "technique_notes": "Ends pulled in opposite directions, successful cinching down of throw."
+    },
+    {
+      "frame_number": 18,
+      "phase": "second_throw",
+      "description": "Attempting the second throw with hand switch.",
+      "technique_notes": "Hand switch was successful, single throw performed."
+    },
+    {
+      "frame_number": 19,
+      "phase": "third_throw",
+      "description": "Wrapping suture for third throw.",
+      "technique_notes": "Small circular wrap with hand switch for securing the knot."
+    },
+    {
+      "frame_number": 20,
+      "phase": "suture_cut",
+      "description": "Both ends of the suture being cut inside the trainer.",
+      "technique_notes": "Clean cut performed without excessive length left."
+    }
+  ],
+  "completion_time_seconds": 147.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 18.0,
+      "duration_seconds": 18.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 18.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 27.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 45.0,
+      "end_seconds": 75.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 75.0,
+      "end_seconds": 105.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 105.0,
+      "end_seconds": 135.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 135.0,
+      "end_seconds": 147.0,
+      "duration_seconds": 12.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Double wrap performed correctly and cinched down securely."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Single throw correctly performed with a hand switch."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": null,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Final throw secured successfully after hand switch."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.0,
+    "deviation_from_mark2_mm": 1.5,
+    "total_deviation_penalty": 2.5,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "No visible gap after the knot is tightened, and the drain remains attached to the block."
+  },
+  "estimated_penalties": 2.5,
+  "estimated_fls_score": 450.5,
+  "confidence_score": 0.78,
+  "technique_summary": "The trainee demonstrated a competent understanding of intracorporeal suturing with smooth execution and proper hand switching between throws. Minor deviation observed at suture placement with minimal penalty incurred.",
+  "improvement_suggestions": [
+    "Aim to reduce suture deviation at entry through marks.",
+    "Maintain the current efficiency while improving hand switch fluidity."
+  ],
+  "strengths": [
+    "Effective knot security with proper surgeon's knot execution.",
+    "Completed task within a competitive time, demonstrating efficient skills."
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

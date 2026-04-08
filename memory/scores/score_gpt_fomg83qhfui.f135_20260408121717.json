@@ -1,0 +1,157 @@
+{
+  "id": "score_gpt_fomg83qhfui.f135_20260408121717",
+  "video_id": "fomg83qhfui.f135",
+  "video_filename": "fOMG83QhfuI.f135.mp4",
+  "video_hash": "acf0877b447bfa54",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v001",
+  "scored_at": "2026-04-08T12:17:17.292999",
+  "task_id": "task5",
+  "penalties": [],
+  "score_components": null,
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "phase": "needle_load",
+      "description": "Needle being loaded onto the needle holder.",
+      "technique_notes": "Proper technique for needle loading is observed."
+    },
+    {
+      "frame_number": 2,
+      "phase": "suture_placement",
+      "description": "Needle is pierced through the first mark on the Penrose drain.",
+      "technique_notes": "Slight deviation from the mark observed."
+    },
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Needle is pierced through the second mark on the Penrose drain.",
+      "technique_notes": "Suture placement is slightly off from the second mark."
+    },
+    {
+      "frame_number": 6,
+      "phase": "first_throw",
+      "description": "First throw of surgeon's knot being tied with a double throw.",
+      "technique_notes": "Surgeon’s knot appears secure."
+    },
+    {
+      "frame_number": 10,
+      "phase": "second_throw",
+      "description": "Second throw of the knot is being tied with a single throw.",
+      "technique_notes": "Hand switch noted correctly."
+    },
+    {
+      "frame_number": 13,
+      "phase": "third_throw",
+      "description": "Third throw of the knot being completed with a single throw.",
+      "technique_notes": "Hand switch noted correctly, throw appears secure."
+    },
+    {
+      "frame_number": 19,
+      "phase": "suture_cut",
+      "description": "Both suture ends being cut to complete the task.",
+      "technique_notes": "Cut is clean and performed inside the trainer."
+    }
+  ],
+  "completion_time_seconds": 132.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 15.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 45.0,
+      "end_seconds": 75.0,
+      "duration_seconds": 30.0
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 75.0,
+      "end_seconds": 98.0,
+      "duration_seconds": 23.0
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 98.0,
+      "end_seconds": 120.0,
+      "duration_seconds": 22.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 120.0,
+      "end_seconds": 132.0,
+      "duration_seconds": 12.0
+    }
+  ],
+  "knot_assessments": [
+    {
+      "throw_number": 1,
+      "is_surgeon_knot": true,
+      "is_single_throw": null,
+      "hand_used": "right",
+      "hand_switched": null,
+      "appears_secure": true,
+      "notes": "Knot is secure with no slipping observed."
+    },
+    {
+      "throw_number": 2,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "left",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Hand switched, knot is completed securely."
+    },
+    {
+      "throw_number": 3,
+      "is_surgeon_knot": false,
+      "is_single_throw": true,
+      "hand_used": "right",
+      "hand_switched": true,
+      "appears_secure": true,
+      "notes": "Hand switched, knot is completed securely."
+    }
+  ],
+  "suture_placement": {
+    "deviation_from_mark1_mm": 1.5,
+    "deviation_from_mark2_mm": 2.0,
+    "total_deviation_penalty": 3.5,
+    "confidence": "medium"
+  },
+  "drain_assessment": {
+    "gap_visible": false,
+    "drain_avulsed": false,
+    "slit_closure_quality": "complete",
+    "assessment_note": "Slit closure is complete without visible gaps."
+  },
+  "estimated_penalties": 3.5,
+  "estimated_fls_score": 464.5,
+  "confidence_score": 0.85,
+  "technique_summary": "Overall, the intracorporeal suturing and knot tying were performed efficiently with secure knots and minimal suture deviation.",
+  "improvement_suggestions": [
+    "Minimize suture placement deviation for more precise suturing.",
+    "Maintain focus on hand stability during knot tying."
+  ],
+  "strengths": [
+    "Quick and efficient needle loading.",
+    "Secure and stable knot tying with appropriate hand switching."
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}
