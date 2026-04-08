@@ -26,6 +26,41 @@ SCORES_DIR = Path(__file__).parent.parent.parent / "memory" / "scores"
 COMPARISONS_DIR = Path(__file__).parent.parent.parent / "memory" / "comparisons"
 CORRECTIONS_DIR = Path(__file__).parent.parent.parent / "memory" / "corrections"
 
+TASK_LABELS = {
+    "task1": "FLS Task 1 peg transfer",
+    "task2": "FLS Task 2 pattern cut",
+    "task3": "FLS Task 3 ligating loop",
+    "task4": "FLS Task 4 extracorporeal suture",
+    "task5": "FLS Task 5 intracorporeal suture",
+}
+
+
+def _canonical_task_id(task_id: str | None) -> str:
+    raw = str(task_id or "task5").strip().lower()
+    aliases = {
+        "task1_peg_transfer": "task1",
+        "task2_pattern_cut": "task2",
+        "task3_endoloop": "task3",
+        "task3_ligating_loop": "task3",
+        "task4_extracorporeal_knot": "task4",
+        "task4_extracorporeal_suture": "task4",
+        "task5_intracorporeal_suturing": "task5",
+        "task5_intracorporeal_suture": "task5",
+    }
+    if raw in aliases:
+        return aliases[raw]
+    if raw.isdigit():
+        return f"task{raw}"
+    if raw.startswith("task"):
+        return raw.split("_", 1)[0]
+    return "task5"
+
+
+def _task_user_prompt(task_id: str | None) -> str:
+    canonical = _canonical_task_id(task_id)
+    label = TASK_LABELS.get(canonical, TASK_LABELS["task5"])
+    return f"[FRAMES_PLACEHOLDER] Score this {label} video.\nTask ID: {canonical}"
+
 
 def _parse_timestamp(value: str | None) -> datetime:
     if not value:
@@ -90,8 +125,9 @@ def _build_consensus_score(video_id: str, payload: dict[str, Any], file_path: Pa
         "source": "critique_consensus",
         "model_name": meta.get("model") or "manual-consensus",
         "model_version": meta.get("model") or "manual-consensus",
-        "prompt_version": "v001",
+        "prompt_version": payload.get("prompt_version") or "v002",
         "scored_at": scored_at,
+        "task_id": _canonical_task_id(consensus_score.get("task_id") or payload.get("task_id")),
         "frame_analyses": [],
         "completion_time_seconds": consensus_score.get("completion_time_seconds", 0),
         "phase_timings": consensus_score.get("phase_timings", []),
@@ -250,7 +286,8 @@ def prepare_dataset(
     """
     # Load system prompt for training examples
     prompts_dir = Path(__file__).parent.parent.parent / "prompts"
-    system_prompt = (prompts_dir / "v001_task5_system.md").read_text()
+    universal_prompt = prompts_dir / "v002_universal_scoring_system.md"
+    system_prompt = universal_prompt.read_text() if universal_prompt.exists() else (prompts_dir / "v001_task5_system.md").read_text()
 
     # Get training candidates
     candidates = _load_training_candidates(store.base, min_confidence)
@@ -312,13 +349,14 @@ def prepare_dataset(
         example = {
             "messages": [
                 {"role": "system", "content": system_prompt},
-                {"role": "user", "content": "[FRAMES_PLACEHOLDER] Score this FLS Task 5 video."},
+                {"role": "user", "content": _task_user_prompt(score_data.get("task_id"))},
                 {"role": "assistant", "content": assistant_content},
             ],
             "metadata": {
                 "video_id": sample["video_id"],
                 "source": sample.get("source", "unknown"),
                 "confidence": sample.get("confidence_score", 0),
+                "task": _canonical_task_id(score_data.get("task_id")),
             },
         }
         examples.append(example)

@@ -1,7 +1,32 @@
 #!/usr/bin/env python3
-"""Prepare training data for fine-tuning on RunPod."""
+"""Prepare training data for fine-tuning on RunPod or unified JSONL export."""
 import argparse
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
+from src.memory.memory_store import MemoryStore
+from src.training.prepare_dataset import prepare_dataset
 from src.training.data_prep import prepare_training_data
+
+
+def _coerce_version_tag(ver: str) -> int:
+    digits = "".join(ch for ch in str(ver) if ch.isdigit())
+    return int(digits) if digits else 1
+
+
+class _ScriptLearningLog:
+    def __init__(self, memory_dir: Path):
+        self.ledger_path = memory_dir / "learning_ledger.jsonl"
+
+    def append_event(self, event_type: str, data: dict) -> None:
+        entry = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "event_type": event_type,
+            "data": data,
+        }
+        with self.ledger_path.open("a") as handle:
+            handle.write(json.dumps(entry) + "\n")
 
 
 def main():
@@ -11,10 +36,32 @@ def main():
     parser.add_argument("--min-confidence", type=float, default=0.3)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--base-dir", default=".")
+    parser.add_argument("--include-coach-feedback", action="store_true")
+    parser.add_argument("--output-dir", default=None, help="Optional output directory override")
     args = parser.parse_args()
+
+    if args.include_coach_feedback:
+        store = MemoryStore(args.base_dir)
+        log = _ScriptLearningLog(Path(args.base_dir) / "memory")
+        output_dir = args.output_dir or "data/training"
+        meta = prepare_dataset(
+            store=store,
+            log=log,
+            video_dir=".",
+            output_dir=output_dir,
+            version=_coerce_version_tag(args.ver),
+            min_confidence=args.min_confidence,
+            train_split=1.0 - (args.val_split + 0.05),
+            val_split=args.val_split,
+            seed=args.seed,
+            include_coach_feedback=True,
+        )
+        print(f"\nUnified dataset ready in {output_dir}")
+        return
 
     meta = prepare_training_data(
         base_dir=args.base_dir,
+        output_dir=args.output_dir or "training/data",
         version=args.ver,
         val_split=args.val_split,
         min_confidence=args.min_confidence,
