@@ -1,0 +1,126 @@
+{
+  "video_id": "yt_XaZ_6wsUsiM",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "Your 464.5 score represents solid intermediate-level performance, held back primarily by time (147s) rather than technique errors.",
+    "session_headline": "Excellent knot technique with proper surgeon's knot and hand switching - focus now shifts to building speed and placement precision."
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "147-second completion time cost significant points compared to your faster sessions (42-45s range)",
+      "frames_referenced": [
+        1,
+        21
+      ],
+      "impact_on_score": "Approximately 80-100 points lost to time penalties compared to your peak performances"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "2.5mm total deviation from marks resulted in minor point deduction",
+      "frames_referenced": [
+        7
+      ],
+      "impact_on_score": "2.5 points lost to placement accuracy"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Perfect knot sequence - surgeon's knot followed by alternating single throws with proper hand switching",
+      "frames_referenced": [
+        3,
+        4,
+        5,
+        8,
+        11
+      ],
+      "impact_on_score": "Full points earned for knot technique"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "economy_of_motion",
+      "observation": "41-second cutting phase (frames 21 completion vs 106s cut start) suggests excessive deliberation or repositioning during final steps",
+      "frames_referenced": [
+        21
+      ],
+      "why_it_matters": "Cutting efficiency directly impacts total time and is often the easiest phase to accelerate without compromising safety",
+      "correction": "Approach scissors to knot immediately after final throw tightening, maintain 2-3mm distance from knot, make decisive single cut",
+      "drill": "Practice 20 rapid cuts on practice knots - load scissors, approach knot, cut within 3 seconds per attempt",
+      "priority": "high"
+    },
+    {
+      "category": "needle_handling",
+      "observation": "12-second needle loading phase indicates room for efficiency gains in initial setup",
+      "frames_referenced": [
+        2
+      ],
+      "why_it_matters": "Fast, confident needle loading sets the rhythm for the entire task and builds momentum",
+      "correction": "Load needle at 2/3 point from tip in single motion, avoid repositioning once grasped",
+      "drill": "Needle loading speed drill: 15 repetitions loading needle in under 5 seconds each",
+      "priority": "medium"
+    },
+    {
+      "category": "knot_tying",
+      "observation": "Frame 6 shows educational note about 'wrong traction' - suggests some tension management refinement needed",
+      "frames_referenced": [
+        6
+      ],
+      "why_it_matters": "Proper traction prevents knot slippage and ensures secure closure without tissue damage",
+      "correction": "Apply steady, even tension perpendicular to tissue surface during knot advancement",
+      "drill": "Practice 10 knots focusing solely on smooth, consistent traction without jerky movements",
+      "priority": "medium"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Excellent knot sequence execution with proper surgeon's knot initiation and consistent hand switching pattern",
+      "frames_referenced": [
+        3,
+        4,
+        5,
+        8,
+        11
+      ],
+      "why_it_matters": "This demonstrates mastery of the fundamental FLS knot requirements and will serve you well in advanced procedures",
+      "encouragement": "Your knot technique is textbook perfect - this foundation will accelerate your progress as you build speed"
+    },
+    {
+      "observation": "Good suture placement accuracy with only 2.5mm total deviation from target marks",
+      "frames_referenced": [
+        7
+      ],
+      "why_it_matters": "Accurate placement shows good spatial awareness and instrument control",
+      "encouragement": "Your placement precision is already at competent level - small refinements will push you to expert range"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Cutting phase efficiency - reducing 41-second cutting time to under 15 seconds",
+    "warmup_drill": "5 minutes of rapid needle loading practice (target: under 5 seconds per load)",
+    "primary_drill": {
+      "name": "Speed Cutting Challenge",
+      "description": "Complete full Task 5, but focus intensely on cutting phase. After final throw: (1) Immediately position scissors, (2) Approach knot at 2-3mm distance, (3) Make single decisive cut, (4) Withdraw. Time only the cutting phase.",
+      "target_reps": 8,
+      "target_time_minutes": 20,
+      "success_criteria": "Cutting phase under 15 seconds with clean cut 2-3mm from knot"
+    },
+    "cooldown": "Review your fastest cutting attempt - what felt different about the efficient ones?",
+    "estimated_sessions_to_improvement": "2-3 focused sessions should bring total time under 120 seconds"
+  },
+  "progress_context": {
+    "trend": "plateaued",
+    "vs_baseline": "Significant improvement from early 180s times, but current performance below your 42-45s peak range",
+    "vs_peak": "About 100 seconds slower than your best performances (42-45s range)",
+    "milestone_note": "Target: Sub-120s with current knot quality maintained"
+  },
+  "safety_flags": [],
+  "confidence": 0.75,
+  "coaching_limitations": "Camera angle limits assessment of exact needle loading grip position and scissors approach angle during cutting phase",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 35.01,
+    "input_tokens": 3704,
+    "output_tokens": 1446,
+    "cost_usd_approx": 0.0328
+  }
+}

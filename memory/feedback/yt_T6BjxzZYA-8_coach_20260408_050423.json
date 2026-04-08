@@ -1,0 +1,136 @@
+{
+  "video_id": "yt_T6BjxzZYA-8",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "This 296 FLS score represents solid intermediate performance, placing you in the competent range with room for refinement in precision and speed.",
+    "session_headline": "Strong educational demonstration of surgeon's knot technique with excellent hand switching - focus next on speed optimization while maintaining this quality."
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "300-second completion time is methodical but leaves significant room for speed improvement without sacrificing technique quality",
+      "frames_referenced": [
+        1,
+        10
+      ],
+      "impact_on_score": "Approximately 100+ points lost to time - each 30 seconds saved would add ~50 points to final score"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "2mm deviation from each mark resulted in 4-point penalty - good accuracy but perfectible with more deliberate targeting",
+      "frames_referenced": [
+        1
+      ],
+      "impact_on_score": "4 points lost to placement deviation - minimal impact but represents achievable precision gains"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Excellent surgeon's knot formation with proper C-loop technique and consistent hand switching across all throws",
+      "frames_referenced": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "impact_on_score": "No points lost to knot quality - this is a significant strength to preserve"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "knot_tying",
+      "observation": "Frames 2-4 show textbook surgeon's knot formation with proper C-loop and reverse C-loop technique, but the 90-second duration for first throw suggests over-deliberation",
+      "frames_referenced": [
+        2,
+        3,
+        4
+      ],
+      "why_it_matters": "While technique is excellent, excessive time on first throw limits overall efficiency and can cause fatigue in longer procedures",
+      "correction": "Practice the C-loop formation until it becomes automatic - aim for 45-60 seconds maximum on first throw while maintaining current quality",
+      "drill": "Perform 20 isolated surgeon's knots on a practice board, timing each first throw - target 45 seconds with zero technique compromise",
+      "priority": "high"
+    },
+    {
+      "category": "economy_of_motion",
+      "observation": "Frame 6 shows good instrument handling but the 60-second duration for subsequent throws indicates potential inefficiencies in loop formation or tensioning",
+      "frames_referenced": [
+        5,
+        6
+      ],
+      "why_it_matters": "Streamlined subsequent throws are critical for overall time management and maintaining rhythm",
+      "correction": "Focus on continuous motion during loop formation - minimize pauses between wrapping and tensioning phases",
+      "drill": "Practice 15 rapid single throws after surgeon's knot, aiming for 20-25 seconds each with smooth transitions",
+      "priority": "medium"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "Frame 1 shows good visualization but 2mm deviation from marks suggests need for more precise initial targeting",
+      "frames_referenced": [
+        1
+      ],
+      "why_it_matters": "Precise placement reduces tissue trauma and ensures optimal closure strength",
+      "correction": "Take an extra 2-3 seconds to align needle perpendicular to tissue before driving through marks",
+      "drill": "Practice 25 needle drives through marked targets, measuring deviation - aim for <1mm consistently",
+      "priority": "low"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Frames 2-3 demonstrate exceptional understanding of surgeon's knot mechanics with clear C-loop and reverse C-loop formation",
+      "frames_referenced": [
+        2,
+        3
+      ],
+      "why_it_matters": "This foundational technique prevents knot slippage and is essential for surgical safety",
+      "encouragement": "Your surgeon's knot technique is textbook perfect - this level of understanding will serve you well as you focus on speed optimization"
+    },
+    {
+      "observation": "Frames 5-6 show excellent hand switching consistency, maintaining proper technique throughout all throws",
+      "frames_referenced": [
+        5,
+        6
+      ],
+      "why_it_matters": "Consistent hand switching prevents knot jamming and ensures even tension distribution",
+      "encouragement": "Your hand switching is smooth and deliberate - this advanced skill puts you ahead of many trainees at your level"
+    },
+    {
+      "observation": "Frames 9-10 demonstrate clean, controlled cutting technique with proper scissors positioning",
+      "frames_referenced": [
+        9,
+        10
+      ],
+      "why_it_matters": "Precise cutting prevents suture damage and maintains knot integrity",
+      "encouragement": "Your cutting technique is confident and controlled - excellent attention to this often-overlooked detail"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Speed optimization while preserving your excellent technique quality",
+    "warmup_drill": "5 minutes of rapid needle loading at 2/3 point - build muscle memory for consistent grasp",
+    "primary_drill": {
+      "name": "Timed Surgeon's Knot Progression",
+      "description": "1) Set timer for 45 seconds, complete surgeon's knot only. 2) Add one single throw, target 65 seconds total. 3) Add second single throw, target 85 seconds total. 4) Complete full sequence with cutting, target 120 seconds total",
+      "target_reps": 8,
+      "target_time_minutes": 20,
+      "success_criteria": "Hit time targets on 6/8 attempts while maintaining current knot quality and <2mm placement accuracy"
+    },
+    "cooldown": "Review your fastest successful attempt - identify which movements felt most efficient and which felt rushed",
+    "estimated_sessions_to_improvement": "4-6 focused sessions should achieve sub-180 second times with current quality"
+  },
+  "progress_context": {
+    "trend": "improving",
+    "vs_baseline": "Significant improvement from early 28-point performance - technique mastery is clearly developing",
+    "vs_peak": "This 296 score represents solid mid-range performance in your progression, with clear upward trajectory potential",
+    "milestone_note": "Next target: Sub-180 seconds with zero penalties would put you in the 400+ FLS range"
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "This appears to be an educational demonstration video with overlays, which may not reflect actual trainee performance timing or natural working rhythm - recommendations assume this represents actual technique execution speed",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 38.8,
+    "input_tokens": 4477,
+    "output_tokens": 1663,
+    "cost_usd_approx": 0.0384
+  }
+}

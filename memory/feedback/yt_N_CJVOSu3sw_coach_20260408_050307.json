@@ -1,0 +1,132 @@
+{
+  "video_id": "yt_N_CJVOSu3sw",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "Your 401.3 FLS score represents solid intermediate-level performance, with excellent knot technique but room for improvement in precision and speed.",
+    "session_headline": "Strong knot sequence execution with proper hand switching - focus next on tightening suture placement accuracy and overall efficiency."
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "210-second completion time is above the target range, with suture placement phase taking 70 seconds (33% of total time)",
+      "frames_referenced": [
+        3,
+        4,
+        5
+      ],
+      "impact_on_score": "Approximately 40-50 points lost due to extended completion time"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "3.7mm total deviation from target marks (1.5mm + 2.2mm) indicates good but not precise placement",
+      "frames_referenced": [
+        4,
+        5
+      ],
+      "impact_on_score": "3.7 penalty points directly subtracted from final score"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Excellent knot sequence with proper surgeon's knot, correct hand switching, and secure final knot",
+      "frames_referenced": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "impact_on_score": "Full points earned - no penalties for knot quality"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "needle_handling",
+      "observation": "In frames 3-4, needle approach to drain appears controlled but could be more decisive - some hesitation visible during positioning",
+      "frames_referenced": [
+        3,
+        4
+      ],
+      "why_it_matters": "Hesitation during needle placement increases time and can lead to less precise targeting of anatomical landmarks",
+      "correction": "Commit to your needle entry angle earlier - once you've identified the target, drive through in one smooth motion rather than repositioning",
+      "drill": "Practice 20 needle passes through marked targets on Penrose drain, focusing on single decisive entry without repositioning",
+      "priority": "high"
+    },
+    {
+      "category": "economy_of_motion",
+      "observation": "Frame 5 shows some unnecessary instrument repositioning during second pass setup",
+      "frames_referenced": [
+        5
+      ],
+      "why_it_matters": "Extra movements accumulate time and can disturb tissue positioning",
+      "correction": "Plan your second pass trajectory while completing the first pass - minimize instrument repositioning between passes",
+      "drill": "Practice dual-pass suture placement with focus on maintaining instrument position between passes - 10 repetitions",
+      "priority": "medium"
+    },
+    {
+      "category": "visualization",
+      "observation": "Good camera positioning maintained throughout knot tying sequence in frames 6-10",
+      "frames_referenced": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "why_it_matters": "Consistent visualization prevents errors and maintains efficiency during complex maneuvers",
+      "correction": "Continue this excellent visualization technique - no changes needed",
+      "drill": "Maintain current camera management approach",
+      "priority": "low"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Textbook surgeon's knot formation in frames 6-7 with proper double throw technique",
+      "frames_referenced": [
+        6,
+        7
+      ],
+      "why_it_matters": "Surgeon's knots provide superior initial security and are essential for reliable tissue approximation",
+      "encouragement": "Your knot technique is excellent - this is advanced-level skill that many trainees struggle with"
+    },
+    {
+      "observation": "Perfect hand switching sequence maintained throughout all three throws in frames 8-10",
+      "frames_referenced": [
+        8,
+        9,
+        10
+      ],
+      "why_it_matters": "Proper hand switching prevents knot slippage and ensures square knot formation",
+      "encouragement": "Your hand switching is automatic and correct - this demonstrates good muscle memory development"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Improve suture placement precision while maintaining excellent knot technique",
+    "warmup_drill": "5 minutes of needle loading and basic passes through unmarked Penrose drain to establish rhythm",
+    "primary_drill": {
+      "name": "Precision Placement Challenge",
+      "description": "Mark two points 12mm apart on Penrose drain. Practice complete suture placement aiming for <1mm deviation from each mark. Focus on decisive needle entry without repositioning. Time each attempt.",
+      "target_reps": 15,
+      "target_time_minutes": 20,
+      "success_criteria": "Achieve <2mm total deviation on 10 out of 15 attempts, with completion time under 180 seconds"
+    },
+    "cooldown": "Review your most accurate attempt - what felt different about your needle approach and targeting?",
+    "estimated_sessions_to_improvement": "2-3 focused sessions should bring placement deviation under 2mm consistently"
+  },
+  "progress_context": {
+    "trend": "improving",
+    "vs_baseline": "Significant improvement from early 28.0 FLS score - knot technique has become consistently excellent",
+    "vs_peak": "Below your peak 600.0 FLS performances, but those had questionable confidence scores - this represents more reliable skill level",
+    "milestone_note": "Target sub-180s completion with <2mm total deviation to break into 450+ FLS range"
+  },
+  "safety_flags": [],
+  "confidence": 0.82,
+  "coaching_limitations": "Needle grasp point and exact entry angles not fully visible from this camera angle - recommendations based on visible hesitation patterns and movement efficiency",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 33.24,
+    "input_tokens": 3686,
+    "output_tokens": 1449,
+    "cost_usd_approx": 0.0328
+  }
+}

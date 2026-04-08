@@ -1,0 +1,130 @@
+{
+  "video_id": "yt_vjSoFfEkeMg",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "Your 417 FLS score represents solid intermediate performance with excellent knot technique but room for efficiency gains.",
+    "session_headline": "Strong surgeon's knot execution with proper hand switching, focus next on speed optimization and mark precision."
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "180-second completion time is significantly slower than your recent 42-88 second range, indicating possible hesitation or overthinking",
+      "frames_referenced": [
+        1,
+        2,
+        3
+      ],
+      "impact_on_score": "Approximately 180+ points lost due to extended time penalty"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "1.5mm deviation from each mark (3mm total penalty) shows good but not excellent targeting accuracy",
+      "frames_referenced": [
+        3,
+        4,
+        5
+      ],
+      "impact_on_score": "3 points deducted for placement deviations"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Excellent technique with proper surgeon's knot followed by alternating single throws with hand switching",
+      "frames_referenced": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "impact_on_score": "No penalties - this was executed at proficiency level"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "needle_handling",
+      "observation": "In frame 2, needle loading appears methodical but slow - taking 20 seconds for initial setup suggests overthinking the grasp point",
+      "frames_referenced": [
+        2
+      ],
+      "why_it_matters": "Efficient needle loading sets the rhythm for the entire task and builds confidence for subsequent phases",
+      "correction": "Load needle at 2/3 point from tip in one smooth motion - avoid repositioning once grasped",
+      "drill": "Practice 20 rapid needle loads in 2 minutes, focusing on single-motion pickup at correct grasp point",
+      "priority": "high"
+    },
+    {
+      "category": "economy_of_motion",
+      "observation": "50-second suture placement phase (frames 3-5) indicates excessive repositioning or hesitation during tissue passage",
+      "frames_referenced": [
+        3,
+        4,
+        5
+      ],
+      "why_it_matters": "Smooth, confident tissue passage prevents trauma and maintains surgical flow",
+      "correction": "Plan your needle path before entry - commit to the trajectory and drive through in one smooth arc",
+      "drill": "Practice 15 rapid suture placements through foam targets, aiming for sub-15 seconds per placement",
+      "priority": "high"
+    },
+    {
+      "category": "knot_tying",
+      "observation": "Excellent surgeon's knot technique in frames 6-7, but 30-second duration suggests room for speed optimization without sacrificing quality",
+      "frames_referenced": [
+        6,
+        7
+      ],
+      "why_it_matters": "Your knot technique is already proficient - now focus on maintaining quality while increasing speed",
+      "correction": "Maintain your current hand switching pattern but reduce hesitation between loop formations",
+      "drill": "Practice 10 surgeon's knots with alternating throws, target 15 seconds total knot time",
+      "priority": "medium"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Perfect surgeon's knot execution in frames 6-7 with proper double throw technique and excellent tension control",
+      "frames_referenced": [
+        6,
+        7
+      ],
+      "why_it_matters": "This is advanced technique that many trainees struggle with - you've mastered the fundamentals",
+      "encouragement": "Your knot technique is at proficiency level - this foundation will serve you well as you focus on speed"
+    },
+    {
+      "observation": "Consistent hand switching pattern through frames 7-9 shows excellent understanding of proper knot security principles",
+      "frames_referenced": [
+        7,
+        8,
+        9
+      ],
+      "why_it_matters": "Proper hand switching prevents knot slippage and demonstrates surgical maturity",
+      "encouragement": "Your alternating throw technique is textbook perfect - maintain this pattern as you work on efficiency"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Speed optimization while maintaining your excellent knot technique",
+    "warmup_drill": "5 minutes of rapid needle loading practice - 20 loads in 2 minutes",
+    "primary_drill": {
+      "name": "Timed Suture Placement Sprint",
+      "description": "Set up 5 practice targets. Load needle, place suture, tie surgeon's knot + 2 alternating throws, cut. Focus on smooth transitions between phases without rushing individual techniques.",
+      "target_reps": 5,
+      "target_time_minutes": 15,
+      "success_criteria": "Complete each rep in under 90 seconds while maintaining your current knot quality"
+    },
+    "cooldown": "Review which phase felt most rushed - that's your next focus area",
+    "estimated_sessions_to_improvement": "3-4 focused sessions to reach sub-120 second consistency"
+  },
+  "progress_context": {
+    "trend": "plateaued",
+    "vs_baseline": "Significant improvement from early 28-point attempt, knot technique has advanced dramatically",
+    "vs_peak": "This 180s time is much slower than your recent 42-88s range - suggests possible fatigue or equipment issues",
+    "milestone_note": "Target sub-120 seconds with current knot quality to break into advanced scoring range"
+  },
+  "safety_flags": [],
+  "confidence": 0.75,
+  "coaching_limitations": "Camera angle limits assessment of needle entry angles and exact tissue trauma. Suture tension during knot tying not fully visible from this perspective.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 32.34,
+    "input_tokens": 3652,
+    "output_tokens": 1465,
+    "cost_usd_approx": 0.0329
+  }
+}

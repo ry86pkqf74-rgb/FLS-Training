@@ -1,0 +1,117 @@
+{
+  "video_id": "yt_vDmEfFc9i8U",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "This 506.7 score represents solid intermediate performance, placing you in the competent range with room for refinement in precision.",
+    "session_headline": "Strong technical execution visible in early phases, though video quality issues limited full assessment of your complete performance."
+  },
+  "rubric_insights": [
+    {
+      "category": "suture_placement",
+      "observation": "3.3mm total deviation from marks resulted in 3.3 penalty points - this is actually quite good precision for intermediate level",
+      "frames_referenced": [
+        4,
+        5
+      ],
+      "impact_on_score": "Lost 3.3 points from placement penalties, but this is within acceptable range for skill development"
+    },
+    {
+      "category": "time_management",
+      "observation": "90-second completion time is efficient and shows good pacing through all phases",
+      "frames_referenced": [],
+      "impact_on_score": "Strong time performance contributed positively to overall score"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Proper surgeon's knot sequence with alternating hands demonstrates good technical knowledge",
+      "frames_referenced": [
+        10
+      ],
+      "impact_on_score": "No knot penalties - secure knots maintained scoring potential"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "needle_handling",
+      "observation": "In frame 3, needle holder approach to suture shows steady control and appropriate grasp positioning",
+      "frames_referenced": [
+        3
+      ],
+      "why_it_matters": "Consistent needle control reduces tissue trauma and improves placement accuracy",
+      "correction": "Continue this steady approach - your needle handling appears well-controlled in visible segments",
+      "drill": "Practice 20 needle loads focusing on consistent 2/3 grasp point before each session",
+      "priority": "low"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "Frames 4-5 show clean needle passage through drain with good trajectory toward second mark",
+      "frames_referenced": [
+        4,
+        5
+      ],
+      "why_it_matters": "Smooth needle passage minimizes tissue damage and maintains suture integrity",
+      "correction": "Your placement technique looks solid - focus on maintaining this smooth motion while improving mark precision",
+      "drill": "Practice 15 placement attempts on marked targets, measuring deviation after each attempt",
+      "priority": "medium"
+    },
+    {
+      "category": "instrument_exchange",
+      "observation": "Frame 9 shows good bimanual coordination with both instruments working efficiently",
+      "frames_referenced": [
+        9
+      ],
+      "why_it_matters": "Smooth instrument coordination reduces procedure time and maintains tissue control",
+      "correction": "Maintain this level of coordination throughout the entire procedure",
+      "drill": "Practice instrument exchanges during knot tying - 10 complete sequences focusing on smooth handoffs",
+      "priority": "medium"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Frame 4 shows excellent needle placement accuracy through the first mark with clean entry angle",
+      "frames_referenced": [
+        4
+      ],
+      "why_it_matters": "Precise placement is the foundation of surgical suturing and you're demonstrating good control",
+      "encouragement": "Your placement technique shows real skill development - this level of accuracy will serve you well as you progress"
+    },
+    {
+      "observation": "Frame 9 demonstrates strong bimanual coordination with both instruments working in harmony",
+      "frames_referenced": [
+        9
+      ],
+      "why_it_matters": "Coordinated instrument use is a hallmark of advanced laparoscopic skill",
+      "encouragement": "This level of coordination indicates you're developing the muscle memory essential for expert performance"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Improving suture placement precision while maintaining your current speed and coordination",
+    "warmup_drill": "5 minutes of needle loading practice focusing on consistent 2/3 grasp point",
+    "primary_drill": {
+      "name": "Precision Placement Challenge",
+      "description": "Mark 10 target points on practice material. Attempt suture placement through each mark, measuring deviation. Record your accuracy and aim to reduce average deviation by 0.5mm",
+      "target_reps": 10,
+      "target_time_minutes": 15,
+      "success_criteria": "Average deviation under 2mm across all 10 attempts"
+    },
+    "cooldown": "Review your most accurate placement - what felt different about your approach on that attempt?",
+    "estimated_sessions_to_improvement": "3-4 focused sessions should bring your placement precision into expert range"
+  },
+  "progress_context": {
+    "trend": "improving",
+    "vs_baseline": "Significant improvement from early 415.5 score - you've gained nearly 100 points",
+    "vs_peak": "Close to your peak performance range of 550+ - consistency is developing well",
+    "milestone_note": "Next target: Sub-85 seconds with under 2mm total deviation for expert-level performance"
+  },
+  "safety_flags": [],
+  "confidence": 0.65,
+  "coaching_limitations": "Extensive black screen periods (frames 11-22) prevented assessment of knot tying technique and cutting phase. Unable to evaluate needle angle consistency, loop formation quality, or cutting precision due to video quality issues.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 31.35,
+    "input_tokens": 3835,
+    "output_tokens": 1357,
+    "cost_usd_approx": 0.0319
+  }
+}

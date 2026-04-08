@@ -1,0 +1,150 @@
+{
+  "video_id": "yt_JIHVJy-qxaI",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "433 FLS score represents solid competent performance - well above passing threshold with excellent knot technique and minimal penalties.",
+    "session_headline": "Strong technical execution with perfect knot sequence - focus next on speed optimization and placement precision."
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "147s completion time is reasonable but leaves room for improvement - needle loading took 18s which could be streamlined",
+      "frames_referenced": [
+        2,
+        3
+      ],
+      "impact_on_score": "Time component cost approximately 50-60 points compared to sub-120s performance"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Perfect knot sequence with proper surgeon's knot and correct hand switching - zero penalties here",
+      "frames_referenced": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "impact_on_score": "Full points earned - this is a significant strength"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "3mm total deviation from target marks resulted in 3-point penalty",
+      "frames_referenced": [
+        4
+      ],
+      "impact_on_score": "Lost 3 points due to placement accuracy - relatively minor but improvable"
+    },
+    {
+      "category": "drain_closure",
+      "observation": "Excellent closure with no visible gaps - perfect execution",
+      "frames_referenced": [
+        22
+      ],
+      "impact_on_score": "Full points earned for closure quality"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "needle_handling",
+      "observation": "In frames 2-3, needle loading appears methodical but could be more efficient - taking 18s for this phase",
+      "frames_referenced": [
+        2,
+        3
+      ],
+      "why_it_matters": "Faster needle loading directly improves overall time without compromising safety or accuracy",
+      "correction": "Practice loading needle at 2/3 point from tip in one smooth motion rather than multiple adjustments",
+      "drill": "Load and unload needle 25 times focusing on single-motion pickup at correct grasp point",
+      "priority": "high"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "Frame 4 shows steady positioning but 1.5mm deviation at each mark suggests slight targeting inconsistency",
+      "frames_referenced": [
+        4
+      ],
+      "why_it_matters": "Precise placement is critical for real surgical applications and FLS scoring",
+      "correction": "Take extra moment to align needle perpendicular to tissue before driving through marks",
+      "drill": "Practice 20 needle passes through marked targets focusing on perpendicular entry angle",
+      "priority": "medium"
+    },
+    {
+      "category": "knot_tying",
+      "observation": "Frames 5-11 show excellent knot technique with proper surgeon's knot and hand switching - this is exemplary",
+      "frames_referenced": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "why_it_matters": "This level of knot technique is exactly what's needed for surgical competency",
+      "correction": "No correction needed - maintain this exact technique",
+      "drill": "Continue current knot practice to maintain muscle memory",
+      "priority": "low"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Perfect surgeon's knot formation in frames 5-7 with proper double wrap and secure tightening",
+      "frames_referenced": [
+        5,
+        6,
+        7
+      ],
+      "why_it_matters": "Surgeon's knot is the foundation of secure surgical knots - your technique here is textbook",
+      "encouragement": "Your knot technique is at expert level - this gives you a huge advantage as you work on speed"
+    },
+    {
+      "observation": "Excellent hand switching sequence shown in frames 8 and 10 - proper alternating technique throughout",
+      "frames_referenced": [
+        8,
+        10
+      ],
+      "why_it_matters": "Correct hand switching prevents knot slippage and is essential for surgical safety",
+      "encouragement": "Your hand switching is automatic and correct - this advanced skill will serve you well in real surgery"
+    },
+    {
+      "observation": "Frame 22 shows perfect drain closure with no gaps - excellent final result",
+      "frames_referenced": [
+        22
+      ],
+      "why_it_matters": "Complete closure prevents fluid leakage and demonstrates proper tension management",
+      "encouragement": "Your closure technique achieves the exact clinical outcome needed - focus on maintaining this quality while improving speed"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Streamline needle loading speed while maintaining current knot excellence",
+    "warmup_drill": "5 minutes of needle loading practice - focus on single-motion pickup at 2/3 point",
+    "primary_drill": {
+      "name": "Speed Loading Challenge",
+      "description": "Load needle correctly, place single suture through two marks, tie surgeon's knot + 2 throws, cut. Focus on reducing needle loading time to under 10 seconds while maintaining placement accuracy.",
+      "target_reps": 8,
+      "target_time_minutes": 20,
+      "success_criteria": "Needle loaded in <10s, placement within 2mm of marks, knot sequence maintained"
+    },
+    "cooldown": "Review your fastest rep - what felt different about the needle loading motion?",
+    "estimated_sessions_to_improvement": "3-4 focused sessions should bring you to sub-120s consistently"
+  },
+  "progress_context": {
+    "trend": "improving",
+    "vs_baseline": "Significant improvement from early 600s scores to consistent 400s-500s range",
+    "vs_peak": "This 433 is near your best performance - you're approaching your current ceiling",
+    "milestone_note": "Next target: Sub-120s completion time while maintaining this knot quality (would push score to 500+)"
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "Camera angle makes it difficult to assess exact needle grasp point during loading phase - recommendations based on timing rather than direct visualization of grip position",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 36.06,
+    "input_tokens": 3782,
+    "output_tokens": 1584,
+    "cost_usd_approx": 0.0351
+  }
+}

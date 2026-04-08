@@ -1,0 +1,136 @@
+{
+  "video_id": "yt_VngnW_2YTbU",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "Your 337 FLS score represents a significant drop from your recent 500+ performances, primarily due to the 260-second completion time pushing you into penalty territory.",
+    "session_headline": "Solid technical execution with proper surgeon's knot and hand switching, but efficiency needs attention to return to your proven sub-90 second capability."
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "260-second completion is well beyond your demonstrated 42-90 second range, suggesting either hesitation or technical difficulty during this attempt",
+      "frames_referenced": [
+        2,
+        10
+      ],
+      "impact_on_score": "Time penalty likely cost 200+ points compared to your typical performance"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Excellent knot technique maintained - proper surgeon's knot with double wrap and consistent hand switching preserved from your successful attempts",
+      "frames_referenced": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "impact_on_score": "No points lost here - this remains a strength"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "1.5mm deviation from both marks is reasonable precision, costing only 3 penalty points",
+      "frames_referenced": [
+        4,
+        5
+      ],
+      "impact_on_score": "Minimal impact - well within acceptable range"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "economy_of_motion",
+      "observation": "The 65-second suture placement phase (frames 4-5) is significantly longer than your efficient attempts, suggesting extra movements or repositioning",
+      "frames_referenced": [
+        4,
+        5
+      ],
+      "why_it_matters": "This phase should be 15-25 seconds based on your history - excess time here cascades through the entire task",
+      "correction": "Focus on decisive needle entry and exit - minimize repositioning once you've identified your target points",
+      "drill": "Practice 20 rapid needle passes through marked targets, aiming for <20 seconds total placement time",
+      "priority": "high"
+    },
+    {
+      "category": "knot_tying",
+      "observation": "Your throw phases (55s, 50s, 35s) are much longer than your proven 10-15 second capability per throw",
+      "frames_referenced": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "why_it_matters": "You've demonstrated much faster knot tying - this suggests hesitation or lost muscle memory rather than technique failure",
+      "correction": "Return to your rapid throw rhythm - don't overthink the mechanics you've already mastered",
+      "drill": "Practice 10 consecutive surgeon's knots with 3-throw sequence, targeting 45 seconds total for all three throws",
+      "priority": "high"
+    },
+    {
+      "category": "needle_handling",
+      "observation": "25-second needle loading phase is acceptable but longer than your fastest attempts",
+      "frames_referenced": [
+        2,
+        3
+      ],
+      "why_it_matters": "Starting efficiently sets the rhythm for the entire task",
+      "correction": "Load needle decisively at 2/3 point from tip without hesitation",
+      "drill": "Practice 15 rapid needle loads, targeting <10 seconds each",
+      "priority": "medium"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Perfect surgeon's knot technique with clear double wrap formation maintained throughout",
+      "frames_referenced": [
+        7
+      ],
+      "why_it_matters": "This is advanced technique that many trainees struggle with - you've mastered it completely",
+      "encouragement": "Your knot quality is excellent and consistent - this technical foundation is solid"
+    },
+    {
+      "observation": "Proper hand switching between all throws demonstrates good spatial awareness and technique retention",
+      "frames_referenced": [
+        8,
+        9
+      ],
+      "why_it_matters": "Hand switching prevents knot slippage and shows you understand proper surgical technique",
+      "encouragement": "Your hand switching is textbook perfect - this skill will serve you well in advanced procedures"
+    },
+    {
+      "observation": "Clean task completion with good drain closure and no technical failures",
+      "frames_referenced": [
+        10
+      ],
+      "why_it_matters": "Task completion without errors shows your fundamental technique is sound",
+      "encouragement": "You completed everything correctly - this is about speed optimization, not learning new skills"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Restore your proven speed through rhythm and confidence - you have all the technical skills",
+    "warmup_drill": "5 minutes of rapid needle loading and simple knot tying to rebuild muscle memory",
+    "primary_drill": {
+      "name": "Speed Recovery Sequence",
+      "description": "Complete full FLS Task 5 attempts focusing only on speed, not perfection. Set timer for 90 seconds and stop if not finished - this forces decisive movement. Repeat until you achieve sub-90 second completion.",
+      "target_reps": 5,
+      "target_time_minutes": 20,
+      "success_criteria": "At least one completion under 90 seconds with proper knot sequence"
+    },
+    "cooldown": "Reflect on which movements felt rushed vs. which felt efficient - identify your optimal rhythm",
+    "estimated_sessions_to_improvement": "2-3 focused sessions to return to your 500+ FLS range"
+  },
+  "progress_context": {
+    "trend": "regressing",
+    "vs_baseline": "Significantly slower than your demonstrated 42-90 second capability",
+    "vs_peak": "This 260s performance is far below your consistent 500+ FLS scores",
+    "milestone_note": "Return to sub-90 second completion with maintained knot quality - you've done this before"
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "Cannot assess fine needle angle details or tissue handling pressure from available camera angle. Unable to determine specific cause of timing regression without seeing hesitation points in detail.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 35.27,
+    "input_tokens": 3664,
+    "output_tokens": 1532,
+    "cost_usd_approx": 0.034
+  }
+}

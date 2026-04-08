@@ -1,0 +1,127 @@
+{
+  "video_id": "yt_d8zTqbRFF0s",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "Your 525 FLS score represents solid intermediate performance, with efficient timing (45s) but some precision penalties holding you back from the advanced tier.",
+    "session_headline": "Excellent knot technique and timing efficiency with opportunity to refine suture placement precision for score optimization."
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "Outstanding 45-second completion time places you in the top efficiency tier",
+      "frames_referenced": [
+        1,
+        10
+      ],
+      "impact_on_score": "Strong time bonus contributing significantly to your 525 score"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Perfect knot sequence execution - proper surgeon's knot with correct hand switching pattern",
+      "frames_referenced": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "impact_on_score": "Full points earned for knot technique, no penalties assessed"
+    },
+    {
+      "category": "suture_placement",
+      "observation": "Minor deviations of 1.5mm and 1.8mm from target marks resulted in 3.3 penalty points",
+      "frames_referenced": [
+        10
+      ],
+      "impact_on_score": "Primary score limitation - addressing placement precision could add 15-20 points"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "suture_placement",
+      "observation": "In frame 10, final suture position shows slight deviation from the marked targets, suggesting either initial needle placement or tissue manipulation could be more precise",
+      "frames_referenced": [
+        10
+      ],
+      "why_it_matters": "Precise suture placement is critical for wound closure integrity and directly impacts FLS scoring",
+      "correction": "Before needle driving, take an extra 2-3 seconds to align needle entry point exactly with the mark using instrument tips as guides",
+      "drill": "Practice 10 needle placements on marked targets without time pressure, aiming for <1mm deviation each time",
+      "priority": "high"
+    },
+    {
+      "category": "needle_handling",
+      "observation": "In frames 3-4, needle loading and initial positioning appear well-controlled with proper C-shape formation",
+      "frames_referenced": [
+        3,
+        4
+      ],
+      "why_it_matters": "Consistent needle loading sets up accurate placement and prevents tissue trauma",
+      "correction": "Maintain this excellent loading technique - grasp point appears optimal at 2/3 from tip",
+      "drill": "Reinforce current technique with 15 needle loading repetitions focusing on consistent grasp point",
+      "priority": "low"
+    },
+    {
+      "category": "knot_tying",
+      "observation": "Frames 6-9 show textbook surgeon's knot execution with proper hand switching - this is exemplary technique",
+      "frames_referenced": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "why_it_matters": "Proper knot sequence ensures secure closure and prevents knot slippage",
+      "correction": "No correction needed - maintain this excellent sequence",
+      "drill": "Continue current knot practice to maintain muscle memory and consistency",
+      "priority": "low"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Your surgeon's knot formation in frames 6-7 is textbook perfect with clear double throw execution",
+      "frames_referenced": [
+        6,
+        7
+      ],
+      "why_it_matters": "This foundational skill ensures knot security and demonstrates mastery of the core technique",
+      "encouragement": "Your knot tying technique is at an advanced level - this consistency will serve you well in actual surgery"
+    },
+    {
+      "observation": "The hand switching sequence between throws (frames 7-8) is smooth and efficient without hesitation",
+      "frames_referenced": [
+        7,
+        8
+      ],
+      "why_it_matters": "Fluid hand switching prevents air knots and maintains proper tension throughout the sequence",
+      "encouragement": "Your instrument coordination shows excellent bilateral dexterity development"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Precision suture placement while maintaining current speed and knot quality",
+    "warmup_drill": "5 minutes of needle loading practice at marked targets without time pressure",
+    "primary_drill": {
+      "name": "Precision Placement Challenge",
+      "description": "Place sutures at marked targets, measuring deviation after each attempt. Focus on needle entry angle and tissue engagement depth. Use instrument tips to verify alignment before driving needle.",
+      "target_reps": 8,
+      "target_time_minutes": 20,
+      "success_criteria": "6 out of 8 placements within 1mm of target marks"
+    },
+    "cooldown": "Review your most accurate placement attempt and identify what felt different about your setup and execution",
+    "estimated_sessions_to_improvement": "2-3 focused sessions should bring placement precision to <1mm consistently"
+  },
+  "progress_context": {
+    "trend": "improving",
+    "vs_baseline": "Significant improvement from early 400s scores to consistent 500+ range",
+    "vs_peak": "Close to your peak performance of 556 - within striking distance of personal best",
+    "milestone_note": "Target: Sub-40s completion with <1mm placement deviation for 550+ FLS score"
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "Camera angle limits assessment of needle entry depth and exact tissue engagement quality. Suture tension during knot tying not fully visible from this perspective.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 32.65,
+    "input_tokens": 3558,
+    "output_tokens": 1413,
+    "cost_usd_approx": 0.0319
+  }
+}

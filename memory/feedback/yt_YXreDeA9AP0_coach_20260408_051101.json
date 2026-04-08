@@ -1,0 +1,129 @@
+{
+  "video_id": "yt_YXreDeA9AP0",
+  "coach_version": "v001",
+  "overall_assessment": {
+    "fls_score_context": "This appears to be an instructional demonstration video rather than a timed FLS Task 5 attempt, showing excellent knot-tying technique in isolation.",
+    "session_headline": "Masterful knot-tying demonstration with perfect surgeon's knot and hand-switching technique - ideal reference for technique refinement"
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "45-second completion time is excellent for knot formation alone, though this appears to be a demonstration rather than a full task attempt",
+      "frames_referenced": [
+        1,
+        21
+      ],
+      "impact_on_score": "Strong time performance contributed to high FLS score of 555"
+    },
+    {
+      "category": "knot_quality",
+      "observation": "Perfect execution of surgeon's knot followed by proper alternating single throws with hand switching",
+      "frames_referenced": [
+        4,
+        7,
+        11,
+        15
+      ],
+      "impact_on_score": "Zero penalties for knot quality - textbook technique demonstrated"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "knot_tying",
+      "observation": "Exemplary surgeon's knot formation in frames 3-7 with proper double wrap and controlled tightening - this is the gold standard technique",
+      "frames_referenced": [
+        3,
+        4,
+        7
+      ],
+      "why_it_matters": "Surgeon's knot provides superior initial security and prevents slippage during subsequent throws",
+      "correction": "This technique is already optimal - maintain this exact approach in full task attempts",
+      "drill": "Practice 10 surgeon's knots focusing on maintaining this same smooth double-wrap formation and controlled tightening",
+      "priority": "high"
+    },
+    {
+      "category": "economy_of_motion",
+      "observation": "Smooth, deliberate movements throughout with minimal wasted motion - particularly evident in hand switching at frame 9",
+      "frames_referenced": [
+        9,
+        11
+      ],
+      "why_it_matters": "Efficient motion translates directly to faster completion times and reduced fatigue during full procedures",
+      "correction": "Technique is exemplary - focus on replicating this efficiency when under time pressure",
+      "drill": "Practice hand switching 15 times with eyes closed to build muscle memory for this smooth transition",
+      "priority": "medium"
+    },
+    {
+      "category": "tissue_handling",
+      "observation": "Consistent tension control visible throughout tightening phases, preventing tissue trauma",
+      "frames_referenced": [
+        7,
+        13
+      ],
+      "why_it_matters": "Proper tension prevents tissue damage while ensuring knot security",
+      "correction": "Maintain this exact tension control when working with actual tissue in full task attempts",
+      "drill": "Practice 20 knots with varying suture materials to maintain this tension consistency across different conditions",
+      "priority": "medium"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Perfect surgeon's knot formation with clean double wrap and no air knots",
+      "frames_referenced": [
+        3,
+        4,
+        7
+      ],
+      "why_it_matters": "This is textbook technique that provides maximum knot security with minimal bulk",
+      "encouragement": "Your surgeon's knot technique is exemplary - this level of precision will serve you well in advanced procedures"
+    },
+    {
+      "observation": "Flawless hand switching between throws maintaining proper alternating pattern",
+      "frames_referenced": [
+        9,
+        11
+      ],
+      "why_it_matters": "Proper hand switching prevents knot slippage and ensures square knot formation",
+      "encouragement": "Your hand switching is smooth and confident - this muscle memory will be invaluable under pressure"
+    },
+    {
+      "observation": "Excellent final knot testing showing secure, non-slipping knot",
+      "frames_referenced": [
+        17,
+        21
+      ],
+      "why_it_matters": "Proper knot testing confirms security before moving to cutting phase",
+      "encouragement": "Your knot assessment technique demonstrates excellent surgical judgment"
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Integrate this perfect knot technique into full FLS Task 5 attempts with needle driving and suture placement",
+    "warmup_drill": "5 minutes of surgeon's knot practice maintaining the exact technique shown in this video",
+    "primary_drill": {
+      "name": "Full Task Integration",
+      "description": "Complete 5 full FLS Task 5 attempts focusing on maintaining this knot quality while adding needle driving and suture placement components",
+      "target_reps": 5,
+      "target_time_minutes": 25,
+      "success_criteria": "All knots match the quality shown in this demonstration video with completion under 120 seconds"
+    },
+    "cooldown": "Review each attempt asking: 'Did my knots match the demonstration standard?'",
+    "estimated_sessions_to_improvement": "1-2 focused sessions to integrate this technique into full task performance"
+  },
+  "progress_context": {
+    "trend": "insufficient_data",
+    "vs_baseline": "This demonstration shows mastery of knot technique - significantly higher quality than previous attempts",
+    "vs_peak": "This represents peak knot-tying technique that should be the standard for all future attempts",
+    "milestone_note": "Next goal: Maintain this knot quality while achieving sub-90 second full task completion"
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "This appears to be an instructional demonstration rather than a full FLS Task 5 attempt, so needle driving, suture placement, and drain closure techniques cannot be assessed. Camera angle provides excellent view of knot formation but limits assessment of instrument handling ergonomics.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v001",
+    "elapsed_seconds": 31.99,
+    "input_tokens": 4005,
+    "output_tokens": 1451,
+    "cost_usd_approx": 0.0338
+  }
+}
