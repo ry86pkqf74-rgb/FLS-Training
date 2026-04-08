@@ -3,171 +3,192 @@
 FLS-Training: YouTube Video Harvester
 ======================================
 Downloads FLS Task 5 videos from YouTube, extracts metadata,
-and feeds them into the scoring pipeline automatically.
+classifies tier (A/B/C), and feeds into the scoring pipeline.
 
 Usage:
-  # Harvest from search queries (auto-discovers videos)
+  # Auto-discover via default queries
   python scripts/011_harvest_youtube.py --search
 
-  # Harvest from a file of URLs (one per line)
+  # Custom queries inline
+  python scripts/011_harvest_youtube.py --queries "FLS task 5" "laparoscopic suturing"
+
+  # Queries from a file
+  python scripts/011_harvest_youtube.py --queries-file queries.txt
+
+  # Download from a list of specific URLs
   python scripts/011_harvest_youtube.py --urls urls.txt
 
-  # Harvest a single video
+  # Single URL
   python scripts/011_harvest_youtube.py --url "https://www.youtube.com/watch?v=XXXXX"
 
-  # Harvest + immediately score (end-to-end)
-  python scripts/011_harvest_youtube.py --urls urls.txt --score
-
-  # Dry run (just show what would be downloaded)
+  # Dry run — show what would be downloaded
   python scripts/011_harvest_youtube.py --search --dry-run
 
+  # Download + ingest into pipeline
+  python scripts/011_harvest_youtube.py --search --score
+
 Requirements:
-  pip install yt-dlp
+  pip install yt-dlp  (typer and rich already in pyproject.toml)
 """
 
-import argparse
+from __future__ import annotations
+
+import hashlib
 import json
-import os
 import re
+import shutil
 import subprocess
 import sys
-import hashlib
-import shutil
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Optional
+
+import typer
+from rich.console import Console
+from rich.progress import BarColumn, Progress, SpinnerColumn, TextColumn, TimeElapsedColumn
+from rich.table import Table
 
 
 # ============================================================
 # CONFIGURATION
 # ============================================================
 
-# Where downloaded videos go
 DOWNLOAD_DIR = Path.home() / "fls_harvested_videos"
-
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
 YT_DLP_CMD = [sys.executable, "-m", "yt_dlp"]
 
-# Harvest log (append-only JSONL tracking everything downloaded)
-HARVEST_LOG = Path("harvest_log.jsonl")
+# Harvest log — absolute path anchored to repo root
+HARVEST_LOG = REPO_ROOT / "harvest_log.jsonl"
 
-# Search queries to find FLS Task 5 videos
-SEARCH_QUERIES = [
-    "FLS intracorporeal suture task 5",
-    "FLS intracorporeal knot tying",
-    "laparoscopic suturing FLS box trainer",
-    "FLS skills test suturing knot",
-    "FLS proficiency intracorporeal suture",
-    "fundamentals laparoscopic surgery suture task",
-    "FLS task 5 practice resident",
-    "FLS exam suturing technique",
-    "intracorporeal suturing box trainer practice",
-    "laparoscopic knot tying penrose drain",
-    "FLS suturing PGY resident training",
-    "SAGES FLS skills demonstration",
+DEFAULT_QUERIES: list[str] = [
+    "FLS intracorporeal suture",
+    "FLS task 5",
+    "laparoscopic suturing FLS box",
+    "FLS skills test suturing",
+    "intracorporeal knot tying FLS trainer",
+    "FLS proficiency suture",
 ]
 
-# Filters
-MIN_DURATION_SEC = 30       # Skip clips shorter than 30s
-MAX_DURATION_SEC = 660      # FLS max is 600s, allow 60s buffer for intro/outro
-MAX_RESOLUTION = "720"      # Don't waste bandwidth on 4K
-MAX_VIDEOS_PER_QUERY = 20   # Cap per search query
+MIN_DURATION_SEC = 30
+MAX_DURATION_SEC = 600     # Hard FLS ceiling — no buffer
+MAX_RESOLUTION = "720"
+MAX_VIDEOS_PER_QUERY = 20
 
-# Keywords that indicate NOT Task 5 (skip these)
-EXCLUDE_KEYWORDS = [
-    "peg transfer", "pattern cut", "ligating loop", "extracorporeal",
-    "clip applying", "task 1", "task 2", "task 3", "task 4",
-    "da vinci", "robotic", "real surgery", "cholecystectomy",
-    "appendectomy", "hernia repair", "operating room",
+# Reject videos that are clearly a different FLS task
+EXCLUDE_TITLE_KEYWORDS: list[str] = [
+    "peg transfer",
+    "pattern cutting",
+    "pattern cut",
+    "clip applying",
+    "ligating loop",
+    "extracorporeal",
+    "task 1", "task 2", "task 3", "task 4",
+    "da vinci", "robotic",
+    "cholecystectomy", "appendectomy", "hernia repair",
 ]
 
-# Keywords that boost confidence this IS Task 5
-TASK5_KEYWORDS = [
+# Presence of any of these boosts confidence it IS Task 5 intracorporeal suturing
+TASK5_KEYWORDS: list[str] = [
     "intracorporeal", "task 5", "suture", "knot tying",
-    "penrose drain", "needle driver", "FLS box",
+    "penrose drain", "needle driver", "fls box",
     "surgeon knot", "single throw", "double throw",
 ]
 
-# Skill level signals in title/description
-SKILL_SIGNALS = {
-    "expert": ["expert", "attending", "staff surgeon", "faculty", "demonstration", "demo", "tutorial"],
-    "advanced": ["pgy-4", "pgy-5", "pgy4", "pgy5", "senior resident", "chief resident", "fellow"],
-    "intermediate": ["pgy-2", "pgy-3", "pgy2", "pgy3", "resident"],
-    "novice": ["pgy-1", "pgy1", "intern", "medical student", "ms3", "ms4", "beginner", "first attempt"],
-}
+# Tier A: authoritative expert / professional demonstration
+TIER_A_SIGNALS: list[str] = [
+    "expert", "attending", "staff surgeon", "faculty", "sages",
+    "demonstration", "demo", "tutorial", "board certified", "professor",
+]
+
+# Tier B: labeled trainee — identifiable performance context (score / level)
+TIER_B_SIGNALS: list[str] = [
+    "pgy", "resident", "student", "ms3", "ms4", "intern",
+    "beginner", "first attempt", "score", "seconds", "time:",
+]
+
+
+console = Console()
+app = typer.Typer(
+    name="harvest",
+    help="FLS-Training YouTube harvester — discovers, filters, and ingests Task 5 videos.",
+    add_completion=False,
+)
 
 
 # ============================================================
-# CORE FUNCTIONS
+# CORE HELPERS
 # ============================================================
 
-def log_entry(entry: dict):
-    """Append an entry to the harvest log."""
-    with open(HARVEST_LOG, "a") as f:
+def log_entry(entry: dict, base_dir: Path = REPO_ROOT) -> None:
+    log_path = base_dir / "harvest_log.jsonl"
+    with log_path.open("a") as f:
         f.write(json.dumps(entry, default=str) + "\n")
 
 
-def get_already_downloaded() -> set:
-    """Return set of YouTube video IDs already in the harvest log."""
-    ids = set()
-    if HARVEST_LOG.exists():
-        for line in HARVEST_LOG.read_text().splitlines():
-            try:
-                entry = json.loads(line)
-                if "youtube_id" in entry:
-                    ids.add(entry["youtube_id"])
-            except json.JSONDecodeError:
-                continue
+def get_already_downloaded(base_dir: Path = REPO_ROOT) -> set[str]:
+    log_path = base_dir / "harvest_log.jsonl"
+    ids: set[str] = set()
+    if not log_path.exists():
+        return ids
+    for line in log_path.read_text().splitlines():
+        try:
+            entry = json.loads(line)
+            if "youtube_id" in entry:
+                ids.add(entry["youtube_id"])
+        except json.JSONDecodeError:
+            continue
     return ids
 
 
-def extract_skill_level(title: str, description: str) -> str:
-    """Guess skill level from video metadata."""
+def classify_tier(title: str, description: str) -> str:
+    """Classify video into tier A / B / C.
+
+    A — expert/attending/SAGES demonstration (authoritative ground truth)
+    B — labeled trainee with identifiable performance context
+    C — unlabeled (useful but lower confidence)
+    """
     text = ((title or "") + " " + (description or "")).lower()
-    for level, keywords in SKILL_SIGNALS.items():
-        if any(kw in text for kw in keywords):
-            return level
-    return "unknown"
+    if any(sig in text for sig in TIER_A_SIGNALS):
+        return "A"
+    if any(sig in text for sig in TIER_B_SIGNALS):
+        return "B"
+    return "C"
 
 
-def extract_time_from_metadata(title: str, description: str) -> float | None:
-    """Try to extract a completion time from title or description."""
+def extract_time_from_metadata(title: str, description: str) -> Optional[float]:
+    """Try to parse a completion time (seconds) from title or description."""
     text = (title or "") + " " + (description or "")
-    # Patterns like "142 seconds", "2:22", "time: 135s"
     patterns = [
-        r'(\d{2,3})\s*(?:seconds|sec|s)\b',           # "142 seconds" or "142s"
-        r'(?:time|completed?)\s*[:=]?\s*(\d{2,3})\b',  # "time: 142" or "completed 142"
-        r'\b(\d{1,2}):(\d{2})\b',                       # "2:22" format
+        r'(\d{2,3})\s*(?:seconds|sec|s)\b',
+        r'(?:time|completed?)\s*[:=]?\s*(\d{2,3})\b',
+        r'\b(\d{1,2}):(\d{2})\b',
     ]
     for pat in patterns:
         m = re.search(pat, text, re.IGNORECASE)
         if m:
             groups = m.groups()
-            if len(groups) == 2 and groups[1]:  # mm:ss format
-                return int(groups[0]) * 60 + int(groups[1])
-            elif groups[0]:
+            if len(groups) == 2 and groups[1]:
+                val = int(groups[0]) * 60 + int(groups[1])
+            else:
                 val = int(groups[0])
-                if 30 <= val <= 600:  # plausible FLS time
-                    return float(val)
+            if 30 <= val <= 600:
+                return float(val)
     return None
 
 
 def is_likely_task5(title: str, description: str) -> bool:
-    """Check if a video is likely FLS Task 5 based on metadata."""
+    """Return True if the video is plausibly FLS Task 5 intracorporeal suturing."""
     text = ((title or "") + " " + (description or "")).lower()
-
-    # Reject if it matches exclusion keywords
-    for kw in EXCLUDE_KEYWORDS:
+    # Hard-reject non-Task-5 FLS tasks by title keyword
+    for kw in EXCLUDE_TITLE_KEYWORDS:
         if kw in text:
             return False
-
-    # Accept if it matches Task 5 keywords
-    score = sum(1 for kw in TASK5_KEYWORDS if kw in text)
-    return score >= 1  # At least one Task 5 keyword
+    # Require at least one positive Task-5 keyword
+    return any(kw in text for kw in TASK5_KEYWORDS)
 
 
 def search_youtube(query: str, max_results: int = MAX_VIDEOS_PER_QUERY) -> list[dict]:
-    """Search YouTube and return video metadata (without downloading)."""
     cmd = [
         *YT_DLP_CMD,
         f"ytsearch{max_results}:{query}",
@@ -177,7 +198,7 @@ def search_youtube(query: str, max_results: int = MAX_VIDEOS_PER_QUERY) -> list[
         "--quiet",
     ]
     result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-    videos = []
+    videos: list[dict] = []
     for line in result.stdout.strip().split("\n"):
         if not line.strip():
             continue
@@ -198,20 +219,18 @@ def search_youtube(query: str, max_results: int = MAX_VIDEOS_PER_QUERY) -> list[
     return videos
 
 
-def download_video(url: str, output_dir: Path) -> dict | None:
-    """Download a single video and return its metadata."""
+def download_video(url: str, output_dir: Path) -> Optional[dict]:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_template = str(output_dir / "%(id)s.%(ext)s")
 
     ffmpeg_available = shutil.which("ffmpeg") is not None
     if ffmpeg_available:
-        format_selector = (
+        fmt = (
             f"bestvideo[height<={MAX_RESOLUTION}][vcodec!=none]+"
             f"bestaudio[acodec!=none]/best[height<={MAX_RESOLUTION}][vcodec!=none]"
         )
     else:
-        # Without ffmpeg, prefer single-file MP4 video+audio assets that OpenCV can read.
-        format_selector = (
+        fmt = (
             f"best[ext=mp4][height<={MAX_RESOLUTION}][vcodec!=none][acodec!=none]/"
             f"best[ext=mp4][vcodec!=none][acodec!=none]/"
             f"best[vcodec!=none][acodec!=none]"
@@ -221,47 +240,41 @@ def download_video(url: str, output_dir: Path) -> dict | None:
         *YT_DLP_CMD,
         url,
         "--output", output_template,
-        "--format", format_selector,
-        "--write-info-json",          # Save metadata JSON alongside video
-        "--no-playlist",              # Single video only
+        "--format", fmt,
+        "--write-info-json",
+        "--no-playlist",
         "--socket-timeout", "30",
         "--retries", "3",
         "--quiet",
-        "--print-json",              # Print final metadata as JSON
+        "--print-json",
     ]
-
     if ffmpeg_available:
         cmd.extend(["--merge-output-format", "mp4"])
 
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         if result.returncode != 0:
-            print(f"  ERROR downloading: {result.stderr[:200]}")
+            console.print(f"  [red]ERROR[/red] downloading: {result.stderr[:200]}")
             return None
 
         info = json.loads(result.stdout.strip().split("\n")[-1])
 
-        filepath = None
-        for ext in ["mp4", "mkv", "webm"]:
+        filepath: Optional[Path] = None
+        for ext in ("mp4", "mkv", "webm"):
             candidate = output_dir / f"{info['id']}.{ext}"
             if candidate.exists():
                 filepath = candidate
                 break
-
         if not filepath:
-            # Try to find any file matching the ID
             for f in output_dir.glob(f"{info['id']}.*"):
                 if f.suffix != ".json":
                     filepath = f
                     break
-
         if not filepath:
-            print(f"  ERROR: Downloaded but can't find file for {info['id']}")
+            console.print(f"  [red]ERROR[/red]: can't find downloaded file for {info['id']}")
             return None
 
-        # Compute file hash
-        file_hash = hashlib.md5(filepath.read_bytes()[:1024*1024]).hexdigest()[:16]
-
+        file_hash = hashlib.md5(filepath.read_bytes()[:1024 * 1024]).hexdigest()[:16]
         return {
             "youtube_id": info.get("id", ""),
             "title": info.get("title", ""),
@@ -276,348 +289,328 @@ def download_video(url: str, output_dir: Path) -> dict | None:
             "url": url,
         }
     except subprocess.TimeoutExpired:
-        print(f"  TIMEOUT downloading {url}")
+        console.print(f"  [red]TIMEOUT[/red] downloading {url}")
         return None
-    except (json.JSONDecodeError, KeyError) as e:
-        print(f"  ERROR parsing download result: {e}")
+    except (json.JSONDecodeError, KeyError) as exc:
+        console.print(f"  [red]ERROR[/red] parsing download result: {exc}")
         return None
 
 
-def score_video(filepath: str, video_id: str) -> dict | None:
-    """Run the FLS scoring pipeline on a downloaded video.
-
-    Calls:
-      1. scripts/010_ingest_video.py  -- registers the video
-      2. scripts/020_score_frontier.py -- dual-teacher scoring
-      3. scripts/026_auto_validate.py  -- auto-validation
-
-    Returns scoring summary or None if pipeline not found.
-    """
-    # Check if pipeline scripts exist
-    ingest_script = REPO_ROOT / "scripts/010_ingest_video.py"
-    score_script = REPO_ROOT / "scripts/020_score_frontier.py"
-    validate_script = REPO_ROOT / "scripts/026_auto_validate.py"
+def ingest_video(filepath: str, video_id: str, base_dir: Path = REPO_ROOT) -> Optional[dict]:
+    """Feed a downloaded video into 010_ingest_video.py → 020_score_frontier.py → 026_auto_validate.py."""
+    ingest_script = base_dir / "scripts/010_ingest_video.py"
+    score_script = base_dir / "scripts/020_score_frontier.py"
+    validate_script = base_dir / "scripts/026_auto_validate.py"
 
     if not ingest_script.exists():
-        print(f"  SKIP scoring: {ingest_script} not found (push framework code first)")
+        console.print(f"  [yellow]SKIP[/yellow] ingest: {ingest_script} not found")
         return None
 
-    # 1. Ingest
-    print(f"  Ingesting {video_id}...")
-    result = subprocess.run(
-            [
-                sys.executable,
-                str(ingest_script),
-                "--base-dir", str(REPO_ROOT),
-                "--video", filepath,
-                "--video-id", video_id,
-                "--task", "5",
-            ],
-        capture_output=True, text=True, timeout=120
+    console.print(f"  Ingesting [cyan]{video_id}[/cyan]...")
+    r = subprocess.run(
+        [sys.executable, str(ingest_script),
+         "--base-dir", str(base_dir),
+         "--video", filepath,
+         "--video-id", video_id,
+         "--task", "5"],
+        capture_output=True, text=True, timeout=120,
     )
-    if result.returncode != 0:
-        print(f"  ERROR ingesting: {result.stderr[:200]}")
+    if r.returncode != 0:
+        console.print(f"  [red]ERROR[/red] ingesting: {r.stderr[:200]}")
         return None
 
-    # Extract the video ID from ingest output
     ingested_id = video_id
-    for line in result.stdout.split("\n"):
-        if "ID" in line:
-            parts = line.split()
-            if len(parts) >= 2:
-                ingested_id = parts[-1]
-                break
+    for line in r.stdout.split("\n"):
+        if line.startswith("ID:"):
+            ingested_id = line.split()[-1]
+            break
 
-    # 2. Score
     if score_script.exists():
-        print(f"  Scoring {ingested_id}...")
-        result = subprocess.run(
-            [sys.executable, str(score_script), "--base-dir", str(REPO_ROOT), "--video-id", ingested_id, "--video", filepath],
-            capture_output=True, text=True, timeout=300
+        console.print(f"  Scoring [cyan]{ingested_id}[/cyan]...")
+        r = subprocess.run(
+            [sys.executable, str(score_script),
+             "--base-dir", str(base_dir),
+             "--video-id", ingested_id,
+             "--video", filepath],
+            capture_output=True, text=True, timeout=300,
         )
-        if result.returncode != 0:
-            print(f"  ERROR scoring: {result.stderr[:200]}")
-            return {"ingested_id": ingested_id, "scored": False, "error": result.stderr[:200]}
+        if r.returncode != 0:
+            console.print(f"  [red]ERROR[/red] scoring: {r.stderr[:200]}")
+            return {"ingested_id": ingested_id, "scored": False}
 
-    # 3. Auto-validate
     if validate_script.exists():
-        print(f"  Validating {ingested_id}...")
         subprocess.run(
-            [sys.executable, str(validate_script), "--base-dir", str(REPO_ROOT), "--video-id", ingested_id],
-            capture_output=True, text=True, timeout=60
+            [sys.executable, str(validate_script),
+             "--base-dir", str(base_dir),
+             "--video-id", ingested_id],
+            capture_output=True, text=True, timeout=60,
         )
 
     return {"ingested_id": ingested_id, "scored": True}
 
 
 # ============================================================
-# MAIN WORKFLOWS
+# SHARED DOWNLOAD LOOP
 # ============================================================
 
-def harvest_from_search(dry_run: bool = False, score: bool = False):
-    """Discover and download FLS Task 5 videos from YouTube search."""
-    already_downloaded = get_already_downloaded()
-    stats = {"searched": 0, "candidates": 0, "filtered_out": 0,
-             "already_had": 0, "downloaded": 0, "scored": 0, "errors": 0}
-
-    print(f"=== FLS YouTube Harvester ===")
-    print(f"Already have {len(already_downloaded)} videos in harvest log")
-    print(f"Running {len(SEARCH_QUERIES)} search queries...\n")
-
-    all_candidates = []
-
-    for query in SEARCH_QUERIES:
-        print(f"Searching: '{query}'...")
-        videos = search_youtube(query)
-        stats["searched"] += 1
-        print(f"  Found {len(videos)} results")
-
-        for v in videos:
-            yt_id = v["youtube_id"]
-            if not yt_id:
-                continue
-
-            # Skip already downloaded
-            if yt_id in already_downloaded:
-                stats["already_had"] += 1
-                continue
-
-            # Skip based on duration
-            dur = v.get("duration") or 0
-            if dur < MIN_DURATION_SEC or dur > MAX_DURATION_SEC:
-                stats["filtered_out"] += 1
-                continue
-
-            # Skip if not likely Task 5
-            if not is_likely_task5(v["title"], v["description"]):
-                stats["filtered_out"] += 1
-                continue
-
-            # Deduplicate across queries
-            if yt_id not in {c["youtube_id"] for c in all_candidates}:
-                v["skill_level"] = extract_skill_level(v["title"], v["description"])
-                v["extracted_time"] = extract_time_from_metadata(v["title"], v["description"])
-                all_candidates.append(v)
-                stats["candidates"] += 1
-
-    print(f"\n=== Found {stats['candidates']} new candidates ===\n")
+def _download_candidates(
+    candidates: list[dict],
+    *,
+    dry_run: bool,
+    score: bool,
+    output_dir: Path,
+    base_dir: Path,
+    queries: Optional[list[str]] = None,
+) -> dict:
+    stats = {"candidates": len(candidates), "downloaded": 0, "scored": 0, "errors": 0}
 
     if dry_run:
-        print("DRY RUN — would download these videos:\n")
-        for i, v in enumerate(all_candidates, 1):
-            skill = v["skill_level"]
-            time_str = f" [{v['extracted_time']:.0f}s]" if v["extracted_time"] else ""
-            print(f"  {i:3d}. [{skill:12s}] {v['title'][:70]}{time_str}")
-            print(f"       {v['url']}  ({v.get('duration', '?')}s, {v['channel']})")
-        print(f"\nStats: {json.dumps(stats, indent=2)}")
-        return
+        table = Table(title=f"Dry-run — {len(candidates)} candidates", show_lines=False)
+        table.add_column("#", style="dim", width=4)
+        table.add_column("Tier", style="bold", width=4)
+        table.add_column("Title", no_wrap=False, max_width=60)
+        table.add_column("Duration", justify="right", width=8)
+        table.add_column("Channel", max_width=24)
+        for i, v in enumerate(candidates, 1):
+            dur = v.get("duration")
+            dur_str = f"{dur}s" if dur else "?"
+            table.add_row(str(i), v.get("tier", "?"), v.get("title", "")[:60], dur_str, v.get("channel", ""))
+        console.print(table)
+        console.print(f"\n[dim]Stats: {json.dumps(stats)}[/dim]")
+        return stats
 
-    # Download each candidate
-    for i, v in enumerate(all_candidates, 1):
-        yt_id = v["youtube_id"]
-        print(f"\n[{i}/{len(all_candidates)}] Downloading: {v['title'][:60]}...")
+    already = get_already_downloaded(base_dir)
 
-        meta = download_video(v["url"], DOWNLOAD_DIR)
-        if meta is None:
-            stats["errors"] += 1
-            log_entry({
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-                "event": "download_failed",
-                "youtube_id": yt_id,
-                "url": v["url"],
-                "title": v["title"],
-            })
-            continue
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TextColumn("{task.completed}/{task.total}"),
+        TimeElapsedColumn(),
+        console=console,
+    ) as progress:
+        task = progress.add_task("Downloading…", total=len(candidates))
 
-        stats["downloaded"] += 1
-        already_downloaded.add(yt_id)
+        for v in candidates:
+            yt_id = v["youtube_id"]
+            title_short = v.get("title", "")[:50]
+            progress.update(task, description=f"[cyan]{title_short}[/cyan]")
 
-        # Merge search metadata with download metadata
-        entry = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "event": "downloaded",
-            **meta,
-            "skill_level": v["skill_level"],
-            "extracted_time": v["extracted_time"],
-            "task5_confidence": "high" if sum(1 for kw in TASK5_KEYWORDS if kw in (v["title"] + " " + v["description"]).lower()) >= 2 else "medium",
-        }
-        log_entry(entry)
-        print(f"  OK: {meta['filepath']} ({meta.get('duration', '?')}s, {meta.get('resolution', '?')})")
+            if yt_id in already:
+                progress.advance(task)
+                continue
 
-        # Score if requested
-        if score:
-            video_id = f"yt_{yt_id}"
-            result = score_video(meta["filepath"], video_id)
-            if result and result.get("scored"):
-                stats["scored"] += 1
+            meta = download_video(v["url"], output_dir)
+            if meta is None:
+                stats["errors"] += 1
                 log_entry({
                     "timestamp": datetime.now(timezone.utc).isoformat(),
-                    "event": "scored",
+                    "event": "download_failed",
                     "youtube_id": yt_id,
-                    **result,
-                })
+                    "url": v["url"],
+                    "title": v.get("title", ""),
+                }, base_dir)
+                progress.advance(task)
+                continue
 
-    print(f"\n=== Harvest Complete ===")
-    print(json.dumps(stats, indent=2))
+            stats["downloaded"] += 1
+            already.add(yt_id)
+
+            entry: dict = {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "event": "downloaded",
+                **meta,
+                "tier": v.get("tier", "C"),
+                "extracted_time": v.get("extracted_time"),
+                "task5_confidence": (
+                    "high"
+                    if sum(1 for kw in TASK5_KEYWORDS
+                           if kw in (v.get("title", "") + " " + v.get("description", "")).lower()) >= 2
+                    else "medium"
+                ),
+            }
+            if queries:
+                entry["search_queries"] = queries
+            log_entry(entry, base_dir)
+            progress.advance(task)
+
+            if score:
+                vid = f"yt_{yt_id}"
+                result = ingest_video(meta["filepath"], vid, base_dir)
+                if result and result.get("scored"):
+                    stats["scored"] += 1
+                    log_entry({
+                        "timestamp": datetime.now(timezone.utc).isoformat(),
+                        "event": "scored",
+                        "youtube_id": yt_id,
+                        **result,
+                    }, base_dir)
+
+    return stats
 
 
-def harvest_from_urls(url_file: str, score: bool = False):
-    """Download specific URLs from a file (one URL per line)."""
-    already_downloaded = get_already_downloaded()
-    urls = Path(url_file).read_text().strip().splitlines()
-    urls = [u.strip() for u in urls if u.strip() and not u.startswith("#")]
+# ============================================================
+# TYPER CLI
+# ============================================================
 
-    print(f"=== Processing {len(urls)} URLs from {url_file} ===\n")
+@app.command()
+def main(
+    # Mode (mutually exclusive via flag convention)
+    search: bool = typer.Option(False, "--search", help="Auto-discover via search queries"),
+    url: Optional[str] = typer.Option(None, "--url", help="Download a single YouTube URL"),
+    urls: Optional[Path] = typer.Option(None, "--urls", help="File with one YouTube URL per line"),
+    # Query options (only relevant with --search)
+    queries: Optional[list[str]] = typer.Option(None, "--queries", help="Search query strings (repeatable)"),
+    queries_file: Optional[Path] = typer.Option(None, "--queries-file", help="File with one search query per line"),
+    # Behaviour flags
+    dry_run: bool = typer.Option(False, "--dry-run", help="Show what would be downloaded, don't download"),
+    score: bool = typer.Option(False, "--score", help="Auto-feed valid videos into 010_ingest_video.py"),
+    # I/O
+    output: Optional[Path] = typer.Option(None, "--output", help="Download directory (default: ~/fls_harvested_videos)"),
+    base_dir: Path = typer.Option(REPO_ROOT, "--base-dir", help="Repo root (for harvest_log.jsonl)"),
+    category: Optional[str] = typer.Option(None, "--category", help="(ignored — kept for CLI compat)"),
+) -> None:
+    """FLS-Training YouTube harvester.
 
-    stats = {"total": len(urls), "downloaded": 0, "skipped": 0, "errors": 0, "scored": 0}
+    Discover, filter, and optionally ingest Task 5 intracorporeal suturing videos.
+    """
+    output_dir = (output or DOWNLOAD_DIR).expanduser()
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    for i, url in enumerate(urls, 1):
-        # Extract YouTube ID from URL
-        yt_id = None
-        m = re.search(r'(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})', url)
-        if m:
-            yt_id = m.group(1)
+    mode_flags = [search, url is not None, urls is not None]
+    if sum(mode_flags) != 1:
+        console.print("[red]Provide exactly one of --search, --url, or --urls[/red]")
+        raise typer.Exit(1)
 
-        if yt_id and yt_id in already_downloaded:
-            print(f"[{i}/{len(urls)}] SKIP (already have): {url}")
-            stats["skipped"] += 1
-            continue
+    # ── single URL ──────────────────────────────────────────
+    if url is not None:
+        yt_match = re.search(r'(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})', url)
+        yt_id = yt_match.group(1) if yt_match else "unknown"
 
-        print(f"[{i}/{len(urls)}] Downloading: {url}")
-        meta = download_video(url, DOWNLOAD_DIR)
+        if dry_run:
+            console.print(f"[dim]DRY RUN[/dim] would download: {url}")
+            return
+
+        meta = download_video(url, output_dir)
         if meta is None:
-            stats["errors"] += 1
-            continue
+            raise typer.Exit(1)
 
-        stats["downloaded"] += 1
-        if yt_id:
-            already_downloaded.add(yt_id)
-
-        # Get title/desc for classification
         title = meta.get("title", "")
         desc = meta.get("description", "")
-
-        entry = {
+        entry: dict = {
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "event": "downloaded",
             **meta,
-            "skill_level": extract_skill_level(title, desc),
+            "tier": classify_tier(title, desc),
             "extracted_time": extract_time_from_metadata(title, desc),
-            "source": "url_list",
-            "source_file": url_file,
+            "source": "single_url",
         }
-        log_entry(entry)
-        print(f"  OK: {meta['filepath']} ({meta.get('duration', '?')}s)")
+        log_entry(entry, base_dir)
+
+        console.print(f"\n[green]Downloaded:[/green] {meta['filepath']}")
+        console.print(f"  Duration:   {meta.get('duration', '?')}s")
+        console.print(f"  Resolution: {meta.get('resolution', '?')}")
+        console.print(f"  Tier:       {entry['tier']}")
 
         if score:
-            video_id = f"yt_{meta.get('youtube_id', f'manual_{i}')}"
-            result = score_video(meta["filepath"], video_id)
-            if result and result.get("scored"):
-                stats["scored"] += 1
+            ingest_video(meta["filepath"], f"yt_{yt_id}", base_dir)
+        return
 
-    print(f"\n=== URL Harvest Complete ===")
-    print(json.dumps(stats, indent=2))
+    # ── URL list ─────────────────────────────────────────────
+    if urls is not None:
+        raw = urls.read_text().strip().splitlines()
+        url_list = [u.strip() for u in raw if u.strip() and not u.startswith("#")]
+        console.print(f"[bold]Processing {len(url_list)} URLs from {urls}[/bold]\n")
+        already = get_already_downloaded(base_dir)
+        candidates: list[dict] = []
+        for u in url_list:
+            m = re.search(r'(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})', u)
+            yt_id = m.group(1) if m else None
+            if yt_id and yt_id in already:
+                continue
+            candidates.append({
+                "youtube_id": yt_id or u,
+                "title": u,
+                "url": u,
+                "duration": None,
+                "channel": "",
+                "description": "",
+                "tier": "C",
+                "extracted_time": None,
+            })
+        stats = _download_candidates(candidates, dry_run=dry_run, score=score,
+                                     output_dir=output_dir, base_dir=base_dir)
+        console.print(f"\n[bold green]Done.[/bold green] {json.dumps(stats)}")
+        return
 
+    # ── search mode ───────────────────────────────────────────
+    active_queries: list[str]
+    if queries:
+        active_queries = list(queries)
+    elif queries_file is not None and queries_file.exists():
+        active_queries = [
+            q.strip() for q in queries_file.read_text().splitlines()
+            if q.strip() and not q.startswith("#")
+        ]
+    elif (Path.cwd() / "queries.txt").exists():
+        active_queries = [
+            q.strip() for q in (Path.cwd() / "queries.txt").read_text().splitlines()
+            if q.strip() and not q.startswith("#")
+        ]
+    else:
+        active_queries = list(DEFAULT_QUERIES)
 
-def harvest_single(url: str, score: bool = False):
-    """Download and optionally score a single video."""
-    print(f"Downloading: {url}")
-    meta = download_video(url, DOWNLOAD_DIR)
-    if meta is None:
-        print("Failed to download.")
-        sys.exit(1)
+    already = get_already_downloaded(base_dir)
+    console.print(f"[bold]FLS YouTube Harvester[/bold] — {len(active_queries)} queries, "
+                  f"{len(already)} already logged\n")
 
-    title = meta.get("title", "")
-    desc = meta.get("description", "")
+    all_candidates: list[dict] = []
+    seen_ids: set[str] = set()
+    stats_search = {"filtered_duration": 0, "filtered_task5": 0, "already_had": 0}
 
-    entry = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "event": "downloaded",
-        **meta,
-        "skill_level": extract_skill_level(title, desc),
-        "extracted_time": extract_time_from_metadata(title, desc),
-        "source": "single_url",
-    }
-    log_entry(entry)
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        console=console,
+    ) as progress:
+        task = progress.add_task("Searching…", total=len(active_queries))
+        for q in active_queries:
+            progress.update(task, description=f"Searching: [cyan]{q[:60]}[/cyan]")
+            videos = search_youtube(q)
+            for v in videos:
+                yt_id = v["youtube_id"]
+                if not yt_id or yt_id in seen_ids:
+                    continue
+                if yt_id in already:
+                    stats_search["already_had"] += 1
+                    continue
+                dur = v.get("duration") or 0
+                if dur < MIN_DURATION_SEC or dur > MAX_DURATION_SEC:
+                    stats_search["filtered_duration"] += 1
+                    continue
+                if not is_likely_task5(v["title"], v["description"]):
+                    stats_search["filtered_task5"] += 1
+                    continue
+                seen_ids.add(yt_id)
+                v["tier"] = classify_tier(v["title"], v["description"])
+                v["extracted_time"] = extract_time_from_metadata(v["title"], v["description"])
+                all_candidates.append(v)
+            progress.advance(task)
 
-    print(f"\nDownloaded: {meta['filepath']}")
-    print(f"  Duration:    {meta.get('duration', '?')}s")
-    print(f"  Resolution:  {meta.get('resolution', '?')}")
-    print(f"  Channel:     {meta.get('channel', '?')}")
-    print(f"  Skill level: {entry['skill_level']}")
-    if entry["extracted_time"]:
-        print(f"  Extracted time: {entry['extracted_time']:.0f}s")
-
-    if score:
-        video_id = f"yt_{meta.get('youtube_id', 'single')}"
-        score_video(meta["filepath"], video_id)
-
-
-# ============================================================
-# CLI
-# ============================================================
-
-def main():
-    global DOWNLOAD_DIR
-
-    download_dir = DOWNLOAD_DIR
-
-    parser = argparse.ArgumentParser(
-        description="FLS-Training YouTube Video Harvester",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  # Discover & download FLS videos from YouTube search
-  python scripts/011_harvest_youtube.py --search
-
-  # Preview what would be downloaded (no actual downloads)
-  python scripts/011_harvest_youtube.py --search --dry-run
-
-  # Download from a list of specific URLs
-  python scripts/011_harvest_youtube.py --urls my_videos.txt
-
-  # Download a single video
-  python scripts/011_harvest_youtube.py --url "https://youtube.com/watch?v=..."
-
-  # Download AND score through the full pipeline
-  python scripts/011_harvest_youtube.py --urls my_videos.txt --score
-
-  # Change download directory
-  python scripts/011_harvest_youtube.py --search --output ~/my_fls_videos
-        """
+    console.print(
+        f"\nFound [bold]{len(all_candidates)}[/bold] new candidates  "
+        f"([dim]filtered: duration={stats_search['filtered_duration']}, "
+        f"task5={stats_search['filtered_task5']}, "
+        f"already={stats_search['already_had']}[/dim])\n"
     )
 
-    mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--search", action="store_true",
-                      help="Auto-discover FLS Task 5 videos via YouTube search")
-    mode.add_argument("--urls", type=str,
-                      help="Path to a text file with one YouTube URL per line")
-    mode.add_argument("--url", type=str,
-                      help="Single YouTube URL to download")
-
-    parser.add_argument("--score", action="store_true",
-                        help="Also run the scoring pipeline on each downloaded video")
-    parser.add_argument("--dry-run", action="store_true",
-                        help="Show what would be downloaded without actually downloading")
-    parser.add_argument("--output", type=str, default=None,
-                        help=f"Download directory (default: {DOWNLOAD_DIR})")
-
-    args = parser.parse_args()
-
-    if args.output:
-        download_dir = Path(args.output).expanduser()
-
-    download_dir.mkdir(parents=True, exist_ok=True)
-
-    DOWNLOAD_DIR = download_dir
-
-    if args.search:
-        harvest_from_search(dry_run=args.dry_run, score=args.score)
-    elif args.urls:
-        harvest_from_urls(args.urls, score=args.score)
-    elif args.url:
-        harvest_single(args.url, score=args.score)
+    stats = _download_candidates(
+        all_candidates, dry_run=dry_run, score=score,
+        output_dir=output_dir, base_dir=base_dir, queries=active_queries,
+    )
+    console.print(f"\n[bold green]Harvest complete.[/bold green] {json.dumps(stats)}")
 
 
 if __name__ == "__main__":
-    main()
+    app()
+
