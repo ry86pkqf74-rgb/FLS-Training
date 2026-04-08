@@ -22,12 +22,48 @@ Text-only mode (legacy v3 iteration):
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 from pathlib import Path
 
 from src.memory.learning_log import LearningLog
 from src.memory.memory_store import MemoryStore
 from src.training.prepare_dataset import prepare_dataset
+
+
+def _load_exclude_ids(gold_manifest: str | None) -> list[str]:
+    """Load held-out video_ids from a gold-set manifest JSON.
+
+    Supports both the manifest schema emitted by
+    scripts/047_build_gold_set.py (top-level ``video_ids`` list of
+    strings) and the older per-record ``selected`` list format, for
+    forward compatibility.
+    """
+    if not gold_manifest:
+        return []
+    path = Path(gold_manifest)
+    if not path.is_file():
+        raise SystemExit(f"--gold-manifest not found: {path}")
+    data = json.loads(path.read_text())
+
+    ids: list[str] = []
+    raw_ids = data.get("video_ids")
+    if isinstance(raw_ids, list):
+        ids = [str(v) for v in raw_ids if v]
+    else:
+        selected = data.get("selected")
+        if isinstance(selected, list):
+            ids = [
+                str(entry.get("video_id"))
+                for entry in selected
+                if isinstance(entry, dict) and entry.get("video_id")
+            ]
+
+    if not ids:
+        raise SystemExit(
+            f"--gold-manifest {path} has no video_ids (checked 'video_ids' and 'selected')"
+        )
+    return ids
 
 
 def _coerce_version_tag(ver: str) -> int:
@@ -79,6 +115,15 @@ def main() -> int:
         default="trainee",
         help="Hold-out strategy. 'trainee' is resident-aware, 'video' is legacy.",
     )
+    parser.add_argument(
+        "--gold-manifest",
+        default=None,
+        help=(
+            "Path to a gold-set manifest JSON from scripts/047_build_gold_set.py. "
+            "Every video_id in the manifest is dropped from the training corpus so "
+            "the eval set never leaks into train."
+        ),
+    )
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -89,6 +134,12 @@ def main() -> int:
     base = Path(args.base_dir)
     store = MemoryStore(str(base))
     log = LearningLog(base / "memory")
+
+    exclude_ids = _load_exclude_ids(args.gold_manifest)
+    if exclude_ids:
+        logging.getLogger(__name__).info(
+            "Excluding %d gold-set video_ids from training corpus", len(exclude_ids)
+        )
 
     manifest = prepare_dataset(
         store=store,
@@ -104,6 +155,7 @@ def main() -> int:
         frames_dir=args.frames_dir,
         max_frames_per_sample=args.max_frames,
         group_by=args.group_by,
+        exclude_video_ids=exclude_ids,
     )
 
     print()

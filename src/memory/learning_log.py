@@ -12,12 +12,15 @@ import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
-from src.scoring.schema import (
-    CritiqueResult,
-    LearningEvent,
-    ScoringResult,
-    Correction,
-)
+# Note: this module is stale relative to the current schema — earlier
+# revisions imported CritiqueResult/LearningEvent/Correction types that
+# no longer exist in src.scoring.schema. The only callers in the current
+# codebase are append_event() (prepare_dataset, drift_detector) and
+# read_events() (drift_detector). The save_score / save_critique /
+# save_correction helpers were never called from anywhere outside this
+# file — the real persistence path goes through src.memory.memory_store.
+# The dead helpers have been removed and append_event now builds a plain
+# dict so the module imports cleanly.
 
 logger = logging.getLogger(__name__)
 
@@ -47,13 +50,14 @@ class LearningLog:
 
     def append_event(self, event_type: str, data: dict) -> None:
         """Append an event to the learning ledger."""
-        event = LearningEvent(
-            timestamp=self._now(),
-            event_type=event_type,
-            data=data,
-        )
+        event = {
+            "timestamp": self._now().isoformat(),
+            "event_type": event_type,
+            "data": data,
+        }
+        self.ledger_path.parent.mkdir(parents=True, exist_ok=True)
         with open(self.ledger_path, "a") as f:
-            f.write(event.model_dump_json() + "\n")
+            f.write(json.dumps(event, default=str) + "\n")
         logger.debug(f"Ledger event: {event_type}")
 
     def read_events(
@@ -95,53 +99,10 @@ class LearningLog:
         logger.info(f"Wrote {path}")
         return path
 
-    def save_score(self, score: ScoringResult) -> Path:
-        """Save a scoring result and log the event."""
-        model_slug = score.model_name.replace("/", "-").replace(" ", "_")
-        filename = f"{score.video_id}_{model_slug}_{self._ts_str()}.json"
-        path = self._write_json("scores", filename, score.model_dump())
-
-        self.append_event("frontier_scored", {
-            "video_id": score.video_id,
-            "score_id": score.id,
-            "model": score.model_name,
-            "source": score.source.value,
-            "fls_score": score.estimated_fls_score,
-            "confidence": score.confidence_score,
-            "cost_usd": score.api_cost_usd,
-        })
-        return path
-
-    def save_critique(self, critique: CritiqueResult) -> Path:
-        """Save a critique/comparison result and log the event."""
-        filename = f"{critique.video_id}_critique_{self._ts_str()}.json"
-        path = self._write_json("comparisons", filename, critique.model_dump())
-
-        self.append_event("comparison_generated", {
-            "video_id": critique.video_id,
-            "critique_id": critique.id,
-            "agreement": critique.agreement_score,
-            "n_divergences": len(critique.divergences),
-            "consensus_fls_score": (
-                critique.consensus_score.estimated_fls_score
-                if critique.consensus_score else None
-            ),
-            "cost_usd": critique.api_cost_usd,
-        })
-        return path
-
-    def save_correction(self, correction: Correction) -> Path:
-        """Save an expert correction and log the event."""
-        filename = f"{correction.video_id}_correction_{self._ts_str()}.json"
-        path = self._write_json("corrections", filename, correction.model_dump())
-
-        self.append_event("correction_submitted", {
-            "video_id": correction.video_id,
-            "correction_id": correction.id,
-            "corrector": correction.corrector_role.value,
-            "fields_corrected": list(correction.corrected_fields.keys()),
-        })
-        return path
+    # save_score / save_critique / save_correction were removed on
+    # 2026-04-08 — they referenced schema classes (CritiqueResult,
+    # Correction) that no longer exist, and no code path called them
+    # (persistence goes through src.memory.memory_store instead).
 
     def log_video_ingested(self, video_id: str, filename: str, task: str) -> None:
         self.append_event("video_ingested", {

@@ -403,6 +403,7 @@ def prepare_dataset(
     frames_dir: str | Path | None = None,
     max_frames_per_sample: int = 24,
     group_by: str = "trainee",
+    exclude_video_ids: Iterable[str] | None = None,
 ) -> dict:
     """Build train/val/test JSONL files from scored videos.
 
@@ -451,6 +452,21 @@ def prepare_dataset(
 
     samples = list(by_video.values())
     logger.info(f"Deduplicated to {len(samples)} unique videos")
+
+    # Drop gold-set / held-out videos so the evaluation corpus never leaks
+    # into the training split. Applied post-dedup so the excluded count is
+    # logged against unique videos, not raw score records.
+    if exclude_video_ids:
+        exclude_set = {str(v) for v in exclude_video_ids if v}
+        if exclude_set:
+            before = len(samples)
+            samples = [s for s in samples if s.get("video_id") not in exclude_set]
+            dropped = before - len(samples)
+            logger.info(
+                "Excluded %d held-out videos (gold set); %d samples remain",
+                dropped,
+                len(samples),
+            )
 
     frames_root = Path(frames_dir) if frames_dir else None
     if frames_root is not None and not frames_root.exists():
