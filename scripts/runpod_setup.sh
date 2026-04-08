@@ -1,6 +1,6 @@
 #!/bin/bash
 # === FLS Training — RunPod Pod Setup ===
-# Run this FIRST after spinning up a RunPod training pod.
+# Run this FIRST after spinning up a RunPod A100 pod.
 #
 # Usage:
 #   git clone https://github.com/ry86pkqf74-rgb/FLS-Training.git
@@ -10,8 +10,6 @@
 
 set -e
 echo "=== FLS Training — RunPod Setup ==="
-
-DATA_DIR="training/data/v2"
 
 # Install Python deps
 echo "Installing dependencies..."
@@ -24,33 +22,29 @@ python -c "import torch; print(f'  CUDA available: {torch.cuda.is_available()}')
 
 # Check training data exists
 echo ""
-if [ -d "$DATA_DIR" ] && [ -n "$(find "$DATA_DIR" -maxdepth 1 -name '*.jsonl' -print -quit 2>/dev/null)" ]; then
-    echo "Training data found in $DATA_DIR:"
-    find "$DATA_DIR" -maxdepth 1 -name '*.jsonl' -print0 | xargs -0 wc -l
+if [ -d "training/data" ] && [ -n "$(ls training/data/*.jsonl 2>/dev/null)" ]; then
+    echo "Training data found:"
+    wc -l training/data/*.jsonl
 else
     echo "⚠  No training data found. Run locally first:"
-    echo "   python scripts/040_prepare_training_data.py --ver v2"
-    echo "   bash scripts/045_prep_v2_training.sh"
+    echo "   python scripts/040_prepare_training_data.py --ver v1"
     echo "   git push"
 fi
 
 # Check memory state
 echo ""
 echo "Memory state:"
-echo "  Scores: $(find memory/scores -type f -name '*.json' 2>/dev/null | wc -l | tr -d ' ') files"
-echo "  Feedback: $(find memory/feedback -type f -name '*.json' 2>/dev/null | wc -l | tr -d ' ') files"
+echo "  Scores: $(ls memory/scores/*.json 2>/dev/null | wc -l) files"
+echo "  Feedback: $(ls memory/feedback/*.json 2>/dev/null | wc -l) files"
 
 echo ""
 echo "=== Setup complete ==="
 echo ""
 echo "Next steps:"
-echo "  bash scripts/045_prep_v2_training.sh"
-echo "  bash deploy/runpod_launch.sh training/data/v2 src/configs/finetune_task5_v2.yaml"
+echo "  python scripts/050_runpod_train.py --ver v1"
 echo ""
 echo "After training:"
-echo "  python scripts/055_generate_predictions.py --model memory/model_checkpoints/v2_diverse/merged_16bit --data training/data/scoring_val_v2.jsonl --output memory/predictions/v2_on_val"
-echo "  python scripts/060_evaluate_student.py --student-scores memory/predictions/v2_on_val"
-echo "  git add memory/model_checkpoints/ memory/predictions/ training/runs/"
+echo "  git add models/ training/runs/"
 echo "  git commit -m 'feat: student model trained'"
 echo "  git push origin main"
 echo "  # Then stop the pod!"

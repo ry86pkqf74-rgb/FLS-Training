@@ -1,8 +1,4 @@
-"""Legacy Florence-based RunPod training script for the FLS student model.
-
-This module is retained so older experiment artifacts remain reproducible,
-but it is not the primary training path anymore. The supported RunPod flow
-uses `src.training.finetune_vlm` with `src/configs/finetune_task5_v2.yaml`.
+"""RunPod training script for FLS student model.
 
 This script runs ON the RunPod A100 pod. It:
 1. Loads training data from the cloned repo

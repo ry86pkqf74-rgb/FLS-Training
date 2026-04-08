@@ -7,7 +7,7 @@ Usage:
     python scripts/050_evaluate.py \
         --student-scores data/eval/student_predictions.jsonl \
         --frontier-scores data/eval/frontier_consensus.jsonl \
-        --config src/configs/finetune_task5_v2.yaml
+        --config src/configs/finetune_task5_v1.yaml
 """
 
 from __future__ import annotations
@@ -227,7 +227,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate student vs frontier consensus")
     parser.add_argument("--student-scores", required=True, help="JSONL of student predictions")
     parser.add_argument("--frontier-scores", required=True, help="JSONL of frontier consensus")
-    parser.add_argument("--config", default="src/configs/finetune_task5_v2.yaml")
+    parser.add_argument("--config", default="src/configs/finetune_task5_v1.yaml")
     parser.add_argument("--output", default=None, help="Write results JSON to this path")
     args = parser.parse_args()
 

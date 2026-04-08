@@ -1,24 +1,23 @@
 #!/usr/bin/env bash
-# deploy/runpod_launch.sh — One-shot setup + training on RunPod
+# deploy/runpod_launch.sh — One-shot setup + training on RunPod or Vast.ai
 #
 # Prerequisites:
-#   - Single GPU instance with CUDA 12.x (A100 80GB or Blackwell proven)
-#   - Training data prepared locally via:
-#       python scripts/040_prepare_training_data.py --ver v2
-#       bash scripts/045_prep_v2_training.sh
-#   - Repo synced on the pod (see deploy/LAUNCH_GUIDE.md)
+#   - GPU instance with CUDA 12.x (RTX 4090 24GB or L40S recommended)
+#   - Training data already prepared locally via:
+#       python scripts/040_prepare_training_data.py --version 1
+#   - JSONL files uploaded to the instance (see LAUNCH_GUIDE.md)
 #
 # Usage:
 #   # On the GPU instance:
 #   bash deploy/runpod_launch.sh [dataset_path] [config_path]
 #
 # Example:
-#   bash deploy/runpod_launch.sh training/data/v2 src/configs/finetune_task5_v2.yaml
+#   bash deploy/runpod_launch.sh data/training/2026-04-07_v1 src/configs/finetune_task5_v1.yaml
 
 set -euo pipefail
 
-DATASET_PATH="${1:-training/data/v2}"
-CONFIG_PATH="${2:-src/configs/finetune_task5_v2.yaml}"
+DATASET_PATH="${1:-data/training/LATEST}"
+CONFIG_PATH="${2:-src/configs/finetune_task5_v1.yaml}"
 CONTINUOUS_HOURS="${CONTINUOUS_HOURS:-0}"
 SECONDS_PER_STEP_ESTIMATE="${SECONDS_PER_STEP_ESTIMATE:-7}"
 BLACKWELL_BATCH_SIZE="${BLACKWELL_BATCH_SIZE:-8}"
@@ -108,10 +107,10 @@ if [ ! -f "$DATASET_PATH/train.jsonl" ]; then
     echo "ERROR: $DATASET_PATH/train.jsonl not found."
     echo ""
     echo "You need to prepare training data LOCALLY first:"
-    echo "  python scripts/040_prepare_training_data.py --ver v2"
-    echo "  bash scripts/045_prep_v2_training.sh"
+    echo "  python scripts/040_prepare_training_data.py --version 1"
     echo ""
-    echo "Then sync the repo to this instance so training/data/v2 exists."
+    echo "Then upload the output directory to this instance:"
+    echo "  rsync -avz data/training/ root@\$GPU_IP:/workspace/FLS-Training/data/training/"
     exit 1
 fi
 

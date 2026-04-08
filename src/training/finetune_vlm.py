@@ -4,11 +4,10 @@ Supports two backends:
   - unsloth (preferred): 2-5x faster, lower VRAM via QLoRA 4-bit
   - hf_trainer (fallback): standard HuggingFace Trainer + PEFT
 
-This script runs on a GPU server. The current supported path is the v2
-RunPod deployment using `src/configs/finetune_task5_v2.yaml`.
+This script runs on a GPU server (RunPod RTX 4090 spot recommended).
 
 Usage:
-    python -m src.training.finetune_vlm --config src/configs/finetune_task5_v2.yaml
+    python -m src.training.finetune_vlm --config src/configs/finetune_task5_v1.yaml
 """
 
 from __future__ import annotations

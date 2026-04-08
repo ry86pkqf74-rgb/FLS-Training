@@ -63,11 +63,10 @@ Normal one-shot path:
 bash deploy/runpod_launch.sh <dataset_path> <config_path>
 ```
 
-Example for the current supported config:
+Example for the config that exists in this branch today:
 
 ```bash
-bash scripts/045_prep_v2_training.sh
-bash deploy/runpod_launch.sh training/data/v2 src/configs/finetune_task5_v2.yaml
+bash deploy/runpod_launch.sh training/data src/configs/finetune_task5_v1.yaml
 ```
 
 Continuous/resume path:

@@ -4,15 +4,15 @@ Copy-paste this whole document as the prompt for the RunPod-side agent (Cursor /
 
 Context
 
-You are launching the current supported v2 student-model training run for the FLS-Training project (ry86pkqf74-rgb/FLS-Training). The repo is a teacher-critique-student architecture for FLS Task 5 (intracorporeal suture) scoring. Your job is to clone, prepare the v2 dataset layout, train on RunPod with the `finetune_vlm` path, evaluate against the held-out trainee gate, and push the artifacts back to GitHub. Then stop the pod.
+You are launching the first end-to-end student-model training run for the FLS-Training project (ry86pkqf74-rgb/FLS-Training). The repo is a teacher-critique-student architecture for FLS Task 5 (intracorporeal suture) scoring. Your job is to clone, train both LoRA heads on RunPod, evaluate against the held-out trainee gate, and push the artifacts back to GitHub. Then stop the pod.
 
 A prelaunch fix commit (fix(data): rglob memory, dedupe by video, stratified val split, tighter trainer defaults) has already landed on main. It fixed five real bugs in the data and training pipeline, materialized training/data/v2/, and tightened the trainer defaults. You must train against --ver v2, not v1. v1 was built from a broken pipeline that silently dropped 65 trainee video scores and never filtered the superseded V18 record.
 
 Pod requirements
 
-Hardware: single A100 80GB (RunPod Community Cloud is fine). Do not request a multi-GPU pod. Qwen2.5-VL-7B + LoRA fits comfortably on the supported single-GPU path; multi-GPU adds overhead with no benefit at this corpus size.
+Hardware: single A100 80GB (RunPod Community Cloud is fine). Do not request a multi-GPU pod. Florence-2-large + LoRA r=16 fits comfortably; multi-GPU adds NCCL overhead with no speedup at this corpus size (66 videos / ~200 examples).
 Image: RunPod's PyTorch 2.x CUDA 12.x template (e.g. runpod/pytorch:2.1.0-py3.10-cuda12.1.1).
-Disk: >=30 GB persistent volume.
+Disk: >=30 GB persistent volume. Florence-2-large weights are ~3.5 GB; checkpoints will be ~150 MB each (LoRA only) but base model gets cached.
 Network: allow outbound to huggingface.co, github.com, wandb.ai (if you use W&B).
 
 Step-by-step launch
@@ -63,40 +63,37 @@ You should see, in meta_v2.json:
 
 If any of these are wrong, stop. Re-run `python scripts/040_prepare_training_data.py --ver v2 --seed 42` and inspect the output before training.
 
-3. Prepare the trainer-compatible v2 directory
+3. Launch training
 
 ```bash
-bash scripts/045_prep_v2_training.sh
+# W&B optional but recommended; skip with --no-wandb if you don't have a key
+export WANDB_API_KEY=<your key>   # or omit and pass --no-wandb below
+
+python scripts/050_runpod_train.py \
+   --ver v2 \
+   --epochs 3 \
+   --lr 1e-4 \
+   --batch-size 2 \
+   --grad-accum 8 \
+   --lora-r 16 \
+   --seed 42
 ```
 
-4. Launch training
-
-```bash
-python -m src.training.finetune_vlm --config src/configs/finetune_task5_v2.yaml
-```
-
-The supported v2 config already encodes the current conservative settings and output path.
+These flags match the new TrainingConfig defaults exactly, but pass them explicitly so the run is self-documenting in `models/student_v2/scoring/run_meta.json`.
 
 Expected behavior during training:
 
-- Qwen2.5-VL-7B loads from the base model specified in `src/configs/finetune_task5_v2.yaml`.
-- The v2 config should start fresh from the base model, not resume from the overfit v1 checkpoint.
-- Eval is step-based in the v2 config so val loss is available during training.
-- If you are using watchdog resume mode, make sure it resumes only within the v2 run directory and not from any v1-era checkpoint tree.
+- Two heads train sequentially: scoring first, then coaching.
+- Each head loads `microsoft/Florence-2-large` fresh, applies a LoRA adapter (`r=16`, `alpha=32`, target modules `q/k/v/o + gate/up/down`), and trains for up to 3 epochs.
+- Effective batch size: `2 x 8 = 16`. With ~56 train examples that's ~3.5 optimizer steps/epoch ~= 10-11 total steps. Eval every 25 steps means you'll get an eval at the end of each head.
+- Early stopping: patience 1 on eval_loss (`load_best_model_at_end=True`). If val loss starts climbing, the trainer reverts to the previous checkpoint.
+- Wall-clock estimate: 6-12 minutes per head on a single A100 80GB (model load ~90s, train ~3-6 min, eval ~1 min, save ~30s). Total run including both heads: ~15-25 minutes. If you blow past 45 minutes, something is wrong - investigate before letting it keep burning.
+- VRAM: with bf16, gradient checkpointing on, batch 2, you should sit around 35-45 GB used. If you OOM, drop `--batch-size 1 --grad-accum 16` and rerun.
 
-5. Generate held-out predictions
-
-```bash
-python scripts/055_generate_predictions.py \
-   --model memory/model_checkpoints/v2_diverse/merged_16bit \
-   --data training/data/scoring_val_v2.jsonl \
-   --output memory/predictions/v2_on_val
-```
-
-6. Evaluate against the Phase 3 gate
+4. Evaluate against the Phase 3 gate
 
 ```bash
-python scripts/060_evaluate_student.py --student-scores memory/predictions/v2_on_val
+python scripts/060_evaluate_student.py --ver v2
 ```
 
 The Phase 3 gate from `docs/EXECUTION_PLAN.md` is MAE <= 12 FLS points on a held-out trainee. The val set (`val_video_ids` in `meta_v2.json`) contains three real trainee videos: `V13_video`, `V22_video`, `V31_video`. The eval script should report aggregate val MAE plus per-video MAE.
@@ -107,12 +104,12 @@ Decision matrix:
 - Aggregate <= 12 but one trainee video > 20 -> likely overfitting / leakage on that trainee. Do NOT promote. Capture the per-video numbers, file an issue, and stop.
 - Aggregate > 12 -> underfit. Try one rerun with `--epochs 5 --lr 5e-5`. If still failing, the corpus is the problem (66 videos may simply be insufficient); report and stop.
 
-7. Commit and push
+5. Commit and push
 
 ```bash
 git config user.email "<your email>"
 git config user.name "<your name>"
-git add memory/model_checkpoints/v2_diverse/ memory/predictions/v2_on_val/ training/runs/ src/configs/finetune_task5_v2.yaml
+git add models/student_v2/ training/runs/
 git commit -m "feat: student model v2 trained on 56-video corpus
 
 Run config: epochs=3 lr=1e-4 batch=2 grad_accum=8 lora_r=16 seed=42
@@ -121,7 +118,7 @@ Per-video val MAE: V13=<...> V22=<...> V31=<...>"
 git push origin main
 ```
 
-8. Stop the pod
+6. Stop the pod
 
 ```bash
 runpodctl stop pod $RUNPOD_POD_ID    # or use the web UI

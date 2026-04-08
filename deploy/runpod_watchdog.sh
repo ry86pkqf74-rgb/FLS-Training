@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DATASET_PATH="${1:-training/data/v2}"
-CONFIG_PATH="${2:-src/configs/finetune_task5_v2.yaml}"
+DATASET_PATH="${1:-data/training/LATEST}"
+CONFIG_PATH="${2:-src/configs/finetune_task5_v1.yaml}"
 RUN_DIR_OVERRIDE="${RUN_DIR_OVERRIDE:-}"
 BASE_MODEL_OVERRIDE="${BASE_MODEL_OVERRIDE:-}"
 CONTINUOUS_HOURS="${CONTINUOUS_HOURS:-0}"
