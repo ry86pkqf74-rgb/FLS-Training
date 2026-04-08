@@ -33,12 +33,18 @@ data/external/petraw/_meta/
 data/external/petraw/*.zip
 data/external/petraw/download.log
 
-# JIGSAWS bulk data (academic only). Videos + kinematics local-only.
-data/external/jigsaws/Suturing/
-data/external/jigsaws/Knot_Tying/
-data/external/jigsaws/Needle_Passing/
+# JIGSAWS bulk data (academic only). Videos + kinematics .txt files
+# stay out; meta_file_*.txt, readme.txt, and gesture transcriptions
+# (small text files needed for training) are tracked.
+data/external/jigsaws/**/video/
+data/external/jigsaws/**/kinematics/
+data/external/jigsaws/**/*.avi
+data/external/jigsaws/**/*.mp4
 data/external/jigsaws/*.zip
 data/external/jigsaws/download.log
+data/external/jigsaws/move.log
+data/external/jigsaws/.DS_Store
+data/external/jigsaws/**/.DS_Store
 
 # SimSurgSkill bulk data (non-commercial GCS). Videos + zip local-only.
 data/external/simsurgskill/simsurgskill_2021_dataset/
