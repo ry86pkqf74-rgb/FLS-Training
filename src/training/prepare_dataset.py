@@ -157,6 +157,8 @@ def _normalize_source(source: str | None, filename: str) -> str:
         return "student_model"
     if "correction" in raw:
         return "expert_correction"
+    if raw == "lasana" or "lasana" in raw or "lasana" in name:
+        return "lasana"
     return "teacher_claude"
 
 
