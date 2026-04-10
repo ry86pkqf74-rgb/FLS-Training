@@ -226,9 +226,10 @@ def _finetune_unsloth(config: dict) -> dict:
 
     # Cap image resolution to control vision token count per image
     max_px = config.get("max_pixels", 1024 * 28 * 28)  # default ~1M pixels
-    if hasattr(tokenizer, "image_processor"):
-        tokenizer.image_processor.max_pixels = max_px
-        logger.info(f"[vision] Set image_processor.max_pixels = {max_px}")
+    if hasattr(tokenizer, "image_processor") and hasattr(tokenizer.image_processor, "size"):
+        tokenizer.image_processor.size["longest_edge"] = max_px
+        tokenizer.image_processor.size["shortest_edge"] = min(3136, max_px)
+        logger.info(f"[vision] Set image_processor.size longest_edge={max_px}")
 
     model = FastVisionModel.get_peft_model(
         model,
