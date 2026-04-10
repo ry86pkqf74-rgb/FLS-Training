@@ -292,9 +292,14 @@ if "Blackwell" in gpu_name:
     config["gradient_accumulation"] = int(os.environ.get("BLACKWELL_GRAD_ACCUM", str(config.get("gradient_accumulation", 1))))
     config["dataloader_num_workers"] = max(int(config.get("dataloader_num_workers", 0)), int(os.environ.get("BLACKWELL_WORKERS", "8")))
     config["lora_dropout"] = float(os.environ.get("BLACKWELL_LORA_DROPOUT", str(config.get("lora_dropout", 0.0))))
-    config["save_strategy"] = "steps"
-    config["save_steps"] = int(config.get("save_steps", 200))
-    config["save_total_limit"] = int(config.get("save_total_limit", 2))
+    # Respect the source config's save_strategy. Only default to "steps"
+    # if the source config didn't specify one. Fixes F2 bug where epoch-
+    # based configs were silently overridden to save_steps=200, producing
+    # zero checkpoints on short runs.
+    config.setdefault("save_strategy", "steps")
+    if config["save_strategy"] == "steps":
+        config.setdefault("save_steps", 200)
+    config.setdefault("save_total_limit", 2)
 
 continuous_hours = float(os.environ.get("CONTINUOUS_HOURS", "0"))
 if continuous_hours > 0:
@@ -370,6 +375,18 @@ if [ -n "$TRAINING_OUTPUT_DIR" ]; then
         --output-dir "$TRAINING_OUTPUT_DIR" \
         --exit-status "$TRAINING_EXIT" 2>&1 || \
     echo "  WARNING: run manifest finalization failed (non-fatal)"
+fi
+
+# --- Post-run cleanup: reclaim failed merged_16bit exports (F3 mitigation) ---
+if [ -n "$TRAINING_OUTPUT_DIR" ] && [ -d "$TRAINING_OUTPUT_DIR/merged_16bit" ]; then
+    # If the merged dir has no adapter_model.safetensors it means the merge
+    # crashed after downloading base shards but before finishing. Reclaim space.
+    if [ ! -f "$TRAINING_OUTPUT_DIR/merged_16bit/adapter_model.safetensors" ] && \
+       [ ! -f "$TRAINING_OUTPUT_DIR/merged_16bit/model.safetensors" ]; then
+        MERGED_SIZE=$(du -sh "$TRAINING_OUTPUT_DIR/merged_16bit" | cut -f1)
+        echo "  Cleaning up failed merged_16bit export ($MERGED_SIZE)..."
+        rm -rf "$TRAINING_OUTPUT_DIR/merged_16bit"
+    fi
 fi
 
 # Re-propagate a non-zero training exit so CI/watchdog sees the failure.

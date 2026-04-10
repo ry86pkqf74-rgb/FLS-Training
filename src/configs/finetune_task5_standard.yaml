@@ -16,6 +16,7 @@ config_family: "standard"
 
 # Vision
 vision_mode: true
+require_vision: true              # fail-fast if dataset has no image blocks
 max_frames_per_sample: 10
 
 # Dataset
