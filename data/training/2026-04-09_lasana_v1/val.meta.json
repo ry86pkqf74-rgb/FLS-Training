@@ -1,0 +1,37 @@
+{
+  "manifest_id": "dataset_task5_v001",
+  "created_at": "2026-04-09T22:25:08.815478+00:00",
+  "created_by": "scripts/040_prepare_training_data.py",
+  "total_samples": 121,
+  "sources": [
+    {
+      "source_name": "self_recorded",
+      "video_count": 0,
+      "license_class": "proprietary",
+      "commercial_ok": true,
+      "trainee_count": 0,
+      "notes": "Single trainee, 3 equipment setups"
+    },
+    {
+      "source_name": "youtube_harvest",
+      "video_count": 121,
+      "license_class": "fair_use_research",
+      "commercial_ok": false,
+      "trainee_count": 121,
+      "notes": "Downloaded via yt-dlp, no explicit license"
+    }
+  ],
+  "validation_summary": {
+    "accepted": 0,
+    "quarantined": 0,
+    "rejected": 0,
+    "acceptance_rate": 0.0
+  },
+  "split_strategy": "existing_split+video",
+  "held_out_trainees": [],
+  "skill_level_distribution": {
+    "novice_lt400": 0,
+    "intermediate_400_480": 0,
+    "advanced_480_plus": 0
+  }
+}

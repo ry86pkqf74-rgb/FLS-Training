@@ -1,0 +1,20 @@
+created_at: '2026-04-09T22:25:08.750234+00:00'
+frames_dir: /data/fls/lasana_processed/frames
+include_coach_feedback: false
+max_frames_per_sample: 24
+min_confidence: 0.5
+n_test: 205
+n_train: 944
+n_val: 121
+seed: 42
+source_domains:
+  lasana: 1270
+sources:
+  lasana: 1270
+split_strategy: existing_split+video
+total_examples: 1270
+unique_trainees: 0
+version: 1
+vision_examples: 1270
+vision_fallback_examples: 0
+vision_mode: true

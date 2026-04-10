@@ -24,6 +24,18 @@ import yaml
 
 logger = logging.getLogger(__name__)
 
+# === MONKEY-PATCH: Cap Qwen2.5-VL image resolution to control vision tokens ===
+try:
+    import transformers.models.qwen2_vl.image_processing_qwen2_vl as _qwen_ip
+    _orig_smart_resize = _qwen_ip.smart_resize
+    def _capped_smart_resize(height, width, factor=28, min_pixels=3136, max_pixels=200704, **kwargs):
+        return _orig_smart_resize(height, width, factor=factor, min_pixels=min_pixels, max_pixels=max_pixels, **kwargs)
+    _qwen_ip.smart_resize = _capped_smart_resize
+    print('[patch] smart_resize monkey-patched: max_pixels=200704 (~256 tokens/image)')
+except Exception as e:
+    print(f'[patch] WARNING: Could not monkey-patch smart_resize: {e}')
+# === END MONKEY-PATCH ===
+
 
 def load_config(config_path: str) -> dict:
     with open(config_path) as f:
@@ -306,6 +318,10 @@ def _finetune_unsloth(config: dict) -> dict:
 
         FastVisionModel.for_training(model)  # flip into train-ready state
         vision_collator = UnslothVisionDataCollator(model, tokenizer)
+        # PATCH: Disable truncation to avoid vision token mismatch
+        vision_collator.truncation = False
+        vision_collator.max_seq_length = None
+        logger.info('[vision] Disabled collator truncation to prevent token mismatch')
 
         trainer = SFTTrainer(
             model=model,

@@ -11,7 +11,7 @@ config_family: "pretrain"
 
 vision_mode: true
 require_vision: true
-max_frames_per_sample: 10
+max_frames_per_sample: 3
 dataset_path: "data/training/LATEST_LASANA"
 split_strategy: "lasana_published"
 
