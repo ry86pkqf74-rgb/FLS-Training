@@ -405,3 +405,35 @@ echo "  1. Download the checkpoint to your local machine"
 echo "  2. Run evaluation: python scripts/050_evaluate.py --student-scores ... --frontier-scores ..."
 echo "  3. If promoted, update .env: STUDENT_MODEL=<path_to_checkpoint>"
 echo "========================================="
+
+# --- Auto-stop pod after training (saves $1.90/hr idle cost) ---
+if [ -n "$RUNPOD_POD_ID" ]; then
+  echo ""
+  echo "[auto-stop] Training finished (exit=$TRAINING_EXIT). Pushing logs and stopping pod..."
+
+  # Push training logs + manifest to GitHub if git is configured
+  if git remote get-url origin &>/dev/null; then
+    git add -f memory/model_checkpoints/*/run_manifest.json 2>/dev/null
+    git add src/configs/ 2>/dev/null
+    git commit -m "training: LASANA pretrain run manifest (exit=$TRAINING_EXIT)
+
+Auto-committed by runpod_launch.sh after training completed." 2>/dev/null && \
+    git push origin main 2>/dev/null && \
+    echo "[auto-stop] Pushed run manifest to GitHub." || \
+    echo "[auto-stop] WARNING: Git push failed (non-fatal)."
+  fi
+
+  # Stop the pod via RunPod API
+  if [ -n "$RUNPOD_API_KEY" ]; then
+    echo "[auto-stop] Stopping pod $RUNPOD_POD_ID via API..."
+    curl -s -X POST "https://api.runpod.io/graphql?api_key=$RUNPOD_API_KEY" \
+      -H "Content-Type: application/json" \
+      -d "{\"query\": \"mutation { podStop(input: {podId: \\\"$RUNPOD_POD_ID\\\"}) { id } }\"}" && \
+    echo "[auto-stop] Pod stop request sent." || \
+    echo "[auto-stop] WARNING: Pod stop API call failed."
+  else
+    echo "[auto-stop] RUNPOD_API_KEY not set  cannot auto-stop. Stop manually!"
+  fi
+else
+  echo "[auto-stop] Not running on RunPod (no RUNPOD_POD_ID). Skipping auto-stop."
+fi

@@ -44,7 +44,7 @@ logging_steps: 5
 save_strategy: "epoch"
 eval_strategy: "epoch"
 save_total_limit: 3
-max_seq_length: 2048
+max_seq_length: 8192
 packing: false
 export_merged_16bit: false
 dataloader_num_workers: 4
