@@ -224,6 +224,12 @@ def _finetune_unsloth(config: dict) -> dict:
         use_gradient_checkpointing="unsloth" if use_grad_ckpt else False,
     )
 
+    # Cap image resolution to control vision token count per image
+    max_px = config.get("max_pixels", 1024 * 28 * 28)  # default ~1M pixels
+    if hasattr(tokenizer, "image_processor"):
+        tokenizer.image_processor.max_pixels = max_px
+        logger.info(f"[vision] Set image_processor.max_pixels = {max_px}")
+
     model = FastVisionModel.get_peft_model(
         model,
         r=config.get("lora_r", 16),
