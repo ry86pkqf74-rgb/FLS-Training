@@ -1,0 +1,35 @@
+{
+  "dataset": "lasana_pretrain_v2",
+  "total": 1270,
+  "created_at": "2026-04-13T20:39:16.149420+00:00",
+  "splits": {
+    "train": 944,
+    "val": 121,
+    "test": 205
+  },
+  "task_counts": {
+    "task2_pattern_cut": 627,
+    "task1_peg_transfer": 329,
+    "task5_intracorporeal_suture": 314
+  },
+  "grs_stats": {
+    "task2_pattern_cut": {
+      "n": 627,
+      "mean": -0.14386966507177051,
+      "min": -2.5,
+      "max": 2.29386
+    },
+    "task1_peg_transfer": {
+      "n": 329,
+      "mean": 9.118541033865587e-08,
+      "min": -2.22337,
+      "max": 2.11781
+    },
+    "task5_intracorporeal_suture": {
+      "n": 314,
+      "mean": -0.1671629617834395,
+      "min": -2.5,
+      "max": 1.99351
+    }
+  }
+}
