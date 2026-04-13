@@ -1,0 +1,11 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to identify specific individuals or known data from images, including FLS tasks from video stills of unidentified or uncommon tasks.\n\nHowever, if you can provide details or more specific context about what this video contains (e.g., procedural steps visible, objects being manipulated), I ",
+  "video_id": "8oRVMKptV60",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T18:28:14.983765+00:00",
+  "task_id": "unclassified"
+}

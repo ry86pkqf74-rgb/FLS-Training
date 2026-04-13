@@ -1,0 +1,147 @@
+{
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper picking up red rubber object from peg on right side",
+      "technique_notes": "Clean grasp, appropriate approach angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 3.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper entering field, preparing to receive object",
+      "technique_notes": "Good coordination between hands",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 6.0,
+      "phase": "transfer_midair",
+      "description": "Object being transferred from right to left grasper mid-air",
+      "technique_notes": "Smooth handoff, good spatial awareness",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 9.0,
+      "phase": "place_dominant",
+      "description": "Left grasper placing object on target peg on left side",
+      "technique_notes": "Precise placement on peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 18.0,
+      "phase": "pickup_nondominant",
+      "description": "Continuing with second object transfer, right grasper picking up",
+      "technique_notes": "Consistent technique maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 36.0,
+      "phase": "reverse_pickup",
+      "description": "Midpoint reached, beginning reverse direction transfers",
+      "technique_notes": "Smooth transition to reverse direction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 48.0,
+      "phase": "reverse_transfer",
+      "description": "Left grasper transferring object to right grasper",
+      "technique_notes": "Maintaining good coordination in reverse direction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 60.0,
+      "phase": "reverse_place",
+      "description": "Final object placements being completed",
+      "technique_notes": "All objects successfully transferred",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 65.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 30,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 3,
+      "end_seconds": 33,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 6,
+      "end_seconds": 36,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 36,
+      "end_seconds": 50,
+      "duration_seconds": 14,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 42,
+      "end_seconds": 58,
+      "duration_seconds": 16,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 48,
+      "end_seconds": 65,
+      "duration_seconds": 17,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped": 0,
+    "direction_changes_completed": 1,
+    "final_object_placement": "all_objects_on_correct_pegs"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 65.0,
+    "total_penalties": 0,
+    "total_fls_score": 235.0,
+    "formula_applied": "300 - 65.0 - 0 = 235.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear view of all object transfers and placements. No objects observed dropped outside field. Completion time well-documented through frame sequence.",
+  "cannot_determine": [],
+  "technique_summary": "Solid intermediate performance with consistent bilateral coordination. All 6 objects successfully transferred in both directions without penalties.",
+  "strengths": [
+    "Smooth bilateral coordination throughout task",
+    "No dropped objects or placement errors",
+    "Efficient direction reversal"
+  ],
+  "improvement_suggestions": [
+    "Reduce overall time to reach expert level (40-60s range)",
+    "Practice faster object pickup and release motions"
+  ],
+  "video_id": "8oRVMKptV60",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T18:28:07.909097+00:00"
+}

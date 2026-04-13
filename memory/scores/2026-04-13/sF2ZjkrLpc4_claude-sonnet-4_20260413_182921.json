@@ -1,0 +1,83 @@
+{
+  "task_id": "unclassified",
+  "task_name": "Unable to identify FLS task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "non_fls_content",
+      "description": "Black screen with no visible content",
+      "technique_notes": "No surgical training equipment or laparoscopic setup visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.3,
+      "phase": "non_fls_content",
+      "description": "PowerPoint slide showing 'SAGES Sponsored Fellowships' title with presenter information and medical society logos",
+      "technique_notes": "Educational presentation slide, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 16.7,
+      "phase": "non_fls_content",
+      "description": "Slide about SAGES fellowship benefits listing training areas including Foregut, Flexible Endoscopy, Bariatric, Abdominal Wall, Endocrine, and MIS",
+      "technique_notes": "Informational content about fellowship programs, no surgical simulation visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 83.3,
+      "phase": "non_fls_content",
+      "description": "Slide about application steps for SAGES fellowship including networking, clinical focus, and case log review",
+      "technique_notes": "Career guidance information, not related to FLS task assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 125.0,
+      "phase": "non_fls_content",
+      "description": "Slide listing fellowship requirements including 150 advanced cases for MIS fellowship and 100 therapeutic cases for flexible endoscopy",
+      "technique_notes": "Fellowship requirements information, no FLS simulation equipment present",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 150.0,
+      "phase": "non_fls_content",
+      "description": "Slide about fellow certification requirements including FLS, FUSE & FES certification and GOALS/GAGES evaluations",
+      "technique_notes": "While FLS is mentioned as requirement, this is informational content not task performance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task identified - unable to compute score"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows educational presentation slides about SAGES fellowships with no laparoscopic training equipment, FLS trainer box, or surgical simulation tasks visible in any frame.",
+  "cannot_determine": [
+    "FLS task type - video contains educational presentation content only",
+    "Task performance metrics - no surgical simulation demonstrated",
+    "Completion time - no task performed",
+    "Technical penalties - no FLS task execution visible"
+  ],
+  "technique_summary": "This video contains educational presentation slides about SAGES fellowship programs and requirements, not an FLS task performance that can be scored using the official FLS rubric.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "To receive FLS scoring, submit video showing performance of one of the five standardized FLS tasks (peg transfer, pattern cut, endoloop, extracorporeal suture, or intracorporeal suture) in a laparoscopic trainer"
+  ],
+  "video_id": "sF2ZjkrLpc4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T18:29:21.817986+00:00"
+}
