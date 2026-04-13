@@ -366,9 +366,19 @@ def _load_score_payload(path: Path) -> Optional[dict[str, Any]]:
         "video_id": video_id,
         "source": normalized_source,
         "scored_at": scored_at,
-        "fls": _coerce_float(payload.get("estimated_fls_score", payload.get("fls_score"))),
-        "time": _coerce_float(payload.get("completion_time_seconds", payload.get("completion_time"))),
-        "confidence": _coerce_float(payload.get("confidence_score", payload.get("confidence"))),
+        "fls": _coerce_float(
+            payload.get("estimated_fls_score")
+            or payload.get("fls_score")
+            or (payload.get("score_components") or {}).get("total_fls_score")
+        ),
+        "time": _coerce_float(
+            payload.get("completion_time_seconds")
+            or payload.get("completion_time")
+        ),
+        "confidence": _coerce_float(
+            payload.get("confidence_score")
+            or payload.get("confidence")
+        ),
         "model_name": payload.get("model_name"),
         "id": payload.get("id"),
     }
