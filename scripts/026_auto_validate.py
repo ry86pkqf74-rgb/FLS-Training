@@ -26,11 +26,12 @@ Usage:
 
 from __future__ import annotations
 
+import json
 import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 import duckdb
 import typer
@@ -50,6 +51,8 @@ MAX_REASONABLE_PENALTY = 20       # ceiling penalties for floor of time-anchor
 MIN_REASONABLE_PENALTY = 0        # floor penalties for ceiling of time-anchor
 
 DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "data" / "fls_training.duckdb"
+DEFAULT_SCORES_DIR = Path(__file__).resolve().parent.parent / "memory" / "scores"
+DEFAULT_RESULTS_PATH = Path(__file__).resolve().parent.parent / "memory" / "validation_results.jsonl"
 
 app = typer.Typer(add_completion=False, help=__doc__)
 console = Console()
@@ -277,6 +280,172 @@ def validate_video(
     return result
 
 
+def validate_pair_only(teachers: dict[str, dict]) -> dict[str, Any]:
+    """Apply the pairwise file-based validation requested for score JSON files."""
+    claude = teachers.get("teacher_claude")
+    gpt = teachers.get("teacher_gpt4o")
+
+    result: dict[str, Any] = {
+        "claude_fls": (claude or {}).get("fls"),
+        "gpt4o_fls": (gpt or {}).get("fls"),
+        "claude_time": (claude or {}).get("time"),
+        "gpt4o_time": (gpt or {}).get("time"),
+        "claude_confidence": (claude or {}).get("confidence"),
+        "gpt4o_confidence": (gpt or {}).get("confidence"),
+        "score_delta": None,
+        "time_delta": None,
+    }
+
+    if claude is None or gpt is None:
+        missing = [
+            name
+            for name, value in (("teacher_claude", claude), ("teacher_gpt4o", gpt))
+            if value is None
+        ]
+        result["status"] = "REJECTED"
+        result["reason"] = f"missing teacher scores: {', '.join(missing)}"
+        return result
+
+    score_delta = abs(claude["fls"] - gpt["fls"])
+    time_delta = abs(claude["time"] - gpt["time"])
+    result["score_delta"] = score_delta
+    result["time_delta"] = time_delta
+
+    if (
+        score_delta <= MAX_SCORE_DIVERGENCE
+        and time_delta <= MAX_TIME_DIVERGENCE
+        and claude["confidence"] > MIN_CONFIDENCE
+        and gpt["confidence"] > MIN_CONFIDENCE
+    ):
+        result["status"] = "ACCEPTED"
+        result["reason"] = "pairwise thresholds passed"
+        return result
+
+    reasons: list[str] = []
+    if score_delta > MAX_SCORE_DIVERGENCE:
+        reasons.append(f"score delta {score_delta:.1f} > {MAX_SCORE_DIVERGENCE}")
+    if time_delta > MAX_TIME_DIVERGENCE:
+        reasons.append(f"time delta {time_delta:.1f}s > {MAX_TIME_DIVERGENCE}s")
+    if claude["confidence"] <= MIN_CONFIDENCE:
+        reasons.append(f"claude confidence {claude['confidence']:.2f} <= {MIN_CONFIDENCE}")
+    if gpt["confidence"] <= MIN_CONFIDENCE:
+        reasons.append(f"gpt4o confidence {gpt['confidence']:.2f} <= {MIN_CONFIDENCE}")
+
+    result["status"] = "QUARANTINED"
+    result["reason"] = "; ".join(reasons)
+    return result
+
+
+def _coerce_float(value: Any) -> Optional[float]:
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _load_score_payload(path: Path) -> Optional[dict[str, Any]]:
+    try:
+        payload = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    source = payload.get("source")
+    if source not in {"teacher_claude", "teacher_gpt", "teacher_gpt4o"}:
+        return None
+
+    video_id = payload.get("video_id")
+    if not video_id:
+        return None
+
+    scored_at = payload.get("scored_at") or ""
+    normalized_source = "teacher_gpt4o" if source in {"teacher_gpt", "teacher_gpt4o"} else source
+    return {
+        "path": str(path),
+        "video_id": video_id,
+        "source": normalized_source,
+        "scored_at": scored_at,
+        "fls": _coerce_float(payload.get("estimated_fls_score", payload.get("fls_score"))),
+        "time": _coerce_float(payload.get("completion_time_seconds", payload.get("completion_time"))),
+        "confidence": _coerce_float(payload.get("confidence_score", payload.get("confidence"))),
+        "model_name": payload.get("model_name"),
+        "id": payload.get("id"),
+    }
+
+
+def _collect_latest_file_scores(scores_dir: Path) -> dict[str, dict[str, dict[str, Any]]]:
+    by_video: dict[str, dict[str, dict[str, Any]]] = {}
+    for path in sorted(scores_dir.glob("score_*.json")):
+        payload = _load_score_payload(path)
+        if payload is None:
+            continue
+
+        video_scores = by_video.setdefault(payload["video_id"], {})
+        current = video_scores.get(payload["source"])
+        current_key = (current or {}).get("scored_at", "")
+        next_key = payload.get("scored_at", "")
+        if current is None or next_key >= current_key:
+            video_scores[payload["source"]] = payload
+    return by_video
+
+
+def _validate_score_directory(scores_dir: Path, output_path: Path) -> dict[str, int]:
+    if not scores_dir.exists():
+        console.print(f"[red]Scores directory not found: {scores_dir}[/red]")
+        raise typer.Exit(code=2)
+
+    latest_scores = _collect_latest_file_scores(scores_dir)
+    counts = {"ACCEPTED": 0, "QUARANTINED": 0, "REJECTED": 0}
+    generated_at = datetime.now(timezone.utc).isoformat()
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with output_path.open("w", encoding="utf-8") as handle:
+        for video_id in sorted(latest_scores):
+            teachers = latest_scores[video_id]
+            result = validate_pair_only(teachers)
+            counts[result["status"]] += 1
+
+            record = {
+                "type": "validation_result",
+                "video_id": video_id,
+                "status": result["status"],
+                "reason": result["reason"],
+                "score_delta": result["score_delta"],
+                "time_delta": result["time_delta"],
+                "claude_score": result["claude_fls"],
+                "gpt4o_score": result["gpt4o_fls"],
+                "claude_time_seconds": result["claude_time"],
+                "gpt4o_time_seconds": result["gpt4o_time"],
+                "claude_confidence": result["claude_confidence"],
+                "gpt4o_confidence": result["gpt4o_confidence"],
+                "claude_score_path": (teachers.get("teacher_claude") or {}).get("path"),
+                "gpt4o_score_path": (teachers.get("teacher_gpt4o") or {}).get("path"),
+                "generated_at": generated_at,
+            }
+            handle.write(json.dumps(record, sort_keys=True) + "\n")
+
+        summary = {
+            "type": "summary",
+            "scores_dir": str(scores_dir),
+            "output_path": str(output_path),
+            "generated_at": generated_at,
+            "counts": counts,
+            "total_videos": sum(counts.values()),
+            "training_ready_videos": counts["ACCEPTED"],
+        }
+        handle.write(json.dumps(summary, sort_keys=True) + "\n")
+
+    console.print(
+        f"[bold]Summary[/bold]  "
+        f"[green]ACCEPTED {counts['ACCEPTED']}[/green]  "
+        f"[yellow]QUARANTINED {counts['QUARANTINED']}[/yellow]  "
+        f"[red]REJECTED {counts['REJECTED']}[/red]"
+    )
+    console.print(f"Wrote [cyan]{output_path}[/cyan]")
+    return counts
+
+
 # ----------------------------------------------------------------------------
 # Persistence + display
 # ----------------------------------------------------------------------------
@@ -360,6 +529,16 @@ def _render_table(rows: list[tuple[str, dict]]) -> None:
 
 @app.command()
 def main(
+    scores_dir: Optional[Path] = typer.Option(
+        None,
+        "--scores-dir",
+        help="Validate raw score JSON files from a directory instead of DuckDB.",
+    ),
+    output_jsonl: Path = typer.Option(
+        DEFAULT_RESULTS_PATH,
+        "--output-jsonl",
+        help="Where to write file-based validation results.",
+    ),
     video_id: Optional[str] = typer.Option(
         None, "--video-id", help="Validate a single video."
     ),
@@ -371,9 +550,13 @@ def main(
     ),
 ) -> None:
     """Auto-validate dual-teacher scores stored in DuckDB."""
+    if scores_dir is not None:
+        _validate_score_directory(scores_dir, output_jsonl)
+        return
+
     if not (video_id or all_ or revalidate):
         console.print(
-            "[red]Provide --video-id, --all, or --revalidate.[/red]"
+            "[red]Provide --scores-dir, --video-id, --all, or --revalidate.[/red]"
         )
         raise typer.Exit(code=1)
 

@@ -1,0 +1,59 @@
+{
+  "source": "memory/validation_results.jsonl",
+  "accepted_manifest": "memory/accepted_training_videos.txt",
+  "status_counts": {
+    "ACCEPTED": 11,
+    "QUARANTINED": 32,
+    "REJECTED": 2
+  },
+  "accepted_video_ids": [
+    "7xzmqwazzgg.f136",
+    "c43cjf8yyii.f136",
+    "i_catfutvxa.f136",
+    "r5rwepzagpk.f247",
+    "vyck0myliiu.f136",
+    "wgf_nibpjig.f136",
+    "yt_KxYnF3YAZJU",
+    "yt_McyckU8LJiE",
+    "yt_NQ8kHizYLFY",
+    "yt_fOMG83QhfuI",
+    "yt_vjSoFfEkeMg"
+  ],
+  "failure_category_counts": {
+    "missing_teacher_scores": 2,
+    "score_and_time_delta_exceeded": 25,
+    "time_delta_only": 2,
+    "score_and_time_delta_exceeded_with_low_confidence": 4,
+    "time_delta_with_low_confidence": 1
+  },
+  "failure_examples": {
+    "missing_teacher_scores": [
+      "yt_IwrNTRVXuJQ",
+      "yt_ROUGZ79Paxk"
+    ],
+    "score_and_time_delta_exceeded": [
+      "0as4e9u8vfq.f136",
+      "0zgscgfdfyg.f135",
+      "4fr0lgp_h7w.f136",
+      "5heqhdxdwqa.f136",
+      "fomg83qhfui.f135"
+    ],
+    "time_delta_only": [
+      "yt_5HeQHDxDWQA",
+      "yt_XaZ_6wsUsiM"
+    ],
+    "score_and_time_delta_exceeded_with_low_confidence": [
+      "yt_YXreDeA9AP0",
+      "yt__5IukH0SX7E",
+      "yt_f0xcnHYL6Uw",
+      "yt_vDmEfFc9i8U"
+    ],
+    "time_delta_with_low_confidence": [
+      "yt_daI30ueGIHY"
+    ]
+  },
+  "notable_exact_reason_counts": {
+    "missing teacher scores: teacher_gpt4o": 2,
+    "score delta 37.0 > 25; time delta 37.0s > 15s": 2
+  }
+}

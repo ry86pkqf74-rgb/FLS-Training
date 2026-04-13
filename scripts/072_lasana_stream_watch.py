@@ -35,6 +35,27 @@ DEFAULT_REQUIRED_TASKS = (
 STATE_FILENAME = "watch_state.json"
 
 
+def _download_job_key(task: str | None) -> str:
+    return task or "__all__"
+
+
+def build_downloader_command(args: argparse.Namespace, base_dir: Path, task: str | None) -> list[str]:
+    downloader = base_dir / "scripts" / "070_lasana_download.py"
+    cmd = [
+        sys.executable,
+        str(downloader),
+        "--manifest-path",
+        str(resolve_path(base_dir, args.manifest_path)),
+        "--out-dir",
+        str(resolve_path(base_dir, args.raw_dir)),
+    ]
+    if args.resume_downloads:
+        cmd.append("--resume")
+    if task:
+        cmd.extend(["--task", task])
+    return cmd
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Watch and stream the LASANA ingest pipeline")
     parser.add_argument("--host-role", choices=["contabo", "hetzner"], required=True)
@@ -148,25 +169,34 @@ def save_state(processed_dir: Path, state: dict[str, Any]) -> None:
     state_path.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n")
 
 
-def run_downloader_once(args: argparse.Namespace, base_dir: Path, runner=subprocess.run) -> None:
+def run_downloader_once(
+    args: argparse.Namespace,
+    base_dir: Path,
+    runner=subprocess.run,
+    popen=subprocess.Popen,
+    active_downloads: dict[str, Any] | None = None,
+) -> None:
     if not args.run_downloader:
         return
 
-    downloader = base_dir / "scripts" / "070_lasana_download.py"
     tasks = args.download_task or [None]
     for task in tasks:
-        cmd = [
-            sys.executable,
-            str(downloader),
-            "--manifest-path",
-            str(resolve_path(base_dir, args.manifest_path)),
-            "--out-dir",
-            str(resolve_path(base_dir, args.raw_dir)),
-        ]
-        if args.resume_downloads:
-            cmd.append("--resume")
-        if task:
-            cmd.extend(["--task", task])
+        cmd = build_downloader_command(args, base_dir, task)
+
+        if args.watch and active_downloads is not None:
+            job_key = _download_job_key(task)
+            proc = active_downloads.get(job_key)
+            if proc is not None:
+                returncode = proc.poll()
+                if returncode is None:
+                    continue
+                active_downloads.pop(job_key, None)
+                if returncode not in {0, 1}:
+                    raise RuntimeError(f"070_lasana_download.py failed with rc={returncode}")
+
+            LOG.info("Starting downloader in background: %s", " ".join(cmd))
+            active_downloads[job_key] = popen(cmd, cwd=str(base_dir))
+            continue
 
         LOG.info("Running downloader: %s", " ".join(cmd))
         completed = runner(cmd, cwd=str(base_dir), check=False)
@@ -339,9 +369,10 @@ def run() -> int:
     extractor_module = load_script_module(base_dir / "scripts" / "068_lasana_extract_features.py", "lasana_extract")
     layout_module = load_script_module(base_dir / "scripts" / "071_lasana_unzip_and_layout.py", "lasana_layout")
     state = load_state(processed_dir)
+    active_downloads: dict[str, Any] = {}
 
     while True:
-        run_downloader_once(args, base_dir)
+        run_downloader_once(args, base_dir, active_downloads=active_downloads)
         processed_archives = process_archives_once(layout_module, raw_dir, layout_dir, args)
         new_frames = extract_frames_once(extractor_module, layout_dir, processed_dir, args.fps)
         if new_frames:

@@ -20,6 +20,163 @@ class _Completed:
         self.returncode = returncode
 
 
+class _Process:
+    def __init__(self, poll_results: list[int | None]):
+        self._poll_results = list(poll_results)
+
+    def poll(self):
+        if self._poll_results:
+            return self._poll_results.pop(0)
+        return None
+
+
+def test_build_downloader_command_includes_task_and_resume(tmp_path):
+    module = _load_module()
+
+    args = SimpleNamespace(
+        manifest_path="data/external/lasana/_meta/bitstreams.json",
+        raw_dir="/tmp/raw",
+        resume_downloads=True,
+    )
+
+    cmd = module.build_downloader_command(args, tmp_path, "SutureAndKnot")
+
+    assert cmd == [
+        module.sys.executable,
+        str(tmp_path / "scripts" / "070_lasana_download.py"),
+        "--manifest-path",
+        str(tmp_path / "data" / "external" / "lasana" / "_meta" / "bitstreams.json"),
+        "--out-dir",
+        str(Path("/tmp/raw").resolve()),
+        "--resume",
+        "--task",
+        "SutureAndKnot",
+    ]
+
+
+def test_run_downloader_once_starts_background_job_in_watch_mode(tmp_path):
+    module = _load_module()
+
+    args = SimpleNamespace(
+        run_downloader=True,
+        watch=True,
+        download_task=["SutureAndKnot"],
+        manifest_path="data/external/lasana/_meta/bitstreams.json",
+        raw_dir="raw",
+        resume_downloads=True,
+    )
+    active_downloads = {}
+    popen_calls: list[tuple[list[str], str | None]] = []
+
+    def fake_popen(cmd, cwd=None):
+        popen_calls.append((cmd, cwd))
+        return _Process([None])
+
+    def fail_runner(*args, **kwargs):
+        raise AssertionError("runner should not be used in watch mode")
+
+    module.run_downloader_once(
+        args,
+        tmp_path,
+        runner=fail_runner,
+        popen=fake_popen,
+        active_downloads=active_downloads,
+    )
+
+    assert list(active_downloads) == ["SutureAndKnot"]
+    assert popen_calls == [(
+        [
+            module.sys.executable,
+            str(tmp_path / "scripts" / "070_lasana_download.py"),
+            "--manifest-path",
+            str(tmp_path / "data" / "external" / "lasana" / "_meta" / "bitstreams.json"),
+            "--out-dir",
+            str(tmp_path / "raw"),
+            "--resume",
+            "--task",
+            "SutureAndKnot",
+        ],
+        str(tmp_path),
+    )]
+
+
+def test_run_downloader_once_does_not_duplicate_running_background_job(tmp_path):
+    module = _load_module()
+
+    args = SimpleNamespace(
+        run_downloader=True,
+        watch=True,
+        download_task=["SutureAndKnot"],
+        manifest_path="data/external/lasana/_meta/bitstreams.json",
+        raw_dir="raw",
+        resume_downloads=False,
+    )
+    active_downloads = {"SutureAndKnot": _Process([None])}
+
+    def fail_popen(*args, **kwargs):
+        raise AssertionError("popen should not be called while downloader is still running")
+
+    module.run_downloader_once(
+        args,
+        tmp_path,
+        popen=fail_popen,
+        active_downloads=active_downloads,
+    )
+
+    assert list(active_downloads) == ["SutureAndKnot"]
+
+
+def test_run_downloader_once_restarts_background_job_after_success(tmp_path):
+    module = _load_module()
+
+    args = SimpleNamespace(
+        run_downloader=True,
+        watch=True,
+        download_task=["SutureAndKnot"],
+        manifest_path="data/external/lasana/_meta/bitstreams.json",
+        raw_dir="raw",
+        resume_downloads=False,
+    )
+    active_downloads = {"SutureAndKnot": _Process([0])}
+    spawned: list[_Process] = []
+
+    def fake_popen(cmd, cwd=None):
+        del cmd, cwd
+        proc = _Process([None])
+        spawned.append(proc)
+        return proc
+
+    module.run_downloader_once(
+        args,
+        tmp_path,
+        popen=fake_popen,
+        active_downloads=active_downloads,
+    )
+
+    assert active_downloads["SutureAndKnot"] is spawned[0]
+
+
+def test_run_downloader_once_raises_on_background_failure(tmp_path):
+    module = _load_module()
+
+    args = SimpleNamespace(
+        run_downloader=True,
+        watch=True,
+        download_task=["SutureAndKnot"],
+        manifest_path="data/external/lasana/_meta/bitstreams.json",
+        raw_dir="raw",
+        resume_downloads=False,
+    )
+    active_downloads = {"SutureAndKnot": _Process([2])}
+
+    try:
+        module.run_downloader_once(args, tmp_path, active_downloads=active_downloads)
+    except RuntimeError as exc:
+        assert "rc=2" in str(exc)
+    else:
+        raise AssertionError("expected RuntimeError")
+
+
 def test_extract_frames_once_detects_new_video_ids(tmp_path):
     module = _load_module()
 
