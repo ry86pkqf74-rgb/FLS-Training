@@ -1,0 +1,20 @@
+{
+  "dataset": "youtube_sft_v1",
+  "created_at": "2026-04-13T22:22:14.914173+00:00",
+  "total": 101,
+  "train": 90,
+  "val": 11,
+  "task_counts": {
+    "task1_peg_transfer": 16,
+    "task5_intracorporeal_suturing": 9,
+    "task4_extracorporeal_knot": 9,
+    "": 45,
+    "task3_endoloop": 10,
+    "task2_pattern_cut": 10,
+    "unclassified": 2
+  },
+  "label_types": {
+    "dual_teacher_consensus": 84,
+    "claude_only_high_conf": 17
+  }
+}
