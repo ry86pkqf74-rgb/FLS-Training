@@ -352,7 +352,7 @@ def _load_score_payload(path: Path) -> Optional[dict[str, Any]]:
         return None
 
     source = payload.get("source")
-    if source not in {"teacher_claude", "teacher_gpt", "teacher_gpt4o"}:
+    if source not in {"teacher_claude", "teacher_gpt", "teacher_gpt4o", "teacher_haiku"}:
         return None
 
     video_id = payload.get("video_id")
@@ -360,7 +360,7 @@ def _load_score_payload(path: Path) -> Optional[dict[str, Any]]:
         return None
 
     scored_at = payload.get("scored_at") or ""
-    normalized_source = "teacher_gpt4o" if source in {"teacher_gpt", "teacher_gpt4o"} else source
+    normalized_source = "teacher_gpt4o" if source in {"teacher_gpt", "teacher_gpt4o", "teacher_haiku"} else source
     return {
         "path": str(path),
         "video_id": video_id,
