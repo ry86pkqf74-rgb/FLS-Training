@@ -375,8 +375,24 @@ def _load_score_payload(path: Path) -> Optional[dict[str, Any]]:
 
 
 def _collect_latest_file_scores(scores_dir: Path) -> dict[str, dict[str, dict[str, Any]]]:
+    """Recursively scan scores_dir for all teacher score JSONs.
+
+    Handles both naming conventions:
+      - Root-level:  score_claude_*.json / score_gpt_*.json
+      - Dated dirs:  2026-04-07/V15_video_claude-sonnet-4_*.json
+                     2026-04-08/abc123_gpt-4o_*.json
+
+    Skips consensus files and quarantine subdirectories.
+    """
     by_video: dict[str, dict[str, dict[str, Any]]] = {}
-    for path in sorted(scores_dir.glob("score_*.json")):
+    for path in sorted(scores_dir.rglob("*.json")):
+        # Skip consensus files, quarantine dirs, and non-teacher files
+        fname = path.name.lower()
+        if "consensus" in fname:
+            continue
+        if "_quarantine" in str(path):
+            continue
+
         payload = _load_score_payload(path)
         if payload is None:
             continue
