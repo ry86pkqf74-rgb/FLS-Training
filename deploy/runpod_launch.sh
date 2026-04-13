@@ -4,8 +4,7 @@
 # Prerequisites:
 #   - GPU instance with CUDA 12.x (RTX 4090 24GB or L40S recommended)
 #   - Training data already prepared locally via:
-#       python scripts/040_prepare_training_data.py --ver v2
-#       bash scripts/045_prep_v2_training.sh
+#       python scripts/040_prepare_training_data.py --version 1
 #   - JSONL files uploaded to the instance (see LAUNCH_GUIDE.md)
 #
 # Usage:
@@ -13,11 +12,12 @@
 #   bash deploy/runpod_launch.sh [dataset_path] [config_path]
 #
 # Example:
-#   bash deploy/runpod_launch.sh training/data src/configs/finetune_task5_v2.yaml
+#   bash deploy/runpod_launch.sh data/training/2026-04-07_v1 src/configs/finetune_task5_v1.yaml
 
 set -euo pipefail
+
 DATASET_PATH="${1:-data/training/LATEST}"
-CONFIG_PATH="${2:-src/configs/finetune_task5_v2.yaml}"
+CONFIG_PATH="${2:-src/configs/finetune_task5_v1.yaml}"
 CONTINUOUS_HOURS="${CONTINUOUS_HOURS:-0}"
 SECONDS_PER_STEP_ESTIMATE="${SECONDS_PER_STEP_ESTIMATE:-7}"
 BLACKWELL_BATCH_SIZE="${BLACKWELL_BATCH_SIZE:-8}"
@@ -28,44 +28,6 @@ SKIP_DEP_INSTALL="${SKIP_DEP_INSTALL:-0}"
 BASE_MODEL_OVERRIDE="${BASE_MODEL_OVERRIDE:-}"
 OUTPUT_DIR_OVERRIDE="${OUTPUT_DIR_OVERRIDE:-}"
 RESUME_FROM_CHECKPOINT="${RESUME_FROM_CHECKPOINT:-}"
-
-maybe_prepare_named_training_dataset() {
-    local config_name target_path prep_script
-
-    config_name="$(basename "$CONFIG_PATH")"
-    case "$config_name" in
-        finetune_task5_v2.yaml)
-            target_path="training/data/v2"
-            prep_script="scripts/045_prep_v2_training.sh"
-            ;;
-        finetune_task5_v3.yaml)
-            target_path="training/data/v3"
-            prep_script="scripts/045_prep_v3_training.sh"
-            ;;
-        *)
-            return 1
-            ;;
-    esac
-
-    if [ ! -f "$prep_script" ]; then
-        return 1
-    fi
-
-    echo "  Preparing canonical dataset alias via $prep_script"
-    bash "$prep_script"
-
-    if [ "$DATASET_PATH" = "training/data" ] || [ "$DATASET_PATH" = "./training/data" ]; then
-        DATASET_PATH="$target_path"
-    fi
-
-    [ -f "$DATASET_PATH/train.jsonl" ] || [ -f "$target_path/train.jsonl" ] || return 1
-
-    if [ ! -f "$DATASET_PATH/train.jsonl" ] && [ -f "$target_path/train.jsonl" ]; then
-        DATASET_PATH="$target_path"
-    fi
-
-    return 0
-}
 
 echo "========================================="
 echo "FLS-Training: GPU Fine-Tune Launch"
@@ -141,63 +103,14 @@ echo ""
 
 # --- Step 3: Validate dataset ---
 echo "[3/5] Validating dataset at $DATASET_PATH..."
-
-# If the user passed data/training/LATEST-style aliases, resolve them to
-# either the symlink target or the newest matching timestamped directory.
-if [[ "$DATASET_PATH" == *"LATEST"* ]]; then
-    if [ -L "$DATASET_PATH" ]; then
-        RESOLVED="$(python3 - <<'PY' "$DATASET_PATH"
-import os
-import sys
-
-print(os.path.realpath(sys.argv[1]))
-PY
-)"
-    elif [[ "$DATASET_PATH" == *"LATEST_LASANA" ]]; then
-        RESOLVED=$(ls -1dt data/training/*_lasana_v* 2>/dev/null | head -1 || true)
-    else
-        RESOLVED=$(ls -1dt data/training/*_v* 2>/dev/null | head -1 || true)
-    fi
-    if [ -n "${RESOLVED:-}" ] && [ -f "$RESOLVED/train.jsonl" ]; then
-        DATASET_PATH="$RESOLVED"
-        echo "  LATEST resolved to: $DATASET_PATH"
-    fi
-fi
-
-if [ ! -f "$DATASET_PATH/train.jsonl" ]; then
-    maybe_prepare_named_training_dataset || true
-fi
-
 if [ ! -f "$DATASET_PATH/train.jsonl" ]; then
     echo "ERROR: $DATASET_PATH/train.jsonl not found."
     echo ""
-    case "$(basename "$CONFIG_PATH")" in
-        finetune_task5_v2.yaml)
-            echo "Prepare the canonical v2 alias on this host:"
-            echo "  bash scripts/045_prep_v2_training.sh"
-            echo ""
-            echo "Or rebuild the source files locally first:"
-            echo "  python scripts/040_prepare_training_data.py --ver v2"
-            echo "  rsync -avz training/data/ root@\$GPU_IP:/workspace/FLS-Training/training/data/"
-            ;;
-        finetune_task5_v3.yaml)
-            echo "Prepare the canonical v3 alias on this host:"
-            echo "  bash scripts/045_prep_v3_training.sh"
-            echo ""
-            echo "Or rebuild the source files locally first:"
-            echo "  python scripts/040_prepare_training_data.py --ver v3"
-            echo "  rsync -avz training/data/ root@\$GPU_IP:/workspace/FLS-Training/training/data/"
-            ;;
-        *)
-            echo "You need to prepare training data LOCALLY first:"
-            echo '  python scripts/040_prepare_training_data.py --ver v4 \\'
-            echo '      --frames-dir data/frames --max-frames 24 \\'
-            echo "      --include-coach-feedback --group-by trainee"
-            echo ""
-            echo "Then upload the output directory to this instance:"
-            echo "  rsync -avz data/training/ root@\$GPU_IP:/workspace/FLS-Training/data/training/"
-            ;;
-    esac
+    echo "You need to prepare training data LOCALLY first:"
+    echo "  python scripts/040_prepare_training_data.py --version 1"
+    echo ""
+    echo "Then upload the output directory to this instance:"
+    echo "  rsync -avz data/training/ root@\$GPU_IP:/workspace/FLS-Training/data/training/"
     exit 1
 fi
 
@@ -210,46 +123,6 @@ if [ "$TRAIN_COUNT" -lt 5 ]; then
     echo "WARNING: Very few training examples ($TRAIN_COUNT). Results may be poor."
     echo "Consider scoring more videos first."
 fi
-
-# Vision-mode validation: if the config declares require_vision: true,
-# check that the first training example actually contains image blocks
-# AND that at least one of those image paths exists on the pod.
-REQUIRE_VISION=$(grep -E '^require_vision:' "$CONFIG_PATH" 2>/dev/null | awk '{print $2}' || true)
-if [ "$REQUIRE_VISION" = "true" ]; then
-    python3 - <<PY
-import json, sys
-from pathlib import Path
-with open("$DATASET_PATH/train.jsonl") as handle:
-    first = json.loads(handle.readline())
-has_image = False
-first_image = None
-for message in first.get("messages", []):
-    content = message.get("content")
-    if isinstance(content, list):
-        for block in content:
-            if isinstance(block, dict) and block.get("type") == "image":
-                has_image = True
-                first_image = block.get("image")
-                break
-    if has_image:
-        break
-if not has_image:
-    print("ERROR: config has require_vision: true but train.jsonl has no image blocks.")
-    print("Re-run scripts/040_prepare_training_data.py with --frames-dir set.")
-    sys.exit(1)
-if first_image and not Path(first_image).is_file():
-    print(f"ERROR: first image path does not resolve on this pod: {first_image}")
-    print("rsync the frames directory onto the pod before launching training.")
-    sys.exit(1)
-print(f"  Vision check: first image OK ({first_image})")
-PY
-    if [ $? -ne 0 ]; then
-        echo ""
-        echo "Vision validation failed. Aborting launch before GPU allocation."
-        exit 1
-    fi
-fi
-
 echo ""
 
 # --- Step 4: Update config with actual dataset path ---
@@ -292,14 +165,9 @@ if "Blackwell" in gpu_name:
     config["gradient_accumulation"] = int(os.environ.get("BLACKWELL_GRAD_ACCUM", str(config.get("gradient_accumulation", 1))))
     config["dataloader_num_workers"] = max(int(config.get("dataloader_num_workers", 0)), int(os.environ.get("BLACKWELL_WORKERS", "8")))
     config["lora_dropout"] = float(os.environ.get("BLACKWELL_LORA_DROPOUT", str(config.get("lora_dropout", 0.0))))
-    # Respect the source config's save_strategy. Only default to "steps"
-    # if the source config didn't specify one. Fixes F2 bug where epoch-
-    # based configs were silently overridden to save_steps=200, producing
-    # zero checkpoints on short runs.
-    config.setdefault("save_strategy", "steps")
-    if config["save_strategy"] == "steps":
-        config.setdefault("save_steps", 200)
-    config.setdefault("save_total_limit", 2)
+    config["save_strategy"] = "steps"
+    config["save_steps"] = int(config.get("save_steps", 200))
+    config["save_total_limit"] = int(config.get("save_total_limit", 2))
 
 continuous_hours = float(os.environ.get("CONTINUOUS_HOURS", "0"))
 if continuous_hours > 0:
@@ -343,57 +211,10 @@ echo ""
 
 # --- Step 5: Launch training ---
 echo "[5/5] Starting training..."
-
-# --- Write run manifest (scripts/041_write_run_manifest.py) ---
-# Captures git state, GPU info, dataset fingerprint, and config hash.
-# Patches $RUNTIME_CONFIG with the resolved output_dir when missing so
-# finetune_vlm.py and the manifest land in the same directory.
-echo "  Writing run manifest..."
-TRAINING_OUTPUT_DIR=$(
-    python scripts/041_write_run_manifest.py \
-        --config "$RUNTIME_CONFIG" \
-        --dataset-path "$DATASET_PATH" 2>/tmp/manifest_write.log
-) || {
-    echo "  WARNING: run manifest write failed — $(cat /tmp/manifest_write.log)"
-    TRAINING_OUTPUT_DIR=""
-}
-
 echo "========================================="
 echo ""
 
-# Capture the training exit code without aborting the script so the
-# finalize step always runs regardless of success or failure.
-set +e
 python -m src.training.finetune_vlm --config "$RUNTIME_CONFIG"
-TRAINING_EXIT=$?
-set -e
-
-# --- Finalize run manifest with outcome metrics ---
-if [ -n "$TRAINING_OUTPUT_DIR" ]; then
-    echo "  Finalizing run manifest (exit=$TRAINING_EXIT)..."
-    python scripts/042_finalize_run_manifest.py \
-        --output-dir "$TRAINING_OUTPUT_DIR" \
-        --exit-status "$TRAINING_EXIT" 2>&1 || \
-    echo "  WARNING: run manifest finalization failed (non-fatal)"
-fi
-
-# --- Post-run cleanup: reclaim failed merged_16bit exports (F3 mitigation) ---
-if [ -n "$TRAINING_OUTPUT_DIR" ] && [ -d "$TRAINING_OUTPUT_DIR/merged_16bit" ]; then
-    # If the merged dir has no adapter_model.safetensors it means the merge
-    # crashed after downloading base shards but before finishing. Reclaim space.
-    if [ ! -f "$TRAINING_OUTPUT_DIR/merged_16bit/adapter_model.safetensors" ] && \
-       [ ! -f "$TRAINING_OUTPUT_DIR/merged_16bit/model.safetensors" ]; then
-        MERGED_SIZE=$(du -sh "$TRAINING_OUTPUT_DIR/merged_16bit" | cut -f1)
-        echo "  Cleaning up failed merged_16bit export ($MERGED_SIZE)..."
-        rm -rf "$TRAINING_OUTPUT_DIR/merged_16bit"
-    fi
-fi
-
-# Re-propagate a non-zero training exit so CI/watchdog sees the failure.
-if [ "$TRAINING_EXIT" -ne 0 ]; then
-    echo "ERROR: finetune_vlm exited with status $TRAINING_EXIT" >&2
-    exit "$TRAINING_EXIT"
-fi
 
 echo ""
 echo "========================================="
@@ -405,35 +226,3 @@ echo "  1. Download the checkpoint to your local machine"
 echo "  2. Run evaluation: python scripts/050_evaluate.py --student-scores ... --frontier-scores ..."
 echo "  3. If promoted, update .env: STUDENT_MODEL=<path_to_checkpoint>"
 echo "========================================="
-
-# --- Auto-stop pod after training (saves $1.90/hr idle cost) ---
-if [ -n "$RUNPOD_POD_ID" ]; then
-  echo ""
-  echo "[auto-stop] Training finished (exit=$TRAINING_EXIT). Pushing logs and stopping pod..."
-
-  # Push training logs + manifest to GitHub if git is configured
-  if git remote get-url origin &>/dev/null; then
-    git add -f memory/model_checkpoints/*/run_manifest.json 2>/dev/null
-    git add src/configs/ 2>/dev/null
-    git commit -m "training: LASANA pretrain run manifest (exit=$TRAINING_EXIT)
-
-Auto-committed by runpod_launch.sh after training completed." 2>/dev/null && \
-    git push origin main 2>/dev/null && \
-    echo "[auto-stop] Pushed run manifest to GitHub." || \
-    echo "[auto-stop] WARNING: Git push failed (non-fatal)."
-  fi
-
-  # Stop the pod via RunPod API
-  if [ -n "$RUNPOD_API_KEY" ]; then
-    echo "[auto-stop] Stopping pod $RUNPOD_POD_ID via API..."
-    curl -s -X POST "https://api.runpod.io/graphql?api_key=$RUNPOD_API_KEY" \
-      -H "Content-Type: application/json" \
-      -d "{\"query\": \"mutation { podStop(input: {podId: \\\"$RUNPOD_POD_ID\\\"}) { id } }\"}" && \
-    echo "[auto-stop] Pod stop request sent." || \
-    echo "[auto-stop] WARNING: Pod stop API call failed."
-  else
-    echo "[auto-stop] RUNPOD_API_KEY not set  cannot auto-stop. Stop manually!"
-  fi
-else
-  echo "[auto-stop] Not running on RunPod (no RUNPOD_POD_ID). Skipping auto-stop."
-fi

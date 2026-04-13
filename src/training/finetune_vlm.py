@@ -15,7 +15,6 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,18 +22,6 @@ from pathlib import Path
 import yaml
 
 logger = logging.getLogger(__name__)
-
-# === MONKEY-PATCH: Cap Qwen2.5-VL image resolution to control vision tokens ===
-try:
-    import transformers.models.qwen2_vl.image_processing_qwen2_vl as _qwen_ip
-    _orig_smart_resize = _qwen_ip.smart_resize
-    def _capped_smart_resize(height, width, factor=28, min_pixels=3136, max_pixels=200704, **kwargs):
-        return _orig_smart_resize(height, width, factor=factor, min_pixels=min_pixels, max_pixels=max_pixels, **kwargs)
-    _qwen_ip.smart_resize = _capped_smart_resize
-    print('[patch] smart_resize monkey-patched: max_pixels=200704 (~256 tokens/image)')
-except Exception as e:
-    print(f'[patch] WARNING: Could not monkey-patch smart_resize: {e}')
-# === END MONKEY-PATCH ===
 
 
 def load_config(config_path: str) -> dict:
@@ -60,51 +47,6 @@ def _example_to_messages(example: dict) -> list[dict]:
     if output_text:
         normalized.append({"role": "assistant", "content": output_text})
     return normalized
-
-
-def _example_has_images(example: dict) -> bool:
-    """Does any message in this example carry an image content block?"""
-    messages = example.get("messages") or []
-    for message in messages:
-        content = message.get("content")
-        if isinstance(content, list):
-            for block in content:
-                if isinstance(block, dict) and block.get("type") == "image":
-                    return True
-    return False
-
-
-def _load_pil_images_from_messages(messages: list[dict]):
-    """Extract and open every image referenced by a chat-message record.
-
-    Returns a list of PIL.Image objects in the order they appear across
-    user messages. Raises FileNotFoundError if any referenced path is
-    missing — we'd rather fail fast at training startup than feed a
-    partial image list to the processor and silently misalign examples.
-    """
-    from PIL import Image
-
-    images = []
-    for message in messages:
-        content = message.get("content")
-        if not isinstance(content, list):
-            continue
-        for block in content:
-            if not isinstance(block, dict):
-                continue
-            if block.get("type") != "image":
-                continue
-            path = block.get("image") or block.get("image_url") or block.get("path")
-            if not path:
-                continue
-            if not Path(path).is_file():
-                raise FileNotFoundError(
-                    f"Image path missing at train time: {path}. "
-                    "Confirm the frames directory is rsync'd onto the GPU pod "
-                    "and that the paths in train.jsonl resolve on this host."
-                )
-            images.append(Image.open(path).convert("RGB"))
-    return images
 
 
 def _format_chat_examples(batch: dict, tokenizer) -> list[str]:
@@ -172,38 +114,6 @@ def _should_export_merged(config: dict) -> bool:
     return bool(config.get("export_merged_16bit", True))
 
 
-def _use_wandb(config: dict) -> bool:
-    return bool(config.get("use_wandb", False))
-
-
-def _wandb_project(config: dict) -> str:
-    return str(config.get("wandb_project", "fls-training"))
-
-
-def _run_name(config: dict, output_dir: str) -> str:
-    return str(config.get("run_name") or Path(output_dir).name)
-
-
-def _maybe_finish_wandb(config: dict, metrics: dict) -> None:
-    if not _use_wandb(config):
-        return
-    try:
-        import wandb
-    except ImportError:
-        logger.warning("wandb requested but not installed")
-        return
-    if wandb.run is not None:
-        wandb.log({f"final/{key}": value for key, value in metrics.items()})
-        wandb.finish()
-
-
-def _configure_wandb_env(config: dict, output_dir: str) -> None:
-    if not _use_wandb(config):
-        return
-    os.environ.setdefault("WANDB_PROJECT", _wandb_project(config))
-    os.environ.setdefault("WANDB_NAME", _run_name(config, output_dir))
-
-
 def _finetune_unsloth(config: dict) -> dict:
     """Fine-tune using Unsloth (fast QLoRA path)."""
     try:
@@ -224,7 +134,6 @@ def _finetune_unsloth(config: dict) -> dict:
         f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_unsloth"
     )
     Path(output_dir).mkdir(parents=True, exist_ok=True)
-    _configure_wandb_env(config, output_dir)
 
     use_4bit = config.get("quantization") == "4bit"
     use_grad_ckpt = config.get("gradient_checkpointing", False)
@@ -235,13 +144,6 @@ def _finetune_unsloth(config: dict) -> dict:
         load_in_4bit=use_4bit,
         use_gradient_checkpointing="unsloth" if use_grad_ckpt else False,
     )
-
-    # Cap image resolution to control vision token count per image
-    max_px = config.get("max_pixels", 1024 * 28 * 28)  # default ~1M pixels
-    if hasattr(tokenizer, "image_processor") and hasattr(tokenizer.image_processor, "size"):
-        tokenizer.image_processor.size["longest_edge"] = max_px
-        tokenizer.image_processor.size["shortest_edge"] = min(3136, max_px)
-        logger.info(f"[vision] Set image_processor.size longest_edge={max_px}")
 
     model = FastVisionModel.get_peft_model(
         model,
@@ -263,22 +165,6 @@ def _finetune_unsloth(config: dict) -> dict:
         "validation": str(Path(dataset_path) / "val.jsonl"),
     })
 
-    # Detect whether this dataset contains real image content blocks. If
-    # it does, we switch to Unsloth's vision data collator which uses the
-    # processor to encode images alongside text. If it does not (legacy
-    # text-only path), we fall back to the old SFTTrainer formatting_func
-    # path. This is the lever that guarantees a "vision" config with
-    # empty image paths cannot silently train as text-only.
-    first_example = dataset["train"][0] if len(dataset["train"]) else {}
-    has_images = _example_has_images(first_example)
-    logger.info("Dataset vision mode: %s", has_images)
-    if config.get("require_vision", False) and not has_images:
-        raise RuntimeError(
-            "require_vision=True in config, but the first training example "
-            "has no image blocks. Re-run scripts/040_prepare_training_data.py "
-            "with --frames-dir pointing at extracted frames."
-        )
-
     sft_config = SFTConfig(
         output_dir=output_dir,
         num_train_epochs=config.get("num_epochs", 2),
@@ -298,47 +184,15 @@ def _finetune_unsloth(config: dict) -> dict:
         dataset_text_field="",
         remove_unused_columns=False,
         max_seq_length=config.get("max_seq_length", 2048),
-        run_name=_run_name(config, output_dir),
     )
 
-    if has_images:
-        # Unsloth ships UnslothVisionDataCollator, which expects a list of
-        # examples each carrying "messages" with image blocks. It uses
-        # the FastVisionModel processor (tokenizer arg) to encode both
-        # vision and text into the batch tensors the Qwen2.5-VL backbone
-        # expects.
-        try:
-            from unsloth.trainer import UnslothVisionDataCollator
-        except ImportError as exc:  # pragma: no cover - runtime
-            raise RuntimeError(
-                "Vision training requires a recent Unsloth that exposes "
-                "UnslothVisionDataCollator. Upgrade with:\n"
-                "  pip install -U 'unsloth @ git+https://github.com/unslothai/unsloth.git'"
-            ) from exc
-
-        FastVisionModel.for_training(model)  # flip into train-ready state
-        vision_collator = UnslothVisionDataCollator(model, tokenizer)
-        # PATCH: Disable truncation to avoid vision token mismatch
-        vision_collator.truncation = False
-        vision_collator.max_seq_length = None
-        logger.info('[vision] Disabled collator truncation to prevent token mismatch')
-
-        trainer = SFTTrainer(
-            model=model,
-            args=sft_config,
-            train_dataset=dataset["train"],
-            eval_dataset=dataset["validation"],
-            tokenizer=tokenizer,
-            data_collator=vision_collator,
-        )
-    else:
-        trainer = SFTTrainer(
-            model=model, args=sft_config,
-            train_dataset=dataset["train"],
-            eval_dataset=dataset["validation"],
-            tokenizer=tokenizer,
-            formatting_func=lambda batch: _format_chat_examples(batch, tokenizer),
-        )
+    trainer = SFTTrainer(
+        model=model, args=sft_config,
+        train_dataset=dataset["train"],
+        eval_dataset=dataset["validation"],
+        tokenizer=tokenizer,
+        formatting_func=lambda batch: _format_chat_examples(batch, tokenizer),
+    )
 
     logger.info("Starting Unsloth QLoRA training...")
     trainer.train(resume_from_checkpoint=config.get("resume_from_checkpoint"))
@@ -358,8 +212,6 @@ def _finetune_unsloth(config: dict) -> dict:
         json.dump(eval_results, f, indent=2)
     with open(Path(output_dir) / "training_config.yaml", "w") as f:
         yaml.dump(config, f)
-
-    _maybe_finish_wandb(config, eval_results)
 
     logger.info(f"[unsloth] Done. Checkpoint: {output_dir}")
     return eval_results
@@ -385,7 +237,6 @@ def _finetune_hf(config: dict) -> dict:
         f"memory/model_checkpoints/{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}_hf"
     )
     Path(output_dir).mkdir(parents=True, exist_ok=True)
-    _configure_wandb_env(config, output_dir)
 
     quant_config = None
     if config.get("quantization") == "4bit":
@@ -442,8 +293,7 @@ def _finetune_hf(config: dict) -> dict:
         save_total_limit=config.get("save_total_limit"),
         evaluation_strategy=config.get("eval_strategy", "epoch"),
         dataloader_num_workers=config.get("dataloader_num_workers", 0),
-        report_to="wandb" if _use_wandb(config) else "none",
-        run_name=_run_name(config, output_dir),
+        report_to="none",
     )
 
     trainer = Trainer(
@@ -460,8 +310,6 @@ def _finetune_hf(config: dict) -> dict:
         json.dump(eval_results, f, indent=2)
     with open(Path(output_dir) / "training_config.yaml", "w") as f:
         yaml.dump(config, f)
-
-    _maybe_finish_wandb(config, eval_results)
 
     logger.info(f"[hf_trainer] Done. Checkpoint: {output_dir}")
     return eval_results
@@ -480,16 +328,9 @@ def finetune(config: dict) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fine-tune VLM on FLS scoring data")
     parser.add_argument("--config", required=True, help="Path to training config YAML")
-    parser.add_argument("--wandb", action="store_true", help="Enable Weights & Biases logging")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
     config = load_config(args.config)
-    config.setdefault("use_wandb", False)
-    config.setdefault("wandb_project", "fls-training")
-    if args.wandb:
-        config["use_wandb"] = True
-    if _use_wandb(config):
-        config.setdefault("run_name", Path(config.get("output_dir") or "finetune_vlm").name)
     metrics = finetune(config)
     print(f"Eval metrics: {json.dumps(metrics, indent=2)}")
