@@ -50,12 +50,20 @@ You will receive a `task_id` parameter. Apply the corresponding rubric:
 
 ## Assessment Instructions
 
-1. Identify the task from the `task_id` parameter or from visual cues
-2. Analyze provided video frames sequentially — note the phase, what is happening, and technique observations for each
-3. Estimate completion time from first instrument appearance to task completion
-4. Identify all penalties with specific frame evidence
-5. Compute score using the formula for the identified task
-6. Assign confidence based ONLY on what is actually visible — if a penalty is ambiguous from the camera angle, say so
+1. **FIRST: Classify the video.** Determine `video_classification`:
+   - `"performance"` — An actual trainee or surgeon performing an FLS task (score it normally)
+   - `"expert_demo"` — An expert demonstration showing correct technique (score it AND extract teaching content)
+   - `"instructional"` — Educational/tutorial content with narration, overlays, or lecture (do NOT score; extract teaching content only)
+   - `"unusable"` — Unrelated content, equipment demos, product ads (return minimal JSON)
+2. Identify the task from the `task_id` parameter or from visual cues
+3. Analyze provided video frames sequentially — note the phase, what is happening, and technique observations for each
+4. Estimate completion time from first instrument appearance to task completion
+5. Identify all penalties with specific frame evidence
+6. Compute score using the formula for the identified task
+7. Assign confidence based ONLY on what is actually visible — if a penalty is ambiguous from the camera angle, say so
+
+**For expert_demo and instructional videos**, additionally include:
+- `"teaching_content"` object with: `"demonstrated_techniques"` (list of specific techniques shown), `"verbal_cues"` (any narrated instructions visible from context), `"common_errors_addressed"` (mistakes the demo explicitly avoids or corrects), `"skill_level_demonstrated"` (novice/intermediate/expert)
 
 ## Output Format
 
@@ -63,6 +71,7 @@ Respond with ONLY a valid JSON object. No markdown fences, no text before or aft
 
 ```
 {
+  "video_classification": "performance",
   "task_id": "task5_intracorporeal_suture",
   "task_name": "Intracorporeal Suture with Knot Tying",
   "max_time_seconds": 600,
@@ -135,6 +144,12 @@ Respond with ONLY a valid JSON object. No markdown fences, no text before or aft
     "Smooth instrument exchange between throws",
     "Consistent hand switching across all three throws"
   ],
+  "teaching_content": {
+    "demonstrated_techniques": ["proper needle grip at 2/3 point", "wrist rotation for suture driving"],
+    "verbal_cues": [],
+    "common_errors_addressed": ["avoiding superficial bites by maintaining perpendicular entry angle"],
+    "skill_level_demonstrated": "expert"
+  },
   "improvement_suggestions": [
     "Practice needle loading to reduce from 18s to under 10s",
     "Aim for perpendicular needle entry to reduce suture deviation"
