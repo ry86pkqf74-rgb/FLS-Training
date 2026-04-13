@@ -50,7 +50,9 @@ You will receive a `task_id` parameter. Apply the corresponding rubric:
 
 ## Assessment Instructions
 
-1. **FIRST: Classify the video.** Determine `video_classification`:
+> **REQUIRED FIELD — DO NOT OMIT:** Every response MUST include `video_classification` as its first top-level key. If the field is missing the response will be rejected and re-scored. When in doubt, use `"unclassified"` rather than omitting the field.
+
+1. **FIRST: Classify the video.** Determine `video_classification` (REQUIRED — include this field on every response, even for edge cases):
    - `"performance"` — An actual trainee or surgeon performing an FLS task (score it normally)
    - `"expert_demo"` — An expert demonstration showing correct technique (score it AND extract teaching content)
    - `"instructional"` — Educational/tutorial content with narration, overlays, or lecture (do NOT score; extract teaching content only)
@@ -68,6 +70,12 @@ You will receive a `task_id` parameter. Apply the corresponding rubric:
 ## Output Format
 
 Respond with ONLY a valid JSON object. No markdown fences, no text before or after the JSON.
+
+**Before emitting the JSON, verify:**
+- The object begins with `"video_classification"` as the first key. If you cannot confidently classify, use `"unclassified"` — NEVER omit this field.
+- `scoreable` boolean is present (true for `performance`/`expert_demo`, false otherwise).
+- `score_components.total_fls_score` is in the range [0, max_score_for_task].
+- `task_id` matches one of: task1_peg_transfer, task2_pattern_cut, task3_endoloop, task4_extracorp_knot, task5_intracorporeal_suture, or `unclassified`.
 
 ```
 {
