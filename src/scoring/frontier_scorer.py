@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
@@ -10,7 +11,6 @@ from typing import Any, Optional
 import yaml
 
 from src.scoring.schema import ScoringResult
-from src.ingest.frame_extractor import frames_to_base64
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -37,6 +37,47 @@ TASK_ID_ALIASES = {
     "task5_intracorporeal": "task5",
     "task5_intracorporeal_suture": "task5",
 }
+VALID_PHASES = {
+    "idle",
+    "needle_load",
+    "suture_placement",
+    "first_throw",
+    "second_throw",
+    "third_throw",
+    "suture_cut",
+    "completion",
+}
+PHASE_ALIASES = {
+    "setup": "idle",
+    "instructional_content": "idle",
+    "educational_demonstration": "idle",
+    "demonstration": "idle",
+    "idle_or_setup": "idle",
+    "loop_deploy": "needle_load",
+    "needle_positioning": "needle_load",
+    "needle_pickup": "needle_load",
+    "pickup_nondominant": "needle_load",
+    "reverse_pickup": "needle_load",
+    "transfer_midair": "suture_placement",
+    "place_dominant": "suture_placement",
+    "reverse_transfer": "suture_placement",
+    "reverse_place": "suture_placement",
+    "peg_transfer": "suture_placement",
+    "pattern_cut": "suture_placement",
+    "ligating_loop": "suture_placement",
+    "extracorporeal_suture_demo": "suture_placement",
+    "intracorporeal_suture_demo": "suture_placement",
+    "knot_formation": "first_throw",
+    "first_knot": "first_throw",
+    "second_knot": "second_throw",
+    "third_knot": "third_throw",
+    "knot_tightening": "third_throw",
+    "final_knot_tightening": "third_throw",
+    "cutting": "suture_cut",
+    "suture_trim": "suture_cut",
+    "done": "completion",
+    "finished": "completion",
+}
 
 
 def _extract_anthropic_text(response: Any) -> str:
@@ -46,6 +87,24 @@ def _extract_anthropic_text(response: Any) -> str:
         if isinstance(text, str):
             parts.append(text)
     return "\n".join(parts).strip()
+
+
+def _extract_openai_text(content: Any) -> str:
+    if isinstance(content, str):
+        return content.strip()
+    if isinstance(content, list):
+        parts: list[str] = []
+        for block in content:
+            if isinstance(block, dict):
+                text = block.get("text")
+                if isinstance(text, str):
+                    parts.append(text)
+            else:
+                text = getattr(block, "text", None)
+                if isinstance(text, str):
+                    parts.append(text)
+        return "\n".join(parts).strip()
+    return ""
 
 
 def _parse_json_payload(raw_text: str) -> dict:
@@ -128,6 +187,42 @@ def _coerce_int(value: Any, default: int = 0) -> int:
     return default
 
 
+def _normalize_phase_value(value: Any) -> str:
+    if not value:
+        return "idle"
+    if isinstance(value, str):
+        normalized = re.sub(r"[^a-z0-9]+", "_", value.strip().lower()).strip("_")
+        if normalized in VALID_PHASES:
+            return normalized
+        if normalized in PHASE_ALIASES:
+            return PHASE_ALIASES[normalized]
+        if "throw" in normalized:
+            if "third" in normalized or "final" in normalized:
+                return "third_throw"
+            if "second" in normalized:
+                return "second_throw"
+            return "first_throw"
+        if any(token in normalized for token in ("cut", "trim", "snip")):
+            return "suture_cut"
+        if any(token in normalized for token in ("complete", "finish", "end")):
+            return "completion"
+        if any(token in normalized for token in ("load", "pickup", "deploy", "grasp")):
+            return "needle_load"
+        if any(token in normalized for token in ("transfer", "place", "pass", "position", "pattern", "loop")):
+            return "suture_placement"
+    return "idle"
+
+
+def _normalize_phase_collections(cleaned: dict) -> None:
+    for field_name in ("frame_analyses", "phase_timings"):
+        items = cleaned.get(field_name) or []
+        if not isinstance(items, list):
+            continue
+        for item in items:
+            if isinstance(item, dict):
+                item["phase"] = _normalize_phase_value(item.get("phase"))
+
+
 def _load_rubric(task: int | str) -> dict:
     task_id = _canonical_task_id(task)
     rubric_name = TASK_RUBRIC_FILES.get(task_id)
@@ -176,12 +271,9 @@ def _prepare_scoring_payload(data: dict, task: int | str) -> dict:
             _coerce_float(score_components.get("total_fls_score", 0.0)),
         )
 
-        if score_components.get("time_score") is not None:
-            score_components["time_score"] = _coerce_float(score_components.get("time_score"))
-        if score_components.get("penalty_deductions") is not None:
-            score_components["penalty_deductions"] = _coerce_float(score_components.get("penalty_deductions"))
-        if score_components.get("total_fls_score") is not None:
-            score_components["total_fls_score"] = _coerce_float(score_components.get("total_fls_score"))
+        score_components["time_score"] = _coerce_float(score_components.get("time_score"))
+        score_components["penalty_deductions"] = _coerce_float(score_components.get("penalty_deductions"))
+        score_components["total_fls_score"] = _coerce_float(score_components.get("total_fls_score"))
         cleaned["score_components"] = score_components
 
     if "confidence" in cleaned and "confidence_score" not in cleaned:
@@ -196,6 +288,7 @@ def _prepare_scoring_payload(data: dict, task: int | str) -> dict:
     cleaned["estimated_penalties"] = _coerce_float(cleaned.get("estimated_penalties"))
     cleaned["estimated_fls_score"] = _coerce_float(cleaned.get("estimated_fls_score"))
     cleaned["confidence_score"] = _coerce_float(cleaned.get("confidence_score"))
+    _normalize_phase_collections(cleaned)
 
     if cleaned.get("reasoning") and not cleaned.get("technique_summary"):
         cleaned["technique_summary"] = str(cleaned["reasoning"])
@@ -342,14 +435,15 @@ def score_with_gpt(
     response = client.chat.completions.create(
         model="gpt-4o",
         max_tokens=4096,
+        temperature=0,
+        response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": content},
         ],
     )
 
-    raw_content = response.choices[0].message.content or ""
-    raw_text = raw_content.strip()
+    raw_text = _extract_openai_text(response.choices[0].message.content)
     data = _prepare_scoring_payload(
         _strip_managed_scoring_fields(_parse_json_payload(raw_text)),
         task,

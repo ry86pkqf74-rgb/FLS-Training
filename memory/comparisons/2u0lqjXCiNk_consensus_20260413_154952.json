@@ -1,0 +1,128 @@
+{
+  "consensus_version": "v002",
+  "task_id": "task1",
+  "video_id": "2u0lqjXCiNk",
+  "consensus_score": {
+    "completion_time_seconds": 615.0,
+    "phase_timings": [
+      {
+        "phase": "needle_load",
+        "duration_seconds": 3.21,
+        "source": "averaged",
+        "teacher_a": 4.11,
+        "teacher_b": 2.3
+      },
+      {
+        "phase": "suture_placement",
+        "duration_seconds": 2.87,
+        "source": "averaged",
+        "teacher_a": 2.34,
+        "teacher_b": 3.5
+      }
+    ],
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "value": 1,
+        "source": "teacher_a_evidence",
+        "teacher_a_value": 1,
+        "teacher_b_value": 0,
+        "confidence": 0.8
+      }
+    ],
+    "task_specific_assessments": {
+      "knot_assessments": [],
+      "suture_placement": null,
+      "drain_assessment": null
+    },
+    "score_components": {
+      "max_score": 300,
+      "time_used": 615.0,
+      "total_penalties": 1,
+      "total_fls_score": 0.0,
+      "formula_applied": "max(0, 300 - 615.0 - 1) = 0.0"
+    },
+    "technique_summary": "Excellent technical skill demonstrated in the portions visible. Clean grasping, smooth transfers, and precise placement. Performance appears to be at expert level for technique but task remains incomplete.",
+    "strengths": [
+      "Smooth instrument coordination between hands",
+      "Precise object placement on pegs",
+      "Clean midair transfers without drops",
+      "Efficient movement patterns"
+    ],
+    "improvement_suggestions": [
+      "Ensure task completion within time limit",
+      "Maintain consistent pace throughout all 6 transfers",
+      "Focus on completing the full transfer sequence"
+    ]
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 615.0,
+      "teacher_b_value": 10.2,
+      "resolution": 615.0,
+      "rationale": "Teacher A correctly identifies this as an incomplete task spanning the full video duration. Teacher B's 10.2s appears to measure only a partial sequence. FLS scoring requires full task completion assessment. Video metadata would show actual duration, but Teacher A's incomplete task assessment is consistent with extended time.",
+      "frames_cited": [
+        3,
+        4,
+        6,
+        7,
+        10,
+        11,
+        13,
+        15
+      ],
+      "confidence": 0.8
+    },
+    {
+      "field": "penalties.incomplete_task",
+      "teacher_a_value": 1,
+      "teacher_b_value": 0,
+      "resolution": 1,
+      "rationale": "Teacher A identifies incomplete task with only 2-3 objects transferred out of required 6. Teacher B does not assess task completion status. FLS Task 1 requires all 6 objects to be transferred for completion. Teacher A's frame analysis shows partial completion only.",
+      "frames_cited": [
+        11,
+        13,
+        15
+      ],
+      "confidence": 0.8
+    },
+    {
+      "field": "total_fls_score",
+      "teacher_a_value": 0.0,
+      "teacher_b_value": 289.8,
+      "resolution": 0.0,
+      "rationale": "Recomputed from consensus components: max(0, 300 - 615.0 - 1) = 0.0. Teacher B's score appears to be based on incomplete time assessment.",
+      "frames_cited": [],
+      "confidence": 0.9
+    }
+  ],
+  "agreement_summary": {
+    "total_fields_compared": 12,
+    "agreed": 6,
+    "minor_divergence": 3,
+    "major_divergence": 3,
+    "agreement_rate": 0.5
+  },
+  "overall_confidence": 0.45,
+  "flags": [
+    "needs_human_review"
+  ],
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-08-06",
+    "consensus_model": "consensus_v002",
+    "timestamp": "2026-04-13T15:50:00Z"
+  },
+  "_meta": {
+    "video_id": "2u0lqjXCiNk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 20.6,
+    "input_tokens": 3706,
+    "output_tokens": 1175,
+    "cost_usd_approx": 0.0287,
+    "timestamp": "2026-04-13T15:49:52.123991+00:00",
+    "prompt_version": "v002"
+  }
+}

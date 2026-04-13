@@ -1,0 +1,104 @@
+{
+  "video_id": "educational_demo_tasks_4_5",
+  "task_id": "task3_endoloop",
+  "skill_level": "intermediate",
+  "coach_version": "v002",
+  "overall_assessment": {
+    "fls_score_context": "This video contains educational demonstrations of Tasks 4 and 5 (suturing techniques) rather than Task 3 (Endoloop). No valid Task 3 score can be generated from this content.",
+    "session_headline": "Video content mismatch - contains suturing demonstrations instead of endoloop technique"
+  },
+  "rubric_insights": [
+    {
+      "category": "content_verification",
+      "observation": "Video shows extracorporeal and intracorporeal suturing demonstrations with Penrose drain setup, not endoloop deployment around foam appendages.",
+      "frames_referenced": [
+        9,
+        13,
+        16,
+        20
+      ],
+      "impact_on_score": "No Task 3 score possible - video does not contain required endoloop content"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "task_identification",
+      "observation": "This appears to be an educational video demonstrating proper suturing techniques for FLS Tasks 4 and 5, not Task 3 endoloop placement.",
+      "frames_referenced": [
+        1,
+        6,
+        9,
+        13,
+        16,
+        20
+      ],
+      "why_it_matters": "Task 3 requires specific skills in ligating loop deployment, spatial targeting of foam appendages, and cinching technique - none of which are demonstrated in this video.",
+      "correction": "For Task 3 practice, you need a video showing: foam appendages of varying sizes, pre-tied ligating loops, loop deployment around appendages, and proper cinching technique.",
+      "drill": {
+        "name": "Task 3 Setup Verification",
+        "description": "Ensure your practice setup includes the FLS Task 3 board with foam appendages (small, medium, large) and pre-tied ligating loops. Practice loop deployment without timing pressure first.",
+        "duration_minutes": 5,
+        "target_reps": 1,
+        "success_criteria": "Correct Task 3 equipment setup with foam appendages visible"
+      },
+      "priority": "high"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "The educational video demonstrates excellent suturing technique with clear needle handling and knot formation",
+      "frames_referenced": [
+        6,
+        16,
+        20
+      ],
+      "why_it_matters": "While not Task 3 content, the demonstrated instrument control and precision will transfer well to endoloop manipulation when you practice the correct task.",
+      "encouragement": "Your instrument handling skills shown in previous sessions (scores of 508-556) indicate good dexterity that will serve you well in Task 3."
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Obtain correct Task 3 setup and begin endoloop fundamentals",
+    "warmup_drill": {
+      "name": "Equipment Verification",
+      "description": "Confirm you have the FLS Task 3 board with foam appendages and pre-tied ligating loops before beginning practice.",
+      "duration_minutes": 2
+    },
+    "primary_drill": {
+      "name": "Basic Loop Deployment",
+      "description": "Practice opening and positioning ligating loops around the largest foam appendage first. Focus on smooth loop opening and controlled placement.",
+      "target_reps": 10,
+      "target_time_minutes": 15,
+      "success_criteria": "Consistent loop opening without tangling, accurate placement around appendage"
+    },
+    "integration_drill": {
+      "name": "Progressive Appendage Sizing",
+      "description": "Once comfortable with large appendage, progress to medium then small appendages. Each requires more precise loop control.",
+      "target_reps": 5,
+      "target_time_minutes": 10,
+      "success_criteria": "Successful loop placement on all three appendage sizes"
+    },
+    "cooldown": "Review: Did I maintain loop integrity throughout deployment? Was my cinching smooth and controlled?",
+    "estimated_sessions_to_improvement": "2-3 sessions to establish basic Task 3 technique with correct equipment"
+  },
+  "progress_context": {
+    "trend": "insufficient_data",
+    "vs_baseline": "Previous sessions show Task 3 scores ranging from 28 to 600 points, suggesting inconsistent technique or equipment issues.",
+    "vs_peak": "Best recorded Task 3 score of 600 points indicates potential for proficiency when technique is consistent.",
+    "milestone_note": "Next target: Consistent Task 3 attempts with proper equipment setup, aiming for scores above 400 points.",
+    "plateau_risk": "Cannot assess plateau risk without valid Task 3 content in current video."
+  },
+  "safety_flags": [],
+  "confidence": 0.95,
+  "coaching_limitations": "Cannot provide Task 3-specific technique coaching based on this video content. Assessment is limited to identifying the content mismatch and recommending proper Task 3 setup.",
+  "disclaimer": "AI coaching supplements but does not replace hands-on instruction from a qualified surgical educator. Ensure you have the correct FLS Task 3 equipment before practicing endoloop techniques.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task3",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 30.84,
+    "input_tokens": 20914,
+    "output_tokens": 1300,
+    "cost_usd_approx": 0.0822
+  }
+}

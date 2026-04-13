@@ -1,0 +1,70 @@
+{
+  "id": "score_consensus_IwrNTRVXuJQ_20260413_155006",
+  "video_id": "IwrNTRVXuJQ",
+  "video_filename": "IwrNTRVXuJQ.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:50:06.067530+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 180.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "duration_seconds": 10,
+      "source": "averaged",
+      "teacher_a": 10,
+      "teacher_b": 10
+    },
+    {
+      "phase": "idle",
+      "duration_seconds": 5.5,
+      "source": "averaged",
+      "teacher_a": 6,
+      "teacher_b": 5
+    },
+    {
+      "phase": "suture_cut",
+      "duration_seconds": 5,
+      "source": "teacher_b_only",
+      "teacher_a": 0,
+      "teacher_b": 5
+    }
+  ],
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "value": 0,
+      "source": "arbitrated",
+      "teacher_a_value": 1,
+      "teacher_b_value": 0,
+      "confidence": 0.3
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": null,
+    "drain_assessment": null
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 180.0,
+    "total_penalties": 0,
+    "total_fls_score": 0.0,
+    "formula_applied": "max(0, 180 - 180.0 - 0) = 0.0"
+  },
+  "technique_summary": "Video content appears to be instructional demonstration showing endoloop setup and technique concepts rather than a complete task performance",
+  "strengths": [
+    "Clear demonstration of proper extracorporeal knot technique",
+    "Good visualization of C-shape loop configuration",
+    "Proper setup and equipment positioning shown"
+  ],
+  "improvement_suggestions": [
+    "For actual task performance, focus on smooth loop deployment",
+    "Practice pusher engagement and advancement technique",
+    "Ensure complete task execution including loop cinching and tail cutting"
+  ],
+  "confidence_score": 0.3
+}

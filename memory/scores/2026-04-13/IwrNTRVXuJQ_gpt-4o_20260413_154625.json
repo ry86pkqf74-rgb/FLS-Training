@@ -1,0 +1,90 @@
+{
+  "id": "score_gpt_IwrNTRVXuJQ_20260413154625",
+  "video_id": "IwrNTRVXuJQ",
+  "video_filename": "IwrNTRVXuJQ.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:46:25.342501",
+  "task_id": "task3",
+  "penalties": [],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 160.0
+  },
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 11,
+      "phase": "suture_placement",
+      "description": "Loop being introduced into the field.",
+      "technique_notes": "Smooth entry, loop is intact."
+    },
+    {
+      "frame_number": 12,
+      "phase": "suture_placement",
+      "description": "Loop positioned around the appendage.",
+      "technique_notes": "Positioning appears accurate."
+    },
+    {
+      "frame_number": 13,
+      "phase": "idle",
+      "description": "Pusher advancing the loop to the marked line.",
+      "technique_notes": "Steady advancement, no visible slack."
+    },
+    {
+      "frame_number": 14,
+      "phase": "suture_cut",
+      "description": "Tail being cut after securing the loop.",
+      "technique_notes": "Clean cut, loop appears secure."
+    }
+  ],
+  "completion_time_seconds": 20.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 0.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 5.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "idle",
+      "start_seconds": 10.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 15.0,
+      "end_seconds": 20.0,
+      "duration_seconds": 5.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Expert performance with efficient loop deployment and secure placement.",
+  "improvement_suggestions": [],
+  "strengths": [
+    "Quick and accurate loop positioning.",
+    "Secure loop with no visible slack."
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

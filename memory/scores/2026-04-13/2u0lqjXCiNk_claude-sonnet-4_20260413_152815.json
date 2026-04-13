@@ -1,0 +1,120 @@
+{
+  "id": "score_claude_2u0lqjXCiNk_20260413152815",
+  "video_id": "2u0lqjXCiNk",
+  "video_filename": "2u0lqjXCiNk.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:28:15.108518",
+  "task_id": "task1",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears incomplete - only 2-3 objects transferred out of required 6"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Initial setup visible with circular platform containing pegs and triangular objects. Right grasper approaching first object.",
+      "technique_notes": "Good initial positioning, instruments properly inserted"
+    },
+    {
+      "frame_number": 4,
+      "phase": "needle_load",
+      "description": "Right grasper grasping triangular object from peg, left grasper positioned for assistance",
+      "technique_notes": "Secure grasp achieved on first object"
+    },
+    {
+      "frame_number": 6,
+      "phase": "needle_load",
+      "description": "Object successfully lifted from peg, beginning transfer motion",
+      "technique_notes": "Smooth lifting motion, good instrument coordination"
+    },
+    {
+      "frame_number": 7,
+      "phase": "suture_placement",
+      "description": "Object being transferred between graspers in midair",
+      "technique_notes": "Clean transfer technique, object remains secure"
+    },
+    {
+      "frame_number": 10,
+      "phase": "suture_placement",
+      "description": "Left grasper placing object on target peg",
+      "technique_notes": "Precise placement on peg, good depth perception"
+    },
+    {
+      "frame_number": 11,
+      "phase": "suture_placement",
+      "description": "First object successfully placed on peg, instruments positioning for next object",
+      "technique_notes": "Object fully seated on peg, efficient transition to next pickup"
+    },
+    {
+      "frame_number": 13,
+      "phase": "needle_load",
+      "description": "Left grasper picking up second object for reverse transfer",
+      "technique_notes": "Consistent technique maintained in reverse direction"
+    },
+    {
+      "frame_number": 15,
+      "phase": "suture_placement",
+      "description": "Object being transferred from left to right grasper",
+      "technique_notes": "Smooth reverse transfer, maintaining object security"
+    }
+  ],
+  "completion_time_seconds": 615.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 4.11,
+      "duration_seconds": 4.11
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 4.11,
+      "end_seconds": 6.45,
+      "duration_seconds": 2.34
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 6.45,
+      "end_seconds": 10.15,
+      "duration_seconds": 3.7
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Excellent technical skill demonstrated in the portions visible. Clean grasping, smooth transfers, and precise placement. Performance appears to be at expert level for technique but task remains incomplete.",
+  "improvement_suggestions": [
+    "Ensure task completion within time limit",
+    "Maintain consistent pace throughout all 6 transfers",
+    "Focus on completing the full transfer sequence"
+  ],
+  "strengths": [
+    "Smooth instrument coordination between hands",
+    "Precise object placement on pegs",
+    "Clean midair transfers without drops",
+    "Efficient movement patterns"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

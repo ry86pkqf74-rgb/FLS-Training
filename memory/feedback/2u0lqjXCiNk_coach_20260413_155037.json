@@ -1,0 +1,144 @@
+{
+  "video_id": "current_session",
+  "task_id": "task1_peg_transfer",
+  "skill_level": "intermediate",
+  "coach_version": "v002",
+  "overall_assessment": {
+    "fls_score_context": "Score of 0 due to task incompletion within the 10-minute time limit (615 seconds). Your technique quality is excellent \u2014 this is purely a time management issue preventing you from demonstrating your true capability.",
+    "session_headline": "Expert-level technique held back by incomplete task execution"
+  },
+  "rubric_insights": [
+    {
+      "category": "task_completion",
+      "observation": "Task remained incomplete at 10:15 time limit. Only partial transfers completed despite excellent technique quality throughout visible portions.",
+      "frames_referenced": [
+        1,
+        2,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "impact_on_score": "Complete score loss (300 points) due to incompletion penalty. With your technique quality, a completed task would likely score 200+ points."
+    },
+    {
+      "category": "time_management",
+      "observation": "615 seconds used without task completion. Expert benchmark for full 6-object sequence is 45-90 seconds.",
+      "frames_referenced": [
+        1,
+        22
+      ],
+      "impact_on_score": "Time penalty would be minimal if task completed \u2014 the incompletion penalty is the primary score killer."
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "task_execution_strategy",
+      "observation": "In frames 1-18, technique quality is consistently excellent with smooth transfers and precise placements. However, the task appears to stall or restart multiple times rather than progressing through all 6 required transfers.",
+      "frames_referenced": [
+        1,
+        6,
+        11,
+        18
+      ],
+      "why_it_matters": "Task 1 requires completing 6 objects transferred in sequence (3 left-to-right, 3 right-to-left). Incomplete execution negates all technical skill demonstrated.",
+      "correction": "Focus on continuous progression through the full sequence. Once an object is placed, immediately move to the next pickup without pause or hesitation.",
+      "drill": {
+        "name": "Full Sequence Sprint",
+        "description": "Complete all 6 transfers in one continuous motion. Set a timer for 2 minutes maximum. If you don't finish, restart immediately. Focus on flow, not perfection.",
+        "duration_minutes": 15,
+        "target_reps": 5,
+        "success_criteria": "Complete all 6 transfers within 2 minutes with no more than 1 drop per attempt"
+      },
+      "priority": "critical"
+    },
+    {
+      "category": "pacing_consistency",
+      "observation": "Individual transfer technique in frames 4-7 and 10-13 shows excellent control, but there appear to be extended pauses between transfers that consume valuable time.",
+      "frames_referenced": [
+        4,
+        7,
+        10,
+        13
+      ],
+      "why_it_matters": "With your technical skill level, you should complete Task 1 in under 90 seconds. Extended pauses suggest overthinking or loss of task focus.",
+      "correction": "Maintain continuous motion. As soon as one object is seated on its peg, your eyes should already be tracking to the next pickup location.",
+      "drill": {
+        "name": "Metronome Pacing",
+        "description": "Set a metronome to 60 BPM. Complete one full pickup-transfer-place cycle every 2 beats (2 seconds). Practice until this rhythm feels natural.",
+        "duration_minutes": 10,
+        "target_reps": 20,
+        "success_criteria": "Maintain 2-second cycle time for 10 consecutive transfers without drops"
+      },
+      "priority": "high"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Midair transfers in frames 6-7 and 12-13 show exceptional instrument coordination with no fumbling or object instability",
+      "frames_referenced": [
+        6,
+        7,
+        12,
+        13
+      ],
+      "why_it_matters": "Clean midair transfers are the hallmark of advanced peg transfer skill. Your technique here is at expert level \u2014 many intermediate trainees struggle with drops during handoffs.",
+      "encouragement": "Your transfer technique is genuinely excellent. The scoring system cannot capture this quality when the task remains incomplete, but your motor skills are clearly advanced."
+    },
+    {
+      "observation": "Object placement precision in frames 10-11 shows perfect depth perception and peg alignment",
+      "frames_referenced": [
+        10,
+        11
+      ],
+      "why_it_matters": "Precise placement without multiple positioning attempts saves 2-3 seconds per object. This efficiency multiplied across 6 objects creates significant time savings.",
+      "encouragement": "Your placement accuracy is spot-on. This precision will serve you well once you focus on completing the full sequence."
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Task completion within time limits \u2014 your technique is ready, execution strategy needs refinement",
+    "warmup_drill": {
+      "name": "Single Transfer Speed",
+      "description": "Pick up one object, transfer between hands, place on target peg. Repeat 10 times, timing each cycle.",
+      "duration_minutes": 5
+    },
+    "primary_drill": {
+      "name": "Full Sequence Sprint",
+      "description": "Complete all 6 transfers continuously. Set 90-second target initially, reduce by 10s each successful completion.",
+      "target_reps": 8,
+      "target_time_minutes": 20,
+      "success_criteria": "Complete full sequence in under 90 seconds with \u22641 drop"
+    },
+    "integration_drill": {
+      "name": "Pressure Practice",
+      "description": "Complete 3 full sequences back-to-back with 30-second rest between. Simulate test conditions with time pressure.",
+      "target_reps": 3,
+      "target_time_minutes": 10,
+      "success_criteria": "All 3 sequences completed within individual 90-second limits"
+    },
+    "cooldown": "Review: Did I maintain continuous motion? Where did I pause unnecessarily? What was my average completion time?",
+    "estimated_sessions_to_improvement": "1-2 focused sessions to achieve consistent task completion, 3-4 sessions to reach 200+ FLS scores"
+  },
+  "progress_context": {
+    "trend": "technique_plateau_execution_regression",
+    "vs_baseline": "Early sessions showed 500+ scores with 88-90s completion times. Recent attempts show incomplete execution despite maintained technique quality.",
+    "vs_peak": "Peak performance was 556 FLS (42s completion). Current 0 FLS represents execution failure, not skill regression.",
+    "milestone_note": "Next target: Complete any full sequence within 2 minutes \u2192 score \u2265120 FLS. Then optimize to sub-90s \u2192 score \u2265210 FLS.",
+    "plateau_risk": "High risk of frustration-induced technique degradation. Your motor skills are excellent \u2014 focus purely on execution completion."
+  },
+  "safety_flags": [],
+  "confidence": 0.95,
+  "coaching_limitations": "Cannot determine exact point of task breakdown from frame sampling. Unclear whether this was equipment malfunction, distraction, or strategic confusion about task requirements.",
+  "disclaimer": "AI coaching supplements but does not replace hands-on instruction from a qualified surgical educator. Discuss any technique changes with your program's skills lab proctor.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 45.68,
+    "input_tokens": 21153,
+    "output_tokens": 1845,
+    "cost_usd_approx": 0.0911
+  }
+}

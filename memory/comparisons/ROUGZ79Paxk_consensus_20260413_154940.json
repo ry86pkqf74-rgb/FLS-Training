@@ -1,0 +1,118 @@
+{
+  "consensus_version": "v002",
+  "task_id": "task1_peg_transfer",
+  "video_id": "ROUGZ79Paxk",
+  "consensus_score": {
+    "completion_time_seconds": 0.0,
+    "phase_timings": [],
+    "penalties": [
+      {
+        "type": "task_mismatch",
+        "value": 300.0,
+        "source": "arbitrated",
+        "teacher_a_value": "task_mismatch penalty",
+        "teacher_b_value": "no penalty recognized",
+        "confidence": 0.95
+      }
+    ],
+    "task_specific_assessments": {
+      "knot_assessments": [],
+      "suture_placement": null,
+      "drain_assessment": null
+    },
+    "score_components": {
+      "max_score": 300,
+      "time_used": 0.0,
+      "total_penalties": 300.0,
+      "total_fls_score": 0.0,
+      "formula_applied": "max(0, 300 - 0.0 - 300.0) = 0.0"
+    },
+    "technique_summary": "Video shows extracorporeal suturing (Task 4) rather than peg transfer (Task 1). No peg transfer was performed.",
+    "strengths": [
+      "Good extracorporeal knot tying technique",
+      "Appropriate use of knot pusher",
+      "Proper suture placement through drain"
+    ],
+    "improvement_suggestions": [
+      "Perform the correct task (peg transfer with rubber objects between pegs)",
+      "Use bilateral graspers for object manipulation",
+      "Focus on transfer technique rather than suturing skills"
+    ]
+  },
+  "disagreements": [
+    {
+      "field": "task_recognition",
+      "teacher_a_value": "extracorporeal_suturing_task4",
+      "teacher_b_value": "peg_transfer_task1",
+      "resolution": "extracorporeal_suturing_task4",
+      "rationale": "Teacher A correctly identifies frames 6-18 showing Penrose drain, suture material, needle drivers, and extracorporeal knot tying - all characteristic of Task 4. Teacher B misinterprets suturing equipment as peg transfer objects. FLS Task 1 requires rubber objects and pegs, not suture materials.",
+      "frames_cited": [
+        6,
+        7,
+        10,
+        11,
+        13,
+        18
+      ],
+      "confidence": 0.95
+    },
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 135.0,
+      "teacher_b_value": 30.0,
+      "resolution": 0.0,
+      "rationale": "Since no peg transfer was performed, completion time is 0 for Task 1 scoring purposes. Task mismatch results in maximum penalty.",
+      "frames_cited": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "confidence": 0.95
+    },
+    {
+      "field": "total_fls_score",
+      "teacher_a_value": 0.0,
+      "teacher_b_value": 270.0,
+      "resolution": 0.0,
+      "rationale": "Teacher A correctly assigns 0 score for task mismatch. Teacher B's score of 270 is invalid as it assumes successful peg transfer completion, which did not occur.",
+      "frames_cited": [
+        6,
+        7,
+        10,
+        11
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "agreement_summary": {
+    "total_fields_compared": 8,
+    "agreed": 2,
+    "minor_divergence": 3,
+    "major_divergence": 3,
+    "agreement_rate": 0.25
+  },
+  "overall_confidence": 0.0,
+  "flags": [
+    "needs_human_review",
+    "task_mismatch_detected",
+    "low_agreement_rate"
+  ],
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-08-06",
+    "consensus_model": "consensus_v002",
+    "timestamp": "2026-04-13T15:50:00Z"
+  },
+  "_meta": {
+    "video_id": "ROUGZ79Paxk",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 14.94,
+    "input_tokens": 3909,
+    "output_tokens": 1099,
+    "cost_usd_approx": 0.0282,
+    "timestamp": "2026-04-13T15:49:40.405155+00:00",
+    "prompt_version": "v002"
+  }
+}

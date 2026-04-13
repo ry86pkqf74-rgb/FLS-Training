@@ -1,0 +1,149 @@
+{
+  "consensus_version": "v002",
+  "task_id": "task3_endoloop",
+  "video_id": "IwrNTRVXuJQ",
+  "consensus_score": {
+    "completion_time_seconds": 180.0,
+    "phase_timings": [
+      {
+        "phase": "suture_placement",
+        "duration_seconds": 10,
+        "source": "averaged",
+        "teacher_a": 10,
+        "teacher_b": 10
+      },
+      {
+        "phase": "idle",
+        "duration_seconds": 5.5,
+        "source": "averaged",
+        "teacher_a": 6,
+        "teacher_b": 5
+      },
+      {
+        "phase": "suture_cut",
+        "duration_seconds": 5,
+        "source": "teacher_b_only",
+        "teacher_a": 0,
+        "teacher_b": 5
+      }
+    ],
+    "penalties": [
+      {
+        "type": "incomplete_task",
+        "value": 0,
+        "source": "arbitrated",
+        "teacher_a_value": 1,
+        "teacher_b_value": 0,
+        "confidence": 0.3
+      }
+    ],
+    "task_specific_assessments": {
+      "knot_assessments": [],
+      "suture_placement": null,
+      "drain_assessment": null
+    },
+    "score_components": {
+      "max_score": 180,
+      "time_used": 180.0,
+      "total_penalties": 0,
+      "total_fls_score": 0.0,
+      "formula_applied": "max(0, 180 - 180.0 - 0) = 0.0"
+    },
+    "technique_summary": "Video content appears to be instructional demonstration showing endoloop setup and technique concepts rather than a complete task performance",
+    "strengths": [
+      "Clear demonstration of proper extracorporeal knot technique",
+      "Good visualization of C-shape loop configuration",
+      "Proper setup and equipment positioning shown"
+    ],
+    "improvement_suggestions": [
+      "For actual task performance, focus on smooth loop deployment",
+      "Practice pusher engagement and advancement technique",
+      "Ensure complete task execution including loop cinching and tail cutting"
+    ]
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 180.0,
+      "teacher_b_value": 20.0,
+      "resolution": 180.0,
+      "rationale": "Teacher A correctly identifies this as instructional content with no actual task completion, assigning maximum time penalty. Teacher B appears to have misinterpreted demonstration segments as actual performance. Frame evidence shows setup demonstrations and technique explanations rather than continuous task execution.",
+      "frames_cited": [
+        3,
+        7,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        20,
+        21
+      ],
+      "confidence": 0.7
+    },
+    {
+      "field": "penalties.incomplete_task",
+      "teacher_a_value": 1,
+      "teacher_b_value": 0,
+      "resolution": 0,
+      "rationale": "While Teacher A correctly identifies instructional nature, the penalty structure should be reflected in time scoring rather than separate incomplete_task penalty. Maximum time (180s) already represents non-completion.",
+      "frames_cited": [
+        3,
+        7,
+        12,
+        13,
+        14,
+        15
+      ],
+      "confidence": 0.3
+    },
+    {
+      "field": "total_fls_score",
+      "teacher_a_value": 0.0,
+      "teacher_b_value": 160.0,
+      "resolution": 0.0,
+      "rationale": "Teacher A's assessment is correct - this is instructional content showing task setup and technique concepts, not actual task performance. No loop deployment and cinching was completed.",
+      "frames_cited": [
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        20,
+        21
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "agreement_summary": {
+    "total_fields_compared": 8,
+    "agreed": 2,
+    "minor_divergence": 3,
+    "major_divergence": 3,
+    "agreement_rate": 0.25
+  },
+  "overall_confidence": 0.3,
+  "flags": [
+    "needs_human_review",
+    "instructional_content_detected"
+  ],
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-08-06",
+    "consensus_model": "consensus_v002",
+    "timestamp": "2026-04-13T15:50:00Z"
+  },
+  "_meta": {
+    "video_id": "IwrNTRVXuJQ",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 17.23,
+    "input_tokens": 3919,
+    "output_tokens": 1224,
+    "cost_usd_approx": 0.0301,
+    "timestamp": "2026-04-13T15:50:06.067530+00:00",
+    "prompt_version": "v002"
+  }
+}

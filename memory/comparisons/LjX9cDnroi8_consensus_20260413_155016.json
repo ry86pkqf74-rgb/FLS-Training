@@ -1,0 +1,109 @@
+{
+  "consensus_version": "v002",
+  "task_id": "task3_endoloop",
+  "video_id": "LjX9cDnroi8",
+  "consensus_score": {
+    "completion_time_seconds": 68.5,
+    "phase_timings": [
+      {
+        "phase": "suture_placement",
+        "duration_seconds": 17.5,
+        "source": "averaged",
+        "teacher_a": 24,
+        "teacher_b": 15
+      },
+      {
+        "phase": "idle",
+        "duration_seconds": 18.0,
+        "source": "averaged",
+        "teacher_a": 30,
+        "teacher_b": 10
+      },
+      {
+        "phase": "suture_cut",
+        "duration_seconds": 10.0,
+        "source": "teacher_b",
+        "teacher_a": 0,
+        "teacher_b": 10
+      }
+    ],
+    "penalties": [],
+    "task_specific_assessments": {
+      "knot_assessments": [],
+      "suture_placement": null,
+      "drain_assessment": null
+    },
+    "score_components": {
+      "max_score": 180,
+      "time_used": 68.5,
+      "total_penalties": 0.0,
+      "total_fls_score": 111.5,
+      "formula_applied": "180 - 68.5 - 0.0 = 111.5"
+    },
+    "technique_summary": "Good intermediate performance with methodical approach. Efficient loop deployment and positioning with proper instrument coordination throughout the procedure.",
+    "strengths": [
+      "Smooth loop deployment with proper instrument handling",
+      "Accurate targeting and positioning of loop",
+      "Efficient use of instruments with minimal errors"
+    ],
+    "improvement_suggestions": [
+      "Reduce overall completion time to achieve expert level performance",
+      "Streamline loop deployment and cinching phases"
+    ]
+  },
+  "disagreements": [
+    {
+      "field": "completion_time_seconds",
+      "teacher_a_value": 102.0,
+      "teacher_b_value": 35.0,
+      "resolution": 68.5,
+      "rationale": "Major divergence in completion time assessment. Teacher A reports 102s (intermediate range) while Teacher B reports 35s (expert range). Both cite similar frame sequences but interpret timing differently. Given the substantial difference and lack of definitive frame timing evidence, averaged the values while noting high uncertainty.",
+      "frames_cited": [
+        1,
+        4,
+        8,
+        12,
+        16,
+        17
+      ],
+      "confidence": 0.4
+    },
+    {
+      "field": "total_fls_score",
+      "teacher_a_value": 78.0,
+      "teacher_b_value": 145.0,
+      "resolution": 111.5,
+      "rationale": "Score divergence stems from completion time disagreement. Recomputed from consensus completion time using task formula: 180 - 68.5 - 0 = 111.5",
+      "frames_cited": [],
+      "confidence": 0.4
+    }
+  ],
+  "agreement_summary": {
+    "total_fields_compared": 8,
+    "agreed": 4,
+    "minor_divergence": 2,
+    "major_divergence": 2,
+    "agreement_rate": 0.5
+  },
+  "overall_confidence": 0.36,
+  "flags": [
+    "needs_human_review"
+  ],
+  "trace": {
+    "teacher_a_model": "claude-sonnet-4-20250514",
+    "teacher_b_model": "gpt-4o-2024-08-06",
+    "consensus_model": "consensus_v002",
+    "timestamp": "2026-04-13T15:47:01Z"
+  },
+  "_meta": {
+    "video_id": "LjX9cDnroi8",
+    "model": "claude-sonnet-4-20250514",
+    "final_round": 1,
+    "elapsed_seconds": 14.58,
+    "input_tokens": 3782,
+    "output_tokens": 979,
+    "cost_usd_approx": 0.026,
+    "timestamp": "2026-04-13T15:50:16.971361+00:00",
+    "prompt_version": "v002"
+  }
+}

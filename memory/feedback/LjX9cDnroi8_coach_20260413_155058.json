@@ -1,0 +1,135 @@
+{
+  "video_id": "yt_current_session",
+  "task_id": "task3_endoloop",
+  "skill_level": "intermediate",
+  "coach_version": "v002",
+  "overall_assessment": {
+    "fls_score_context": "Score of 111.5 represents solid intermediate performance, well above novice level but with clear room for advancement. Your technique is sound - time optimization is the primary pathway to expert-level scores.",
+    "session_headline": "Clean technique with methodical approach - focus on tempo to reach advanced level"
+  },
+  "rubric_insights": [
+    {
+      "category": "time_management",
+      "observation": "68.5-second completion time is methodical but leaves significant time on the table. Expert benchmark is 35-45 seconds for this task.",
+      "frames_referenced": [
+        4,
+        8,
+        12,
+        17
+      ],
+      "impact_on_score": "20-25 points recoverable by reaching intermediate-to-advanced tempo without sacrificing accuracy"
+    },
+    {
+      "category": "phase_efficiency",
+      "observation": "18-second idle phase suggests hesitation or repositioning delays between key maneuvers.",
+      "frames_referenced": [
+        8,
+        13
+      ],
+      "impact_on_score": "10-15 points recoverable by reducing transition delays and maintaining continuous forward progress"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "loop_deployment",
+      "observation": "In frames 4-5, loop deployment shows excellent bimanual coordination with steady appendage control and smooth loop manipulation.",
+      "frames_referenced": [
+        4,
+        5
+      ],
+      "why_it_matters": "This foundational skill directly translates to real OR scenarios where appendage control during loop placement is critical for avoiding tissue trauma.",
+      "correction": "Your deployment technique is already solid. Focus on maintaining this quality while increasing tempo.",
+      "drill": {
+        "name": "Rapid Loop Deployment",
+        "description": "Practice loop deployment on various sized appendages with a metronome. Start at your current comfortable pace, then increase tempo by 10% every 5 successful deployments.",
+        "duration_minutes": 15,
+        "target_reps": 20,
+        "success_criteria": "Consistent loop deployment in under 8 seconds while maintaining smooth instrument coordination"
+      },
+      "priority": "medium"
+    },
+    {
+      "category": "transition_efficiency",
+      "observation": "Frames 8-13 show a prolonged positioning phase before cinching. The loop appears well-positioned in frame 8, but cinching doesn't begin until frame 13.",
+      "frames_referenced": [
+        8,
+        13
+      ],
+      "why_it_matters": "Hesitation between positioning and cinching is a common intermediate plateau. Decisive transitions separate intermediate from advanced performers.",
+      "correction": "Once loop is positioned (as in frame 8), immediately begin pusher advancement. Trust your positioning - you're more accurate than you think.",
+      "drill": {
+        "name": "Position-to-Cinch Sprint",
+        "description": "Practice the transition from loop positioning to pusher advancement. Count '1-2-cinch' to eliminate hesitation. Focus on fluid motion from positioning to tightening.",
+        "duration_minutes": 10,
+        "target_reps": 15,
+        "success_criteria": "Sub-3-second transition from final positioning to cinch initiation"
+      },
+      "priority": "high"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Excellent instrument coordination throughout frames 4-5 with steady appendage control during loop manipulation",
+      "frames_referenced": [
+        4,
+        5
+      ],
+      "why_it_matters": "Bimanual coordination is the foundation of advanced laparoscopic skills. Your steady non-dominant hand control is already at intermediate-to-advanced level.",
+      "encouragement": "Your instrument coordination is a real strength - this skill will serve you well as you progress to more complex procedures."
+    },
+    {
+      "observation": "Clean loop deployment and positioning visible in frames 8-9 with proper targeting accuracy",
+      "frames_referenced": [
+        8,
+        9
+      ],
+      "why_it_matters": "Accurate targeting reduces the need for repositioning and demonstrates good spatial awareness in the laparoscopic environment.",
+      "encouragement": "Your targeting accuracy is excellent - you're placing loops exactly where they need to be on the first attempt."
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Tempo optimization while maintaining your excellent technique quality",
+    "warmup_drill": {
+      "name": "Instrument Flow Drill",
+      "description": "Open and close both graspers in alternating pattern for 30 seconds. Focus on smooth, rhythmic movements to establish tempo mindset.",
+      "duration_minutes": 3
+    },
+    "primary_drill": {
+      "name": "Position-to-Cinch Sprint",
+      "description": "See technique_coaching drill above. Focus on eliminating hesitation between positioning and cinching phases.",
+      "target_reps": 15,
+      "target_time_minutes": 10,
+      "success_criteria": "Consistent sub-3-second transitions from positioning to cinch initiation"
+    },
+    "integration_drill": {
+      "name": "Full Task Time Trial",
+      "description": "Complete 3 full Task 3 attempts focusing on continuous forward progress. No pausing between phases - maintain momentum throughout.",
+      "target_reps": 3,
+      "target_time_minutes": 15,
+      "success_criteria": "Sub-60-second completion while maintaining loop security and proper positioning"
+    },
+    "cooldown": "Self-assess: Did I maintain continuous forward progress? Were there any unnecessary pauses? Did rushing affect my accuracy?",
+    "estimated_sessions_to_improvement": "4-6 focused sessions to consistently achieve sub-55-second completions with maintained accuracy"
+  },
+  "progress_context": {
+    "trend": "improving",
+    "vs_baseline": "Strong improvement from early attempts showing 28-415 point range. Current 111.5 represents consistent intermediate performance.",
+    "vs_peak": "Current performance aligns with recent session cluster (508-556 range when accounting for different time scales), showing consistency in technique.",
+    "milestone_note": "Next target: sub-55-second completion with maintained accuracy \u2192 score \u2265125, approaching advanced threshold.",
+    "plateau_risk": "Low - technique is sound and time optimization has clear pathways. Monitor for over-rushing that could compromise accuracy."
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "Some frame transitions show instrument positions between key maneuvers, limiting assessment of specific hand movements during transitions. Loop tension assessment relies on visual tightness indicators only.",
+  "disclaimer": "AI coaching supplements but does not replace hands-on instruction from a qualified surgical educator. Discuss any technique changes with your program's skills lab proctor.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task3",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 41.05,
+    "input_tokens": 21131,
+    "output_tokens": 1680,
+    "cost_usd_approx": 0.0886
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "score_gpt_LjX9cDnroi8_20260413154321",
+  "video_id": "LjX9cDnroi8",
+  "video_filename": "LjX9cDnroi8.f135.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:43:21.386043",
+  "task_id": "task3",
+  "penalties": [
+    {
+      "type": "loop_off_mark",
+      "count": 1,
+      "description": "Loop slightly off mark, right side overhanging"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 143.0
+  },
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "phase": "suture_placement",
+      "description": "Instruments appear in the field, loop not yet visible",
+      "technique_notes": "Initial setup phase"
+    },
+    {
+      "frame_number": 4,
+      "phase": "suture_placement",
+      "description": "Instrument extends over the target, loop visible",
+      "technique_notes": "Proper alignment with target noticed"
+    },
+    {
+      "frame_number": 5,
+      "phase": "idle",
+      "description": "Loop advanced over target, slight misalignment noted",
+      "technique_notes": "Approach slower than ideal; minor axial offset"
+    },
+    {
+      "frame_number": 9,
+      "phase": "idle",
+      "description": "Breaker engaged, loop tightened moderately",
+      "technique_notes": "Secure push on loop, needed firmer handling"
+    },
+    {
+      "frame_number": 12,
+      "phase": "suture_cut",
+      "description": "Tail cut after loop secured, clear adjustment of instruments",
+      "technique_notes": "Clean cut observed, but hesitance noted during push"
+    }
+  ],
+  "completion_time_seconds": 35.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 0.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 5.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "idle",
+      "start_seconds": 10.0,
+      "end_seconds": 25.0,
+      "duration_seconds": 15.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 25.0,
+      "end_seconds": 35.0,
+      "duration_seconds": 10.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Completed task efficiently with minor deviation from target position. Loop cinched with moderate tightness.",
+  "improvement_suggestions": [
+    "Finer adjustment needed for perfect central placement",
+    "Firmer handling during loop cinch for tighter security"
+  ],
+  "strengths": [
+    "Efficient loop positioning and tail cut timing",
+    "Consistent hand-eye coordination"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

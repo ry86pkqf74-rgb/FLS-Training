@@ -1,0 +1,131 @@
+{
+  "id": "score_claude_IwrNTRVXuJQ_20260413152856",
+  "video_id": "IwrNTRVXuJQ",
+  "video_filename": "IwrNTRVXuJQ.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:28:56.043007",
+  "task_id": "task3_endoloop",
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "count": 1,
+      "description": "Task appears to be demonstration/instructional video rather than completed performance - no actual loop deployment and cinching observed"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "phase": "idle",
+      "description": "Task 1 Peg Transfer setup visible with rubber objects on pegs",
+      "technique_notes": "This appears to be a different task setup, not the endoloop task"
+    },
+    {
+      "frame_number": 7,
+      "phase": "idle",
+      "description": "Task 2 Pattern Cut setup visible with gauze and circular pattern marked",
+      "technique_notes": "Scissors positioned for precision cutting task, not endoloop"
+    },
+    {
+      "frame_number": 12,
+      "phase": "idle",
+      "description": "Task 3 Endoloop setup becoming visible with foam appendage and loop apparatus",
+      "technique_notes": "Red foam base with cylindrical foam appendage, proper task 3 setup"
+    },
+    {
+      "frame_number": 13,
+      "phase": "suture_placement",
+      "description": "Close-up view of foam appendage with ligating loop visible, hands demonstrating extracorporeal knot formation",
+      "technique_notes": "Shows proper hand positioning for creating extracorporeal knots in sequence"
+    },
+    {
+      "frame_number": 14,
+      "phase": "suture_placement",
+      "description": "Foam appendage positioned on red foam base with ligating loop apparatus",
+      "technique_notes": "Clean setup with appendage properly mounted for loop deployment"
+    },
+    {
+      "frame_number": 15,
+      "phase": "idle",
+      "description": "Hand demonstration showing '3 knots in a row' technique for creating secure ligating loop",
+      "technique_notes": "Proper extracorporeal technique being demonstrated with sequential knot formation"
+    },
+    {
+      "frame_number": 17,
+      "phase": "suture_placement",
+      "description": "Overhead view of foam appendage with suture positioned, showing '2cm suture tail' measurement",
+      "technique_notes": "Proper suture length management for effective loop deployment"
+    },
+    {
+      "frame_number": 18,
+      "phase": "suture_placement",
+      "description": "Graspers positioned around foam appendage with loop ready for deployment",
+      "technique_notes": "Good instrument positioning for loop advancement and placement"
+    },
+    {
+      "frame_number": 20,
+      "phase": "idle",
+      "description": "Loop positioned around appendage with C-shape formation visible, demonstrating proper loop configuration",
+      "technique_notes": "Excellent loop shape formation around the target appendage"
+    },
+    {
+      "frame_number": 21,
+      "phase": "idle",
+      "description": "Final C-shape loop configuration maintained around appendage before cinching",
+      "technique_notes": "Loop properly positioned and ready for final cinching and securing"
+    }
+  ],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 26.0,
+      "end_seconds": 30.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 30.0,
+      "end_seconds": 36.0,
+      "duration_seconds": 6.0
+    },
+    {
+      "phase": "idle",
+      "start_seconds": 36.0,
+      "end_seconds": 42.0,
+      "duration_seconds": 6.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Instructional demonstration showing proper setup and technique for endoloop task, including extracorporeal knot formation and loop positioning concepts, but no actual task performance observed.",
+  "improvement_suggestions": [
+    "This appears to be instructional content - for actual task performance, focus on smooth loop deployment",
+    "Practice pusher engagement and advancement technique",
+    "Ensure complete task execution including loop cinching and tail cutting"
+  ],
+  "strengths": [
+    "Clear demonstration of proper extracorporeal knot technique",
+    "Good visualization of C-shape loop configuration",
+    "Proper setup and equipment positioning shown"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

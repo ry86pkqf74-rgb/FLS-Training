@@ -1,0 +1,128 @@
+{
+  "video_id": "unknown",
+  "task_id": "task1_peg_transfer",
+  "skill_level": "intermediate",
+  "coach_version": "v002",
+  "overall_assessment": {
+    "fls_score_context": "Score of 0 due to task mismatch penalty - you performed Task 4 (Extracorporeal Suture) instead of Task 1 (Peg Transfer). Your suturing technique was solid, but task selection is critical for valid assessment.",
+    "session_headline": "Strong suturing skills demonstrated, but wrong task performed"
+  },
+  "rubric_insights": [
+    {
+      "category": "task_execution",
+      "observation": "Video shows extracorporeal suturing with Penrose drain starting at frame 6, while Task 1 requires transferring rubber objects between pegs using bilateral graspers.",
+      "frames_referenced": [
+        2,
+        6,
+        7,
+        11,
+        13
+      ],
+      "impact_on_score": "300-point task mismatch penalty resulted in zero score despite good technical execution"
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "task_recognition",
+      "observation": "In frame 2, the peg transfer setup is clearly visible with 6 rubber objects (alternating red and green) on left pegs and empty pegs on right. However, the task switched to suturing by frame 6.",
+      "frames_referenced": [
+        2,
+        6
+      ],
+      "why_it_matters": "Task 1 specifically requires bilateral transfer of rubber objects between pegs. Performing the wrong task, regardless of technical skill, results in automatic failure.",
+      "correction": "For Task 1, use both graspers simultaneously to pick up objects from left pegs and transfer them to corresponding right pegs, then return them to original positions.",
+      "drill": {
+        "name": "Task Recognition Drill",
+        "description": "Before starting any FLS session, identify the task setup: Task 1 has rubber objects on pegs, Task 4 has Penrose drain with suture. Practice 5 object transfers left-to-right, then 5 transfers right-to-left using both graspers.",
+        "duration_minutes": 10,
+        "target_reps": 10,
+        "success_criteria": "Complete all 6 objects transferred without drops, using bilateral coordination"
+      },
+      "priority": "critical"
+    },
+    {
+      "category": "bilateral_coordination",
+      "observation": "In frame 3, only the right grasper was used initially for object manipulation. Task 1 requires coordinated use of both instruments.",
+      "frames_referenced": [
+        3
+      ],
+      "why_it_matters": "Bilateral coordination is the core skill being assessed in peg transfer. Single-handed manipulation misses the primary learning objective.",
+      "correction": "Always engage both graspers - one to secure the object on the peg, the other to grasp and lift. Practice simultaneous movements rather than sequential actions.",
+      "drill": {
+        "name": "Bilateral Grasp Drill",
+        "description": "Place one object on a peg. Use left grasper to stabilize the peg, right grasper to lift object. Switch roles for each transfer. Focus on smooth, coordinated movements.",
+        "duration_minutes": 8,
+        "target_reps": 20,
+        "success_criteria": "No fumbling or single-handed attempts, smooth bilateral coordination"
+      },
+      "priority": "high"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Excellent extracorporeal knot tying technique demonstrated in frames 10-11, with proper knot pusher use and appropriate tension management",
+      "frames_referenced": [
+        10,
+        11
+      ],
+      "why_it_matters": "Your suturing skills are clearly at an intermediate-to-advanced level. This technical proficiency will transfer well to Task 4 when you practice it specifically.",
+      "encouragement": "Your hand coordination and knot tying are impressive - these skills demonstrate you have the dexterity for excellent FLS performance when applied to the correct tasks."
+    },
+    {
+      "observation": "Proper instrument handling and smooth movements throughout the suturing sequence in frames 7-13",
+      "frames_referenced": [
+        7,
+        8,
+        11,
+        13
+      ],
+      "why_it_matters": "Your instrument control is steady and confident, showing good laparoscopic technique fundamentals that will serve you well across all FLS tasks.",
+      "encouragement": "The precision you showed in suture placement and knot positioning indicates strong spatial awareness and fine motor control."
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Task identification and bilateral peg transfer technique",
+    "warmup_drill": {
+      "name": "Task Setup Recognition",
+      "description": "Before touching instruments, identify which FLS task is set up. Task 1: rubber objects on pegs. Task 2: gauze with circle. Task 3: foam block with appendage. Task 4: Penrose drain. Task 5: foam block with suture.",
+      "duration_minutes": 2
+    },
+    "primary_drill": {
+      "name": "Basic Peg Transfer",
+      "description": "Transfer all 6 objects from left pegs to right pegs using bilateral coordination. Focus on smooth, controlled movements. Time yourself but prioritize accuracy over speed.",
+      "target_reps": 5,
+      "target_time_minutes": 15,
+      "success_criteria": "Complete transfers without drops, using both hands throughout"
+    },
+    "integration_drill": {
+      "name": "Full Peg Transfer Cycle",
+      "description": "Complete full Task 1: transfer all objects left-to-right, then right-to-left, returning to original positions. Focus on consistent bilateral technique.",
+      "target_reps": 3,
+      "target_time_minutes": 12,
+      "success_criteria": "Sub-120s completion with zero drops and proper bilateral coordination"
+    },
+    "cooldown": "Review: Did I use both hands throughout? Did I complete the correct task? What felt most challenging about the bilateral coordination?",
+    "estimated_sessions_to_improvement": "2-3 focused sessions to establish proper Task 1 technique and achieve intermediate-level scores (400-500 range)"
+  },
+  "progress_context": {
+    "trend": "inconsistent",
+    "vs_baseline": "Previous Task 1 attempts show scores ranging from 28 to 600, indicating inconsistent task execution and possible confusion between tasks.",
+    "vs_peak": "Best previous Task 1 score was 600 (likely another task mismatch scenario). Legitimate attempts scored in 400-500 range.",
+    "milestone_note": "Next target: Consistent task recognition and execution \u2192 scores in 400-500 range \u2192 then optimize for sub-90s completion times.",
+    "plateau_risk": "Task confusion is preventing skill development. Focus on task identification before technical refinement."
+  },
+  "safety_flags": [],
+  "confidence": 0.95,
+  "coaching_limitations": "Clear task mismatch makes technical assessment of peg transfer impossible. Suturing technique assessment limited to visible portions of knot tying sequence.",
+  "disclaimer": "AI coaching supplements but does not replace hands-on instruction from a qualified surgical educator. Discuss any technique changes with your program's skills lab proctor.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task1",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 42.35,
+    "input_tokens": 21221,
+    "output_tokens": 1784,
+    "cost_usd_approx": 0.0904
+  }
+}

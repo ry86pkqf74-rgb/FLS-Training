@@ -1,0 +1,113 @@
+{
+  "id": "score_claude_ROUGZ79Paxk_20260413152740",
+  "video_id": "ROUGZ79Paxk",
+  "video_filename": "ROUGZ79Paxk.f134.mp4",
+  "video_hash": "",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:27:40.182019",
+  "task_id": "task1_peg_transfer",
+  "penalties": [
+    {
+      "type": "task_mismatch",
+      "count": 1,
+      "description": "Video shows extracorporeal suturing (Task 4) rather than peg transfer (Task 1)"
+    }
+  ],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 0.0
+  },
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Initial view of peg transfer setup with 6 rubber objects on left pegs (3 green, 3 red alternating), empty pegs on right",
+      "technique_notes": "Standard peg transfer configuration, objects properly positioned"
+    },
+    {
+      "frame_number": 3,
+      "phase": "needle_load",
+      "description": "Single grasper entering field from right, approaching red object on front peg",
+      "technique_notes": "Using only one instrument initially - should use both graspers simultaneously for proper technique"
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Task appears to have switched to extracorporeal suturing - Penrose drain with suture and marks visible",
+      "technique_notes": "This appears to be Task 4 (Extracorporeal Suture), not Task 1 (Peg Transfer)"
+    },
+    {
+      "frame_number": 7,
+      "phase": "suture_placement",
+      "description": "Suture being placed through Penrose drain with both needle drivers",
+      "technique_notes": "Proper bilateral instrument use for suturing task"
+    },
+    {
+      "frame_number": 10,
+      "phase": "idle",
+      "description": "Hands visible forming extracorporeal knot with suture material",
+      "technique_notes": "Proper extracorporeal knot tying technique outside the trainer box"
+    },
+    {
+      "frame_number": 11,
+      "phase": "idle",
+      "description": "Suture being pushed down with knot pusher, loop cinching around drain",
+      "technique_notes": "Good knot pusher technique, appropriate tension application"
+    },
+    {
+      "frame_number": 13,
+      "phase": "idle",
+      "description": "Final positioning of knot on Penrose drain, suture tails visible",
+      "technique_notes": "Knot appears well-positioned and secure"
+    },
+    {
+      "frame_number": 18,
+      "phase": "idle",
+      "description": "External view of hands tying additional throws on suture",
+      "technique_notes": "Proper hand positioning for square knot completion"
+    }
+  ],
+  "completion_time_seconds": 135.0,
+  "phase_timings": [
+    {
+      "phase": "idle",
+      "start_seconds": 0.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 45.0
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 45.0,
+      "end_seconds": 135.0,
+      "duration_seconds": 90.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Video demonstrates competent extracorporeal suturing technique but represents wrong task entirely. No peg transfer was performed.",
+  "improvement_suggestions": [
+    "Perform the correct task (peg transfer with rubber objects between pegs)",
+    "Use bilateral graspers for object manipulation",
+    "Focus on transfer technique rather than suturing skills"
+  ],
+  "strengths": [
+    "Good extracorporeal knot tying technique",
+    "Appropriate use of knot pusher",
+    "Proper suture placement through drain"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

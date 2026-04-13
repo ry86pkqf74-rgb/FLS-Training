@@ -1,0 +1,90 @@
+{
+  "id": "score_gpt_2u0lqjXCiNk_20260413154606",
+  "video_id": "2u0lqjXCiNk",
+  "video_filename": "2u0lqjXCiNk.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:46:06.087392",
+  "task_id": "task1_peg_transfer",
+  "penalties": [],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 289.8
+  },
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "phase": "needle_load",
+      "description": "Initial setup with instruments positioned to begin peg transfer.",
+      "technique_notes": "Instruments are correctly positioned for initial pickup."
+    },
+    {
+      "frame_number": 6,
+      "phase": "suture_placement",
+      "description": "Object being transferred from left to right hand.",
+      "technique_notes": "Smooth transfer observed."
+    },
+    {
+      "frame_number": 12,
+      "phase": "suture_placement",
+      "description": "Object being transferred back from right to left hand.",
+      "technique_notes": "Efficient transfer with no drops."
+    },
+    {
+      "frame_number": 18,
+      "phase": "idle",
+      "description": "Final object placed on peg.",
+      "technique_notes": "Object placed securely on peg."
+    }
+  ],
+  "completion_time_seconds": 10.2,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 4.0,
+      "end_seconds": 6.3,
+      "duration_seconds": 2.3
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 6.3,
+      "end_seconds": 9.8,
+      "duration_seconds": 3.5
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 9.8,
+      "end_seconds": 10.2,
+      "duration_seconds": 0.4
+    },
+    {
+      "phase": "idle",
+      "start_seconds": 10.2,
+      "end_seconds": 10.2,
+      "duration_seconds": 0.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "Excellent performance with efficient transfers and no penalties.",
+  "improvement_suggestions": [],
+  "strengths": [
+    "Smooth and efficient transfers",
+    "No objects dropped"
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

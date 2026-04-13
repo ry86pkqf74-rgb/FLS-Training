@@ -1,0 +1,36 @@
+{
+  "id": "score_consensus__5IukH0SX7E_20260413_155016",
+  "video_id": "_5IukH0SX7E",
+  "video_filename": "_5IukH0SX7E.mp4",
+  "video_hash": "",
+  "source": "consensus",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_version": "claude-sonnet-4-20250514",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:50:16.221469+00:00",
+  "task_id": "task3",
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": null,
+    "drain_assessment": null
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 0.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 0.0,
+    "formula_applied": "Video does not contain Task 3 content - no valid score possible"
+  },
+  "technique_summary": "This is an educational video demonstrating Tasks 4 and 5 (suturing tasks) rather than Task 3 (Endoloop). No ligating loop deployment, foam appendage, or endoloop-specific techniques are shown.",
+  "strengths": [
+    "Clear educational presentation format",
+    "Good demonstration of suturing techniques for Tasks 4 and 5"
+  ],
+  "improvement_suggestions": [
+    "Video does not contain Task 3 content - would need actual endoloop demonstration for assessment"
+  ],
+  "confidence_score": 0.0
+}

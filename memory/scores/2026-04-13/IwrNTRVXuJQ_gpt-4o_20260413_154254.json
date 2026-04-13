@@ -1,0 +1,92 @@
+{
+  "id": "score_gpt_IwrNTRVXuJQ_20260413154254",
+  "video_id": "IwrNTRVXuJQ",
+  "video_filename": "IwrNTRVXuJQ.f136.mp4",
+  "video_hash": "",
+  "source": "teacher_gpt",
+  "model_name": "gpt-4o",
+  "model_version": "gpt-4o-2024-08-06",
+  "prompt_version": "v002",
+  "scored_at": "2026-04-13T15:42:54.604969",
+  "task_id": "task3",
+  "penalties": [],
+  "score_components": {
+    "time_score": 0.0,
+    "penalty_deductions": 0.0,
+    "total_fls_score": 165.0
+  },
+  "phases_detected": [],
+  "reasoning": "",
+  "frame_analyses": [
+    {
+      "frame_number": 11,
+      "phase": "suture_placement",
+      "description": "Ligating loop being positioned around the foam appendage.",
+      "technique_notes": "Proper orientation and handling observed while introducing the loop."
+    },
+    {
+      "frame_number": 13,
+      "phase": "suture_placement",
+      "description": "Loop adjusted and positioned at the target marking.",
+      "technique_notes": "Correct positioning. No apparent deviation from target line."
+    },
+    {
+      "frame_number": 17,
+      "phase": "idle",
+      "description": "Loop pusher engaged and loop is cinched.",
+      "technique_notes": "Smooth cinching action with no slack observed."
+    },
+    {
+      "frame_number": 20,
+      "phase": "suture_cut",
+      "description": "Tail end of the loop being cut to complete the task.",
+      "technique_notes": "Executed efficiently with minimal tail length left."
+    }
+  ],
+  "completion_time_seconds": 15.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 0.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 3.0
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 3.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 5.0
+    },
+    {
+      "phase": "idle",
+      "start_seconds": 8.0,
+      "end_seconds": 12.0,
+      "duration_seconds": 4.0
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 12.0,
+      "end_seconds": 15.0,
+      "duration_seconds": 3.0
+    }
+  ],
+  "knot_assessments": [],
+  "suture_placement": null,
+  "drain_assessment": null,
+  "estimated_penalties": 0.0,
+  "estimated_fls_score": 0.0,
+  "confidence_score": 0.0,
+  "technique_summary": "The performance was highly efficient and aligns with expert benchmarks. Each task phase was executed with precision.",
+  "improvement_suggestions": [
+    "Continue practicing to maintain efficiency and precision throughout the task."
+  ],
+  "strengths": [
+    "Precise loop positioning with no deviation from mark.",
+    "Efficient cinching and secure loop application observed."
+  ],
+  "comparison_to_previous": {},
+  "superseded": false,
+  "superseded_by": null,
+  "superseded_at": null,
+  "superseded_reason": ""
+}

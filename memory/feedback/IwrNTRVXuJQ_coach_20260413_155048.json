@@ -1,0 +1,141 @@
+{
+  "video_id": "yt_vjSoFfEkeMg",
+  "task_id": "task3_endoloop",
+  "skill_level": "intermediate",
+  "coach_version": "v002",
+  "overall_assessment": {
+    "fls_score_context": "Score of 0 indicates this was an instructional demonstration rather than a timed task performance. Your history shows strong capability (recent scores 508-556) with completion times around 88-90 seconds, well within proficiency range.",
+    "session_headline": "Excellent technique demonstration \u2014 ready to focus on speed optimization for consistent sub-80s performance"
+  },
+  "rubric_insights": [
+    {
+      "category": "task_execution",
+      "observation": "This appears to be a teaching demonstration showing proper technique rather than a performance attempt. Previous sessions show consistent 88-90s completion times.",
+      "frames_referenced": [
+        13,
+        15,
+        20,
+        21
+      ],
+      "impact_on_score": "No impact \u2014 demonstration context. Focus on translating this excellent technique into faster execution."
+    }
+  ],
+  "technique_coaching": [
+    {
+      "category": "loop_deployment",
+      "observation": "In frames 20-21, the C-shape loop configuration is textbook perfect \u2014 excellent positioning around the appendage with proper clearance for cinching.",
+      "frames_referenced": [
+        20,
+        21
+      ],
+      "why_it_matters": "This C-shape formation is critical for secure loop closure. Your positioning demonstrates mastery of spatial awareness and loop control.",
+      "correction": "Maintain this exact technique but focus on achieving this configuration faster. The setup phase is your opportunity for time savings.",
+      "drill": {
+        "name": "Speed Loop Deployment",
+        "description": "Practice loop introduction and C-shape formation. Start with loop at entry point, advance to appendage, form C-shape, and position for cinching. Time each cycle.",
+        "duration_minutes": 15,
+        "target_reps": 10,
+        "success_criteria": "Achieve proper C-shape in under 25 seconds consistently"
+      },
+      "priority": "medium"
+    },
+    {
+      "category": "extracorporeal_knots",
+      "observation": "Frame 15 shows excellent '3 knots in a row' technique with proper hand positioning and sequential formation.",
+      "frames_referenced": [
+        15
+      ],
+      "why_it_matters": "Your knot sequence is already at advanced level. This is a significant strength that provides security without time penalty.",
+      "correction": "No correction needed \u2014 this is exemplary technique. Protect this skill while working on other phases.",
+      "drill": {
+        "name": "Knot Consistency Check",
+        "description": "Form 3 extracorporeal knots in sequence. Focus on maintaining quality while slightly increasing pace.",
+        "duration_minutes": 5,
+        "target_reps": 5,
+        "success_criteria": "Consistent knot formation in under 15 seconds total"
+      },
+      "priority": "low"
+    },
+    {
+      "category": "suture_management",
+      "observation": "Frame 17 demonstrates proper 2cm tail length management \u2014 optimal for pusher engagement without excess material.",
+      "frames_referenced": [
+        17
+      ],
+      "why_it_matters": "Correct tail length prevents pusher slippage and reduces cutting time. This attention to detail shows advanced understanding.",
+      "correction": "Continue this precise tail management. Consider pre-measuring during setup to save seconds during execution.",
+      "drill": {
+        "name": "Tail Length Consistency",
+        "description": "Practice achieving 2cm tails consistently during loop preparation. Use visual reference points on your instruments.",
+        "duration_minutes": 8,
+        "target_reps": 8,
+        "success_criteria": "2cm \u00b1 2mm tail length without re-measurement"
+      },
+      "priority": "low"
+    }
+  ],
+  "strengths_to_reinforce": [
+    {
+      "observation": "Perfect C-shape loop formation in frames 20-21 with optimal clearance around the appendage",
+      "frames_referenced": [
+        20,
+        21
+      ],
+      "why_it_matters": "This spatial precision is the hallmark of advanced endoloop technique. It ensures reliable cinching and prevents loop slippage.",
+      "encouragement": "Your loop positioning is at expert level. This technique will serve you well in actual OR applications where precision is critical."
+    },
+    {
+      "observation": "Excellent extracorporeal knot sequence shown in frame 15 with proper hand mechanics",
+      "frames_referenced": [
+        15
+      ],
+      "why_it_matters": "Your knot formation is smooth and secure. This consistency is exactly what's needed for reliable appendage ligation.",
+      "encouragement": "Your knot technique is already optimized. This gives you a solid foundation to build speed on other task phases."
+    }
+  ],
+  "practice_plan": {
+    "session_focus": "Speed optimization while maintaining your excellent technique quality",
+    "warmup_drill": {
+      "name": "Instrument Familiarization",
+      "description": "Handle pusher and graspers through full range of motion. Practice smooth transitions between instruments.",
+      "duration_minutes": 3
+    },
+    "primary_drill": {
+      "name": "Timed Phase Practice",
+      "description": "Break task into phases: setup (target 15s), loop deployment (target 25s), cinching (target 20s), cutting (target 10s). Practice each phase separately with timing.",
+      "target_reps": 3,
+      "target_time_minutes": 20,
+      "success_criteria": "Hit phase targets while maintaining technique quality"
+    },
+    "integration_drill": {
+      "name": "Full Task Speed Run",
+      "description": "Complete full endoloop task focusing on smooth phase transitions. Aim for sub-80s completion.",
+      "target_reps": 3,
+      "target_time_minutes": 15,
+      "success_criteria": "Sub-80s completion with secure loop placement"
+    },
+    "cooldown": "Review which phases felt rushed vs. controlled. Identify the single phase with most time-saving potential.",
+    "estimated_sessions_to_improvement": "2-3 focused sessions to achieve consistent sub-80s performance"
+  },
+  "progress_context": {
+    "trend": "strong_plateau",
+    "vs_baseline": "Dramatic improvement from early attempts (28 FLS) to consistent intermediate performance (508-556 FLS range).",
+    "vs_peak": "Recent scores cluster tightly around 508-556 with 88-90s completion times. Very consistent performance plateau.",
+    "milestone_note": "Currently performing at solid intermediate level. Next target: consistent sub-80s completion for advanced classification.",
+    "plateau_risk": "Moderate \u2014 scores have stabilized in 508-556 range. Time to focus on speed optimization rather than technique refinement."
+  },
+  "safety_flags": [],
+  "confidence": 0.85,
+  "coaching_limitations": "This appears to be instructional content rather than performance footage, limiting assessment of actual execution speed and real-time decision making. Coaching based on demonstrated technique quality and historical performance data.",
+  "disclaimer": "AI coaching supplements but does not replace hands-on instruction from a qualified surgical educator. Discuss any technique changes with your program's skills lab proctor.",
+  "_meta": {
+    "model": "claude-sonnet-4-20250514",
+    "prompt_version": "v002",
+    "task_id": "task3",
+    "skill_level": "intermediate",
+    "elapsed_seconds": 42.25,
+    "input_tokens": 21313,
+    "output_tokens": 1783,
+    "cost_usd_approx": 0.0907
+  }
+}
