@@ -1,80 +1,68 @@
 # FLS-Training
 
-AI-powered FLS surgical skills training with **teacher-critique-student** architecture.
+AI-powered surgical skills scoring system for Fundamentals of Laparoscopic Surgery (FLS) training videos.
 
 ## Architecture
 
-**GitHub = code, configs, manifests.** No checkpoints, frames, or videos.
-**Contabo S8 = durable artifact storage.** Checkpoints, frames, raw videos, large logs.
-**RunPod/Vast.ai = ephemeral GPU.** Clone → train → sync → shut down.
+**Teacher-Critique-Student pipeline:**
+- **Teacher A:** Claude Sonnet — scores video frames independently
+- **Teacher B:** GPT-4o — scores video frames independently  
+- **Critique Agent:** Produces consensus score from both teachers
+- **Student:** Qwen2.5-VL-7B (LoRA via Unsloth) — fine-tuned to replicate consensus
 
-See `docs/ARCHITECTURE.md` for the full system diagram and `docs/EXECUTION_PLAN.md`
-for the phased roadmap.
+## Current Status
 
-### Dual Training Objectives
+**Phase: Data Expansion** — Harvesting and scoring YouTube videos to build training dataset.
 
-| Head | Input | Output |
-|------|-------|--------|
-| **Scoring** | Video frames | FLS score, phases, penalties |
-| **Coaching** | Frames + history | Feedback with progression-aware drills |
+- 25 validated training examples (ACCEPTED by dual-teacher consensus)
+- 573 harvest targets identified, ~431 being scored on Hetzner server
+- LASANA dataset (1,270 videos with human GRS labels) downloaded on Contabo
+- Training paused until ≥80 ACCEPTED examples
 
-### Config Families
-
-| Family | Use case | GPU | Time |
-|--------|----------|-----|------|
-| `config_debug.yaml` | Smoke-test, CI, pipeline validation | Any (24 GB+) | <5 min |
-| `config_standard.yaml` | Routine training (<200 examples) | A100 / Blackwell | 1–2 hr |
-| `config_full.yaml` | Large corpus (500+ examples, vision) | A100 / H100 | 4–10 hr |
+**See [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md) for full progress, infrastructure, and decision log.**
 
 ## Quick Start
 
 ```bash
+git clone https://github.com/ry86pkqf74-rgb/FLS-Training.git
+cd FLS-Training
+python -m venv .venv && source .venv/bin/activate
 pip install -e .
-cp .env.example .env  # Add API keys
+cp .env.example .env  # Add ANTHROPIC_API_KEY and OPENAI_API_KEY
 python scripts/090_status.py
 ```
 
-## Workflow
+## Pipeline
 
-1. `python scripts/010_ingest_video.py --video X.mov --task 5`
-2. `python scripts/020_score_frontier.py --video-id X --video X.mov`
-3. `python scripts/026_auto_validate.py --all` (dual-teacher self-consistency + time-anchor validation)
-4. `python scripts/080_generate_feedback_report.py --video-id X`
-5. `python scripts/040_prepare_training_data.py --ver <version>` → git push
-6. On RunPod: `bash deploy/runpod_launch.sh data/training/LATEST src/configs/config_standard.yaml`
-7. `bash scripts/095_contabo_sync.sh push-checkpoints` (save to durable storage)
-8. `python scripts/060_evaluate_student_v2.py <checkpoint_a> [checkpoint_b ...]`
-9. `python scripts/075_check_drift.py` → retrain when triggered
-
-## Artifact Sync (Contabo S8)
-
-```bash
-bash scripts/095_contabo_sync.sh init              # first-time remote setup
-bash scripts/095_contabo_sync.sh push-checkpoints   # after training
-bash scripts/095_contabo_sync.sh push-frames         # after frame extraction
-bash scripts/095_contabo_sync.sh status              # check disk usage
+```
+Video → Ingest (010) → Score (020/021) → Validate (026) → Consensus (030)
+     → Prepare Data (040) → Train SFT (050) → Train DPO (051)
+     → Evaluate (060) → Deploy → Drift Check (075) → Retrain
 ```
 
-## Run Manifests
+## Key Scripts
 
-Every training launch auto-generates a manifest in `memory/training_runs/`
-recording commit SHA, GPU, dataset version, config hash, and vision mode.
+| Script | Purpose |
+|--------|---------|
+| `010_ingest_video.py` | Extract frames + metadata from video |
+| `021_batch_score.py` | Task-routed batch scoring with Claude + GPT-4o |
+| `026_auto_validate.py` | Auto-validate dual-teacher scores (ACCEPTED/QUARANTINED/REJECTED) |
+| `040_prepare_training_data.py` | Export validated scores to training format |
+| `050_runpod_train.py` | SFT training on GPU |
+| `060_evaluate_student.py` | Student vs teacher evaluation |
 
-## Dataset Licenses
+## Servers
 
-See `data/external/DATASET_LICENSES.yaml` for license status of each
-external dataset. Verify before any commercial deployment.
-
-## Cost
-
-RunPod A100 ~$1.19/hr × 1-2hr = **~$2-3 per training cycle**.
-Student inference after: ~$0.001/video.
+| Server | Role | Access |
+|--------|------|--------|
+| Hetzner (77.42.85.109) | Orchestration, scoring pipeline | `ssh -i ~/.ssh/id_ed25519 root@77.42.85.109` |
+| Contabo (207.244.235.10) | LASANA data, backups | `ssh -i ~/.ssh/id_ed25519 root@207.244.235.10` |
+| RunPod/Vast.ai | GPU training (on-demand) | Not active until data gate passes |
 
 ## Docs
 
-- `deploy/LAUNCH_GUIDE.md` — concise launch path
-- `docs/AGENT_LAUNCH_PROMPT.md` — copy-paste runbook for a RunPod-side agent
-- `docs/RUNPOD_RUNBOOK.md` — proven server setup, resume flow, shutdown
-- `docs/EXECUTION_PLAN.md` — phased roadmap with gates
-- `docs/DATA_SCALING_PLAN.md` — corpus growth strategy
-- `data/DATA_INVENTORY.md` — per-source data inventory and license posture
+- [PROJECT_STATUS.md](docs/PROJECT_STATUS.md) — Current progress, data inventory, decisions
+- [EXECUTION_PLAN.md](docs/EXECUTION_PLAN.md) — Phased execution plan
+- [FLS-Training-Setup-Guide.md](docs/FLS-Training-Setup-Guide.md) — Setup + Cursor agent prompts
+- [V3_TRAINING_GUIDE.md](docs/V3_TRAINING_GUIDE.md) — Training configuration guide
+- [DATA_SCALING_PLAN.md](docs/DATA_SCALING_PLAN.md) — Path to 1,000+ examples

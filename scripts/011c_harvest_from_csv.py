@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -18,6 +19,17 @@ HARVEST_LOG = REPO_ROOT / "harvest_log.jsonl"
 DOWNLOAD_DIR = Path.home() / "fls_harvested_videos"
 CSV_PATH = REPO_ROOT / "data" / "harvest_targets.csv"
 YT_DLP_CMD = [sys.executable, "-m", "yt_dlp"]
+
+
+def _yt_dlp_auth_args() -> list[str]:
+    args: list[str] = []
+    cookies_file = os.environ.get("YT_DLP_COOKIES_FILE", "").strip()
+    cookies_from_browser = os.environ.get("YT_DLP_COOKIES_FROM_BROWSER", "").strip()
+    if cookies_file:
+        args.extend(["--cookies", cookies_file])
+    if cookies_from_browser:
+        args.extend(["--cookies-from-browser", cookies_from_browser])
+    return args
 
 
 def get_already_harvested() -> set[str]:
@@ -42,8 +54,9 @@ def get_already_harvested() -> set[str]:
     return harvested
 
 
-def _build_download_cmd(url: str, task_dir: Path) -> list[str]:
+def _build_download_cmd(url: str, task_dir: Path, *, probe_only: bool = False) -> list[str]:
     ffmpeg_available = shutil.which("ffmpeg") is not None
+    js_runtime = shutil.which("node") or shutil.which("nodejs")
     if ffmpeg_available:
         format_selector = "bestvideo[height<=720]+bestaudio/best[height<=720]"
     else:
@@ -62,10 +75,14 @@ def _build_download_cmd(url: str, task_dir: Path) -> list[str]:
         "30",
         "--retries",
         "2",
-        "--print",
-        "after_move:filepath",
-        url,
+        *_yt_dlp_auth_args(),
     ]
+    if js_runtime:
+        cmd.extend(["--js-runtimes", f"node:{js_runtime}"])
+    if probe_only:
+        cmd.extend(["--skip-download", "--print", "id", url])
+        return cmd
+    cmd.extend(["--print", "after_move:filepath", url])
     if ffmpeg_available:
         cmd.extend(["--merge-output-format", "mp4"])
     return cmd
@@ -98,6 +115,21 @@ def download_video(url: str, task_dir: Path) -> tuple[Path | None, str | None]:
     return None, "File not found after download"
 
 
+def probe_video(url: str, task_dir: Path) -> tuple[bool, str | None]:
+    """Check whether a single URL is accessible to yt-dlp in the current environment."""
+    task_dir.mkdir(parents=True, exist_ok=True)
+    result = subprocess.run(
+        _build_download_cmd(url, task_dir, probe_only=True),
+        capture_output=True,
+        text=True,
+        timeout=180,
+    )
+    if result.returncode != 0:
+        stderr = (result.stderr or result.stdout or "yt-dlp probe failed").strip()
+        return False, stderr[:200]
+    return True, None
+
+
 def _float_value(value: str | None) -> float:
     try:
         return float(value or 0)
@@ -110,6 +142,11 @@ def main() -> None:
     parser.add_argument("--task", help="Filter to a specific task label from the CSV")
     parser.add_argument("--max", type=int, default=50, help="Maximum number of videos to download")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--probe-only",
+        action="store_true",
+        help="Check whether URLs are accessible to yt-dlp without downloading files",
+    )
     parser.add_argument("--skip-unclassified", dest="skip_unclassified", action="store_true")
     parser.add_argument("--include-unclassified", dest="skip_unclassified", action="store_false")
     parser.set_defaults(skip_unclassified=True)
@@ -143,6 +180,26 @@ def main() -> None:
     if args.dry_run:
         for row in targets:
             print(f"  {row.get('task', ''):30} {row.get('url', '')}")
+        return
+
+    if args.probe_only:
+        accessible = 0
+        blocked = 0
+        for index, row in enumerate(targets, start=1):
+            url = str(row.get("url") or "").strip()
+            task = str(row.get("task") or "unclassified").strip() or "unclassified"
+            task_dir = DOWNLOAD_DIR / task
+            ok, err = probe_video(url, task_dir)
+            status = "OK" if ok else "BLOCKED"
+            detail = "" if ok else f" - {(err or 'unknown error')[:120]}"
+            print(f"[{index}/{len(targets)}] {status:7} {task:30} {url}{detail}")
+            if ok:
+                accessible += 1
+            else:
+                blocked += 1
+        print(f"\nProbe complete: {accessible} accessible, {blocked} blocked")
+        if accessible == 0:
+            raise SystemExit(1)
         return
 
     success = 0

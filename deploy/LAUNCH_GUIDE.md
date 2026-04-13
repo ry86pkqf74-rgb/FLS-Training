@@ -4,10 +4,80 @@
 
 This guide now reflects the path that actually worked on the live RunPod deployment, including the resume and watchdog fixes that prevented idle GPU time.
 
+It also includes the repo-native S1 harvest-and-score path for CPU hosts that are being used to download YouTube targets, run the dual-teacher scoring pass, generate consensus artifacts, and push data outputs back to GitHub.
+
 Primary references:
 - `docs/RUNPOD_RUNBOOK.md` for the full operational record
 - `deploy/runpod_launch.sh` for one-shot launch
 - `deploy/runpod_watchdog.sh` for restartable continuous training
+- `deploy/s1_harvest_score_deploy.sh` for Hetzner S1 harvest + scoring runs
+
+## Hetzner S1 Harvest + Score
+
+Use this when the goal is not GPU training, but bulk YouTube harvest plus teacher scoring on a CPU box.
+
+### Prerequisites
+
+1. Root access on the target host
+2. `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` exported in the shell before launch
+3. `GITHUB_TOKEN` exported if the host should push new score artifacts back to `main`
+4. Optional but often needed for YouTube extraction: `YT_DLP_COOKIES_FILE` or `YT_DLP_COOKIES_FROM_BROWSER`
+
+### Launch Sequence
+
+Copy the script to the host and run it inside `tmux`:
+
+```bash
+scp deploy/s1_harvest_score_deploy.sh root@<host>:/root/
+ssh root@<host>
+tmux new -s fls
+
+export ANTHROPIC_API_KEY='sk-ant-...'
+export OPENAI_API_KEY='sk-...'
+export GITHUB_TOKEN='github_pat_...'
+
+bash /root/s1_harvest_score_deploy.sh
+```
+
+Detach with `Ctrl-B D` and later reconnect with:
+
+```bash
+tmux attach -t fls
+```
+
+### What The Script Does
+
+1. Installs `ffmpeg`, `git`, `nodejs`, `python3-venv`, `tmux`, and `yt-dlp`
+2. Clones or fast-forwards the repo at `/opt/FLS-Training`
+3. Creates a dedicated virtual environment at `/opt/fls-training-venv`
+4. Probes a configurable subset of harvest targets before downloading so blocked runs fail early
+5. Runs `scripts/011c_harvest_from_csv.py` against `data/harvest_targets.csv`
+6. Runs `scripts/021_batch_score.py` with the repo's current task-routing fixes
+7. Runs `scripts/030_run_consensus.py --with-coach-feedback`
+8. Runs `scripts/026_auto_validate.py --scores-dir memory/scores`
+9. Commits and pushes updated `harvest_log.jsonl`, `memory/scores`, `memory/comparisons`, `memory/feedback`, and `memory/validation_results.jsonl`
+
+### Useful Overrides
+
+All of these are optional environment variables:
+
+- `WORK_DIR` to change the checkout path
+- `HARVEST_MAX` to limit how many CSV rows are downloaded in one run
+- `HARVEST_PROBE_FIRST=0` to skip the pre-download accessibility probe
+- `HARVEST_PROBE_MAX` to control how many CSV rows are checked during the probe
+- `SCORE_MAX` to limit how many videos are scored in one run
+- `PROMPT_VERSION` to select a prompt family such as `v002`
+- `SCORER_DELAY` to increase or reduce the pause between API calls
+- `HARVEST_INCLUDE_UNCLASSIFIED=1` to include CSV rows whose task is still unclassified
+- `RUN_CONSENSUS=0`, `RUN_VALIDATION=0`, or `PUSH_RESULTS=0` to disable later pipeline stages
+- `YT_DLP_COOKIES_FILE=/root/youtube-cookies.txt` or `YT_DLP_COOKIES_FROM_BROWSER=firefox` to let `yt-dlp` use an authenticated session
+
+### Notes
+
+- Downloaded source videos land under the executing user's home directory because `scripts/011c_harvest_from_csv.py` uses `Path.home()/fls_harvested_videos`.
+- The script refuses to pull over a dirty checkout in `/opt/FLS-Training`; clean or move that checkout first.
+- Pushing is intentionally token-driven. The repo script does not embed GitHub credentials.
+- If the probe reports `0 accessible`, the current target slice is blocked for anonymous `yt-dlp`; provide cookies or use a filtered target subset before retrying.
 
 ## Prerequisites
 
