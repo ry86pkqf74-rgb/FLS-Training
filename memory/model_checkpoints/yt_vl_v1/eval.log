@@ -1,0 +1,26 @@
+=== Eval /workspace/checkpoints_vl/final on /workspace/yt_test.jsonl — 2026-04-14 03:47:00.155369 ===
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 27342.27it/s]
+Loading weights:   0%|          | 0/729 [00:00<?, ?it/s]Loading weights:   0%|          | 1/729 [00:00<01:35,  7.60it/s]Loading weights:   0%|          | 2/729 [00:00<01:29,  8.12it/s]Loading weights:   2%|▏         | 16/729 [00:00<00:12, 57.68it/s]Loading weights:   5%|▌         | 40/729 [00:00<00:05, 116.82it/s]Loading weights:   9%|▉         | 64/729 [00:00<00:04, 151.03it/s]Loading weights:  12%|█▏        | 88/729 [00:00<00:03, 172.30it/s]Loading weights:  15%|█▌        | 112/729 [00:00<00:03, 185.99it/s]Loading weights:  19%|█▊        | 136/729 [00:00<00:03, 195.07it/s]Loading weights:  22%|██▏       | 160/729 [00:01<00:02, 201.05it/s]Loading weights:  25%|██▌       | 184/729 [00:01<00:02, 205.03it/s]Loading weights:  29%|██▊       | 208/729 [00:01<00:02, 207.74it/s]Loading weights:  32%|███▏      | 232/729 [00:01<00:02, 207.94it/s]Loading weights:  35%|███▍      | 253/729 [00:01<00:02, 207.15it/s]Loading weights:  38%|███▊      | 274/729 [00:01<00:02, 202.74it/s]Loading weights:  40%|████      | 295/729 [00:01<00:02, 200.30it/s]Loading weights:  44%|████▎     | 318/729 [00:01<00:02, 202.00it/s]Loading weights:  55%|█████▌    | 403/729 [00:01<00:00, 383.51it/s]Loading weights:  80%|███████▉  | 583/729 [00:02<00:00, 788.32it/s]Loading weights: 100%|██████████| 729/729 [00:02<00:00, 347.41it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Test examples: 5
+  5/5...
+{
+  "adapter": "/workspace/checkpoints_vl/final",
+  "n_examples": 5,
+  "valid_json_rate": 0.8,
+  "task_id_accuracy": 0.8,
+  "classification_accuracy": 0.0,
+  "mae_fls_score": null,
+  "mae_n": 0,
+  "unique_prediction_ratio": 0.0,
+  "unique_fls_values": 0,
+  "per_task_mae": {},
+  "completed_at": "2026-04-14T03:49:00.707903"
+}
+
+=== Gates ===
+  valid_json_rate:   80.00%  (gate: > 0.9)
+  unique_pred_ratio: 0.00%  (gate: > 50%)
+
+FAILED gates: ['valid_json_rate', 'unique_prediction_ratio (mode collapse)']
