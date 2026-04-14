@@ -1,0 +1,40 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional content, not a performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video is clearly educational/promotional material featuring Dr. T Rajeshwari Reddy presenting gynecological sterilization procedures and concepts. Contains disclaimer slide, lecture format with anatomical diagrams, text overlays explaining concepts (fertilization, contraception types, sterilization timing/procedure), and closing credentials. No FLS trainer, instruments, or task performance visible. No foam appendages, endoloops, or timed surgical skill demonstration.",
+  "cannot_determine": [
+    "Performance metrics \u2014 no task execution recorded"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Overview of laparoscopic tubal ligation as a sterilization procedure",
+      "Explanation of ideal timing for sterilization (post-delivery, intra-operative with C-section, interval tubectomy post-menses)",
+      "Discussion of sterilization procedure steps and port sites",
+      "Laparoscopic surgery details (average surgical time 10-12 minutes)",
+      "Discussion of advantages (bloodless surgery, day care, quick recovery, no catheterization, patient back to work next day, minimal impact on sexual/hormonal/menstrual function)"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": null
+  },
+  "note": "This video is a patient/educational presentation about laparoscopic sterilization procedures, not an FLS task skills training or performance video. No scoring applicable per classification rules.",
+  "video_id": "q5FfjCCaAnc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:50:36.256835+00:00"
+}

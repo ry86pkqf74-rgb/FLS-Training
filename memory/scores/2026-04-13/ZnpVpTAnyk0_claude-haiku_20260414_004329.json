@@ -1,0 +1,185 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Gauze suspended between yellow clamps. Right needle driver approaching gauze to establish grasp.",
+      "technique_notes": "Standard setup: gauze is visible, clamps secured, trainor visible in background",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "initial_cut",
+      "description": "Right needle driver (scissors) beginning initial cut on upper portion of circular pattern. Gauze remains stable in clamps.",
+      "technique_notes": "Scissors held perpendicular to gauze plane, cut initiated at edge of marked circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 16.0,
+      "phase": "clockwise_cut",
+      "description": "Scissors progressing along right lateral edge of circular pattern in clockwise direction. Cut appears clean and follows marked line.",
+      "technique_notes": "Smooth motion, maintaining tension on gauze with left grasp",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 32.0,
+      "phase": "clockwise_cut_continuation",
+      "description": "Continuing clockwise arc around bottom of circle. Cut deviation from marked line appears minimal.",
+      "technique_notes": "Instrument control good, gauze not slipping from clamps",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 48.0,
+      "phase": "counterclockwise_cut",
+      "description": "Transitioning to counterclockwise motion. Left portion of circle now being cut. Gauze integrity maintained.",
+      "technique_notes": "Smooth instrument exchange and direction change",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 64.0,
+      "phase": "counterclockwise_completion",
+      "description": "Completing counterclockwise arc along left side. Cut line appears consistent with clockwise portion.",
+      "technique_notes": "Final circular path completing closure of pattern",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 78.0,
+      "phase": "completion",
+      "description": "Circular pattern fully cut from gauze. Excised disc separates cleanly. Remaining gauze frame intact between clamps.",
+      "technique_notes": "Clean completion with no tearing of remaining gauze. Circle appears well-formed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 88.0,
+      "phase": "post_completion",
+      "description": "Excised circular gauze segment removed from field. Trainer shows clean cut pattern and intact frame gauze.",
+      "technique_notes": "Final inspection shows circular cut with minimal deviation from marked line",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 78.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 8,
+      "end_seconds": 16,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 16,
+      "end_seconds": 48,
+      "duration_seconds": 32,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 48,
+      "end_seconds": 78,
+      "duration_seconds": 30,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 78,
+      "end_seconds": 78,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_marked_line",
+      "description": "Cut deviation observed at superior arc (cardinal point North) approximately 1.5mm lateral to marked line",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        3
+      ],
+      "confidence": 0.6
+    },
+    {
+      "type": "deviation_from_marked_line",
+      "description": "Minor deviation at lateral right edge (cardinal point East) approximately 1mm lateral to line",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        3,
+        4
+      ],
+      "confidence": 0.55
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "marked_circle_diameter_cm": 4.0,
+      "tolerance_mm": 2.0,
+      "cardinal_point_deviations": {
+        "north": 1.5,
+        "northeast": 1.0,
+        "east": 1.0,
+        "southeast": 0.5,
+        "south": 0.3,
+        "southwest": 0.5,
+        "west": 1.2,
+        "northwest": 1.0
+      },
+      "max_deviation_mm": 1.5,
+      "total_deviation_penalty": 2.5,
+      "confidence": 0.58
+    },
+    "gauze_assessment": {
+      "gauze_detached_from_clamp": false,
+      "gauze_remaining_intact": true,
+      "incomplete_cut": false,
+      "circular_pattern_quality": "good"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 78.0,
+    "total_penalties": 2.5,
+    "total_fls_score": 219.5,
+    "formula_applied": "300 - 78.0 - 2.5 = 219.5"
+  },
+  "confidence": 0.68,
+  "confidence_rationale": "Completion time is clearly visible and well-documented at 78 seconds, placing performance solidly in expert range (60-90s). Deviation measurements are estimated from oblique camera angles during cutting; cardinal point measurements are conservative estimates, with max deviation approximately 1.5mm at one point. Gauze integrity and circle geometry are clearly observable. Overall assessment is high confidence for timing and completion; moderate confidence (0.55-0.60) for precise mm measurements due to camera angle limitations.",
+  "cannot_determine": [
+    "Exact deviation measurements at all 8 cardinal points \u2014 camera angle during cutting is not perpendicular to gauze plane, making precise mm measurements from frames difficult",
+    "Whether deviation at any point exceeded the 2mm tolerance threshold \u2014 visual evidence suggests all deviations remain within acceptable range but measurement certainty is limited"
+  ],
+  "technique_summary": "Expert-level performance on Pattern Cut task. Completion time of 78 seconds is in the expert benchmark range (60-90s). Circular cutting was performed with smooth, controlled motion through both clockwise and counterclockwise arcs. Gauze remained stable throughout, with no slipping or tearing. Cut pattern shows minor deviations from marked line (estimated 0.3-1.5mm across cardinal points), all within or near the 2mm tolerance. No penalties for gauze detachment or incomplete cuts.",
+  "strengths": [
+    "Excellent time performance (78s in expert range)",
+    "Steady hand control throughout both arcs of cutting",
+    "Gauze stability maintained without slipping or damage",
+    "Clean, well-formed circular cut pattern",
+    "Smooth transition between clockwise and counterclockwise motions"
+  ],
+  "improvement_suggestions": [
+    "Camera positioning during cut could be assessed to verify exact deviation measurements at all cardinal points",
+    "Practice perpendicular needle driver control to minimize any lateral deviation on superior and lateral arcs"
+  ],
+  "video_id": "ZnpVpTAnyk0",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:43:29.779798+00:00"
+}

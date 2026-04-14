@@ -1,0 +1,26 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "reason": "This video shows an educational presentation about student assessment and learning principles, not an FLS/MISTELS laparoscopic surgery training task. The content discusses topics like 'Understanding Growing Success', fundamental teaching principles, assessment strategies, plagiarism policies, accommodations, and eLearning - which are completely unrelated to laparoscopic surgical training.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Title slide showing 'Understanding Growing Success' with presenter visible",
+      "content_type": "educational_presentation"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "description": "Slide about document contents covering foundational information, assessment, and evaluation chapters",
+      "content_type": "educational_presentation"
+    }
+  ],
+  "cannot_score": true,
+  "cannot_score_reason": "Video content is unrelated to FLS laparoscopic surgery training tasks",
+  "video_id": "ZbGTfpHrtFQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:41:26.527117+00:00"
+}

@@ -1,0 +1,293 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_introduction",
+      "description": "Endoscopic scissors and grasper visible on blue surgical drape. Loop material not yet visible on monitor. Equipment setup.",
+      "technique_notes": "Standard instrument positioning; scissors held in right hand, grasper in left hand.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.5,
+      "phase": "loop_introduction",
+      "description": "Instruments positioned; loop material (suture/endoloop) starting to enter field. Two thin strands visible entering from right side.",
+      "technique_notes": "Loop being introduced smoothly; instruments ready to manipulate.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 3.0,
+      "phase": "loop_introduction",
+      "description": "Loop strands more clearly visible; grasper beginning to engage with loop material. Hand positions show controlled introduction.",
+      "technique_notes": "Grasper is opening to receive loop; gentle handling evident.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 4.5,
+      "phase": "loop_positioning",
+      "description": "Grasper holding loop material; hand showing loop configuration. Loop strands palpable and controlled.",
+      "technique_notes": "Loop is being formed/positioned manually in hand. Two-hand coordination evident.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 6.0,
+      "phase": "loop_positioning",
+      "description": "Left hand grasping and shaping loop; right hand with scissors visible. Loop being opened into working configuration.",
+      "technique_notes": "Manual manipulation of loop to create opening; typical pre-deployment handling.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 7.5,
+      "phase": "loop_positioning",
+      "description": "Both hands actively positioning loop; loop opening visible between thumb and fingers. Scissors held ready in right hand.",
+      "technique_notes": "Loop is being manually formed into a circle/lasso configuration before deployment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 9.0,
+      "phase": "loop_positioning",
+      "description": "Left hand holding open loop formation; loop strands clearly visible forming a circle. Ready for application.",
+      "technique_notes": "Loop opening is wide and well-controlled. Position suggests readiness to slip over simulated appendage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 10.5,
+      "phase": "loop_positioning",
+      "description": "Loop held open by left hand with multiple fingers supporting the perimeter. Optimal positioning for placement.",
+      "technique_notes": "Good manual control; loop opening maintained consistently.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 12.0,
+      "phase": "loop_positioning",
+      "description": "Left hand continues to hold open loop. Right hand with scissors visible in field. Transitioning toward pusher break phase.",
+      "technique_notes": "Loop remains well-positioned and open. Scissors are available for tail cutting after cinching.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 14.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Right hand holding white pusher rod/tube. Left hand still supporting loop. Pusher beginning to advance.",
+      "technique_notes": "Pusher visible and beginning deployment. This marks the cinching phase initiation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 16.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Right hand advancing pusher downward along the loop suture. Visible advancement of the knot/cinch mechanism.",
+      "technique_notes": "Smooth pusher advancement; applying consistent pressure to secure the loop.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 18.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher rod advanced significantly; knot being cinched. Left hand no longer holding open loop; loop now secured by pusher mechanism.",
+      "technique_notes": "Transition from manual positioning to pusher-driven cinching is clean. Loop control transferred to pusher.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 20.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher rod further advanced; cinching is nearly complete. Loop knot being pulled tight around the simulated appendage site.",
+      "technique_notes": "Good pusher control; incremental advancement ensures secure knot placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 22.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher reaching near-final position. Knot appears cinched around the target area. Loop material slack visible on board.",
+      "technique_notes": "Pusher is being advanced to the break point. Cinching appears secure.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 24.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher rod being held at/past the scored break mark. Right hand holding pusher steady. Knot secured on simulated appendage.",
+      "technique_notes": "Pusher advanced to the break line. Loop knot appears to be at the marked location on appendage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 26.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Right hand breaking/separating the pusher rod from the suture at the scored mark. Left hand visible with gloved fingers.",
+      "technique_notes": "Breaking technique appears controlled. Pusher being separated from the knot/suture.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 28.0,
+      "phase": "tail_cut",
+      "description": "Pusher rod disengaged and removed from field. Right hand now holding scissors. Loop tail visible on the blue drape.",
+      "technique_notes": "Transition from pusher to scissors for tail cutting. Loop knot left in place on simulated appendage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 30.0,
+      "phase": "tail_cut",
+      "description": "Scissors being positioned around the loop tail. Left hand may be stabilizing the tail or drape.",
+      "technique_notes": "Scissors being brought into position to cut the trailing suture material.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 32.0,
+      "phase": "tail_cut",
+      "description": "Scissors positioned close to the loop tail. Cutting motion imminent. Tail material visible between the scissor blades.",
+      "technique_notes": "Good scissor positioning at the end of the loop material.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 34.0,
+      "phase": "tail_cut",
+      "description": "Scissors cutting through the loop tail. Cut appears to be complete or nearly complete inside the trainer boundary.",
+      "technique_notes": "Cut executed smoothly. Tail is being severed close to the cinched knot.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 36.0,
+      "phase": "tail_cut",
+      "description": "Scissors have cut the loop tail. Left hand holding the severed tail or stabilizing. Tail material lies on the drape.",
+      "technique_notes": "Cut is complete. Severed tail visible on the surgical field.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 38.0,
+      "phase": "tail_cut",
+      "description": "Task completion evident. Severed loop tail lies on drape. Right hand holding scissors, left hand visible. Loop knot secured on simulated appendage (off-camera in this view).",
+      "technique_notes": "Final phase complete. Loop has been applied, cinched, and tail cut.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 38.0,
+  "phase_timings": [
+    {
+      "phase": "loop_introduction",
+      "start_seconds": 0.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 3.0,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "loop_positioning",
+      "start_seconds": 3.0,
+      "end_seconds": 14.0,
+      "duration_seconds": 11.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "pusher_break_and_advancement",
+      "start_seconds": 14.0,
+      "end_seconds": 28.0,
+      "duration_seconds": 14.0,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "tail_cut",
+      "start_seconds": 28.0,
+      "end_seconds": 38.0,
+      "duration_seconds": 10.0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_position_off_mark",
+      "description": "Exact knot position on simulated appendage cannot be definitively assessed from available camera angles. Pusher advancement appears to reach the intended mark area, but final knot placement clarity is limited.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        15,
+        16,
+        22
+      ],
+      "confidence": 0.35,
+      "rationale": "The simulated appendage/target site is not clearly visible in the final frames showing the secured loop. Pusher appears to advance to the break mark, but whether the knot is precisely at the marked location on the appendage cannot be confirmed from the camera angle provided. This is a significant observability limitation."
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "loop_opened_successfully": true,
+      "loop_opening_quality": "Wide, well-controlled manual opening maintained throughout positioning phase",
+      "confidence": 0.9
+    },
+    "pusher_advancement": {
+      "pusher_engaged_smoothly": true,
+      "advancement_incremental_and_controlled": true,
+      "break_point_reached": true,
+      "break_technique": "Controlled separation at scored mark",
+      "confidence": 0.85
+    },
+    "knot_security": {
+      "loop_remains_secured": "Cannot determine with certainty from final frames",
+      "visible_slippage": false,
+      "tissue_surrogate_integrity": "Not visible in final frames; no evidence of damage observed in earlier frames",
+      "confidence": 0.4,
+      "rationale": "The simulated appendage and final secured loop position are off-camera or out of focus in the latter phase. No slippage is evident from the severed tail position, but full security assessment is limited."
+    },
+    "tail_cut": {
+      "cut_completed": true,
+      "cut_location": "At or very close to the cinched knot",
+      "cut_inside_trainer": true,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 38.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 142.0,
+    "formula_applied": "180 - 38.0 - 0.0 = 142.0"
+  },
+  "confidence": 0.55,
+  "confidence_rationale": "Completion time is well-observed and unambiguous (38 seconds, expert level). All four phases are clearly visible and progressed smoothly. However, a critical limitation exists: the final secured loop position on the simulated appendage is not clearly visible in the provided frames. The camera angle and focus shift away from the target site during the critical pusher advancement and knot-securing phases. Without clear visibility of the final knot placement relative to the marked target on the appendage, a loop_off_mark penalty cannot be reliably assessed. This is a significant observability gap. The severed tail and pusher advancement to the break mark are evident, suggesting successful cinching, but the confirmation of proper mark alignment is insufficient. Confidence is reduced to 0.55 due to this gap.",
+  "cannot_determine": [
+    "Exact mm deviation of final knot position from the marked target on the appendage \u2014 the appendage/mark site is not clearly visible in the securing and final phases.",
+    "Whether the loop knot remains fully secured after the pusher is removed \u2014 only the severed tail is visible; the knot itself is off-camera.",
+    "Precise anatomical location of knot placement relative to the provided mark line."
+  ],
+  "technique_summary": "Expert-level speed and procedural execution (38 seconds; proficiency benchmark is 53 seconds). Manual loop positioning was smooth and well-controlled. Pusher advancement was incremental and controlled, reaching the break mark appropriately. Tail cutting was cleanly executed inside the trainer. However, the video does NOT provide adequate visual confirmation of the final knot placement on the marked target site, which is a required element of the task completion rubric. From the available evidence, the procedure appears competent, but full task validation is compromised by camera angle and framing during the critical final phases.",
+  "strengths": [
+    "Rapid overall completion time (38s vs 53s proficiency target) \u2014 28% faster than expert benchmark",
+    "Smooth manual loop opening and positioning with excellent hand control",
+    "Controlled pusher advancement with incremental tension application",
+    "Clean scissor cut of the loop tail at the appropriate location",
+    "No visible handling errors, drops, or instrument fumbling"
+  ],
+  "weaknesses": [
+    "Video framing and camera angle do not adequately show the final secured knot position relative to the marked target on the appendage",
+    "Final loop security status is not visually confirmed in the provided frames"
+  ],
+  "improvement_suggestions": [
+    "For scoring and training purposes: ensure the camera maintains clear view of the marked target site and final knot position during the pusher advancement and securing phases",
+    "Technically: the performance appears sound; no specific technique improvements are evident from observable actions"
+  ],
+  "observability_issue_severity": "HIGH",
+  "observability_issue_detail": "This video demonstrates a procedurally sound endoloop application with expert-level speed, but it fails to provide the visual evidence required to confirm task completion per the FLS rubric requirement: 'Advance and secure the knot at the provided mark near the appendage base.' The marked appendage site is not clearly visible during the critical cinching and final phases. This is a systemic issue with video capture, not with the trainee's performance. Recommendation: do not assign a final score without additional visual evidence of the final knot placement, or note this as 'incomplete assessment due to camera limitations.'",
+  "recommended_final_score_status": "CONDITIONAL PASS on time and visible technique; UNCONFIRMED on mark placement accuracy due to camera limitations.",
+  "video_id": "zVGMNa8EmDc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:14:58.798126+00:00"
+}

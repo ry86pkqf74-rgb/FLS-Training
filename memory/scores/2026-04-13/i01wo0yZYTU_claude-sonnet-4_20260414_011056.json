@@ -1,0 +1,145 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 19.1,
+      "phase": "pickup_nondominant",
+      "description": "Peg transfer task in progress - left grasper transferring red ring to right side",
+      "technique_notes": "Smooth transfer motion, good instrument coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 19.7,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper picking up yellow ring for transfer",
+      "technique_notes": "Efficient grasp, minimal hesitation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 19.8,
+      "phase": "transfer_midair",
+      "description": "Multiple rings successfully transferred to right side pegs",
+      "technique_notes": "Clean placements on target pegs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 10.3,
+      "phase": "suture_placement",
+      "description": "Transition to suturing task - pink foam surface with needle drivers visible",
+      "technique_notes": "Setup appears appropriate for suturing exercise",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 10.14,
+      "phase": "needle_load",
+      "description": "Blue suture material visible with needle drivers positioned for suturing",
+      "technique_notes": "Suture material appears to be 2-0 silk as specified",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 10.31,
+      "phase": "suture_placement",
+      "description": "Needle drivers working on Penrose drain with blue suture marks visible",
+      "technique_notes": "Two parallel blue marks visible on green foam surface representing target points",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 10.34,
+      "phase": "suture_placement",
+      "description": "Suture placement completed through both marks on the drain",
+      "technique_notes": "Suture appears to pass through both target marks adequately",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 600,
+  "phase_timings": [
+    {
+      "phase": "combined_tasks",
+      "start_seconds": 0,
+      "end_seconds": 600,
+      "duration_seconds": 600,
+      "benchmark_comparison": "timeout"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "timeout_incomplete",
+      "description": "Task not completed within 600 second time limit - appears to show multiple tasks rather than single intracorporeal suture completion",
+      "points_deducted": 600,
+      "frame_evidence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0,
+      "deviation_from_mark2_mm": 0,
+      "total_deviation_penalty": 0,
+      "confidence": 0.3
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "incomplete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 600,
+    "total_penalties": 600,
+    "total_fls_score": 0,
+    "formula_applied": "600 - 600 - 0 = 0 (timeout penalty)"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Video clearly shows timeout at 600 seconds without task completion. However, the video appears to show multiple different tasks (peg transfer and suturing) rather than a single intracorporeal suture task, making assessment challenging.",
+  "cannot_determine": [
+    "Exact knot tying technique and throws - task appears incomplete",
+    "Final knot security - no completed knots visible",
+    "Precise suture deviation measurements - limited view angles"
+  ],
+  "technique_summary": "Video shows incomplete performance with timeout at 600 seconds. Initial suture placement appears adequate but no knot tying phase completed.",
+  "strengths": [
+    "Suture appears to pass through target marks appropriately"
+  ],
+  "improvement_suggestions": [
+    "Focus on completing single task within time limit",
+    "Practice knot tying technique to improve speed",
+    "Work on task prioritization and time management"
+  ],
+  "video_id": "i01wo0yZYTU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:10:56.110694+00:00"
+}

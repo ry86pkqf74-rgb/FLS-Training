@@ -1,0 +1,73 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - instructional/promotional content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Dr. Durie Suh, surgical resident at Hospital Triemli, introduced on screen with VirtaMed ED branding",
+      "technique_notes": "Presentation/interview format, not a task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "promotional_content",
+      "description": "VirtaMed ED logo and system display shown",
+      "technique_notes": "Equipment/platform demonstration, not FLS task execution",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "system_overview",
+      "description": "VirtaMed simulation platform with laparoscopic trainer box and display monitor",
+      "technique_notes": "Educational setup - showing training environment, not actual task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "hands_on_demonstration",
+      "description": "Two individuals at laparoscopic trainer with instruments visible, appearing to perform or demonstrate a task",
+      "technique_notes": "Possible task demonstration, but framing and context suggest educational/promotional rather than scored performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "instrument_handling",
+      "description": "Close-up of laparoscopic instruments being manipulated at trainer workspace",
+      "technique_notes": "Shows technique but context (interview/demo format) indicates this is instructional demonstration, not formal assessment",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - not scoreable content"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "Video consists of interview introductions, promotional VirtaMed ED branding, and system/equipment overview shots. No clear FLS task execution is visible from the provided frames. The content appears to be instructional/promotional material introducing Dr. Durie Suh and the VirtaMed ED platform rather than a scored trainee performance or formal expert demonstration of a specific FLS task.",
+  "cannot_determine": [
+    "Specific FLS task being performed or demonstrated",
+    "Completion time - no task execution sequence captured",
+    "Performance metrics - no measurable task activity visible in frames",
+    "Any quantifiable performance data"
+  ],
+  "reason_not_scored": "This video is promotional/instructional content introducing a surgical resident and the VirtaMed ED training platform. No actual FLS task performance is captured in sufficient detail to score. The frames show interviews, system displays, and brief glimpses of equipment use, but not a complete, scoreable task execution sequence.",
+  "recommendation": "This content should be classified as 'unusable' for FLS task scoring purposes. If a specific FLS task performance exists in the full video, please provide frames showing the complete task execution from start to finish.",
+  "video_id": "VUeMdw51LF8",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:27:04.944250+00:00"
+}

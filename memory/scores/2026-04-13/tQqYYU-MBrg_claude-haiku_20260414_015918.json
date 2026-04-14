@@ -1,0 +1,19 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "reason": "Content is not an FLS task performance, expert demonstration, or instructional video. The frames show a mobile application interface for 'FLS 2026 Foundational Learning Study' \u2014 an educational survey/assessment platform for primary school students. The content includes login screens, survey forms, math problems, reading comprehension tasks, and student data entry fields. This is administrative/educational software documentation, not a laparoscopic surgery skills task video.",
+  "fls_scoreable": false,
+  "frame_content_summary": [
+    "Mobile app login screen",
+    "Survey rules and instructions",
+    "School/student selection interface",
+    "Test startup menu with survey history",
+    "Educational assessment questions (mathematics, reading, language)",
+    "Student detail form with photo capture"
+  ],
+  "note": "No laparoscopic instruments, trainer box, suture material, gauze, foam appendage, or Penrose drain visible. Content is completely unrelated to FLS tasks 1-5.",
+  "video_id": "tQqYYU-MBrg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:59:18.321075+00:00"
+}

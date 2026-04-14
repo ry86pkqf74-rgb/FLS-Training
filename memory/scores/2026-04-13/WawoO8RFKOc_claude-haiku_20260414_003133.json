@@ -1,0 +1,35 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown/Not FLS Task",
+  "cannot_score_reason": "Video content is instructional/documentary material about product development and simulation team collaboration, not an FLS task performance",
+  "content_summary": "This is a documentary-style instructional video featuring interviews with simulation team members, product development demonstrations (three-layer skin suture pad creation with ECO materials, raspberry jam layer, epidermal and dermal components), and institutional messaging about simulation collaboration. Multiple frames show narrated explanations of biomaterial fabrication processes, material mixing, pouring procedures, and curing techniques\u2014not actual FLS task execution by a trainee.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Three-layer skin suture pad fabrication using eco-friendly materials",
+      "Material mixing and preparation procedures",
+      "Mold-based casting and curing processes",
+      "Layered composition construction (epidermis, dermis, and substrate layers)"
+    ],
+    "verbal_cues": [
+      "\"The Simulation team collaborates with faculty, staff and departments\"",
+      "\"Kind of a prototype for a new product\"",
+      "\"We're making a skin suture pad, so it's three layers of the different eco\"",
+      "\"To measure the different the rubber A, rubber B\"",
+      "\"And then pour it in the mold and it hardens\"",
+      "\"It's that and how it creates when the blood comes out and it creates this dome\"",
+      "\"On top of the epidermis layer\"",
+      "\"Once the suture pad is done drying, it is now time to peel the slab from the mold\"",
+      "\"I get to do the most satisfying part and pull it\""
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional/educational"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video is unambiguously instructional/documentary content showing product fabrication and team interviews, not FLS task performance. No trainee performing any MISTELS task is visible.",
+  "improvement_suggestions": [],
+  "video_id": "WawoO8RFKOc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:31:33.146991+00:00"
+}

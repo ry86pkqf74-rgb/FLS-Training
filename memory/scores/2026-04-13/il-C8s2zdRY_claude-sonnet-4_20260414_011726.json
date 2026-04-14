@@ -1,0 +1,134 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_introduction",
+      "description": "Title slide showing 'Laparoscopic Roaders Knot' by Prof. Dr. R. K. Mishra",
+      "technique_notes": "Educational video introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "suture_introduction",
+      "description": "Hands demonstrating suture handling with white suture material",
+      "technique_notes": "Clean suture handling technique, appropriate grip on suture ends",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "extracorporeal_throws",
+      "description": "Formation of first extracorporeal throw with bilateral hand manipulation",
+      "technique_notes": "Smooth bilateral coordination, proper loop formation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "extracorporeal_throws",
+      "description": "Sequential throw formation with maintained tension",
+      "technique_notes": "Consistent throw size and tension control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "extracorporeal_throws",
+      "description": "Final throw completion showing properly formed knot structure",
+      "technique_notes": "Well-formed knot with appropriate loop spacing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "extracorporeal_throws",
+      "description": "Knot pusher being positioned for advancement",
+      "technique_notes": "Proper knot pusher orientation and approach angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 20.0,
+      "phase": "extracorporeal_throws",
+      "description": "Knot advancement with pusher showing controlled delivery",
+      "technique_notes": "Smooth pusher advancement with maintained knot integrity",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 25.0,
+  "phase_timings": [
+    {
+      "phase": "suture_introduction",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_throws",
+      "start_seconds": 3,
+      "end_seconds": 25,
+      "duration_seconds": 22,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_formation": {
+      "throws_completed": 3,
+      "knot_structure_quality": "excellent",
+      "pusher_technique": "proper",
+      "notes": "Clean extracorporeal knot formation with appropriate throw sequence"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 25.0,
+    "total_penalties": 0,
+    "total_fls_score": 395.0,
+    "formula_applied": "420 - 25.0 - 0 = 395.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear demonstration of knot tying technique visible throughout. Cannot assess target placement, slit closure, or tissue interaction as this appears to be a pure knot demonstration without Penrose drain.",
+  "cannot_determine": [
+    "Suture placement through marked targets - no Penrose drain visible",
+    "Slit closure assessment - no tissue substrate shown",
+    "Final knot security under tension - no tension testing demonstrated",
+    "Suture cutting phase - demonstration ends before cutting"
+  ],
+  "technique_summary": "Expert-level demonstration of extracorporeal knot formation with excellent bilateral hand coordination and proper knot pusher technique. Clean, efficient movement pattern typical of experienced surgeon.",
+  "strengths": [
+    "Smooth bilateral hand coordination during throw formation",
+    "Proper knot pusher positioning and advancement technique",
+    "Consistent throw formation and spacing",
+    "Efficient time management"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Bilateral extracorporeal throw formation",
+      "Proper knot pusher positioning and advancement",
+      "Tension control during knot formation",
+      "Sequential throw placement technique"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Maintaining proper loop spacing during throw formation",
+      "Avoiding knot deformation during pusher advancement"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "Video shows isolated knot technique but lacks context of full FLS Task 4 requirements",
+    "Would benefit from demonstration of suture placement and tissue interaction phases"
+  ],
+  "video_id": "il-C8s2zdRY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:17:26.496266+00:00"
+}

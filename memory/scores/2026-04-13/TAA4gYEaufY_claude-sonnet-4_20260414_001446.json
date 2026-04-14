@@ -1,0 +1,107 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_title",
+      "description": "Title slide showing 'Laparoscopic tubal ligation'",
+      "technique_notes": "Instructional content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "anatomical_demonstration",
+      "description": "3D anatomical view showing fallopian tube highlighted in red",
+      "technique_notes": "Educational visualization of target anatomy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_introduction_demo",
+      "description": "Endoloop device shown approaching from trocar with laparoscopic view",
+      "technique_notes": "Demonstration of proper loop introduction angle and approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "live_tissue_demonstration",
+      "description": "Real tissue view showing endoloop placement around fallopian tube",
+      "technique_notes": "Expert demonstration of loop positioning on actual tissue",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "mini_laparotomy_title",
+      "description": "Transition slide showing 'Mini-laparotomy Tubal Ligation'",
+      "technique_notes": "Educational content showing alternative approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "external_procedure_demo",
+      "description": "External view of mini-laparotomy approach showing fallopian tube with fimbriae",
+      "technique_notes": "Demonstration of open surgical technique for comparison",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "target_identified": true,
+      "loop_positioned": true,
+      "knot_secured": null,
+      "deviation_from_mark": null
+    },
+    "technique_quality": {
+      "approach_angle": "appropriate",
+      "loop_opening": "demonstrated",
+      "pusher_technique": "not_shown_in_detail"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is educational content demonstrating tubal ligation technique, not a scorable FLS task performance",
+  "cannot_determine": [
+    "Actual task completion time",
+    "Specific penalty assessments",
+    "FLS scoring metrics"
+  ],
+  "technique_summary": "Educational demonstration of laparoscopic and mini-laparotomy tubal ligation techniques using endoloop devices",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper endoloop introduction through trocar",
+      "Loop positioning around fallopian tube",
+      "Anatomical identification of target structures",
+      "Comparison of laparoscopic vs open approaches",
+      "Loop deployment and positioning technique"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Proper anatomical targeting of fallopian tube rather than other structures",
+      "Appropriate loop positioning for complete occlusion"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "TAA4gYEaufY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:14:46.547345+00:00"
+}

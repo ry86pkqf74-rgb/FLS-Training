@@ -1,0 +1,54 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not applicable - instructional/promotional content",
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - instructional content, not performance-based"
+  },
+  "confidence": null,
+  "confidence_rationale": "This video is promotional/instructional material for the LAPARO surgical training simulator system. It contains system overviews, login screens, training module selections, objective training analysis interfaces, timeline analytics, live preview access, equipment demonstrations, trainer setup, trocar inserts, and marketing messaging (more effective training, well-trained staff, patient safety improvement, professional hospital environment). No actual FLS task performance is present.",
+  "cannot_determine": [
+    "Task identification - no performance task recorded",
+    "Completion time - no task execution shown",
+    "Technique assessment - no hands-on performance visible",
+    "Penalty evaluation - no task-specific work product to assess"
+  ],
+  "technique_summary": "Not applicable. This is a system demonstration and marketing video, not an FLS task performance recording.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "LAPARO simulator system interface and user login workflow",
+      "Training module selection (Thread manipulation, Twine passing, Needle manipulation, Suturing under tension, Suturing training)",
+      "Objective training analysis real-time feedback with acceleration, velocity, hand movement tracking, and clamp speed metrics",
+      "Timeline analysis visualization for suturing task performance",
+      "Multi-station live preview access for instructor monitoring",
+      "Trocar insert design and instrument exchange",
+      "Professional training environment setup with multiple workstations and display systems"
+    ],
+    "verbal_cues": [
+      "\"Choose training from listed below\"",
+      "\"More effective training\"",
+      "\"Well trained staff\"",
+      "\"Patient safety improvement\"",
+      "\"Professional hospital environment\""
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructor/system_overview"
+  },
+  "improvement_suggestions": [],
+  "scoring_note": "Per instructions, instructional/promotional content is not scored. No FLS task performance is visible in this video. This material is suitable for educational context about the LAPARO training system but contains no evaluable task execution.",
+  "video_id": "dGGjAPAzN48",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:01:18.688865+00:00"
+}

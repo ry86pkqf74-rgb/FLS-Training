@@ -1,0 +1,182 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "initial_state",
+      "description": "Setup showing FLS peg transfer board with 6 rubber pegs on right side of board, left side empty, all four graspers in ready position",
+      "technique_notes": "Standard peg transfer setup, pegs positioned in correct quadrant",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "pickup_nondominant",
+      "description": "Right-hand grasper (appears to be dominant hand based on control) approaching first peg on right side",
+      "technique_notes": "Deliberate approach, good instrument alignment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.5,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper grasping first peg, securing with controlled grip",
+      "technique_notes": "Peg secured at mid-point, no fumbling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 7.0,
+      "phase": "transfer_midair",
+      "description": "First peg being transferred midair from right to left side of board",
+      "technique_notes": "Smooth transfer motion, peg maintained in instrument",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 9.5,
+      "phase": "place_dominant",
+      "description": "Left-hand grasper receiving first peg from right-hand grasper at left peg position",
+      "technique_notes": "Instrument exchange smooth, peg positioned on peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 12.0,
+      "phase": "pickup_nondominant",
+      "description": "Second peg being picked up by right grasper from right side",
+      "technique_notes": "Rhythm established, no hesitation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 35.0,
+      "phase": "transfer_multiple",
+      "description": "Multiple pegs visible on left side of board; appears to show 4-5 pegs transferred to left side",
+      "technique_notes": "Good pacing, systematic transfer of pegs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 55.0,
+      "phase": "reverse_pickup",
+      "description": "Left-hand grasper picking up peg from left side as reversal begins (transfer back to right)",
+      "technique_notes": "Transition to reverse direction clean, proper instrument control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 75.0,
+      "phase": "reverse_transfer_multiple",
+      "description": "Multiple pegs being transferred back to right side; 3-4 pegs visible on right side now",
+      "technique_notes": "Return transfer proceeding smoothly, maintained control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 95.0,
+      "phase": "reverse_place",
+      "description": "Final peg placement appearing to occur on right side, pegs repositioned on right quadrant",
+      "technique_notes": "Final pegs being seated, approach to completion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 105.0,
+      "phase": "completion",
+      "description": "All 6 pegs visible on right side of board in original peg positions; graspers withdrawn",
+      "technique_notes": "All pegs successfully placed back in starting positions, task completed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 105.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 12,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_nondominant_to_dominant",
+      "start_seconds": 12,
+      "end_seconds": 52,
+      "duration_seconds": 40,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup_and_transfer",
+      "start_seconds": 52,
+      "end_seconds": 105,
+      "duration_seconds": 53,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "none_observed",
+      "description": "No dropped pegs, no pegs placed incorrectly, no incomplete placements observed",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        1,
+        11
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "task_specific_assessments": {
+    "peg_transfers": {
+      "total_pegs_transferred": 6,
+      "pegs_successfully_placed": 6,
+      "drops_observed": 0,
+      "misplacements": 0,
+      "confidence": 0.95
+    },
+    "hand_dominance": {
+      "apparent_dominant_hand": "right",
+      "initial_hand": "right",
+      "proper_bidirectional_transfer": true,
+      "notes": "Clear demonstration of non-dominant to dominant and reverse transfer"
+    },
+    "instrument_control": {
+      "grasp_security": "excellent",
+      "midair_stability": "excellent",
+      "exchange_fluidity": "smooth",
+      "no_fumbling_observed": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 105.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 195.0,
+    "formula_applied": "300 - 105.0 - 0.0 = 195.0"
+  },
+  "confidence": 0.92,
+  "confidence_rationale": "Clear overhead camera view throughout task showing all pegs and their movements. Completion time clearly identifiable from initial peg pickup to final peg placement. No ambiguity regarding drops or misplacements. Only minor uncertainty in exact timestamps at phase boundaries, but overall task execution and timing highly visible.",
+  "cannot_determine": [
+    "Exact frame-by-frame timestamps for each individual peg transfer (estimated from visible progression)"
+  ],
+  "technique_summary": "Competent intermediate-to-advanced performance. Task completed in 105 seconds, which falls in the intermediate range (60\u2013120s = intermediate; 40\u201360s = expert). All 6 pegs successfully transferred bidirectionally with no drops or errors. Smooth instrument exchanges and maintained control throughout both forward and reverse directions.",
+  "strengths": [
+    "No dropped pegs or misplacements throughout task",
+    "Smooth bidirectional transfer demonstrating proper technique",
+    "Efficient pacing without excessive hesitation",
+    "Good instrument control and grasp security",
+    "Clean instrument exchanges between hands"
+  ],
+  "improvement_suggestions": [
+    "Reduce completion time from 105s to under 80s by increasing peg pickup speed slightly",
+    "Optimize reverse transfer timing \u2014 currently slower than forward direction",
+    "Consider reducing hesitation at peg exchanges to approach expert time range (40\u201360s)"
+  ],
+  "video_id": "U2fxBWb3Fqs",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:22:30.576311+00:00"
+}

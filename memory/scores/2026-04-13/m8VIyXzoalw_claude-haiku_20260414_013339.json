@@ -1,0 +1,68 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "LapPass\u00ae Product Overview and Equipment Showcase",
+  "classification_rationale": "This is a product demonstration and marketing video for Inovus Medical LapPass\u00ae training kits. It contains no actual performance footage, no trainee or surgeon performing FLS tasks, and no real-time task execution. The frames show static equipment displays, labeled components, and branding with no clinical or training activity visible. This is educational/promotional content only.",
+  "scoring_applicability": "NOT APPLICABLE",
+  "reason_no_score": "This video does not contain an actual FLS task performance. It is a product showcase video displaying various LapPass\u00ae kit components (peg transfer boards, suturing practice bases, cutting practice skins, hoops, pegs, ligating loop apparatus, and related accessories). There is no trainee or expert performing any of the five FLS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). No timing data, performance metrics, or technique execution is present.",
+  "video_content_summary": {
+    "frames_1_to_5": "Overview of complete LapPass\u00ae kit system with peg transfer boards (peg pads with hemicircular receptacles), hoops, pegs, and other training modules arranged on white background",
+    "frames_6_to_9": "Close-up views of the LapPass\u00ae peg transfer and ligating loop apparatus showing blue hoops, metal clamps, and blue peg positions with labeled component callouts",
+    "frames_10_to_15": "Display of individual training modules: suturing skills base (pink foam with hemicircular markings and metal clamps), cutting practice skin (pink foam with circular pattern marked in dashed line)",
+    "frames_16_to_19": "Product components: replacement foam pads, hoops and pegs (blue plastic), white connector pieces, and accessories",
+    "frames_20_to_21": "Inovus Medical branding and LapPass\u00ae kits promotional slides with Association of Laparoscopic Surgeons (ALS) logo and website reference"
+  },
+  "teaching_content": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Full LapPass\u00ae training kit system displayed with multiple foam pads, metal clamps, hoops, and pegs visible",
+      "content_type": "product_overview"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 2.5,
+      "description": "Multiple LapPass\u00ae peg transfer boards arranged in setup position showing hemicircular peg receptacles",
+      "content_type": "equipment_display"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 5.0,
+      "description": "LapPass\u00ae peg transfer board with blue hoops and metal clamps in place, labeled 'LapPass kit with hoops and pegs in place'",
+      "content_type": "labeled_component_demo"
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 7.5,
+      "description": "Suturing skills base foam pad displayed with hemicircular practice zones and metal clamps",
+      "content_type": "training_module_display"
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 9.0,
+      "description": "Cutting practice skin with circular dashed pattern marked for precision cutting task",
+      "content_type": "training_module_display"
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 11.0,
+      "description": "Inovus Medical LapPass\u00ae Kits promotional slide with ALS association logo and website",
+      "content_type": "branding"
+    }
+  ],
+  "confidence": 1.0,
+  "confidence_rationale": "Absolute certainty that this is instructional/marketing content. No performance footage exists. Video is clearly a product showcase with static displays, labeled components, and promotional branding. No trainee, no task execution, no time-based activity.",
+  "cannot_score_reasons": [
+    "No actual task performance visible",
+    "No trainee or surgeon performing FLS tasks",
+    "No real-time execution of Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture",
+    "No completion time measurable",
+    "No technique execution observable for scoring penalties",
+    "Video is product demonstration only"
+  ],
+  "video_id": "m8VIyXzoalw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:33:39.248106+00:00"
+}

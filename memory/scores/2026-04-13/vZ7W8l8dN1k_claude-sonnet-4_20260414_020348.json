@@ -1,0 +1,67 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine - promotional/instructional video",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_screen",
+      "description": "Title screen showing 'Improve Your Laparoscopic Training Surgical Skill'",
+      "technique_notes": "Promotional/educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "course_introduction",
+      "description": "F.MAS and D.MAS Course Fellowship and Diploma in MAS text overlay",
+      "technique_notes": "Educational program advertisement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "laparoscopic_demonstration",
+      "description": "Hands in blue gloves working with laparoscopic equipment in training box",
+      "technique_notes": "Brief glimpse of laparoscopic trainer use",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No scoring applicable - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is promotional/instructional content for a laparoscopic surgery training program, not a scoreable FLS task performance",
+  "cannot_determine": [
+    "Specific FLS task being performed",
+    "Task completion time",
+    "Performance metrics",
+    "Penalty assessments"
+  ],
+  "technique_summary": "Educational promotional video showing various aspects of minimally invasive surgery training including live surgery footage, conference presentations, and brief laparoscopic trainer demonstrations.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Laparoscopic instrument handling in training box",
+      "Live surgical procedure observation"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "mixed - promotional content"
+  },
+  "improvement_suggestions": [],
+  "video_id": "vZ7W8l8dN1k",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:03:48.282670+00:00"
+}

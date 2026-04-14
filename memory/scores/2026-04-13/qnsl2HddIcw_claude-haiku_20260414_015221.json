@@ -1,0 +1,13 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason": "This is educational/instructional content\u2014multiple-choice FLS curriculum/pedagogy questions from PracticeTestGeeks.com, not a video performance of an FLS surgical task.",
+  "content_type": "instructional_quiz_slides",
+  "cannot_score": true,
+  "note": "To score an FLS task, provide a video showing actual performance of one of the five MISTELS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). This image set contains teaching questions only.",
+  "video_id": "qnsl2HddIcw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:52:21.371204+00:00"
+}

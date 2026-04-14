@@ -1,0 +1,79 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparo Equipment Demonstration",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_showcase",
+      "description": "Black screen transitioning to Laparo branding and equipment overview",
+      "technique_notes": "Professional product demonstration video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "system_overview",
+      "description": "Laparo laparoscopic training system with monitor and base unit",
+      "technique_notes": "Complete training station setup visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "user_interface",
+      "description": "Login screen showing username 'eva' and password fields",
+      "technique_notes": "Software interface demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "training_menu",
+      "description": "Training selection menu showing various exercises including suturing options",
+      "technique_notes": "Multiple training modules available including FLS-type tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "task_demonstration",
+      "description": "Suturing exercise in progress with 'OBJECTIVE TRAINING ANALYSIS' overlay",
+      "technique_notes": "Real-time performance analysis during task execution",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "multi_station",
+      "description": "Multiple Laparo training stations with trainees and instructor",
+      "technique_notes": "Classroom/training lab environment with supervision",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic training system setup and operation",
+      "user interface navigation for training modules",
+      "real-time performance tracking and analysis",
+      "multi-station training environment management",
+      "objective skill assessment methodology"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_system"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear product demonstration video showing Laparo training equipment and software interface rather than actual FLS task performance",
+  "cannot_determine": [
+    "Specific FLS task scoring as this is equipment demonstration",
+    "Individual trainee performance metrics",
+    "Actual completion times or penalties"
+  ],
+  "technique_summary": "Professional demonstration of Laparo laparoscopic training system capabilities including software interface, training modules, performance analysis tools, and multi-station training environment setup.",
+  "video_id": "dGGjAPAzN48",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:01:08.791508+00:00"
+}

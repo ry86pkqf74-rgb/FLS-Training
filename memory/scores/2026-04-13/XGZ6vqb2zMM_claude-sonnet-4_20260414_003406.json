@@ -1,0 +1,56 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task - Robotic Surgery Training Research Presentation",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_setup",
+      "description": "Person in scrubs operating da Vinci robotic surgical system with monitor showing simulation training interface",
+      "technique_notes": "Research demonstration setup showing robotic training environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 30.0,
+      "phase": "research_overview",
+      "description": "Slide presentation about robotic training with LAELAPS-3 and LEARNBOT systems",
+      "technique_notes": "Educational content about robotic curriculum development",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - not an FLS task"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear academic presentation about robotic surgery training research, not an FLS performance video",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is a research presentation",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "da Vinci robotic console operation",
+      "VR simulator training integration",
+      "Force measurement assessment methods",
+      "OSATS grading criteria application"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "research/educational"
+  },
+  "improvement_suggestions": [],
+  "video_id": "XGZ6vqb2zMM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:34:06.697970+00:00"
+}

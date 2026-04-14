@@ -1,0 +1,149 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide: 'Laparoscopic Intracorporeal Suturing Techniques by Dr. V. Chandramohan'",
+      "technique_notes": "Instructional content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_holding_technique",
+      "description": "Demonstrating needle holding with two needle drivers on foam model. Text overlay: 'Needle holding' and 'the two instruments'",
+      "technique_notes": "Shows proper two-hand instrument positioning for needle control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "needle_holding_technique",
+      "description": "Demonstrating 90-degree angle hold. Red annotation showing '90' degrees with arc indicating angle between surface and instruments",
+      "technique_notes": "Explicitly teaching proper needle angle relative to tissue surface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 18.0,
+      "phase": "needle_holding_technique",
+      "description": "Close-up showing needle driver grasping technique with caption 'here am showing common methods'",
+      "technique_notes": "Demonstrating Maryland/instrument needle grasping position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 25.0,
+      "phase": "needle_holding_technique",
+      "description": "Demonstrates needle positioning with caption 'pressing it'",
+      "technique_notes": "Teaching proper pressure application to needle during manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 32.0,
+      "phase": "needle_holding_technique",
+      "description": "Shows needle in curved position with caption 'You can check the needle position'",
+      "technique_notes": "Teaching verification method for needle orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 40.0,
+      "phase": "needle_holding_technique",
+      "description": "Demonstrates needle held horizontally with caption 'hold the needle at the tip'",
+      "technique_notes": "Emphasizing tip-held position for optimal control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 48.0,
+      "phase": "needle_holding_technique",
+      "description": "Shows needle rotation technique with caption 'to rotate the needle like this'",
+      "technique_notes": "Teaching wrist rotation mechanics for needle trajectory",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 56.0,
+      "phase": "needle_holding_technique",
+      "description": "Continues demonstrating rotation method with two-driver coordination",
+      "technique_notes": "Showing coordinated hand movement for smooth needle rotation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 64.0,
+      "phase": "needle_holding_technique",
+      "description": "Final demonstration frame showing needle positioned for tissue entry with caption 'the other method is rotation'",
+      "technique_notes": "Summarizing alternative rotation technique for needle positioning",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional video only"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video is educational/instructional content with narration and teaching overlays. No actual task performance occurs; therefore no scoring, timing, or penalty assessment is warranted.",
+  "cannot_determine": [
+    "Completion time \u2014 no FLS task performance visible",
+    "Suture placement accuracy \u2014 demonstration only",
+    "Knot security or hand switching \u2014 educational frames only",
+    "Drain integrity \u2014 no actual closure task performed"
+  ],
+  "technique_summary": "Expert-level instructional video by Dr. V. Chandramohan demonstrating proper needle-holding technique for laparoscopic intracorporeal suturing. Content focuses on foundational mechanics: two-instrument coordination, angle positioning (90-degree angle emphasized), needle grasping positions, and wrist rotation techniques for needle trajectory control.",
+  "strengths": [
+    "Clear visual demonstration of 90-degree angle requirement for needle entry",
+    "Multiple holding techniques shown (Maryland grasp, rotation method, tip-hold position)",
+    "Explicit verbal cues overlaid on video frames",
+    "Foam model provides clear visualization of needle-tissue relationship",
+    "Demonstrates common methods with comparative approach"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Needle grasping at 2/3 point using needle driver",
+      "90-degree angle positioning relative to tissue surface",
+      "Two-hand instrument coordination for needle control",
+      "Wrist rotation mechanics for needle trajectory",
+      "Needle tip-hold position for optimal control",
+      "Pressure application technique during needle manipulation",
+      "Alternative rotation method for needle positioning",
+      "Verification of needle position during manipulation"
+    ],
+    "verbal_cues": [
+      "Hold the needle at the tip",
+      "The angle between the surface",
+      "You can check the needle position",
+      "To rotate the needle like this",
+      "Pressing it",
+      "The other method is rotation",
+      "Here am showing common methods"
+    ],
+    "common_errors_addressed": [
+      "Improper needle angle (demonstrated correct 90-degree angle)",
+      "Inadequate two-hand coordination (shown proper bilateral instrument use)",
+      "Incorrect needle grasping position (demonstrated multiple proper techniques)",
+      "Excessive or insufficient pressure on needle (demonstrated proper pressure application)"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "note": "This video is INSTRUCTIONAL content (narrated educational tutorial) and is NOT a performance video. Scoring is not applicable. Content has been extracted for teaching reference only.",
+  "video_id": "zcxXUhK17dc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:15:35.796633+00:00"
+}

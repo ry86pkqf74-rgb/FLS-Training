@@ -1,0 +1,59 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Academic Research Presentation - Non-invasive Brain Imaging of Laparoscopic Motor Skills Learning",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_introduction",
+      "description": "Title slide showing 'Non-invasive brain imaging of laparoscopic motor skills learning' by Arun Nemani, PhD",
+      "technique_notes": "Academic presentation at SAGES 2017 conference",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "fls_overview",
+      "description": "Introduction to FLS as validated testing platform showing images of all 5 FLS tasks",
+      "technique_notes": "Visual overview of peg transfer, pattern cutting, endoloop, extracorporeal suture, and intracorporeal suture tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "methodology_discussion",
+      "description": "Discussion of current FLS metrics limitations and challenges",
+      "technique_notes": "Highlights poor interrater reliability and focus on speed over accuracy",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Introduction to FLS as standardized assessment platform",
+      "Overview of all 5 FLS tasks with visual examples",
+      "Discussion of NIRS brain imaging for objective skill assessment",
+      "Experimental setup using pattern cutting task with novices and experts",
+      "Brain activation mapping showing differences between skill levels"
+    ],
+    "verbal_cues": [
+      "FLS is required for board certification",
+      "See one, do one, teach one is not ideal for motor skills training",
+      "Current metrics have poor interrater reliability",
+      "NIRS can objectively differentiate surgical motor skills in real time"
+    ],
+    "common_errors_addressed": [
+      "Over-reliance on time-based metrics that may sacrifice accuracy",
+      "Lack of objective assessment methods for surgical skill evaluation",
+      "Need for real-time feedback during skill acquisition"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an academic research presentation about brain imaging during FLS tasks, not an actual FLS performance to be scored. Content is educational/instructional in nature.",
+  "technique_summary": "Academic research presentation discussing use of near-infrared spectroscopy (NIRS) to objectively assess laparoscopic motor skill acquisition through brain imaging during FLS pattern cutting tasks.",
+  "video_id": "XFUfUZzB0PQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:33:31.214199+00:00"
+}

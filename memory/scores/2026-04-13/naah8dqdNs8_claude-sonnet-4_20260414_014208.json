@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen - video beginning",
+      "technique_notes": "No content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Text overlay about Bilateral Tubal Ligation (BTL) procedure definition",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "not_applicable",
+      "description": "Mr. Simon Narh (General Manager) speaking in office setting",
+      "technique_notes": "Interview/educational format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "not_applicable",
+      "description": "Operating room scene with surgeons performing laparoscopic procedure",
+      "technique_notes": "Clinical demonstration of laparoscopic technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "not_applicable",
+      "description": "Surgeon holding laparoscopic instrument demonstrating proper grip",
+      "technique_notes": "Educational demonstration of instrument handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "not_applicable",
+      "description": "Close-up view of laparoscopic trainer box with red foam visible",
+      "technique_notes": "Training equipment demonstration",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear video content showing educational/instructional material about laparoscopic procedures and BTL. No actual FLS task performance to score.",
+  "cannot_determine": [
+    "Task performance metrics - this is educational content, not a performance video"
+  ],
+  "technique_summary": "Educational video about laparoscopic procedures and training equipment, not an FLS task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper laparoscopic instrument grip and handling",
+      "laparoscopic surgical positioning",
+      "training box setup and orientation"
+    ],
+    "verbal_cues": [
+      "explanation of BTL procedure purpose and technique"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "naah8dqdNs8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:42:08.489267+00:00"
+}

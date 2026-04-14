@@ -1,0 +1,42 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Trainer Box Setup and Assembly Guide",
+  "cannot_score": true,
+  "reason": "Video is an instructional tutorial showing equipment setup and assembly, not a performance of an FLS task. Contains narrated step-by-step guides ('Step 1: Unbox and Prepare All Components', 'Step 2: Puncture the Abdomen with the Trocars', etc.) with no actual task execution or trainee performance.",
+  "video_content_summary": "This is a product/equipment instructional video demonstrating assembly and initialization of a laparoscopic surgery trainer box. The video covers: component unboxing, LED light connection, trocar puncture demonstration, endoscope insertion, surgical instrument insertion, module placement inside trainer box, camera software setup, and final readiness confirmation. No FLS task (Peg Transfer, Pattern Cut, Endoloop, or Suture tasks) is being performed or timed.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper trocar puncture technique on simulated abdomen",
+      "Endoscope insertion through dilator",
+      "Surgical instrument insertion through dilators",
+      "Equipment assembly and cable management",
+      "Camera system initialization and software launch"
+    ],
+    "verbal_cues": [
+      "Step 1: Unbox and Prepare All Components",
+      "Connect and Adjust the LED Light",
+      "Step 2: Puncture the Abdomen with the Trocars",
+      "Step 3: Insert the Endoscope Through the Dilator",
+      "Connect USB to Computer and Launch Camera Software",
+      "Search for 'Camera' in the Taskbar",
+      "Launch the Camera Software",
+      "Step 4: Insert Surgical Instruments Through the Dilator",
+      "Step 5: Place and Secure the Modules Inside the Box",
+      "Step 6: Begin Practical Training with Guidance from the Screen",
+      "Your Trainer Box Is Set Up and Ready for Practice"
+    ],
+    "common_errors_addressed": [
+      "Improper trocar insertion angle (demonstrated with correct perpendicular approach)",
+      "Cable management to avoid interference with training workspace",
+      "Proper module positioning within the trainer enclosure"
+    ],
+    "skill_level_demonstrated": "instructional/novice"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Classification is certain\u2014video explicitly contains titled instructional steps with text overlays and demonstration of equipment setup rather than timed task performance.",
+  "video_id": "wI8Voy8kCno",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:06:38.182330+00:00"
+}

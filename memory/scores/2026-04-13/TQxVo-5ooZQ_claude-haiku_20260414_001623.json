@@ -1,0 +1,144 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "LAP Mentor Team Training - Catharina Hospital Surgical Skills Lab",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro_title",
+      "description": "Title slide: 'LAP Mentor Team Training' and 'Catharina Hospital Surgical Skills Lab'",
+      "technique_notes": "Instructional content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "team_training_setup",
+      "description": "Three trainees in surgical attire (blue gowns, purple caps, gloves) demonstrating laparoscopic simulator setup. Trainees holding laparoscopic instruments over a green drape training platform.",
+      "technique_notes": "Team-based training environment; multiple participants observing and practicing simultaneously. Text overlay: 'TEAM TRAINING SETUP PROVIDES HIGH FIDELITY TECHNICAL PRACTICE FOR ALL PARTICIPANTS IN THE PROCEDURE'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "simulator_operation",
+      "description": "Close-up of trainee manipulating laparoscopic instruments at simulator workstation. Monitor displays endoscopic view of internal training task (appears to be suture/knot-tying task with tissue model visible).",
+      "technique_notes": "Integrated video monitoring system (Simbionix platform). Trainee demonstrating instrument handling technique with focus on hand positioning and coordination.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 20.0,
+      "phase": "video_feedback_system",
+      "description": "Monitor display showing real-time endoscopic view of surgical task. Trainee observing performance feedback on screen. Text overlay: 'REINFORCEMENT OF NON-TECHNICAL SKILLS'",
+      "technique_notes": "Real-time video feedback integrated into training. Demonstrates monitoring and assessment component of team training.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 28.0,
+      "phase": "communication_coordination",
+      "description": "Multiple trainees at workstation with instructor monitoring endoscopic display. Text overlay: 'ENHANCING COMMUNICATION SKILLS, OPTIMIZING COORDINATION AND COOPERATION WITHIN THE TEAM'",
+      "technique_notes": "Team-based learning environment emphasizing non-technical skills: communication, situational awareness, coordination.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 35.0,
+      "phase": "task_monitoring",
+      "description": "Trainee performing laparoscopic task with real-time endoscopic view on monitor. Demonstrates surgeon's perspective during simulated procedure.",
+      "technique_notes": "High-fidelity simulation providing realistic visual feedback and task complexity.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 42.0,
+      "phase": "digital_tool_selection",
+      "description": "Scrub nurse simulation: hand holding tablet device displaying Simbionix software interface with tool selection menu (showing instrument options like graspers, scissors, electrosurgical tools).",
+      "technique_notes": "Text overlay: 'SCRUB NURSE MAY VIRTUALLY SELECT THE TOOLS AND PRACTICE ANTICIPATION OF SURGEON'S NEEDS'. Demonstrates scrub nurse role in team training.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 50.0,
+      "phase": "role_assignment",
+      "description": "Monitor showing endoscopic view with active surgical task. Text overlay: 'MASTER THE ROLES AND RESPONSIBILITIES OF THE MAIN SURGEON'",
+      "technique_notes": "Reinforces role-specific training and surgical decision-making in multi-person team scenarios.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 58.0,
+      "phase": "decision_making_training",
+      "description": "Trainee performing laparoscopic task with real-time monitoring. Tool visible (appears to be electrosurgical or cutting instrument). Text overlay: 'IMPROVING DECISION-MAKING IN BOTH ROUTINE AND EMERGENCY SITUATIONS'",
+      "technique_notes": "Demonstrates scenario-based training approach for both standard and crisis management.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 65.0,
+      "phase": "performance_monitoring",
+      "description": "Trainee at simulator with endoscopic display on monitor showing active task performance. Real-time feedback system active.",
+      "technique_notes": "Integrated performance assessment and feedback mechanism.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 75.0,
+      "phase": "contact_information",
+      "description": "Final slide: 'Contact Us' with email 'info@surgicalscience.com'",
+      "technique_notes": "Conclusion and contact slide for training program information.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video is clearly instructional/educational content with narrated overlays, title slides, and multiple teaching sequences. It documents a team training program at Catharina Hospital using Simbionix LAP Mentor simulator. No individual FLS task performance is being scored; instead, the video demonstrates team-based surgical training concepts, role distribution, non-technical skills development, and integrated feedback systems.",
+  "cannot_determine": [
+    "Specific FLS task being trained (appears to involve suturing/knot-tying based on endoscopic views, but no single task is isolated)",
+    "Individual trainee completion times or performance metrics",
+    "Specific technical penalties for any trainee"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Team-based laparoscopic training setup with multiple simultaneous participants",
+      "Real-time endoscopic feedback integration for performance monitoring",
+      "Role-specific simulation (surgeon, scrub nurse positions)",
+      "Laparoscopic instrument handling and coordination",
+      "Virtual tool selection and anticipatory decision-making"
+    ],
+    "verbal_cues": [
+      "Team training provides high fidelity technical practice for all participants",
+      "Reinforcement of non-technical skills",
+      "Enhancing communication skills, optimizing coordination and cooperation within the team",
+      "Master the roles and responsibilities of the main surgeon",
+      "Improving decision-making in both routine and emergency situations",
+      "Scrub nurse may virtually select tools and practice anticipation of surgeon's needs"
+    ],
+    "common_errors_addressed": [
+      "Lack of team communication and coordination",
+      "Poor anticipation of surgical needs by support staff",
+      "Inadequate role clarity in team-based procedures",
+      "Difficulty transitioning between routine and emergency scenarios"
+    ],
+    "skill_level_demonstrated": "intermediate"
+  },
+  "video_type_summary": "This is an educational/promotional video documenting a LAP Mentor team training program. It is NOT a recording of an individual trainee attempting an FLS task for scoring. Instead, it showcases: (1) team-based surgical training methodology, (2) integration of technical and non-technical skills, (3) role simulation for surgical teams, and (4) real-time performance feedback systems. The video is designed for training program promotion and education about best practices in laparoscopic surgery team training.",
+  "note": "NO FLS SCORE COMPUTED - This is instructional content, not a performance attempt. Return to user for clarification if a specific trainee performance video is intended for FLS scoring.",
+  "video_id": "TQxVo-5ooZQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:16:23.112793+00:00"
+}

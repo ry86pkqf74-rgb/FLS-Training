@@ -1,0 +1,40 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Urologic Training Simulations (Non-FLS)",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Stone extraction using grasping forceps",
+      "Intracorporeal lithotripsy simulation",
+      "Ureteral navigation and manipulation",
+      "Loop snare placement for stone retrieval",
+      "Endoscopic cutting techniques on foam models",
+      "Simulated balloon model for practice scenarios",
+      "Anatomical model setup for urologic procedures"
+    ],
+    "verbal_cues": [
+      "Practical Simulations to Prepare Trainees for Laparoscopic Urologic Surgeries",
+      "Stone inside",
+      "Bladder neck",
+      "Ureter",
+      "I failed several times and ruptured the inner balloon!"
+    ],
+    "common_errors_addressed": [
+      "Balloon rupture during manipulation",
+      "Excessive force during stone extraction",
+      "Improper instrument angulation in confined spaces"
+    ],
+    "skill_level_demonstrated": "intermediate"
+  },
+  "cannot_determine": [
+    "This video demonstrates urologic training simulations, not standard FLS tasks",
+    "Multiple different training scenarios shown rather than a single scoreable task",
+    "Educational overlay text indicates instructional content rather than performance assessment"
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional title overlay, multiple different simulation setups shown, educational annotations visible throughout. This is definitively teaching content for urologic procedures, not a standard FLS task performance that can be scored using FLS rubrics.",
+  "video_id": "cySFEN6yq6Y",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:00:02.806690+00:00"
+}

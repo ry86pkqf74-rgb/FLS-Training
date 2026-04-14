@@ -1,0 +1,128 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "Black screen with no visible content",
+      "technique_notes": "Video opening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "instructional_content",
+      "description": "Chapter title screen showing 'Preparation' with illustrated instruments on blue tray",
+      "technique_notes": "Educational content showing FLS equipment setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "instructional_content",
+      "description": "Chapter 1: Preparation title screen",
+      "technique_notes": "Instructional chapter division",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "instructional_content",
+      "description": "Medical team consultation illustration",
+      "technique_notes": "Educational context showing healthcare professionals",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "instructional_content",
+      "description": "Anatomical illustration showing patient positioning and speculum placement",
+      "technique_notes": "Educational anatomy demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_content",
+      "description": "Cross-sectional anatomical view with speculum and internal structures visible",
+      "technique_notes": "Detailed anatomical education showing reproductive anatomy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "instructional_content",
+      "description": "Laparoscopic view of abdominal anatomy with instrument approaching",
+      "technique_notes": "Minimally invasive surgical approach demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "instructional_content",
+      "description": "Anatomical cross-section showing trocar placement through abdominal layers",
+      "technique_notes": "Educational demonstration of port placement technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "instructional_content",
+      "description": "Detailed cross-sectional anatomy showing skin, fat, fascia, rectus abdominis, and peritoneum layers",
+      "technique_notes": "Comprehensive anatomical education for surgical approach",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "target_appendage": "not_applicable",
+      "mark_alignment": "not_applicable",
+      "knot_security": "not_applicable"
+    },
+    "pusher_assessment": {
+      "break_location": "not_applicable",
+      "advancement_technique": "not_applicable"
+    },
+    "completion_status": {
+      "tail_cut_completed": "not_applicable",
+      "final_security": "not_applicable"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": "not_applicable",
+    "total_penalties": "not_applicable",
+    "total_fls_score": "not_scored",
+    "formula_applied": "instructional_content_not_scored"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional content with anatomical diagrams and educational illustrations. No actual FLS task performance to score.",
+  "cannot_determine": [
+    "This is educational/anatomical content, not an FLS endoloop task performance"
+  ],
+  "technique_summary": "Educational video content showing anatomical preparation and surgical approach concepts, not actual FLS task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "patient positioning for laparoscopic access",
+      "speculum placement technique",
+      "trocar insertion through abdominal wall layers",
+      "anatomical layer identification for safe port placement"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "w-h9eFyNyNM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:04:49.143152+00:00"
+}

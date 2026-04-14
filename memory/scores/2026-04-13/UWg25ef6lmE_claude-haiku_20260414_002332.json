@@ -1,0 +1,33 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Unknown/Not Determinable",
+  "reason_for_classification": "The video sequence shows only equipment setup, trainer demonstration photography, cable connections, and monitor displays of an anatomical pelvic trainer model. No actual FLS task performance is visible. Frames 1-8 show the laparoscopic simulator trainer itself from external angles. Frames 9-16 show close-ups of equipment connections (cables, power ports). Frames 17-20 show the monitor displaying the internal pelvic anatomy model, and final frames show the trainer case/packaging. There are no instruments visible performing any of the five FLS tasks (peg transfer, pattern cut, endoloop, extracorporeal suture, or intracorporeal suture).",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "description": "External view of laparoscopic simulator trainer with HD camera and LED light source, powered on, internal pelvic anatomy visible on monitor"
+    },
+    {
+      "frame_number": 9,
+      "description": "Close-up of trainer showing grasping instrument in hand, manipulating blue port mechanism"
+    },
+    {
+      "frame_number": 13,
+      "description": "Equipment connections: blue and black cables attached to trainer, power connector visible"
+    },
+    {
+      "frame_number": 17,
+      "description": "Monitor display showing internal pelvic anatomy model in red/orange hue with anatomical structures"
+    },
+    {
+      "frame_number": 21,
+      "description": "Product packaging/documentation visible, trainer branding"
+    }
+  ],
+  "conclusion": "This is equipment documentation or setup photography, not an FLS task performance. No scoring possible. To receive a valid FLS score, submit video of actual task execution showing instrument movement, task material manipulation, and completion criteria.",
+  "video_id": "UWg25ef6lmE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:23:32.446446+00:00"
+}

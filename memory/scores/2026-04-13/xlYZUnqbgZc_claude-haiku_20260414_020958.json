@@ -1,0 +1,201 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Initial view of FLS trainer with two blue marks on foam surface indicating target peg positions. Both instruments visible at edges of field.",
+      "technique_notes": "Trainer positioned on table under proper lighting. Setup is clean and organized.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.8,
+      "phase": "pickup_nondominant",
+      "description": "Right-hand needle driver beginning to approach first peg. Left instrument (grasper) is visible on left side of field.",
+      "technique_notes": "Smooth approach vector toward peg. Instrument entry angle appears perpendicular.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 7.6,
+      "phase": "pickup_nondominant",
+      "description": "Right instrument grasping foam peg. Grasp appears firm at approximately mid-length of peg.",
+      "technique_notes": "Good grasp position. Minimal tremor.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 11.5,
+      "phase": "transfer_midair",
+      "description": "Right instrument lifting peg upward in smooth motion. Left instrument positioned to receive.",
+      "technique_notes": "Controlled lift with no jerking. Peg remains stable in grasp.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 15.3,
+      "phase": "transfer_midair",
+      "description": "Peg transferred to midline between instruments. Both instruments visible and coordinated.",
+      "technique_notes": "Smooth handoff motion. Left instrument ready to receive.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 19.1,
+      "phase": "place_dominant",
+      "description": "Left instrument placing peg onto second peg location. Placement appears centered on target.",
+      "technique_notes": "Controlled descent. Peg seated cleanly on target peg.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 23.0,
+      "phase": "reverse_pickup",
+      "description": "Left instrument approaching placed peg to pick it up again for reverse transfer.",
+      "technique_notes": "Clean repositioning. Good workspace management.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 26.8,
+      "phase": "reverse_transfer",
+      "description": "Peg lifted and transferred back toward right instrument in reverse motion.",
+      "technique_notes": "Mirror technique of initial transfer. Smooth coordination.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 30.5,
+      "phase": "reverse_place",
+      "description": "Right instrument placing peg back at original location.",
+      "technique_notes": "Precise placement. Peg returned to starting position.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 34.3,
+      "phase": "completion",
+      "description": "Both instruments withdrawn from field. Single peg visible on two pegs. Task appears complete.",
+      "technique_notes": "Clean withdrawal. No damage to equipment or trainer visible.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 34.3,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0.0,
+      "end_seconds": 7.6,
+      "duration_seconds": 7.6,
+      "benchmark_comparison": "expert (expert range 40-60s total for all 6 pegs; this single peg pickup is proportionally fast)"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 7.6,
+      "end_seconds": 15.3,
+      "duration_seconds": 7.7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 15.3,
+      "end_seconds": 19.1,
+      "duration_seconds": 3.8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 19.1,
+      "end_seconds": 23.0,
+      "duration_seconds": 3.9,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 23.0,
+      "end_seconds": 26.8,
+      "duration_seconds": 3.8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 26.8,
+      "end_seconds": 34.3,
+      "duration_seconds": 7.5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "incomplete_task",
+      "description": "Only 1 peg transferred. Task requires 6 pegs to be transferred. Video shows demonstration of technique on single peg only.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        1,
+        10
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "task_specific_assessments": {
+    "peg_count_transferred": 1,
+    "pegs_required": 6,
+    "task_completion_status": "incomplete_single_cycle_demonstrated",
+    "drops_observed": 0,
+    "placement_accuracy": "centered on peg"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 34.3,
+    "total_penalties": 0.0,
+    "cannot_score_reason": "Task incomplete \u2014 only single peg cycle demonstrated. Expert demo shows proper technique for one transfer cycle. Full task requires 6 pegs (3 transfers each direction). Score cannot be calculated for incomplete task.",
+    "extrapolated_full_task_time_estimate": "~206 seconds (34.3 \u00d7 6 pegs) \u2192 estimated score ~94 if extrapolated"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows laparoscopic trainer and FLS peg transfer task in excellent lighting. Camera angle is direct overhead. All phases of single peg transfer are visible and well-documented. Completion time is clearly readable from timestamp. Single limitation: task is incomplete (only 1 of 6 pegs shown), so cannot generate official FLS score.",
+  "cannot_determine": [
+    "Full 6-peg performance \u2014 only 1 cycle demonstrated",
+    "Whether trainee can maintain this expert pace across all 6 pegs",
+    "Official FLS score for incomplete task"
+  ],
+  "technique_summary": "Expert-level demonstration of single peg transfer cycle. Excellent instrument control, smooth coordination, minimal wasted motion, and precise placement. Technique is clean and efficient. This appears to be an instructional demonstration of proper peg transfer methodology.",
+  "strengths": [
+    "Smooth, controlled instrument manipulation throughout",
+    "Excellent hand-eye coordination and workspace awareness",
+    "Efficient transfer sequence with no dropped objects",
+    "Precise peg placement centered on target",
+    "Minimal tremor and steady grasp",
+    "Clean instrument entry and withdrawal angles"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper needle driver grasp position on foam peg (mid-length)",
+      "Controlled perpendicular peg pickup",
+      "Smooth midair transfer coordination between right and left instruments",
+      "Centered placement of peg on target location",
+      "Symmetric reverse transfer technique",
+      "Clean instrument withdrawal without trailing"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Avoiding tremor through steady grip",
+      "Preventing peg drops by maintaining firm grasp during transfer",
+      "Achieving precise placement by controlling descent angle",
+      "Maintaining symmetry in reverse motion"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "N/A \u2014 Expert-level technique. This is a demonstration video."
+  ],
+  "notes": "This video is classified as an expert demonstration. It shows a single peg transfer cycle as a teaching example from the 'dry Lab. LHTI' program at the Iraq Baghdad facility (Master Trainer Prof. Haider Ali). The complete FLS peg transfer task requires 6 pegs to be transferred with the non-dominant hand, then reversed. This demo captures only the first cycle. If full task were completed at this tempo, estimated time would be ~206 seconds (score ~94), demonstrating expert-level proficiency.",
+  "video_id": "xlYZUnqbgZc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:09:58.408079+00:00"
+}

@@ -1,0 +1,63 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "N/A - Educational Content Only",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "SAGES FLS educational branding and introduction materials",
+      "technique_notes": "Educational content, not a performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "lecture_content",
+      "description": "FES (Fundamentals of Endoscopic Surgery) title slide by Dr. Brian Dunkin",
+      "technique_notes": "Lecture presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "lecture_content",
+      "description": "Transparency slide introducing presentation topics",
+      "technique_notes": "Standard academic presentation format",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - No FLS task performance to score"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly educational/instructional content about FLS program development and validation, not a task performance video.",
+  "cannot_determine": [],
+  "technique_summary": "N/A - This is educational content about FLS program history and validation, not a task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "FLS program development timeline from 2006-2010",
+      "Validation methodology with test subject numbers",
+      "GAGES clinical assessment tool introduction"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational"
+  },
+  "improvement_suggestions": [],
+  "video_id": "VTelZzKuBiQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:26:19.685084+00:00"
+}

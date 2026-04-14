@@ -1,0 +1,134 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "classification_rationale": "This video is a medical case presentation/grand rounds lecture, not an FLS (Fundamentals of Laparoscopic Surgery) task performance. The content shows: (1) An auditorium setting with multiple attendees and a presenter at a podium; (2) Slide-based presentation with patient history, imaging (CT scans), and clinical case discussion; (3) Medical decision-making narrative about a urology patient with complications; (4) No laparoscopic surgical skill task performance (peg transfer, suturing, knot tying, pattern cutting, or endoloop deployment); (5) Presenter narration discussing diagnostic and clinical reasoning, not surgical technique instruction.",
+  "scoring_applicable": false,
+  "score": "N/A",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0,
+      "content": "Auditorium with presenter at podium and audience seated; TV monitor visible"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10,
+      "content": "Slide showing 'D.R.' patient history with HPI: colorectal cancer s/p APR, chemotherapy, ureteral stents"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20,
+      "content": "Slide showing family history and social history details"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30,
+      "content": "Clinical case question slide: 78-year-old male with colon cancer, presents with bleeding from GU tract"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 40,
+      "content": "CT imaging of abdomen displayed on screen"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50,
+      "content": "Fluoroscopic imaging showing ureter with stent"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 60,
+      "content": "Presenter visible at podium discussing case"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 70,
+      "content": "Endoscopic imaging displayed showing ureter visualization"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 80,
+      "content": "Another endoscopic imaging frame with similar ureter view"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 90,
+      "content": "Slide showing 'Months Later' outcome: patient displeased with nephrostomy tube, attempted accommodation, antegrade stent placed"
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 100,
+      "content": "Presenter continuing presentation at podium"
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 110,
+      "content": "Additional CT imaging showing abdominal anatomy"
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 120,
+      "content": "Slide with case presentation text: 'My first day as a urology resident' scenario with bleeding and Foley bag findings"
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 130,
+      "content": "Follow-up case slide: 30-year-old male with ureteroarterial fistula post-endovascular stenting"
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 140,
+      "content": "Endoscopic/radiographic imaging of vascular structure"
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 150,
+      "content": "Presenter at podium with audience visible"
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 160,
+      "content": "Endoscopic imaging showing vascular anatomy with guidewire"
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 170,
+      "content": "Slide listing operative findings: right lower extremity embolectomy, femoral-femoral bypass, CFA ligation, etc."
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 180,
+      "content": "Presenter continuing lecture at podium with seated audience"
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 190,
+      "content": "Slide showing case course: developed cold, pulseless leg on PPD3, occlusive embolus from distal right SFA"
+    }
+  ],
+  "content_type": "medical_education_case_presentation",
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "case_topics_covered": [
+      "Ureteral stent complications post-colorectal cancer surgery",
+      "Ureteroarterial fistula diagnosis and management",
+      "Endovascular stenting complications",
+      "Nephrostomy tube placement decisions",
+      "Vascular injury recognition and operative management"
+    ],
+    "verbal_cues": [
+      "Patient case history presentation with imaging review",
+      "Clinical decision-making narrative",
+      "Complications discussion and management planning"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "educational_value": "Case-based learning focused on urology complications and clinical reasoning; not laparoscopic surgical skills training"
+  },
+  "conclusion": "This video does not contain an FLS task performance and therefore cannot be scored using FLS rubrics. It is an educational presentation suitable for case-based learning but falls outside the scope of Fundamentals of Laparoscopic Surgery assessment.",
+  "video_id": "_eU7p6eoE0s",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:45:09.772658+00:00"
+}

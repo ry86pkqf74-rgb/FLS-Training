@@ -1,0 +1,150 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Basic Laparoscopic Surgery: Instrument Handling and Core Skills",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_screen",
+      "description": "Title screen showing 'Basic Laparoscopic Surgery: Instrument Handling and Core Skills' by Incision",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instrument_overview",
+      "description": "Display of various laparoscopic instruments laid out on white surface",
+      "technique_notes": "Shows different types of graspers, scissors, and other laparoscopic tools",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "instrument_overview",
+      "description": "Close-up view of five different laparoscopic graspers with different tip designs",
+      "technique_notes": "Demonstrates variety of grasping instruments available",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "instructor_introduction",
+      "description": "Surgeon in purple scrubs standing in operating room environment",
+      "technique_notes": "Professional setting with laparoscopic equipment visible in background",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "grip_demonstration",
+      "description": "Hands demonstrating proper grip on fenestrated traumatic grasping forceps",
+      "technique_notes": "Shows ergonomic hand positioning and finger placement on instrument handles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "grip_demonstration",
+      "description": "Text overlay identifies 'Fenestrated Traumatic Grasping Forceps' while demonstrating grip",
+      "technique_notes": "Educational overlay providing instrument identification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "instrument_handling",
+      "description": "Demonstration of proper instrument handling technique with bilateral hand coordination",
+      "technique_notes": "Shows controlled movements and proper ergonomics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "trainer_setup",
+      "description": "View of laparoscopic trainer box setup with camera view on monitor",
+      "technique_notes": "Shows proper training environment setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "real_surgery",
+      "description": "Actual laparoscopic surgery footage showing intraabdominal view",
+      "technique_notes": "Demonstrates real surgical application of techniques",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "triangulation_concept",
+      "description": "Anatomical cross-section showing laparoscopic port placement and triangulation principle",
+      "technique_notes": "Educational diagram explaining spatial relationships in laparoscopy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "triangulation_angles",
+      "description": "Diagram showing horizontal axis and elevation angles for instrument positioning",
+      "technique_notes": "Technical illustration of optimal instrument angles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "angle_demonstration",
+      "description": "3D visualization of elevation angle concept with instruments converging on target",
+      "technique_notes": "Shows proper geometric principles for laparoscopic technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60.0,
+      "phase": "trainer_view",
+      "description": "Top-down view of laparoscopic trainer showing instrument ports and working area",
+      "technique_notes": "Practical demonstration of triangulation in training environment",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video with professional production, educational overlays, and systematic teaching progression. Not a performance to be scored.",
+  "cannot_determine": [],
+  "technique_summary": "Comprehensive instructional video covering fundamental laparoscopic skills including instrument identification, proper grip techniques, triangulation principles, and spatial awareness concepts.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper ergonomic grip on laparoscopic instruments",
+      "fenestrated traumatic grasping forceps identification and use",
+      "bilateral hand coordination for laparoscopic manipulation",
+      "triangulation principle for optimal instrument positioning",
+      "elevation angle concepts for spatial awareness",
+      "laparoscopic trainer setup and use"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "improper instrument grip leading to fatigue",
+      "poor triangulation causing inefficient movements",
+      "inadequate spatial awareness in laparoscopic environment"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "xxVmD6zx2Gg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:11:32.595420+00:00"
+}

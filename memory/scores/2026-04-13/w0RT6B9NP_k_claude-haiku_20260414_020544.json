@@ -1,0 +1,174 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "LAPARO Medical Simulators - Product Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Black screen, video beginning",
+      "technique_notes": "N/A",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.5,
+      "phase": "equipment_overview",
+      "description": "LAPARO trainer dome displayed with control dome, LED lights visible, white plastic housing",
+      "technique_notes": "Product showcase of ergonomic box design",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_overview",
+      "description": "Side view of LAPARO trainer showing internal task setup with Penrose drain visible on screen",
+      "technique_notes": "Shows internal task area and monitor display integration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "institutional_context",
+      "description": "Organizational diagram showing HOSPITALS, MEDICAL UNIVERSITIES, MEDICAL SIMULATION CENTERS, LAPAROSCOPIC WORKSHOP ORGANIZERS as target users",
+      "technique_notes": "Marketing/institutional positioning slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "equipment_demo",
+      "description": "Trainee in white coat positioned at ergonomic box with monitor display",
+      "technique_notes": "Shows proper user positioning and workstation ergonomics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "technical_specs",
+      "description": "Monitor display showing 30-degree full HD camera and LED lighting annotations",
+      "technique_notes": "Technical specifications: 30-degree camera angle, LED illumination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "equipment_operation",
+      "description": "Operator at monitor showing intracorporeal suture task on screen with 5mm and 10mm inserts labeled",
+      "technique_notes": "Demonstration of laparoscopic view with adjustable instrument sizes",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 22.0,
+      "phase": "task_demonstration",
+      "description": "Close-up of endoloop/ligating loop task - foam appendage with ligating loop visible on monitor",
+      "technique_notes": "Showing endoloop task setup and laparoscopic visualization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 25.0,
+      "phase": "software_interface",
+      "description": "Touchscreen C interface shown with menu overlay on task display",
+      "technique_notes": "Shows integrated touchscreen control for task parameters and software",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 28.0,
+      "phase": "software_features",
+      "description": "LAPARO software visualization showing task execution on screen with hand gesture interaction",
+      "technique_notes": "Demonstrates software capability and real-time task visualization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 32.0,
+      "phase": "configuration_options",
+      "description": "Portable box configuration shown with monitor and control interface",
+      "technique_notes": "Demonstrates transportable setup and standalone training capability",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 36.0,
+      "phase": "deployment_scenarios",
+      "description": "Multiple LAPARO trainer setups showing portable workshop set and integrated training station",
+      "technique_notes": "Shows scalable deployment from single-unit to multi-station integrated training environments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 40.0,
+      "phase": "benefits_messaging",
+      "description": "Slide highlighting 'WELL TRAINED' with monitor showing task completion",
+      "technique_notes": "Marketing message: training outcomes and staff competency",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 43.0,
+      "phase": "benefits_messaging",
+      "description": "Slide showing benefits: WELL TRAINED STAFF, PATIENT SAFETY IMPROVEMENT, PROFESSIONAL HOSPITAL ENVIRONMENT FOR DOCTORS",
+      "technique_notes": "Value proposition highlighting clinical and institutional benefits",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 46.0,
+      "phase": "closing",
+      "description": "LAPARO Medical Simulators logo and branding",
+      "technique_notes": "Company branding and product identity",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 48.0,
+      "phase": "contact",
+      "description": "Company website displayed: 'WE OPERATE WORLDWIDE' with www.laparo.pl",
+      "technique_notes": "Contact and distribution information",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A \u2014 instructional video only"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video is classified as instructional content. It is a product overview and marketing demonstration for LAPARO Medical Simulators equipment. No FLS task performance is present \u2014 the content focuses on equipment specifications, deployment scenarios, software features, and institutional benefits. No trainee is performing an actual FLS task; instead, brief glimpses of tasks are shown as part of the equipment showcase.",
+  "cannot_determine": [
+    "No FLS task performance to score",
+    "No completion time measurable",
+    "No penalties applicable"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Equipment overview: LAPARO trainer dome with ergonomic box design",
+      "30-degree full HD camera integration with LED lighting",
+      "5mm and 10mm laparoscopic instrument size options",
+      "Touchscreen interface for parameter and software control",
+      "Multiple deployment configurations: standalone, portable, integrated training stations"
+    ],
+    "verbal_cues": [
+      "No audible narration detected in video \u2014 text overlays provide all instructional content"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "N/A \u2014 product demonstration, not skill performance"
+  },
+  "improvement_suggestions": [],
+  "notes": "This video is a promotional/product overview for LAPARO Medical Simulators and does not contain an actual FLS task performance to score. The video showcases equipment capabilities, deployment options, and institutional value propositions. Brief task glimpses (endoloop, suturing) are shown as examples of supported tasks but are not full performance evaluations.",
+  "video_id": "w0RT6B9NP_k",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:05:44.377492+00:00"
+}

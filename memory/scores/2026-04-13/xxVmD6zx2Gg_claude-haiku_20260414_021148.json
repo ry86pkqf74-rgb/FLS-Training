@@ -1,0 +1,146 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Fundamentals of Laparoscopic Surgery - Instructional Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide: 'BASIC LAPAROSCOPIC SURGERY: INSTRUMENT HANDLING AND CORE SKILLS' from Incision",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instrument_display",
+      "description": "Overview of laparoscopic instruments laid out on white surface, including graspers, scissors, and needle holders",
+      "technique_notes": "Equipment demonstration showing various FLS instrument types",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "instrument_detail",
+      "description": "Close-up of laparoscopic grasping forceps showing jaw configuration and handle design",
+      "technique_notes": "Detailed instrument anatomy demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 20.0,
+      "phase": "instructor_presentation",
+      "description": "Surgeon in scrubs standing in operating room environment with instruments on table, addressing audience",
+      "technique_notes": "Expert instructor introducing core skills concepts",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 28.0,
+      "phase": "instrument_handling_demo",
+      "description": "Close-up of hands holding fenestrated traumatic grasping forceps, demonstrating proper grip",
+      "technique_notes": "Shows correct hand positioning and instrument control technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 35.0,
+      "phase": "instrument_handling_demo_continued",
+      "description": "Demonstration of forceps manipulation technique with proper finger placement in ring handles",
+      "technique_notes": "Illustrates ergonomic grip and control mechanics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 45.0,
+      "phase": "task_transition",
+      "description": "Section marker transitioning to 'INSTRUMENT HANDLING' module with graphic",
+      "technique_notes": "Structured educational progression",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 55.0,
+      "phase": "endoloop_task_intro",
+      "description": "Laparoscopic endoloop ligating loop equipment and approach setup shown inside trainer box",
+      "technique_notes": "Introduction to Task 3: Endoloop deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 62.0,
+      "phase": "endoloop_live_demo",
+      "description": "Endoscopic view showing ligating loop deployment around foam appendage with proper positioning on marked line",
+      "technique_notes": "Expert demonstration of correct loop placement and cinching technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 70.0,
+      "phase": "endoloop_patient_footage",
+      "description": "Real surgical footage showing endoloop application in actual clinical setting",
+      "technique_notes": "Live case demonstration showing clinical application",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 85.0,
+      "phase": "anatomical_concept",
+      "description": "Anatomical illustration showing endoscopic perspective of appendiceal structures with endoloop target",
+      "technique_notes": "Educational anatomical reference for task context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 95.0,
+      "phase": "technical_diagram",
+      "description": "Geometric diagram showing 3D instrument positioning and angles for endoloop placement",
+      "technique_notes": "Technical illustration of proper approach angles and elevation geometry",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Instructional content, not scored"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is unambiguous: this is educational/instructional content with narration context, multiple task demonstrations (Endoloop Task 3 featured), anatomical illustrations, technical diagrams, and expert instructor presentation. No single trainee performance to score; content is curriculum material.",
+  "cannot_determine": [],
+  "technique_summary": "Comprehensive instructional video covering FLS fundamentals with focus on instrument handling and core laparoscopic skills. Features expert demonstrations, anatomical context, and technical guidance for proper technique.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper grip and ring handle positioning for laparoscopic forceps",
+      "Fenestrated traumatic grasping forceps handling",
+      "Endoloop deployment technique and placement precision",
+      "Correct loop cinching and appendage ligation",
+      "Instrument approach angles and elevation geometry",
+      "Three-dimensional spatial positioning in endoscopic surgery"
+    ],
+    "verbal_cues": [
+      "Expert surgeon addressing fundamentals of laparoscopic technique",
+      "Emphasis on proper instrument control and ergonomics"
+    ],
+    "common_errors_addressed": [
+      "Improper loop placement away from marked target line",
+      "Inadequate loop cinching leading to loose ligation",
+      "Poor instrument approach angles",
+      "Lack of precise spatial positioning"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_notes": "This is a professional educational module from Incision covering FLS fundamentals. Multiple task demonstrations are included, with Task 3 (Endoloop) being prominently featured. The content includes bench-top trainer demonstrations, live surgical footage, anatomical illustrations, and technical diagrams to reinforce proper technique. No individual trainee performance is being assessed.",
+  "video_id": "xxVmD6zx2Gg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:11:48.790498+00:00"
+}

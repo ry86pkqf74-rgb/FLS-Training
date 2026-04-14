@@ -1,0 +1,12 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "summary": "This video is promotional/educational content for the ALTO Programme (African Laparoscopic Training Online), an online laparoscopic surgery training initiative. The frames show program branding, institutional affiliations (South Shore Women's and Children's Hospital, NHS University Hospitals of North Midlands, Manchester University NHS Foundation Trust), curriculum overviews, and the ALTO Blade box trainer product. No actual FLS task performance is visible \u2014 no trainer box setup, no instruments in use, no timed task execution. The content consists of title slides, instructor introductions, curriculum listings, and equipment promotional material.",
+  "reason_not_scoreable": "Video contains only promotional/instructional slides and product demonstrations. No trainee or expert is performing any of the five official FLS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). There is no task timer, no instrument manipulation on the trainer, and no measurable performance data to assess against FLS rubrics.",
+  "confidence": 0.99,
+  "video_id": "cjRLCpjK52U",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:57:56.456616+00:00"
+}

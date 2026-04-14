@@ -1,0 +1,149 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0,
+      "phase": "setup_and_introduction",
+      "description": "Instructor in lab coat and surgical attire is shown; equipment laid out on table including FLS trainer box, needle drivers, scissors, knot pusher, Penrose drain on block, and suture materials",
+      "technique_notes": "Educational setting with explicit labeling of task (TASK-16) visible on printed materials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5,
+      "phase": "suture_introduction",
+      "description": "Hands grasping pink foam Penrose drain positioned on suture block; suture visible with white/translucent coloring; needle driver beginning to manipulate drain",
+      "technique_notes": "Drain is properly secured on block; two operators visible (instructor demonstration with trainee assistance or collaborative setup)",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 10,
+      "phase": "target_pass_preparation",
+      "description": "Penrose drain held firmly in left hand; right hand with needle driver positioned to approach marked targets on drain; suture line visible entering drain region",
+      "technique_notes": "Drain stabilization appears adequate; target marks on drain visible but resolution limits precise mark identification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18,
+      "phase": "first_target_pass",
+      "description": "Needle passing through first marked target on Penrose drain; suture thread visible running through drain tissue; entry point appears close to marked location",
+      "technique_notes": "Perpendicular needle entry angle observed; proper drive mechanics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 25,
+      "phase": "second_target_pass",
+      "description": "Suture needle completing passage through second marked target; both entry and exit points now visible on drain; suture thread completely threaded through both marks",
+      "technique_notes": "Distance between two passes appears consistent with task requirements; suture sits cleanly through drain",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 35,
+      "phase": "extracorporeal_knot_formation_throw1",
+      "description": "Hands manipulating suture extracorporeally outside the trainer; first throw being formed; suture ends controlled with both hands to create loop",
+      "technique_notes": "Clean loop formation visible; appropriate tension management; hand positioning demonstrates control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 50,
+      "phase": "knot_push_throw1",
+      "description": "Knot pusher instrument visible engaging the first throw and advancing it down toward drain; knot sliding smoothly along suture; drain remains stable",
+      "technique_notes": "Pusher technique appears smooth; knot advancing without catching or slipping",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 65,
+      "phase": "extracorporeal_knot_formation_throw2",
+      "description": "Second throw being formed outside trainer; suture ends manipulated to create second loop; rhythm and hand position consistent with throw 1",
+      "technique_notes": "Alternating hand lead apparent; controlled knot formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 80,
+      "phase": "knot_push_throw2",
+      "description": "Knot pusher advancing second throw down suture toward drain; two knot loops now visible on suture approaching the drain tissue",
+      "technique_notes": "Pusher control maintained; knot seating appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 95,
+      "phase": "extracorporeal_knot_formation_throw3",
+      "description": "Third throw being formed; suture ends again controlled to create final loop; drain begins to show signs of slit approximation as knots approach",
+      "technique_notes": "Final throw mechanics consistent with previous throws; appropriate tension observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 110,
+      "phase": "knot_push_throw3_and_final_tension",
+      "description": "Final knot pusher advancement; third throw advancing to drain; drain slit appears to close under knot tension; all three knots now seated against drain",
+      "technique_notes": "Final cinching visible; drain slit approximation achieved",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 125,
+      "phase": "suture_cut",
+      "description": "Endoscopic scissors positioned to cut suture ends; both suture tails cut cleanly inside trainer (evidenced by final frame showing completed knot on drain with tails removed)",
+      "technique_notes": "Clean scissor cuts; suture ends fully cut inside trainer as required",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "cannot_determine": [
+    "Exact completion time \u2014 video is instructional/educational demonstration with multiple pauses, narration/explanation implied by setup and instructor presence; does not show continuous real-time performance",
+    "Precise mm deviation at marks \u2014 camera angles are oblique and resolution insufficient to measure entry/exit points to 1mm accuracy",
+    "Whether tension test was performed \u2014 video ends after cutting without explicit final drain integrity check under tension shown"
+  ],
+  "video_classification_rationale": "This is an **instructional video**. Key indicators: (1) Instructor in full lab attire visible in opening frames, not performing; (2) Equipment is meticulously laid out and labeled with printed task cards and center branding visible; (3) Multiple camera angles and still-frame composition suggest educational documentation rather than real-time exam/proficiency testing; (4) Deliberate pacing and frame transitions suggest narration or educational structure; (5) No timer or clock visible; (6) Collaborative hand positioning (two operators visible in many frames) indicates teaching demonstration rather than solo performance evaluation. **Per rubric rules, instructional videos are NOT scored**; teaching content is extracted instead.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper drain stabilization on suture block using non-dominant hand",
+      "Perpendicular needle entry angle for both target passes",
+      "Controlled suture threading through marked targets with clean path",
+      "Extracorporeal knot formation using proper hand mechanics \u2014 loop creation with tension control",
+      "Knot pusher technique: smooth advancement along suture without catching or bunching",
+      "Sequential three-throw knot tying with consistent hand position and tension",
+      "Final cinching of knot against drain to achieve slit closure",
+      "Complete suture tail removal by cutting inside trainer after knot is secure"
+    ],
+    "verbal_cues": [
+      "Task label clearly visible: 'TASK - 16' with center branding 'TVR LAPAROSCOPY CENTER'",
+      "Setup frames emphasize equipment organization and accessibility"
+    ],
+    "common_errors_addressed": [
+      "Proper drain stabilization prevents slipping during needle passes",
+      "Perpendicular entry angle avoids shallow passes and reduces deviation",
+      "Controlled extracorporeal knot formation prevents loose or asymmetrical throws",
+      "Smooth pusher technique prevents knot jamming or tearing",
+      "Adequate final tension ensures slit closure without overtightening that could avulse drain"
+    ],
+    "skill_level_demonstrated": "expert",
+    "expert_indicators": [
+      "Smooth, efficient hand transitions between throw formations",
+      "Knot pusher advancement is controlled and direct \u2014 no hesitation or repositioning",
+      "Drain remains stable throughout all passes and cinching",
+      "No visible suture catching or tangling",
+      "Clean, complete slit closure achieved by final throw",
+      "Timing and rhythm suggest mastery of the task sequence"
+    ]
+  },
+  "scoring_status": "NOT SCORED \u2014 instructional video",
+  "rationale_for_no_score": "Per FLS proctor rubric rules, instructional videos with explicit educational structure (visible instructor, labeled materials, collaborative demonstration setup, multi-angle camera work) are not scored. This video exhibits all markers of educational/tutorial content designed to teach the task rather than evaluate a trainee's or surgeon's proficiency. A performance or expert_demo video would show a single operator performing the task continuously with a visible timer or formal exam environment.",
+  "video_id": "olEoTSqEjCY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:43:26.499945+00:00"
+}

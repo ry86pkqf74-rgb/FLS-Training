@@ -1,0 +1,27 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown FLS Task",
+  "explanation": "Video contains only introductory/promotional content showing a da Vinci robotic surgery system at World Laparoscopy Hospital with no actual FLS task performance visible. The frames show a surgeon in surgical attire posing with the da Vinci system console and signage. No task execution, no trainer box, no sutures, gauze, pegs, or appendages are visible. This is promotional/institutional material, not an FLS performance or training demonstration.",
+  "cannot_score": true,
+  "reasons_for_no_score": [
+    "No FLS task apparatus visible (no trainer box, bench setup, or task-specific materials)",
+    "No surgical instruments in use (no needle drivers, graspers, scissors, or other laparoscopic tools)",
+    "No performance phase observable (no hand movements, no suture/knot work, no cutting, no object transfer)",
+    "Content is promotional/institutional signage and personnel introduction only",
+    "Video does not meet minimum requirements for FLS task assessment"
+  ],
+  "teaching_content": {
+    "context": "Promotional introduction to da Vinci robotic surgery training program at World Laparoscopy Hospital",
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": null
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "With absolute certainty, this video contains no FLS task performance. The entire content is institutional/promotional messaging with no training task elements present.",
+  "video_id": "a98mOZmoa-4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:49:21.748368+00:00"
+}

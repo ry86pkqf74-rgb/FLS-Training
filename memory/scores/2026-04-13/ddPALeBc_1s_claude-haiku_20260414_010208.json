@@ -1,0 +1,21 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine \u2014 instructional/conference content",
+  "reason_not_scored": "This video is a conference or educational event recording (HUCAD: Laparoscopic Urology, Kidney & Prostate course, September 26-29, 2022) featuring faculty introductions, course overview, and demonstration footage, but NOT a formal FLS task performance suitable for scoring under FLS rubrics. The video contains: (1) title cards and event branding, (2) faculty interviews and introductions (Nuno Domingues, Miguel Ramos), (3) brief laparoscopic surgical footage from actual procedures (not FLS trainer tasks), (4) audience/course environment shots. No individual trainee is performing a timed, scored FLS task with measurable performance metrics.",
+  "video_content_summary": {
+    "event": "HUCAD Laparoscopic Urology course (Kidney & Prostate)",
+    "date_range": "September 26-29, 2022",
+    "location": "NOVA Medical School facility",
+    "primary_content_type": "Conference/educational promotional and faculty introduction video",
+    "surgical_footage_present": true,
+    "surgical_footage_context": "Real operative laparoscopic urology procedures, NOT FLS trainer task demonstrations",
+    "fls_task_performance_visible": false
+  },
+  "confidence": 1.0,
+  "cannot_score_reason": "FLS task scoring requires: (1) a single trainee performing a defined FLS task, (2) clear task identification (Peg Transfer, Pattern Cut, Endoloop, or Suture tasks), (3) visible start and end timestamps, (4) measurable performance metrics (time, penalties, technique). This video is an educational event recording that does not meet these criteria.",
+  "video_id": "ddPALeBc_1s",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:02:08.242742+00:00"
+}

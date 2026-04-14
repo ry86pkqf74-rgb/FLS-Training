@@ -1,0 +1,104 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_setup",
+      "description": "Laparoscopic trainer box with multiple rubber objects (sponges) visible on pegs and in compartments",
+      "technique_notes": "This appears to be setup/instructional content showing trainer components",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_demo",
+      "description": "Person holding trainer box showing overall setup",
+      "technique_notes": "Demonstration of complete trainer assembly",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "equipment_demo",
+      "description": "Top view of trainer showing peg layout and rubber objects arrangement",
+      "technique_notes": "Clear view of 12 pegs arranged in two rows with 6 objects placed on left side pegs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "setup_instruction",
+      "description": "Spanish text overlay: 'Marcar el tama\u00f1o de los orificios' - marking hole sizes with hands demonstrating on foam board",
+      "technique_notes": "Instructional content showing preparation steps",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "setup_instruction",
+      "description": "Spanish text: 'Cortar al medio, Como ranura' - cutting sponges in half with scissors",
+      "technique_notes": "Demonstration of object preparation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "setup_instruction",
+      "description": "Spanish text: 'Colocar discos en orificios' - placing cut objects into holes in platform",
+      "technique_notes": "Shows proper object placement for training setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 85.0,
+      "phase": "equipment_demo",
+      "description": "Hands demonstrating laparoscopic grasper manipulation outside trainer",
+      "technique_notes": "Shows proper instrument handling technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content with Spanish text overlays and demonstration of trainer setup. No actual task performance to score.",
+  "cannot_determine": [
+    "No performance timing or technique quality to assess - this is setup/preparation instruction only"
+  ],
+  "technique_summary": "Instructional video demonstrating FLS trainer setup and object preparation rather than task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper trainer box assembly and component identification",
+      "Object preparation by cutting sponges to appropriate size",
+      "Correct peg and object arrangement for peg transfer task",
+      "Basic laparoscopic instrument handling and manipulation",
+      "LED lighting installation for optimal visualization",
+      "Securing trainer components with elastic bands"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper object sizing for holes",
+      "Incorrect peg arrangement",
+      "Inadequate lighting setup"
+    ],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "i3pPLBOFgSI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:11:47.817144+00:00"
+}

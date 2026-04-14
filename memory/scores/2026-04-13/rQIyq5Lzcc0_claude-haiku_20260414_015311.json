@@ -1,0 +1,13 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine",
+  "reason": "Video contains only headshots of a person in surgical attire speaking to camera. No FLS trainer box, instruments, or task performance visible. No actual task execution can be assessed.",
+  "frame_count": 25,
+  "scoreable_content": false,
+  "notes": "This appears to be introductory or instructional video content (possibly interview, introduction, or briefing material) from World Laparoscopy Hospital. No performance data available for scoring.",
+  "video_id": "rQIyq5Lzcc0",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:53:11.766425+00:00"
+}

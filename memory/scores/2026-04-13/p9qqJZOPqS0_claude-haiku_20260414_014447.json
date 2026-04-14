@@ -1,0 +1,46 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "not_applicable"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is a conference presentation (SAGES 2017) about stepwise training methodology for laparoscopic skills. It contains only slides, diagrams, educational content, survey results, and conclusion statements. No actual FLS task performance is visible. The video does not show a trainee performing the Peg Transfer task with instruments, pegboard, or objects.",
+  "cannot_determine": [
+    "Completion time \u2014 no task performance recorded",
+    "Penalties \u2014 no task performance recorded",
+    "Phase timings \u2014 no task performance recorded",
+    "FLS score \u2014 no scorable performance present"
+  ],
+  "technique_summary": "Not applicable. This is instructional/educational content, not a performance video.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Stepwise training method is more efficient than traditional comprehensive method",
+      "Limited working memory impairs novice performance if attempting another task simultaneously",
+      "Stepwise method increases trainees' and trainers' time-efficiency for surgical training"
+    ],
+    "common_errors_addressed": [
+      "Overloading working memory by attempting multiple tasks at once"
+    ],
+    "skill_level_demonstrated": "instructional_presentation"
+  },
+  "improvement_suggestions": [],
+  "scoring_status": "NOT_SCORED \u2014 Video is an instructional presentation slide deck with no actual FLS task performance visible.",
+  "video_id": "p9qqJZOPqS0",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:44:47.081631+00:00"
+}

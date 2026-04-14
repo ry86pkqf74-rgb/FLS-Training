@@ -1,0 +1,103 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Completely black frame, appears to be video start",
+      "technique_notes": "No content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_demo",
+      "description": "Medical professional in lab coat presenting in training facility with FLS equipment visible in background",
+      "technique_notes": "Educational setting with screens showing peg transfer content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "setup_demonstration",
+      "description": "Close-up view of pegboard with six rubber triangular objects arranged on left side (orange) and right side (green) with empty pegs in center",
+      "technique_notes": "Standard FLS peg transfer setup with proper object placement and spacing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "instructional_slide",
+      "description": "Title slide showing 'Task One: Peg Transfer' with equipment and timing specifications",
+      "technique_notes": "Educational overlay providing task parameters and proficiency benchmarks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 40.0,
+      "phase": "technique_demonstration",
+      "description": "Maryland dissectors positioned above pegboard with first orange object being grasped",
+      "technique_notes": "Proper instrument positioning and approach angle for object manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "transfer_demonstration",
+      "description": "Mid-air transfer of orange object from left to right instrument showing proper technique",
+      "technique_notes": "Clean instrument exchange without board contact, demonstrating required mid-air transfer",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video with multiple task demonstrations and educational slides. No actual performance to score.",
+  "cannot_determine": [
+    "Completion time - no timed performance shown",
+    "Penalties - instructional demonstration only",
+    "Final score - educational content not a gradable performance"
+  ],
+  "technique_summary": "Comprehensive instructional video showing proper FLS peg transfer technique with expert demonstrations across multiple tasks.",
+  "strengths": [
+    "Clear demonstration of mid-air transfer technique",
+    "Proper instrument positioning and grip"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper Maryland dissector grip and positioning",
+      "Mid-air object transfer between instruments",
+      "Systematic approach to peg transfer sequence",
+      "Correct object placement on target pegs"
+    ],
+    "verbal_cues": [
+      "Equipment specifications and timing requirements",
+      "Proficiency benchmarks (48 seconds)",
+      "Penalty criteria for dropped objects"
+    ],
+    "common_errors_addressed": [
+      "Avoiding board contact during transfers",
+      "Maintaining objects within field of view",
+      "Proper sequencing from non-dominant to dominant side"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "ZdUaSvqvQB0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:41:53.734259+00:00"
+}

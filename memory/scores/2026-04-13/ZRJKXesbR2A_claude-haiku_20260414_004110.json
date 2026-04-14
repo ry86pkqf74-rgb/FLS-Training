@@ -1,0 +1,119 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "CM-15 Colon Phantom - Colonoscopy Training",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Title card showing 'CM-15 colon phantom Basic Training' with animated 3D model of colonoscope and phantom",
+      "technique_notes": "Educational/instructional content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "setup",
+      "description": "Instructor in clinical setting with endoscopy equipment, holding Olympus colonoscope next to CM-15 phantom on table",
+      "technique_notes": "Setup demonstration in clinical environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_overview",
+      "description": "Close-up of phantom showing anatomical detail - pink/red colonic tissue with haustral markings and vessel patterns",
+      "technique_notes": "High-fidelity phantom anatomy visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "insertion_technique",
+      "description": "Instructor demonstrating scope insertion angle and positioning, monitor shows endoscopic view of colon",
+      "technique_notes": "Proper insertion technique being demonstrated with visual feedback from scope camera",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "navigation",
+      "description": "Endoscopic view on monitor shows colonic mucosa with normal vasculature and haustral pattern",
+      "technique_notes": "Navigation through phantom colon demonstrated in real-time endoscopic view",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "scope_control",
+      "description": "Instructor's hand position on scope controls, demonstrating proper technique for navigation",
+      "technique_notes": "Grip and control technique shown for colonoscope handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "advanced_navigation",
+      "description": "Demonstrating navigation through more distal colon, endoscopic view shows progression deeper into phantom",
+      "technique_notes": "Advanced scope manipulation technique for navigating tortuous/narrowed segments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 22.0,
+      "phase": "completion",
+      "description": "Final demonstration showing colonoscope fully inserted with good visualization of distal colon segments",
+      "technique_notes": "Complete insertion and visualization achieved",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 25.0,
+      "phase": "credits",
+      "description": "Olympus corporate branding and tagline 'Your Vision, Our Innovation' displayed",
+      "technique_notes": "Video conclusion with manufacturer attribution",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - instructional content, not a performance task"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is definitive: this is an instructional/training demonstration for colonoscopy technique using a CM-15 phantom model, not an FLS task performance. The presence of narrated instruction, educational framing, equipment overview, and manufacturer branding clearly identifies this as instructional content rather than a trainee performance of an FLS task.",
+  "cannot_determine": [
+    "FLS task applicability - video content is not related to any of the 5 official FLS/MISTELS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, Intracorporeal Suture)"
+  ],
+  "technique_summary": "This is NOT an FLS task video. It is an educational training video for colonoscopy technique using an Olympus CM-15 colon phantom. No FLS scoring rubric applies. The video demonstrates proper colonoscope insertion, navigation, and visualization techniques in a clinical training setting.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper colonoscope grip and hand positioning",
+      "Correct insertion angle and insertion technique",
+      "Navigation through colon phantom using scope deflection controls",
+      "Real-time endoscopic visualization feedback",
+      "Progressive distal navigation through haustral segments"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper scope angle during insertion (avoided in demo)",
+      "Poor visualization from excessive scope advancement without proper tip control (avoided)"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "video_type": "manufacturer_training_video",
+  "recommendation": "This video cannot be scored using FLS rubrics. It is a product training/instructional video for colonoscopy technique on an Olympus phantom model. To obtain an FLS score, submit a video of an actual trainee performing one of the five official FLS tasks: Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture.",
+  "video_id": "ZRJKXesbR2A",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:41:10.096000+00:00"
+}

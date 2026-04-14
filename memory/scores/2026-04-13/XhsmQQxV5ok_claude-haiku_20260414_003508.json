@@ -1,0 +1,22 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Unknown/Not FLS",
+  "reason_for_classification": "Video content shows a person in a gym/fitness facility performing weightlifting exercises on gym equipment (lat pulldown machine visible). No FLS trainer box, laparoscopic instruments, gauze, Penrose drain, foam appendage, or any surgical simulation apparatus is present. This is general fitness/gym equipment usage, not an FLS MISTELS task.",
+  "frames_analyzed": 21,
+  "video_type_observed": "Gym/fitness facility footage with exercise demonstration",
+  "cannot_score": true,
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - not an FLS task"
+  },
+  "confidence": 0.99,
+  "confidence_rationale": "Video clearly depicts gym equipment and a person performing strength training exercises. No surgical simulation apparatus, laparoscopic trainer box, instruments, or task materials are visible across all 21 frames. This is unambiguously non-FLS content.",
+  "video_id": "XhsmQQxV5ok",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:35:08.378053+00:00"
+}

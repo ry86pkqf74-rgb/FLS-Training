@@ -1,0 +1,80 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Educational Quiz Content",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Multiple choice question about self-directed learning approaches for FLS training",
+      "technique_notes": "Educational content - question 1 with options A-D about teaching methodologies",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "not_applicable",
+      "description": "Question about psychomotor skill assessment methods in FLS curriculum evaluation",
+      "technique_notes": "Educational content - question 2 focusing on assessment reliability",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "not_applicable",
+      "description": "Question about communication strategies for psychological safety in FLS mentoring",
+      "technique_notes": "Educational content - question 3 about mentoring best practices",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "not_applicable",
+      "description": "Question about competency-based education alignment in FLS curriculum development",
+      "technique_notes": "Educational content - question 5 about curriculum design principles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "not_applicable",
+      "description": "Question about adult learning principles applied to FLS training",
+      "technique_notes": "Educational content - question 6 about pedagogical approaches",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Self-directed learning with guided feedback",
+      "Objective structured assessment with task-specific checklists",
+      "Private constructive feedback delivery",
+      "Competency-based curriculum development",
+      "Adult learning principles emphasizing context and relevance"
+    ],
+    "verbal_cues": [
+      "Questions focus on evidence-based teaching methodologies",
+      "Emphasis on psychological safety in learning environments",
+      "Importance of measurable outcomes in surgical education",
+      "Adult learners require context and relevance for effective skill application"
+    ],
+    "common_errors_addressed": [
+      "Avoiding lengthy lectures without hands-on practice",
+      "Preventing public criticism that damages psychological safety",
+      "Not relying solely on instructor intuition for assessment",
+      "Avoiding one-size-fits-all standardized approaches"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational quiz content about FLS teaching methodologies. No actual task performance visible - this is instructional material testing knowledge of FLS education principles.",
+  "cannot_determine": [
+    "No FLS task performance to assess",
+    "No completion time or penalties applicable",
+    "No psychomotor skills demonstrated"
+  ],
+  "video_id": "qnsl2HddIcw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:52:16.811006+00:00"
+}

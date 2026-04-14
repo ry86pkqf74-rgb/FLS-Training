@@ -1,0 +1,12 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task",
+  "analysis_summary": "This video shows a virtual reality or computer simulation exercise involving finding numbered boxes with a scope tool. This is not one of the five standardized FLS (Fundamentals of Laparoscopic Surgery) tasks: Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture. The video appears to be a training exercise for scope navigation or hand-eye coordination but does not match any official FLS scoring rubric.",
+  "content_type": "VR training simulation",
+  "reason_not_scorable": "Content is not an official FLS/MISTELS task",
+  "video_id": "hfCJXH0FwLE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:10:16.213403+00:00"
+}

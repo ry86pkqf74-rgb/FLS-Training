@@ -1,0 +1,67 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine specific FLS task from content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Professor Dieter Hahnloser speaking outdoors, identified as Chief Surgeon from University Hospital Lausanne",
+      "technique_notes": "Educational introduction content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 33.0,
+      "phase": "equipment_demonstration",
+      "description": "Laparoscopic training simulator setup with monitor display showing surgical field",
+      "technique_notes": "Professional training equipment demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 48.0,
+      "phase": "training_environment",
+      "description": "Two trainees in white coats observing laparoscopic training setup",
+      "technique_notes": "Educational training environment",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear identification of instructional content with expert speaking and equipment demonstration. No actual FLS task performance visible.",
+  "cannot_determine": [
+    "Specific FLS task being demonstrated",
+    "Any performance metrics or scoring parameters"
+  ],
+  "technique_summary": "Educational/promotional content introducing laparoscopic training concepts and equipment rather than actual task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic trainer setup",
+      "professional training environment"
+    ],
+    "verbal_cues": [
+      "Expert introduction providing educational context"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "lwBDrkW-sgg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:32:53.997758+00:00"
+}

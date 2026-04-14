@@ -1,0 +1,16 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Equipment demonstration/setup video",
+  "explanation": "This video shows laparoscopic training equipment setup and demonstration rather than actual task performance. Frames show the trainer box exterior, control buttons, instruments, and practice board details, but no trainee performing any of the five standard FLS tasks.",
+  "score_components": {
+    "scoreable": false,
+    "reason": "No actual task performance observed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear equipment demonstration video with no task execution visible",
+  "video_id": "UWg25ef6lmE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:23:25.994176+00:00"
+}

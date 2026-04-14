@@ -1,0 +1,20 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "error_reason": "Video shows gym/fitness equipment workout, not FLS surgical training",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Person lying on gym bench press machine in fitness facility",
+      "equipment_observed": "Commercial gym equipment, not surgical training devices"
+    }
+  ],
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows fitness/gym activity unrelated to laparoscopic surgery training",
+  "video_id": "XhsmQQxV5ok",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:35:02.653799+00:00"
+}

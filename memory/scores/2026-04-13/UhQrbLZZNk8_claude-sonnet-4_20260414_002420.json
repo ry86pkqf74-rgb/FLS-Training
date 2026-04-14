@@ -1,0 +1,77 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General Simulation Curriculum Presentation",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_slide",
+      "description": "Black screen with no content visible",
+      "technique_notes": "Video appears to be starting or transitioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "curriculum_overview",
+      "description": "SAGES presentation slide showing 'Simulator technology' with FLS logo visible",
+      "technique_notes": "Educational presentation about simulation curriculum development",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "curriculum_overview",
+      "description": "Slide lists bench-top trainers, laparoscopic simulators, live animal models",
+      "technique_notes": "Overview of different simulation modalities including FLS",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "curriculum_overview",
+      "description": "Additional simulation types shown: cadavers, virtual reality simulators with equipment images",
+      "technique_notes": "Comprehensive overview of simulation technologies",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear educational presentation slides with no FLS task performance content to score",
+  "cannot_determine": [],
+  "technique_summary": "This is an educational presentation about simulation curriculum development, not an FLS task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "curriculum design for surgical simulation",
+      "integration of multiple simulation modalities",
+      "structured skills progression from basic to advanced tasks",
+      "assessment methodology using OSATS scoring",
+      "resident portfolio development for skills tracking"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "lack of structured progression in simulation training",
+      "inadequate assessment of technical skills",
+      "insufficient exposure to advanced laparoscopic techniques"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "UhQrbLZZNk8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:24:20.670868+00:00"
+}

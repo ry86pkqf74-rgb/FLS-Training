@@ -1,0 +1,76 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Static anatomical diagram showing female reproductive system with labeled structures",
+      "technique_notes": "Educational material - not a performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "educational_content",
+      "description": "Diagram showing Veress needle insertion for abdominal insufflation",
+      "technique_notes": "Instructional content about laparoscopic setup, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "educational_content",
+      "description": "Laparoscopic view diagram showing trocar placement and fallopian tube visualization",
+      "technique_notes": "Educational diagram of tubal sterilization procedure, not FLS endoloop task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "educational_content",
+      "description": "Diagram showing Filshie clip placement on fallopian tubes",
+      "technique_notes": "Clinical procedure instruction, not FLS training task",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clearly identifiable as educational/instructional content showing anatomical diagrams and clinical procedure steps, not an FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "This is instructional content about female reproductive anatomy and tubal sterilization procedures, not an FLS endoloop task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Veress needle insertion for pneumoperitoneum",
+      "Trocar placement for laparoscopic access",
+      "Fallopian tube identification and visualization",
+      "Filshie clip application for tubal occlusion"
+    ],
+    "verbal_cues": [
+      "Abdominal wall separation from intestines for safer visualization",
+      "Sequential instrument insertion through separate ports",
+      "Bilateral fallopian tube identification and clipping"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "kgNLACVbjX4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:25:48.743803+00:00"
+}

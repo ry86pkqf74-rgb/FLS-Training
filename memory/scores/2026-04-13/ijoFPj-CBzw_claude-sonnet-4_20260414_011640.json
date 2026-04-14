@@ -1,0 +1,119 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Training Overview - Multiple Tasks Shown",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Grendel Medical logo and branding introduction",
+      "technique_notes": "Marketing/educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "introduction",
+      "description": "Dr. Glyn Burtt introduction discussing FLS exam",
+      "technique_notes": "Educational presentation format with subtitles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "task_overview",
+      "description": "Task 1 peg transfer setup shown with red and yellow objects on pegs",
+      "technique_notes": "Standard FLS peg transfer configuration visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "task_overview",
+      "description": "Task 2 pattern cutting setup with gauze and marked circle",
+      "technique_notes": "Standard 4cm diameter circle pattern visible on suspended gauze",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "task_overview",
+      "description": "Task 3 endoloop setup with foam appendage and ligating loop",
+      "technique_notes": "Standard endoloop configuration with target marking visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "task_overview",
+      "description": "Tasks 4 and 5 suturing setup with Penrose drain and suture materials",
+      "technique_notes": "Standard suturing configuration showing marked targets on drain",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 50.0,
+      "phase": "product_demonstration",
+      "description": "Peg transfer being performed with graspers in motion",
+      "technique_notes": "Demonstration of bimanual coordination and object transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 75.0,
+      "phase": "product_demonstration",
+      "description": "Virtual reality simulation interface showing laparoscopic training",
+      "technique_notes": "Gaming interface with timing and accuracy metrics displayed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional content with product demonstration and educational narration. No actual FLS task performance to score.",
+  "cannot_determine": [],
+  "technique_summary": "Instructional video introducing FLS training concepts and demonstrating virtual reality training platform as alternative to traditional box trainer practice.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "peg transfer object manipulation",
+      "pattern cutting precision",
+      "endoloop deployment and positioning",
+      "suturing and knot tying fundamentals",
+      "bimanual coordination development"
+    ],
+    "verbal_cues": [
+      "peg manipulation and bimanual dexterity test",
+      "cutting out a shape accurately test",
+      "extracorporeal knot tight and loop ligation test",
+      "both extracorporeal and intracorporeal knotting",
+      "suturing with intracorporeal knotting is the biggest differentiator between people who take the test",
+      "critical lead up to the suturing test as it demands good hand eye coordination and bimanual dexterity",
+      "doing them again and again",
+      "more fun way to practise the tasks",
+      "flow state of deliberate practice"
+    ],
+    "common_errors_addressed": [
+      "lack of deliberate practice repetition",
+      "insufficient bimanual coordination development",
+      "inadequate preparation for intracorporeal knotting challenges"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "ijoFPj-CBzw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:16:40.946279+00:00"
+}

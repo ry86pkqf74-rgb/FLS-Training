@@ -1,0 +1,180 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Right needle driver grasping white ligating loop, beginning deployment phase",
+      "technique_notes": "Clean instrument handling, loop positioned for controlled deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_deploy",
+      "description": "Both instruments working to open and position the ligating loop",
+      "technique_notes": "Coordinated bimanual manipulation, maintaining loop integrity",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "target_approach",
+      "description": "Loop being guided toward the foam appendage target",
+      "technique_notes": "Precise approach angle, maintaining clear visualization of target mark",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "target_approach",
+      "description": "Loop positioned near foam appendage, preparing for placement",
+      "technique_notes": "Good spatial orientation, loop maintains proper shape and size",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "loop_placement",
+      "description": "Loop being carefully positioned over the foam appendage",
+      "technique_notes": "Controlled placement technique, avoiding premature cinching",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "loop_placement",
+      "description": "Loop fully encircling foam appendage, positioning at target mark",
+      "technique_notes": "Excellent positioning accuracy at the marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "cinch",
+      "description": "Beginning to cinch the loop by pulling on the suture tail",
+      "technique_notes": "Gradual tension application, maintaining position at mark",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "cinch",
+      "description": "Continued cinching with appropriate tension control",
+      "technique_notes": "Smooth cinching motion without sudden jerks that could cause slippage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "cinch",
+      "description": "Loop appears fully tightened around appendage at target location",
+      "technique_notes": "Complete closure achieved, loop secure at marked position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "cut_tail",
+      "description": "Preparing to cut excess suture tail with scissors",
+      "technique_notes": "Proper cutting technique preparation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 45.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 10,
+      "end_seconds": 20,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 20,
+      "end_seconds": 30,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 30,
+      "end_seconds": 40,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 40,
+      "end_seconds": 45,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "loop_cinched_tightly": true,
+      "appendage_transected": false,
+      "placement_accuracy": "excellent"
+    },
+    "deployment_quality": {
+      "smooth_deployment": true,
+      "maintained_loop_integrity": true,
+      "controlled_cinching": true
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 45.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 135.0,
+    "formula_applied": "180 - 45.0 - 0.0 = 135.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear visualization of all phases, excellent technique demonstration. Loop placement accuracy well-observed, no visible penalties detected.",
+  "cannot_determine": [
+    "Exact millimeter measurement of mark position due to video resolution"
+  ],
+  "technique_summary": "Expert-level demonstration showing optimal endoloop technique with precise placement, controlled cinching, and efficient timing well within expert benchmarks.",
+  "strengths": [
+    "Smooth bimanual coordination throughout deployment",
+    "Precise placement at target mark",
+    "Controlled cinching without premature tightening",
+    "Excellent time efficiency (45s vs 40s expert benchmark)"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper loop deployment with maintained integrity",
+      "Controlled approach to target structure",
+      "Precise placement at anatomical landmark",
+      "Gradual cinching technique",
+      "Appropriate tension control during tightening"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Avoiding premature cinching during placement",
+      "Preventing loop slippage through controlled technique",
+      "Maintaining proper positioning throughout procedure"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "cFPQlm79A4A",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:55:14.025062+00:00"
+}

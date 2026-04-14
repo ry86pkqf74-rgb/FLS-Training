@@ -1,0 +1,62 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Medical Simulation Conference/Exhibition",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "conference_setting",
+      "description": "Black screen, no visible content",
+      "technique_notes": "Video begins with blank screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "interview_segment",
+      "description": "Caroline White, Simulation Specialist Advisor, speaking at CAE conference booth",
+      "technique_notes": "Professional conference presentation with medical simulation equipment in background",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "demonstration_setup",
+      "description": "Medical simulation mannequin on blue table with ultrasound equipment and various medical devices",
+      "technique_notes": "Conference demonstration setup with ultrasound simulator and patient mannequin",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "conference_overview",
+      "description": "Wide view of medical conference exhibition hall with multiple simulation stations",
+      "technique_notes": "Multiple medical simulation booths and attendees exploring various training equipment",
+      "penalties_observed": []
+    }
+  ],
+  "cannot_determine": [
+    "This video shows a medical simulation conference/exhibition, not an FLS task performance",
+    "No laparoscopic training box or FLS-specific equipment visible",
+    "Content is educational/promotional rather than task performance"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Medical simulation technology demonstration",
+      "Ultrasound training simulation",
+      "Conference presentation of simulation equipment"
+    ],
+    "verbal_cues": [
+      "Professional presentation context visible through speaker identification and conference setting"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_conference_demo"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows a medical simulation conference/exhibition with interview segments and equipment demonstrations, not an FLS task performance. No laparoscopic training equipment or FLS-specific tasks are visible.",
+  "video_id": "xvba_v8p9HY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:10:20.541019+00:00"
+}

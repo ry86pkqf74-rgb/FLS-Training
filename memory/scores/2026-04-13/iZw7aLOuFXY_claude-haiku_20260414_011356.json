@@ -1,0 +1,35 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task Performance",
+  "reason_for_classification": "This is an academic conference presentation (SAGES 2018 Emerging Technology Session) presenting research on a novel multi-camera laparoscopic imaging system. It contains lecture slides, technical diagrams, system schematics, and demonstration images of bean drop tasks performed with the new imaging technology. There is no actual trainee or surgeon performing an official FLS/MISTELS task under standard conditions for scoring.",
+  "content_summary": "Research presentation by Jae-Jun Kim, PhD on 'A Novel Laparoscopic Imaging System Utilizing a Trocar with Multiple Miniaturized Cameras.' The presentation covers system design, field of view comparisons between standard laparoscopic cameras and the multi-camera system, and demonstrations of bean drop tasks using the large field of view imaging system.",
+  "fls_scoring_not_applicable": true,
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Multi-camera trocar design with miniaturized imaging sensors",
+      "Wide field of view laparoscopic imaging (expanded visualization vs. standard 5mm and 10mm cameras)",
+      "Bean drop task performance in trainer box using large FOV system",
+      "Comparison of single camera vs. multi-camera visualization systems"
+    ],
+    "verbal_cues": [
+      "Current system that uses a single camera has some drawbacks in terms of the quality and extent of visualization and efficiency of operation",
+      "Multi-camera imaging system provide larger field of view than current laparoscopic camera",
+      "We successfully performed a bean drop task in the trainer box by using our large field of view imaging system",
+      "We also developed and performed a modified drop task using four inverted cups"
+    ],
+    "common_errors_addressed": [
+      "Limited field of view with conventional single-camera laparoscopy (visualization constraint addressed through multi-camera solution)",
+      "Inefficiency of single-camera port occupancy (multi-camera system frees up additional surgical ports)"
+    ],
+    "skill_level_demonstrated": "expert",
+    "innovation_focus": "Novel hardware/imaging innovation rather than technique training"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is certain. This is clearly an academic presentation with slides, schematics, and research demonstrations. No actual FLS task performance under standard proctoring conditions is present.",
+  "note": "This content showcases emerging technology research and is not scoreable under standard FLS/MISTELS rubrics. No performance score is computed.",
+  "video_id": "iZw7aLOuFXY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:13:56.394371+00:00"
+}

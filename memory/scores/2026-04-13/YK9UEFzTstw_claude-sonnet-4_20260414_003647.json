@@ -1,0 +1,87 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General Laparoscopic Simulation Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Blue background with 'sim series' logo",
+      "technique_notes": "Introductory branding frame",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "presentation",
+      "description": "Professional presenter in business attire against blue background",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "equipment_demo",
+      "description": "Trainee at laparoscopic simulator with hands on controls",
+      "technique_notes": "Demonstration of simulator setup and ergonomics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "task_overview",
+      "description": "Monitor showing laparoscopic view with instruments and training materials",
+      "technique_notes": "General overview of simulator capabilities",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 30.0,
+      "phase": "presentation_conclusion",
+      "description": "Presenter speaking with subtitle overlay about challenging learners",
+      "technique_notes": "Educational content delivery",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video format with presenter, overlays, and educational content. No actual FLS task performance visible.",
+  "cannot_determine": [
+    "Specific FLS task being performed",
+    "Completion time or scoring metrics",
+    "Technical skill assessment"
+  ],
+  "technique_summary": "Instructional overview of laparoscopic simulation technology and training concepts",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper simulator setup and positioning",
+      "Basic instrument handling demonstration",
+      "Monitor viewing and workspace organization"
+    ],
+    "verbal_cues": [
+      "Content about challenging learners and motivation",
+      "Discussion of simulator capabilities",
+      "Reference to cutting-edge surgical simulation"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "introductory"
+  },
+  "improvement_suggestions": [],
+  "video_id": "YK9UEFzTstw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:36:47.682753+00:00"
+}

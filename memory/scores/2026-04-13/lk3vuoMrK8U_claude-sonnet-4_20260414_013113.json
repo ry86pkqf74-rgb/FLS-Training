@@ -1,0 +1,11 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS performance video",
+  "confidence": 1.0,
+  "confidence_rationale": "This video shows product marketing/demonstration content for Inovus Medical equipment, not an actual FLS task performance that can be scored according to the official rubric.",
+  "video_id": "lk3vuoMrK8U",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:31:13.702929+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not applicable - No FLS task content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Blank/gray frame with no visible content",
+      "technique_notes": "No FLS content observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "not_applicable",
+      "description": "Dr. Francis McGovern, Urology Attending, speaking to camera in formal office setting",
+      "technique_notes": "Instructional/interview content, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "not_applicable",
+      "description": "Dr. Ajay K Singla, Residency Program Director, speaking to camera in office with city view",
+      "technique_notes": "Instructional/interview content, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "not_applicable",
+      "description": "Operating room scene with surgical team and laparoscopic equipment, but appears to be actual surgery not FLS training",
+      "technique_notes": "Real surgical procedure, not standardized FLS task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 100.0,
+      "phase": "not_applicable",
+      "description": "Medical lecture hall with tiered seating and presenter at podium",
+      "technique_notes": "Educational/conference setting, not FLS task performance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows institutional/educational content with physician interviews and surgical footage, but contains no standardized FLS task performance or training scenarios",
+  "cannot_determine": [],
+  "technique_summary": "This video contains institutional content including physician interviews and surgical footage, but does not show any FLS task performance that can be scored according to MISTELS criteria.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic surgical techniques in clinical setting"
+    ],
+    "verbal_cues": [
+      "physician testimonials about training programs"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "improvement_suggestions": [],
+  "video_id": "VB6kUV4aEKw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:25:05.579447+00:00"
+}

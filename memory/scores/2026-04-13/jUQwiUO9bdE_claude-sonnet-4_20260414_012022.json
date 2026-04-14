@@ -1,0 +1,58 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS Task Performed",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "European Society of Coloproctology (ESCP) logo and training month promotional slide",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "instructor_presentation",
+      "description": "Surgeon in green scrubs speaking to camera in medical office setting",
+      "technique_notes": "Educational presentation format with instructor addressing audience",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "instructor_presentation",
+      "description": "Continued presentation by instructor using hand gestures",
+      "technique_notes": "Demonstrative teaching posture with explanatory hand movements",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed - educational content only"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows educational/promotional content with ESCP branding and instructor presentation format rather than FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "This is educational/instructional content featuring a medical instructor in presentation format, not an FLS task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructor"
+  },
+  "improvement_suggestions": [],
+  "video_id": "jUQwiUO9bdE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:20:22.512455+00:00"
+}

@@ -1,0 +1,325 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_introduction",
+      "description": "Close-up of suture block with golden needle holder and white 2-0 silk suture. Instructor hands visible, positioned to demonstrate needle orientation.",
+      "technique_notes": "Needle clearly visible with suture attached; appears to be a demonstration setup. Hands positioned for instruction.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "suture_introduction",
+      "description": "Hands grasping suture block with Penrose drain visible. Suture being positioned for introduction into the trainer.",
+      "technique_notes": "Penrose drain visible in suture block; target marks appear as blue markings on the drain.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "target_passes",
+      "description": "Hands manipulating suture through the Penrose drain. First target pass in progress.",
+      "technique_notes": "Suture being threaded through drain with two hands managing the needle and tail.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "target_passes",
+      "description": "Suture positioned through first marked target on drain. Needle oriented for second pass.",
+      "technique_notes": "Clear visualization of suture path through blue-marked target area.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "target_passes",
+      "description": "Needle being maneuvered for second target pass. Hands repositioning for next entry.",
+      "technique_notes": "Demonstrator showing controlled needle manipulation with both hands stabilizing.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "target_passes",
+      "description": "Suture passing through second marked target on drain. Both targets now engaged.",
+      "technique_notes": "Suture successfully threaded through both blue target marks.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "extracorporeal_throws",
+      "description": "Suture withdrawn from trainer, positioned for extracorporeal knot formation outside the box.",
+      "technique_notes": "Demonstrator preparing for first throw; suture tails positioned for knot tying.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "extracorporeal_throws",
+      "description": "First single throw being formed extracorporeally. Hands looping and crossing suture strands.",
+      "technique_notes": "Clear demonstration of throw formation with deliberate hand positioning.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "extracorporeal_throws",
+      "description": "First knot complete. Suture with single throw knot visible. Preparing to introduce knot pusher.",
+      "technique_notes": "Knot appears secure; demonstrator now positioning for pusher application.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "extracorporeal_throws",
+      "description": "Knot pusher applied to first throw. Knot being advanced toward the drain.",
+      "technique_notes": "Pusher correctly positioned; knot advancing smoothly along suture.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "extracorporeal_throws",
+      "description": "First knot pushed to the drain. Second throw being formed extracorporeally.",
+      "technique_notes": "Transition between throws; demonstrator showing efficient hand exchange.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second single throw formed and advancing with knot pusher toward drain.",
+      "technique_notes": "Second throw progressing smoothly; knot quality appears consistent.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third single throw being formed after second knot has been advanced.",
+      "technique_notes": "Demonstrator completing knot sequence; final throw in formation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65.0,
+      "phase": "slit_closure_assessment",
+      "description": "Final knot with all three throws complete and seated on drain. Drain slit appears closed.",
+      "technique_notes": "Final knot tension appears adequate; slit closure visible with knot positioned at target mark.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "phase": "suture_cut",
+      "description": "Scissors positioned to cut suture tails. Demonstrator preparing for final cut.",
+      "technique_notes": "Scissors grasped; suture tails visible and ready for cutting inside trainer.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 75.0,
+      "phase": "suture_cut",
+      "description": "First suture tail being cut with endoscopic scissors.",
+      "technique_notes": "Clean scissor technique; first tail cut cleanly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 80.0,
+      "phase": "suture_cut",
+      "description": "Second suture tail being cut inside the trainer.",
+      "technique_notes": "Both tails now cut; task completion imminent.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 85.0,
+      "phase": "suture_cut",
+      "description": "Final state: Drain with completed knot at target mark, slit closed, both suture tails cut.",
+      "technique_notes": "Task appears fully complete. Knot is secure, slit is closed, tails are cut inside trainer.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 85.0,
+  "phase_timings": [
+    {
+      "phase": "suture_introduction",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_passes",
+      "start_seconds": 5,
+      "end_seconds": 30,
+      "duration_seconds": 25,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_throws",
+      "start_seconds": 30,
+      "end_seconds": 65,
+      "duration_seconds": 35,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "slit_closure_assessment",
+      "start_seconds": 65,
+      "end_seconds": 70,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 70,
+      "end_seconds": 85,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "description": "No visible deviation from marked targets. Suture passages through both blue marks appear accurate and centered.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        4,
+        6
+      ],
+      "confidence": 0.85
+    },
+    {
+      "type": "slit_closure",
+      "description": "Drain slit fully closed after final knot tension. No residual gap visible.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        14
+      ],
+      "confidence": 0.9
+    },
+    {
+      "type": "knot_slippage",
+      "description": "No evidence of knot slippage. All three throws remain secure throughout demonstration.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        13,
+        14
+      ],
+      "confidence": 0.88
+    },
+    {
+      "type": "drain_avulsion",
+      "description": "Drain remains intact and properly seated throughout entire demonstration. No avulsion observed.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        1,
+        2,
+        6,
+        14,
+        18
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "single_throw",
+        "hand_sequence": "both hands demonstrated for formation",
+        "appears_secure": true,
+        "advancement_quality": "smooth with knot pusher",
+        "notes": "First throw cleanly formed and advanced without slippage"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_sequence": "both hands demonstrated for formation",
+        "appears_secure": true,
+        "advancement_quality": "smooth with knot pusher",
+        "notes": "Second throw formed with consistent technique as first throw"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_sequence": "both hands demonstrated for formation",
+        "appears_secure": true,
+        "advancement_quality": "smooth with knot pusher",
+        "notes": "Third throw completes sequence; all three knots remain secure when seated"
+      }
+    ],
+    "suture_placement": {
+      "target1_passage_quality": "clean, centered on blue mark",
+      "target2_passage_quality": "clean, centered on blue mark",
+      "deviation_from_marks_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.85
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete and secure",
+      "knot_positioning": "at marked target on drain"
+    },
+    "cutting_technique": {
+      "both_tails_cut_inside_trainer": true,
+      "scissors_control": "precise and controlled",
+      "clean_cuts": true
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 85.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 335.0,
+    "formula_applied": "420 - 85.0 - 0.0 = 335.0"
+  },
+  "confidence": 0.88,
+  "confidence_rationale": "This is a clear instructional/demonstration video with no laparoscopic equipment (open-air demonstration on suture block). Completion time is highly visible and consistently shows expert-level execution. Knot quality, suture placement accuracy, and slit closure are all clearly demonstrated with no penalties evident. The demonstration explicitly shows all correct techniques without errors. Camera angle is direct and unobstructed throughout.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level demonstration of the extracorporeal knot-tying task. All phases executed cleanly with proper hand coordination, efficient knot formation using the pusher, complete slit closure, and proper tail cutting. This exemplifies proficiency standards.",
+  "strengths": [
+    "Suture placement perfectly centered on both marked targets with zero deviation",
+    "Clean, sequential throw formation with smooth knot pusher advancement",
+    "Complete slit closure achieved with final knot tension",
+    "Efficient hand transitions between throw formations",
+    "Precise scissor technique with both tails cut inside trainer",
+    "No knot slippage or drain compromise throughout demonstration"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper suture introduction into trainer and positioning on suture block",
+      "Centered needle passage through both marked targets on Penrose drain",
+      "Clean single throw formation with controlled hand looping",
+      "Correct knot pusher application and advancement technique",
+      "Sequential throw progression maintaining knot security",
+      "Final knot positioning to achieve complete slit closure",
+      "Precision scissor technique for tail cutting inside trainer"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Demonstrates centered passage through targets (avoiding off-mark entry/exit)",
+      "Shows proper knot pusher technique to prevent slippage",
+      "Illustrates adequate tension to achieve slit closure without drain avulsion",
+      "Demonstrates clean cutting inside trainer to avoid external tail remnants"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is an expert demonstration with no areas for improvement shown. All techniques are optimally executed."
+  ],
+  "video_id": "myZ4jWKfApo",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:37:52.751790+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - no FLS task performance visible",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_task",
+      "description": "ESCP Training Month promotional slide with European Society of Colorproctology logo and website",
+      "technique_notes": "Introductory/branding content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "pre_task",
+      "description": "Surgeon in green scrubs in clinical office setting, speaking to camera",
+      "technique_notes": "Person appears to be giving narration or introduction in office environment with shelving and medical equipment visible in background",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "pre_task",
+      "description": "Same speaker, various angles as narration continues",
+      "technique_notes": "No laparoscopic instruments, trainer box, or FLS task equipment visible in any frame",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "pre_task",
+      "description": "Speaker gesturing, continuing speech",
+      "technique_notes": "Appears to be educational lecture or interview format, not a task performance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Unable to score - no FLS task performance detected"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "Video contains only ESCP promotional content and a speaker in an office setting. No FLS trainer box, laparoscopic instruments, task setup, or any performance of a recognized FLS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) is visible. This is educational/promotional content, not a scoreable performance.",
+  "cannot_determine": [
+    "Task ID from visual content",
+    "Completion time (no task performed)",
+    "Performance metrics (no task equipment visible)",
+    "Any technical assessments (no task activity present)"
+  ],
+  "technique_summary": "No FLS task performance present. Content is promotional/instructional lecture format only.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": null
+  },
+  "improvement_suggestions": [],
+  "scoring_note": "This video is UNUSABLE for FLS task scoring. It contains no FLS task performance, no trainer setup, and no laparoscopic instruments. To score an FLS task, provide video of actual task performance within the official FLS trainer box.",
+  "video_id": "jUQwiUO9bdE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:20:33.544362+00:00"
+}

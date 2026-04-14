@@ -1,0 +1,18 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "reason": "The video frames provided show a computer-based surgical simulation/VR training application displaying 3D anatomy (liver model) with a blue surgical instrument probe visible. However, this is NOT an actual FLS task being performed. The frames show:",
+  "observations": [
+    "Desktop computer display showing 3D surgical simulation software (not an FLS trainer box)",
+    "Person's hand visible on right side, but no actual FLS instruments (graspers, needle drivers) are being manipulated",
+    "The display shows virtual/rendered anatomy, not the physical FLS trainer models (peg board, gauze, Penrose drain, appendage, etc.)",
+    "This appears to be a virtual reality or computer-based surgical simulator, not a physical MISTELS/FLS task",
+    "No actual task completion can be scored without physical FLS trainer apparatus"
+  ],
+  "cannot_score": "This is not an FLS MISTELS task video. The content is a computer-based surgical simulation interface, not a performance of an official FLS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) on FLS training equipment.",
+  "recommendation": "Please provide a video showing actual FLS task performance on official FLS trainer equipment for scoring.",
+  "video_id": "nQscessqQsw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:40:18.789588+00:00"
+}

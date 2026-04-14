@@ -1,0 +1,159 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparoscopic Bilateral Salpingo-Oophorectomy (BSO) - Surgical Planning and Anatomy Tutorial",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Stylized anatomical rendering of female reproductive system with vasculature highlighted in red and blue",
+      "technique_notes": "3D medical illustration - not a performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "title_sequence",
+      "description": "Large pink 3D text reading '4D' with professional typography",
+      "technique_notes": "Branding/title element",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_content",
+      "description": "Text overlay listing six surgical planning steps: Surgical Planning, Patient Positioning and Port Placement, Identifying the Ureters, Dissection of the Avascular Triangle, Division of Ligaments, Specimen Extraction",
+      "technique_notes": "Educational outline - narrated instructional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "anatomical_diagram",
+      "description": "Detailed 3D anatomical model showing female pelvis with uterus, fallopian tubes, ovaries, and labeled vasculature (red arteries, blue veins)",
+      "technique_notes": "Narration: 'The patient is a 40-year-old woman presenting for prophylactic laparoscopic bilateral salpingo-oophorectomy or BSO'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "positioning_instruction",
+      "description": "3D model of operating table showing patient positioning in dorsal lithotomy and Trendelenburg position",
+      "technique_notes": "Narration: 'The patient will be positioned in dorsal lithotomy and then in steep Trendelenburg position'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "port_placement_overview",
+      "description": "Front view of patient abdomen showing proposed trocar/port placement locations",
+      "technique_notes": "Narration: 'Ports will be placed in the following positions'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "instrument_specification",
+      "description": "Pelvic view with uterine manipulator visible, showing anatomical relationship",
+      "technique_notes": "Narration: 'A uterine manipulator is used for better mobilization'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 38.0,
+      "phase": "ureteral_identification",
+      "description": "3D anatomical model showing ureter identification bilaterally with clear labeling of reproductive structures",
+      "technique_notes": "Narration: 'The initial step is identifying the ureters bilaterally'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 45.0,
+      "phase": "avascular_triangle_anatomy",
+      "description": "Close-up showing avascular triangle region with external iliac vessels, round ligament, and infundibulopelvic ligament highlighted",
+      "technique_notes": "Narration: 'External iliac vessels will be identified in order to distinguish the avascular triangle. A window will be made in the avascular triangle to isolate the IP ligament from the ureter, thereby allowing safe ligation of the IP ligament'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 55.0,
+      "phase": "ligament_division_anatomy",
+      "description": "Anatomical illustration showing infundibulopelvic ligament and ureter relationship with surgical dissection plane",
+      "technique_notes": "Narration: 'The right IP ligament ligament will then be divided. The left utero-ovarian ligament, fallopian tube, and IP ligament will be divided on the right side'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 62.0,
+      "phase": "specimen_extraction",
+      "description": "Anatomical model showing completed bilateral salpingo-oophorectomy with fallopian tubes and ovaries resected",
+      "technique_notes": "Narration: 'The specimens will be extracted through the umbilical port at the end of the procedure'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 70.0,
+      "phase": "final_hemostasis",
+      "description": "Anatomical view showing final pelvic anatomy after specimen removal with emphasis on hemostasis",
+      "technique_notes": "Narration: 'Hemostasis will be assured prior to removal of the laparoscopic ports'",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an educational/instructional video with 3D anatomical illustrations, narrated surgical planning content, and no actual laparoscopic performance. The frames show animated diagrams, text overlays, and voiced narration explaining surgical steps, not a trainee performing an FLS task.",
+  "cannot_determine": [
+    "No FLS task performance present",
+    "No actual surgical instruments or trainer equipment visible",
+    "No time-scored completion possible"
+  ],
+  "technique_summary": "This video is educational content providing anatomical overview and surgical planning for laparoscopic bilateral salpingo-oophorectomy. It covers patient positioning, port placement, anatomical landmarks (ureters, avascular triangle, ligaments), and specimen extraction. Not scorable as an FLS performance.",
+  "strengths": [
+    "Clear anatomical labeling and identification of critical structures",
+    "Systematic coverage of surgical planning steps",
+    "Good visual demonstration of vascular anatomy and ligament relationships",
+    "Emphasis on ureteral identification and avascular triangle dissection"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Patient positioning in dorsal lithotomy and Trendelenburg",
+      "Bilateral ureteral identification technique",
+      "Avascular triangle creation and dissection",
+      "Infundibulopelvic and round ligament identification",
+      "Safe ligament division sequence",
+      "Specimen extraction via umbilical port"
+    ],
+    "verbal_cues": [
+      "Identify ureters bilaterally as first critical step",
+      "Use uterine manipulator for better mobilization",
+      "Create window in avascular triangle to separate IP ligament from ureter",
+      "Identify external iliac vessels to define avascular triangle boundaries",
+      "Ensure hemostasis before port removal"
+    ],
+    "common_errors_addressed": [
+      "Ureteral injury prevention through early bilateral identification",
+      "Vascular injury prevention by understanding avascular triangle anatomy",
+      "Safe ligament division by proper separation of structures before ligation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is instructional content only - not applicable for performance scoring"
+  ],
+  "video_id": "mUap2-UnDHI",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:36:02.982580+00:00"
+}

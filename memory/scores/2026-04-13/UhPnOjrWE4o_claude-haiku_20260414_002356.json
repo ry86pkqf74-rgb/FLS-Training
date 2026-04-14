@@ -1,0 +1,187 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "completion_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Video begins with branding watermark 'DRRK MISHRA' and educational overlay 'Mishra's knot' label visible. Two hands in orange gloves holding purple and yellow suture strands in open configuration over yellow foam appendage. Setup phase\u2014this is NOT a timed performance.",
+      "technique_notes": "Educational demonstration context established. The overlay and branding indicate this is instructional content, not a live FLS performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "knot_formation_demo",
+      "description": "Hands demonstrating suture strand positioning for knot tying. Purple strand held in left hand, yellow strand in right hand, positioned at the foam appendage. Illustrating the first wrap configuration.",
+      "technique_notes": "Clear demonstration of hand positioning and strand orientation. Slow, deliberate movements characteristic of instructional video.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "knot_formation_demo",
+      "description": "Continuing knot formation. Both strands clearly visible; right hand beginning wrap motion around left strand.",
+      "technique_notes": "Demonstrates proper hand dominance and wrap technique for surgeon's knot initiation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "knot_formation_demo",
+      "description": "First throw in progress. Right hand wrapping purple suture around yellow suture, demonstrating double wrap formation (surgeon's knot).",
+      "technique_notes": "Clear demonstration of the first double throw (surgeon's knot) with good tension control.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "knot_formation_demo",
+      "description": "First throw nearing completion. Suture strands forming visible knot structure on foam appendage. Educational overlay 'Mishra's knot' present.",
+      "technique_notes": "Demonstrates knot cinching and closure technique.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "knot_formation_demo",
+      "description": "Second throw preparation. After first surgeon's knot, hands repositioning for second throw. Left hand now appears to lead (hand switch from first throw).",
+      "technique_notes": "Demonstrates proper hand alternation between throws per FLS protocol.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "knot_formation_demo",
+      "description": "Second throw (single throw) in progress. Left hand leading wrap around right strand.",
+      "technique_notes": "Clean hand switch; single wrap (not double) as per specification for second throw.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "knot_formation_demo",
+      "description": "Second throw completion. Knot secured with two throws visible on foam appendage.",
+      "technique_notes": "Knot appears secure; tension appropriate.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 16.0,
+      "phase": "knot_formation_demo",
+      "description": "Third throw preparation. Hands repositioning for final single throw. Right hand repositioning to lead third throw (hand switch from second throw).",
+      "technique_notes": "Demonstrates alternating hand leadership across all three throws.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "knot_formation_demo",
+      "description": "Third throw in progress. Right hand wrapping around left strand for final single throw.",
+      "technique_notes": "Clean execution of final throw with proper hand dominance and single wrap.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 20.0,
+      "phase": "completion_demo",
+      "description": "All three throws complete. Final knot configuration visible on foam appendage. Both suture strands visible below knot. Educational demonstration concluding.",
+      "technique_notes": "Complete knot sequence demonstrated. Suture ends appear available for cutting. Video shows final secured state with good knot integrity.",
+      "penalties_observed": []
+    }
+  ],
+  "phase_timings": null,
+  "penalties": [],
+  "task_specific_assessments": {
+    "video_type": "instructional_demonstration",
+    "actual_performance_scored": false,
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clear double throw demonstrated with proper tension and closure technique"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper hand alternation demonstrated. Single wrap as per protocol."
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Correct final hand switch. Single wrap execution clean."
+      }
+    ],
+    "suture_placement": {
+      "assessment": "not_measurable_from_instructional_video",
+      "reason": "Instructional video focuses on knot technique demonstration rather than precise entry/exit point accuracy measurement"
+    },
+    "drain_assessment": {
+      "workpiece_type": "foam_appendage",
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "completion_status": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "actual_score": null,
+    "scoring_status": "NOT SCORED",
+    "reason": "Video is instructional/educational content with overlay branding and narration cues. Per FLS rubric classification guidelines, instructional videos are NOT scored for performance time or penalties. Teaching content extracted instead."
+  },
+  "confidence": null,
+  "confidence_rationale": "Video classification as 'instructional' is definitive due to: (1) persistent educational watermark 'DRRK MISHRA' overlaid throughout, (2) 'Mishra's knot' educational label present in multiple frames, (3) demonstrative pacing and controlled technique presentation characteristic of instructional video, (4) no timing clock visible, (5) no trainer box environment setup visible\u2014work shown against plain background on foam model outside standard FLS trainer. Therefore, no performance score is computed.",
+  "cannot_determine": [
+    "Actual completion time\u2014no timer shown",
+    "Suture placement accuracy (mm deviation from marks)\u2014marks not visible on foam demo model",
+    "FLS trainer box environment\u2014setup appears to be educational demonstration outside standard FLS apparatus"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper hand positioning for surgeon's knot (first double throw)",
+      "Hand alternation between throws (left \u2192 right \u2192 left pattern demonstrated as right \u2192 left \u2192 right)",
+      "Double wrap formation for first throw (surgeon's knot)",
+      "Single wrap formation for second and third throws",
+      "Knot tension and cinching technique",
+      "Suture strand management during multi-throw sequence",
+      "Final knot security and configuration"
+    ],
+    "verbal_cues": [
+      "Overlay label 'Mishra's knot' identifies the specific knot-tying technique being demonstrated",
+      "No audible narration detected in provided frames, but visual demonstration is pedagogically clear"
+    ],
+    "common_errors_addressed": [
+      "Demonstrates correct hand alternation\u2014emphasizes switching leading hand between each throw (avoiding repeated same-hand dominance)",
+      "Shows proper double-throw (surgeon's knot) formation on first throw vs. single throws on throws 2\u20133",
+      "Illustrates appropriate tension throughout to prevent knot slipping",
+      "Demonstrates complete knot configuration without gaps or loose strands"
+    ],
+    "skill_level_demonstrated": "expert",
+    "expertise_indicators": [
+      "Smooth, deliberate hand transitions between throws",
+      "Clean knot formation with no fumbling or repositioning",
+      "Consistent tension control throughout all three throws",
+      "Proper anatomical hand mechanics and leverage",
+      "Complete demonstration with no failed attempts or corrections needed"
+    ]
+  },
+  "video_summary": "This is an instructional/educational demonstration of the 'Mishra's knot' technique for intracorporeal suturing. The video showcases expert-level knot-tying technique with proper hand alternation and throw sequencing (surgeon's knot first throw, single throws for throws 2\u20133) on a foam training model. Educational branding and overlay present throughout confirms classification as instructional content rather than FLS performance evaluation. No completion time, score, or penalties are applicable.",
+  "improvement_suggestions": null,
+  "video_id": "UhPnOjrWE4o",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:23:56.403583+00:00"
+}

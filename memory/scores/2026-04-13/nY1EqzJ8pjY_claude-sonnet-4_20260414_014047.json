@@ -1,0 +1,127 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Title screen showing 'Suturing' with instructor credits from City University London",
+      "technique_notes": "Educational video introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_load",
+      "description": "Needle driver grasping needle at appropriate position for driving",
+      "technique_notes": "Proper needle grip demonstrated at 2/3 point from tip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "suture_placement",
+      "description": "Needle being driven through pink fabric material with two instruments working together",
+      "technique_notes": "Coordinated bimanual technique shown with counter-traction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "suture_placement",
+      "description": "Needle exit through material with good perpendicular angle",
+      "technique_notes": "Clean needle exit demonstrates proper driving technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "first_throw",
+      "description": "Beginning of knot formation with suture wrapping around instrument",
+      "technique_notes": "Demonstrating proper wrap technique for surgeon's knot",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "first_throw",
+      "description": "Completing double throw for surgeon's knot with careful tension control",
+      "technique_notes": "Double wrap clearly demonstrated for initial throw security",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "second_throw",
+      "description": "Single throw being formed with opposite hand leading",
+      "technique_notes": "Hand switching demonstrated between throws",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "third_throw",
+      "description": "Final single throw completion with instrument positioning",
+      "technique_notes": "Completing three-throw sequence with alternating directions",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "suture_cut",
+      "description": "Scissors positioned to cut suture tails close to knot",
+      "technique_notes": "Proper tail length maintained before cutting",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional video, not a performance to be scored",
+  "cannot_determine": [
+    "Performance timing - this is a demonstration video",
+    "Specific penalty measurements - educational context"
+  ],
+  "technique_summary": "Comprehensive instructional demonstration of intracorporeal suturing technique including proper needle handling, suture placement, and three-throw knot sequence",
+  "strengths": [
+    "Clear demonstration of surgeon's knot double throw technique",
+    "Good visualization of hand switching between throws",
+    "Proper needle driving angle and grip position shown"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper needle grip at 2/3 point from tip",
+      "perpendicular needle driving technique",
+      "surgeon's knot double throw formation",
+      "hand switching between throws",
+      "appropriate suture tail management",
+      "coordinated bimanual instrument use"
+    ],
+    "verbal_cues": [
+      "Title indicates continuation with 'one more stitch'"
+    ],
+    "common_errors_addressed": [
+      "demonstrates proper needle grip position to avoid slipping",
+      "shows appropriate wrap count for surgeon's knot security",
+      "illustrates correct hand alternation between throws"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "nY1EqzJ8pjY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:40:47.523085+00:00"
+}

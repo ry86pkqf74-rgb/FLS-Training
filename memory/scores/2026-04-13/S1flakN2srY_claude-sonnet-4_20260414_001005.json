@@ -1,0 +1,28 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - not an FLS task"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly a virtual reality or computer simulation exercise involving numbered blocks and spatial navigation, not any of the five official FLS tasks (peg transfer, pattern cutting, endoloop, extracorporeal suture, or intracorporeal suture).",
+  "cannot_determine": [],
+  "technique_summary": "N/A - not an FLS task",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "S1flakN2srY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:10:05.870723+00:00"
+}

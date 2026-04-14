@@ -1,0 +1,30 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task video",
+  "content_type": "Educational presentation on virtual patient simulation platform for surgical decision-making assessment",
+  "reason_not_scored": "This is an educational/research presentation video describing the development and validation of a game-based virtual patient simulation platform (Stanford Surgeon Assessment Game) for assessing clinical decision-making in inguinal hernia management. It is NOT a video of an FLS task performance (Peg Transfer, Pattern Cut, Endoloop, or Extracorporeal/Intracorporeal Suture). The video contains slide presentations, instructor narration, and gameplay footage of a clinical decision-making simulation, not laparoscopic surgical skills training.",
+  "video_frames_summary": [
+    {
+      "frame_type": "Title slide",
+      "content": "A Game-Based Virtual Patient Platform to Assess Surgical Decision-Making by Dana T. Lin, MD and Cara A. Liebert, MD (May 26, 2020)"
+    },
+    {
+      "frame_type": "Educational content",
+      "content": "Definitions of Entrustable Professional Activities (EPAs), EPA Levels of Entrustment, assessment frameworks, case content creation methodology"
+    },
+    {
+      "frame_type": "Gameplay demonstration",
+      "content": "Virtual patient simulation interface showing patient history, vital signs, imaging, and clinical decision-making options in surgical game environment"
+    },
+    {
+      "frame_type": "Results/outcomes",
+      "content": "Final score display (6/10), player path visualization, validity testing summary, platform scalability roadmap"
+    }
+  ],
+  "conclusion": "This video is instructional/educational material about a surgical assessment platform, not a trainee performance on an FLS task. No FLS task scoring is applicable.",
+  "video_id": "iUwfQZE9Gws",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:13:21.376201+00:00"
+}

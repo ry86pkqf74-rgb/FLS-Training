@@ -1,0 +1,44 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - instructional/promotional content",
+  "reasoning": "Video contains interview/testimonial segments with medical personnel at Mount Sinai School of Medicine, surgical presentation slides, laparoscopic procedure footage, and data charts. No actual FLS task trainer visible. Content appears to be promotional/educational material about surgical training and research, not a performance evaluation of an FLS MISTELS task.",
+  "frames_analyzed": "All 25 frames reviewed",
+  "key_observations": [
+    "Frames 1-2: Black screen/loading",
+    "Frames 3-8: Interview with female physician in office setting discussing surgical topics (no task performance)",
+    "Frames 9-10: Mount Sinai School of Medicine signage and exterior",
+    "Frame 11: Medical school corridor walkthrough",
+    "Frame 12: Conference room with medical personnel discussion (no task)",
+    "Frame 13: Research data chart on imaging studies (non-task content)",
+    "Frame 14: Elevator/hallway scene with physician",
+    "Frame 15: Laparoscopic surgical footage on monitor (appears to be case review, not FLS trainer)",
+    "Frames 16-18: Close-up laparoscopic view (surgical case footage, not FLS task)",
+    "Frame 19: Woman viewing laparoscopic monitor with hands on instruments (context unclear - may be demonstration but no FLS trainer setup visible)",
+    "Frame 20: Medical bookshelf and surgical monitor in background",
+    "Frame 21: Closeup of person's face (non-task)",
+    "Frames 22-25: AI logo and fade to white"
+  ],
+  "score": "CANNOT_SCORE",
+  "confidence": 0.95,
+  "confidence_rationale": "Video does not contain an FLS MISTELS task performance. No FLS trainer box, pegs, gauze, Penrose drain, or ligating loop apparatus visible. Content is promotional/educational material featuring interviews, facility tours, research data, and surgical case footage. An FLS task requires specific apparatus and performance on defined objective goals; this video does not meet those criteria.",
+  "teaching_content": {
+    "video_type": "Institutional promotional/educational",
+    "institution": "Mount Sinai School of Medicine",
+    "topics_covered": [
+      "Surgical training and education",
+      "Laparoscopic surgery technique demonstration",
+      "Medical imaging research (ultrasound vs CT scan usage)",
+      "Research in surgical outcomes"
+    ],
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "Not applicable - not an FLS task"
+  },
+  "recommendation": "This video is not suitable for FLS task scoring. If FLS task evaluation is needed, please submit video showing direct performance on an FLS MISTELS trainer apparatus with clear start/end markers.",
+  "video_id": "bibugTUiwFY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:53:32.740097+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Medical Simulation Equipment Demonstration - Not an FLS Task",
+  "reason_for_classification": "This video documents a medical conference/expo setting (CAE Apollo, CAEVimedix, CAEAres booths visible) with multiple speakers presenting ultrasound simulation equipment, echocardiography simulators, and emergency medicine mannequins. The footage shows booth attendants (including Caroline White, Simulation Specialist Advisor, and Christina Mastromonaco, PhD student) demonstrating equipment to conference attendees. There is no actual performance of an FLS task (no peg transfer, pattern cutting, endoloop, or suturing visible). The video is educational/promotional in nature.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Black screen - video starts",
+      "observation": "Initialization"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "description": "Caroline White (Simulation Specialist Advisor) speaking at conference booth, multiple display screens showing cardiology/ultrasound simulation content in background",
+      "observation": "Educational/promotional setting, not FLS performance"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 15.0,
+      "description": "Training mannequin visible on blue table; attendee performing echocardiography ultrasound simulation with probe on mannequin torso",
+      "observation": "Demonstration of ultrasound simulation equipment, not FLS task"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 25.0,
+      "description": "Instructor (male, gray blazer) holding ultrasound probe, guiding demonstration to attendees at CAEVimedix booth",
+      "observation": "Educational demonstration of equipment functionality"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35.0,
+      "description": "Close-up of mannequin torso with ultrasound probe positioned; display screen shows cardiac imaging output",
+      "observation": "Real-time ultrasound simulation demonstration"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 45.0,
+      "description": "Conference attendee (female) in purple sweater performing probe manipulation on mannequin; other staff and attendees visible in background",
+      "observation": "Hands-on demonstration phase of simulation equipment"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 55.0,
+      "description": "3D cardiac visualization display on screen showing heart anatomy with color Doppler overlay",
+      "observation": "Simulation output display - instructional content"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 65.0,
+      "description": "Christina Mastromonaco (PhD student) speaking to camera, smiling, mannequin visible in background on blue table",
+      "observation": "Interview/testimonial style content at conference"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 75.0,
+      "description": "Wide shot of conference floor showing multiple CAE simulation equipment booths with attendees walking and engaging with stations",
+      "observation": "Medical conference/expo environment"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 85.0,
+      "description": "Male attendee (VR headset visible) interacting with emergency medicine simulation station; mannequin on table",
+      "observation": "VR and simulation-based training demonstration"
+    }
+  ],
+  "cannot_score": [
+    "No FLS task is being performed in this video",
+    "No timing data applicable as this is not a graded task performance",
+    "No laparoscopic instruments visible",
+    "No FLS trainer box, peg board, gauze, drain, or suture materials present",
+    "Video is educational/promotional content about simulation equipment, not an actual trainee performance"
+  ],
+  "video_content_summary": "Conference presentation/booth documentation featuring medical simulation equipment (ultrasound simulators, emergency medicine mannequins) from CAE. Multiple instructors and PhD students present equipment capabilities to conference attendees. Includes interviews with staff, equipment demonstrations, and conference floor footage. No FLS certification task is being performed.",
+  "confidence": 1.0,
+  "confidence_rationale": "Clear classification as non-FLS content. The video is unambiguously an instructional/promotional recording of medical simulation equipment at a professional conference. No FLS task components are present.",
+  "video_id": "xvba_v8p9HY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:10:33.651771+00:00"
+}

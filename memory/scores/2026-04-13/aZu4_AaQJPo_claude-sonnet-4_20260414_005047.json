@@ -1,0 +1,150 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Initial setup showing 6 objects (3 green, 3 orange) on pegs with on-screen instruction to touch blue ball",
+      "technique_notes": "Standard initial configuration for peg transfer task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper engaging blue object to start timer, right grasper visible",
+      "technique_notes": "Task initiation following proper protocol",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "pickup_nondominant",
+      "description": "Both graspers positioned, beginning transfer sequence with orange objects to left side",
+      "technique_notes": "Good bilateral instrument control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 11.0,
+      "phase": "transfer_midair",
+      "description": "Orange object being transferred from right grasper to left grasper in midair",
+      "technique_notes": "Clean midair transfer without dropping",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 18.0,
+      "phase": "place_dominant",
+      "description": "First green object being picked up by right grasper for transfer to right side",
+      "technique_notes": "Smooth pickup technique with stable grasp",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 27.0,
+      "phase": "place_dominant",
+      "description": "Orange object being placed on left peg while green object held by right grasper",
+      "technique_notes": "Efficient dual-hand coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 37.0,
+      "phase": "reverse_pickup",
+      "description": "Green object being picked up for transfer to right side, continuing reverse direction",
+      "technique_notes": "Maintaining good grasp control throughout sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 48.0,
+      "phase": "reverse_place",
+      "description": "Final completion with all objects transferred to correct positions - 'Exercise completed' message visible",
+      "technique_notes": "Task completed successfully with all objects properly placed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 48.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 8,
+      "end_seconds": 18,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 18,
+      "end_seconds": 28,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 28,
+      "end_seconds": 38,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 38,
+      "end_seconds": 45,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 45,
+      "end_seconds": 48,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped": 0,
+    "objects_placed_correctly": 6,
+    "transfer_sequence_correct": true,
+    "nondominant_to_dominant_completed": true,
+    "reverse_direction_completed": true
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 48.0,
+    "total_penalties": 0,
+    "total_fls_score": 252.0,
+    "formula_applied": "300 - 48.0 - 0 = 252.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Excellent video quality with clear view of all transfers. Task completion clearly marked by on-screen message. No objects dropped or misplaced observed.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level performance with smooth bilateral coordination, efficient midair transfers, and precise placement. Completion time of 48 seconds falls within expert benchmark range (40-60s).",
+  "strengths": [
+    "Excellent bilateral instrument coordination",
+    "Clean midair transfers without drops",
+    "Efficient movement patterns with minimal wasted motion",
+    "Proper task sequence execution"
+  ],
+  "improvement_suggestions": [
+    "Performance already at expert level with minimal room for improvement"
+  ],
+  "video_id": "aZu4_AaQJPo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:50:47.067457+00:00"
+}

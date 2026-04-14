@@ -1,0 +1,16 @@
+{
+  "video_classification": "unusable",
+  "reason": "Content is an educational quiz about dentistry (tooth anatomy, dental procedures, anesthesia complications, sterilization) presented by Quizzprep. This is NOT an FLS task performance video. FLS tasks involve laparoscopic surgical skills (peg transfer, pattern cutting, endoloop placement, suture tying). This quiz content has zero relevance to FLS assessment.",
+  "task_id": "unclassified",
+  "task_name": "N/A",
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "penalties": [],
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "The content explicitly displays 'FLS Practice Test 2026' as a title but the actual questions are about dental anatomy (tooth surfaces, whitening gels, nerve innervation, anesthesia complications, autoclave sterilization). These are general dentistry knowledge questions, not laparoscopic surgical skills tasks. No instruments, trainers, or procedural performance is visible.",
+  "video_id": "mNCR-mo1o5U",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:34:58.824967+00:00"
+}

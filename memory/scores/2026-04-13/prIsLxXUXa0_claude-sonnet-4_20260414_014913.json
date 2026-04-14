@@ -1,0 +1,104 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "promotional_content",
+      "description": "Incision Instrument company promotional slide with contact information",
+      "technique_notes": "Not applicable - promotional material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "instrument_demonstration",
+      "description": "Hand holding laparoscopic needle driver with company watermark overlay",
+      "technique_notes": "Demonstrating instrument grip and design features",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "instrument_demonstration",
+      "description": "Close-up view of laparoscopic needle driver tips and mechanism",
+      "technique_notes": "Showing instrument articulation and jaw design",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "knot_pusher_demonstration",
+      "description": "Display of laparoscopic knot pusher with hands demonstrating proper grip",
+      "technique_notes": "Demonstrating knot pusher design and handle ergonomics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "knot_pusher_demonstration",
+      "description": "Close-up of knot pusher tip and mechanism demonstration",
+      "technique_notes": "Showing the working end design for knot advancement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "knot_pusher_demonstration",
+      "description": "Final demonstration of knot pusher functionality and design",
+      "technique_notes": "Illustrating instrument capabilities for extracorporeal knot tying",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0,
+      "confidence": null
+    },
+    "drain_assessment": {
+      "gap_visible": null,
+      "drain_avulsed": false,
+      "slit_closure_quality": null
+    },
+    "knot_assessments": []
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "No task performance to score"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is promotional/instructional content showing instrument features rather than actual task performance",
+  "cannot_determine": [
+    "Task performance metrics - no actual FLS task execution shown",
+    "Completion time - instructional content only",
+    "Penalty assessment - no task performance visible"
+  ],
+  "technique_summary": "Video demonstrates laparoscopic instrument features for extracorporeal suturing but does not show actual task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper instrument grip for laparoscopic needle drivers",
+      "knot pusher design and functionality demonstration",
+      "instrument tip articulation and jaw mechanism"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "prIsLxXUXa0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:49:13.078247+00:00"
+}

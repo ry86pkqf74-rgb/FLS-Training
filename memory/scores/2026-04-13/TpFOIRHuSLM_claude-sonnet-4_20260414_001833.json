@@ -1,0 +1,63 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task - Educational lecture content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "SAGES FLS TV promotional material showing computer monitor and mobile device",
+      "technique_notes": "Marketing/promotional content, not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Educational slide: 'Training: basic principles of andragogy'",
+      "technique_notes": "Lecture slide discussing adult learning principles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "not_applicable",
+      "description": "Educational slide: 'Implications' discussing practice applications",
+      "technique_notes": "Instructional content about training methodology",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear educational lecture slides with SIU branding discussing laparoscopic training principles, not FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is educational lecture content about laparoscopic training methodology and skill acquisition principles",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "excessive time or performance pressure",
+      "non-participatory didactic programs",
+      "not imminently applicable to practice setting"
+    ],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "TpFOIRHuSLM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:18:33.898299+00:00"
+}

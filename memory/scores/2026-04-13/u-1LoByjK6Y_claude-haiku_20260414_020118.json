@@ -1,0 +1,276 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_setup",
+      "description": "SurgyLight laparoscopy trainer set branding displayed. This is an introductory/instructional frame, not performance.",
+      "technique_notes": "No performance activity visible; instructional content only.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "equipment_display",
+      "description": "Trainer device shown with laparoscopic instruments (Maryland dissector, endoscopic scissors) positioned on task board. Gauze with pre-marked circle visible under the trainer camera view.",
+      "technique_notes": "Educational setup frame. No trainee performance yet.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "traction_setup",
+      "description": "Laparoscopic camera active in the trainer. Gauze with pre-marked blue circle is visible on the task board. Two alligator clips with strings are securing the lower corners of the gauze. The camera provides endoscopic view of the work area.",
+      "technique_notes": "Proper initial setup. Gauze is stabilized under the trainer. Camera angle allows visualization of the marked circle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "traction_setup",
+      "description": "Gauze remains secured. The marked blue circle is clearly visible. No cutting activity has begun.",
+      "technique_notes": "Traction established; ready for initial cut.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "traction_setup",
+      "description": "Same setup; gauze is stable under the trainer clamps.",
+      "technique_notes": "Equipment positioned for task commencement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "traction_setup",
+      "description": "Gauze setup continues with no active cutting yet.",
+      "technique_notes": "Preparation phase.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "entry_cut",
+      "description": "Endoscopic scissors and Maryland dissector are now visible in the trainer field of view. The scissors appear to be approaching the gauze edge to begin the initial cut.",
+      "technique_notes": "Instruments are entering the task area. Scissors positioning suggests preparation for entry cut from the gauze edge toward the marked circle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "entry_cut",
+      "description": "Scissors are now actively engaging the gauze. The cutting action is initiated from the edge of the gauze toward the marked circle region.",
+      "technique_notes": "Entry cut has begun. Scissors are tracking toward the circle perimeter. Maryland dissector provides traction/stabilization.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "circle_following",
+      "description": "Scissors continue cutting along the gauze. The marked circle outline remains visible; cutting path appears to be tracking the pre-marked line.",
+      "technique_notes": "Smooth scissor advancement. Circle tracking is apparent. No obvious deviation from the marked line detected from this view angle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "circle_following",
+      "description": "Cutting continues around the marked circle. Scissors are positioned to follow the blue marked perimeter.",
+      "technique_notes": "Continued accurate circle tracking. Dissector maintains appropriate traction.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "circle_following",
+      "description": "Active cutting is ongoing. The scissors traverse the marked circle line. The cut portion of the gauze shows clean separation.",
+      "technique_notes": "Good scissor control. Circle outline is being followed methodically.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "circle_following",
+      "description": "Scissors continue advancing around the circle. Approximately mid-way through the circumference.",
+      "technique_notes": "Steady progression. No hesitation or erratic movements noted.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "circle_following",
+      "description": "Continued cutting around the marked circle. The scissors and dissector work in coordinated fashion.",
+      "technique_notes": "Technique remains consistent. Circle tracking is maintained.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "circle_following",
+      "description": "Cutting progresses further around the circle circumference.",
+      "technique_notes": "Smooth instrument coordination. No apparent deviations.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "circle_release",
+      "description": "Final portions of the marked circle are being cut. The scissors are nearing the point where the circle will be fully detached from the gauze layer.",
+      "technique_notes": "Nearly complete. Final cut segments are being made.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "circle_release",
+      "description": "The marked circle appears to be nearly or completely detached from the gauze layer. The cutting action has reached completion.",
+      "technique_notes": "Task appears completed. The marked circle has been successfully freed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "circle_release",
+      "description": "Scissors and dissector are withdrawn. The marked blue circle is no longer attached to the main gauze piece; it has been successfully separated.",
+      "technique_notes": "Task completion confirmed. Circle is fully detached and maintained in view.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "completion",
+      "description": "Instruments are being removed from the task area. The marked circle has been cleanly excised.",
+      "technique_notes": "Clean completion of the cutting task.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 18.0,
+      "phase": "completion",
+      "description": "SurgyLight trainer branding appears, indicating end of video segment or transition.",
+      "technique_notes": "Performance segment has ended.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 14.0,
+  "phase_timings": [
+    {
+      "phase": "traction_setup",
+      "start_seconds": 0,
+      "end_seconds": 6,
+      "duration_seconds": 6,
+      "benchmark_comparison": "setup_phase"
+    },
+    {
+      "phase": "entry_cut",
+      "start_seconds": 6,
+      "end_seconds": 8,
+      "duration_seconds": 2,
+      "benchmark_comparison": "fast"
+    },
+    {
+      "phase": "circle_following",
+      "start_seconds": 8,
+      "end_seconds": 14,
+      "duration_seconds": 6,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "circle_release",
+      "start_seconds": 14,
+      "end_seconds": 17,
+      "duration_seconds": 3,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "No visible deviation from the marked blue circle line detected across all cutting phases. Scissors tracking remained on or within 1mm of the pre-marked perimeter.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "confidence": 0.75
+    },
+    {
+      "type": "incomplete_circle",
+      "description": "The marked circle was completely freed from the gauze layer and remained visible throughout the task. Task completed successfully before maximum time.",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        16,
+        17
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "task_specific_assessments": {
+    "gauze_integrity": {
+      "detached_cleanly": true,
+      "tear_or_excessive_damage": "none observed",
+      "circle_intact": true
+    },
+    "cutting_accuracy": {
+      "line_deviation_estimate_mm": 0.5,
+      "deviation_confidence": 0.7,
+      "notes": "Camera angle is straight-on but endoscopic view creates some perspective distortion. No obvious deviation outside the 2mm tolerance at any cardinal point visible."
+    },
+    "completion_status": {
+      "fully_completed": true,
+      "circle_freed": true,
+      "circle_visible_for_assessment": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 14.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 286.0,
+    "formula_applied": "300 - 14.0 - 0.0 = 286.0"
+  },
+  "confidence": 0.72,
+  "confidence_rationale": "The video clearly shows task setup, cutting progression, and task completion. The marked circle is visible throughout and appears to be followed accurately. However, the endoscopic camera angle introduces some perspective distortion, making sub-millimeter deviation measurements uncertain. The branding frames at the start and end suggest this may be a demonstration or training video rather than a formal exam attempt. No penalties are obvious, but fine deviation details are difficult to assess with complete certainty from the angled endoscopic view.",
+  "cannot_determine": [
+    "Exact mm deviation at all 8 cardinal points\u2014endoscopic camera angle and perspective make precise measurement ambiguous",
+    "Whether this is an official performance attempt vs. a demonstration; video structure (branding frames) suggests instructional content"
+  ],
+  "technique_summary": "Exceptionally fast task completion (14 seconds vs. 98-second proficiency benchmark) with no visible deviations from the marked circle line. The marked circle was successfully and cleanly freed from the gauze layer. Instrument coordination was smooth and methodical. This performance is consistent with expert-level execution or a demonstration of optimal technique.",
+  "strengths": [
+    "Very rapid task completion",
+    "Accurate tracking of the pre-marked circle line",
+    "Clean, controlled cutting with no apparent tissue damage",
+    "Excellent gauze stabilization via alligator clips"
+  ],
+  "improvement_suggestions": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper gauze stabilization using alligator clips on lower corners",
+      "Entry cut initiated from gauze edge toward marked circle center",
+      "Methodical clockwise/counterclockwise tracking of pre-marked perimeter",
+      "Coordinated use of Maryland dissector for traction while scissors cut",
+      "Clean separation of marked circle without excessive damage to surrounding gauze"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Deviation from the marked line\u2014video demonstrates precise on-line cutting",
+      "Uncontrolled cutting speed\u2014video shows deliberate, measured scissor advancement",
+      "Incomplete circle separation\u2014video shows complete detachment confirmed visually"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "video_id": "u-1LoByjK6Y",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:01:18.712105+00:00"
+}

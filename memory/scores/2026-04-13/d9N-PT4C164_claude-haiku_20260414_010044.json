@@ -1,0 +1,149 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_task_content",
+      "description": "Anatomical diagram showing Fallopian tube anatomy with tubal ligation points marked.",
+      "technique_notes": "Educational overlay explaining tubal anatomy and target sites for ligation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "pre_task_content",
+      "description": "Diagram showing tubal ligation sites with green markers indicating optimal ligation locations on Fallopian tube.",
+      "technique_notes": "Teaching point: demonstrates the anatomical target for loop placement in clinical context.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "pre_task_content",
+      "description": "Same anatomical diagram with tubal ligation sites highlighted.",
+      "technique_notes": "Reinforces anatomical targeting for educational purposes.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "pre_task_content",
+      "description": "Closeup anatomical view of appendage model showing target marking for loop placement.",
+      "technique_notes": "Demonstrates the specific site where ligating loop should be secured on the foam appendage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "pre_task_content",
+      "description": "Multiple sequential views of appendage with various anatomical landmarks.",
+      "technique_notes": "Educational demonstration of appendage anatomy and target zones.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "pre_task_content",
+      "description": "Closeup of appendage base showing anatomical structure and target site.",
+      "technique_notes": "Teaching point: shows correct anatomical site for loop cinching.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "pre_task_content",
+      "description": "Diagram of tubal reversal procedure explaining anatomical reversibility.",
+      "technique_notes": "Demonstrates clinical context; tubal ligation reversal anatomy.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "pre_task_content",
+      "description": "Instructor wearing surgical mask and headlight; studio/instructional setting evident.",
+      "technique_notes": "Transition to expert instructor presentation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "pre_task_content",
+      "description": "Instructor in surgical attire; educational presentation format.",
+      "technique_notes": "Expert instructor setting; no active task performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "pre_task_content",
+      "description": "Instructor continuing presentation in educational studio.",
+      "technique_notes": "Narrated instruction format; no live task performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "pre_task_content",
+      "description": "Instructor in surgical attire at presentation.",
+      "technique_notes": "Instructional content delivery.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "post_task_content",
+      "description": "Text overlay: 'For more information about Tubal Ligation and Tubal Reversal'",
+      "technique_notes": "Educational closing slide with reference information.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "NOT SCORED \u2014 instructional content only"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video is classified as instructional/educational content with anatomical diagrams, narrated expert presentation, and tutorial format. No actual FLS task performance is visible. Scoring is not appropriate for this video type.",
+  "cannot_determine": [
+    "Completion time \u2014 no actual task performance shown",
+    "Loop placement \u2014 no actual trainer-based task demonstration",
+    "Penalty assessment \u2014 instructional content, not performance"
+  ],
+  "technique_summary": "This is an educational tutorial about tubal ligation anatomy and the ligating loop procedure. The video contains anatomical explanations, target site identification, and expert instructor guidance. No actual FLS task3_endoloop performance is demonstrated in a trainer environment.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Anatomical identification of tubal ligation target sites (Fallopian tube anatomy)",
+      "Recognition of optimal ligation locations on appendages",
+      "Understanding of tissue anatomy for proper loop placement",
+      "Tubal reversal anatomy and reversibility concept"
+    ],
+    "verbal_cues": [
+      "Content titles indicate focus on 'Tubal Ligation Explained' and 'Tubal Reversal Explained'",
+      "Reference to Dr. Gary Berger and www.tubal-reversal.net provided for further learning"
+    ],
+    "common_errors_addressed": [
+      "Proper anatomical site selection (green markers show optimal vs. suboptimal placement zones)",
+      "Recognition of target appendage (middle appendage emphasized in demonstrations)"
+    ],
+    "skill_level_demonstrated": "expert",
+    "instructional_format": "Educational anatomy tutorial with expert instruction and clinical context",
+    "intended_audience": "Medical trainees learning anatomical basis for tubal ligation and loop placement procedures"
+  },
+  "improvement_suggestions": [
+    "This is instructional content; no performance improvement applicable"
+  ],
+  "video_id": "d9N-PT4C164",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:00:44.844412+00:00"
+}

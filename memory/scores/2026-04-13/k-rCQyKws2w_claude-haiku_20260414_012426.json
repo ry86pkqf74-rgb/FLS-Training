@@ -1,0 +1,13 @@
+{
+  "video_classification": "unusable",
+  "reason": "Video contains only close-up headshots of a person in surgical attire against a plain background with World Laparoscopy Hospital branding. No FLS task equipment, trainer box, instruments, or surgical task activity is visible in any frame. This appears to be a portrait or identification video, not an FLS performance recording.",
+  "task_id": "unclassified",
+  "task_name": null,
+  "frame_count": 25,
+  "confidence": 1.0,
+  "actionable_feedback": "Please provide a video showing actual FLS task performance (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) with visible trainer box, instruments, and task materials.",
+  "video_id": "k-rCQyKws2w",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:24:26.216007+00:00"
+}

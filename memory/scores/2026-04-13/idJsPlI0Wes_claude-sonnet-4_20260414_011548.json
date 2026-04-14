@@ -1,0 +1,68 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task - Academic Presentation",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_title",
+      "description": "Black screen with no visible content",
+      "technique_notes": "N/A - No FLS task content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "presentation_outline",
+      "description": "Academic presentation slide showing title 'SS08: Education, Simulation and Assessment' with outline about FES certification",
+      "technique_notes": "Educational content about proficiency-based preparation for FES certification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 40.0,
+      "phase": "equipment_display",
+      "description": "Slide showing MITIE training equipment with laparoscopic simulator visible",
+      "technique_notes": "Shows benchtop models used for training - not actual task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 60.0,
+      "phase": "results_presentation",
+      "description": "Graph showing pre- and post-test manual skills scoring improvements",
+      "technique_notes": "Data visualization showing training effectiveness across different FES skills",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Structured curriculum approach for FES preparation",
+      "Use of benchtop models for skills training",
+      "Pre/post assessment methodology"
+    ],
+    "verbal_cues": [
+      "Proficiency-based preparation significantly improves FES certification performance",
+      "Best methods for augmenting endoscopic skills largely unknown",
+      "Loop reduction was weakest skill requiring additional focus"
+    ],
+    "common_errors_addressed": [
+      "Inadequate preparation leading to 40% initial pass rate",
+      "Lack of structured training curriculum",
+      "Insufficient correlation between case numbers and FES performance"
+    ],
+    "skill_level_demonstrated": "educational_research"
+  },
+  "cannot_determine": [
+    "No FLS task performance visible",
+    "No scoring metrics applicable",
+    "No completion time measurable"
+  ],
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an academic presentation about FES training curriculum development, not an FLS task performance. All slides show research methodology, results, and educational content rather than hands-on surgical skills demonstration.",
+  "video_id": "idJsPlI0Wes",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:15:48.992862+00:00"
+}

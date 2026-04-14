@@ -1,0 +1,76 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine - instructional content only",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "news_segment",
+      "description": "Black screen, appears to be start of news broadcast",
+      "technique_notes": "Not applicable - news content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "news_segment",
+      "description": "News anchors in studio discussing health alert about surgery residency",
+      "technique_notes": "Not applicable - news content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "simulator_demonstration",
+      "description": "Laparoscopic simulator screen showing surgical view with timer at 00:05:33",
+      "technique_notes": "Training simulator interface visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "educational_content",
+      "description": "Interactive anatomy display showing rib cage and internal organs",
+      "technique_notes": "Educational touchscreen technology demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "surgical_simulation",
+      "description": "Laparoscopic view showing surgical instruments and tool selection interface",
+      "technique_notes": "Clip applier selected, appears to be gallbladder surgery simulation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 0.95,
+  "confidence_rationale": "Clear news broadcast content about surgery residency program and training technology. No actual FLS task performance visible.",
+  "cannot_determine": [
+    "FLS task identification - video contains only news content and equipment demonstrations",
+    "Task performance metrics - no actual task execution shown"
+  ],
+  "technique_summary": "Educational news segment showcasing surgical training technology and residency programs",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic simulator interface usage",
+      "interactive anatomical displays",
+      "surgical training technology overview"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational_overview"
+  },
+  "improvement_suggestions": [],
+  "video_id": "sHS83IC5FAs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:55:54.330476+00:00"
+}

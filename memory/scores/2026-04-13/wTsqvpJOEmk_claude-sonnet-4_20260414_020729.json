@@ -1,0 +1,115 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Opening animation with blue circuit-like graphics, educational intro sequence",
+      "technique_notes": "Video introduction graphics, not actual task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 15.0,
+      "phase": "instructional_title",
+      "description": "Title card showing 'Basic & Advance Suturing Techniques' for surgery trainees",
+      "technique_notes": "Educational content title screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 30.0,
+      "phase": "instructional_content",
+      "description": "Purple title 'Part 1/2 Intracorporeal Lap Suturing' with motivational text",
+      "technique_notes": "Educational section identifier",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 45.0,
+      "phase": "setup_demonstration",
+      "description": "FLS trainer box view with Penrose drain, two needle drivers visible, suture material present",
+      "technique_notes": "Proper FLS setup shown with educational overlay text about practice importance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 60.0,
+      "phase": "needle_positioning",
+      "description": "Needle drivers positioned near slit Penrose drain, needle and suture visible",
+      "technique_notes": "Demonstration of proper instrument positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 75.0,
+      "phase": "suture_technique_demo",
+      "description": "Active demonstration of suture placement through drain with both needle drivers engaged",
+      "technique_notes": "Shows coordinated two-handed technique for tissue manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 90.0,
+      "phase": "knot_formation_demo",
+      "description": "Beginning of knot formation sequence with suture loops visible",
+      "technique_notes": "Demonstrates proper loop formation for intracorporeal knot tying",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 105.0,
+      "phase": "knot_tying_sequence",
+      "description": "Active knot tying with multiple loops and throws being formed",
+      "technique_notes": "Shows complex multi-throw knot sequence with proper hand switching",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "instructional_content_type": "Educational demonstration with narrated overlays",
+    "fls_equipment_setup": "Standard FLS trainer with Penrose drain and silk suture demonstrated",
+    "technique_coverage": "Complete intracorporeal suturing workflow shown"
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is instructional content with educational overlays, not a scoreable performance",
+  "cannot_determine": [
+    "Performance scoring not applicable for instructional content"
+  ],
+  "technique_summary": "Comprehensive educational video demonstrating intracorporeal suturing technique for surgery trainees with motivational messaging and proper FLS setup",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper FLS trainer setup with Penrose drain",
+      "Two-handed needle driver coordination",
+      "Intracorporeal knot tying sequence",
+      "Multi-throw knot formation",
+      "Hand switching between throws"
+    ],
+    "verbal_cues": [
+      "Practice is the master key that unlocks the door to success",
+      "Embrace the challenges of today's training",
+      "Expert tips and detailed procedure breakdowns available"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "wTsqvpJOEmk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:07:29.917964+00:00"
+}

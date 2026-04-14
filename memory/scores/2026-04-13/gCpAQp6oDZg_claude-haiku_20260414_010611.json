@@ -1,0 +1,15 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown FLS Task",
+  "reason_not_scored": "Video is instructional/testimonial content featuring a learner discussing training needs and program benefits. No actual task performance is visible. Content consists of interview segments with title cards and branding slides from Simsei Simulation, not a recorded FLS task execution.",
+  "frame_content_summary": "Frames show a female trainee in business casual attire speaking to camera with testimonial-style narration. Text overlays ask 'What were your training needs as a learner?' and 'How did the Simsei Simulation Program advance your learning?' Final frames display the Simsei Simulation Program branding ('Comprehensive Laparoscopic Training Solution'). No trainer box, instruments, or task setup are visible.",
+  "video_type": "marketing/educational testimonial",
+  "scoreable": false,
+  "confidence": 1.0,
+  "note": "This is promotional/educational content, not a performance recording. No FLS task execution is present. Per instructions, instructional videos with narration and overlays should not be scored for performance.",
+  "video_id": "gCpAQp6oDZg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:06:11.655954+00:00"
+}

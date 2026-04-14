@@ -1,0 +1,27 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparoscopic Colpotomy Simulation Model",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "tissue model construction using styrofoam balls and candle",
+      "low-cost simulation setup",
+      "pig stomach tissue preparation",
+      "laparoscopic instrument handling on tissue model",
+      "energy device practice techniques"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "cannot_determine": [
+    "This video shows construction and demonstration of a colpotomy simulation model, not an FLS task performance",
+    "No FLS scoring rubric applies to this educational content about tissue model creation"
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Clear presentation slides and tissue model construction demonstration. This is educational content about creating simulation models, not performance of standardized FLS tasks.",
+  "video_id": "m9bvGyarwb4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:33:56.062595+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "cannot_score_reason": "This is an instructional/tutorial video showing the FLS trainer apparatus from multiple angles with 3D renders and assembly/disassembly views. No actual performance of the peg transfer task is visible. The final frames show instruments (scissors/graspers) but no trainee performing the task or transferring pegs. The video appears to be educational content about the FLS trainer equipment itself rather than a scored performance.",
+  "video_content_observed": [
+    "Frame 1-3: Title card showing 'HZMIM' FLS trainer apparatus",
+    "Frame 4-7: 3D rendered views of closed FLS trainer box from different angles",
+    "Frame 8-10: 3D rendered view of opened FLS trainer with base plate visible",
+    "Frame 11-12: 3D rendered assembly/setup configurations with pegs visible",
+    "Frame 13-20: Instructional views showing trainer configuration with pegs and side panels",
+    "Frame 21: Trainer apparatus flat/disassembled view showing all components",
+    "Frame 22-24: Transition to live-action showing trainer closing mechanism",
+    "Frame 25-26: Video fades to black (equipment demonstration ends)",
+    "Frame 27-29: Laparoscopic instruments (graspers/scissors) shown against trainer apparatus",
+    "Frame 30-31: Instruments positioned near trainer but no task performance visible"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS trainer apparatus assembly and configuration",
+      "Proper trainer setup and opening/closing mechanisms",
+      "Peg board layout with 6 peg positions",
+      "Laparoscopic instrument orientation and positioning"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_equipment_demo"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is certain\u2014this is clearly instructional/equipment demonstration content with 3D renders and apparatus setup views. No actual performance task execution is present, so scoring is not applicable.",
+  "scoring_status": "NOT SCORED - Instructional content only",
+  "video_id": "zl3J5tkQIiw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:16:18.193184+00:00"
+}

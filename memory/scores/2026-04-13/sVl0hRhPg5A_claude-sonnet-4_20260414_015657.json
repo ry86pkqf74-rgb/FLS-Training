@@ -1,0 +1,93 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black frame - video beginning",
+      "technique_notes": "No visible content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "overview",
+      "description": "Multiple FLS trainers visible in simulation lab setup",
+      "technique_notes": "Educational context - multiple workstations shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "task_display",
+      "description": "Close-up view of Task 1 peg transfer board with 6 rubber objects on pegs",
+      "technique_notes": "Standard setup - 6 objects visible on left pegs, right pegs empty",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "instructor_introduction",
+      "description": "Matthew Weaks, Simulation Technologist speaking to camera",
+      "technique_notes": "Educational/instructional format with title overlay",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "demonstration_setup",
+      "description": "Instructor and trainee at FLS station with Task 1 visible on screen",
+      "technique_notes": "Hands-on teaching scenario being demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "task_demonstration",
+      "description": "FLS trainer screen showing peg transfer task in progress",
+      "technique_notes": "Some objects transferred to right pegs, demonstration of proper technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot score - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear identification of Task 1 peg transfer setup and educational context with instructor presentation. No actual performance to score.",
+  "cannot_determine": [
+    "Completion time - no single performance shown",
+    "Specific penalties - instructional content only",
+    "Performance score - educational video format"
+  ],
+  "technique_summary": "Educational video demonstrating FLS Task 1 peg transfer in simulation lab setting with instructor guidance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper FLS trainer setup",
+      "Task 1 peg transfer board configuration",
+      "Simulation lab environment"
+    ],
+    "verbal_cues": [
+      "Educational presentation format visible through instructor speaking"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "sVl0hRhPg5A",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:56:57.194457+00:00"
+}

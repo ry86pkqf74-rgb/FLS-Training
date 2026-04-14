@@ -1,0 +1,11 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine - not an FLS task video",
+  "assessment_notes": "This appears to be a LapSim virtual reality laparoscopic training simulation showing gallstone identification and targeting exercises. The video shows instructional prompts for camera control and gallstone targeting with yellow/green targeting circles, which is not part of the standard FLS/MISTELS task battery. This is a different training system entirely.",
+  "cannot_score_reason": "Video content is from a virtual reality simulation platform (LapSim by Surgical Science) rather than physical FLS task performance on actual training equipment.",
+  "video_id": "dPWXGG_QZlc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:01:30.329697+00:00"
+}

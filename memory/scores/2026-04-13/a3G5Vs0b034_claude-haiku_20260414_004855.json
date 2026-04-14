@@ -1,0 +1,196 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "SAGES/ASE Symposium - FLS Program Overview and Educational Content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Title slide introducing SAGES/ASE Symposium on Building State-of-the-Art Simulation Curriculum. Chair: Denise W. Gee, MD. Co-Chairs listed.",
+      "technique_notes": "Presentation cover slide with speaker credentials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "program_overview",
+      "description": "Slide introducing SAGES Fundamentals Programs with FLS, FES, and FUSE certification logos displayed. Presenter: Col E. Matthew Ritter, MD",
+      "technique_notes": "Educational overview of three FLS-related certification programs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "fls_overview",
+      "description": "FLS Program Overview slide showing FLS video trainer box and laparoscopic instruments in training setup",
+      "technique_notes": "Visual representation of FLS training equipment and setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "fls_manual_skills",
+      "description": "FLS Manual Skills slide listing 5 tasks: Peg Transfer, Pattern Cut, Endoloop, Extracorporeal knot, Intracorporeal knot. Shows equipment images and training modules",
+      "technique_notes": "Comprehensive listing of all 5 FLS manual skills tasks with visual reference materials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "proficiency_curriculum",
+      "description": "Proficiency-based Skills Curriculum table displaying: Task, Proficient Performance criteria, Proficiency Time, and Recommended Repetitions. Shows expert performance benchmarks for all 5 tasks with time targets (48s, 98s, 53s, 136s, 112s) and repetition requirements",
+      "technique_notes": "Detailed proficiency benchmarking table establishing expert performance standards across all FLS tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "fls_conclusions",
+      "description": "FLS Program Conclusions slide stating that FLS provides uniform curriculum for basic knowledge and technical skills in laparoscopy, is reliable and valid for testing competence, and serves as model for technology-dependent surgical advances",
+      "technique_notes": "Educational summary highlighting evidence base and value of FLS program",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "fls_contact_info",
+      "description": "Contact information slide for SAGES FLS Program: www.flsprogram.org, phone, email, physical address in Los Angeles. Lists Jessica Mischna as Fundamentals Director and Inga Brissman as FLS Program contact",
+      "technique_notes": "Resource and contact information for FLS program access",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "fes_program_audience",
+      "description": "FES Program Audience slide defining eligible FES candidates: surgical residents/fellows, residents in accredited internal medicine programs teaching endoscopy, board-eligible/certified surgeons and gastroenterologists performing endoscopic procedures",
+      "technique_notes": "Eligibility criteria for Fundamentals of Endoscopic Surgery program",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "fes_online_curriculum",
+      "description": "Screenshot of SAGES Fundamentals of Endoscopic Surgery online study guide showing pathology recognition module with endoscopic images of lower GI pathology. Navigation menu shows Introduction, Pathology Recognition, Complications, Assessment tabs",
+      "technique_notes": "Web-based educational module demonstrating FES online learning platform and content structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "fes_research_publication",
+      "description": "Research publication slide titled 'A proficiency-based virtual reality endoscopy curriculum improves performance on the fundamentals of endoscopic surgery examination' with multiple author names and DOI citation. Shows endoscopy simulator equipment image",
+      "technique_notes": "Educational research demonstrating evidence-based outcomes for FES virtual reality curriculum",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "fes_curriculum_results",
+      "description": "Curriculum Results bar chart showing scored FES scores across four conditions: Repetition (~475), Proficiency (~525), Historical (~375), National (~450). Chart includes error bars and shows performance differences across training approaches",
+      "technique_notes": "Comparative outcome data showing proficiency-based training superiority over other training modalities",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "fes_contact_info",
+      "description": "FES Program contact information: www.FESprogram.org, address in Los Angeles, phone, email. Lists Jessica Mischna as Program Manager and Brenda Castaneda as FES coordinator",
+      "technique_notes": "Resource and contact information for FES program",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60.0,
+      "phase": "fuse_program_intro",
+      "description": "FUSE Program introduction slide showing laptop, FUSE logo, certification examination box, and The SAGES Manual on Fundamental Use of Surgical Energy textbook. Blue background with program flow diagram",
+      "technique_notes": "Introduction to Fundamental Use of Surgical Energy certification program with resource materials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65.0,
+      "phase": "fuse_curricular_domains",
+      "description": "FUSE Curricular Domains table showing 10 domains with 63 total objectives: (1) Fundamentals of electrosurgery (7), (2) Mechanisms/prevention of adverse events w/electrosurgery (20), (3) Monopolar devices (4), (4) Bipolar devices (5), (5) Radiofrequency for soft tissue ablation (4), (6) Endoscopic devices (4), (7) Ultrasonic energy systems (5), (8) Microwave energy systems (2), (9) Energy devices in pediatric surgery (3), (10) Integration with other medical devices (9)",
+      "technique_notes": "Comprehensive curriculum structure for FUSE certification spanning energy modalities and surgical applications",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "phase": "fuse_education_center_role",
+      "description": "Role for Education Center slide listing FUSE resources: Lectures available on FUSE website (www.fuseprogram.org), Hands-On Skills Stations covering monopolar electrosurgery, ultrasonic energy, RFA/microwave",
+      "technique_notes": "Educational delivery model combining web-based lectures with hands-on skills training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 75.0,
+      "phase": "fuse_training_curriculum",
+      "description": "FUSE Training Curriculum slide stating full curriculum available in written and video form from SAGES FUSE committee, emphasizing FUSE as fundamental skill for ALL surgeons regardless of specialty. Shows electrocoagulation equipment setup and tissue ablation demonstration images",
+      "technique_notes": "Educational emphasis on universal applicability of surgical energy fundamentals across specialties",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 80.0,
+      "phase": "fuse_contact_info",
+      "description": "FUSE Program contact information: www.FUSEprogram.org, address in Los Angeles, phone, email (info@fuseprogram.org). Lists Jessica Mischna as Program Manager and Brenda Castaneda as FUSE coordinator",
+      "technique_notes": "Resource contact information for FUSE program",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Instructional content only"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video is clearly instructional/educational content with presentation slides, no actual trainee performance. No scoring is appropriate.",
+  "cannot_determine": [
+    "No FLS task performance present in this video",
+    "No completion time measurable",
+    "No penalties applicable"
+  ],
+  "technique_summary": "This is a comprehensive educational presentation on SAGES Fundamentals Programs (FLS, FES, FUSE) delivered at the 2018 SAGES symposium. The content includes program overviews, proficiency benchmarking standards, curriculum structures, research outcomes, and program contact information. NOT a performance video suitable for FLS scoring.",
+  "strengths": [
+    "Comprehensive coverage of three SAGES fundamentals certification pathways",
+    "Clear proficiency benchmarking standards with specific time targets and repetition requirements",
+    "Evidence-based outcomes demonstrating proficiency-based training superiority",
+    "Well-organized curricular domain structure with defined objectives"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS proficiency benchmarking: expert time targets for Peg Transfer (48s), Pattern Cut (98s), Endoloop (53s), Extracorporeal suture (136s), Intracorporeal suture (112s)",
+      "Proficiency-based curriculum model requiring 2 consecutive proficient performances",
+      "Virtual reality endoscopy training effectiveness for FES certification",
+      "Comprehensive electrosurgery and surgical energy competency framework via FUSE program"
+    ],
+    "verbal_cues": [
+      "FLS provides uniform curriculum for basic knowledge and technical skills in laparoscopy",
+      "FLS is a reliable and valid process for testing competence in basic laparoscopy",
+      "FLS serves as a model for training as technology-dependent surgical advances are introduced",
+      "FUSE is a fundamental skill for ALL surgeons, regardless of specialty"
+    ],
+    "common_errors_addressed": [
+      "Demonstrates benchmarking to prevent inadequate training by establishing expert performance standards",
+      "Emphasizes repetition and proficiency-based progression over time-based advancement",
+      "Highlights integration of online didactic content with hands-on skills training across all programs"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is educational content only; no performance improvement applicable"
+  ],
+  "video_id": "a3G5Vs0b034",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:48:55.356034+00:00"
+}

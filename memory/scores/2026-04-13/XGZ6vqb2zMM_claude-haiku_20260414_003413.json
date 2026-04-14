@@ -1,0 +1,22 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason_not_scorable": "This is an educational/research presentation (ROSIM study April 2023) comparing robotic surgical training modalities (VR simulator vs dry lab). The first frame shows a da Vinci surgical simulator with a trainee, but the remainder is a slide presentation discussing study design, outcomes, force measurements, and qualitative analysis. No individual FLS task performance is being recorded or evaluated.",
+  "content_type": "educational_research_presentation",
+  "presentation_topic": "Feasibility, effectiveness and transferability of virtual reality robotic training platform for general surgery residents",
+  "key_study_elements": [
+    "Randomized crossover trial of 20 robotic novices",
+    "Comparison of VR + dry lab vs dry lab + VR training sequences",
+    "Outcome measures: OSATS scores, force measurements (ForceSense), qualitative analysis",
+    "Results: VR non-inferior to dry lab; VR-dry lab sequence superior to dry lab-VR",
+    "Conclusion: Equal surgical performance after single training with VR versus dry lab"
+  ],
+  "fls_score": "not_applicable",
+  "confidence": 1.0,
+  "scoring_note": "This is an instructional/research presentation, not a performance video. No FLS task scoring is appropriate. If FLS task performance video is available, please provide the specific task recording.",
+  "video_id": "XGZ6vqb2zMM",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:34:13.215177+00:00"
+}

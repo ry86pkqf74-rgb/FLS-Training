@@ -1,0 +1,14 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason": "This video depicts a group graduation/course completion ceremony (F.MAS Course, October 2022) with multiple graduates in academic regalia holding certificates. It contains no FLS task performance, laparoscopic equipment, trainer box, or surgical simulation activity. The frames show only still photography of an indoor ceremonial event with no surgical skills demonstration.",
+  "frames_analyzed": 25,
+  "confidence": 1.0,
+  "score": null,
+  "scoring_not_applicable": true,
+  "video_id": "qaARXeVWpso",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:51:53.527349+00:00"
+}

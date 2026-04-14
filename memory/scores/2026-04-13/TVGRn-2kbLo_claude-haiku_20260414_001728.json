@@ -1,0 +1,148 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Shatby Endo-School Basic Laparoscopy Course - Multiple Tasks Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro_title_card",
+      "description": "AHC logo with black screen - course opening",
+      "technique_notes": "Instructional content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "course_introduction",
+      "description": "Title card: 'SHATBY ENDO-SCHOOL BASIC LAPAROSCOPY COURSE' with laparoscopic trainer setup visible",
+      "technique_notes": "Educational/institutional setting displayed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 7.0,
+      "phase": "equipment_demo",
+      "description": "Laparoscopic instruments (scissors/grasper) being held with monitor in background",
+      "technique_notes": "Instrument handling demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "curriculum_outline",
+      "description": "Handwritten curriculum document held by instructor showing course outline",
+      "technique_notes": "Educational content - course structure presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 18.0,
+      "phase": "instructor_presentation",
+      "description": "Male instructor holding laparoscopic instrument in group educational setting",
+      "technique_notes": "Course lecture/demonstration phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "group_instruction",
+      "description": "Multiple trainees in classroom observing instructor demonstration",
+      "technique_notes": "Classroom-based instructional delivery",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 35.0,
+      "phase": "task_demonstration_peg_transfer",
+      "description": "Overhead view of laparoscopic trainer with orange pegs visible - appears to be peg transfer setup",
+      "technique_notes": "Task 1 (Peg Transfer) trainer configuration shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 42.0,
+      "phase": "task_demonstration_pattern_cut",
+      "description": "Close-up of circular orange gauze pattern with laparoscopic scissors positioned - cutting task setup",
+      "technique_notes": "Task 2 (Pattern Cut) trainer visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 48.0,
+      "phase": "task_demonstration_endoloop",
+      "description": "Orange foam appendage under laparoscopic view with instruments positioned",
+      "technique_notes": "Task 3 (Endoloop) trainer configuration shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 55.0,
+      "phase": "monitor_display",
+      "description": "Close-up monitor showing intra-operative view of foam structure with green tissue coloration",
+      "technique_notes": "Endoscopic visualization of task setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 62.0,
+      "phase": "group_observation",
+      "description": "Trainees in surgical attire (scrubs, hijabs, masks) observing procedure in OR-like setting",
+      "technique_notes": "Clinical training environment - hands-on observation phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 70.0,
+      "phase": "course_closing",
+      "description": "Final title card: 'SHATBY ENDO-SCHOOL BASIC LAPAROSCOPY COURSE' with instructor and trainees in background",
+      "technique_notes": "Course conclusion slide",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Instructional content, no individual performance to score"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "Video is instructional/documentary content showing course overview, setup, and group teaching. No individual trainee performance of timed FLS tasks is demonstrated. Cannot score as performance because there is no single task completion sequence or measurable time/penalty data. Content spans multiple FLS tasks (peg transfer, pattern cut, endoloop visible) in demonstration/educational format only.",
+  "cannot_determine": [
+    "Individual task completion - no single task performed from start to finish",
+    "Completion time - instructional montage, not a timed performance",
+    "Penalties - educational setup, not evaluated performance",
+    "Specific task_id - multiple tasks shown in overview format"
+  ],
+  "technique_summary": "This is an instructional documentary video produced by Shatby Endo-School showing the Basic Laparoscopy Course curriculum, equipment, instructors, and trainees. It is NOT a performance video of an individual trainee completing an FLS task. The video includes course introduction, instructor presentations, classroom instruction, trainer setups for multiple tasks, and hands-on group learning in a clinical setting.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Course curriculum structure and objectives",
+      "Laparoscopic instrument handling (scissors, grasper grip)",
+      "Trainer setup for multiple FLS tasks (peg transfer, pattern cut, endoloop)",
+      "Proper institutional training environment with oversight",
+      "Group-based hands-on learning in clinical setting"
+    ],
+    "verbal_cues": [
+      "Instructional presentation by experienced surgeon/instructor",
+      "Documentation of course structure and learning objectives"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert_instruction"
+  },
+  "improvement_suggestions": [
+    "To score this content, individual trainee performance videos of specific FLS tasks are required",
+    "Videos must show complete task execution from start to finish with timestamp and performance metrics"
+  ],
+  "video_id": "TVGRn-2kbLo",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:17:28.478370+00:00"
+}

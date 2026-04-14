@@ -1,0 +1,205 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Static view of FLS trainer with instruments positioned, no active manipulation visible",
+      "technique_notes": "Clean setup with instruments in neutral position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping needle, positioning for suture placement",
+      "technique_notes": "Needle appears to be grasped at appropriate position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 24.0,
+      "phase": "suture_placement",
+      "description": "Needle being driven through what appears to be Penrose drain material",
+      "technique_notes": "Needle entry angle appears perpendicular to tissue",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 40.0,
+      "phase": "suture_placement",
+      "description": "Both needle drivers working to complete suture passage through drain",
+      "technique_notes": "Good coordination between instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 64.0,
+      "phase": "first_throw",
+      "description": "Beginning knot formation with suture material, appears to be forming first throw",
+      "technique_notes": "Suture being manipulated for knot tying",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 80.0,
+      "phase": "first_throw",
+      "description": "Continuing first throw formation with both instruments active",
+      "technique_notes": "Instruments working in coordination for knot formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 112.0,
+      "phase": "second_throw",
+      "description": "Formation of second throw, suture configuration changing",
+      "technique_notes": "Appears to be proper hand switching between throws",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 144.0,
+      "phase": "third_throw",
+      "description": "Final throw being completed, knot appears to be tightening",
+      "technique_notes": "Good tension control visible during knot completion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 168.0,
+      "phase": "suture_cut",
+      "description": "Scissors cutting suture tails, completing the task",
+      "technique_notes": "Both suture ends being cut within the trainer",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 168.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 16,
+      "duration_seconds": 16,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 16,
+      "end_seconds": 56,
+      "duration_seconds": 40,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 56,
+      "end_seconds": 88,
+      "duration_seconds": 32,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 88,
+      "end_seconds": 120,
+      "duration_seconds": 32,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 120,
+      "end_seconds": 152,
+      "duration_seconds": 32,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 152,
+      "end_seconds": 168,
+      "duration_seconds": 16,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "description": "Unable to clearly identify marked suture placement points due to camera angle and resolution",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        4,
+        6
+      ],
+      "confidence": 0.3
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "First throw appears to be double throw as required"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper hand switching observed"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw with appropriate hand switching"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.2
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "appears_complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 168.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 432.0,
+    "formula_applied": "600 - 168.0 - 0.0 = 432.0"
+  },
+  "confidence": 0.6,
+  "confidence_rationale": "Video quality and camera angle limit precise assessment of suture placement relative to marks. Knot formation and completion clearly visible, but exact deviation measurements cannot be determined reliably.",
+  "cannot_determine": [
+    "Exact suture placement deviation from marks - marks not clearly visible in video",
+    "Precise gap assessment in drain slit - resolution insufficient for fine detail",
+    "Exact needle entry angle measurements"
+  ],
+  "technique_summary": "Solid intermediate-level performance with proper knot sequence (double throw followed by two single throws with hand switching). Completion time of 168 seconds places this in intermediate range. All major technical requirements appear to be met.",
+  "strengths": [
+    "Proper surgeon's knot sequence with double first throw",
+    "Consistent hand switching between throws",
+    "Smooth instrument coordination throughout",
+    "Task completed within time limit"
+  ],
+  "improvement_suggestions": [
+    "Work on reducing overall time - current 168s vs expert benchmark of 80-120s",
+    "Focus on more efficient needle loading and suture placement phases"
+  ],
+  "video_id": "dxGMRbqNrtI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:02:47.534659+00:00"
+}

@@ -1,0 +1,86 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine - instructional content",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Dr. Durie Suh, surgical resident at Hospital Triemli, speaking to camera with surgical mask",
+      "technique_notes": "Educational introduction with professional medical setting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "introduction",
+      "description": "Continued introduction with name overlay identifying Dr. Durie Suh as surgical resident",
+      "technique_notes": "Professional medical educational context established",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "branding",
+      "description": "VirtaMed ED logo display - medical education technology company branding",
+      "technique_notes": "Commercial educational content identifier",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "equipment_demo",
+      "description": "Two medical professionals demonstrating laparoscopic equipment setup in mobile training unit",
+      "technique_notes": "Educational demonstration of laparoscopic training equipment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "equipment_demo",
+      "description": "Close-up view of hands manipulating laparoscopic instruments on training equipment",
+      "technique_notes": "Technical demonstration of instrument handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 27,
+      "timestamp_seconds": 26.0,
+      "phase": "equipment_showcase",
+      "description": "VirtaMed laparoscopic simulator setup showing monitor and training box with trocar ports",
+      "technique_notes": "Commercial product demonstration of simulation technology",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 28,
+      "timestamp_seconds": 27.0,
+      "phase": "equipment_showcase",
+      "description": "Laparoscopic view on monitor showing simulation environment with yellow appendage structure",
+      "technique_notes": "Virtual reality simulation display - not actual FLS task performance",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper laparoscopic instrument handling",
+      "ergonomic positioning at laparoscopic trainer",
+      "use of simulation technology for surgical training"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational_demonstration"
+  },
+  "cannot_determine": [
+    "Specific FLS task being performed",
+    "Completion time",
+    "Technical penalties",
+    "Performance scoring"
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "This is clearly educational/promotional content for VirtaMed simulation equipment rather than an actual FLS task performance. The presence of branding, introductory interviews, and equipment demonstrations confirms this is instructional content.",
+  "technique_summary": "Educational video demonstrating laparoscopic simulation technology and training equipment setup. Not suitable for FLS performance scoring as it focuses on equipment demonstration rather than task execution.",
+  "video_id": "VUeMdw51LF8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:26:53.858012+00:00"
+}

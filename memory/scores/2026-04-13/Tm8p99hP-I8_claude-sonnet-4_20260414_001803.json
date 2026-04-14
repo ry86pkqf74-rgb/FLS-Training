@@ -1,0 +1,51 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": null,
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "product_advertisement",
+      "description": "HumanX logo and branding for surgical training tools",
+      "technique_notes": "This is a commercial product video, not an FLS performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "product_demonstration",
+      "description": "HumanX EasySurg Training System phantom with anatomical components",
+      "technique_notes": "Product showcase showing internal organs and training capabilities",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "product_features",
+      "description": "Display of vascular flow capabilities and HF-surgery connections",
+      "technique_notes": "Marketing content showing product features and capabilities",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": null,
+  "confidence_rationale": "This video contains only product marketing content for the HumanX EasySurg Training System. No FLS task performance is shown.",
+  "cannot_determine": [
+    "FLS task identification - video shows product advertisement only",
+    "Performance metrics - no surgical task being performed",
+    "Scoring components - not applicable for marketing content"
+  ],
+  "technique_summary": "Not applicable - this is a product advertisement video",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "Tm8p99hP-I8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:18:03.997087+00:00"
+}

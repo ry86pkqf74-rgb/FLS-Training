@@ -1,0 +1,74 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not FLS Task - Live Surgery Documentation",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen, video beginning",
+      "technique_notes": "No content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Operating room overview from external observation window showing multiple surgeons at patient table",
+      "technique_notes": "Live surgery environment, not FLS training setting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "not_applicable",
+      "description": "Multiple surgeons around instrument table in sterile surgical environment",
+      "technique_notes": "Real patient surgery, surgical team coordination visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "not_applicable",
+      "description": "Close-up of Dr. Michael Britt, identified as Orthopaedic Surgeon with LSU Health Shreveport title overlay",
+      "technique_notes": "Professional identification overlay indicates documentary/instructional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "not_applicable",
+      "description": "Overhead view of surgical team operating with laparoscopic monitors visible showing internal surgical view",
+      "technique_notes": "Live minimally invasive surgery, multiple monitors showing patient anatomy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "not_applicable",
+      "description": "Surgeons working directly on patient with bright surgical lighting and multiple team members",
+      "technique_notes": "Active patient care, not training simulation",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "sterile surgical environment maintenance",
+      "multi-surgeon coordination",
+      "laparoscopic surgical technique in live patient setting",
+      "proper surgical positioning and ergonomics"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear identification overlay of surgeon and institution, live operating room environment with real patient surgery, multiple surgical team members, and professional lighting/equipment definitively indicate this is instructional documentation of actual surgery rather than FLS training",
+  "cannot_determine": [],
+  "technique_summary": "This video documents live minimally invasive surgery in a professional operating room setting, showing expert-level surgical technique and team coordination, but is not related to FLS training tasks.",
+  "video_id": "XL7vuKhXGqA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:34:38.524413+00:00"
+}

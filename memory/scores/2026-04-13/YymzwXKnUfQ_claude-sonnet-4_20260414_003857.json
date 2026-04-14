@@ -1,0 +1,122 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "instructional_introduction",
+      "description": "Instructor introducing Roeder's knot technique in medical setting",
+      "technique_notes": "Educational content with 'THE MEDICITY' branding",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "knot_configuration_explanation",
+      "description": "Instructor explaining 1-3-1 configuration for Roeder's knot",
+      "technique_notes": "Verbal instruction on knot throw sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "suture_preparation",
+      "description": "Demonstrating proper suture end positioning - shorter left, longer right",
+      "technique_notes": "Proper suture orientation for extracorporeal knot tying",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "thread_crossing",
+      "description": "Demonstrating crossing of suture threads with hands",
+      "technique_notes": "Initial thread crossing technique shown clearly",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "hitch_formation",
+      "description": "Taking one hitch with the longer suture end",
+      "technique_notes": "Clear demonstration of hitch formation with finger control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "wind_formation",
+      "description": "Taking one wind while keeping both limbs together",
+      "technique_notes": "Proper technique for maintaining thread control during winding",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "half_lock_formation",
+      "description": "Creating half lock with the longer end",
+      "technique_notes": "Demonstration of half-lock technique for knot security",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "completed_knot_display",
+      "description": "Final knot showing 1 hitch, 3 winds, and lock configuration",
+      "technique_notes": "Complete Roeder's knot formation demonstrated",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "instructional_content": "Complete Roeder's knot tutorial from introduction to final formation"
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video with educational branding and step-by-step knot tying demonstration. Not a performance assessment.",
+  "cannot_determine": [
+    "Performance metrics - this is educational content, not a task performance"
+  ],
+  "technique_summary": "Comprehensive instructional demonstration of Roeder's knot technique with clear verbal and visual guidance.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper suture end positioning (shorter left, longer right)",
+      "Thread crossing technique",
+      "Hitch formation with finger control",
+      "Wind formation while maintaining limb control",
+      "Half-lock creation for knot security",
+      "Complete Roeder's knot configuration (1-3-1)"
+    ],
+    "verbal_cues": [
+      "Keep the shorter on the left side and the longer on the right side",
+      "Now you cross the thread",
+      "Take one hitch with longer one",
+      "Then pinch it here",
+      "Take one wind keeping both the limbs together",
+      "Take one more wind",
+      "Now we can take a half lock with the longer end",
+      "The knot has 1 hitch 3 winds and lock"
+    ],
+    "common_errors_addressed": [
+      "Improper suture end positioning",
+      "Loss of thread control during winding",
+      "Incorrect knot configuration ratios"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "YymzwXKnUfQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:38:57.769561+00:00"
+}

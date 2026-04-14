@@ -1,0 +1,59 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "content_type": "Educational presentation on surgical simulation training and skills transfer",
+  "description": "This is a lecture-style presentation with slides covering FLS fundamentals, simulator training evidence, skills transfer studies, and methodological considerations in simulation-based surgical education. It includes multiple research citations, study design frameworks, and educational content about the effectiveness of laparoscopic surgery simulator training.",
+  "scoring_applicable": false,
+  "reason_no_score": "This video is instructional/educational content with narrated slides and research summaries. There is no FLS task performance by a trainee or surgeon. No actual manipulation of surgical instruments, no training box, no task execution, and no completion time to measure.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Overview of FLS curriculum and validation",
+      "Evidence for simulator-to-clinical skill transfer",
+      "Study design considerations for simulation research",
+      "Transfer effectiveness ratio (TER) methodology",
+      "Part-task trainer effectiveness (peg transfer, knot tying, suturing)"
+    ],
+    "verbal_cues": [
+      "FLS simulator training improves early clinical laparoscopic performance",
+      "Skills acquired in a simulator transfer to the clinical realm",
+      "Part-task trainers transfer to lap chole in the OR",
+      "Technical skills and part-task trainers are the focus, not non-technical competencies"
+    ],
+    "common_errors_addressed": [
+      "Overestimating VR simulator effectiveness without comparable metrics",
+      "Failing to control for confounding variables in skills transfer studies",
+      "Focusing only on technical skills without addressing cognitive and judgment components",
+      "Methodological inconsistencies across simulators making cross-study comparison difficult"
+    ],
+    "research_highlights": [
+      "2000 Scott et al.: 27 PGY 2-3 surgical trainees showed improved lap chole performance after videotrainer practice",
+      "2002 Seymour et al.: VR to OR study showed 29% improvement in efficiency, 6x fewer errors in trained group",
+      "2010 Sroka - FLS validation study demonstrating robust curriculum and outcome measures",
+      "Systematic review (Stum et al. 2008): Evidence shows skills transfer from simulator to clinical setting",
+      "Colonoscopy training study: Both simulator and bedside groups achieved similar clinical performance"
+    ],
+    "methodological_issues_discussed": [
+      "Heterogeneous study designs limiting comparability",
+      "Variable outcome measures across different simulators",
+      "Need for standardized training curricula",
+      "Challenge in establishing clinical relevance of simulator metrics",
+      "Importance of blinding and control groups in research design"
+    ],
+    "skill_level_demonstrated": "expert",
+    "audience_level": "surgical educators, residency program directors, simulation researchers"
+  },
+  "key_takeaways": [
+    "FLS simulator training to proficiency significantly improves clinical laparoscopic performance",
+    "Evidence base for FLS is robust with validated curriculum and outcome measures",
+    "Skills transfer is most notable for novices at the beginning of the learning curve",
+    "Technical skills are measurable and transferable; integration with non-technical competencies needed",
+    "More standardized research methodologies needed to strengthen evidence for VR simulators in flexible endoscopy"
+  ],
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an educational presentation with no surgical task performance. Classification is unambiguous.",
+  "video_id": "Vs97QUgvWbk",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:28:51.878313+00:00"
+}

@@ -1,0 +1,65 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "promotional_content",
+      "description": "Aerial view of Rome Colosseum with Prima Vista branding",
+      "technique_notes": "Not applicable - promotional material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "speaker_introduction",
+      "description": "Dr. Pierluigi Bove speaking to camera in formal interview setting",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "training_demonstration",
+      "description": "Participants observing laparoscopic training station with instruments",
+      "technique_notes": "Group educational setting, hands-on training observation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - not an FLS task performance"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear promotional and educational content for laparoscopic urology masterclass. Multiple speakers, text overlays, and promotional elements confirm this is instructional material rather than FLS task performance.",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is promotional/educational content for a laparoscopic surgery masterclass, not an FLS task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic instrument handling observation",
+      "educational workshop format"
+    ],
+    "verbal_cues": [
+      "masterclass introduction",
+      "live surgery demonstrations mentioned"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "pdVEo8-3ygs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:48:06.174629+00:00"
+}

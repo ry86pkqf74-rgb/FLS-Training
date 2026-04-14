@@ -1,0 +1,28 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": null,
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": null
+  },
+  "confidence": null,
+  "confidence_rationale": "Video contains promotional/educational content about medical training programs and Ottawa city life, but no FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": null,
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "rnPxdmPytiA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:53:43.773369+00:00"
+}

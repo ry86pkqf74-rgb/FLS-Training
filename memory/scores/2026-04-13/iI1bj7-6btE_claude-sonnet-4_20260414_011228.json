@@ -1,0 +1,117 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_title",
+      "description": "Title slide: 'Suturing in Parallel and Perpendicular Planes: A Systematic Geometric Approach to Laparoscopic Suturing'",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_demo",
+      "description": "Demonstration of needle driving through tissue with proper instrument positioning",
+      "technique_notes": "Shows optimal needle grasp and perpendicular entry angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_comparison",
+      "description": "Four-panel comparison showing different suturing approaches",
+      "technique_notes": "Comparative demonstration of technique variations",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "instructional_motion",
+      "description": "Motion cues demonstration with text overlay",
+      "technique_notes": "Teaching proper instrument movement patterns",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "instructional_observer",
+      "description": "Motion of Observer demonstration showing camera angle effects",
+      "technique_notes": "Explains importance of viewing angle in laparoscopic procedures",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 85.0,
+      "phase": "instructional_knot",
+      "description": "Knot tying instruction slide with bullet points",
+      "technique_notes": "Text overlay teaching knot preparation, throwing, and securing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 100.0,
+      "phase": "instructional_technique",
+      "description": "Demonstration of 'Across & Over' technique with text overlay",
+      "technique_notes": "Shows specific wrapping technique for intracorporeal knot tying",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional video, not a performance to be scored",
+  "cannot_determine": [],
+  "technique_summary": "Educational content covering systematic geometric approach to laparoscopic suturing with emphasis on proper needle driving, motion cues, and intracorporeal knot tying techniques.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper needle grasp at 2/3 point from tip",
+      "Perpendicular needle entry angle",
+      "Systematic geometric approach to suturing",
+      "Motion cues for instrument guidance",
+      "Observer angle optimization",
+      "Port placement considerations (ipsilateral, contralateral, suprapubic)",
+      "Intracorporeal knot tying preparation",
+      "Across and over wrapping technique",
+      "Loop preparation and throwing technique",
+      "Knot securing methods"
+    ],
+    "verbal_cues": [
+      "Systematic approach to laparoscopic suturing",
+      "Motion cues",
+      "Motion of observer",
+      "Port placement",
+      "Knot tying preparation",
+      "Throwing of the knot",
+      "Securing the knot",
+      "Across & Over"
+    ],
+    "common_errors_addressed": [
+      "Poor needle angle leading to tissue damage",
+      "Incorrect observer positioning",
+      "Improper port placement affecting ergonomics",
+      "Inadequate knot preparation",
+      "Poor wrapping technique in knot formation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "iI1bj7-6btE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:12:28.789834+00:00"
+}

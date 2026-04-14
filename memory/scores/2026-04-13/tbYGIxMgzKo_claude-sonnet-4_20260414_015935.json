@@ -1,0 +1,69 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "Title slide showing 'FLS Expanded Video Tutorial'",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "instructional_content",
+      "description": "Overview slide explaining tutorial will cover basic characteristics, expectations, allowable errors, timing, and efficiency tips for each manual skill",
+      "technique_notes": "Comprehensive educational overview outlined",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "instructional_content",
+      "description": "General testing pointers slide discussing training box variations and instrument familiarity recommendations",
+      "technique_notes": "Practical advice for test preparation and equipment considerations",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "No actual task performance to score"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional presentation slides with no actual task performance visible. This is educational content, not a scorable performance.",
+  "cannot_determine": [
+    "Completion time - no task performance shown",
+    "Penalties - no task performance shown",
+    "FLS score - no task performance shown"
+  ],
+  "technique_summary": "Educational tutorial introduction covering FLS program overview and general testing strategies.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Study online audio PowerPoint presentations on SAGES website",
+      "Study video tutorials on SAGES website",
+      "Study skills curriculum PDF",
+      "Training boxes vary slightly - practice with different angles",
+      "Consider bringing familiar instruments to test if proctor allows"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "tbYGIxMgzKo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:59:35.434928+00:00"
+}

@@ -1,0 +1,101 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Novel Posterior Cul-de-Sac Simulation Model - Educational Presentation",
+  "content_type": "research_presentation_and_model_construction_tutorial",
+  "analysis_summary": "This is an educational/instructional video presenting a novel surgical simulation model for laparoscopic posterior cul-de-sac dissection training. The video contains presentation slides, materials lists, step-by-step construction instructions, and demonstration footage of the model in use within a laparoscopic trainer box. It is NOT an FLS official task performance video and therefore does NOT receive an FLS score.",
+  "reason_not_scored": "This video is instructional content documenting the design, materials, construction methodology, and validation of a custom simulation model. It is not a performance recording of an FLS-certified task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). The frames show: (1) presentation slides with background and objectives, (2) materials table and surgical tools list, (3) step-by-step model construction (uterosacral ligaments, painting, suturing through fundus and rectum, adhesion creation), (4) assembly into a laparoscopic trainer, and (5) validation results from 17 residents and 9 experts. No trainee is performing a timed FLS task.",
+  "video_segments_identified": [
+    {
+      "segment": "Title and Author Slide",
+      "content": "Novel Posterior Cul-de-Sac Simulation Model by Senapati, Alsaden, Schroer, Tu"
+    },
+    {
+      "segment": "Background and Goals",
+      "content": "Problem statement: obliteration of posterior cul-de-sac is unexpected surgical finding; lack of simulation models; objectives: create realistic, affordable, reproducible model for residency curriculum"
+    },
+    {
+      "segment": "Materials List (Appendix 1)",
+      "content": "Detailed cost breakdown of materials totaling ~$3-4 per model: chair pad (uterus), fiberfill (endometriosis), mylar blankets (rectal mucosa), quilt batting (rectal serosa), paint, dyes, adhesives, twine"
+    },
+    {
+      "segment": "Step 2: Uterosacral Ligaments",
+      "content": "Construction of parametrial ligaments using twine with specific 0.5\" and 2.5\" spacing dimensions"
+    },
+    {
+      "segment": "Step 3: Paint and Draw Levels",
+      "content": "Painting uterus pink using Liquitex acrylic paint; marking dissection planes (Level 1, 2, 3) with 1\" and 0.5\" spacing"
+    },
+    {
+      "segment": "Step 4: Sutures Through Fundus",
+      "content": "Placement of sutures through uterine fundus with coiled twine extending externally"
+    },
+    {
+      "segment": "Step 5: Create Rectum",
+      "content": "Assembly of rectal component using Mylar blankets (mucosa), fiberfill (serosa), cotton quilt batting; dimensions 5\"\u00d711\" with 6\" sections; adhesive assembly with spray glue"
+    },
+    {
+      "segment": "Step 6: Sutures Through Rectum",
+      "content": "Placement of sutures through rectal component with external leads; shows completed model with suture placement marks"
+    },
+    {
+      "segment": "Step 7: Finalize Model",
+      "content": "Assembly into trainer box with camera, light source, laparoscopic tower, and monitor; instruction to allow 24-hour drying; application of additional adhesive if needed"
+    },
+    {
+      "segment": "Validation Study",
+      "content": "17 residents (9 PGY 1/2, 8 PGY 3/4) and 9 experts (4 GYN surgery fellows, 5 oncology/MIS attendings); pre/post surveys evaluating comfort level; 2-minute instructional video; 30 minutes allotted for dissection; results show increased comfort after one dissection; high realism and utility ratings"
+    },
+    {
+      "segment": "Conclusion",
+      "content": "Model can be incorporated into resident training as affordable and realistic simulation model"
+    },
+    {
+      "segment": "Laparoscopic Demonstration Footage",
+      "content": "Video clips (5 frames) showing the completed model inside a laparoscopic trainer box viewed via camera; demonstrates anatomic accuracy with colored foam components (pink uterus, green adhesions, beige rectum); shows laparoscopic instrument interaction; includes warning text 'DO NOT CUT THE BOWEL'"
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Low-cost construction of anatomically realistic posterior cul-de-sac model",
+      "Use of household materials (chair padding, fiberfill, mylar, batting) to simulate pelvic anatomy",
+      "Color-coding and marking of dissection planes for educational reference",
+      "Integration of adhesion simulation using spray adhesive and fiberfill",
+      "Suture placement technique for defining anatomic landmarks",
+      "Assembly of modular components into integrated trainer box setup",
+      "Importance of allowing adequate drying time (24 hours) before use"
+    ],
+    "verbal_cues": [
+      "Portions of the following video clip... (narration overlay at start)",
+      "DO NOT CUT THE BOWEL (red warning text during laparoscopic demonstration)"
+    ],
+    "common_errors_addressed": [
+      "Model fragility: importance of 24-hour drying and proper adhesive application",
+      "Anatomic confusion: clear level marking and color differentiation to prevent disorientation during dissection",
+      "Bowel injury: explicit warning against cutting rectal component during laparoscopic practice"
+    ],
+    "skill_level_demonstrated": "expert",
+    "educational_value": "High \u2014 comprehensive documentation of simulation model development process from conceptualization through validation, enabling reproducibility and adoption by other training programs"
+  },
+  "validation_summary": {
+    "participant_count": 26,
+    "resident_count": 17,
+    "expert_count": 9,
+    "study_design": "Pre/post survey with instructional video (2 minutes) and 30-minute dissection session",
+    "outcomes": [
+      "Increased comfort level after single dissection",
+      "High realism ratings from both residents and experts",
+      "High utility ratings for training purposes"
+    ]
+  },
+  "scoring_determination": {
+    "fls_task_present": false,
+    "reason": "This is a research presentation and educational tutorial on simulation model construction and validation, not a performance-based assessment of an FLS task. No trainee is executing Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture within a timed, scored protocol.",
+    "fls_score": null,
+    "confidence": 1.0
+  },
+  "video_id": "SIm7h-NUBFA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:12:04.963050+00:00"
+}

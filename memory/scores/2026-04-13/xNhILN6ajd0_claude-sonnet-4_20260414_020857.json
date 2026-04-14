@@ -1,0 +1,28 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": null,
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": null
+  },
+  "confidence": null,
+  "confidence_rationale": "This video content is unrelated to FLS tasks - it shows English proficiency test materials with grammar and spelling exercises",
+  "cannot_determine": [],
+  "technique_summary": null,
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "xNhILN6ajd0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:08:57.090061+00:00"
+}

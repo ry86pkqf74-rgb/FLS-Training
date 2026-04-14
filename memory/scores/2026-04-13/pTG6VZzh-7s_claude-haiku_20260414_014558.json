@@ -1,0 +1,50 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional content only"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video is a research presentation slide deck with title slide, study background, methods, results graphs, and conclusions. No actual performance footage of peg transfer task is visible. This is educational/instructional material describing a randomized controlled trial comparing reversed camera view practice versus orientation drills for laparoscopic peg transfer in novice surgeons.",
+  "cannot_determine": [
+    "Completion time \u2014 no performance video present",
+    "Penalties \u2014 no task execution visible",
+    "Phase timings \u2014 no task phases executed in this content",
+    "FLS score \u2014 not scorable as no performance demonstration"
+  ],
+  "technique_summary": "Not applicable. This is a research presentation, not a performance video.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Baseline FLS peg transfer with standard camera orientation (forward view)",
+      "Peg transfer with reversed camera orientation (180 degrees)",
+      "Spatial orientation drills using instrument tracing with reversed camera view"
+    ],
+    "verbal_cues": [
+      "Surgical residents take 470% longer to complete reversed camera peg transfer tasks",
+      "Experienced surgeons take 65% longer with reversed camera orientation",
+      "Greatest performance improvement occurs after 11 repetitions of reversed camera peg transfer practice"
+    ],
+    "common_errors_addressed": [
+      "Disorientation in reversed camera view \u2014 addressed by dedicated spatial orientation drills",
+      "Inefficient transfer technique in reversed orientation \u2014 improved significantly with task-specific reversed camera practice (p < 0.01)"
+    ],
+    "skill_level_demonstrated": "instructional/research",
+    "study_findings": "Practicing a validated task (peg transfer) with reversed camera view confers significant performance improvement, with greatest change after 11 repetitions. Spatial orientation drills with reversed camera do not confer significant improvement compared to forward view practice alone."
+  },
+  "scoring_note": "This content is a research presentation and does not contain scorable performance footage. No FLS task score is generated. Content is classified as instructional and used only for extraction of teaching/learning points.",
+  "video_id": "pTG6VZzh-7s",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:45:58.391041+00:00"
+}

@@ -1,0 +1,75 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen - video opening",
+      "technique_notes": "No content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Interview shot of Dr. Shlomo Melmed with title overlay",
+      "technique_notes": "Institutional promotional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "not_applicable",
+      "description": "Operating room scene with surgeons in scrubs",
+      "technique_notes": "General surgical footage, not FLS training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "not_applicable",
+      "description": "Medical students or residents in educational setting",
+      "technique_notes": "Educational/classroom environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "not_applicable",
+      "description": "Close-up of hands performing surgical procedure on patient",
+      "technique_notes": "Actual surgery, not simulation training",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - not an FLS task performance"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is institutional promotional/educational content, not an FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "This appears to be a medical education promotional video featuring interviews with faculty and general surgical footage, not an FLS training task",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "improvement_suggestions": [],
+  "video_id": "luIIgtBjs30",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:32:26.082233+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine",
+  "reason": "Video contains only head-and-shoulders footage of a person in surgical attire speaking to camera. No FLS task equipment, trainer box, instruments, or procedural content is visible. This appears to be introductory/promotional content or lecture material without any hands-on task performance.",
+  "frame_evidence": "All 25 frames show identical framing: speaker's face/upper torso against neutral background with World Laparoscopy Hospital branding visible in corner. No surgical trainer, pegs, gauze, Penrose drain, sutures, graspers, or needle drivers present.",
+  "confidence": 1.0,
+  "actionable_next_steps": "Please provide video footage showing actual FLS task performance with visible trainer equipment and instrument manipulation.",
+  "video_id": "St5gUJRn3Ls",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:13:42.176873+00:00"
+}

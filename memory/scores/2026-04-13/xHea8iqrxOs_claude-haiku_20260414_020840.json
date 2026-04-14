@@ -1,0 +1,12 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason": "This is promotional/marketing content featuring Dr. Sheetal Patel from 360 Bariatrics. The video contains no FLS task performance, no surgical trainer, no instruments, and no timed procedure. It is a 'Top 10 MD' interview/profile segment with contact information and branding.",
+  "scoreable": false,
+  "fls_scoring_applicable": false,
+  "video_id": "xHea8iqrxOs",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:08:40.663549+00:00"
+}

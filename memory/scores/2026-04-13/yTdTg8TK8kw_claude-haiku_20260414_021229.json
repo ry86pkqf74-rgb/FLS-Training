@@ -1,0 +1,147 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Equipment and Instrumentation Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Instructor in FLS training facility introducing equipment overview. Blue surgical drapes and comprehensive instrument board visible in background. Blue trainers and multiple surgical instruments arranged on table.",
+      "technique_notes": "Professional FLS training environment with organized instrument display",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "cable_demonstration",
+      "description": "Instructor holding blue cable/tubing, discussing equipment. Organized instrument trays visible in background.",
+      "technique_notes": "Clear demonstration of laparoscopic cable management",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "grasper_demonstration",
+      "description": "Close-up view of laparoscopic grasper in use, demonstrating handle mechanics and tip control",
+      "technique_notes": "Demonstrates proper instrument control and handling technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "scissors_demonstration",
+      "description": "Two types of scissors displayed - Pean clamp and standard surgical scissors",
+      "technique_notes": "Side-by-side comparison of cutting instruments used in FLS tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "needle_holder_display",
+      "description": "Crile-Wood needle holder displayed with proper grip technique shown",
+      "technique_notes": "Demonstrates standard FLS needle holding instrument",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "debridement_tool_demo",
+      "description": "DeBakey forceps displayed showing fine tip control for tissue handling",
+      "technique_notes": "Demonstrates precision grasping instrument for delicate tissue work",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "knot_pusher_demo",
+      "description": "Knot pusher instrument displayed, used in extracorporeal and intracorporeal knot tying tasks",
+      "technique_notes": "Essential tool for knot management in tasks 4 and 5",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "suction_tip_demo",
+      "description": "Frazier suction tip displayed with handle and control mechanism visible",
+      "technique_notes": "Demonstrates proper suction instrument for hemostasis and visualization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "needle_set_display",
+      "description": "Multiple surgical needles displayed in organized red tray showing various needle styles and sizes",
+      "technique_notes": "Shows needle variety used across different FLS suturing tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "forceps_demonstration",
+      "description": "Surgical forceps/tweezers displayed in precision holding configuration",
+      "technique_notes": "Fine instrument control demonstrated for precise tissue handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "instructor_summary",
+      "description": "Instructor presenting overview of key instruments arranged on workspace, discussing their roles in FLS tasks",
+      "technique_notes": "Educational synthesis of instrument purposes and applications",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is definitive. This is an instructional/educational video with an expert instructor demonstrating FLS equipment in a training facility. No performance task is being executed, therefore no FLS score should be calculated.",
+  "cannot_determine": [
+    "Specific task performance metrics - this is not a performance video"
+  ],
+  "technique_summary": "This video is an educational overview of FLS instrumentation and equipment, not a scored task performance. The instructor systematically demonstrates the key instruments used across all five FLS tasks in a controlled training environment.",
+  "strengths": [
+    "Clear demonstration of instrument handling and mechanics",
+    "Organized presentation of equipment with proper labeling",
+    "Professional FLS training facility setup",
+    "Systematic overview of core instruments"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper laparoscopic grasper handling and tip control",
+      "Scissors/cutting instrument mechanics (Pean clamp, DeBakey)",
+      "Needle holder grip and needle control (Crile-Wood)",
+      "Knot pusher use for extracorporeal suture management",
+      "Suction tip control (Frazier)",
+      "Fine forceps control for precision tasks"
+    ],
+    "verbal_cues": [
+      "Equipment overview in professional training context",
+      "Instrument identification and nomenclature",
+      "Explanation of instrument purposes across FLS tasks"
+    ],
+    "common_errors_addressed": [
+      "Improper instrument grip - demonstrates correct positioning",
+      "Poor instrument control - shows how to maintain precision",
+      "Instrument confusion - clearly identifies each tool by name and function"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is instructional content - no performance scoring applicable"
+  ],
+  "video_id": "yTdTg8TK8kw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:12:29.959551+00:00"
+}

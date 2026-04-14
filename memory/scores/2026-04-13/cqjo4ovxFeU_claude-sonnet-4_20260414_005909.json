@@ -1,0 +1,105 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_setup",
+      "description": "Black frame, appears to be video beginning or transition",
+      "technique_notes": "No visible content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_demo",
+      "description": "Two medical professionals in clinical setting, one in surgical gown with endoscopic equipment",
+      "technique_notes": "Instructional context with expert demonstrating endoscopic technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "equipment_demonstration",
+      "description": "Close-up of endoscopic handle showing control mechanisms and buttons",
+      "technique_notes": "Educational focus on instrument controls and ergonomics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 45.0,
+      "phase": "endoloop_demonstration",
+      "description": "Laparoscopic view showing numbered pegs in circular pattern, endoloop visible",
+      "technique_notes": "Clear view of FLS endoloop task setup with foam appendage and target marks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 60.0,
+      "phase": "loop_deployment",
+      "description": "Endoloop being deployed and positioned around foam appendage",
+      "technique_notes": "Demonstrating proper loop deployment technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 90.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage near target marking",
+      "technique_notes": "Precise placement at marked line demonstration",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": null,
+      "loop_cinched_properly": null,
+      "appendage_transected": null
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional/educational video showing equipment demonstration and technique teaching, not a scoreable performance",
+  "cannot_determine": [
+    "Completion time - instructional content",
+    "Performance penalties - educational demonstration",
+    "Final score - not a performance assessment"
+  ],
+  "technique_summary": "Educational demonstration of endoloop technique with focus on proper equipment handling and deployment",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper endoscopic handle grip and control",
+      "Endoloop deployment mechanics",
+      "Target identification and loop positioning",
+      "Systematic approach to loop placement"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper instrument handling",
+      "Poor loop positioning relative to target marks"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "strengths": [
+    "Clear demonstration of proper technique",
+    "Systematic approach to task completion",
+    "Good visualization of target anatomy"
+  ],
+  "improvement_suggestions": [],
+  "video_id": "cqjo4ovxFeU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:59:09.415431+00:00"
+}

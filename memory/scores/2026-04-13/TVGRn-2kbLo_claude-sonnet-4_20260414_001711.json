@@ -1,0 +1,99 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General Laparoscopic Training Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "AHC logo and title screen - 'SHATBY ENDO-SCHOOL BASIC LAPAROSCOPY COURSE'",
+      "technique_notes": "Educational branding and course identification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "classroom_setting",
+      "description": "Training environment showing laparoscopic simulator with participants",
+      "technique_notes": "Professional training setup with proper equipment configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "equipment_demonstration",
+      "description": "Close-up of laparoscopic instruments being held properly",
+      "technique_notes": "Proper ergonomic grip demonstrated on laparoscopic graspers",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "curriculum_overview",
+      "description": "Document showing course curriculum and task objectives",
+      "technique_notes": "Structured learning approach with written objectives",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "simulator_training",
+      "description": "FLS trainer box with orange circular targets visible on monitor",
+      "technique_notes": "Standard FLS task setup with proper lighting and camera positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "hands_on_training",
+      "description": "Multiple participants practicing with laparoscopic instruments",
+      "technique_notes": "Collaborative learning environment with proper supervision",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear identification of educational content with course branding, curriculum documentation, and training environment. No specific FLS task performance to score.",
+  "cannot_determine": [
+    "Specific task performance metrics - this is instructional content rather than task execution",
+    "Individual skill assessment - multiple participants shown in training environment"
+  ],
+  "technique_summary": "Comprehensive laparoscopic surgery training program showing proper educational structure, equipment setup, and hands-on learning methodology.",
+  "strengths": [
+    "Well-organized training environment",
+    "Proper FLS equipment configuration",
+    "Structured curriculum approach",
+    "Hands-on learning with supervision"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper instrument grip and handling",
+      "Correct laparoscopic trainer box setup",
+      "Ergonomic positioning for laparoscopic tasks",
+      "Camera and lighting optimization"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper instrument handling through demonstration of correct technique",
+      "Poor ergonomics prevented through proper positioning instruction"
+    ],
+    "skill_level_demonstrated": "novice"
+  },
+  "improvement_suggestions": [],
+  "video_id": "TVGRn-2kbLo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:17:11.172388+00:00"
+}

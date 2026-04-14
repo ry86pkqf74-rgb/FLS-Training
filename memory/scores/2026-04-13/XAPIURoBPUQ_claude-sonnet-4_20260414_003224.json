@@ -1,0 +1,116 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparoscopic Equipment Demonstration",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Instructor standing behind table with FLS equipment setup, camera microphone visible indicating instructional content",
+      "technique_notes": "Professional setup with complete FLS equipment array",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "equipment_overview",
+      "description": "Full view of instructor with FLS equipment laid out on blue table - peg transfer board, instruments, trainer box visible",
+      "technique_notes": "Complete FLS station setup demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "trainer_demonstration",
+      "description": "Instructor holding black laparoscopic trainer with teal accents, demonstrating proper handling",
+      "technique_notes": "Proper two-handed grip on trainer box demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "instrument_handling",
+      "description": "Demonstrating laparoscopic grasper with proper finger positioning",
+      "technique_notes": "Correct thumb-ring finger positioning in instrument handles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "instrument_mechanics",
+      "description": "Showing instrument articulation and jaw opening/closing mechanism",
+      "technique_notes": "Demonstrates proper instrument control and mechanics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 57.0,
+      "phase": "cutting_instrument_demo",
+      "description": "Demonstrating laparoscopic scissors with proper grip and control",
+      "technique_notes": "Proper scissors handling technique shown",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper laparoscopic trainer box handling",
+      "correct finger positioning in instrument rings",
+      "laparoscopic grasper articulation control",
+      "scissors grip and manipulation technique",
+      "instrument jaw mechanics demonstration",
+      "two-handed trainer stabilization"
+    ],
+    "verbal_cues": [
+      "equipment introduction and setup explanation",
+      "instrument handling fundamentals",
+      "proper ergonomic positioning"
+    ],
+    "common_errors_addressed": [
+      "incorrect finger placement in instrument handles",
+      "poor trainer box stabilization",
+      "improper instrument grip techniques"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "educational_content": {
+      "equipment_covered": [
+        "laparoscopic trainer box",
+        "graspers",
+        "scissors",
+        "peg transfer board",
+        "various FLS instruments"
+      ],
+      "techniques_demonstrated": [
+        "basic instrument handling",
+        "ergonomic positioning",
+        "equipment setup"
+      ]
+    }
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional format with professional setup, microphone visible, systematic equipment demonstration without task performance",
+  "cannot_determine": [],
+  "technique_summary": "Comprehensive equipment demonstration covering fundamental laparoscopic instrument handling and trainer box usage for FLS training",
+  "strengths": [
+    "Systematic equipment introduction",
+    "Proper ergonomic demonstrations",
+    "Clear visual presentation of techniques"
+  ],
+  "improvement_suggestions": [],
+  "video_id": "XAPIURoBPUQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:32:24.894365+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - no FLS task performance visible",
+  "analysis_summary": "The provided frames consist entirely of testimonial/interview footage from medical professionals (Dr. Francis McGovern, Dr. Ajay K Singla, Dr. Sean Bechis, Dr. Daniel Frendl, Dr. Michael L Blute Sr., and others) recorded in various office and hospital settings. There are also frames showing hospital exteriors, lecture halls, and surgical team environments. No FLS trainer box, bench-top apparatus, laparoscopic instruments, or task objects (pegs, gauze, foam appendages, Penrose drains, sutures, or knot pushers) are visible in any frame. No actual task performance\u2014pickup, transfer, cutting, loop deployment, suturing, or knot tying\u2014occurs.",
+  "scoring_not_applicable": true,
+  "cannot_score_reason": "This is instructional/promotional content featuring medical professionals speaking about surgical training. It does not contain a recorded performance of any FLS (Fundamentals of Laparoscopic Surgery) task. FLS task scoring requires visible performance of the specific task (peg transfer, pattern cut, endoloop, or suturing) with laparoscopic instruments and task-specific equipment.",
+  "confidence": 1.0,
+  "recommendation": "If an FLS task performance video exists, please provide that instead. This content is suitable for extracting program testimonials or educational context but cannot be assessed against FLS rubrics.",
+  "video_id": "VB6kUV4aEKw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:25:12.936051+00:00"
+}

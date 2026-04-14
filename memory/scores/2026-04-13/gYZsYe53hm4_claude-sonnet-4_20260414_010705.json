@@ -1,0 +1,98 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Precision Cutting",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "Title slide showing 'WE TRAIN SIMULATION' logo and cutting exercise overview",
+      "technique_notes": "Educational presentation slide with image of laparoscopic view showing pink gauze and instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "equipment_setup",
+      "description": "Setup demonstration showing FLS trainer box with fixation clamps and positioning",
+      "technique_notes": "Shows proper equipment arrangement and clamp positioning for pattern cut task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 35.0,
+      "phase": "material_preparation",
+      "description": "Blue practice material with pre-marked pattern visible, secured with white posts",
+      "technique_notes": "Demonstrates proper gauze mounting and pattern marking - appears to be practice material rather than official FLS gauze",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 50.0,
+      "phase": "laparoscopic_view",
+      "description": "Laparoscopic camera view showing pink gauze with circular pattern and instruments positioned",
+      "technique_notes": "Shows proper traction and countertraction technique with both instruments",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": null,
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_accuracy": {
+      "line_deviation_mm": null,
+      "circle_completed": null,
+      "gauze_detachment": null
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear identification as instructional video with educational overlays and demonstration content. No actual task performance to score.",
+  "cannot_determine": [
+    "Task completion time - no performance shown",
+    "Cutting accuracy - demonstration only",
+    "Penalty assessments - instructional content"
+  ],
+  "technique_summary": "Instructional video demonstrating FLS pattern cutting setup and technique principles",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper equipment setup and fixation clamp positioning",
+      "gauze mounting with appropriate tension",
+      "bimanual instrument coordination for traction and countertraction",
+      "laparoscopic camera positioning for optimal visualization"
+    ],
+    "verbal_cues": [
+      "skill development through practice",
+      "eye-hand coordination",
+      "deepness perception",
+      "tissue manipulation",
+      "use both hands",
+      "use traction and contraction",
+      "repeat the exercise taking the time each time",
+      "improve in every practice"
+    ],
+    "common_errors_addressed": [
+      "inadequate traction leading to poor cutting control",
+      "single-handed technique instead of bimanual coordination"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "strengths": [
+    "Clear demonstration of bimanual coordination",
+    "Proper equipment setup methodology",
+    "Progressive skill development approach"
+  ],
+  "improvement_suggestions": [],
+  "video_id": "gYZsYe53hm4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:07:05.965817+00:00"
+}

@@ -1,0 +1,154 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title card: 'Cinch knot-laparoscopic sliding square knot' by Dr Rahul Jadhao",
+      "technique_notes": "Instructional content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 14.0,
+      "phase": "equipment_demonstration",
+      "description": "Laparoscopic view of Penrose drain model with two suture ends visible (green and blue instruments controlling loops)",
+      "technique_notes": "Setup phase - drain positioned, instruments ready for knot demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 22.0,
+      "phase": "first_throw_setup",
+      "description": "Both needle drivers visible with suture forming initial loop configuration",
+      "technique_notes": "Preparing for surgeon's knot (double throw) formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "first_throw_execution",
+      "description": "Pink/magenta and blue instruments wrapping suture in alternating pattern",
+      "technique_notes": "Double throw being formed with clear hand coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 38.0,
+      "phase": "first_throw_completion",
+      "description": "First knot appears to be cinching, suture tension being applied",
+      "technique_notes": "Completed double throw, knot secure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 45.0,
+      "phase": "second_throw_setup",
+      "description": "Instruments repositioning for second throw with hand exchange",
+      "technique_notes": "Hand switching observed - opposite hand now leading",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 54.0,
+      "phase": "second_throw_execution",
+      "description": "Single throw being formed with green and blue instruments in reverse configuration",
+      "technique_notes": "Clean single throw, hands properly alternated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 62.0,
+      "phase": "second_throw_completion",
+      "description": "Second throw cinched, knot appearing secure",
+      "technique_notes": "Proper tension application, knot formation complete",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 90.0,
+      "phase": "third_throw_setup",
+      "description": "Instruments repositioning for final throw",
+      "technique_notes": "Hand switching again evident",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 105.0,
+      "phase": "third_throw_execution",
+      "description": "Final single throw being formed",
+      "technique_notes": "Smooth execution, proper hand alternation maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 127.0,
+      "phase": "final_knot_assessment",
+      "description": "Completed knot with suture ends visible, drain slit appears closed",
+      "technique_notes": "All three throws complete, drain appears properly approximated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 137.0,
+      "phase": "completion",
+      "description": "Video ends with demonstration complete",
+      "technique_notes": "Task demonstration finished",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional/educational video, not a performance video. It contains a title card, narrator attribution to Dr Rahul Jadhao, and demonstrates proper knot-tying technique on a laparoscopic model. No trainee performance timing or objective scoring is applicable.",
+  "cannot_determine": [
+    "Completion time - this is a demonstration, not a timed performance",
+    "Suture deviation measurements - camera angle and instructional framing do not permit precise mark identification",
+    "Drain status assessment - video shows technical demonstration rather than clinical task execution"
+  ],
+  "technique_summary": "Instructional video demonstrating proper intracorporeal sliding square knot technique on a laparoscopic trainer model. Shows correct sequence: surgeon's knot (double throw) followed by two alternating single throws with appropriate hand switching between throws. Drain approximation appears complete with no visible gaps.",
+  "strengths": [
+    "Clear demonstration of surgeon's knot double-throw formation",
+    "Proper hand switching between all throws visibly demonstrated",
+    "Smooth instrument coordination and tension control",
+    "Clean knot formation with appropriate cinching technique"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Surgeon's knot formation (double throw initial throw)",
+      "Hand alternation between successive throws",
+      "Proper suture tension management during knot cinching",
+      "Instrument coordination for intracorporeal knot tying",
+      "Sliding square knot mechanics on Penrose drain model"
+    ],
+    "verbal_cues": [
+      "Title indicates 'Cinch knot-laparoscopic sliding square knot' - emphasis on cinching mechanism",
+      "Attribution to Dr Rahul Jadhao suggests expert-level instruction"
+    ],
+    "common_errors_addressed": [
+      "Maintains perpendicular approach angles throughout",
+      "Avoids loose or insecure throws by maintaining consistent tension",
+      "Prevents gaps in drain closure through proper knot positioning"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "notes": "This is an expert demonstration video designed for educational purposes. It should NOT be scored against FLS performance rubrics as it is instructional content, not a trainee performance evaluation. The video effectively teaches proper technique for intracorporeal suturing with emphasis on the sliding square knot method.",
+  "video_id": "_K_lYfA4PGg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:44:12.373910+00:00"
+}

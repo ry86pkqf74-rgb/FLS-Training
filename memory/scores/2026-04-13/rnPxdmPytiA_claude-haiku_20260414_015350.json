@@ -1,0 +1,11 @@
+{
+  "video_classification": "unusable",
+  "reason": "The provided frames do not contain any FLS task performance or demonstration. The frames show: (1) black screen, (2) a physician in outdoor setting, (3) surgical training facility with staff in protective equipment and text 'Strong Surgical Training', (4) group photo in forest setting, (5) medical professional portrait, (6) audiology education display, (7) surgical procedure in OR, (8) medical professional in office, (9) news article about COVID-19 saliva testing, (10) group photo of healthcare professionals, (11-12) outdoor hiking/nature scenes, (13) Ottawa landmarks and lifestyle content. None of these frames depict an actual FLS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) being performed.",
+  "task_id": "unclassified",
+  "scoring_status": "not_applicable",
+  "cannot_score": "No FLS task activity visible in any frame",
+  "video_id": "rnPxdmPytiA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:53:50.420443+00:00"
+}

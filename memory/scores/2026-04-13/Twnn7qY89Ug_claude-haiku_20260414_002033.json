@@ -1,0 +1,131 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - Workshop/Educational Content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "context",
+      "description": "Monash University Jeffrey Cheah School of Medicine and Health Sciences exterior signage",
+      "technique_notes": "Location identification - institution-level view",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "context",
+      "description": "Laboratory/preparation area with two staff members in dark uniforms, medical facility setting",
+      "technique_notes": "Educational facility preparation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "context",
+      "description": "Lecture/demonstration room with projection screen displaying surgical/medical imagery",
+      "technique_notes": "Educational presentation space with STORZ surgical equipment visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "context",
+      "description": "Workshop setting with multiple participants, instructor giving welcoming speech, 'Basic Laparoscopic Workshop' visible on screen",
+      "technique_notes": "Group educational event, multiple trainees present",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "context",
+      "description": "Workshop participants observing demonstration, FLS trainer boxes visible in background",
+      "technique_notes": "Hands-on training demonstration setting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "context",
+      "description": "Close-up of FLS trainer box with laparoscopic instruments visible inside, illuminated work area",
+      "technique_notes": "Standard FLS equipment - peg transfer/suturing trainer visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "context",
+      "description": "Participant performing task with instruments visible in trainer box, hands positioned for manipulation",
+      "technique_notes": "Active trainee performance on FLS equipment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "context",
+      "description": "Laparoscopic monitor display showing surgeon's view of intracorporeal task - suture and knot visible",
+      "technique_notes": "Intracorporeal suture task or similar - knot tying phase observable on screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "context",
+      "description": "Instructor demonstrating instrument handling techniques to workshop participants",
+      "technique_notes": "Verbal and procedural instruction being delivered",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "context",
+      "description": "Participant using FLS instruments within trainer, hands-on practice in progress",
+      "technique_notes": "Trainee actively performing laparoscopic manipulation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is a compilation/documentary of a Basic Laparoscopic Workshop at Monash University. It contains establishing shots, institutional branding, classroom instruction, group demonstrations, and multiple participants at different stations. While FLS trainer boxes and instruments are visible, there is no single, complete, timed performance of a specific FLS task by one trainee from start to finish. The video is primarily educational/promotional showing the workshop setting, instructor delivery, and general training activities rather than a scoreable individual task performance.",
+  "cannot_determine": [
+    "Specific FLS task being performed (multiple tasks may be shown)",
+    "Individual trainee completion time",
+    "Detailed phase breakdown",
+    "Specific penalties for any task",
+    "Final score"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS trainer box setup and instrument orientation",
+      "Laparoscopic instrument handling basics",
+      "Hand positioning for bimanual coordination",
+      "Knot tying techniques (visible on monitor display)",
+      "Workshop organization and group instruction methodology"
+    ],
+    "verbal_cues": [
+      "Welcoming speech by instructor at workshop opening"
+    ],
+    "common_errors_addressed": [
+      "Not explicitly shown - content focuses on setup and introduction rather than error correction"
+    ],
+    "skill_level_demonstrated": "mixed - instructional content showing novice trainees in supervised learning environment"
+  },
+  "improvement_suggestions": [
+    "To obtain a scoreable FLS performance, provide a video showing a single individual performing one complete task from start to finish with clear timing markers"
+  ],
+  "video_id": "Twnn7qY89Ug",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:20:33.686044+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "content_type": "research_presentation",
+  "summary": "This video is a research presentation from SAGES 2016 Surgical Spring Week titled 'SS08: Flexible Endoscopy' by Gardner et al. It presents study findings on whether current surgery residents and GI fellows have adequate training to pass the Fundamentals of Endoscopic Surgery (FES) exam. The presentation includes background, study goals, methods, results (FES pass rates by cohort), statistical correlations, ROC curves, and institutional curricula comparisons. No actual FLS task performance is shown\u2014this is purely educational/research content with slides, data tables, and no live surgical skill demonstration.",
+  "reason_not_scored": "This is a research presentation slide deck, not a video of a trainee performing an FLS/MISTELS task. There are no instruments, no simulated task environment, no completion time to measure, and no technical performance to assess. The content discusses FES exam performance data but does not show anyone performing the tasks themselves.",
+  "teaching_content": {
+    "presentation_topic": "Competency assessment and training adequacy for endoscopic surgery",
+    "key_findings": [
+      "68% overall pass rate on FES exam among graduating residents",
+      "Wide variability in competency and FES scores across different training levels",
+      "First-year GI fellows showed 100% pass rate on cognitive skills but only 80% on manual skills",
+      "General surgery PGY5s had lowest pass rates (67.9% combined cognitive and manual)",
+      "Weak correlations between case logs and FES exam scores, suggesting case volume alone is insufficient"
+    ],
+    "study_design": "Multi-institution cohort study from 6 Texas programs examining 28 surgery residents and 20 GI fellows taking FES exam 'cold' without specific training",
+    "curriculum_components_discussed": [
+      "Web-based didactics",
+      "Simulation training",
+      "GAGES (Global Assessment of Gastrointestinal Endoscopic Skills)",
+      "FES exam preparation"
+    ],
+    "institutional_variability": "Shows significant differences in pass rates, curricula, and simulation resources across institutions"
+  },
+  "confidence": 1.0,
+  "note": "This video cannot be scored as an FLS task performance because it is a research presentation, not a performance video. No FLS scoring is applicable.",
+  "video_id": "bhB7FPbIC24",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:52:19.976554+00:00"
+}

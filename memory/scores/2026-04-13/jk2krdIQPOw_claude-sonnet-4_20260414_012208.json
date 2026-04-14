@@ -1,0 +1,106 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_setup",
+      "description": "Video opens with black screen, no laparoscopic activity visible",
+      "technique_notes": "Introductory content, no task performance yet",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "equipment_setup",
+      "description": "LAPARO laparoscopic trainer box shown from external view with various training modules",
+      "technique_notes": "Product demonstration showing training equipment setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "equipment_setup",
+      "description": "Close-up view of trainer with hands visible, laparoscopic view visible on monitor",
+      "technique_notes": "Shows proper trainer positioning and monitor setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "equipment_setup",
+      "description": "Text overlay 'HOSPITALS, MEDICAL UNIVERSITIES, MEDICAL SIMULATION CENTERS, LAPAROSCOPIC WORKSHOP ORGANIZERS'",
+      "technique_notes": "Marketing content describing target users",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "equipment_setup",
+      "description": "Person in lab coat working at trainer with 'ERGONOMIC BOX' text overlay",
+      "technique_notes": "Demonstrates proper ergonomic positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_setup",
+      "description": "Close-up of laparoscopic view with '30-DEGREE FULL HD CAMERA' and 'LED LIG' text overlays",
+      "technique_notes": "Shows camera capabilities and lighting features",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "equipment_setup",
+      "description": "Hands inserting instruments with '5mm AND 10mm INSERTS' text overlay",
+      "technique_notes": "Demonstrates trocar port compatibility",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "brief_performance_glimpse",
+      "description": "Monitor shows timer '00:04:46' with laparoscopic instruments visible manipulating objects",
+      "technique_notes": "Brief glimpse of actual task performance with timing display",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "No scoring - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is promotional/instructional content for LAPARO equipment, not a scorable performance",
+  "cannot_determine": [
+    "No actual peg transfer performance to score",
+    "Video contains only equipment demonstration and marketing content"
+  ],
+  "technique_summary": "No actual task performance demonstrated - this is equipment promotional material",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper ergonomic positioning at laparoscopic trainer",
+      "correct instrument insertion through trocar ports",
+      "monitor positioning for optimal viewing"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "equipment_demonstration"
+  },
+  "improvement_suggestions": [],
+  "video_id": "jk2krdIQPOw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:22:08.178672+00:00"
+}

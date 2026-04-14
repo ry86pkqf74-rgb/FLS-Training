@@ -1,0 +1,198 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Presenter introduces the Roeder's knot technique in clinical setting with medical branding visible",
+      "technique_notes": "Educational framing; instructor demonstrates knot configuration setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "knot_configuration_explanation",
+      "description": "Presenter explains '1-3-1' configuration for the Roeder's knot",
+      "technique_notes": "Verbal instruction: configuration is 1 initial throw, 3 winds, 1 locking throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "thread_preparation",
+      "description": "Instructor demonstrates proper suture handling with shorter end on left, longer end on right",
+      "technique_notes": "Clear directional guidance for thread orientation to maintain asymmetry",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "assistant_positioning",
+      "description": "Instructor explains need for assistant to stabilize the knot during formation",
+      "technique_notes": "Highlights manual stabilization technique for knot security",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "initial_crossing",
+      "description": "Demonstrates crossing the two suture limbs to begin knot formation",
+      "technique_notes": "Shows proper crossing angle and positioning of limbs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "first_hitch",
+      "description": "Demonstrates taking one hitch with the longer limb crossing over shorter limb",
+      "technique_notes": "Clean crossing motion establishing first throw foundation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "pinch_point",
+      "description": "Shows pinching point where knot is secured during throw formation",
+      "technique_notes": "Critical stabilization point for knot integrity",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "wind_formation",
+      "description": "Demonstrates winding motion keeping both limbs together",
+      "technique_notes": "Instructions emphasize maintaining limb contact during wind sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "multiple_winds",
+      "description": "Shows sequential winding to create the 3-wind configuration",
+      "technique_notes": "Maintains consistent tension and limb positioning across multiple winds",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "half_lock_formation",
+      "description": "Demonstrates taking a half lock with the longer limb",
+      "technique_notes": "Final locking throw applied to secure the knot structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "completed_knot",
+      "description": "Shows finished Roeder's knot with 1-3-1 configuration (1 hitch, 3 winds, 1 lock)",
+      "technique_notes": "Final knot demonstrates proper symmetry and security; knot appears stable and well-formed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "conclusion",
+      "description": "Educational branding and attribution slide",
+      "technique_notes": "Video concludes with source attribution",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [
+    {
+      "phase": "introduction_and_setup",
+      "start_seconds": 0,
+      "end_seconds": 15,
+      "duration_seconds": 15,
+      "benchmark_comparison": "N/A \u2014 instructional content"
+    },
+    {
+      "phase": "knot_formation_demonstration",
+      "start_seconds": 15,
+      "end_seconds": 50,
+      "duration_seconds": 35,
+      "benchmark_comparison": "N/A \u2014 instructional content"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "video_type": "instructional_knot_tutorial",
+    "context": "This is not a performance recording of an FLS task; it is a standalone educational video teaching the Roeder's knot technique using colored suture cord and manual (non-laparoscopic) demonstration.",
+    "knot_demonstrated": {
+      "knot_type": "Roeder's Knot",
+      "configuration": "1-3-1 (one initial throw, three winds, one locking throw)",
+      "material": "Orange/red colored suture cord (not actual medical suture in trainer)",
+      "environment": "Bench-top demonstration with gloved hands, not in FLS trainer box"
+    },
+    "no_target_marks_visible": true,
+    "no_penrose_drain": true,
+    "no_laparoscopic_instruments": true,
+    "no_knot_pusher_use": true,
+    "no_timing_relevant": true
+  },
+  "score_components": {
+    "max_score": 420,
+    "completion_time_seconds": "not_applicable",
+    "total_penalties": "not_applicable",
+    "total_fls_score": "not_applicable",
+    "formula_applied": "Score formula not applied \u2014 video is instructional, not a performance evaluation"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This is an instructional/educational video, not a performance video. No performance scoring is appropriate. The video teaches the Roeder's knot configuration outside the FLS trainer environment using manual demonstration with colored cord.",
+  "cannot_determine": [
+    "Completion time (not a timed performance)",
+    "Suture placement accuracy (no marked targets visible)",
+    "Knot pusher technique (not used in this demonstration)",
+    "Drain closure (no Penrose drain present)",
+    "Laparoscopic instrument handling (using manual gloved hands only)"
+  ],
+  "technique_summary": "This is an educational video demonstrating the Roeder's knot technique with verbal instruction. It is not an FLS task performance and should not be scored using the FLS rubric. The video clearly teaches knot-tying concepts and configuration, making it valuable instructional content, but it does not meet the requirements of an FLS task4 performance (no suture passing through marked targets, no knot pusher, no Penrose drain, no laparoscopic instruments, not conducted within a trainer box).",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Roeder's knot configuration (1-3-1 pattern)",
+      "Proper suture orientation (shorter limb left, longer limb right)",
+      "Crossing and initial throw formation",
+      "Sequential winding technique with maintained limb contact",
+      "Half-lock final securing throw",
+      "Assistant finger stabilization for knot security",
+      "Pinch-point identification for knot stability"
+    ],
+    "verbal_cues": [
+      "Keep the shorter on the left side and the longer on the right side",
+      "Ask the assistant to keep his finger (stabilizing the knot)",
+      "Now you cross the thread",
+      "Take one hitch with longer one",
+      "Then pinch it here",
+      "Take one wind keeping both the limbs together",
+      "Take one more wind",
+      "Now we can take a half lock with the longer end",
+      "The Configuration is 1-3-1"
+    ],
+    "common_errors_addressed": [
+      "Improper thread orientation (must maintain asymmetrical setup)",
+      "Insufficient knot stabilization (assistant finger placement emphasized)",
+      "Inconsistent wind tension (consistent limb contact shown)",
+      "Inadequate locking mechanism (half-lock shown as critical final step)"
+    ],
+    "skill_level_demonstrated": "expert",
+    "context": "This video is designed as an educational tutorial for teaching the Roeder's knot technique, likely for medical students or residents learning surgical knot-tying. It is not an assessment of FLS proficiency."
+  },
+  "improvement_suggestions": [
+    "This is instructional content, not a performance. No individual improvement suggestions apply.",
+    "For those learning from this video: practice the knot on actual surgical suture in a trainer to develop tactile feedback and speed required for FLS task4."
+  ],
+  "notes": [
+    "VIDEO CLASSIFICATION: INSTRUCTIONAL \u2014 This is educational content teaching knot-tying technique, not a performance video of an FLS task.",
+    "NO SCORING APPLIED: The video does not meet the conditions for FLS task4 performance assessment (no marked targets, no Penrose drain, no laparoscopic instruments, not in trainer box, no knot pusher).",
+    "TEACHING VALUE: High \u2014 Clear step-by-step demonstration of Roeder's knot with good verbal instruction and visible hand positioning.",
+    "SOURCE: Watermarked 'THE MEDICITY' (www.themedicity.com) \u2014 appears to be professional medical education content."
+  ],
+  "video_id": "YymzwXKnUfQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:39:20.631741+00:00"
+}

@@ -1,0 +1,61 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS Task Present",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "interview_setup",
+      "description": "Dr. Ayodeji Sotimehin seated in medical office, wearing white coat with name badge",
+      "technique_notes": "No surgical instruments or FLS equipment visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "interview_continuation",
+      "description": "Doctor speaking to camera with professional overlay showing name and credentials",
+      "technique_notes": "Office setting with cabinets and plant visible in background",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "interview_continuation",
+      "description": "Continued interview format with Georgia Urology branding visible",
+      "technique_notes": "No laparoscopic training equipment present",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 26,
+      "timestamp_seconds": 25.0,
+      "phase": "interview_conclusion",
+      "description": "Final frames showing Georgia Urology logo on white background",
+      "technique_notes": "Transition to institutional branding",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows medical interview/testimonial content with no FLS training equipment, instruments, or task performance visible",
+  "cannot_determine": [],
+  "technique_summary": "This is an interview/testimonial video featuring Dr. Ayodeji Sotimehin in a medical office setting. No FLS task performance is present.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "improvement_suggestions": [],
+  "video_id": "vzRwld5Xl64",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:04:21.941650+00:00"
+}

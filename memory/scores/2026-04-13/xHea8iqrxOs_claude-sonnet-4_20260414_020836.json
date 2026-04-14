@@ -1,0 +1,10 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "reason": "This video appears to be a promotional/marketing video for Dr. Sheetal Patel's bariatric surgery practice (360 Bariatrics). The content shows a doctor being interviewed in an office setting with contact information displayed, but contains no FLS task performance, training equipment, or laparoscopic simulation activities.",
+  "video_id": "xHea8iqrxOs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:08:36.798339+00:00"
+}

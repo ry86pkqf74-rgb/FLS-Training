@@ -1,0 +1,62 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "SAGES/MISTELS presentation title slide with conference branding",
+      "technique_notes": "Not applicable - instructional presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "study_methodology",
+      "description": "Methods slide showing study design comparing SSA devices to multi-port setup",
+      "technique_notes": "Shows Peg Transfer as one of four FLS tasks evaluated in the study",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "results_presentation",
+      "description": "Peg Transfer performance comparison chart showing completion times across different platforms",
+      "technique_notes": "Chart demonstrates performance differences between multi-port setup and various SSA devices",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly a research presentation about FLS task performance on different platforms, not an actual task performance to be scored.",
+  "cannot_determine": [
+    "Individual performance metrics - this is aggregate research data presentation",
+    "Specific technique execution - no actual task performance shown"
+  ],
+  "technique_summary": "Research presentation comparing FLS task performance across different single-site access platforms versus traditional multi-port laparoscopy.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "research_presentation"
+  },
+  "improvement_suggestions": [],
+  "video_id": "yXEUNL_ksM0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:12:45.411240+00:00"
+}

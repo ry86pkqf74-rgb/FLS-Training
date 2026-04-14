@@ -1,0 +1,69 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "N/A - Educational presentation, not an FLS task performance",
+  "content_description": "SAGES 2024 Education Short Oral Session: Laparoscopic Pancreatoduodenectomy - Skill Development and Clinical Impact Through Simulation Training",
+  "presenter": "Rafael Selman \u00c1lvarez, MD",
+  "moderators": "Jonathan Dort, MD & Neal Seymour, MD",
+  "institution": "Pontificia Universidad Cat\u00f3lica de Chile",
+  "presentation_structure": [
+    {
+      "slide_section": "Title slide",
+      "content": "Session title and presenter information"
+    },
+    {
+      "slide_section": "Introduction",
+      "key_points": [
+        "Laparoscopic pancreatoduodenectomy (LPD) offers clinically significant advantages over open approach when performed by expert surgeons",
+        "Reduction in postoperative complications and conversion rates after 25-84 cases, mainly due to reconstructive phase",
+        "Simulation training may help shorten learning curve",
+        "Images of simulated foam appendage models shown"
+      ]
+    },
+    {
+      "slide_section": "Objective",
+      "content": "Describe 7-year experience of laparoscopic simulation course in hepatopancreatobiliary surgery and infer clinical usefulness"
+    },
+    {
+      "slide_section": "Methods and Procedures",
+      "key_points": [
+        "Quasi-experimental design",
+        "Participants: trainees completing Hepatobiliary and Pancreatic Surgery Skills Course (HPB-C) between 2017-2023",
+        "Course encompassed 25 stages simulating choledochojejunal (CJ) and pancreaticojejunal (PJ) anastomosis using synthetic and ex-vivo tissues",
+        "Pre/post assessments: Global Rating Scale (GRS; 5-25 pts), Specific Rating Scale (SRS; 4-20 pts), procedural time, leakage rates",
+        "Online survey to assess impact on trainee experience, exposure, and confidence"
+      ]
+    },
+    {
+      "slide_section": "Results - Part 1 (Quantitative)",
+      "key_points": [
+        "50 trainees completed training program",
+        "Significant improvements in GRS and SRS (p-values < 0.0001)",
+        "Choledochojejunal anastomosis: GRS 16\u219224, SRS 12\u219219",
+        "Pancreaticojejunostomy: Similar improvements across both scales",
+        "Significant reduction in procedural time: CJ anastomosis 27 min \u2192 18 min; PJ anastomosis 36 min \u2192 21 min",
+        "Leakage rates decreased for both procedures"
+      ]
+    },
+    {
+      "slide_section": "Results - Part 2 (Qualitative/Survey)",
+      "key_points": [
+        "20 previous trainees completed survey (40% response rate)",
+        "80% perceived improvement in surgical skills",
+        "85% increased confidence in laparoscopic hepatobiliary procedures",
+        "60% reported increased exposure to digestive and hepatobiliary laparoscopic procedures"
+      ]
+    },
+    {
+      "slide_section": "Conclusion",
+      "content": "HPB surgery simulation program demonstrated efficacy in enhancing surgical skills within controlled environment; survey responses emphasized positive influence on participants' surgical capabilities and importance of structured simulation-based training in hepatopancreatobiliary surgery"
+    }
+  ],
+  "assessment_note": "This is an educational presentation/scientific abstract at a medical conference (SAGES 2024). It does NOT contain a video performance of an FLS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). Therefore, no FLS scoring rubric applies. The content discusses the design, methods, and results of a surgical simulation training program, but does not show actual task performance by a trainee or expert to be scored.",
+  "scoring_applicable": false,
+  "reason": "This is instructional/educational content presenting research findings on simulation training. Per classification rules, instructional videos with narration, slides, and lecture content are not scored using FLS rubrics; only actual task performances are scored.",
+  "video_id": "kJ5CNegUrIE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:25:01.615228+00:00"
+}

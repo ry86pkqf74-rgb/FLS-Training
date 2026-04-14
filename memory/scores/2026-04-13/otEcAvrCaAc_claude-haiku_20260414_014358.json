@@ -1,0 +1,46 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Not applicable \u2014 instructional content only"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "Video is classified as instructional/educational content showing a 'Medics Teaching Medics' training event and various FLS skill station setups (suturing, knot-tying, blood vessel simulator, laparoscopic appendectomy models). No actual task1_peg_transfer performance is visible. The video contains educational broadcasts, consultant-led tutorials, equipment demonstrations, and model previews \u2014 not a trainee performing a timed peg transfer task.",
+  "cannot_determine": [
+    "Completion time \u2014 no peg transfer performance recorded",
+    "Any task metrics \u2014 no performance attempt visible",
+    "Scoring \u2014 instructional content only"
+  ],
+  "video_summary": "This is a montage of FLS-related instructional and training content. It includes: (1) 'Medics Teaching Medics' branding and Basic Surgical & Laparoscopic Skills Day promotional materials; (2) multiple scenes of trainees in classroom settings discussing skills; (3) photographs of suturing and knot-tying skill stations with packaged instruments; (4) scenes showing SIMENDO trainer demonstrations and blood vessel simulator (POP) instruction; (5) laparoscopic appendectomy model setups with monitors and laparoscopic equipment; (6) close-up photographs of procedural models (appendix, tissue models). No actual scored task performance is present.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Overview of laparoscopic training environment and equipment setup",
+      "Knot-tying and suturing station organization",
+      "SIMENDO trainer systems for laparoscopic skills",
+      "Blood vessel simulator (POP) for vascular practice",
+      "Laparoscopic appendectomy model demonstration",
+      "Tissue model preparation for procedure practice"
+    ],
+    "verbal_cues": [
+      "Inferred from on-screen text: 'Basic Surgical & Laparoscopic Skills Day', 'Interactive Consultant-led tutorials', 'Basic suturing & knot-tying skills'"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional/educational broadcast"
+  },
+  "recommendation": "Do not score. This is educational/promotional content. If a peg transfer performance video is available, resubmit that file separately.",
+  "video_id": "otEcAvrCaAc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:43:58.758800+00:00"
+}

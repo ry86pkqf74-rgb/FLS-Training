@@ -1,0 +1,26 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason_unusable": "This is an educational conference presentation (SAGES 2017 ASE Joint Panel) by Pedro Pablo Gomez, MD on 'The Console: Serious Gaming and Virtual Reality in Surgical Education.' The content consists entirely of presentation slides discussing surgical simulators, VR platforms, research findings, and educational tools. There is no actual FLS task performance visible \u2014 no trainee or surgeon performing peg transfer, pattern cut, endoloop, or suture tasks. The frames show only slides with text, diagrams, research data, and equipment photographs.",
+  "content_type": "educational_lecture",
+  "presenter": "Pedro Pablo Gomez, MD, General Surgery Resident PGY5, UT Health San Antonio",
+  "conference": "SAGES is Home: Collaborate, Communicate, Connect - 2017",
+  "panel": "ASE Joint Panel: Tools for the Surgical Educator",
+  "topics_covered": [
+    "Virtual reality vs. physical model simulators in surgical training",
+    "Comparison of gaming consoles (NES, Nintendo Switch) to VR surgical platforms",
+    "Laparoscopic simulators (LAP Mentor, VR platforms)",
+    "Robotic simulators (da Vinci, ROSS, Mimic, Skills Simulator, Robotix)",
+    "GI Mentor VR platform for flexible endoscopy training",
+    "Research findings on skill transfer from VR to clinical practice",
+    "Current status and future directions of simulation-based surgical education"
+  ],
+  "scoring_status": "not_applicable",
+  "confidence": 1.0,
+  "notes": "This is a lecture presentation, not a performance video. No FLS task scoring is possible or appropriate.",
+  "video_id": "S4VlAN1Rj7E",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:10:32.397693+00:00"
+}

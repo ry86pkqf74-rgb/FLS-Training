@@ -1,0 +1,72 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General Laparoscopic Box Training Demonstration",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "two-handed coordination with laparoscopic graspers",
+      "precise object manipulation and transfer",
+      "depth perception training with sugar cubes",
+      "tissue handling with delicate materials (flower petals, Brussels sprouts)",
+      "fine motor control with small objects (Cheerios)",
+      "bimanual coordination for object stacking",
+      "gentle tissue retraction techniques"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "avoiding excessive force that could damage delicate tissues",
+      "proper instrument positioning for optimal control",
+      "maintaining steady hand movements for precise manipulation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide: Laparoscopic Box Training presentation by medical faculty",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "sugar_cube_demonstration",
+      "description": "Sugar cubes being manipulated with laparoscopic graspers for dexterity training",
+      "technique_notes": "Demonstrates proper two-handed coordination and depth perception skills",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "tissue_handling_demo",
+      "description": "Delicate manipulation of Brussels sprouts and flower petals",
+      "technique_notes": "Shows gentle tissue handling techniques and visualization with retraction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "cheerio_stacking",
+      "description": "Precise placement of Cheerios on vertical post for fine motor control",
+      "technique_notes": "Excellent demonstration of bimanual coordination and depth perception",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 26,
+      "timestamp_seconds": 25.0,
+      "phase": "jelly_bean_sorting",
+      "description": "Sorting colored jelly beans into containers using graspers",
+      "technique_notes": "Advanced dexterity exercise showing precise object manipulation",
+      "penalties_observed": []
+    }
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational presentation showing various laparoscopic training exercises with expert-level technique demonstration. Not an FLS task performance but instructional content about box training alternatives.",
+  "technique_summary": "Comprehensive demonstration of low-cost laparoscopic training alternatives using household items to develop fundamental skills including dexterity, depth perception, and two-handed coordination.",
+  "video_id": "SEZx_33zvC8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:10:56.224862+00:00"
+}

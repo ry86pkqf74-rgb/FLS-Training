@@ -1,0 +1,128 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "proficiency_benchmark_seconds": 48,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title card 'TASK 1 BEAN DROP' displayed. Video is introductory/instructional in nature.",
+      "technique_notes": "Instructional content indicator.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.5,
+      "phase": "setup",
+      "description": "Overview shot of STOR laparoscopic trainer with operator in lab coat positioned at workstation.",
+      "technique_notes": "Equipment setup shown. This is a teaching/demonstration video format.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Close-up endoscopic view showing pegboard with two pegs and what appears to be a cup/container with beige objects visible in lower left inset showing external view.",
+      "technique_notes": "Bean drop task setup \u2014 alternative to traditional peg transfer. Objects appear to be beans or similar items in a cup, not rubber rings on pegs.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "task_execution",
+      "description": "Endoscopic view shows one Maryland dissector positioned near the container/cup area. External inset shows operator's hands manipulating instruments.",
+      "technique_notes": "Instrument control visible. This is a variant task (bean drop into container) not standard peg transfer.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "task_execution",
+      "description": "Both Maryland dissectors visible in endoscopic view approaching the container. One instrument appears to be grasping or positioning near opening.",
+      "technique_notes": "Bimanual instrument coordination demonstrated. Task objective appears to be transferring beans into/out of container.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 18.0,
+      "phase": "task_execution",
+      "description": "One dissector actively manipulating object near container edge. Motion blur suggests active transfer.",
+      "technique_notes": "Object appears to be dropped or deposited. Container position visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 25.0,
+      "phase": "task_execution",
+      "description": "Endoscopic view showing dissector repositioning. Container still in field. External inset shows continuous operator work.",
+      "technique_notes": "Instrument sequencing between transfers.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 32.0,
+      "phase": "task_execution",
+      "description": "Both instruments visible, one dissector appears to be selecting or grasping another object. Container remains visible.",
+      "technique_notes": "Continued bimanual coordination. Multiple objects being transferred.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "task_execution",
+      "description": "Dissectors repositioning in field. Container and pegs visible in endoscopic view.",
+      "technique_notes": "Rhythm of transfers established.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 50.0,
+      "phase": "task_completion",
+      "description": "Endoscopic field shows reduced activity. Container visible with fewer visible objects.",
+      "technique_notes": "Approaching task completion or transition phase.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 58.0,
+      "phase": "task_completion",
+      "description": "Final positioning of instruments. Container and pegboard visible. Activity appears to be winding down.",
+      "technique_notes": "Task nearing completion.",
+      "penalties_observed": []
+    }
+  ],
+  "video_assessment": {
+    "classification_rationale": "This video contains a title card ('TASK 1 BEAN DROP'), overhead shots of equipment setup with an operator in a lab coat at a STOR trainer, and external camera overlays showing the operator's hands. The presence of instructional framing (title cards, setup demonstrations, multiple camera angles), the alternative task variant (bean drop into container rather than standard peg transfer), and the teaching/demonstration format indicate this is INSTRUCTIONAL content, not a scored performance.",
+    "task_variant_note": "The task shown is 'Bean Drop' (transferring beans into/out of a container using laparoscopic dissectors), which is a variant of peg transfer used for training. However, this is presented as instructional/demonstration material, not a formal performance to be scored."
+  },
+  "scoring_determination": "NOT SCORED \u2014 VIDEO CLASSIFICATION: INSTRUCTIONAL",
+  "cannot_score_reasons": [
+    "Video classification is instructional/educational, not a formal performance attempt",
+    "Presence of instructional framing (title cards, setup shots, multiple camera angles)",
+    "External overhead camera with operator visible indicates this is a teaching video, not a blind scored attempt",
+    "Task variant (bean drop) used for instruction purposes",
+    "No clear start/stop signals or single formal attempt identification"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper bimanual Maryland dissector handling in laparoscopic trainer",
+      "Container-based object transfer using laparoscopic instruments",
+      "Coordination between left and right instrument control",
+      "Instrument approach and positioning for grasping objects"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "intermediate",
+    "task_variant_note": "Bean Drop variant of peg transfer \u2014 used to teach basic laparoscopic manipulation and object transfer without the complexity of pegs"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video classification as instructional is highly certain based on: (1) explicit 'TASK 1 BEAN DROP' title card; (2) STOR equipment overview with operator visible in lab coat; (3) multiple external/internal camera angles typical of instructional content; (4) absence of formal FLS performance setup (isolated performer, no proctor visible, no timer display, no official scorecard).",
+  "improvement_note": "If this was intended to be a scored performance video, please resubmit a video showing only the endoscopic view during a formal timed attempt without external camera overlays or instructional framing.",
+  "video_id": "lNL0AsStFeU",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:30:06.798477+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not Applicable - Unrelated Content",
+  "analysis": "This video contains dental exam practice test questions and is completely unrelated to FLS (Fundamentals of Laparoscopic Surgery) tasks. The content shows multiple choice questions about dental anatomy, tooth whitening, anesthesia complications, and dental equipment. No laparoscopic surgical tasks, instruments, or training scenarios are present.",
+  "unusable_reason": "Content is dental education material, not FLS surgical training",
+  "video_id": "mNCR-mo1o5U",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:34:52.407334+00:00"
+}

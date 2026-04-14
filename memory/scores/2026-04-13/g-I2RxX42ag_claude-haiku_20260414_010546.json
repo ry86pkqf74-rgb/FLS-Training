@@ -1,0 +1,107 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Wide shot of FLS training lab with multiple trainer boxes visible on table with overhead lighting and monitor displays",
+      "technique_notes": "Educational/demonstration environment with multiple stations",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Monitor display showing laparoscopic view of peg transfer board with red foam objects on left side pegs and green objects on right side",
+      "technique_notes": "Standard peg transfer board layout visible on monitor; demonstrates task setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 8.0,
+      "phase": "instructor_demonstration",
+      "description": "Instructor in business attire gesturing near the trainer box, appearing to explain the task",
+      "technique_notes": "Instructional content \u2014 instructor is teaching/explaining rather than performing timed task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 12.0,
+      "phase": "task_demonstration",
+      "description": "Close-up laparoscopic view showing grasper instruments approaching peg transfer board; red foam object visible on left peg",
+      "technique_notes": "Demonstration of proper instrument approach and grasp technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 14.0,
+      "phase": "task_demonstration",
+      "description": "Two grasper instruments manipulating a red foam object, lifting it from left peg",
+      "technique_notes": "Demonstrates coordinated two-handed pickup technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 16.0,
+      "phase": "task_demonstration",
+      "description": "Grasper transferring red foam object in midair between peg columns",
+      "technique_notes": "Smooth midair transfer technique demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 18.0,
+      "phase": "task_demonstration",
+      "description": "Red foam object being placed on right-side peg with controlled descent",
+      "technique_notes": "Demonstrates proper placement technique with controlled instrument movement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional video, not a timed performance"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional/educational video showing FLS setup, explanation by an instructor, and demonstration of proper peg transfer technique. It is NOT a timed trainee performance. The content includes wide shots of the training lab, an instructor explanation segment, and close-up laparoscopic demonstrations of correct handling technique. No timing data, no penalties applicable.",
+  "cannot_determine": [
+    "Completion time \u2014 video is instructional demonstration, not a timed performance attempt",
+    "Penalties \u2014 video does not show a trainee performing under time constraints",
+    "Actual task performance \u2014 only technique demonstration shown"
+  ],
+  "technique_summary": "Instructional video demonstrating proper peg transfer technique including correct two-handed instrument coordination, smooth midair transfer, and controlled placement. Intended as educational content for trainee instruction.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Two-hand coordination for foam object manipulation",
+      "Proper grasper positioning for pickup at peg base",
+      "Smooth midair transfer between columns",
+      "Controlled descent and placement on destination peg",
+      "Correct laparoscopic instrument handling posture and approach angle"
+    ],
+    "verbal_cues": [
+      "Instructor explanation of task setup visible in frames 8-11 (narration not audible but context indicates teaching)"
+    ],
+    "common_errors_addressed": [
+      "Avoiding jerky instrument movements during transfer",
+      "Maintaining object control in midair",
+      "Precision placement to avoid dropping on adjacent pegs"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "assessment_note": "This video should NOT be scored as a timed performance. It is educational content demonstrating correct FLS peg transfer technique. If you have a separate performance video of a trainee attempting this task under time constraints, please provide that for formal scoring.",
+  "video_id": "g-I2RxX42ag",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:05:46.157496+00:00"
+}

@@ -1,0 +1,151 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "MSc Laparoscopic Surgery and Surgical Skills Programme promotional material shown. FLS peg transfer trainer visible with 6 pegs arranged in standard configuration. Two graspers visible on left side.",
+      "technique_notes": "Educational/promotional context established",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.5,
+      "phase": "setup",
+      "description": "Close-up of peg transfer trainer showing rubber objects on left row of pegs. Pegs are clearly visible with proper spacing. Trainer mounted on white base.",
+      "technique_notes": "Standard MISTELS peg transfer setup confirmed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "instructor_presentation",
+      "description": "Institution director/faculty member presenting at Barts Cancer Institute, Queen Mary University of London. Slide background shows MSc programme information and learners performing FLS tasks.",
+      "technique_notes": "Promotional/educational lecture context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "learner_performance_setup",
+      "description": "Trainee in yellow shirt positioned at FLS trainer with hands visible. Left hand approaching pegs. Two monitor screens visible showing laparoscopic view.",
+      "technique_notes": "Learner beginning task execution with proper positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 10.5,
+      "phase": "pickup_nondominant",
+      "description": "Trainee's left hand (non-dominant) using grasper to grasp first rubber object from left peg. Right hand holding second grasper positioned for assistance.",
+      "technique_notes": "Initial pickup phase - left hand controlling first object",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 12.0,
+      "phase": "transfer_midair",
+      "description": "Object elevated above peg board by left grasper. Right grasper positioned to receive object. Good control maintained.",
+      "technique_notes": "Clean midair transfer initiation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 15.0,
+      "phase": "place_dominant",
+      "description": "Right hand (dominant) placing transferred object onto right-side peg. Placement appears accurate with object seated properly.",
+      "technique_notes": "Smooth hand-to-hand transfer technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 18.0,
+      "phase": "continued_transfer",
+      "description": "Trainee continues with multiple object transfers. Rhythm appears steady. Objects being systematically transferred from left pegs to right pegs.",
+      "technique_notes": "Maintaining consistent pace",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 22.0,
+      "phase": "instructor_demo",
+      "description": "Faculty demonstration of proper technique shown on right monitor. Hands performing controlled object placement. Close-up view of proper grasp and placement.",
+      "technique_notes": "Expert demonstration of correct technique shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 25.0,
+      "phase": "equipment_overview",
+      "description": "Equipment closeup showing Grasper brand laparoscopic instrument. Knot pusher tool visible. Standard MISTELS equipment verified.",
+      "technique_notes": "Standard FLS equipment confirmed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 28.0,
+      "phase": "instructional_content",
+      "description": "Educational narration context with institutional signage shown (Charterhouse Square Campus, Barts Cancer Institute). Multiple frames of faculty lecturing about MSc programme.",
+      "technique_notes": "Clearly instructional/educational video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 32.0,
+      "phase": "institutional_context",
+      "description": "Building signage and campus identification shown. Old Anatomy Building sign visible. Context confirms this is institutional educational material.",
+      "technique_notes": "Video context is promotional/educational",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification as instructional is definitive based on: (1) Multiple frames showing faculty member presenting on stage with slides and institutional signage; (2) Promotional text about 'MSc Laparoscopic Surgery and Surgical Skills Programmes'; (3) Mix of brief training setup clips interspersed with lecture content and campus tour; (4) Educational narration context evident throughout. No single continuous performance attempt visible.",
+  "cannot_determine": [
+    "Actual completion time - video is montage of multiple segments, not continuous performance",
+    "Individual phase timings - footage is edited and not sequential",
+    "Specific penalties - no unbroken performance to assess"
+  ],
+  "video_purpose": "Educational/promotional material for MSc programme at Barts Cancer Institute, Queen Mary University of London, highlighting FLS training curriculum and facilities",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Peg transfer trainer setup and configuration",
+      "Non-dominant hand pickup technique",
+      "Midair transfer between hands",
+      "Dominant hand placement on contralateral pegs",
+      "Proper grasper handling and instrument control",
+      "Systematic object sequencing"
+    ],
+    "verbal_cues": [
+      "Video shows institutional context of MSc Laparoscopic Surgery programme",
+      "Emphasis on technology-enhanced learning approach",
+      "Integration of FLS MISTELS tasks in surgical education curriculum"
+    ],
+    "common_errors_addressed": [
+      "Proper positioning relative to trainer",
+      "Controlled object placement avoiding drops",
+      "Smooth hand-to-hand transitions",
+      "Maintaining instrument control throughout transfer sequence"
+    ],
+    "skill_level_demonstrated": "expert",
+    "instructional_focus": "Programme overview and curriculum demonstration rather than detailed task instruction"
+  },
+  "recommendation": "DO NOT SCORE - This is clearly instructional/promotional educational material, not a trainee performance. Frames show mixed segments of faculty presentation, institutional tours, equipment overview, and brief glimpses of training in progress. No single performance attempt is visible that could be reliably scored against FLS rubric.",
+  "video_id": "tk6vGpXRSyk",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:00:16.912199+00:00"
+}

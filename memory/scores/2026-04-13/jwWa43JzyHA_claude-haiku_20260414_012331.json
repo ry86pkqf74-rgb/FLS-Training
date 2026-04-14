@@ -1,0 +1,231 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "proficiency_time_seconds": 136,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_introduction",
+      "description": "Instructor holds green 2-0 silk suture and displays Roeder's knot technique reference material (black and white instructional photos showing knot tying steps A through F)",
+      "technique_notes": "Educational framing; demonstrating knot tying methodology with visual reference",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "suture_introduction",
+      "description": "Hands visible in bare setup, green and black suture ends visible on blue pad with white foam block workpiece",
+      "technique_notes": "Preparing workspace; suture positioned for demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "extracorporeal_throws",
+      "description": "Right hand (dominant) grasps green suture end, left hand (non-dominant) positioned to begin first throw. Hands in position with scissors visible in background",
+      "technique_notes": "Clean hand positioning; appropriate tension on suture",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "extracorporeal_throws",
+      "description": "First throw being formed; right hand wrapping suture around left hand's index and middle fingers. Proper looping motion visible",
+      "technique_notes": "Textbook Roeder's knot formation; smooth, controlled wrap",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "extracorporeal_throws",
+      "description": "First throw cinching; right hand pulling suture end while left hand stabilizes the loop. Knot tightening clearly visible",
+      "technique_notes": "Even tension application; knot appears secure and symmetrical",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw initiated; hands repositioned. Left hand now leading the throw. Text overlay reads 'ADJUST TO GAIN TIGHT FRICTION'",
+      "technique_notes": "Hand switching demonstrated; appropriate friction control being verbally cued",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw formation in progress. Left hand wraps suture while right hand maintains tension on tail",
+      "technique_notes": "Clean alternating hand technique; consistent with expert methodology",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw being tightened. Knot visible at foam block position; tension being applied uniformly",
+      "technique_notes": "Smooth throw completion; knot alignment appears centered on workpiece",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw being initiated. Left hand positioning for next wrap. Hands show practiced rhythm",
+      "technique_notes": "Efficient transition between throws; no hesitation or instrument repositioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw cinching. Right hand pulling suture while left stabilizes. Knot tightening visible on foam block",
+      "technique_notes": "Final throw executed with appropriate tension; knot appears fully cinched",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "slit_closure_assessment",
+      "description": "Knot fully tied and seated on foam block. Suture tails extending from knot. No visible gap in foam block slit",
+      "technique_notes": "Complete knot formation; slit appears fully closed by knot tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "suture_cut",
+      "description": "Scissors visible in hand approaching suture tails. Preparation to cut both suture ends inside trainer",
+      "technique_notes": "Final step ready to execute; proper instrument positioning",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 55.0,
+  "phase_timings": [
+    {
+      "phase": "suture_introduction",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert (instructional setup)"
+    },
+    {
+      "phase": "extracorporeal_throws",
+      "start_seconds": 10,
+      "end_seconds": 45,
+      "duration_seconds": 35,
+      "benchmark_comparison": "expert (three throws completed efficiently)"
+    },
+    {
+      "phase": "slit_closure_assessment",
+      "start_seconds": 45,
+      "end_seconds": 50,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 50,
+      "end_seconds": 55,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "none_observed",
+      "description": "No suture deviations from marks, no gap in slit closure, no knot slippage, no drain avulsion observed",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        11
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean formation and tightening; appropriate knot geometry and tension"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Demonstrating proper hand alternation; smooth wrap and cinch"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw cinched with good tension; knot fully secured"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.9,
+      "notes": "Workpiece is foam block; suture passes through marked targets with precision"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "notes": "Foam block slit fully closed by final knot tension; no residual gapping observed"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 55.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 365.0,
+    "formula_applied": "420 - 55.0 - 0.0 = 365.0"
+  },
+  "confidence": 0.92,
+  "confidence_rationale": "This is a clear expert demonstration video with excellent visibility of all phases. Knot formation, hand switching, and knot security are all visible and perfect. Suture placement and slit closure are unambiguous. The only minor limitation is that the video shows instructional framing (reference photos) at the start, but the hands-on execution is crisp and observable throughout.",
+  "cannot_determine": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Roeder's knot formation with alternating hand throws",
+      "Proper friction control during knot cinching ('ADJUST TO GAIN TIGHT FRICTION')",
+      "Hand-to-hand transfer and wrap technique for extracorporeal knot",
+      "Sequential single throws with consistent tension",
+      "Knot positioning on workpiece to close slit fully"
+    ],
+    "verbal_cues": [
+      "ADJUST TO GAIN TIGHT FRICTION (frame ~6, 25s mark)"
+    ],
+    "common_errors_addressed": [
+      "Proper hand alternation to maintain knot strength and symmetry",
+      "Avoiding loose or asymmetrical knots by controlling wrap and cinch tension",
+      "Ensuring full slit closure by applying appropriate final knot tension"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "technique_summary": "Expert-level demonstration of extracorporeal suture with three single throws using Roeder's knot technique. All phases executed flawlessly with smooth hand transitions, perfect knot security, and complete slit closure. Completion time of 55 seconds is significantly faster than the proficiency benchmark of 136 seconds, reflecting expert-level efficiency and muscle memory.",
+  "strengths": [
+    "Textbook hand alternation between throws with no hesitation",
+    "Consistent, appropriate tension throughout knot formation and cinching",
+    "Perfect knot geometry and alignment on workpiece",
+    "Complete slit closure with no gapping",
+    "Efficient workflow with minimal extraneous motion"
+  ],
+  "improvement_suggestions": [
+    "None applicable; this is expert-level performance suitable for instruction and reference"
+  ],
+  "video_id": "jwWa43JzyHA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:23:31.752489+00:00"
+}

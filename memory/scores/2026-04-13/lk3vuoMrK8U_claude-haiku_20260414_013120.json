@@ -1,0 +1,26 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Equipment Overview - Product Demonstration",
+  "cannot_score": true,
+  "reason": "This video is a product/equipment demonstration, not a performance or expert demo of an FLS task. It shows the Inovus MISTELS trainer hardware setup, components, and assembly instructions with no actual task execution visible.",
+  "video_content_summary": "The frames show a detailed walkthrough of the Inovus/Pyxus HD FLS trainer hardware, including: (1) system overview with laptop connection, (2) top and side views of the trainer box assembly, (3) internal cavity showing three peg towers and training surface, (4) camera/lighting installation, (5) cable routing, (6) final assembled trainer with all components in place. No instruments are manipulated, no training task is performed, and no trainee or expert is visible performing a MISTELS task.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Trainer hardware assembly",
+      "Camera and lighting installation",
+      "Cable management and routing",
+      "Proper trainer positioning for use"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": null,
+    "skill_level_demonstrated": null,
+    "video_purpose": "Equipment setup and familiarization guide for FLS trainers and administrators"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "The video content is unambiguously a product/hardware demonstration, not a task performance. No FLS task execution occurs.",
+  "video_id": "lk3vuoMrK8U",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:31:20.029382+00:00"
+}

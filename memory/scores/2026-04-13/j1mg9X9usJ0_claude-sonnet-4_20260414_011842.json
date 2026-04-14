@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Training Overview Video",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Black screen with University of Adelaide logo",
+      "technique_notes": "Educational video introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_overview",
+      "description": "Hands positioning laparoscopic training equipment with University of Adelaide branding",
+      "technique_notes": "Demonstration of proper trainer setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "interview_segment",
+      "description": "Male surgeon in blue scrubs speaking to camera in interview setting",
+      "technique_notes": "Educational interview format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "task3_demonstration",
+      "description": "Close-up of endoloop being positioned around foam appendage with peg transfer board visible",
+      "technique_notes": "Shows proper endoloop deployment technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 75.0,
+      "phase": "clinical_environment",
+      "description": "Surgeons in operating room wearing 3D glasses with surgical equipment",
+      "technique_notes": "Shows progression from training to real surgical environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 90.0,
+      "phase": "suturing_demonstration",
+      "description": "Close-up of blue foam suturing pad with multiple practice patterns",
+      "technique_notes": "Shows various suturing practice configurations",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 100.0,
+      "phase": "live_surgery",
+      "description": "Laparoscopic view of actual surgical procedure showing tissue manipulation",
+      "technique_notes": "Real surgical application of laparoscopic skills",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper laparoscopic trainer setup and positioning",
+      "endoloop deployment around foam appendage",
+      "suturing practice pad utilization",
+      "progression from simulation to real surgery",
+      "use of 3D visualization technology in surgery"
+    ],
+    "verbal_cues": [
+      "Interview segments discussing training importance",
+      "Educational narration about skill development"
+    ],
+    "common_errors_addressed": [
+      "importance of structured training before live surgery",
+      "proper equipment setup for effective practice"
+    ],
+    "skill_level_demonstrated": "educational_overview"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video format with University of Adelaide branding, multiple interview segments, and educational content spanning various FLS tasks and surgical applications. Not a single task performance but rather an overview/promotional video about laparoscopic training.",
+  "cannot_determine": [
+    "Specific task completion times - this is not a performance video",
+    "Individual penalty assessments - multiple tasks shown briefly",
+    "Detailed scoring metrics - educational content rather than assessment"
+  ],
+  "video_id": "j1mg9X9usJ0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:18:42.381564+00:00"
+}

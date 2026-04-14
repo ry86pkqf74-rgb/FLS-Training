@@ -1,0 +1,140 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "KU School of Medicine Wichita title card and 'Laparoscopic Suturing Lab' header shown",
+      "technique_notes": "Educational opening sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Trainer box with two FLS modules visible; instructor demonstrating knot pusher tool",
+      "technique_notes": "Equipment setup and demonstration of knot pusher mechanics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 15.0,
+      "phase": "needle_load",
+      "description": "Close-up of right hand holding needle driver with needle loaded; proper grip at 2/3 point from tip",
+      "technique_notes": "Correct needle driver positioning demonstrated, perpendicular needle orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 25.0,
+      "phase": "suture_placement",
+      "description": "Needle being driven through Penrose drain at first mark; entry appears perpendicular",
+      "technique_notes": "Clean needle entry, good trajectory control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35.0,
+      "phase": "suture_placement",
+      "description": "Suture thread passing through drain tissue; second mark approach visible on monitor",
+      "technique_notes": "Demonstrates proper bite depth and exit angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Hands outside trainer performing knot tying; two suture ends being manipulated",
+      "technique_notes": "First throw initiated; left hand forming loop, right hand tension control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 65.0,
+      "phase": "knot_push",
+      "description": "Knot pusher tool being used to advance knot down suture toward drain",
+      "technique_notes": "Smooth knot advancement; proper pusher technique demonstrated with controlled force",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 80.0,
+      "phase": "knot_completion",
+      "description": "Knot seated at marked location on drain; second throw being formed",
+      "technique_notes": "Knot positioning at target; clean execution of additional throws",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 95.0,
+      "phase": "suture_cut",
+      "description": "Scissors cutting both suture ends after final throw; knot remains secure",
+      "technique_notes": "Final cut performed with appropriate margin; knot integrity maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 110.0,
+      "phase": "final_assessment",
+      "description": "Completed suture with knot at mark; drain slit closed; instructor showing final product",
+      "technique_notes": "Task completion demonstrated; no gap visible in drain",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 125.0,
+      "phase": "group_context",
+      "description": "Wide shot of multiple FLS trainer stations; multiple trainees and instructors in lab setting",
+      "technique_notes": "Educational lab environment; multi-station training facility",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 135.0,
+      "phase": "closing",
+      "description": "Final KU School of Medicine Wichita title card with tagline 'A Healthy Kansas Starts Here'",
+      "technique_notes": "Video conclusion",
+      "penalties_observed": []
+    }
+  ],
+  "video_type_assessment": "This is an INSTRUCTIONAL video, not a performance evaluation. The content shows an expert demonstration of Task 4 (Extracorporeal Suture with Knot Tying) with educational context, multiple camera angles, close-up technique demonstration, and a structured lab environment introduction. The video is designed to teach correct technique rather than evaluate a single trainee performance.",
+  "cannot_score": "This video cannot be scored as a performance submission because: (1) It is an expert demonstration video with intentional teaching structure; (2) Multiple individuals and perspectives are shown, not a single trainee's continuous attempt; (3) Frames transition between overview, close-up, and group shots rather than continuous task execution; (4) The context is educational narration and lab setup, not a timed formal assessment.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Needle driver grip at 2/3 point from needle tip",
+      "Perpendicular needle entry through tissue",
+      "Proper suture bite depth to ensure adequate tissue capture",
+      "Extracorporeal knot formation with controlled hand tension",
+      "Knot pusher tool mechanics for advancing knot down suture",
+      "Two-hand coordination during throw sequence",
+      "Knot positioning at marked target location",
+      "Secure knot seating before final throw",
+      "Scissor technique for clean suture tail cutting",
+      "Final assessment of drain slit closure quality"
+    ],
+    "verbal_cues": [
+      "Lab title indicates focus on laparoscopic suturing fundamentals",
+      "Instructor demonstration context emphasizes proper technique mastery",
+      "Equipment setup shown prior to procedure initiation"
+    ],
+    "common_errors_addressed": [
+      "Avoid shallow bites that fail to properly engage tissue",
+      "Maintain perpendicular needle entry to prevent suture deviation",
+      "Apply controlled knot pusher pressure to prevent knot slippage",
+      "Ensure adequate knot security before cutting suture tails",
+      "Verify complete drain slit closure without gaps"
+    ],
+    "skill_level_demonstrated": "expert",
+    "instructional_focus": "Task 4 Extracorporeal Suture with Knot Tying - proper technique mastery and safety demonstration for training purposes",
+    "setting": "KU School of Medicine Wichita FLS Training Laboratory with multiple trainer stations and instructor supervision"
+  },
+  "summary": "This is an expert-led instructional video demonstrating proper execution of FLS Task 4 (Extracorporeal Suture with Knot Tying). The video shows clean technique across all phases: needle loading with proper grip, perpendicular suture placement through two marks on a Penrose drain, extracorporeal knot formation with appropriate tension control, knot advancement using pusher tool, and final suture cutting with knot security verification. No performance scoring is applicable; this is educational content designed to model correct technique for trainee learning.",
+  "video_id": "hExtsdUJGvA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:10:02.192057+00:00"
+}

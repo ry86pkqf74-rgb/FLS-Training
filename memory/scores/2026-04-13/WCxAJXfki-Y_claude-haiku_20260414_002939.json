@@ -1,0 +1,142 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Training Equipment Demonstration/Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_setup",
+      "description": "Overview of PracticeMed FLS trainer box showing 6 peg transfer pegs with rubber objects and laparoscopic instruments mounted on articulated arms",
+      "technique_notes": "Standard FLS trainer configuration with dual instrument mount system",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_introduction",
+      "description": "Trainer unit shown from side angle, displaying compact 32cm \u00d7 40cm \u00d7 30cm footprint with integrated cable management",
+      "technique_notes": "Mobile training platform with mounting surface visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "monitor_display",
+      "description": "Laparoscopic monitor display showing endoscopic needle guidance module with numbered targets (1-10) and target time of 268 seconds noted",
+      "technique_notes": "Real-time video feedback system for task guidance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "suture_task_setup",
+      "description": "Close-up of Penrose drain with marked line and pre-positioned suture, labeled 'Laparoscopic Suturing Target time 360 sec'",
+      "technique_notes": "Extracorporeal suture task module demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "component_assembly",
+      "description": "Display of individual trainer components including laparoscopic graspers, needle drivers, and knot pusher with detachable heads",
+      "technique_notes": "Modular instrument system with quick-disconnect connectors",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "magnetic_surface",
+      "description": "Demonstration of magnetic base surface for needle/instrument management during procedures",
+      "technique_notes": "Safety feature for instrument containment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "illumination_system",
+      "description": "Adjustable LED lighting system mounted on trainer for task visualization",
+      "technique_notes": "Ergonomic lighting design with flexible arm",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "connectivity",
+      "description": "USB Type-C connector shown for data transfer and integration with monitoring systems",
+      "technique_notes": "Modern digital interface for performance recording",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "pattern_cut_module",
+      "description": "Pattern cutting circle task setup with clamps holding gauze suspended over marked 4cm diameter circle",
+      "technique_notes": "Task 2 (Pattern Cut) module configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "endoloop_task",
+      "description": "Close-up of foam appendage with pre-tied ligating loop and target mark for deployment, demonstrating Task 3 setup",
+      "technique_notes": "Ligating loop task (Task 3) module shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "intracorporeal_suture_pad",
+      "description": "Pink silicone suture pad with labyrinth-style training pathways for knot-tying practice",
+      "technique_notes": "Alternative intracorporeal suturing training surface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "examination_cuvette",
+      "description": "Close-up video feed showing laparoscopic view of foam tissue with suture delivery and biological simulation",
+      "technique_notes": "High-fidelity tissue simulation for advanced suturing tasks",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A \u2014 instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video is clearly an instructional equipment overview demonstrating the complete FLS trainer system and its modules. No trainee performance is present, and no task execution occurs. This is vendor/educational content showing setup, features, and capabilities across all five FLS tasks.",
+  "cannot_determine": [
+    "Specific task being demonstrated \u2014 video shows overview of entire FLS system",
+    "Performance metrics \u2014 no actual task execution visible",
+    "Completion time \u2014 equipment demonstration only"
+  ],
+  "video_type_notes": "Comprehensive product/training demonstration video showing PracticeMed FLS trainer capabilities, setup, and equipment features. Includes module displays for Tasks 1 (Peg Transfer), 2 (Pattern Cut), 3 (Endoloop), 4 (Extracorporeal Suture), and 5 (Intracorporeal Suture).",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS trainer setup and initialization",
+      "Instrument attachment and detachment procedures",
+      "Monitor and endoscopic visualization system operation",
+      "All five MISTELS task module configurations",
+      "Magnetic surface safety feature use",
+      "Adjustable lighting optimization",
+      "Digital connectivity for performance tracking"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_equipment_overview",
+    "educational_value": "Demonstrates complete FLS trainer system for educators, administrators, and new users. Shows proper equipment assembly, module selection, and task-specific setup for all five MISTELS tasks."
+  },
+  "video_id": "WCxAJXfki-Y",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:29:39.835492+00:00"
+}

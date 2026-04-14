@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Precision Cutting",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "LapAR Pro branding and equipment overview",
+      "technique_notes": "Commercial presentation of laparoscopic training system",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_intro",
+      "description": "LapAR Pro laparoscopic trainer with monitor display",
+      "technique_notes": "Professional setup for FLS training tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_demo",
+      "description": "Trainee positioned at simulator with instruments in training box",
+      "technique_notes": "Proper ergonomic positioning demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_overview",
+      "description": "Close-up view of FLS training board with red pegs",
+      "technique_notes": "Task 1 peg transfer equipment visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "instructional_presentation",
+      "description": "Instructor presenting system features",
+      "technique_notes": "Professional educational demonstration format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 35.0,
+      "phase": "task2_setup",
+      "description": "Pattern cutting board with gauze and marked circle visible",
+      "technique_notes": "Proper Task 2 setup with suspended gauze and circular pattern",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot score - instructional content only"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear identification as product demonstration and instructional content. No actual task performance to score.",
+  "cannot_determine": [
+    "No actual task performance shown to assess timing or technique penalties"
+  ],
+  "technique_summary": "Instructional video demonstrating LapAR Pro training system capabilities with brief views of FLS Task 2 setup but no performance to evaluate.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper simulator setup",
+      "ergonomic positioning at trainer",
+      "FLS task equipment configuration"
+    ],
+    "verbal_cues": [
+      "Professional presentation format implied from context"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_overview"
+  },
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "kwTUebJtGN8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:28:01.657954+00:00"
+}

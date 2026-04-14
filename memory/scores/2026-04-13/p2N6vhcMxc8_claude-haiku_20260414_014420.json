@@ -1,0 +1,161 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot Tying",
+  "max_time_seconds": 420,
+  "proficiency_time_seconds": 136,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide: 'Basics Skills for Laparoscopic Knot Tying and Suturing' by Deepraj Bhandarkar, Consultant Minimal Access Surgery",
+      "technique_notes": "Educational video introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup_demo",
+      "description": "Hands-on demonstration with EMAST trainer visible. Needle driver being held and instructed.",
+      "technique_notes": "Pre-task setup and instrument familiarization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "melzer_knot_technique",
+      "description": "Narrated instruction: 'Tying a Melzer knot'. Hands manipulating suture outside the trainer box.",
+      "technique_notes": "Extracorporeal knot formation demonstrated outside the surgical field",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 20.0,
+      "phase": "knot_placement_demo",
+      "description": "Knot being demonstrated as secured at desired site on Penrose drain. Caption: 'Knot secured at desired site'",
+      "technique_notes": "Final knot positioning shown; drain slit appears closed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 30.0,
+      "phase": "suture_withdrawal",
+      "description": "Caption: 'End of the suture brought out from reducer'. Suture tail visible being withdrawn through 10mm port.",
+      "technique_notes": "Suture management after knot completion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 40.0,
+      "phase": "grasper_introduction",
+      "description": "Caption: 'Grasper introduced through the endoloop'. Foam model appendage visible with suture and endoloop grasper entering.",
+      "technique_notes": "Transition to intracorporeal demonstration; different model/task component shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 50.0,
+      "phase": "intracorporeal_setup",
+      "description": "Foam appendages visible in trainer. Grasper positioning demonstrated on model.",
+      "technique_notes": "Intracorporeal suturing setup demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 60.0,
+      "phase": "needle_driving",
+      "description": "Caption: 'Needle driven by rotation of wrist (prone to supine)'. Laparoscopic view of needle being driven through tissue with wrist rotation technique.",
+      "technique_notes": "Key technique demonstrated: wrist pronation/supination for needle driving in endoscopic view",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 70.0,
+      "phase": "intracorporeal_suture_placement",
+      "description": "Suture being placed through marked sites on Penrose drain in endoscopic view.",
+      "technique_notes": "Correct suture passage through target marks demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 80.0,
+      "phase": "intracorporeal_knot_formation",
+      "description": "Caption: 'First single throw'. Suture knot being formed intracorporeally with laparoscopic view.",
+      "technique_notes": "Extracorporeal knot technique being applied after suture placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 90.0,
+      "phase": "interrupted_suture_note",
+      "description": "Caption: 'Interrupted Suture (Working with a short suture)'. Indicates transition to discussion of technique variation.",
+      "technique_notes": "Educational note on adaptation for shorter suture lengths",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 100.0,
+      "phase": "final_throw_demo",
+      "description": "Final suture completion shown with proper knot tension and closure.",
+      "technique_notes": "Complete task demonstration with secure final result",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 420,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is a structured educational demonstration video with narration, instructional overlays, and multiple teaching segments covering both extracorporeal and intracorporeal suture techniques. It is NOT a trainee performance video and therefore should not be scored using the FLS rubric.",
+  "cannot_determine": [
+    "Completion time - this is not a single continuous task performance",
+    "Individual penalty measurements - this is instructional content, not an evaluated performance",
+    "Trainee skill level - instructor is demonstrating technique, not being evaluated"
+  ],
+  "video_classification_rationale": "Video contains title slides, narrated instructions, multiple split segments covering different techniques (Melzer knot, intracorporeal suturing, needle driving mechanics), and educational overlays. There is no continuous task performance by a single trainee being timed and scored. The video serves as an instructional resource demonstrating correct FLS Task 4 technique and variations.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Extracorporeal Melzer knot formation",
+      "Suture passage through marked targets on Penrose drain",
+      "Proper needle driver grip and positioning",
+      "Wrist pronation/supination for needle driving in laparoscopic view",
+      "Knot advancement and tension application",
+      "Suture withdrawal through 10/5 reducer",
+      "Drain slit closure assessment",
+      "Adaptation for interrupted sutures with short lengths"
+    ],
+    "verbal_cues": [
+      "Introduction to knot tying and suturing basics",
+      "'Tying a Melzer knot' - specific knot type identified",
+      "'Knot secured at desired site' - placement confirmation",
+      "'End of the suture brought out from reducer' - suture management",
+      "'Grasper introduced through the endoloop' - instrument introduction sequence",
+      "'Needle driven by rotation of wrist (prone to supine)' - wrist motion technique",
+      "'First single throw' - throw sequencing",
+      "'Interrupted Suture (Working with a short suture)' - technique adaptation"
+    ],
+    "common_errors_addressed": [
+      "Demonstrates correct wrist rotation technique to avoid awkward needle angles",
+      "Shows proper knot tension to ensure drain slit closure without over-tightening",
+      "Illustrates proper needle-to-tissue angle for perpendicular passage",
+      "Demonstrates technique adaptation when suture length is limited",
+      "Shows correct suture withdrawal path through reducer to prevent snagging"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "teaching_summary": "Comprehensive instructional video covering FLS Task 4 (Extracorporeal Suture with Knot Tying) and related intracorporeal techniques. Presenter is Dr. Deepraj Bhandarkar, Consultant in Minimal Access Surgery. Video demonstrates both standard and adapted techniques with clear identification of key steps: suture introduction, target passage, extracorporeal knot formation (Melzer knot), proper wrist mechanics for laparoscopic needle driving, and final drain closure. Multiple segments provide both overhead and endoscopic views. Appropriate for training and proficiency assessment preparation.",
+  "intended_audience": "Surgical trainees preparing for FLS certification or practicing Task 4 technique",
+  "note_on_scoring": "Per AI rubric instructions, instructional/educational videos with narration, overlays, and lecture format are NOT scored using the FLS performance rubric. This video does not represent a timed performance by a trainee attempting the task, and therefore no FLS score is computed.",
+  "video_id": "p2N6vhcMxc8",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:44:20.000885+00:00"
+}

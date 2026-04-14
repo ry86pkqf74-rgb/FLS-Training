@@ -1,0 +1,11 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "reason": "Video content is not an FLS task performance. The frames show a Zoom meeting from Queen's University General Surgery department with multiple participants discussing Kingston, Ontario living situations, recreational activities, and student interviews. There is no laparoscopic surgical training equipment, peg transfer board, pattern cutting task, ligating loop, suture material, or any FLS MISTELS task apparatus visible. This is educational/administrative meeting content unrelated to FLS task scoring.",
+  "scoreable": false,
+  "minimal_response": true,
+  "video_id": "wI4-qRWMUc8",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:06:02.854634+00:00"
+}

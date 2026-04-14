@@ -1,0 +1,153 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide: 'Fundamentals of Laparoscopic Surgery (FLS) for Sinistral Learners' with production credits from UPMC",
+      "technique_notes": "Educational video introduction targeting left-handed learners",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "background",
+      "description": "Slide explaining context: 10% of physicians left-handed, deficiency in teaching dominant hand development, resource scarcity for left-handed trainees",
+      "technique_notes": "Establishes educational purpose and context for left-handed FLS instruction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 15.0,
+      "phase": "peg_transfer_setup",
+      "description": "Peg transfer trainer visible with colored foam objects (orange, green, yellow) on pegs with black graspers",
+      "technique_notes": "Demonstration equipment setup for Task 1",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 25.0,
+      "phase": "pattern_cut_setup",
+      "description": "Pattern cut task showing gauze suspended between clamps with circular outline marked in black ink (4cm diameter, approximately)",
+      "technique_notes": "Task 2 setup with clear marking visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35.0,
+      "phase": "pattern_cut_initial",
+      "description": "Scissors begin cutting along the marked circular line; initial entry at top of circle",
+      "technique_notes": "Perpendicular approach to gauze, smooth controlled motion initiating cut",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 45.0,
+      "phase": "pattern_cut_progress",
+      "description": "Continued cutting clockwise along circular outline; gauze remains stable on clamps, cut appears on-line",
+      "technique_notes": "Smooth progression, no visible deviation from marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 60.0,
+      "phase": "pattern_cut_completion",
+      "description": "Final segment of circular cut being completed; nearly full circumference cut visible",
+      "technique_notes": "Controlled finishing technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 75.0,
+      "phase": "endoloop_setup",
+      "description": "Endoloop task setup showing red foam appendage (three-pronged structure) with suture preparation visible",
+      "technique_notes": "Task 3 equipment configuration displayed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 95.0,
+      "phase": "needle_anatomy",
+      "description": "Educational slide showing 'Anatomy of the Needle' with labeled needle components (A=point, B=body, C=eye/attachment)",
+      "technique_notes": "Instructional diagram demonstrating proper needle anatomy and grasp positions for optimal technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 115.0,
+      "phase": "extracorporeal_suture_position_a",
+      "description": "Position A shown: Penrose drain secured on red felt pad; suture entry point marked; left-handed needle driver approach with arrow indicating proper grasping position for left-handed surgeon",
+      "technique_notes": "Demonstrates correct needle grasp position for left-handed learner; suture marks clearly visible on drain",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 145.0,
+      "phase": "extracorporeal_suture_needle_passage",
+      "description": "Close-up showing needle driver grasping needle shaft and beginning to pass through first mark on Penrose drain",
+      "technique_notes": "Clean grasp at approximately 2/3 point along needle; controlled entry angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 165.0,
+      "phase": "extracorporeal_suture_completion",
+      "description": "Suture fully passed through both marked points on drain with appropriate spacing; suture loop visible above drain with knot pusher and suture configured for extracorporeal knot tying",
+      "technique_notes": "Suture placement appears centered on marked targets; adequate loop length for knot formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 185.0,
+      "phase": "conclusion",
+      "description": "Final slide: 'Conclusion' stating key teaching points for left-handed learners and encouraging mentor support for dominant hand development",
+      "technique_notes": "Educational summary emphasizing inclusive surgical training for left-handed trainees",
+      "penalties_observed": []
+    }
+  ],
+  "video_content_type": "instructional_educational_content",
+  "cannot_score_reason": "This video is classified as INSTRUCTIONAL content. It is an educational tutorial with narrated slides, equipment demonstrations, and teaching slides (background, needle anatomy, conclusion) interspersed with task demonstrations. The video contains no formal timed performance of a complete FLS task by a trainee attempting to be scored.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Pattern cutting technique for circular excision with marked outline",
+      "Proper needle grasp position at 2/3 point from needle tip",
+      "Left-handed needle driver positioning and approach angles",
+      "Penrose drain suture placement through bilateral marks",
+      "Controlled cutting motion maintaining line fidelity",
+      "Peg transfer setup for bilateral hand coordination",
+      "Endoloop appendage positioning"
+    ],
+    "verbal_cues": [
+      "Video explicitly addresses left-handed learners (title slide)",
+      "Emphasizes deficiency in teaching left-handed dominant hand development",
+      "Encourages mentors to support both left and right-handed surgeons",
+      "Highlights resource scarcity for left-handed surgical training"
+    ],
+    "common_errors_addressed": [
+      "Inadequate left-handed surgical instruction resources",
+      "Difficulty left-handed learners have converting right-handed demonstrations to mirror image",
+      "Insufficient mentorship for dominant hand development in left-handed trainees",
+      "Lack of inclusive training environments for non-right-handed surgeons"
+    ],
+    "skill_level_demonstrated": "expert",
+    "target_audience": "left-handed surgical trainees and mentors",
+    "production_credits": [
+      "Alysia Wiener, MD",
+      "Sarah Bennett, MD",
+      "Shana Miles MD, PhD",
+      "Magee-Womens Hospital of UPMC",
+      "Pittsburgh, PA"
+    ]
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video classification as instructional is certain based on clear title slides, educational context, narrated background information, anatomical teaching slides, and conclusion summary. This is definitively not a performance video attempting to achieve an FLS score.",
+  "scoring_note": "This video does NOT qualify for FLS scoring. It is an educational resource demonstrating FLS techniques for left-handed learners. Per protocol, instructional videos are not scored; teaching content is extracted instead.",
+  "video_id": "VT6iTXl8H4s",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:26:00.054502+00:00"
+}

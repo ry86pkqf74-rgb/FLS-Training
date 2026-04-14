@@ -1,0 +1,158 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "proficiency_time_seconds": 136,
+  "max_score": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Equipment setup shown on bench. Instruments visible including needle drivers, scissors, and suture block with marked Penrose drain visible.",
+      "technique_notes": "Educational setup showing task configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_demonstration",
+      "description": "Close-up of knot pusher instrument being shown",
+      "technique_notes": "Instructional demonstration of key tool",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "equipment_demonstration",
+      "description": "Penrose drain with marked targets illustrated with overlaid annotation 'A' marking one target",
+      "technique_notes": "Clear demonstration of target anatomy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_demonstration",
+      "description": "Two suture blocks (AuroSuture training boxes) shown from above",
+      "technique_notes": "Standard FLS extracorporeal knot training setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 25.0,
+      "phase": "equipment_demonstration",
+      "description": "Hands demonstrating proper grasp of Penrose drain with suture block anchoring",
+      "technique_notes": "Shows stabilization technique for drain during suturing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 40.0,
+      "phase": "needle_loading_demonstration",
+      "description": "Endoscopic view entering the laparoscopic trainer; needle and suture visible with instrument approaching target area on simulated tissue",
+      "technique_notes": "First instrument insertion shown; needle approach technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 55.0,
+      "phase": "suture_placement_demonstration",
+      "description": "Needle driver advancing needle through marked target on foam tissue. Entry appears perpendicular and on-mark.",
+      "technique_notes": "Clean needle entry at appropriate angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 70.0,
+      "phase": "suture_placement_demonstration",
+      "description": "Needle exiting first target, suture thread trailing behind. Position appears accurate to marked line.",
+      "technique_notes": "Good needle trajectory through tissue",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 85.0,
+      "phase": "suture_placement_demonstration",
+      "description": "Second pass: needle driver repositioning for second target entry. Needle oriented for backhand approach.",
+      "technique_notes": "Appropriate instrument repositioning between passes",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 100.0,
+      "phase": "suture_placement_demonstration",
+      "description": "Needle entering second marked target. Entry appears on-line, perpendicular approach maintained.",
+      "technique_notes": "Clean second target entry",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 120.0,
+      "phase": "extracorporeal_knot_demonstration",
+      "description": "Demonstration of extracorporeal knot tying outside the trainer box. Hands manipulating suture ends to form first throw.",
+      "technique_notes": "Shows proper hand positioning for knot formation outside box",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 150.0,
+      "phase": "knot_pusher_demonstration",
+      "description": "Knot pusher being advanced along suture to push completed knot down toward drain. Smooth advancement visible.",
+      "technique_notes": "Demonstrates proper knot pusher technique and tension application",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 180.0,
+      "phase": "final_assessment",
+      "description": "Close-up of completed suture block with drain showing secured knot. Slit in drain appears closed with good approximation.",
+      "technique_notes": "Final result demonstration shows complete slit closure",
+      "penalties_observed": []
+    }
+  ],
+  "video_type_notes": "This is a comprehensive instructional/educational video demonstrating proper FLS Task 4 (Extracorporeal Suture Knot) technique. The video includes equipment setup, anatomical target identification, step-by-step demonstration of needle passes through marked targets, extracorporeal knot formation, and knot pusher advancement. There is narration/educational context (evidenced by Memorial University watermark and Krisztina Bajzak name, suggesting this is a teaching aid). The video does not show a trainee under timed conditions\u2014it is an instructional demonstration.",
+  "scoring_status": "NOT SCORED",
+  "scoring_rationale": "This video is classified as 'instructional' per the assessment rubric. Instructional/tutorial content with educational narration, clear teaching intent, and demonstration of proper technique should NOT be scored as a performance. Instead, teaching content has been extracted below. No completion time, penalties, or performance score are applicable.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper needle loading at optimal grip point (approximately 2/3 from tip)",
+      "Perpendicular needle entry through marked targets on Penrose drain",
+      "Appropriate angle adjustment between first and second target passes",
+      "Backhand needle repositioning for second pass",
+      "Hands-on stabilization of drain/suture block during needle placement",
+      "Extracorporeal knot formation outside the trainer box using manual hand technique",
+      "Smooth advancement of knot pusher along suture to apply tension",
+      "Proper tension management to achieve complete slit closure in drain",
+      "Identification and alignment with marked target lines before needle entry"
+    ],
+    "verbal_cues": [
+      "Video includes educational context and proper technique demonstration but specific verbal narration is not transcribable from the video frames"
+    ],
+    "common_errors_addressed": [
+      "Avoiding off-target needle entry by maintaining perpendicular approach",
+      "Preventing suture deviation by careful alignment with marked lines before passing needle",
+      "Ensuring adequate knot tension for complete slit approximation",
+      "Proper knot pusher technique to avoid knot slippage during advancement"
+    ],
+    "skill_level_demonstrated": "expert",
+    "key_learning_points": [
+      "Target marks must be clearly identified before needle approach",
+      "Needle entry must be perpendicular and on-line with marked targets",
+      "Extracorporeal knot formation allows for better visualization and control",
+      "Knot pusher must advance smoothly without hesitation to maintain tension",
+      "Complete slit closure is the end-state objective"
+    ]
+  },
+  "cannot_determine": [
+    "Completion time \u2014 instructional video, not timed performance",
+    "Performance penalties \u2014 this is a demonstration, not a trainee attempt",
+    "Task difficulty classification for this individual \u2014 no trainee performance visible"
+  ],
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is definitive: this is clearly an instructional/educational demonstration produced by Memorial University with labeled watermarks and professional setup. It is not a trainee performance under exam conditions. All frames clearly show step-by-step teaching content rather than real-time task execution. No scoring is appropriate.",
+  "video_id": "tJjt2bPBYrc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:59:03.354800+00:00"
+}

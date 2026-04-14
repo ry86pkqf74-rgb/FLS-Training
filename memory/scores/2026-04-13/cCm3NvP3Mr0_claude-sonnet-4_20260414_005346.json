@@ -1,0 +1,13 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "analysis_summary": "This video appears to be a patient education video about preparing for laparoscopic surgery, not an FLS performance video. The content shows pre-operative instructions including fasting guidelines, removing jewelry, arrival procedures, and waiting areas at what appears to be Boston Children's Hospital.",
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational content with title screens, patient preparation instructions, and hospital footage. No FLS trainer, instruments, or task performance visible.",
+  "cannot_score_reason": "Video contains educational content about surgery preparation, not FLS task performance",
+  "video_id": "cCm3NvP3Mr0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:53:46.581686+00:00"
+}

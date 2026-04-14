@@ -1,0 +1,95 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup_overview",
+      "description": "Wide view of FLS training lab showing multiple laparoscopic trainers on bench",
+      "technique_notes": "Professional training environment with proper equipment setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "demonstration_setup",
+      "description": "Person positioned at trainer with laptop monitor showing laparoscopic view",
+      "technique_notes": "Standard ergonomic positioning for laparoscopic training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "instrument_handling",
+      "description": "Hands operating laparoscopic instruments outside trainer box",
+      "technique_notes": "Demonstrating proper instrument grip and manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "peg_transfer_demo",
+      "description": "Laparoscopic view showing graspers approaching rubber objects on pegs",
+      "technique_notes": "Clear visualization of peg board setup with 6 objects and proper instrument positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "object_manipulation",
+      "description": "Graspers picking up and transferring rubber object between pegs",
+      "technique_notes": "Smooth bimanual coordination demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 18.0,
+      "phase": "close_up_technique",
+      "description": "Close-up view of grasper tips manipulating object with precise control",
+      "technique_notes": "Fine motor control and proper grasper tip alignment shown",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": null,
+    "direction_sequence": null,
+    "dropped_objects": null,
+    "incomplete_transfers": null
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is instructional content demonstrating technique, not a performance to be scored",
+  "cannot_determine": [
+    "Performance scoring not applicable for instructional content"
+  ],
+  "technique_summary": "Professional demonstration of FLS peg transfer task in training laboratory setting",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper ergonomic positioning at laparoscopic trainer",
+      "Bimanual instrument coordination",
+      "Precise grasper control for object manipulation",
+      "Systematic approach to peg transfer sequence"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "g-I2RxX42ag",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:05:33.170566+00:00"
+}

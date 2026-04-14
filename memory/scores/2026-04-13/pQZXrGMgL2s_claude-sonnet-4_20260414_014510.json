@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Animated demonstration showing endoloop positioned around foam appendage with loop deployment mechanism visible",
+      "technique_notes": "Educational animation showing proper loop placement technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 2.0,
+      "phase": "target_approach",
+      "description": "Animation continues showing loop positioned around target appendage at marked line",
+      "technique_notes": "Demonstrates proper positioning at the marked target line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 4.0,
+      "phase": "loop_placement",
+      "description": "Loop shown in position around appendage with deployment mechanism engaged",
+      "technique_notes": "Shows correct loop placement technique around target structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 6.0,
+      "phase": "cinch",
+      "description": "Animation demonstrates cinching process with loop tightening around appendage",
+      "technique_notes": "Proper cinching technique shown with gradual loop closure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 8.0,
+      "phase": "completion",
+      "description": "Final frame shows completed loop secured at target mark",
+      "technique_notes": "Demonstrates successful task completion with loop properly positioned",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": null,
+      "loop_cinched_properly": null,
+      "appendage_transected": null
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an animated instructional demonstration, not a performance to be scored",
+  "cannot_determine": [
+    "Actual performance metrics - this is educational animation"
+  ],
+  "technique_summary": "Animated demonstration of proper endoloop deployment and cinching technique around foam appendage target",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper loop deployment around target appendage",
+      "Correct positioning at marked target line",
+      "Gradual cinching technique to secure loop",
+      "Complete loop closure without appendage transection"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Demonstrates avoiding improper loop placement away from target mark",
+      "Shows proper cinching to prevent loop slippage"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "pQZXrGMgL2s",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:45:10.249532+00:00"
+}

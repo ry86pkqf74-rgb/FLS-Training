@@ -1,0 +1,105 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown/Not FLS Task Performance",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Blank/grey screen with no visible content",
+      "technique_notes": "Video begins with no task apparatus visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "title_card",
+      "description": "Text overlay: 'Improve Your Surgical Skill' with 'Laparoscopic Training' watermark",
+      "technique_notes": "Educational title card, not a task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "title_card",
+      "description": "Text overlay: 'F.MAS and D.MAS Course' and 'Fellowship and Diploma in MAS'",
+      "technique_notes": "Course promotional material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "footage",
+      "description": "Operating room photograph showing surgeons at work table with patient",
+      "technique_notes": "Archival OR photograph, not live FLS task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "montage",
+      "description": "Multiple overlapping photographs of OR scenes and training activities",
+      "technique_notes": "Montage compilation of course/training promotional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 8.0,
+      "phase": "montage",
+      "description": "Photograph of training box with laparoscopic instruments visible, hands manipulating simulator",
+      "technique_notes": "Shows FLS trainer box but not a scored task performance \u2014 appears to be promotional footage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 14.0,
+      "phase": "footage",
+      "description": "Photograph of attendees at course presentation/lecture sitting in audience",
+      "technique_notes": "Educational event documentation, not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 16.0,
+      "phase": "footage",
+      "description": "Photograph of course participants examining FLS trainer model box",
+      "technique_notes": "Training/educational content, not timed task performance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 no task performance detected"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is promotional/instructional material for a surgical training course (F.MAS/D.MAS Fellowship). It contains photographs and video snippets of operating rooms, training facilities, and course participants, but does NOT show a single complete, timed FLS task performance suitable for scoring. No task apparatus is clearly visible performing a defined FLS skill in real time.",
+  "cannot_determine": [
+    "Task identification \u2014 no specific FLS task (Peg Transfer, Pattern Cut, Endoloop, Suture) is being performed",
+    "Completion time \u2014 video is montage/promotional, not a timed performance",
+    "Penalties \u2014 no measurable task performance to assess",
+    "Scoring \u2014 this is instructional/promotional content, not a performance to score"
+  ],
+  "technique_summary": "This is educational/promotional video content, not an FLS task performance video. It showcases a surgical training course but does not contain footage of a trainee or surgeon performing a scoreable FLS task from start to finish.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "N/A \u2014 promotional material only"
+  },
+  "improvement_suggestions": [],
+  "notes": "Video should be reclassified as 'unusable' for FLS scoring purposes. If task performance footage exists, please provide a video that shows a single, uninterrupted FLS task performance.",
+  "video_id": "vZ7W8l8dN1k",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:04:00.445893+00:00"
+}

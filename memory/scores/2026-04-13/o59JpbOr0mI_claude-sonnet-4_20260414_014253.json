@@ -1,0 +1,88 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Trainer Box Assembly and Setup",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_display",
+      "description": "Complete FLS trainer setup showing laptop display with endoscopic view and fully assembled trainer box",
+      "technique_notes": "Professional setup demonstrating proper equipment arrangement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "unboxing",
+      "description": "Person in lab coat removing trainer box components from packaging",
+      "technique_notes": "Systematic unpacking approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "assembly_instruction",
+      "description": "Text overlay 'Assemble the Trainer Box' with hands placing blue peg components",
+      "technique_notes": "Clear instructional formatting with step-by-step guidance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "component_placement",
+      "description": "Close-up view of blue pegs and red components being positioned in trainer base",
+      "technique_notes": "Detailed view of proper component orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "lighting_setup",
+      "description": "Text overlay 'Connect the Adjustable LED Light' showing trainer box interior with attachment points",
+      "technique_notes": "Emphasis on proper illumination for tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "light_connection",
+      "description": "Hands connecting LED light cable to trainer box with illuminated interior visible",
+      "technique_notes": "Proper cable management and lighting placement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {},
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video with professional production quality and comprehensive coverage of setup procedures. Text overlays and systematic demonstration provide high confidence in assessment.",
+  "cannot_determine": [],
+  "technique_summary": "Professional instructional video demonstrating complete FLS trainer setup from unboxing through final assembly and equipment connection.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Systematic trainer box assembly from components",
+      "Proper placement of blue pegs and training modules",
+      "LED lighting connection and positioning",
+      "Endoscope camera connection to computer",
+      "Mobile device integration as secondary display",
+      "Complete equipment arrangement for optimal training"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper component orientation during assembly",
+      "Inadequate lighting setup",
+      "Poor equipment positioning"
+    ],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "o59JpbOr0mI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:42:53.472592+00:00"
+}

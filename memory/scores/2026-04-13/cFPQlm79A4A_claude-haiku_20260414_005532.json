@@ -1,0 +1,188 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Single instrument visible approaching red foam appendage suspended in trainer. Loop deployment mechanism ready.",
+      "technique_notes": "Expert positioning of instrument; appendage clearly visible and accessible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.5,
+      "phase": "loop_deploy",
+      "description": "Both instruments in view; left instrument holding appendage in position while right instrument begins loop deployment over foam structure.",
+      "technique_notes": "Coordinated bimanual technique; one hand stabilizing target, other deploying loop\u2014excellent ergonomic control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "target_approach",
+      "description": "Loop being advanced toward marked target line on appendage. Instruments maintaining steady position.",
+      "technique_notes": "Smooth, controlled advancement; no jerky movements; appendage remains stable in foam bed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage at marked target line. Both instruments maintaining tension.",
+      "technique_notes": "Loop appears centered on mark; no visible deviation from target position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "cinch",
+      "description": "Loop being tightened around appendage. Instruments applying downward pressure on foam base to secure cinch.",
+      "technique_notes": "Controlled cinching; loop tightening evenly; no slippage visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.5,
+      "phase": "cinch",
+      "description": "Loop fully cinched around appendage at marked line. Tight constriction visible.",
+      "technique_notes": "Loop completely secured; no gap or movement evident; appendage still intact",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "cut_tail",
+      "description": "Right instrument positioned to cut suture tail proximal to loop knot.",
+      "technique_notes": "Precise positioning for tail cutting; loop remains firmly cinched during cutting phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "cut_tail",
+      "description": "Suture tail cut and removed. Loop remains cinched and secure on appendage.",
+      "technique_notes": "Clean cut; minimal disturbance to loop positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "completion",
+      "description": "Task completed. Loop secured at marked line on appendage; both instruments withdrawn. Final view shows appendage with tightly cinched loop at target location.",
+      "technique_notes": "Excellent overall execution; loop positioned accurately at mark; tight cinch; no appendage transection",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 28.0,
+      "phase": "completion",
+      "description": "Wide-angle view of completed task. Red balloon (model) and foam appendage visible with loop successfully deployed and secured.",
+      "technique_notes": "Expert-level performance; clean, efficient execution throughout",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 24.5,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 5,
+      "end_seconds": 8,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 8,
+      "end_seconds": 12,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 12,
+      "end_seconds": 18,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 18,
+      "end_seconds": 24.5,
+      "duration_seconds": 6.5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_assessment": {
+      "position_at_mark": true,
+      "deviation_mm": 0,
+      "confidence": 0.95
+    },
+    "cinch_assessment": {
+      "appears_secure": true,
+      "appears_tight": true,
+      "no_slippage": true,
+      "notes": "Loop fully cinched with no visible gap or movement"
+    },
+    "appendage_assessment": {
+      "transected": false,
+      "intact": true,
+      "notes": "Appendage remains undamaged throughout procedure"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 24.5,
+    "total_penalties": 0,
+    "total_fls_score": 155.5,
+    "formula_applied": "180 - 24.5 - 0 = 155.5"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows expert execution with excellent visualization throughout. Loop placement at marked target line confirmed visually; cinch security evident; appendage integrity preserved. Completion time well within expert range (20-40s). Only minor uncertainty is exact pixel-level deviation at mark, but appears to be zero deviation based on clear visual alignment.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level performance demonstrating textbook endoloop technique. Rapid, controlled deployment with bimanual coordination. Loop positioned precisely at marked target line with immediate, secure cinching. Clean tail cutdown. Total performance time 24.5s\u2014well within expert benchmark.",
+  "strengths": [
+    "Excellent bimanual coordination\u2014one hand stabilizing while the other deploys",
+    "Smooth, controlled advancement of loop with no jerky movements",
+    "Loop positioned accurately at marked target line",
+    "Tight, secure cinch with no visible slippage",
+    "Efficient tail cutting without disturbing loop position",
+    "Appendage remains intact throughout\u2014no transection"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Bimanual instrument control with stabilization and deployment roles",
+      "Smooth loop advancement over tissue without rushing",
+      "Proper cinching technique under controlled tension",
+      "Clean suture tail cutdown without loop displacement",
+      "Maintaining tissue integrity throughout procedure"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Avoids rapid uncontrolled loop advancement that could cause tissue injury",
+      "Demonstrates proper loop placement at exact mark\u2014not proximal or distal deviation",
+      "Shows secure cinching technique preventing loop slippage after deployment",
+      "Prevents appendage transection by maintaining tissue integrity during cinch phase"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is an expert demonstration with no meaningful improvement opportunities"
+  ],
+  "video_id": "cFPQlm79A4A",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:55:32.743648+00:00"
+}

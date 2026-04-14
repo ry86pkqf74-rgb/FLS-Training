@@ -1,0 +1,68 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task performed",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Blue background with presenter in circular frame, title 'African Laparoscopic Training Online Programme'",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "product_demo",
+      "description": "ALTO Blade laparoscopic trainer box shown with red training modules visible inside",
+      "technique_notes": "Equipment demonstration showing trainer box setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "curriculum_overview",
+      "description": "Slide showing comprehensive curriculum with intermediate and advanced topics",
+      "technique_notes": "Educational content covering suturing techniques, energy sources, and advanced procedures",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "exercise_overview",
+      "description": "Slide showing exercises categorized as Core, Advanced, and Suturing skills",
+      "technique_notes": "Overview of training exercises including thread transfer, precision cutting, peg capping",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 20.0,
+      "phase": "program_conclusion",
+      "description": "Final slide with presenter and ALTO Programme branding",
+      "technique_notes": "Program promotion and contact information",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic trainer box setup",
+      "core skill exercises (thread transfer, dice stacking, precision cutting, peg capping)",
+      "advanced procedures (salpingectomy, cystectomy, myomectomy)",
+      "suturing methods (mounting, manipulating, gladiator method)"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_overview"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear promotional/instructional video for ALTO programme with no actual FLS task performance. Content is educational overview of laparoscopic training curriculum.",
+  "cannot_determine": [
+    "No FLS task performance to assess"
+  ],
+  "technique_summary": "This is an instructional video promoting the African Laparoscopic Training Online Programme, showing curriculum overview and training equipment but no actual task performance.",
+  "video_id": "cjRLCpjK52U",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:57:50.314772+00:00"
+}

@@ -1,0 +1,104 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_introduction",
+      "description": "Title slide: 'Tips for how to win the laparoscopic suturing contests' by Kengo Hayashi",
+      "technique_notes": "Educational content setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_context",
+      "description": "Text overlay explaining importance of laparoscopic surgery and suturing contests",
+      "technique_notes": "Background information on contest importance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "instructional_content",
+      "description": "Narrator states intention to show tips for winning suturing contests",
+      "technique_notes": "Video purpose statement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "instructional_rules",
+      "description": "Rules slide showing Japanese contest procedure: needle insertion, stitching, square knot, cutting",
+      "technique_notes": "Contest format explanation with 3-0 needle and braided thread",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 40.0,
+      "phase": "demonstration_setup",
+      "description": "Pink training pad visible with two needle drivers approaching the center",
+      "technique_notes": "Training setup with suture material and instruments visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "technique_demonstration",
+      "description": "Text overlay 'Case with a long thread, Time: 19.8 sec' showing needle and suture manipulation",
+      "technique_notes": "Demonstrating effect of thread length on completion time",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 60.0,
+      "phase": "technique_comparison",
+      "description": "Text overlay 'Case with a short thread, Time: 15.4 sec' showing more efficient movement",
+      "technique_notes": "Comparing short vs long thread efficiency - 4.4 second improvement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": null,
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": null,
+  "confidence_rationale": "This is instructional content with narration, text overlays, and educational comparisons - not a performance to be scored",
+  "cannot_determine": [],
+  "technique_summary": "Educational video demonstrating suturing contest tips and techniques rather than an actual task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Thread length optimization for speed",
+      "Proper needle grip positioning",
+      "Efficient instrument positioning",
+      "Square knot tying technique",
+      "Contest-specific suturing approach",
+      "Time management strategies"
+    ],
+    "verbal_cues": [
+      "Adjust thread length for optimal speed",
+      "Grab needle at best position",
+      "Image the position you are suturing",
+      "Suture at 80% of maximum speed",
+      "Suture in the same stream",
+      "Stick to the basics"
+    ],
+    "common_errors_addressed": [
+      "Using excessively long suture thread",
+      "Poor needle positioning",
+      "Rushing beyond control limits",
+      "Inefficient movement patterns"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "aF63wKwD1eE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:49:51.590013+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Program Overview and Course Information",
+  "reason_not_scored": "This is an instructional/educational presentation about the FLS program, not a performance or expert demonstration of an actual FLS task. The video contains slides explaining what FLS is, its importance, exam structure (theoretical and practical components), course schedule, trainer information, and promotional content. There is no actual task performance to score.",
+  "content_summary": [
+    "Introduction to FLS program (developed by SAGES in 2004)",
+    "Explanation of specialties involved (General Surgery, Oncosurgery, Pediatric Surgery, Urology, Gynecology)",
+    "Theoretical exam structure (80 MCQs in 90 minutes, computerized, no back button)",
+    "Online didactic materials reference",
+    "Practical test overview with brief clips showing Pattern Cut and Peg Transfer setups",
+    "Course details and schedule (Wednesday-Sunday with theoretical and hands-on sessions)",
+    "Trainer credentials listed",
+    "Course candidate eligibility (residents to consultants across laparoscopic specialties)",
+    "Reference to textbook source",
+    "Images of previous course participants"
+  ],
+  "confidence": 1.0,
+  "cannot_score": "No trainee or expert performance of an FLS task is present. This is educational content about the FLS program structure and certification process.",
+  "video_id": "ud8ZFbULax4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:02:46.750641+00:00"
+}

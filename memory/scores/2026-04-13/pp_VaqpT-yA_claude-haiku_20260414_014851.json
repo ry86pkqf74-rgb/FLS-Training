@@ -1,0 +1,38 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Program Overview and Educational Content",
+  "content_type": "instructional_compilation",
+  "summary": "This video is an educational/instructional compilation featuring multiple FLS task demonstrations and expert commentary. It includes interviews with Dr. Lauren Barron (General Surgery Resident) and Dr. L. Michael Brunt (Chief, Section of Minimally Invasive Surgery, SAGES President), along with footage of FLS training stations, peg transfer task setup, pattern cutting task, and various training facility tours.",
+  "video_classification_rationale": "The video contains expert talking head segments providing educational context, facility tours showing training equipment and groups of students/trainees, and demonstrations of FLS tasks within an educational/tutorial setting. There is no single continuous task performance being scored. The presence of narration (implied from expert commentary), educational framing, and mixed content (expert interviews, facility overview, multiple tasks shown) classifies this as instructional rather than a scoreable performance video.",
+  "do_not_score": true,
+  "reason_for_no_score": "This is an educational/instructional video compilation, not a single trainee performance. It shows multiple task setups and expert commentary rather than a timed, individual task execution. Scoring requires a single continuous task performance video with clear start/stop timestamps and a single performer attempting one FLS task.",
+  "teaching_content": {
+    "content_segments_identified": [
+      "Expert interview with Dr. Lauren Barron (General Surgery Resident) discussing FLS training",
+      "Expert interview with Dr. L. Michael Brunt (Chief of Minimally Invasive Surgery, SAGES President)",
+      "FLS training facility tour with multiple trainees and instructors",
+      "Peg transfer task setup and equipment demonstration (STORZ WideView system visible)",
+      "Pattern cutting task setup with gauze and cutting instruments",
+      "Training environment overview showing multiple FLS stations",
+      "Group photo of surgical trainees and faculty"
+    ],
+    "demonstrated_tasks": [
+      "Peg Transfer (equipment and setup visible)",
+      "Pattern Cut (red gauze with marking lines visible, scissors/cutting instruments shown)",
+      "General laparoscopic trainer setup (STORZ equipment)"
+    ],
+    "verbal_cues": [
+      "Expert commentary from Dr. Brunt discussing FLS curriculum and training philosophy"
+    ],
+    "common_errors_addressed": "Not explicitly demonstrated in this instructional overview format",
+    "skill_level_demonstrated": "expert",
+    "educational_focus": "FLS program overview, training methodology, facility infrastructure, and expert perspectives on minimally invasive surgical training"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video classification as instructional is very high confidence based on multiple clear indicators: expert talking head interviews, facility tour context, multiple different task setups shown without continuous performance, educational framing, and presence of groups of learners rather than single performer. This is definitively not a scoreable performance video.",
+  "video_id": "pp_VaqpT-yA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:48:51.456790+00:00"
+}

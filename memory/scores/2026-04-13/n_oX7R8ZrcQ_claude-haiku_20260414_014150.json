@@ -1,0 +1,129 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS/LapAR Platform Overview",
+  "reasoning": "This video is an animated instructional/marketing presentation by Inovus Medical promoting their LapAR platform. It contains no actual task performance footage\u2014only animated scenes of medical professionals at workstations, surgical diagrams, feedback screens, and branding. There are no laparoscopic instruments, trainer boxes, or live performance footage visible.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Blank/loading screen",
+      "phase": "intro",
+      "technique_notes": "N/A"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "description": "Inovus Medical + LapAR logo animation",
+      "phase": "branding",
+      "technique_notes": "Marketing/introductory content"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "description": "Animated medical professionals at simulation trainer",
+      "phase": "instructional_demo",
+      "technique_notes": "Illustrated, not real performance"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "description": "Surgical procedure icons (appendectomy, salpingostomy, ligations, etc.)",
+      "phase": "curriculum_overview",
+      "technique_notes": "Demonstrates scope of FLS curriculum"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "description": "Animated learner in simulated OR environment",
+      "phase": "instructional_context",
+      "technique_notes": "Conceptual illustration of training setting"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 16.0,
+      "description": "Digital dashboard/analytics feedback screen",
+      "phase": "assessment_feedback",
+      "technique_notes": "Shows LapAR software interface with performance metrics"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 20.0,
+      "description": "Animated learner at laptop viewing trainer performance",
+      "phase": "instructional_context",
+      "technique_notes": "Illustrates remote/hybrid learning capability"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "description": "Performance feedback display with instructor and learner",
+      "phase": "instructional_context",
+      "technique_notes": "Shows collaborative feedback workflow"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 28.0,
+      "description": "Animated learner performing at laparoscopic trainer with visual feedback",
+      "phase": "instructional_context",
+      "technique_notes": "Conceptual illustration of augmented feedback system"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 32.0,
+      "description": "Dashboard feedback screen showing improvement metrics",
+      "phase": "assessment_feedback",
+      "technique_notes": "Analytics and progress tracking interface"
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 36.0,
+      "description": "Feedback commentary: 'Make wider incision', 'Great skills shown', 'Your accuracy and technique has improved'",
+      "phase": "instructional_messaging",
+      "technique_notes": "Demonstrates verbal feedback functionality"
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 40.0,
+      "description": "Final Inovus Medical LapAR branding with website",
+      "phase": "closing",
+      "technique_notes": "Marketing conclusion"
+    }
+  ],
+  "cannot_score": true,
+  "reason_not_scored": "This is instructional/marketing animation content, not a performance video. No actual FLS task execution is shown. No trainer box, instruments, models, or trainee performance data are present. The video demonstrates the LapAR platform concept and user interface but contains no scoreable task performance.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Augmented reality feedback during laparoscopic simulation",
+      "Real-time performance metrics and analytics",
+      "Verbal feedback integration ('Make wider incision', technique comments)",
+      "Multi-user feedback workflow (instructor-learner collaboration)",
+      "Remote/asynchronous review of performance recordings"
+    ],
+    "verbal_cues": [
+      "Make wider incision",
+      "Great skills shown on this procedure",
+      "Your accuracy and technique has improved"
+    ],
+    "common_errors_addressed": [
+      "Incision width optimization (demonstrated as learnable through feedback)",
+      "Technique accuracy improvement over time"
+    ],
+    "platform_features_shown": [
+      "Real-time AR overlay on trainer view",
+      "Automated performance assessment dashboard",
+      "Detailed metric tracking (procedure-specific data)",
+      "Multi-modal feedback (visual, textual, verbal)",
+      "Learner progress analytics",
+      "Instructor review interface"
+    ],
+    "skill_level_demonstrated": "educational_platform_overview",
+    "content_type": "marketing/instructional overview of LapAR simulation platform"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is certain: this is fully animated instructional/marketing content with no real performance footage, no FLS tasks executed, and no trainee instrument work visible.",
+  "summary": "This video is an Inovus Medical LapAR platform promotional/instructional animation. It illustrates the digital ecosystem for FLS training (with references to appendectomy, suturing, ligations, and other FLS tasks) but does not contain actual task performance for scoring. The content demonstrates augmented feedback, analytics, and collaborative learning features of the LapAR system rather than showing a trainee performing an FLS task.",
+  "video_id": "n_oX7R8ZrcQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:41:50.455218+00:00"
+}

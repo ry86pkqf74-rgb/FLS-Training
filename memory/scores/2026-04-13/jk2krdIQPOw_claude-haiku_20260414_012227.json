@@ -1,0 +1,168 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "LAPARO equipment dome shown with control ports visible. No trainee or instruments in use yet.",
+      "technique_notes": "Equipment overview - instructional context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Lateral view of LAPARO trainer dome showing ergonomic box configuration with monitor mount.",
+      "technique_notes": "Instructional setup demonstration of training environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "setup",
+      "description": "Endoscopic view showing training task setup - appears to be appendage/knot-tying task, not peg transfer.",
+      "technique_notes": "Multiple task demonstration in instructional video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 18.0,
+      "phase": "setup",
+      "description": "30-degree full HD camera and LED lig labeled - instructional caption of equipment specifications.",
+      "technique_notes": "Equipment labeling for educational purposes",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 25.0,
+      "phase": "setup",
+      "description": "Trainee at ergonomic box with 5mm and 10mm inserts labeled - instructional demonstration of instrument sizing.",
+      "technique_notes": "Educational content showing instrument options",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 35.0,
+      "phase": "setup",
+      "description": "Close-up of endoscopic task (appears to be suturing/knot task on appendage), timestamp 00:04:46 visible.",
+      "technique_notes": "Task demonstration in progress but this is NOT peg transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 45.0,
+      "phase": "setup",
+      "description": "LAPARO software interface display shown with touchscreen control labeling.",
+      "technique_notes": "Educational content on software/control interface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 55.0,
+      "phase": "setup",
+      "description": "Hands manipulating portable box training unit - equipment setup demonstration.",
+      "technique_notes": "Instructional content showing portability features",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 65.0,
+      "phase": "setup",
+      "description": "Portable workshop set configuration shown with two LAPARO domes and dual monitor setup.",
+      "technique_notes": "Multi-station training environment presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 75.0,
+      "phase": "setup",
+      "description": "Integrated training station with three LAPARO domes and multiple monitors - facilities overview.",
+      "technique_notes": "Institutional training setup for educational demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 85.0,
+      "phase": "setup",
+      "description": "Endoscopic view showing well-trained performance on task (appears suturing/knot, not peg transfer).",
+      "technique_notes": "Demonstration of expert-level performance on non-peg task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 95.0,
+      "phase": "conclusion",
+      "description": "LAPARO branding and closing credits with 3Bscientific.com attribution.",
+      "technique_notes": "Instructional video conclusion",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "video_content_analysis": {
+      "task_demonstrated": "NOT peg transfer - this video shows suturing/knot-tying task and equipment overview",
+      "peg_transfer_content": false,
+      "instructional_elements": [
+        "LAPARO equipment specifications and capabilities",
+        "Training environment configurations",
+        "Portable and integrated station setups",
+        "Ergonomic box positioning",
+        "Camera and lighting systems",
+        "Touchscreen control interface",
+        "Multiple task demonstrations (not peg transfer)",
+        "Well-trained staff performance examples",
+        "Patient safety and training benefits messaging"
+      ]
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": 0,
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "N/A - instructional video, no scorable performance"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This is a LAPARO equipment and training facility promotional/instructional video. It does NOT contain a peg transfer task performance. The video shows equipment overviews, multiple training stations, suturing/knot-tying tasks on appendages, software interfaces, and facility configurations. No actual peg transfer performance is visible in any frame. Task_id requested is task1_peg_transfer but no such task is demonstrated in this video.",
+  "cannot_determine": [
+    "Completion time - no peg transfer task is performed",
+    "Phase timings - task is not present in video",
+    "Penalties - no task performance to assess",
+    "FLS score - instructional content only"
+  ],
+  "technique_summary": "This video is a LAPARO medical simulator product demonstration and training facility overview. It contains educational content about equipment, environments, and capabilities, but does NOT include a scorable peg transfer task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "LAPARO trainer equipment specifications (30-degree full HD camera, LED lig, 5mm and 10mm inserts)",
+      "Ergonomic box positioning and setup",
+      "Portable training unit configurations",
+      "Integrated multi-station training environments",
+      "Software interface (touchscreen controls)",
+      "Suturing/knot-tying task demonstration (not peg transfer)",
+      "Professional training station setups for hospitals and medical universities"
+    ],
+    "verbal_cues": [
+      "Equipment labels: '30-DEGREE FULL HD CAMERA', 'LED LIG', '5mm AND 10mm INSERTS'",
+      "Facility labels: 'HOSPITALS', 'MEDICAL UNIVERSITIES', 'MEDICAL SIMULATION CENTERS', 'LAPAROSCOPIC WORKSHOP ORGANIZERS'",
+      "Setup labels: 'ERGONOMIC BOX', 'PORTABLE BOX', 'STANDALONE TRAINING', 'INTEGRATED TRAINING STATION'",
+      "Outcome labels: 'WELL TRAINED', 'WELL TRAINED STAFF', 'PATIENT SAFETY IMPROVEMENT', 'PROFESSIONAL HOSPITAL ENVIRONMENT FOR DOCTORS'"
+    ],
+    "common_errors_addressed": [
+      "Video does not address peg transfer errors - focuses on equipment capabilities and training benefits"
+    ],
+    "skill_level_demonstrated": "expert - endoscopic task performance shown is smooth and controlled, though this is NOT peg transfer"
+  },
+  "improvement_suggestions": [],
+  "scoring_note": "CANNOT SCORE THIS VIDEO FOR TASK1_PEG_TRANSFER. This is a promotional/instructional video about LAPARO medical simulation equipment and training facilities. No peg transfer task is performed or demonstrated. If a peg transfer performance video exists, please provide that instead.",
+  "video_id": "jk2krdIQPOw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:22:27.178550+00:00"
+}

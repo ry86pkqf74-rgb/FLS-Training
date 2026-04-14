@@ -1,0 +1,46 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "not_applicable"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is a research presentation (SAGES 2011) comparing laparoscopic skills performance across single-site access devices vs. independent port setups. It contains no actual performance footage of peg transfer or any other FLS task. The content consists entirely of slides with study methodology, results graphs, and conclusions. No trainee or expert performer is visible performing the task.",
+  "cannot_determine": [
+    "Completion time \u2014 no performance footage present",
+    "Penalties \u2014 no task execution visible",
+    "Phase timings \u2014 no task execution visible",
+    "Task completion \u2014 only research data presentation shown"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "content_type": "research_presentation",
+    "study_focus": "Comparison of laparoscopic skills performance using single-site access (SSA) devices (GelPOINT, SILS Port, SSL Access System, TriPort) versus independent-port SSA setup across peg transfer, bean drop, pattern cutting, and extracorporeal suturing tasks. Participants: 14 medical students, 4 residents, 5 attending surgeons.",
+    "key_findings_presented": [
+      "Attending surgeons significantly faster than residents or students (p < 0.001)",
+      "SSA devices associated with 100+ seconds longer total times vs. independent port setup for residents and surgeons (differences not statistically significant)",
+      "Task performance not significantly different across different SSA devices",
+      "Independent-port SSA faster than most device-based SSA setups for peg transfer (3/4 devices), pattern cutting (3/4 devices), and total time (4/4 devices)",
+      "Independent-port SSA showed no advantage for bean drop (0/4 devices) or suturing (2/4 devices)"
+    ]
+  },
+  "summary": "This is a research conference presentation, not a performance video. No FLS task execution is visible. Scoring is not applicable. The presentation documents a comparative study of laparoscopic task performance using different single-site access platforms in a trainer box model.",
+  "video_id": "yXEUNL_ksM0",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:12:55.239499+00:00"
+}

@@ -1,0 +1,95 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_title",
+      "description": "Title slide showing 'Research Center for Biomedical Technologies and Robotics' from Tehran University",
+      "technique_notes": "Institutional branding - not performance content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_overview",
+      "description": "SinaSim Laparoscopic Surgery Trainer Essential Skills Overview slide",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 55.0,
+      "phase": "simulation_gallstone_task",
+      "description": "Virtual reality gallstone removal simulation with text overlay 'You should find another 4 gallstones'",
+      "technique_notes": "VR simulation interface, not FLS peg transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 96.0,
+      "phase": "peg_transfer_setup",
+      "description": "Virtual FLS peg transfer board with green and orange objects on pegs, timer showing 96sec",
+      "technique_notes": "Standard FLS peg transfer setup visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 145.0,
+      "phase": "peg_transfer_demonstration",
+      "description": "Instructional text overlay 'Use your left laparoscopic tool to grab the red ball and transfer it to the green ball'",
+      "technique_notes": "Educational instruction visible on screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 157.0,
+      "phase": "peg_transfer_completion",
+      "description": "Final frame showing completed peg transfer task in virtual environment",
+      "technique_notes": "Task completion demonstrated",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": "cannot_determine",
+    "direction_changes": "cannot_determine",
+    "dropped_objects": "cannot_determine"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No scoring performed - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is instructional content with overlaid text and VR simulation interface, not a scoreable performance",
+  "cannot_determine": [
+    "All scoring metrics - this is educational content, not a performance to be scored"
+  ],
+  "technique_summary": "Virtual reality simulation demonstration of peg transfer task with instructional overlays",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper instrument positioning for object grasping",
+      "Transfer technique between pegs",
+      "Use of non-dominant hand for initial grasp"
+    ],
+    "verbal_cues": [
+      "Use your left laparoscopic tool to grab the red ball and transfer it to the green ball"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "novice"
+  },
+  "improvement_suggestions": [],
+  "video_id": "l6KweV309a4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:28:50.256349+00:00"
+}

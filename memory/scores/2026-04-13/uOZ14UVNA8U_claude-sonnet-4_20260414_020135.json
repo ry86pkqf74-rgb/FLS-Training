@@ -1,0 +1,52 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "SAGES logo and branding for laparoscopic surgery educational content",
+      "technique_notes": "Not an FLS performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "PowerPoint slide showing hernia repair study background with incidence statistics",
+      "technique_notes": "Academic presentation content, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "not_applicable",
+      "description": "SAGES conference title slide for SS13 Hernia session with moderator names",
+      "technique_notes": "Conference presentation slide, not FLS training content",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows academic presentation slides about hernia repair outcomes research, not FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is a research presentation about laparoscopic hernia repair learning curves and outcomes, not an FLS task performance",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "uOZ14UVNA8U",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:01:35.670275+00:00"
+}

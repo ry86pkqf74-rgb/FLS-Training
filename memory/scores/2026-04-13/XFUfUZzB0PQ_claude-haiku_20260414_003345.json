@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not Applicable - Educational Research Presentation",
+  "content_type": "research_presentation",
+  "description": "This is a research presentation (SS27: MIS - Cool Stuff) from SAGES 2017 by Arun Nemani, PhD on non-invasive brain imaging of laparoscopic motor skills learning using fNIRS (functional near-infrared spectroscopy). The video consists entirely of presentation slides with no FLS task performance or demonstration.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "content": "Title slide - SS27: MIS - Cool Stuff, Introduction slide on brain imaging for laparoscopic motor skills learning"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "content": "Introduction - FLS: Overview of FLS as validated testing platform for board certification"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "content": "Introduction - Challenges in current metrics: discussion of time/error-based criteria limitations"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "content": "Introduction - Brain imaging methods: Near-infrared spectroscopy (NIRS) technical details"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "content": "Introduction - Motor skill learning: neurophysiological pathways, PFC, M1, SMA regions"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "content": "Methods (Experimental Setup): subjects (9 surgical novices, 8 surgical experts), FLS pattern cutting task, 5 trials"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "content": "Methods (Hardware and data processing): Techen CW6 continuous wave infrared spectroscopy system, HOMER2 software, LDA analysis"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "content": "FLS task performance: Mann-Whitney U test results showing significant differentiation between novice and expert (p<0.05), cross-validation classification results"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "content": "FLS pattern cutting task performance: detailed brain activation analysis by cortical region (PFC, M1, SMA) comparing novice vs expert"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "content": "Classification results: PDFs for fNIRS metrics, LDA projected scores showing expert/novice separation, MCE metrics"
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "content": "Spatial maps of cortical activation: comparative brain maps showing activation patterns in surgical novices vs surgical experts"
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "content": "Conclusions: three research questions answered affirmatively regarding fNIRS ability to differentiate and classify surgical motor skills"
+    }
+  ],
+  "scoring_note": "No FLS task performance visible. This is an educational/research presentation, not a trainee or expert demonstration of an actual FLS task. Per instructions, instructional content with narration (implicit in slides) and research data should not be scored as an FLS performance.",
+  "cannot_score": true,
+  "reason": "Video contains no FLS task execution. Content is a research presentation on a study investigating brain imaging correlates of surgical motor skill using FLS pattern cutting as the baseline task, but no actual task performance is recorded or demonstrated in the slides.",
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "research_focus": "Use of functional near-infrared spectroscopy (fNIRS) as a non-invasive biomarker for objectively assessing surgical motor skill acquisition",
+    "key_findings": [
+      "fNIRS can objectively differentiate surgical motor skills between expert and novice surgeons in real time (p<0.05)",
+      "Classification of expert vs. novice achievable with <5% misclassification error using cross-validated LDA",
+      "Cortical activation patterns differ significantly in prefrontal cortex (PFC), left medial M1, and supplementary motor area (SMA) between skill levels",
+      "Study demonstrates potential for objective, metrics-based surgical skill assessment beyond traditional time and error-based criteria"
+    ]
+  },
+  "confidence": 1.0,
+  "final_note": "This video is clearly research presentation material and does not contain FLS task performance data suitable for scoring under the FLS rubric. No performance score or penalty assessment is applicable.",
+  "video_id": "XFUfUZzB0PQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:33:45.907473+00:00"
+}

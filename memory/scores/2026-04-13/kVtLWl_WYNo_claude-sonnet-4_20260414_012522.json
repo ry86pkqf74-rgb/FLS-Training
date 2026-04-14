@@ -1,0 +1,59 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "promotional_content",
+      "description": "ConMed corporate slide showing 'Low Impact Laparoscopy' branding with patient recovery imagery",
+      "technique_notes": "Marketing presentation, not surgical task demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "promotional_content",
+      "description": "Slide highlighting low pressure and ultra-small openings as key benefits",
+      "technique_notes": "Educational content about laparoscopic surgery advantages",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "research_presentation",
+      "description": "Clinical studies slide with research papers and meta-analysis data",
+      "technique_notes": "Literature review presentation format",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear promotional/educational presentation slides with no surgical task performance visible",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is a ConMed product presentation about low impact laparoscopy benefits, not an FLS task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "improvement_suggestions": [],
+  "video_id": "kVtLWl_WYNo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:25:22.679304+00:00"
+}

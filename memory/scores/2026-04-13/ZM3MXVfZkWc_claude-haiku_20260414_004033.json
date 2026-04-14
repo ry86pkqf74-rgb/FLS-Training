@@ -1,0 +1,108 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine \u2014 instructional/educational content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Blank/white screen, video initialization",
+      "technique_notes": "N/A",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "setup",
+      "description": "Clinical office setting. Physician and patient in consultation room with imaging display (MRI spinal image on monitor). Appears to be educational/clinical demonstration rather than FLS task performance.",
+      "technique_notes": "Professional medical setting; patient consultation context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "speaker_intro",
+      "description": "Kristen Pepin, MD, MPH, FACOG \u2014 Assistant Professor of Clinical Obstetrics & Gynecology, Weill Cornell Medicine. Individual speaker introducing content.",
+      "technique_notes": "Educational expert speaker; red banner with credentials visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "clinical_demo",
+      "description": "Medical professional in white coat with stethoscope demonstrating physical examination technique on patient in clinical setting.",
+      "technique_notes": "Clinical teaching environment; patient present",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "group_teaching",
+      "description": "Multiple medical staff (nurses/residents in scrubs) gathered around patient bed in teaching setting. One instructor gesturing toward patient, others observing.",
+      "technique_notes": "Group educational session; teaching rounds format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 16.0,
+      "phase": "documentation",
+      "description": "Medical professional in white coat holding clipboard/documentation at desk. Office setting with computer visible.",
+      "technique_notes": "Administrative/documentation context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 20.0,
+      "phase": "speaker_continued",
+      "description": "Speaker in gold/mustard-colored top, blue background. Narrating or discussing clinical content.",
+      "technique_notes": "Continued educational narration",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A \u2014 instructional content"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is a medical educational/instructional program featuring clinical consultation, patient examination, teaching rounds, and expert narration by an OB/GYN physician. It does NOT contain any FLS (Fundamentals of Laparoscopic Surgery) task performance. No laparoscopic trainer, instruments, pegs, sutures, gauze, ligating loops, or foam models are visible. The content is clinical education and professional development, not a scored FLS simulation task.",
+  "cannot_determine": [
+    "Task identity \u2014 no FLS apparatus or task-specific materials present",
+    "Completion time \u2014 no discrete task performance recorded",
+    "Penalties \u2014 no FLS rubric applies",
+    "Score \u2014 video does not contain scoreable FLS activity"
+  ],
+  "technique_summary": "This is educational/instructional content featuring clinical consultation, physical examination demonstration, and teaching rounds. It is NOT an FLS performance video and should not be scored using FLS rubrics.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Clinical patient consultation and imaging review",
+      "Physical examination technique demonstration",
+      "Teaching rounds and group medical education",
+      "Professional communication in clinical settings"
+    ],
+    "verbal_cues": [
+      "Speaker introduces credentials and educational context",
+      "Clinical discussion and patient interaction demonstrated",
+      "Teaching environment with multiple trainees observing"
+    ],
+    "common_errors_addressed": [
+      "Video demonstrates proper professional and clinical conduct"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "note": "This submission does not contain an FLS task performance. If an FLS task video was intended, please provide video of a trainee or expert performing one of the five FLS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) on the official trainer box.",
+  "video_id": "ZM3MXVfZkWc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:40:33.542950+00:00"
+}

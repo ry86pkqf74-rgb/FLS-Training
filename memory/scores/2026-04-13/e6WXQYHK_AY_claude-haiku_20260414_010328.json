@@ -1,0 +1,188 @@
+{
+  "video_classification": "performance",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Precision Cutting (Pattern Cut)",
+  "max_time_seconds": 300,
+  "proficiency_time_seconds": 98,
+  "max_score": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "traction_setup",
+      "description": "Blue gauze with pre-marked circle visible on yellow pad. Two instruments visible at edges, gauze appears secured by alligator clips at lower corners.",
+      "technique_notes": "Gauze is flat, circle clearly marked in purple ink, approximately 4cm diameter. Proper setup for task initiation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "traction_setup",
+      "description": "Left instrument (Maryland dissector) and right instrument (endoscopic scissors) positioned; scissors approaching the marked circle from the right side. Scissors are closed, ready for entry cut.",
+      "technique_notes": "Good instrument positioning. Scissors approaching from edge toward circle center, which is correct technique per protocol.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "entry_cut",
+      "description": "Scissors have made initial incision into the gauze. Cut appears to initiate from the upper-right edge of the marked circle. Maryland dissector providing traction by grasping gauze above the circle.",
+      "technique_notes": "Entry cut appears clean. Scissors tracking toward the marked line. Traction is being maintained properly with the left instrument.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 10.0,
+      "phase": "circle_following",
+      "description": "Scissors are actively cutting along the right and upper-right arc of the marked circle. The cut path is visible and appears to follow approximately 1-2mm outside the marked line on the outer edge.",
+      "technique_notes": "Scissors are cutting with controlled motion. Cut is on the outer margin of the circle, which is acceptable as long as deviation is within acceptable tolerance.",
+      "penalties_observed": [
+        {
+          "type": "line_deviation",
+          "description": "Cut path appears approximately 1-2mm outside (external to) the marked circle line on the upper-right arc",
+          "confidence": 0.55,
+          "frame_evidence": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 15.0,
+      "phase": "circle_following",
+      "description": "Scissors continuing along the upper arc and transitioning to the left side of the circle. Maryland dissector maintains traction. Cut appears to be progressing steadily around the circumference.",
+      "technique_notes": "Smooth cutting motion. Circle remains visible and in good view. Deviation on this section appears minimal, approximately 1mm or less from the marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 20.0,
+      "phase": "circle_following",
+      "description": "Scissors are now on the left side and lower-left arc of the circle. The cut is progressing smoothly. Marked circle remains clearly visible with ongoing cuts around its perimeter.",
+      "technique_notes": "Technique remains consistent. Scissors are tracking the line well on this segment with minimal visible deviation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 25.0,
+      "phase": "circle_following",
+      "description": "Scissors approaching the bottom portion of the circle. Most of the circle has been cut except for a small segment at the lower-right. Cut path appears to be tracking the marked line consistently.",
+      "technique_notes": "Good progress. Approximately 80-85% of the circle has been cut. Deviation appears minimal on this segment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 30,
+      "timestamp_seconds": 30.0,
+      "phase": "circle_release",
+      "description": "Final cut is being made to complete the circle. The scissor tips are closing on the remaining small segment on the lower-right arc. Circle is nearly detached.",
+      "technique_notes": "Final segment is being cut cleanly. Scissors appear to be cutting through the last 1-2cm of the marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 33,
+      "timestamp_seconds": 33.0,
+      "phase": "circle_release",
+      "description": "Marked circle has been completely cut from the gauze. The circular piece is visibly separated and beginning to lift away from the gauze sheet. Task appears complete.",
+      "technique_notes": "Circle is fully detached from the main gauze piece. The cut-out circle maintains its integrity and shape.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 35,
+      "timestamp_seconds": 35.0,
+      "phase": "circle_release",
+      "description": "Cut-out circle is now clearly separated and elevated from the gauze sheet by the scissors. Gauze sheet remains intact with only the circular hole where the marked circle was removed.",
+      "technique_notes": "Task completion confirmed. Circle has been successfully and completely freed from the gauze.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 35.0,
+  "phase_timings": [
+    {
+      "phase": "traction_setup",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "entry_cut",
+      "start_seconds": 2,
+      "end_seconds": 5,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "circle_following",
+      "start_seconds": 5,
+      "end_seconds": 33,
+      "duration_seconds": 28,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "circle_release",
+      "start_seconds": 33,
+      "end_seconds": 35,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "Cut path on upper-right arc appears approximately 1-2mm external (outside) the marked circle line. Conservative estimate: 1.5mm maximum deviation.",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        10
+      ],
+      "confidence": 0.55
+    }
+  ],
+  "task_specific_assessments": {
+    "circle_completion": {
+      "marked_circle_fully_freed": true,
+      "circle_detached_before_timeout": true,
+      "gauze_integrity": "intact"
+    },
+    "cutting_accuracy": {
+      "line_deviation_observed": "minimal, approximately 1-2mm on upper-right arc",
+      "deviation_type": "external (outside marked line)",
+      "overall_accuracy": "good"
+    },
+    "gauze_and_equipment_status": {
+      "gauze_remained_secured": true,
+      "clip_slippage": false,
+      "maryland_dissector_traction": "adequate",
+      "scissors_cutting_quality": "clean and controlled"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 35.0,
+    "total_penalties": 1.5,
+    "total_fls_score": 263.5,
+    "formula_applied": "300 - 35.0 - 1.5 = 263.5"
+  },
+  "confidence": 0.72,
+  "confidence_rationale": "Completion time and task finish are clearly observable. Line deviation on the upper-right arc is visible but oblique camera angle makes precise mm measurement challenging; conservative estimate of 1.5mm is provided. No gauze detachment or clip failure observed. Circle fully freed and intact. Overall performance is clearly expert-level based on time (35s vs 98s benchmark) and minimal cutting errors.",
+  "cannot_determine": [
+    "Exact mm deviation at specific cardinal points\u2014camera angle is not perpendicular to gauze throughout the cut sequence; only upper-right arc shows clear visible deviation"
+  ],
+  "technique_summary": "Outstanding expert-level performance. Task completed in 35 seconds\u2014well under the 98-second proficiency benchmark and far exceeding expert time targets. Circle was cut cleanly with minimal deviation from the marked line. Traction was maintained throughout, scissors cut with controlled, smooth motion, and the marked circle was completely freed without damage to the gauze sheet or slippage of securing clips. Deviation on one arc segment was minor (1-2mm external) and does not significantly impact the overall high-quality execution.",
+  "strengths": [
+    "Exceptionally fast completion time (35s vs 98s benchmark)",
+    "Smooth, controlled scissor motion throughout",
+    "Excellent traction maintained via Maryland dissector",
+    "Circle completely and cleanly detached",
+    "Marked circle remains intact with good shape",
+    "No clip slippage or gauze tearing",
+    "Minimal cutting deviation from marked line"
+  ],
+  "improvement_suggestions": [
+    "Attempt to maintain perpendicular cutting angle to further reduce external deviation on upper-right arc"
+  ],
+  "video_id": "e6WXQYHK_AY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:03:28.960332+00:00"
+}

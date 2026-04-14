@@ -1,0 +1,286 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Camera Navigation (LapSim\u00ae - Surgical Science)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro_screen",
+      "description": "LapSim\u00ae by Surgical Science logo and branding. Instructions tab shown with simulation procedure description.",
+      "technique_notes": "Instructional interface showing setup and task overview.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "instructions_display",
+      "description": "Text instructions for camera navigation task: 'Wait for the first gallstone. Find the gallstone on the tissue surface, zoom in on it and match its size to the on-screen circle.'",
+      "technique_notes": "Clear task description with time pressure (few seconds before timeout and disappears).",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "initial_camera_view",
+      "description": "LapSim simulator view showing brown/orange tissue surface with yellow circular target outline and crosshair reticle. First gallstone search phase initiated.",
+      "technique_notes": "Empty field of view awaiting first gallstone appearance. Yellow circle provides sizing reference.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "gallstone_detection_phase1",
+      "description": "Gallstone (bright yellow cube-shaped object) visible in center of field. Yellow circle target overlay shown. Instruction: 'Find the next gallstone and zoom in until it matches the circle.'",
+      "technique_notes": "Gallstone appears and task is to center and zoom to match the on-screen reference circle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 11.0,
+      "phase": "gallstone_sizing_phase1",
+      "description": "Gallstone maintained in view. Brightness increased in field indicating zooming/magnification adjustment in progress.",
+      "technique_notes": "User is adjusting camera position and zoom to match gallstone size to circular reference.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 14.0,
+      "phase": "gallstone_match_phase1",
+      "description": "Gallstone now appears well-sized within yellow circular overlay. Circle turns green, indicating successful match of first gallstone.",
+      "technique_notes": "First gallstone successfully identified and sized. Circle color change (yellow to green) confirms match.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 17.0,
+      "phase": "gallstone_disappearance_phase1",
+      "description": "Gallstone fades and disappears from view. Field returns to brown/orange tissue background. Counter shows '# gallstones left: 4'.",
+      "technique_notes": "First gallstone successfully completed. Four remaining gallstones to find.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 20.0,
+      "phase": "gallstone_detection_phase2",
+      "description": "Second gallstone (bright yellow) appears in left portion of field. Yellow circle outline reappears. Instruction: 'Find the next gallstone and zoom in until it matches the circle.'",
+      "technique_notes": "Second task cycle begins. Gallstone positioned off-center requiring camera navigation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 23.0,
+      "phase": "gallstone_sizing_phase2",
+      "description": "Second gallstone centered in view with increased brightness/zoom. Yellow circle target overlay guides sizing.",
+      "technique_notes": "Camera adjustment and zoom in progress to match reference circle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 26.0,
+      "phase": "gallstone_match_phase2",
+      "description": "Second gallstone successfully sized within circular reference. Circle turns green, confirming match.",
+      "technique_notes": "Successful match and completion of second gallstone.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 29.0,
+      "phase": "gallstone_disappearance_phase2",
+      "description": "Second gallstone fades. Counter shows '# gallstones left: 3'. Empty tissue field with yellow circle outline.",
+      "technique_notes": "Second gallstone completed. Three remaining.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 32.0,
+      "phase": "gallstone_detection_phase3",
+      "description": "Third gallstone (bright yellow) appears in center-right area. Yellow circle and instruction text visible.",
+      "technique_notes": "Third task cycle begins.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 35.0,
+      "phase": "gallstone_sizing_phase3",
+      "description": "Third gallstone positioned and camera zoom adjusting to match circular reference.",
+      "technique_notes": "Zoom and centering in progress.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 38.0,
+      "phase": "gallstone_match_phase3",
+      "description": "Third gallstone successfully sized and matched. Circle turns green.",
+      "technique_notes": "Successful completion.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 41.0,
+      "phase": "gallstone_disappearance_phase3",
+      "description": "Third gallstone fades. Counter shows '# gallstones left: 2'. Instruction: 'Hold the camera steady until the gallstone disappears.'",
+      "technique_notes": "Three gallstones completed. Two remaining.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 44.0,
+      "phase": "gallstone_detection_phase4",
+      "description": "Fourth gallstone (bright yellow) visible in lower-center field. Yellow circle reference overlay.",
+      "technique_notes": "Fourth task cycle begins.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 47.0,
+      "phase": "gallstone_sizing_phase4",
+      "description": "Fourth gallstone centered with zoom adjustment in progress.",
+      "technique_notes": "Camera manipulation ongoing.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 50.0,
+      "phase": "gallstone_match_phase4",
+      "description": "Fourth gallstone successfully sized and matched to green circle.",
+      "technique_notes": "Successful match.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 53.0,
+      "phase": "gallstone_disappearance_phase4",
+      "description": "Fourth gallstone fades. Counter shows '# gallstones left: 2' (appears to remain at 2, possibly UI lag). Empty field with yellow circle.",
+      "technique_notes": "Fourth gallstone completed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 56.0,
+      "phase": "completion_screen",
+      "description": "LapSim\u00ae interface showing 'Exercise completed' message. Dark tissue background with watermark. Indicates end of camera navigation task.",
+      "technique_notes": "Task successfully completed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 59.0,
+      "phase": "results_display",
+      "description": "Results tab showing performance metrics: Total Time [s]: 20.96, Drift [mm]: 2.86, Instrument Path Length [m]: 0.73, Instrument Angular Path [degrees]: 101.08, Tissue Damage [#]: 0, Maximum Damage [mm]: 0.00. Score: 95% (PASSED).",
+      "technique_notes": "Excellent performance across all metrics. Time 20.96s significantly under budget. Zero tissue damage. Low drift and path length indicating efficient camera control.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 62.0,
+      "phase": "final_branding",
+      "description": "Surgical Science branding and website (www.surgicalscience.com) displayed on closing screen.",
+      "technique_notes": "End of instructional video content.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 20.96,
+  "phase_timings": [
+    {
+      "phase": "gallstone_1_detect_size_match",
+      "start_seconds": 0,
+      "end_seconds": 6,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "gallstone_2_detect_size_match",
+      "start_seconds": 8,
+      "end_seconds": 14,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "gallstone_3_detect_size_match",
+      "start_seconds": 17,
+      "end_seconds": 23,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "gallstone_4_detect_size_match",
+      "start_seconds": 26,
+      "end_seconds": 32,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "camera_navigation_metrics": {
+      "total_time_seconds": 20.96,
+      "drift_mm": 2.86,
+      "instrument_path_length_m": 0.73,
+      "instrument_angular_path_degrees": 101.08,
+      "tissue_damage_count": 0,
+      "maximum_damage_mm": 0.0,
+      "performance_rating": "excellent"
+    },
+    "gallstone_completions": {
+      "total_gallstones_found": 4,
+      "successful_matches": 4,
+      "failed_matches": 0,
+      "success_rate_percent": 100
+    }
+  },
+  "score_components": {
+    "max_score": 100,
+    "performance_percentage": 95,
+    "status": "PASSED",
+    "time_efficiency": "Excellent - 20.96 seconds for 4 gallstones",
+    "accuracy": "Perfect - all gallstones matched",
+    "tissue_safety": "Perfect - zero tissue damage"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "This is a clear instructional/simulation video from LapSim\u00ae showing a complete, successful camera navigation exercise with displayed results. All metrics are explicitly shown on screen. Classification as instructional is appropriate because it shows the full task flow with educational context and results display, not a raw trainee performance video.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level camera navigation performance. The demonstrated execution shows rapid identification of gallstones, efficient zoom and centering techniques, and excellent spatial control. No wasted motion or overshooting. Consistent cycle time of approximately 6 seconds per gallstone (detect \u2192 center \u2192 zoom \u2192 match). Perfect tissue safety with zero damage indicates careful, controlled camera manipulation.",
+  "strengths": [
+    "Rapid gallstone detection and localization",
+    "Smooth, efficient zoom and centering technique",
+    "Excellent spatial control with minimal drift (2.86 mm)",
+    "Perfect tissue safety record (0 damage)",
+    "Consistent performance across all 4 gallstones",
+    "Optimal camera path efficiency (0.73 m path length for 4 iterations)"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Systematic visual scanning of tissue surface for gallstone detection",
+      "Rapid camera centering on target gallstone",
+      "Smooth zoom adjustment to match reference circle size",
+      "Steady camera hold during target disappearance phase",
+      "Efficient camera navigation without overshooting or drift"
+    ],
+    "verbal_cues": [
+      "Wait for the first gallstone",
+      "Find the gallstone on the tissue surface",
+      "Zoom in on it and match its size to the on-screen circle",
+      "You only have a few seconds before it times out and disappears",
+      "Hold the camera steady until the gallstone disappears",
+      "Continue in the same way until all the gallstones have been zoomed in on"
+    ],
+    "common_errors_addressed": [
+      "Slow detection leading to gallstone timeout",
+      "Overshooting zoom level requiring adjustment",
+      "Excessive drift or angular path deviation",
+      "Tissue trauma from aggressive camera movement"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is an expert demonstration with minimal improvement needs",
+    "Drift could theoretically be reduced further below 2.86 mm for absolute perfection",
+    "Angular path of 101.08 degrees could be optimized slightly, though this is already excellent"
+  ],
+  "video_id": "n93xoEcOet0",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:39:56.347984+00:00"
+}

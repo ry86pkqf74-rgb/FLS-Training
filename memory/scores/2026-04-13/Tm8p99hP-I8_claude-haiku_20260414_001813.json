@@ -1,0 +1,43 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "HumanX EasySurg Training System Product Demonstration",
+  "cannot_score_reason": "This video is a product demonstration and marketing presentation for the HumanX EasySurg surgical training system. It contains only slides, product images, narration about training systems, and overview of the phantom capabilities. There is no actual performance of any FLS task (peg transfer, pattern cut, endoloop, extracorporeal suture, or intracorporeal suture) to assess.",
+  "video_content_summary": [
+    "Title slide: HumanX Tailored Surgical Training Tools",
+    "Instructional slide: Question about different training systems for product development and distribution",
+    "Numbered slides (6, 1) introducing HumanX EasySurg Training System concept",
+    "Product images showing basic foam phantom (closed torso) without organs",
+    "Product images showing fully equipped phantom with anatomical structures (liver, vessels, intestines, organs)",
+    "Demonstration of vascular flow pump setup and HF-Generator connection for high-frequency surgery capability",
+    "Closing slides with company contact information and music attribution"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "How many different training systems do you use to develop a new product, distribute it and train your users?",
+      "Imagine there would be one surgical phantom that could be used for any application",
+      "It's not another box trainer \u2013 it's a surgical playground",
+      "Fully equipped with organs, bones, main vessels and skin",
+      "Replace every single organ to your special needs",
+      "Hook up a pump to add vascular flow",
+      "Connect your HF-Generator to enable HF-Surgery"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "product_features_highlighted": [
+      "Universal surgical phantom for multi-application training",
+      "Interchangeable organ modules",
+      "Integrated vascular system",
+      "High-frequency surgery capability",
+      "Realistic anatomical detail"
+    ]
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is certain. This is definitively a product demonstration video with no trainee performance footage. No FLS task is executed, so no scoring is applicable.",
+  "scoring_conclusion": "NOT SCORED \u2014 This is instructional/marketing content, not a performance video. The video is informational only and contains no executable FLS task performance to assess.",
+  "video_id": "Tm8p99hP-I8",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:18:13.799887+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General FLS Training Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "facility_tour",
+      "description": "Surgical Simulation Lab Tour title screen showing laboratory entrance",
+      "technique_notes": "Educational content introducing simulation facility",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "equipment_demonstration",
+      "description": "daVinci simulator console with trainee practicing basic skills",
+      "technique_notes": "Shows proper ergonomic positioning at console",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 52.0,
+      "phase": "traditional_fls_setup",
+      "description": "FLS trainer box with orange foam pad showing suture practice marks",
+      "technique_notes": "Standard FLS training configuration with proper lighting and camera setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 72.0,
+      "phase": "suturing_demonstration",
+      "description": "Close-up view of suturing practice on foam pad with visible technique",
+      "technique_notes": "Demonstrates proper needle handling and suture placement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational content with visible text overlays and facility tour elements. No actual task performance to score.",
+  "cannot_determine": [
+    "No specific FLS task performance to evaluate",
+    "No completion time or penalties applicable"
+  ],
+  "technique_summary": "Educational overview of surgical simulation laboratory facilities and training opportunities for residents.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper console ergonomics for robotic surgery",
+      "FLS trainer box setup and configuration",
+      "suture practice pad preparation",
+      "needle handling fundamentals"
+    ],
+    "verbal_cues": [
+      "simulation training gives residents head start on skill development",
+      "surgeons with gaming history learn faster",
+      "practice until suturing is smooth, precise, and efficient",
+      "lab available 24-7 for independent practice"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "novice"
+  },
+  "improvement_suggestions": [],
+  "video_id": "mkz_EO5ddAk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:36:29.020331+00:00"
+}

@@ -1,0 +1,96 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Black frame, likely video introduction",
+      "technique_notes": "No task content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "instructional_content",
+      "description": "Dr. Lauren Barron speaking in operating room setting with laparoscopic equipment visible",
+      "technique_notes": "Educational context - general surgery resident providing instruction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "instructional_content",
+      "description": "Monitor displaying laparoscopic view of peg transfer setup with orange and green blocks visible",
+      "technique_notes": "Setup shows standard FLS peg transfer configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 22.0,
+      "phase": "instructional_content",
+      "description": "Close-up view of peg transfer board showing orange blocks on left pegs, green blocks on right",
+      "technique_notes": "Standard starting configuration for peg transfer task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 24.0,
+      "phase": "instructional_content",
+      "description": "Left grasper approaching orange block, demonstrating proper instrument positioning",
+      "technique_notes": "Shows correct approach angle for non-dominant hand pickup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 28.0,
+      "phase": "instructional_content",
+      "description": "Trainee performing peg transfer under supervision with multiple observers",
+      "technique_notes": "Educational demonstration with expert oversight",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "transfer_sequence": "not_applicable_instructional_video",
+    "object_management": "not_applicable_instructional_video",
+    "bimanual_coordination": "not_applicable_instructional_video"
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "not_applicable_instructional_video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional video rather than a performance to be scored",
+  "cannot_determine": [
+    "Completion time - instructional content only",
+    "Penalties - no single performance being assessed",
+    "Score - educational material not performance assessment"
+  ],
+  "technique_summary": "Educational video showing FLS peg transfer setup and basic technique demonstration in clinical training environment",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper instrument positioning for peg transfer",
+      "correct starting setup with orange blocks on left pegs",
+      "appropriate grasper approach angles",
+      "bimanual coordination fundamentals"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "intermediate"
+  },
+  "improvement_suggestions": [],
+  "video_id": "pp_VaqpT-yA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:48:40.598842+00:00"
+}

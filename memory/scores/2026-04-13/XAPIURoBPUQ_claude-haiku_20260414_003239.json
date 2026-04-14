@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "classification_rationale": "This is an instructional/educational video demonstrating FLS Peg Transfer setup, equipment overview, and technique explanation. The video shows a person in casual attire presenting the task materials (peg board, graspers, rubber pegs) to camera in a deliberate educational manner, with multiple overview shots and close-ups of tools. This is NOT a performance attempt\u2014no actual timed task execution is visible. The framing, pacing, and setup-focused presentation indicate teaching/demonstration content rather than a scored performance.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "content": "Wide shot of person standing behind table with FLS Peg Transfer setup visible: peg board (wooden with metal pegs), cyan graspers, and organized instrument tray",
+      "observation": "Equipment setup phase; all materials visible and organized"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "content": "Close-up of person's face with neutral expression; small camera/recording device visible on chest",
+      "observation": "Educational presenter establishing camera presence for instructional content"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "content": "Wide shot showing full table setup with peg board center, instrument trays to left, grasper models to right",
+      "observation": "Demonstrating complete equipment layout for training purposes"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "content": "Close-up of hands holding cyan peg transfer graspers in neutral position, not manipulating task",
+      "observation": "Showing tool appearance and grip position in educational context"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "content": "Side profile of presenter speaking, gesturing toward table with instruments visible",
+      "observation": "Verbal explanation/narration of task setup (implied narration not audible in frames)"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "content": "Presenter holding grasper instruments at waist level, demonstrating tool orientation",
+      "observation": "Equipment demonstration\u2014showing how tools are held for task"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "content": "Detailed close-up of suture scissors and other instruments from instrument tray",
+      "observation": "Showing ancillary tools available during FLS training"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "content": "Wide shot; presenter standing with hands in neutral position, all equipment visible on table",
+      "observation": "Overview of full setup; no active task performance underway"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "content": "Close-up of wooden peg board showing metal pegs in standard FLS configuration (3\u00d73 grid)",
+      "observation": "Detailed view of task target\u2014demonstrating peg board layout"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "content": "Presenter addressing camera, hands visible at sides, graspers not in use",
+      "observation": "Educational dialogue/explanation phase"
+    }
+  ],
+  "scoring_determination": "NOT SCORED \u2014 This is instructional content, not a performance attempt. No timed execution, no object transfers, no phase completion times are measurable. The video demonstrates equipment and setup only.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Peg Transfer equipment layout and organization",
+      "Grasper tool appearance and neutral handling position",
+      "Wooden peg board configuration (3\u00d73 metal peg grid)",
+      "Instrument tray setup with scissors and additional tools",
+      "Proper positioning of trainer workspace"
+    ],
+    "verbal_cues": [
+      "Implied narration about FLS task structure (not audible in still frames but context evident from presentation style)"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational",
+    "content_type": "equipment orientation and setup tutorial"
+  },
+  "notes": "This video serves as an FLS Peg Transfer training primer or instructional resource. It does not contain a scored performance. The presenter methodically shows equipment, layout, and tool positioning\u2014appropriate for trainee education before attempting the timed task. No completion time, penalties, or performance metrics can be assigned.",
+  "confidence": 0.95,
+  "confidence_rationale": "Classification is definitive based on clear instructional framing, lack of task execution, equipment-focused presentation, and absence of any timed performance data. This is unambiguously educational content.",
+  "video_id": "XAPIURoBPUQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:32:39.578706+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task performed",
+  "max_time_seconds": 0,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "interview",
+      "description": "Prof. Dieter Hahnloser speaking in interview setting with laparoscopic equipment in background",
+      "technique_notes": "No task performance visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "equipment_demonstration",
+      "description": "Hands demonstrating laparoscopic trainer setup and instrument handling outside trainer box",
+      "technique_notes": "Educational demonstration of equipment setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "educational_content",
+      "description": "Medical professionals reviewing anatomical charts and laparoscopic imagery on monitor",
+      "technique_notes": "Educational discussion of surgical anatomy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 24.0,
+      "phase": "product_showcase",
+      "description": "3D rendered laparoscopic trainer with monitor showing surgical view",
+      "technique_notes": "Marketing/product demonstration content",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 0,
+    "time_used": 0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "No scoring applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional/marketing video with expert interview, equipment demonstrations, and product showcases. No actual FLS task performance observed.",
+  "cannot_determine": [],
+  "technique_summary": "This is educational/promotional content featuring expert discussion and equipment demonstration rather than task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic trainer setup and positioning",
+      "proper instrument handling outside the trainer",
+      "equipment familiarization for surgical training"
+    ],
+    "verbal_cues": [
+      "Expert discussion visible through gesturing and presentation context"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "Vb0H18yNb_o",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:27:29.276663+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown/Not Determined",
+  "reasoning": "This video is an educational/documentary production about surgical training at the University of Alberta, Department of Surgery (CASES program). It contains institutional branding, narration, interviews with faculty and trainees, facility tours, and generic laparoscopic training scenes. No specific FLS task is being performed or demonstrated in a scorable manner. The video shows training environments and brief glimpses of trainees using FLS equipment, but does not contain a single continuous, task-specific performance suitable for FLS rubric scoring.",
+  "video_content_summary": [
+    "University of Alberta branding and title cards",
+    "Narration about CASES (surgical training program) centered at Royal Alexandra Hospital",
+    "Interview with Dr. Daniel Birch (Professor) in surgical setting",
+    "Trainees in classroom setting with FLS/MISTELS equipment",
+    "Brief clips of trainee hands using laparoscopic instruments (no identifiable specific task)",
+    "Facility tours showing OR and training spaces",
+    "Generic surgical preparation scenes",
+    "Closing institutional branding"
+  ],
+  "scorability": "NOT SCORABLE",
+  "confidence": 0.95,
+  "rationale": "This is institutional/educational documentary content designed to promote the surgical training program. While it contains images of FLS equipment and trainees, there is no continuous single-task performance captured that matches the FLS rubric structure. Task phases are not discretely identifiable, no timer is visible, and the intent is educational promotion rather than performance assessment.",
+  "video_id": "Txr13tAhw1c",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:21:05.389794+00:00"
+}

@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Fundamentals of Laparoscopic Surgery Overview - Educational Content",
+  "content_type": "educational_overview_presentation",
+  "scoring_performed": false,
+  "reason_no_score": "This is an instructional/educational video presenting an overview of the FLS program, its history, structure, and importance. It contains no actual task performance\u2014no trainer box footage, no live instrument work, no timed task execution. Video consists entirely of animated slides, infographics, text overlays, and conceptual diagrams.",
+  "video_structure": [
+    {
+      "section": "FLS Program Introduction",
+      "content": "Title slide and program branding"
+    },
+    {
+      "section": "Educational Methodology",
+      "content": "Quote: 'See one, do one, teach one' \u2014 teaching philosophy"
+    },
+    {
+      "section": "FLS Milestones",
+      "content": "Timeline: 2004 (SAGES introduces FLS), 2009 (ABS mandates), 2018 (ABOG adopts)"
+    },
+    {
+      "section": "Two-Part Challenge",
+      "content": "Part 1: Cognitive Exam (multiple-choice), Part 2: Manual Skills Exam (hands-on simulator test)"
+    },
+    {
+      "section": "Five FLS Tasks Overview",
+      "content": "Diagram showing Task 1 (Peg Transfer), Task 2 (Precision Cutting), Task 3 (Ligating Loop), Task 4 (Extracorporeal Suture), Task 5 (Intracorporeal Suture) with associated surgical competencies"
+    },
+    {
+      "section": "Core Surgical Competencies",
+      "content": "Lists: angled laparoscope use, bimanual dexterity, traction/countertraction, tissue ligation, knot tying"
+    },
+    {
+      "section": "Proficiency-Based Training",
+      "content": "Explanation that training is based on achieving expert performance level, not time-based"
+    },
+    {
+      "section": "Training Effectiveness Data",
+      "content": "Statistic: Trainees achieved proficiency after average of 9.7 hours of practice; 100% success rate shown"
+    },
+    {
+      "section": "FLS Trainer Box Description",
+      "content": "Illustration of FLS Trainer Box as flight simulator for surgeons"
+    },
+    {
+      "section": "Why FLS Matters",
+      "content": "Mandatory for ABS and ABOG board certification; ensures validated baseline skill; optimizes patient safety"
+    },
+    {
+      "section": "Skill Retention",
+      "content": "Proficiency-based training results in durable skills retained for at least one year"
+    },
+    {
+      "section": "Surgeon's Journey",
+      "content": "Three-step pathway: Step 1 (Complete Residency), Step 2 (Achieve FLS Certification), Step 3 (Become Board Certified)"
+    },
+    {
+      "section": "Future of FLS",
+      "content": "Final slide: 'FLS standardized today's essential skills... what will tomorrow's be?'"
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Overview of five FLS tasks and their technical objectives",
+      "Explanation of proficiency-based training methodology",
+      "Mapping of individual tasks to seven core surgical competencies",
+      "Introduction to the FLS Trainer Box simulator equipment"
+    ],
+    "verbal_cues": [
+      "'See one, do one, teach one' \u2014 foundational teaching philosophy",
+      "Proficiency-based training emphasizes achieving expert performance level rather than time spent",
+      "Data-driven: average 9.7 hours of practice to achieve proficiency",
+      "Skills retained for at least one year with proficiency-based approach"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational_overview",
+    "educational_focus": "Program introduction and justification for FLS as mandatory training"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Unambiguous classification as educational content. No performance footage, no task execution, no timing possible. Purely instructional with narration and animated slides.",
+  "cannot_determine": [
+    "Task identification \u2014 no actual task is being performed",
+    "Performance metrics \u2014 no trainer box or live instruments visible",
+    "Completion time \u2014 no task execution present",
+    "Penalties \u2014 no measurable task performance"
+  ],
+  "video_id": "ZmyTQeQ0do0",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:42:36.063763+00:00"
+}

@@ -1,0 +1,97 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Training Platform Overview / Product Demonstration",
+  "reasoning": "This video is a compilation of product demonstrations and marketing material showcasing various FLS/surgical training simulators and platforms (Dexter, Momentis, anovo, Symani, MMI systems). It contains narration overlays, captions like 'FASTER PRODUCT DEVELOPMENT', 'ACCELERATED CLINICAL PROFICIENCY ON ROBOT', 'CONSOLE INTEGRATION OPTIONS', 'HIGHLY REALISTIC CONTENT', and 'AN ENTIRE CONTINUUM OF TRAINING POSSIBILITIES'. No actual trainee is performing a single FLS task from start to completion.",
+  "scoring_applicability": "NOT APPLICABLE",
+  "rationale_for_no_score": "This is educational/promotional content, not a performance video. It shows multiple different platforms and snippets of simulated tasks with marketing messaging, instructor overlays, and product feature showcases. Per the assessment instructions, instructional videos with narration, overlays, or lecture content should NOT be scored; teaching content should be extracted instead.",
+  "video_segments_identified": [
+    {
+      "segment": 1,
+      "content": "Distalmotion product dev workstation with tablet interface",
+      "task_reference": "unknown"
+    },
+    {
+      "segment": 2,
+      "content": "Dexter Simulator - Peg Transfer-like task with teal blocks",
+      "task_reference": "task1_peg_transfer (visual similarity only)"
+    },
+    {
+      "segment": 3,
+      "content": "Dexter/VirtaMed - Pattern cutting on tissue/organ",
+      "task_reference": "task2_pattern_cut (visual similarity only)"
+    },
+    {
+      "segment": 4,
+      "content": "Momentis Surgical - handheld controller demo",
+      "task_reference": "unknown"
+    },
+    {
+      "segment": 5,
+      "content": "Momentis - monopolar resection simulator",
+      "task_reference": "advanced_task"
+    },
+    {
+      "segment": 6,
+      "content": "Momentis - energy switching task",
+      "task_reference": "advanced_task"
+    },
+    {
+      "segment": 7,
+      "content": "Symani Simulator System by MMI - synthetic vessel with suture",
+      "task_reference": "task4_extracorporeal_suture (visual similarity only)"
+    },
+    {
+      "segment": 8,
+      "content": "Dexter Simulator - peg transfer setup on screen",
+      "task_reference": "task1_peg_transfer (visual similarity only)"
+    },
+    {
+      "segment": 9,
+      "content": "VR/VirtaMed user with headset - immersive training demo",
+      "task_reference": "unknown"
+    },
+    {
+      "segment": 10,
+      "content": "Robotic surgery OR visualization with animated instruments",
+      "task_reference": "not_fls"
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Laparoscopic instrument handling on multiple simulator platforms",
+      "Precision cutting technique (visual only)",
+      "Energy device switching (monopolar/bipolar)",
+      "Suturing on synthetic tissue",
+      "Peg transfer mechanics"
+    ],
+    "verbal_cues": [
+      "FASTER PRODUCT DEVELOPMENT",
+      "ACCELERATED CLINICAL PROFICIENCY ON ROBOT",
+      "WIDE RANGE OF CONSOLE INTEGRATION OPTIONS",
+      "HIGHLY REALISTIC CONTENT",
+      "AN ENTIRE CONTINUUM OF TRAINING POSSIBILITIES"
+    ],
+    "platforms_showcased": [
+      "Dexter Simulator (VirtaMed)",
+      "Momentis Surgical System",
+      "anovo Surgical System",
+      "Symani Simulator System (MMI)",
+      "Distalmotion workstation"
+    ],
+    "educational_focus": "Multi-platform surgical simulator comparison and feature overview; marketing demonstration of various training systems and their capabilities across basic FLS tasks and advanced surgical procedures",
+    "skill_level_demonstrated": "marketing/expert level - platforms are presented as professional training tools, not individual trainee performance"
+  },
+  "cannot_score": [
+    "No single trainee performance visible",
+    "No completion time measurable from start to finish of one task",
+    "Multiple platforms and tasks shown; no dedicated performance video",
+    "Video is edited marketing content, not raw task execution",
+    "Segment durations are promotional, not task-representative"
+  ],
+  "conclusion": "This video should NOT be scored as an FLS task performance. It is instructional/promotional content showcasing multiple surgical training simulators. No individual trainee performance, no measurable task completion, and no penalty assessment is applicable.",
+  "video_id": "pZvqdNok87c",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:46:54.089811+00:00"
+}

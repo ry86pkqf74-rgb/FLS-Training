@@ -1,0 +1,70 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "LapPass Kit Product Demonstration",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "product_overview",
+      "description": "Display of complete LapPass kit with multiple training modules and accessories",
+      "technique_notes": "Overview of FLS training equipment setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "peg_transfer_setup",
+      "description": "Close-up of peg transfer board with blue pegs and clamps, text overlay 'LapPass kit with hoops and pegs in place'",
+      "technique_notes": "Standard FLS Task 1 configuration visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "suturing_module",
+      "description": "Suturing skills base with pink foam pad containing practice holes, text overlay 'Suturing skills base'",
+      "technique_notes": "Tasks 4 and 5 practice surface shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "cutting_module",
+      "description": "Pink foam pad with circular cutting pattern marked, text overlay 'Cutting skin'",
+      "technique_notes": "Task 2 pattern cutting template visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 22.0,
+      "phase": "company_branding",
+      "description": "Inovus Medical logo and LapPass Kits branding with ALS association logo",
+      "technique_notes": "Product identification and credentialing information",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper FLS training station setup",
+      "identification of all five FLS task modules",
+      "standardized equipment configuration",
+      "modular training system organization"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_overview"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear product demonstration video with text overlays identifying each FLS training module. No actual task performance to score.",
+  "cannot_determine": [
+    "Task performance metrics - no actual skill demonstration performed",
+    "Completion times - no timed exercises shown",
+    "Technical proficiency - equipment display only"
+  ],
+  "technique_summary": "Comprehensive overview of LapPass FLS training kit components including peg transfer, pattern cutting, suturing, and endoloop modules with proper setup demonstration.",
+  "video_id": "m8VIyXzoalw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:33:26.360504+00:00"
+}

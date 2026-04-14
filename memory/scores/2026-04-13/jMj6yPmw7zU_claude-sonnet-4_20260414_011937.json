@@ -1,0 +1,197 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping needle at appropriate position, approaching Penrose drain with two visible marks",
+      "technique_notes": "Proper needle grip demonstrated, needle oriented for entry",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "suture_placement",
+      "description": "Needle being driven through first mark on Penrose drain with perpendicular entry angle",
+      "technique_notes": "Expert technique - clean perpendicular entry through mark, proper instrument positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "phase": "suture_placement",
+      "description": "Suture placement through both marks completed, preparing for knot tying",
+      "technique_notes": "Both entry and exit points appear accurately placed on marks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 33.0,
+      "phase": "first_throw",
+      "description": "Beginning first throw (surgeon's knot) - right hand leading the wrap formation",
+      "technique_notes": "Clean instrument positioning for surgeon's knot initiation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 39.0,
+      "phase": "first_throw",
+      "description": "Completing double throw of surgeon's knot with appropriate tension",
+      "technique_notes": "Expert demonstration of surgeon's knot technique with proper double throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 48.0,
+      "phase": "second_throw",
+      "description": "Performing second throw with left hand leading, demonstrating proper hand switching",
+      "technique_notes": "Clear hand switch from first throw, single throw technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 54.0,
+      "phase": "third_throw",
+      "description": "Performing final third throw with right hand leading again",
+      "technique_notes": "Proper alternation - right hand now leading for third throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 66.0,
+      "phase": "suture_cut",
+      "description": "Cutting suture ends with laparoscopic scissors",
+      "technique_notes": "Clean cutting technique, both ends being cut appropriately",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 70.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8,
+      "end_seconds": 30,
+      "duration_seconds": 22,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 30,
+      "end_seconds": 42,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 42,
+      "end_seconds": 52,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 52,
+      "end_seconds": 62,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 62,
+      "end_seconds": 70,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Perfect surgeon's knot demonstration with proper double throw technique"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Clean single throw with proper hand switching"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw with proper hand alternation completed"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.9
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "excellent"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 70.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 530.0,
+    "formula_applied": "600 - 70.0 - 0.0 = 530.0"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clear expert demonstration with excellent visibility of all key elements. Suture placement appears precise on marks, proper knot sequence clearly demonstrated, all hand switches visible.",
+  "cannot_determine": [],
+  "technique_summary": "Exemplary expert demonstration of intracorporeal suturing with textbook technique. Perfect execution of surgeon's knot followed by alternating single throws with proper hand switching.",
+  "strengths": [
+    "Precise needle placement through both marks",
+    "Perfect surgeon's knot technique",
+    "Consistent hand switching between throws",
+    "Efficient phase transitions",
+    "Clean suture cutting"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper needle grip and orientation",
+      "Perpendicular needle entry through marks",
+      "Surgeon's knot (double throw) formation",
+      "Hand switching between throws",
+      "Appropriate knot tension management",
+      "Clean suture end cutting"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Avoiding oblique needle entry that causes mark deviation",
+      "Ensuring proper double throw for surgeon's knot",
+      "Demonstrating importance of hand alternation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "jMj6yPmw7zU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:19:37.722992+00:00"
+}

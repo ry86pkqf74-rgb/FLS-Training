@@ -1,0 +1,141 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparoscopic Box Training: Low-Cost Training for Gynecologic Surgery",
+  "content_type": "educational_presentation",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Title slide: 'Laparoscopic Box Training: Low-Cost Training for Gynecologic Surgery' by Emily Fronk, MD, Sarah Thappa, DO, and Alexandra M. Foxx, MD from University of Rochester Medical Center",
+      "content_type": "title_slide"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "description": "Slide: 'Simulation for Laparoscopic Surgery' with bullet points on benefits of simulation",
+      "content_type": "educational_content"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "description": "Slide: 'Drawbacks to Current Box Training Models' discussing expense and purchasing requirements",
+      "content_type": "educational_content"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "description": "Slide: 'Drawbacks' with demonstration of peg transfer task using green rubber objects and black pegs",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "description": "Close-up demonstration of sugar cube stacking task showing laparoscopic graspers manipulating white cubes on perforated board",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "description": "Slide: 'Skills Built' listing two-handed coordination, dexterity, and depth perception with demonstration of sugar cube stacking",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "description": "Demonstration of knot tying using laparoscopic instruments on a brussel sprout (green vegetable)",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "description": "Slide: 'Skills Built' listing two-handed coordination, visualization with tissue retraction, and traction/counter-traction with brussel sprout retraction demo",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "description": "Slide: 'Materials Needed' for brussel sprout task: brussel sprout, method of securing, laparoscopic grasper, laparoscopic scissors",
+      "content_type": "educational_content"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "description": "Demonstration of flower cutting task with laparoscopic instruments, chip clip securing pink flower",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "description": "Slide: 'Materials Needed' for flower task: flower, chip clip, laparoscopic grasper x2",
+      "content_type": "educational_content"
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "description": "Slide: 'Materials Needed' for infant onsie task: infant onsie with snaps, laparoscopic grasper x2",
+      "content_type": "educational_content"
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60.0,
+      "description": "Demonstration of Cheerio stacking task: laparoscopic graspers stacking yellow Cheerio cereal on vertical peg",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65.0,
+      "description": "Slide: 'Skills Built' for Cheerio stacking: two-handed coordination, fine movements, dexterity, depth perception",
+      "content_type": "educational_content"
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "description": "Demonstration of bead transfer task: laparoscopic graspers moving colored beads (yellow, red, black) between containers",
+      "content_type": "demo_with_instruction"
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 75.0,
+      "description": "Slide: 'Summary' listing benefits: low cost, easily obtainable items, easy to modify, adds variety to training",
+      "content_type": "educational_content"
+    }
+  ],
+  "video_type_determination": "Educational presentation with demonstrations of multiple laparoscopic training tasks",
+  "scoring_status": "NOT SCORED - Instructional Content",
+  "rationale_for_classification": "This video is an educational presentation about low-cost laparoscopic box training alternatives for gynecologic surgery. It contains: (1) title slide with author/institution identification, (2) narrated text slides explaining benefits and drawbacks of simulation, (3) multiple demonstrations of non-standard FLS training tasks using household items (sugar cubes, Cheerios, brussel sprouts, flowers, beads), and (4) instructional overlays explaining skills built. The demonstrations are illustrative, not performance evaluations. The video does NOT show formal FLS task performance being scored, and the tasks demonstrated (Cheerio stacking, bead transfer, flower cutting) are not official FLS/MISTELS tasks.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Two-handed laparoscopic instrument coordination using graspers",
+      "Depth perception in confined work space",
+      "Fine motor control with laparoscopic instruments",
+      "Tissue retraction and traction/counter-traction using vegetable models",
+      "Knot tying simulation with brussel sprout",
+      "Precision manipulation of small objects (sugar cubes, Cheerios, beads)"
+    ],
+    "verbal_cues": [
+      "Low fidelity models associated with decreased time to complete laparoscopic tasks",
+      "Mild evidence that even low fidelity models translate to improved surgical outcomes",
+      "Assessment of skill level prior to operating room",
+      "Low cost, easily obtainable items, easy to modify, adds variety to training"
+    ],
+    "common_errors_addressed": [
+      "High cost of standard box training models",
+      "Repetitive and boring nature of standard tasks leading to underutilization",
+      "Lack of novelty for trainees over years of use"
+    ],
+    "skill_level_demonstrated": "expert",
+    "educational_focus": "Alternative, low-cost laparoscopic training methodology using household items as task substitutes"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Classification is certain based on presence of title slide, author attribution, narrated instructional content, non-standard tasks, and multiple educational overlays.",
+  "cannot_determine": [
+    "FLS task identification - video does not perform official FLS tasks",
+    "Trainee performance metrics - this is instruction, not performance evaluation"
+  ],
+  "summary": "This is an educational presentation by University of Rochester faculty introducing alternative, low-cost laparoscopic training models using household items (sugar cubes, Cheerios, brussel sprouts, flowers, beads) to teach fundamental laparoscopic skills. The video demonstrates multiple tasks and their educational value but does NOT present trainee performance for scoring under official FLS/MISTELS rubrics. Therefore, no FLS score is computed.",
+  "video_id": "SEZx_33zvC8",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:11:14.687095+00:00"
+}

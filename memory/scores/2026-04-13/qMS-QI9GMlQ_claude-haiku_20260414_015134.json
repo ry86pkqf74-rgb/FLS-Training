@@ -1,0 +1,12 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "not_applicable",
+  "reason": "Content is educational material about pedagogy and teaching theory, not an FLS task performance or demonstration",
+  "content_summary": "Animated slides presenting general education theory concepts including pedagogical frameworks, classroom management strategies, assessment methods, reflective practice, and responsive instruction to student needs. No surgical simulation, laparoscopic instruments, trainer equipment, or task-specific performance visible.",
+  "fls_scoring_applicable": false,
+  "video_id": "qMS-QI9GMlQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:51:34.500075+00:00"
+}

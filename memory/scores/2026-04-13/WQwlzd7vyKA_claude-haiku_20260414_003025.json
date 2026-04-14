@@ -1,0 +1,149 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title slide showing 'INSTRUMENT HANDLING FOR BEGINNERS' with GO PRO and MedSync branding. Two laparoscopic instruments (graspers) displayed on training pad with red surgical lines.",
+      "technique_notes": "Educational/instructional content setup \u2014 not a performance attempt",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "instruction",
+      "description": "Close-up demonstration of grasper instrument handling. Hands in blue nitrile gloves manipulating needle driver and grasper on training pad with pattern lines.",
+      "technique_notes": "Demonstrating proper instrument grasp and orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "instruction",
+      "description": "Demonstration of scissors handling technique. Two hands holding scissors (left) and grasper (right) above training pad.",
+      "technique_notes": "Educational demonstration of instrument control and positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "instruction",
+      "description": "Demonstration of grasper closing and opening mechanism on training pad surface.",
+      "technique_notes": "Showing proper grasping motion and instrument manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "cutting_demonstration",
+      "description": "Scissors positioned over training pad showing cutting technique on marked lines.",
+      "technique_notes": "Demonstrating precision cutting approach on sample pattern",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "suturing_demonstration",
+      "description": "Training pad showing multiple suture practice lines (straight lines, wavy lines, angles, and V-shapes) with various needle trajectories marked in pen.",
+      "technique_notes": "Overview of suturing practice patterns and exercise progression",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "suturing_technique",
+      "description": "Hands in gloves demonstrating needle holder grasp on training pad with circular pattern outline drawn in pen. Needle driver positioned for suture entry.",
+      "technique_notes": "Demonstrating proper needle holder positioning and entry angle for circular pattern suturing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "suturing_technique",
+      "description": "Two-handed suturing technique shown with both needle driver and grasper positioned on training pad. Demonstrating needle passage and tissue retraction.",
+      "technique_notes": "Two-instrument coordination for suturing \u2014 needle driver leading, grasper assisting with tissue control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 16.0,
+      "phase": "suturing_continuation",
+      "description": "Continued suturing demonstration on pad with visible suture lines already placed. Demonstrating progression along the pattern.",
+      "technique_notes": "Sequential suture placement with proper spacing and alignment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "knot_tying_demonstration",
+      "description": "Hands positioned above training pad preparing for knot-tying maneuver. Both instruments visible with suture thread visible above the pad.",
+      "technique_notes": "Setting up for extracorporeal or intracorporeal knot tying demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 20.0,
+      "phase": "final_demonstration",
+      "description": "Training pad showing completed suture line with multiple practiced stitches visible. Single suture line with knots tied at intervals.",
+      "technique_notes": "Final result showing completed suturing exercise with multiple passes",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 22.0,
+      "phase": "conclusion",
+      "description": "Close-up of completed suturing practice pad showing final training result with sutures and knots visible along practice lines.",
+      "technique_notes": "Training exercise completion \u2014 all marked lines incorporated into practice",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "note": "This is instructional content, not a scored performance"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video classified as INSTRUCTIONAL. This is a tutorial/educational video with title overlays, MedSync branding, and sequential demonstrations of laparoscopic instrument handling and suturing technique on a training pad. No actual timed performance is shown; content is teaching-focused with narration context implied through visual progression of technique demonstrations.",
+  "cannot_determine": [
+    "Completion time \u2014 no single task performance is timed",
+    "Specific penalties \u2014 this is demonstration, not evaluation",
+    "Score \u2014 this is educational content, not a candidate performance"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper grasper/needle driver grip and positioning",
+      "Instrument activation and closing mechanism",
+      "Scissors handling and cutting technique",
+      "Needle holder orientation for tissue entry",
+      "Two-hand coordination (needle driver leading, grasper assisting)",
+      "Sequential suture placement with consistent spacing",
+      "Knot-tying preparation and execution",
+      "Suture line progression along marked patterns"
+    ],
+    "verbal_cues": [
+      "Title: 'INSTRUMENT HANDLING FOR BEGINNERS'",
+      "'GO PRO' branding suggests skill progression framework",
+      "MedSync educational platform identifier"
+    ],
+    "common_errors_addressed": [
+      "Avoiding improper needle driver grasp (demonstrated correct 2/3-point hold)",
+      "Preventing shallow or angled tissue entry (demonstrated perpendicular approach)",
+      "Maintaining consistent suture spacing and alignment",
+      "Proper two-instrument coordination to prevent tissue trauma"
+    ],
+    "skill_level_demonstrated": "expert",
+    "notes": "This is a beginner-focused instructional video suitable for FLS trainees unfamiliar with laparoscopic instrument handling. Demonstrates foundational techniques before advancing to timed performance tasks."
+  },
+  "video_purpose": "Educational tutorial for FLS beginners \u2014 not a performance evaluation",
+  "scoring_recommendation": "DO NOT SCORE. This video is instructional content with demonstrations, not a timed trainee or candidate performance. No completion time, no penalties, and no valid FLS score can be assigned.",
+  "video_id": "WQwlzd7vyKA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:30:25.490952+00:00"
+}

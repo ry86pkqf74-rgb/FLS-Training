@@ -1,0 +1,35 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Inovus Medical LapAR Training System Overview",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic trainer setup and positioning",
+      "proper ergonomic positioning at training station",
+      "digital feedback integration for skill assessment",
+      "multi-procedure training capability"
+    ],
+    "verbal_cues": [
+      "Make wider incision",
+      "Great skills shown on this procedure",
+      "Your accuracy and technique has improved"
+    ],
+    "common_errors_addressed": [
+      "importance of consistent practice across multiple procedures",
+      "need for objective feedback during training"
+    ],
+    "skill_level_demonstrated": "instructional"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear promotional/educational content showing Inovus Medical LapAR system features, interface screenshots, and training environment setup. Contains visible feedback messages and procedural categories but no actual FLS task performance.",
+  "cannot_determine": [
+    "Specific FLS task performance metrics",
+    "Actual completion times or penalty assessments",
+    "Individual technique execution details"
+  ],
+  "technique_summary": "This is an instructional video showcasing the Inovus Medical LapAR augmented reality laparoscopic training platform. Shows various surgical procedures that can be practiced (appendectomy, cholecystectomy, bowel anastomosis, salpingostomy, myomectomy, salpingectomy, hysterectomy, pyloromyotomy) and fundamental skills (ligation, suturing, grasping, cutting). Demonstrates the digital interface providing real-time feedback and performance tracking.",
+  "video_id": "n_oX7R8ZrcQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:41:35.796939+00:00"
+}

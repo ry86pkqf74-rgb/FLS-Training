@@ -1,0 +1,44 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Woman in red tank top sitting cross-legged on brown yoga mat",
+      "technique_notes": "This appears to be a fitness/yoga video, not FLS surgical training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "not_applicable",
+      "description": "Woman lying on mat performing what appears to be abdominal exercises",
+      "technique_notes": "No surgical instruments, laparoscopic trainer, or FLS task materials visible",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Not an FLS task"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows fitness/exercise content with IntimateRose.com branding, not FLS surgical training",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is fitness content, not FLS surgical skills training",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "mtCjeCq0QbI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:37:20.022291+00:00"
+}

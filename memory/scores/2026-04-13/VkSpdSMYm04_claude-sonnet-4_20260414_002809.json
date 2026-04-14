@@ -1,0 +1,95 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Educational Presentation - Not FLS Task Performance",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_slide",
+      "description": "Title slide showing 'Education Short Oral Session' about improving MIS fellowship matching through laparoscopic skills testing",
+      "technique_notes": "Academic presentation format with institutional branding",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "background_discussion",
+      "description": "Background slide discussing 28 years of MIS fellowship and skills mismatch challenges",
+      "technique_notes": "Educational content about fellowship program challenges",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "methodology_explanation",
+      "description": "Slide showing structured interview process with SurgWise and MAdSkills testing using FLS Task 1 and 5",
+      "technique_notes": "Details about off-axis laparoscopic skills testing implementation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "results_presentation",
+      "description": "Results slide showing Task 1 performance - 76.9% completion rate at 90\u00b0 station",
+      "technique_notes": "Statistical outcomes of FLS Task 1 testing in fellowship candidates",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "results_continuation",
+      "description": "Task 5 results showing 38.5% failure rate at 0\u00b0 station, 76.9% failure at 45\u00b0 off-axis",
+      "technique_notes": "Demonstrates significant difficulty with intracorporeal suturing in off-axis conditions",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "conclusions_discussion",
+      "description": "Conclusions about need for ATLAS training system and faculty retraining",
+      "technique_notes": "Educational recommendations for advanced laparoscopic skills training",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - educational content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an academic presentation about laparoscopic skills testing in fellowship programs, not an actual FLS task performance video.",
+  "cannot_determine": [],
+  "technique_summary": "Educational presentation discussing implementation of FLS-based testing for MIS fellowship candidate evaluation.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Implementation of off-axis laparoscopic skills testing",
+      "Use of FLS Task 1 (peg transfer) and Task 5 (intracorporeal suturing) for fellowship evaluation",
+      "Integration of structured interview processes with technical skills assessment"
+    ],
+    "verbal_cues": [
+      "Importance of skills-based fellowship selection",
+      "Need for objective technical skills assessment",
+      "Benefits of off-axis training for real-world surgical scenarios"
+    ],
+    "common_errors_addressed": [
+      "Relying solely on traditional interview methods without skills assessment",
+      "Inadequate preparation of fellowship candidates for advanced MIS procedures",
+      "Lack of objective technical skills evaluation in fellowship matching"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "VkSpdSMYm04",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:28:09.119186+00:00"
+}

@@ -1,0 +1,93 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS MISTELS Task",
+  "reason_for_classification": "This video depicts a VR/digital simulation exercise involving navigating a scope (left controller) to find numbered cubes and touch them with an instrument (right controller) while waiting for visual feedback (ring turning green). This is not one of the five official FLS MISTELS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture).",
+  "content_type": "Educational/tutorial demonstrating a laparoscopic simulator training module",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Title card: '2.5 30 Degrees scope orientation' \u2014 indicates scope angle setup instruction",
+      "content": "Educational overlay text"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "description": "Narrative instruction: 'Navigate with your scope to find the numbers on the cubes. The number will show up once you touch the cube with your right controller. Focus on the number until the ring of the scope turns green.'",
+      "content": "Verbal/text instruction for task mechanics"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "description": "Visual demonstration of controller roles: left controller labeled 'Use your left controller as a scope', right controller labeled 'Use your right controller as an instrument'",
+      "content": "Tutorial overlay showing equipment assignment"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "description": "Gameplay showing scope targeting cube with number '1' visible; instruction 'Touch and hold the cube with your right controller, a number will show up. Focus on the number until the ring turns green.'",
+      "content": "Demonstration of interaction mechanics"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "description": "Scope now highlighting cube with number '3' displayed; status shows 'Find the next number (2/10)' \u2014 demonstrating progression through sequenced targets",
+      "content": "Game progression tracking"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 12.0,
+      "description": "Scope navigates to different cube positions; instruction 'Rotate the camera to look around the corner' \u2014 demonstrates spatial navigation within 3D environment",
+      "content": "Tutorial instruction for camera control"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 19.0,
+      "description": "Multiple cubes visible with white labels (completion markers); scope circles different targets; status 'Find the next number (5/10)' showing mid-task progress",
+      "content": "Multi-target completion sequence"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "description": "Final targets being located; LAP simulator branding visible in lower right corner; status 'Find the next number (8/10)'",
+      "content": "Near-completion sequence with equipment branding"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 45.0,
+      "description": "Scope targeting final cube positions; demonstrates smooth navigation and targeting mechanics throughout task sequence",
+      "content": "Demonstration of refined spatial control"
+    }
+  ],
+  "cannot_score": true,
+  "scoring_rationale": "This is NOT an official FLS MISTELS task. It appears to be a custom or commercial laparoscopic simulator training module focused on scope navigation and target identification in a virtual environment (possibly using the LAP Simulator platform, as evidenced by branding). It does not match any of the five standardized FLS tasks and therefore cannot be scored using the official FLS rubric.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Scope navigation using left-hand control (laparoscopic camera positioning)",
+      "Spatial orientation within 3D endoscopic environment",
+      "Identifying and targeting objects under magnified/scope view",
+      "Maintaining focus on numbered targets until completion feedback received",
+      "Camera rotation and multi-angle viewing to locate hidden targets"
+    ],
+    "verbal_cues": [
+      "Navigate with your scope to find the numbers on the cubes",
+      "The number will show up once you touch the cube with your right controller",
+      "Focus on the number until the ring of the scope turns green",
+      "Touch and hold the cube with your right controller",
+      "Rotate the camera to look around the corner"
+    ],
+    "common_errors_addressed": [
+      "Failure to maintain proper scope orientation (emphasized by initial '30 degrees' setup instruction)",
+      "Inability to locate hidden/obscured targets (addressed by explicit instruction to rotate camera)",
+      "Incomplete focus on target (addressed by requirement to hold until ring turns green)"
+    ],
+    "skill_level_demonstrated": "novice-to-intermediate",
+    "simulator_platform": "LAP Simulator for Laparoscopy (visible branding)"
+  },
+  "summary": "This video is an instructional/tutorial for a custom laparoscopic simulator training module that teaches scope navigation and target identification. It is NOT one of the five official FLS MISTELS tasks and therefore does not receive an FLS score. The content is educational in nature with clear narrative guidance, visual overlays, and interactive demonstrations of proper laparoscopic camera and instrument control techniques.",
+  "video_id": "lKw8ZzTNdDY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:29:49.434580+00:00"
+}

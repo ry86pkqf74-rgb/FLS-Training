@@ -1,0 +1,165 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Title slide: 'Tips for how to win the laparoscopic suturing contests' by Kengo Hayashi",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_context",
+      "description": "Narration about importance of laparoscopic surgery and suturing contests in Japan",
+      "technique_notes": "Contextual framing for instructional video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "instructional_rules",
+      "description": "Text overlay: 'Rules of the contest in Japan' listing procedures: (I) inserting needle through trocar, (II) making a stitch, (III) suturing for 2 times (square knot), (IV) cutting thread and pulling needle out",
+      "technique_notes": "Educational slide with procedural rules. Note: mentions 'suturing for 2 times (square knot)' which differs from FLS standard (surgeon's knot + two single throws)",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 18.0,
+      "phase": "instructional_demo_setup",
+      "description": "Pink trainer box with concentric rectangular channels visible. Two needle drivers and black suture thread visible. Setup for demonstration.",
+      "technique_notes": "Standard FLS trainer configuration shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 25.0,
+      "phase": "instructional_demo_case1",
+      "description": "Case with a long thread. Timestamp displayed: '19.8 sec'. Two needle drivers manipulating suture through the channels. Suture placement visible.",
+      "technique_notes": "First demonstration case showing longer thread scenario for speed comparison",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 32.0,
+      "phase": "instructional_demo_case2",
+      "description": "Case with a short thread. Timestamp displayed: '15.4 sec'. Two needle drivers visible with suture. Demonstrates shorter thread leading to faster completion.",
+      "technique_notes": "Second demonstration case showing shorter thread scenario and time advantage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 42.0,
+      "phase": "instructional_demo_technique",
+      "description": "Close-up view of needle drivers manipulating suture through trainer channels. Suture being placed through marked positions.",
+      "technique_notes": "Technical demonstration of needle positioning and suture placement technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 55.0,
+      "phase": "instructional_demo_knot",
+      "description": "Suture looped and being manipulated by both needle drivers. Appears to show knot formation sequence.",
+      "technique_notes": "Demonstration of knot tying mechanics with both instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 65.0,
+      "phase": "instructional_demo_completion",
+      "description": "Knot appears to be cinched or tightened around the target area. Both needle drivers positioned near completed knot.",
+      "technique_notes": "Final knot securing phase shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 75.0,
+      "phase": "instructional_summary",
+      "description": "Text slide: 'Conclusion' with narrative: 'We compete the time not only for suturing, but for finishing all the procedures. I think you should focus on each part of the procedures, and notice which part of the procedure is your weak point.'",
+      "technique_notes": "Educational conclusion emphasizing holistic procedure timing and self-assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 82.0,
+      "phase": "instructional_tips",
+      "description": "Text slide: 'Summary of Tips' listing six key recommendations: (1) Adjust the length of a thread, (2) Grab a needle at the best position, (3) Image the position you are suturing, (4) Suture at 80% of the maximum speed, (5) Suture in the same stream, (6) Stick to the basics",
+      "technique_notes": "Educational summary of expert-level practical tips for suturing contests",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 90.0,
+      "phase": "instructional_final_demo",
+      "description": "Final demonstration clip with timer visible at top: '00:00.03.95' showing real-time execution. Needle drivers actively manipulating suture through trainer.",
+      "technique_notes": "Final practical demonstration of speed and technique synthesis",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is definitive. This is clearly an educational tutorial with narration, text overlays, title screens, and multiple demonstration segments. No actual individual performance is being scored.",
+  "cannot_determine": [
+    "Actual completion time (not an individual performance)",
+    "Specific penalty instances (demonstrations only, not scored)",
+    "Knot quality assessment (multiple cases shown for teaching, not formal evaluation)"
+  ],
+  "technique_summary": "Expert-level instructional video demonstrating intracorporeal suturing technique for competition preparation. Content addresses procedural efficiency, tool manipulation, knot formation, and timing optimization.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Needle grip and positioning at optimal driver angle",
+      "Suture placement through marked entry/exit points on drain",
+      "Double-throw surgeon's knot formation with hand exchange",
+      "Thread length optimization for speed vs. control",
+      "Knot tightening and cinching under laparoscopic visualization",
+      "Rapid needle and suture management in confined workspace"
+    ],
+    "verbal_cues": [
+      "Focus on completion of all procedures, not just suturing speed",
+      "Adjust thread length strategically (short thread = faster completion time)",
+      "Grab needle at optimal position for best control",
+      "Image/visualize the anatomy before executing each stitch",
+      "Work at 80% maximum speed for control without hesitation",
+      "Maintain consistent suturing plane (same stream/trajectory)",
+      "Master fundamentals before optimizing for speed",
+      "Identify weak points in your technique through deliberate practice"
+    ],
+    "common_errors_addressed": [
+      "Over-extending thread length leading to slow manipulation",
+      "Suboptimal needle grip causing awkward driving angles",
+      "Unprepared or unplanned needle trajectories causing hesitation",
+      "Excessive speed causing knot failure or misplacement",
+      "Wandering suture plane (inconsistent trajectory)",
+      "Departing from basic technique in pursuit of speed"
+    ],
+    "skill_level_demonstrated": "expert",
+    "context_notes": "Video references Japanese laparoscopic suturing contest rules and procedures. Mentions 'square knot' or 'suturing for 2 times' which may reflect contest-specific variations from standard FLS protocol (which specifies surgeon's knot + two single throws with hand alternation). Demonstrates competitive context, not clinical FLS certification."
+  },
+  "improvement_suggestions_not_applicable": "This is instructional content, not a performance evaluation.",
+  "strengths_teaching": [
+    "Clear breakdown of complex procedural sequence into manageable phases",
+    "Comparative demonstration of thread length impact on efficiency",
+    "Practical tips grounded in competition experience",
+    "Emphasis on balancing speed with precision and safety",
+    "Encouragement of self-assessment and weakness identification"
+  ],
+  "video_id": "aF63wKwD1eE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:50:14.017128+00:00"
+}

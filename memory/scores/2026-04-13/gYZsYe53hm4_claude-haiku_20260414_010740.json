@@ -1,0 +1,246 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title slide: 'WE TRAIN SIMULATION' with logo and course branding in Spanish. Introductory/instructional material.",
+      "technique_notes": "No task performance occurring \u2014 instructional context established.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "instructional_content",
+      "description": "Slide showing gauze with circular marking and caption 'Cut through the marked line'. Shows the target pattern.",
+      "technique_notes": "Teaching objective clearly communicated \u2014 trainees shown the circular pattern to be cut.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'CUTTING EXERCISES' title. Skill development framework presented.",
+      "technique_notes": "Educational content \u2014 skill progression structure being explained.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Skill develop: Eye-hand Coordination'. Core competency being highlighted.",
+      "technique_notes": "Emphasizes eye-hand coordination as essential cutting skill.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Deepness perception'. Depth perception identified as critical skill for cutting task.",
+      "technique_notes": "Teaching point: depth perception under laparoscopic magnification.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Tissue manipulation'. Proper tissue handling technique component identified.",
+      "technique_notes": "Tissue control emphasized as prerequisite for precision cutting.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "equipment_demonstration",
+      "description": "Laparoscopic trainer box shown in close-up. Equipment setup with two fixation clamps visible on white trainer base.",
+      "technique_notes": "MT-Box standard trainer visible. Clamp positioning shown.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "equipment_demonstration",
+      "description": "Overhead view of trainer. Two alligator clamps with strings securing gauze in horizontal position. White fixation base clearly visible.",
+      "technique_notes": "Standard MT-Box setup with dual clamp configuration. Instructional view of equipment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "equipment_demonstration",
+      "description": "Manual demonstration: hand showing technique to switch clamps from horizontal to vertical position using thumb/finger manipulation.",
+      "technique_notes": "Teaching moment: clamp orientation adjustment \u2014 shows how to transition clamps for better gauge access.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "equipment_demonstration",
+      "description": "Close-up of blue gauze insert showing pre-marked circular pattern outline. Single-layer circle visible on blue substrate.",
+      "technique_notes": "Marked circle pattern clearly visible. Heart-shaped pattern shown (appears to be practice/variant). Marking is dark blue, easily visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "equipment_demonstration",
+      "description": "Handheld view of MT-Box with blue gauze carrier insert in place. Two fixation pegs visible at top corners. Single circular pattern marked on surface.",
+      "technique_notes": "Proper seating of gauze insert in trainer shown. Positioning for camera setup indicated.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Close the MT-Box 1' with image showing closure mechanism of laparoscopic trainer.",
+      "technique_notes": "Equipment setup instruction \u2014 shows proper closure of trainer for video recording.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 36.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Set the camera with your computer. And you are ready to go'. Final setup instruction slide.",
+      "technique_notes": "Camera and recording setup instructions provided. No actual performance yet.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 39.0,
+      "phase": "instructional_content",
+      "description": "Endoscopic view begins: pink/magenta gauze visible with white backing layer. Marked circle outline visible in upper portion. Instrument (Maryland dissector) visible at bottom.",
+      "technique_notes": "Live laparoscopic camera feed now active. Task initiation point \u2014 gauze being accessed via endoscope.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "entry_cut",
+      "description": "Endoscopic view: scissors visible positioning at gauze edge. Maryland dissector providing traction on gauze. Pink layer elevated, ready for cutting.",
+      "technique_notes": "Scissors and dissector both in view. Entry cut phase \u2014 instrument setup showing proper two-hand technique with traction and cutting instruments.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 45.0,
+      "phase": "circle_following",
+      "description": "Endoscopic view: scissors actively cutting along marked circular path. The cut line appears to follow the marked pattern. Maryland dissector maintains traction.",
+      "technique_notes": "Scissors tracking circular pattern. Both hands coordinating \u2014 one holding traction, one cutting. Technique demonstrating proper two-hand coordination.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 48.0,
+      "phase": "circle_following",
+      "description": "Endoscopic view: continuing circular cut. Scissors visible following marked line. Cut progressing clockwise around circle. Traction maintained on gauze.",
+      "technique_notes": "Smooth scissor movement. Maintaining visual alignment with marked circle. No obvious deviation visible from this camera angle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "circle_following",
+      "description": "Endoscopic view: nearly complete circular cut. Small segment remaining to complete the circle. Scissors approaching closure point of the circle.",
+      "technique_notes": "Cut is nearly complete. Final segment visible. Circle is being freed from surrounding gauze. Technique remains controlled.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 54.0,
+      "phase": "circle_release",
+      "description": "Endoscopic view: marked circle appears completely detached from surrounding gauze. Circle is freed. Scissors repositioning, dissector holding freed circle.",
+      "technique_notes": "Task completion achieved. The marked circle has been completely excised from the gauze. Cut appears clean.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 57.0,
+      "phase": "instructional_conclusion",
+      "description": "Slide: 'We repeat the exercise taking the time Each-time'. Instructional message about repetitive practice.",
+      "technique_notes": "Reinforcement of deliberate practice approach. This is educational content, not continued task performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 60.0,
+      "phase": "instructional_conclusion",
+      "description": "Slide: 'We improve in every practice'. Motivational message concluding the instructional video.",
+      "technique_notes": "Final teaching reinforcement \u2014 emphasizes continuous improvement through repetition.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 63.0,
+      "phase": "instructional_conclusion",
+      "description": "Final slide: WE TRAIN SIMULATION branding, course title in Spanish, contact information. Video concluding.",
+      "technique_notes": "No performance task visible. Educational video ending.",
+      "penalties_observed": []
+    }
+  ],
+  "video_classification_rationale": "This video is classified as INSTRUCTIONAL. It contains: (1) Multiple title and explanatory slides with text overlays; (2) Equipment setup demonstrations with voiceless instructional captions; (3) Skill development framework slides identifying core competencies; (4) Final motivational/reinforcement messages. The brief laparoscopic cutting sequence (frames 14\u201319) is presented as a DEMONSTRATION of the task within an educational context, not as a formal trainee performance to be scored. The video's primary purpose is teaching the task procedure and setup, not evaluating a trainee's technique.",
+  "instructional_classification_details": {
+    "narration_style": "Text-overlay slide format with instructional captions",
+    "content_type": "Educational tutorial and equipment setup guide",
+    "skill_demonstration_present": true,
+    "trainee_performance_present": false,
+    "expert_demo_indicators": [
+      "Smooth two-hand coordination demonstrated",
+      "Proper traction and cutting instrument use shown",
+      "Marked circle successfully cut and freed"
+    ]
+  },
+  "completion_time_seconds": "cannot_determine",
+  "cannot_score_reason": "This is an instructional video, not a formal performance attempt. No timing data is provided, and the brief cutting sequence shown is a teaching demonstration, not a scored trainee performance.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Two-hand coordination: dissector providing traction while scissors cut",
+      "Scissor positioning for entry cut from gauze edge",
+      "Following a marked circular path with continuous cutting motion",
+      "Maintaining traction while advancing the cutting tool",
+      "Complete circle release and separation from surrounding gauze",
+      "MT-Box trainer setup and orientation adjustment (clamp positioning)",
+      "Endoscopic camera setup for task recording"
+    ],
+    "verbal_cues": [
+      "Cut through the marked line",
+      "Switch the clamps to vertical position (for optimal access)",
+      "Use traction and contraction (demonstrated via image with caption)",
+      "Use both hands (two-hand technique emphasized)",
+      "Repeat the exercise taking the time each-time (practice reinforcement)",
+      "We improve in every practice (motivational message)"
+    ],
+    "common_errors_addressed": [
+      "Avoiding deviation from the marked circle outline \u2014 video shows precision tracking",
+      "Proper two-hand technique: one hand retracts, one cuts (explicitly shown)",
+      "Maintaining tissue control during cutting (dissector tension maintained throughout)",
+      "Equipment positioning: clamp orientation adjustment for better visualization",
+      "Incomplete cuts: video shows full circle release as required endpoint"
+    ],
+    "skill_level_demonstrated": "intermediate_to_expert",
+    "skill_level_justification": "The demonstration shows smooth, controlled cutting with consistent pattern following, proper two-hand coordination, and clean circle release. Completion appears rapid and controlled, consistent with intermediate-expert performance benchmarks (60\u2013100s)."
+  },
+  "frame_deviation_analysis": [
+    {
+      "frame_range": "14\u201319 (cutting demonstration)",
+      "observable_pattern_tracking": "Cut path appears to follow marked circle outline with minimal visible deviation. Circle is cleanly separated from surrounding gauze.",
+      "deviation_estimate": "cannot_determine_precisely",
+      "confidence": 0.4,
+      "reason": "Laparoscopic camera angle is oblique and zoomed for instructional purposes. Final product is not shown in high detail. Cannot measure cardinal-point deviations per rubric without final specimen inspection."
+    }
+  ],
+  "score_components": {
+    "scoring_status": "NOT SCORED",
+    "reasoning": "This is an instructional/educational video, not a formal trainee performance. Official FLS scoring rubric applies only to actual performance attempts with measurable completion times and identifiable penalties. This video demonstrates task technique within an educational framework."
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Very high confidence in video classification. The instructional intent is explicit: multiple teaching slides, equipment setup sequences, skill framework slides, and motivational messaging. The brief cutting demonstration is clearly presented as a teaching example, not a timed, scored performance. No ambiguity in classification.",
+  "summary": "This is an instructional/educational video from 'We Train Simulation' (WeTrainSimulation.com) demonstrating FLS Task 2 (Pattern Cut) setup and technique execution. The video covers equipment preparation, skill development framework (eye-hand coordination, depth perception, tissue manipulation), proper MT-Box trainer orientation, and a brief endoscopic demonstration of a complete circular cut. The teaching content is comprehensive and emphasizes deliberate repetitive practice. Per scoring guidelines, instructional videos are not formally scored \u2014 only actual trainee performances are evaluated.",
+  "video_id": "gYZsYe53hm4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:07:40.290344+00:00"
+}

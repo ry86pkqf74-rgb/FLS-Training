@@ -1,0 +1,53 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Simsei logo and title slide asking 'What were your training needs as a learner?'",
+      "technique_notes": "Not applicable - promotional/instructional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "not_applicable",
+      "description": "Young woman in business attire speaking to camera in interview/testimonial format",
+      "technique_notes": "Not applicable - testimonial content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "not_applicable",
+      "description": "Continued testimonial with Simsei branding visible",
+      "technique_notes": "Not applicable - promotional content",
+      "penalties_observed": []
+    }
+  ],
+  "cannot_determine": [
+    "FLS task performance",
+    "Task completion time",
+    "Technical skill assessment",
+    "Performance penalties"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Training needs assessment discussion",
+      "Simulation program benefits"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows promotional/testimonial content for Simsei simulation program, not an FLS task performance. Multiple frames show interview format with company branding and educational questions.",
+  "technique_summary": "This is promotional content for Simsei's laparoscopic training simulation program featuring user testimonials, not an FLS task performance that can be scored.",
+  "video_id": "gCpAQp6oDZg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:06:05.371649+00:00"
+}

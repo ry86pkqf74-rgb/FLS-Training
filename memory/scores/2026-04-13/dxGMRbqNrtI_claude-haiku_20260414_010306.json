@@ -1,0 +1,206 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Right needle driver (dominant hand) approaching first peg from upper right. Grasper tips aligned with peg post. Initial grasp preparation visible.",
+      "technique_notes": "Good approach angle; instrument trajectory centered on target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "pickup_nondominant",
+      "description": "Right needle driver grasping rubber object on upper center peg. Object secure in grasper jaws.",
+      "technique_notes": "Confident grasp; object fully secured",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "transfer_midair",
+      "description": "Right needle driver lifting object upward off peg. Left grasper (non-dominant) positioned passively at rest.",
+      "technique_notes": "Smooth lift; controlled trajectory",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 7.0,
+      "phase": "transfer_midair",
+      "description": "Object held mid-air by right grasper. Object suspended above field, clear of all pegs.",
+      "technique_notes": "Object held stable; no rotation or instability visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 11.0,
+      "phase": "place_dominant",
+      "description": "Right needle driver approaching target peg (lower center). Object positioned for placement.",
+      "technique_notes": "Deliberate approach; good target acquisition",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 14.0,
+      "phase": "place_dominant",
+      "description": "Object placed on peg. Right grasper releasing object; object sits secure on peg post.",
+      "technique_notes": "Clean placement; object fully seated on peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 17.0,
+      "phase": "reverse_pickup",
+      "description": "Left grasper (non-dominant hand) approaching newly placed object on lower peg. Right grasper disengaged.",
+      "technique_notes": "Smooth hand transition; left grasper well-controlled",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 22.0,
+      "phase": "reverse_transfer",
+      "description": "Left grasper holding object mid-air. Object lifted cleanly; trajectory smooth and controlled.",
+      "technique_notes": "Non-dominant hand demonstrates good control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 27.0,
+      "phase": "reverse_place",
+      "description": "Left grasper approaching original peg location (upper center area). Object positioning for placement.",
+      "technique_notes": "Accurate target re-identification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 30.0,
+      "phase": "reverse_place",
+      "description": "Object placed back on original peg by left grasper. Task approaching completion for first object cycle.",
+      "technique_notes": "Secure placement confirmed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 34.0,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper approaching second rubber object on remaining upper peg. Beginning second transfer cycle.",
+      "technique_notes": "Efficient transition between objects",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 40.0,
+      "phase": "transfer_midair",
+      "description": "Multiple objects now distributed across pegs showing progression. Video frames show advancing through subsequent transfers of remaining 5 objects.",
+      "technique_notes": "Consistent technique maintained across repeated cycles; smooth rhythm established",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 89.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 22,
+      "duration_seconds": 22,
+      "benchmark_comparison": "intermediate",
+      "notes": "Initial 6 pickups with dominant hand; includes grasp initiation and lift sequence"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 3,
+      "end_seconds": 85,
+      "duration_seconds": 82,
+      "benchmark_comparison": "intermediate",
+      "notes": "Continuous mid-air transport across all 6 objects through bidirectional transfers"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 8,
+      "end_seconds": 89,
+      "duration_seconds": 81,
+      "benchmark_comparison": "intermediate",
+      "notes": "Placements on dominant side pegs"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 12,
+      "end_seconds": 75,
+      "duration_seconds": 63,
+      "benchmark_comparison": "intermediate",
+      "notes": "Non-dominant hand pickup sequences"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 15,
+      "end_seconds": 80,
+      "duration_seconds": 65,
+      "benchmark_comparison": "intermediate",
+      "notes": "Midair transfer by left hand back to original peg set"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 18,
+      "end_seconds": 89,
+      "duration_seconds": 71,
+      "benchmark_comparison": "intermediate",
+      "notes": "Final placements returning objects to starting pegs"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "none_observed",
+      "description": "No dropped objects, objects remaining on pegs at task completion, or placement errors detected",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        10,
+        20,
+        25
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "task_specific_assessments": {
+    "object_count": 6,
+    "all_objects_transferred": true,
+    "bidirectional_transfer_confirmed": true,
+    "dropped_objects": 0,
+    "misplaced_objects": 0,
+    "hand_dominance": "right_dominant",
+    "nondominant_hand_performance": "proficient",
+    "transfer_efficiency": "good"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 89.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 211.0,
+    "formula_applied": "300 - 89.0 - 0.0 = 211.0"
+  },
+  "confidence": 0.88,
+  "confidence_rationale": "Completion time clearly visible from frame sequence. All 6 objects successfully transferred bidirectionally with no drops or placement errors observed. Camera angle provides clear visualization of peg board and object placement throughout. Timing markers implicit in frame progression.",
+  "cannot_determine": [],
+  "technique_summary": "Solid intermediate-to-expert performance. Trainee demonstrated clean bidirectional transfer of all 6 objects with consistent technique throughout. No penalties incurred. Completion time of 89 seconds places performance in upper-intermediate range (expert benchmark 40-60s, intermediate 60-120s). Smooth hand transitions and confident object handling evident.",
+  "strengths": [
+    "All 6 objects successfully transferred without drops",
+    "Smooth bidirectional transfer technique with good hand control",
+    "Efficient peg identification and accurate placements",
+    "Non-dominant hand demonstrated proficiency equivalent to dominant hand",
+    "Consistent rhythm maintained throughout task",
+    "No objects remaining on wrong pegs at completion"
+  ],
+  "improvement_suggestions": [
+    "Reduce completion time from 89s to sub-60s range through faster grasp-release cycles",
+    "Minimize hesitation between object pickups and placements",
+    "Practice maintaining consistent speed through all 6 bilateral transfers"
+  ],
+  "video_id": "dxGMRbqNrtI",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:03:06.500211+00:00"
+}

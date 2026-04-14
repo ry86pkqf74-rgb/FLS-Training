@@ -1,0 +1,141 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup_overview",
+      "description": "Man in white shirt speaking to camera in classroom/conference setting. No peg transfer equipment visible.",
+      "technique_notes": "Educational/lecture environment, not a performance attempt.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_content",
+      "description": "Close-up of purple knitted glove/wrist guard on notebook with STORZ branding. Hand holding pen. No FLS equipment.",
+      "technique_notes": "This appears to be product or equipment demonstration, not task performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "meeting_setting",
+      "description": "Multiple people seated at conference table in yellow-walled room. No peg transfer setup visible.",
+      "technique_notes": "Group meeting or seminar environment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "classroom_instruction",
+      "description": "Wide shot of lecture hall with instructor standing, audience seated at tables. Projection screen visible. No FLS task equipment.",
+      "technique_notes": "Educational presentation setting.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 40.0,
+      "phase": "interview_setting",
+      "description": "Medical professionals in scrubs being interviewed in surgical training facility. Multiple people standing. No peg transfer board visible.",
+      "technique_notes": "Documentary or interview format about surgical training.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "expert_interview",
+      "description": "Close-up of male physician (H\u00e9lder Ferreira, Gynecology, Porto Portugal) in surgical scrubs with name/title overlay. Background shows OR or training facility.",
+      "technique_notes": "Interview segment with expert clinician.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 60.0,
+      "phase": "facility_tour",
+      "description": "Multiple surgical trainees in scrubs standing in bright surgical facility. Surgical lights and equipment visible in background.",
+      "technique_notes": "Facility or training program overview.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 70.0,
+      "phase": "task_setup_overview",
+      "description": "Bird's-eye view of peg transfer trainer with black frame, blue/green base platform. Two laparoscopic instruments visible above pegboard. Six small white/tan objects (pegs/rings) visible on the board.",
+      "technique_notes": "First clear view of peg transfer equipment. This appears to be demonstration/educational context, not timed performance attempt.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 75.0,
+      "phase": "instrument_handling_demo",
+      "description": "Surgical trainees in scrubs handling two laparoscopic instruments above the peg transfer trainer. Hands visible grasping Maryland dissectors. Pegs remain on original side.",
+      "technique_notes": "Appears to be demonstration or instructional handling of instruments, not an active timed performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 85.0,
+      "phase": "monitor_view",
+      "description": "Close-up of monitor screen showing endoscopic view of tissue/surgical field with instruments. Appears to be a different task or training scenario than peg transfer.",
+      "technique_notes": "Different FLS task or general laparoscopic training footage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 95.0,
+      "phase": "team_training",
+      "description": "Group of surgical residents/trainees in scrubs in training facility. One person in center appears to be demonstrating or discussing laparoscopic technique with peer group around peg transfer trainer.",
+      "technique_notes": "Educational/group training setting, not individual timed performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 105.0,
+      "phase": "instructional_conclusion",
+      "description": "Final scene shows multiple trainees in surgical facility, some holding instruments, instructional/demonstration context evident.",
+      "technique_notes": "Educational program or training session overview.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": 0,
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Not applicable \u2014 instructional content, not performance attempt"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is clearly classified as INSTRUCTIONAL content. It contains lecture segments, interviews with faculty, facility tours, group demonstrations, and educational meeting footage. There is NO individual trainee performing a timed peg transfer task. While peg transfer equipment is briefly visible in frame 8-9, it appears only as part of a demonstration or instructional overview, not as an active performance that can be scored.",
+  "cannot_determine": [
+    "Completion time \u2014 no timed performance attempt is visible",
+    "Individual penalty deductions \u2014 no scorable task execution",
+    "Actual task performance \u2014 video is educational/documentary in nature"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper handling of Maryland dissectors in laparoscopic context",
+      "Overview of peg transfer trainer setup and equipment",
+      "Facility and training program organization for surgical skills"
+    ],
+    "verbal_cues": [
+      "Educational narration implied from classroom/lecture settings",
+      "Expert interviews discussing surgical training and program curricula"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_overview"
+  },
+  "improvement_suggestions": [],
+  "scoring_decision": "NO SCORE. This video does not contain a scorable performance of the peg transfer task. It is an educational/instructional program featuring interviews, lectures, facility tours, and brief equipment demonstrations. To receive a score, a video must show an individual trainee performing the complete peg transfer task (transfer all six objects from nondominant to dominant side, then reverse) within the 300-second time window, with clear start and stop markers.",
+  "video_id": "gtvYDcAqdVw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:08:42.941364+00:00"
+}

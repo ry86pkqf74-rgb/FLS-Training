@@ -1,0 +1,32 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": null,
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": null
+  },
+  "confidence": null,
+  "confidence_rationale": "This video shows simulation lab equipment manufacturing/preparation, not an FLS task performance. Content includes creating synthetic tissue models and suture pads with interviews about simulation team collaboration.",
+  "cannot_determine": [
+    "FLS task identification",
+    "Performance metrics",
+    "Scoring parameters"
+  ],
+  "technique_summary": "Not applicable - no FLS task performance observed",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "WawoO8RFKOc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:31:24.214786+00:00"
+}

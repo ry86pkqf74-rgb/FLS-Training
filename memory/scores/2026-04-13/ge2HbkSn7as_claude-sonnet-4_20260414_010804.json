@@ -1,0 +1,101 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_introduction",
+      "description": "Title slide showing 'Laparoscopic intracorporeal knot tying; Tips and Tricks' by Mr. Ayman Abdelkader",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_content",
+      "description": "Facts slide explaining importance of laparoscopic suturing skills",
+      "technique_notes": "Educational context about skill acquisition challenges",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_demo",
+      "description": "FLS trainer showing Penrose drain setup with instruments visible",
+      "technique_notes": "Standard FLS task 5 equipment configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "loop_creation_demo",
+      "description": "Demonstration of creating initial loop with suture thread",
+      "technique_notes": "Shows proper loop formation technique with ipsilateral instrument to short arm",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "loop_sizing_demo",
+      "description": "Instruction on proper loop size - triple the length of short arm",
+      "technique_notes": "Educational guidance on optimal loop dimensions for knot security",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "throw_preparation_demo",
+      "description": "Step 2 demonstration showing instrument positioning and loop alignment",
+      "technique_notes": "Shows leading instrument positioning and surgeon's knot requirements (2.5 throws)",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": null,
+  "penalties": null,
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": null,
+  "confidence_rationale": "This is an instructional video, not a performance to be scored",
+  "cannot_determine": [
+    "No actual task performance to assess - this is educational content"
+  ],
+  "technique_summary": "Educational presentation covering intracorporeal knot tying fundamentals",
+  "strengths": null,
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Initial loop creation with ipsilateral instrument to short arm",
+      "Proper loop sizing (triple the short arm length)",
+      "Leading instrument positioning for surgeon's knot",
+      "Loop alignment with leading instrument",
+      "Short arm pickup from tip technique",
+      "Bilateral instrument coordination"
+    ],
+    "verbal_cues": [
+      "Always create loop with ipsilateral instrument to thread's short arm",
+      "Loop should ideally be around triple the length of the short arm",
+      "Too long loop will not be sturdy enough",
+      "Ensure leading instrument is pointed upward",
+      "Align loop hump with leading instrument",
+      "Leading instrument should start first throw from behind the loop",
+      "For surgical knot you will need to make 2 and a half throws not just a double throws",
+      "Always pick up the short arm from its tip",
+      "Move both instruments as one unit"
+    ],
+    "common_errors_addressed": [
+      "Creating loop with wrong instrument relative to short arm",
+      "Making loops too long which reduces knot security",
+      "Improper instrument positioning for throw initiation",
+      "Incorrect throw count for surgeon's knot"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": null,
+  "video_id": "ge2HbkSn7as",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:08:04.276634+00:00"
+}

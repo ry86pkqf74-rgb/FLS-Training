@@ -1,0 +1,47 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS performance video",
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "Video is a conference presentation (UNeMed Demo Day 2015) showcasing the PortCAS (Portable Camera Aided System) platform for laparoscopic simulation training. Contains multiple speakers presenting the technology, team members, business roadmap, and platform analytics dashboards. This is not an FLS task performance video \u2014 it is educational/promotional content about the training platform itself, not a trainee performing an FLS task.",
+  "cannot_determine": [
+    "No FLS task performance present",
+    "No trainee performing Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture",
+    "Video shows platform interface, analytics, and presenters, not task execution"
+  ],
+  "technique_summary": "Not applicable \u2014 this is platform/product demonstration content, not task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "PortCAS platform architecture and components",
+      "Cloud-based analytics and real-time feedback systems",
+      "Web-based student performance dashboards",
+      "Competency-based training approach",
+      "Portability and accessibility of laparoscopic simulation"
+    ],
+    "verbal_cues": [
+      "PortCAS designed to provide collaborative training environment",
+      "Addresses cost and accessibility barriers in simulation-based training",
+      "Real-time feedback and performance analytics for learners",
+      "Platform extensible for multiple medical modules and curricula"
+    ],
+    "common_errors_addressed": [
+      "Avoiding expensive, inaccessible simulation equipment by using portable, cost-effective platform",
+      "Enabling distributed learning with cloud-based analytics rather than localized systems"
+    ],
+    "skill_level_demonstrated": "instructional/product_demo"
+  },
+  "improvement_suggestions": [],
+  "note": "This video documents the PortCAS innovation demonstration at UNeMed Innovation Demo Day (October 21, 2015). It is NOT a performance of an FLS MISTELS task by a trainee or expert, and therefore cannot be scored using FLS rubrics. If you have an actual FLS task performance video (showing someone performing Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture), please submit that for evaluation.",
+  "video_id": "ShJwRU7wEuQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:13:19.794555+00:00"
+}

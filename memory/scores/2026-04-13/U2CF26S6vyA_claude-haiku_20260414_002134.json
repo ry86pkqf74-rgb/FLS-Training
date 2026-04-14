@@ -1,0 +1,50 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task Performance",
+  "content_type": "Educational presentation - MIS curriculum research study",
+  "presenters": [
+    "Tomoko Mizota, MD"
+  ],
+  "moderators": [
+    "John R.T. Monson, MD",
+    "Paola Fata, MD"
+  ],
+  "conference": "SAGES 2018 - Society of American Gastrointestinal and Endoscopic Surgeons",
+  "study_focus": "Proficiency-based FES curriculum implementation for general surgery residents",
+  "scoring_applicable": false,
+  "reason_not_scored": "This is a research presentation/educational lecture about an FES training curriculum study, not a recorded performance of an FLS task. It contains slides with study methodology, results, and conclusions, but no video of an actual trainee or expert performing any of the five FLS manual tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture).",
+  "content_summary": {
+    "study_design": "Proficiency-based training curriculum for general surgery residents focusing on cognitive skills (FES didactics) and manual skills (simulator training to expert level benchmarks)",
+    "participants": "28 general surgery residents from two programs; 25 completed curriculum (89%)",
+    "assessment_tools": [
+      "Multiple-choice questionnaire (cognitive)",
+      "Simulator-generated metrics (GAGES, FES manual portion)",
+      "NASA-Task Load Index (TLX) for workload"
+    ],
+    "key_findings": [
+      "Significant improvements in GAGES gastroscopy (p<0.001) and colonoscopy (p<0.001) scores post-training",
+      "FES manual exam pass rate: 84% (vs 68% in previous report)",
+      "Mucosal inspection skill correlates with task completion time and FES pass/fail outcome",
+      "Simulator-generated scores did not correlate with FES manual exam performance"
+    ],
+    "conclusion": "Proficiency-based endoscopic skills curriculum successfully improved resident competency and FES exam pass rates"
+  },
+  "teaching_content": {
+    "educational_topics_covered": [
+      "Proficiency-based training methodology",
+      "FES curriculum development and implementation",
+      "Assessment tools for endoscopic and manual surgical skills",
+      "Correlation between simulator performance and real-world clinical assessment",
+      "Speed-accuracy trade-offs in procedural training"
+    ],
+    "institutional_context": "Indiana University School of Medicine",
+    "skill_level_demonstrated": "Research and educational presentation level"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an educational/research presentation with title slides, study design diagrams, data tables, and statistical results. No FLS task performance is shown.",
+  "video_id": "U2CF26S6vyA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:21:34.337830+00:00"
+}

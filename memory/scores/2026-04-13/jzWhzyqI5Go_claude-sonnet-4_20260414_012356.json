@@ -1,0 +1,83 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_slide",
+      "description": "SAGES logo and presentation title about Virtual Reality curriculum for laparoscopic colorectal surgery",
+      "technique_notes": "Academic presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "background",
+      "description": "Virtual Reality overview slide discussing effectiveness in teaching technical skills",
+      "technique_notes": "Educational content about VR applications in surgery",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "clinical_context",
+      "description": "Laparoscopic colorectal surgery background with learning curve information",
+      "technique_notes": "Shows actual laparoscopic surgery image for context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "methodology",
+      "description": "LapSim VR Simulator methodology with 37 tasks discussion",
+      "technique_notes": "Shows VR simulator interface screenshots",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "results",
+      "description": "Final VR curriculum with consensus tasks including basic skills and suturing",
+      "technique_notes": "Lists coordination, grasping, cutting, clip applying, lifting and grasping, handling intestines, fine dissection, and stitch and square knot",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS performance video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clearly an academic presentation about VR curriculum development for laparoscopic surgery, not an FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "This is an instructional presentation about developing VR curricula for laparoscopic colorectal surgery training, not an FLS task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Delphi consensus methodology for curriculum development",
+      "Expert benchmark establishment for proficiency-based training",
+      "VR simulator task selection based on expert consensus"
+    ],
+    "verbal_cues": [
+      "Virtual Reality effective in teaching technical skills",
+      "Tasks rated by >80% of panel as 4 or 5 included in final curriculum",
+      "Creation of expert benchmark levels allows for proficiency-based training"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "jzWhzyqI5Go",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:23:56.339215+00:00"
+}

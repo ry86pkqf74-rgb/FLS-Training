@@ -1,0 +1,90 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "non_task_content",
+      "description": "Black screen, video not yet showing task content",
+      "technique_notes": "No task-related content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.33,
+      "phase": "non_task_content",
+      "description": "Presenter speaking to audience in classroom setting",
+      "technique_notes": "Educational/instructional context, not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 16.67,
+      "phase": "non_task_content",
+      "description": "Hand writing on paper with pen, educational materials visible",
+      "technique_notes": "Note-taking or documentation activity, not FLS task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 91.67,
+      "phase": "setup_and_first_pickup",
+      "description": "FLS pegboard visible with 6 rubber objects on left side, instruments approaching",
+      "technique_notes": "Clear view of standard FLS peg transfer setup with proper equipment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 191.67,
+      "phase": "instructional_demo",
+      "description": "Instructor demonstrating proper grasping technique to group of observers",
+      "technique_notes": "Expert demonstration of Maryland grasper positioning and object manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 200.0,
+      "phase": "instructional_demo",
+      "description": "Group of trainees watching instructor perform peg transfer demonstration",
+      "technique_notes": "Educational setting with multiple observers learning technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational/instructional context with classroom settings, multiple observers, and demonstration format. No scoreable performance observed.",
+  "cannot_determine": [
+    "Completion time - video shows instructional content rather than timed performance",
+    "Performance score - this is a teaching demonstration, not a scored attempt"
+  ],
+  "technique_summary": "Video shows instructional content including classroom lectures and expert demonstration of FLS peg transfer technique to trainees.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper Maryland grasper grip and positioning",
+      "Object manipulation and transfer technique",
+      "Bi-manual coordination for peg transfer"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "gtvYDcAqdVw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:08:23.787684+00:00"
+}

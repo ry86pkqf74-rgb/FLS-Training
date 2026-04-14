@@ -1,0 +1,53 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "No FLS task performed",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "product_showcase",
+      "description": "MediSimu laparoscopic simulator product display with branding overlay",
+      "technique_notes": "Commercial product advertisement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "kit_demonstration",
+      "description": "Complete laparoscopic simulator kit with instruments and training materials displayed",
+      "technique_notes": "Marketing materials showing product components",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "split_screen_showcase",
+      "description": "Four-panel view showing different training modules and simulator views",
+      "technique_notes": "Product demonstration of simulator capabilities",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed - commercial advertisement"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clearly identifiable as MediSimu product advertisement with branding, marketing text overlays, and commercial presentation format. No actual FLS task performance observed.",
+  "cannot_determine": [],
+  "technique_summary": "This is a commercial advertisement for MediSimu laparoscopic simulators, not an FLS task performance video.",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "mCirD43KzLw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:34:23.762668+00:00"
+}

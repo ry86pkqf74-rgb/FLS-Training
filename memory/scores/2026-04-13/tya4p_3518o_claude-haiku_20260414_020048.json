@@ -1,0 +1,59 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "SAGES/ASE Symposium: Building Your State-of-the-Art Simulation Curriculum",
+  "content_type": "educational_conference_presentation",
+  "does_contain_fls_task_performance": false,
+  "reason_not_scoreable": "This is a conference presentation/lecture by Dr. James N. Lau on developing surgical simulation curricula and building simulation centers. It contains no video of an actual trainee or expert performing any of the 5 FLS/MISTELS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). The slides discuss administrative planning, budgeting, personnel, curriculum design, and references to the Goodman Surgical Education Center at Stanford. There is no laparoscopic instrument work, no simulated tissue, no task trainer visible performing task phases.",
+  "frames_analyzed": 21,
+  "frame_summary": [
+    {
+      "frames": "1-3",
+      "content": "Title slide and discussion of 'Simulation Center - What to Ask For' with financial support, space, personnel, and research infrastructure topics"
+    },
+    {
+      "frames": "4-6",
+      "content": "Details on administrative and financial support: budget, staff, accreditation"
+    },
+    {
+      "frames": "7-9",
+      "content": "Space requirements: institutional center, workstations, conference room, AV equipment, task trainers, cadaver labs, animal labs, storage"
+    },
+    {
+      "frames": "10-11",
+      "content": "Goodman Simulation Center at Stanford case study with facility images and educational philosophy quote"
+    },
+    {
+      "frames": "12",
+      "content": "Personnel categories: administrative staff, teachers (faculty, fellows, residents), research staff, and simulation roles (proctors, simulationists, confederates, debriefers)"
+    },
+    {
+      "frames": "13-14",
+      "content": "Stanford Surgical Education Fellowship description: 2-year commitment, curriculum design, research, networking"
+    },
+    {
+      "frames": "15-16",
+      "content": "Summary slide repeating key topics for simulation center development"
+    },
+    {
+      "frames": "17-18",
+      "content": "Formal courses offered: Surgery 204 (Introduction to Surgery), Surgery 205 (Advanced Suturing), Surgery 234, 257, 298, 338A with classroom photo"
+    },
+    {
+      "frames": "19",
+      "content": "Research publications and citations related to surgical education and mistreatment in medical training"
+    },
+    {
+      "frames": "20-21",
+      "content": "Final agenda slide and operating room image of live surgery"
+    }
+  ],
+  "score": "not_applicable",
+  "assessment": "This video is purely instructional/lecture content from a medical education conference. It does not contain performance data from any FLS task. No scoring rubric applies. No frame-by-frame technical analysis of task execution is possible or warranted.",
+  "confidence": 1.0,
+  "confidence_rationale": "Classification is certain. The video contains no laparoscopic simulator work, no task trainer use, and no actual performance of FLS tasks. All frames show presentation slides with text, images of facilities, personnel photos, and administrative content.",
+  "video_id": "tya4p_3518o",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T02:00:48.513793+00:00"
+}

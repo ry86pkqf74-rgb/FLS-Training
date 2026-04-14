@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen, no content visible",
+      "technique_notes": "No surgical content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "not_applicable",
+      "description": "Female physician in white coat speaking to camera in clinical office setting",
+      "technique_notes": "Educational interview format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "not_applicable",
+      "description": "Mount Sinai School of Medicine building signage",
+      "technique_notes": "Institutional branding",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 51.0,
+      "phase": "not_applicable",
+      "description": "Laparoscopic surgical view on monitor showing actual surgery with instruments",
+      "technique_notes": "Real surgical footage, not FLS trainer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 54.0,
+      "phase": "not_applicable",
+      "description": "Hands operating laparoscopic instruments outside trainer box",
+      "technique_notes": "External view of surgical technique demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 75.0,
+      "phase": "not_applicable",
+      "description": "Large 'AI' logo graphic overlay",
+      "technique_notes": "Video production element",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video format with physician interviews, institutional branding, research presentation slides, and surgical demonstration footage. No FLS trainer or standardized task performance visible.",
+  "cannot_determine": [
+    "FLS task type - no standardized FLS trainer setup visible",
+    "Performance metrics - this is educational content not a performance assessment"
+  ],
+  "technique_summary": "Educational video featuring physician discussing laparoscopic surgery with mixed content including interviews, research data, and surgical demonstration footage. No FLS task performance to assess.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic instrument handling",
+      "surgical visualization techniques",
+      "research presentation of surgical outcomes"
+    ],
+    "verbal_cues": [
+      "physician narration about surgical techniques and training"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "bibugTUiwFY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:53:22.301534+00:00"
+}

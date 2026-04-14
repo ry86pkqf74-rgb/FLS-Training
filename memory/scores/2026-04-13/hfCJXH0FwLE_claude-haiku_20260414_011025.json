@@ -1,0 +1,36 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "LAP Simulator - Navigation and Scope Orientation Exercise",
+  "summary": "This video is instructional content demonstrating a laparoscopic simulator exercise, not an official FLS task. The exercise involves navigating a 30-degree angled scope to locate numbered boxes (1-10) on a virtual box trainer. This is a spatial orientation and scope handling drill, commonly used as preliminary training before FLS tasks.",
+  "video_type_explanation": "The video contains narrated instructions, on-screen prompts ('Find the next number'), and demonstration of technique rather than a timed performance being scored. It shows the LAP (Laparoscopic Abdominal Procedural) Simulator training environment.",
+  "why_not_scored": "This is not one of the five official FLS MISTELS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, Intracorporeal Suture). It is a preparatory scope familiarization exercise.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Scope orientation with 30-degree angled laparoscope",
+      "Right-handed controller operation",
+      "Spatial navigation in a restricted field of view",
+      "Locating and focusing on numbered targets sequentially"
+    ],
+    "verbal_cues": [
+      "Scope orientation 30 degrees right handed",
+      "Find a number to start the exercise",
+      "Focus the scope on the number in order to complete the exercise",
+      "Find the next number (1/10), (2/10), etc."
+    ],
+    "common_errors_addressed": [
+      "Difficulty maintaining scope focus on small numbered markers",
+      "Inefficient searching patterns when scope angle is restricted",
+      "Loss of spatial orientation with angled optics"
+    ],
+    "skill_level_demonstrated": "novice",
+    "purpose": "Preliminary laparoscopic scope familiarization and spatial reasoning before advancing to formal FLS tasks"
+  },
+  "cannot_determine": [
+    "Official FLS score \u2014 this is not an FLS task"
+  ],
+  "video_id": "hfCJXH0FwLE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:10:25.186725+00:00"
+}

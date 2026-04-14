@@ -1,0 +1,49 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Unknown",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_demo",
+      "description": "Black screen transitioning to 3D rendered laparoscopic trainer box",
+      "technique_notes": "Not a performance video - appears to be product demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "equipment_demo",
+      "description": "3D rendered view of HZMIM branded trainer box with peg transfer setup",
+      "technique_notes": "Computer generated imagery, not actual performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "equipment_demo",
+      "description": "Laparoscopic instruments visible in rendered scene",
+      "technique_notes": "CGI demonstration of equipment, no actual task performance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": null,
+  "confidence_rationale": "This is a computer-generated product demonstration video, not an actual FLS task performance",
+  "cannot_determine": [
+    "All scoring metrics - this is not a performance video"
+  ],
+  "technique_summary": "Not applicable - this is promotional/demonstration content showing 3D rendered equipment",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "zl3J5tkQIiw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T02:16:09.853466+00:00"
+}

@@ -1,0 +1,81 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General Laparoscopic Training Overview",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title screen showing 'CM-15 colon phantom Basic Training'",
+      "technique_notes": "Introductory content for colon phantom training system",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "equipment_overview",
+      "description": "Surgeon in scrubs standing next to laparoscopic training setup with colon phantom model",
+      "technique_notes": "Professional training environment with proper surgical attire",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 12.0,
+      "phase": "system_demonstration",
+      "description": "Split screen showing surgeon and laparoscopic view of colon phantom interior with pink tissue simulation",
+      "technique_notes": "Demonstrating proper camera positioning and tissue visualization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 20.0,
+      "phase": "instrument_manipulation",
+      "description": "Laparoscopic instruments being inserted and manipulated within colon phantom model",
+      "technique_notes": "Showing proper instrument handling and navigation techniques",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 36.0,
+      "phase": "equipment_detail",
+      "description": "Close-up view of laparoscopic trainer exterior showing port connections",
+      "technique_notes": "Educational focus on equipment setup and connections",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 26,
+      "timestamp_seconds": 52.0,
+      "phase": "conclusion",
+      "description": "Olympus branding screen with 'Your Vision, Our Innovation' tagline",
+      "technique_notes": "Educational material conclusion",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper laparoscopic camera positioning",
+      "Basic instrument manipulation in confined spaces",
+      "Tissue visualization and navigation",
+      "Port placement and setup",
+      "Ergonomic positioning for laparoscopic procedures"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Poor camera positioning leading to disorientation",
+      "Improper instrument angulation"
+    ],
+    "skill_level_demonstrated": "intermediate"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational video showing laparoscopic training equipment and basic techniques. This is clearly instructional content rather than a scored FLS task performance.",
+  "cannot_determine": [
+    "Specific completion time as this is not a timed performance",
+    "Task-specific penalties as no formal FLS task is being performed"
+  ],
+  "technique_summary": "Educational demonstration of laparoscopic training using colon phantom model, showing proper setup, instrument handling, and visualization techniques for surgical training.",
+  "video_id": "ZRJKXesbR2A",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:40:55.370404+00:00"
+}

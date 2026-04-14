@@ -1,0 +1,264 @@
+{
+  "video_classification": "performance",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "First instrument visible on monitor; right needle driver approaching needle on red suture block. Needle positioned for grasping.",
+      "technique_notes": "Needle driver positioning appears ready for mid-shaft grasp",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.73,
+      "phase": "needle_load",
+      "description": "Needle grasped by right driver at approximately 2/3 point from tip; left driver visible entering field. Setup for suture placement beginning.",
+      "technique_notes": "Good needle grip position; wrist angle appropriate for driving",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.38,
+      "phase": "suture_placement",
+      "description": "Right driver holding needle; left driver grasping Penrose drain at entry target mark. Needle positioning for first pass through drain.",
+      "technique_notes": "Drain stabilized; needle angle appears perpendicular to slit",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.25,
+      "phase": "suture_placement",
+      "description": "Needle being driven through drain slit at marked entry point. Both marks visible on beige suture block flanking the pink drain slit.",
+      "technique_notes": "Entry point appears to align with upper mark; needle trajectory perpendicular",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.08,
+      "phase": "suture_placement",
+      "description": "Needle exiting drain at second mark (lower mark). Suture loop forming around drain. Right driver continuing needle trajectory.",
+      "technique_notes": "Exit point aligns well with marked target; clean needle path",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.27,
+      "phase": "first_throw",
+      "description": "Suture now looped around drain; both drivers approaching for first throw knot formation. Right hand (driver) preparing wrap for surgeon's knot (double throw).",
+      "technique_notes": "Suture positioned for wrapping; drivers converging for knot tying",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 8.64,
+      "phase": "first_throw",
+      "description": "First throw (surgeon's knot) appearing to be formed; right driver leading wrap around left driver/suture. Double wrap forming for surgeon's knot.",
+      "technique_notes": "Right hand initiating knot; wrap appears complete for double throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 10.18,
+      "phase": "first_throw",
+      "description": "Knot tightening; first throw being cinched. Right driver maintaining tension; knot appears to secure around drain.",
+      "technique_notes": "Knot tension appropriate; surgeon's knot double throw completed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 12.26,
+      "phase": "second_throw",
+      "description": "First throw secured; preparing for second throw. Hands repositioning; left driver now leading (switched from first throw where right led).",
+      "technique_notes": "Hand switch observed: right led throw 1, now left leading for throw 2",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 20.25,
+      "phase": "second_throw",
+      "description": "Second throw (single) forming around drain knot. Left driver wrapping; right driver stabilizing. Smooth execution.",
+      "technique_notes": "Single throw only; proper hand alternation demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 25.27,
+      "phase": "third_throw",
+      "description": "Second throw completed and cinched; third throw preparing. Right driver now leading (switched back from left on throw 2).",
+      "technique_notes": "Hand switch observed: left led throw 2, now right leading for throw 3",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 29.0,
+      "phase": "third_throw",
+      "description": "Third throw (single) being formed. Right driver wrapping around left; knot structure visible at drain.",
+      "technique_notes": "Single throw; final knot sequence forming",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 36.27,
+      "phase": "suture_cut",
+      "description": "Scissors visible entering field; positioned to cut first suture tail. All three throws completed and cinched.",
+      "technique_notes": "Knot appears secure; drain slit appears closed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 51.0,
+      "phase": "suture_cut",
+      "description": "First suture end being cut by scissors (right tail). Blue status indicators visible (3/3 complete).",
+      "technique_notes": "Scissors cutting near knot; first tail sectioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 59.0,
+      "phase": "suture_cut",
+      "description": "Second suture end being cut by scissors (left tail). Drain showing clean closure at slit.",
+      "technique_notes": "Second cut completing suture removal; drain integrity maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 65.0,
+      "phase": "suture_cut",
+      "description": "Task approaching completion; scissors removing final suture end. Both tails cut; knot secured on drain.",
+      "technique_notes": "Knot appears tight and secure; no visible gaps in drain slit",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 65.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0.0,
+      "end_seconds": 3.25,
+      "duration_seconds": 3.25,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 3.25,
+      "end_seconds": 5.27,
+      "duration_seconds": 2.02,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 5.27,
+      "end_seconds": 10.18,
+      "duration_seconds": 4.91,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 10.18,
+      "end_seconds": 20.25,
+      "duration_seconds": 10.07,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 20.25,
+      "end_seconds": 36.27,
+      "duration_seconds": 16.02,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 36.27,
+      "end_seconds": 65.0,
+      "duration_seconds": 28.73,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_cut_execution",
+      "description": "Extended time on suture cutting phase (28.73s vs expert 5-12s benchmark). Multiple repositioning attempts before clean cuts visible.",
+      "points_deducted": 15.0,
+      "frame_evidence": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "confidence": 0.75
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean double throw with appropriate tension; right hand leading wrap"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Single throw; proper hand switch from throw 1; knot tightens cleanly"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Single throw; correct hand alternation from throw 2; final knot structure secure"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.5,
+      "deviation_from_mark2_mm": 0.5,
+      "total_deviation_penalty": 1.0,
+      "confidence": 0.7
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 65.0,
+    "total_penalties": 16.0,
+    "total_fls_score": 519.0,
+    "formula_applied": "600 - 65.0 - 16.0 = 519.0"
+  },
+  "confidence": 0.78,
+  "confidence_rationale": "Completion time and knot sequence clearly visible and well-executed. Suture placement alignment is strong (marks visible throughout); minor penalty applied to suture_cut phase due to extended execution time (28.73s observed vs 5-12s expert benchmark). Hand switching confirmed across all three throws. Drain integrity maintained; no gaps or avulsion observed. Primary uncertainty: exact mm deviation at marks (estimated conservatively at \u00b10.5mm per mark due to oblique camera angle on entry/exit points).",
+  "cannot_determine": [
+    "Exact millimeter deviation at mark 2 \u2014 camera angle slightly oblique to exit point during needle pass; deviation estimated conservatively at 0.5mm based on visible alignment"
+  ],
+  "technique_summary": "Expert-level performance on suture placement, needle loading, and knot sequence execution. All three throws completed with proper hand alternation (right\u2192left\u2192right). Surgeon's knot (double throw) cleanly formed on first throw; both single throws secure and appropriately tensioned. Drain slit closure complete with no gaps. Primary performance variance in suture cutting phase, which consumed 28.73s (5.7\u00d7 expert upper benchmark). Overall score of 519 reflects strong technical execution with minor time inefficiency in final cutting phase.",
+  "strengths": [
+    "Exceptionally fast suture placement (2.02s vs expert benchmark 10-20s)",
+    "Perfect hand alternation across all three throws (right\u2192left\u2192right confirmed)",
+    "Surgeon's knot double throw cleanly executed with appropriate tension",
+    "Excellent needle loading efficiency (3.25s within expert range)",
+    "Drain integrity maintained; slit closure complete and secure",
+    "Minimal suture deviation from marked targets (\u22640.5mm per mark)"
+  ],
+  "teaching_content": null,
+  "improvement_suggestions": [
+    "Refine suture cutting technique to reduce from 28.73s to \u226412s: practice scissors positioning and blade engagement to avoid multiple repositioning attempts",
+    "Consider pre-planning scissors approach trajectory during knot formation to reduce cutting time delay"
+  ],
+  "video_id": "_pATad_RVy4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:47:08.746389+00:00"
+}

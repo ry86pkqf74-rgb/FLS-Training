@@ -1,0 +1,114 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Program Overview and Facility Tour",
+  "content_type": "Educational Documentary/Promotional",
+  "reason_not_scored": "This video is a comprehensive institutional/promotional documentary about an FLS training program and surgical simulation center. It contains: facility tours, interviews with program directors and faculty (Russell D. Metcalfe-Smith identified), administrative discussion of Women's Guild support, equipment demonstrations, trainee testimonials, and brief glimpses of actual training but NOT a complete, scoreable performance of any single FLS task. The frames show equipment setup, classroom instruction, facility infrastructure, and fragmented training activities\u2014not a continuous, timed performance suitable for FLS rubric application.",
+  "segments_identified": [
+    {
+      "segment": "Facility overview and personnel",
+      "frames": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "description": "Hallways, operating room setup, staff in surgical attire, simulation center environment"
+    },
+    {
+      "segment": "Director/administrator interview",
+      "frames": [
+        7,
+        8
+      ],
+      "description": "Russell D. Metcalfe-Smith, Manager Simulation Center, speaking in OR setting with equipment visible"
+    },
+    {
+      "segment": "Institutional support discussion",
+      "frames": [
+        9,
+        10
+      ],
+      "description": "Classroom/meeting setting discussing Women's Guild support for equipment and technology maintenance"
+    },
+    {
+      "segment": "Equipment demonstration and FLS trainer overview",
+      "frames": [
+        11,
+        12
+      ],
+      "description": "FLS trainer box shown from above with foam appendage, grasper, and endoloop visible; appears to be equipment description rather than timed performance"
+    },
+    {
+      "segment": "FLS software/assessment interface",
+      "frames": [
+        13
+      ],
+      "description": "Trainee and instructor viewing performance data/3D model on computer monitor"
+    },
+    {
+      "segment": "Surgical simulation in operating room",
+      "frames": [
+        14,
+        15
+      ],
+      "description": "Multiple trainees and faculty in full surgical attire performing procedures on simulator with surgical lights; actual training environment but not isolated task"
+    },
+    {
+      "segment": "Laparoscopic training on simulator",
+      "frames": [
+        16,
+        17
+      ],
+      "description": "Close-up of hands performing manipulation on FLS trainer with instruments; brief moment of actual task performance but fragmented and without timing context"
+    },
+    {
+      "segment": "Administration and faculty",
+      "frames": [
+        18,
+        19,
+        20
+      ],
+      "description": "Female faculty/administrator in office setting; general program/institution overview"
+    },
+    {
+      "segment": "Facility infrastructure",
+      "frames": [
+        21,
+        22
+      ],
+      "description": "Operating room ceiling with lights and equipment mounted; general facility tour"
+    },
+    {
+      "segment": "Program branding",
+      "frames": [
+        23
+      ],
+      "description": "Women's Guild logo on black background"
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS trainer box setup and component identification (pegs, foam appendages, graspers, endoloop materials)",
+      "Operating room environment and surgical simulation integration",
+      "Use of laparoscopic instruments in simulated context",
+      "FLS performance tracking and data visualization software"
+    ],
+    "verbal_cues": [
+      "Russell D. Metcalfe-Smith discussing simulation center mission",
+      "Institutional commitment to ongoing acquisition and maintenance of vital equipment, robotics, and new technology (Women's Guild support statement)"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "institutional/program-level overview; no individual skill assessment",
+    "institutional_focus": "Program promotion, facility capabilities, faculty expertise, equipment resources, and educational infrastructure"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly instructional/promotional content, not a scoreable performance. The video does not present a continuous, timed execution of any single FLS task with clear start, completion, and outcome. It is a documentary-style presentation of an FLS training program.",
+  "scoring_decision": "DO NOT SCORE \u2014 Content does not meet criteria for performance or expert_demo classification. No timed task performance is present. Return instructional classification only.",
+  "video_id": "_RvqdeQOYkE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:44:46.768864+00:00"
+}

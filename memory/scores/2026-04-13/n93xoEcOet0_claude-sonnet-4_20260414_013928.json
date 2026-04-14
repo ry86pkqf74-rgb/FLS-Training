@@ -1,0 +1,107 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Camera Navigation (LapSim)",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Instructional interface showing LapSim surgical science branding and navigation",
+      "technique_notes": "Educational software interface visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "instruction_display",
+      "description": "Camera Navigation simulation procedure instructions displayed with text overlay",
+      "technique_notes": "Instructions explain finding gallstones and matching to on-screen circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 18.0,
+      "phase": "simulation_start",
+      "description": "Laparoscopic view with yellow targeting circle overlay, searching for first gallstone",
+      "technique_notes": "Camera positioned to view tissue surface with targeting interface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 21.0,
+      "phase": "gallstone_identification",
+      "description": "First gallstone visible within yellow targeting circle, properly sized match",
+      "technique_notes": "Gallstone successfully identified and centered within target zone",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 36.0,
+      "phase": "gallstone_targeting",
+      "description": "Second gallstone positioned within green targeting circle indicating successful match",
+      "technique_notes": "Green circle indicates successful size and position matching",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 54.0,
+      "phase": "completion",
+      "description": "Exercise completed message displayed over laparoscopic view",
+      "technique_notes": "All gallstones successfully identified and targeted",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 57.0,
+      "phase": "results_display",
+      "description": "Results screen showing performance metrics with 95% overall score",
+      "technique_notes": "Detailed performance analysis including time, drift, path length metrics",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "note": "This is a camera navigation training exercise, not a standard FLS task"
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is an instructional video for camera navigation training"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content with visible interface elements, performance metrics, and educational overlay text. This is definitively not an FLS task performance.",
+  "cannot_determine": [],
+  "technique_summary": "Instructional video demonstrating camera navigation skills in LapSim simulator for identifying and targeting gallstones.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Camera positioning and navigation",
+      "Target identification and sizing",
+      "Steady camera hold technique",
+      "Sequential gallstone location and matching"
+    ],
+    "verbal_cues": [
+      "Wait for first gallstone and find it on tissue surface",
+      "Zoom in and match size to on-screen circle",
+      "Hold camera steady until gallstone disappears",
+      "Continue until all gallstones have been zoomed in on"
+    ],
+    "common_errors_addressed": [
+      "Importance of steady camera positioning",
+      "Proper size matching to target circle",
+      "Sequential completion of all targets"
+    ],
+    "skill_level_demonstrated": "intermediate"
+  },
+  "improvement_suggestions": [],
+  "video_id": "n93xoEcOet0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:39:28.189967+00:00"
+}

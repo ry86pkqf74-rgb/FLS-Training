@@ -1,0 +1,44 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine from video content",
+  "reason": "This video shows product demonstration/promotional content of LAPARO medical simulator equipment rather than an actual FLS task performance. The frames show equipment setup, external views of the simulator, and promotional branding but no surgical task execution that can be scored according to FLS rubrics.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Close-up view of laparoscopic instrument tips/shafts against white background",
+      "content_type": "equipment_showcase"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "description": "Top-down view of FLS trainer box showing peg transfer setup with blue pegs and rubber objects",
+      "content_type": "equipment_setup_demo"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "description": "Close-up of laparoscopic grasper jaws",
+      "content_type": "instrument_detail"
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "description": "External view showing complete LAPARO simulator with monitor displaying task selection interface",
+      "content_type": "product_overview"
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "description": "Full system view with LAPARO branding prominently displayed",
+      "content_type": "promotional_content"
+    }
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Clear promotional/product demonstration video with no actual task performance visible. Multiple frames show LAPARO branding and equipment setup rather than surgical skill execution.",
+  "video_id": "TD5PHPb7xME",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:15:24.921882+00:00"
+}

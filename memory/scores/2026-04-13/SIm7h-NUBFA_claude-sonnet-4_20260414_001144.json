@@ -1,0 +1,98 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Novel Posterior Cul-de-sac Simulation Model",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic dissection of adhesions",
+      "identification of anatomical planes",
+      "careful tissue handling to avoid bowel injury",
+      "progressive dissection technique"
+    ],
+    "verbal_cues": [
+      "Do not cut the bowel - explicitly warned in red text overlay"
+    ],
+    "common_errors_addressed": [
+      "bowel injury during adhesion dissection",
+      "improper tissue plane identification"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "instructional_content": {
+    "model_construction": {
+      "materials_cost": "$3-4 per model",
+      "anatomic_correlations": {
+        "uterus": "high density chair pad painted pink",
+        "rectum": "emergency mylar blankets with cotton batting",
+        "adhesions": "polyester fiberfill with spray adhesive"
+      },
+      "construction_steps": [
+        "Create uterosacral ligaments with marked measurements",
+        "Paint uterus model and add level markings",
+        "Place sutures through fundus for retraction",
+        "Construct rectum using layered materials",
+        "Add adhesions using fiberfill and adhesive spray"
+      ]
+    },
+    "educational_validation": {
+      "participants": "17 residents (PGY 1/2 and 3/4) and 9 experts",
+      "methodology": "pre/post surveys, 2-minute instructional video, 30-minute practice",
+      "outcomes": "increased comfort level, rated as realistic and useful"
+    },
+    "learning_objectives": [
+      "Practice posterior cul-de-sac dissection",
+      "Develop skills for managing unexpected obliteration",
+      "Improve resident education in laparoscopic technique"
+    ]
+  },
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_title",
+      "description": "Title slide showing Novel Posterior Cul-de-sac Simulation Model with authors",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 15.0,
+      "phase": "background_goals",
+      "description": "Slide describing clinical problem and educational need",
+      "technique_notes": "Establishes rationale for simulation training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 180.0,
+      "phase": "live_dissection_demo",
+      "description": "Laparoscopic view showing graspers dissecting adhesions around pink rectum model",
+      "technique_notes": "Demonstrates careful traction and counter-traction technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 220.0,
+      "phase": "adhesion_dissection",
+      "description": "Close-up view of adhesion dissection with white fiberfill material being carefully separated",
+      "technique_notes": "Shows proper tissue plane identification and gradual dissection",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 240.0,
+      "phase": "safety_warning",
+      "description": "Red text overlay warning 'DO NOT CUT THE BOWEL' prominently displayed",
+      "technique_notes": "Critical safety instruction emphasized",
+      "penalties_observed": []
+    }
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "This is clearly an instructional video about a simulation model, not an FLS task performance. The content shows model construction steps and educational validation rather than standardized FLS task execution.",
+  "cannot_determine": [],
+  "educational_value": "High - provides detailed construction guide for affordable simulation model with proven educational outcomes",
+  "video_id": "SIm7h-NUBFA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:11:44.876003+00:00"
+}

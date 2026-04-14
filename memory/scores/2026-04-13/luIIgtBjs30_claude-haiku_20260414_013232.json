@@ -1,0 +1,14 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown - Instructional/Documentary Content",
+  "classification_rationale": "This video is a documentary or institutional overview piece featuring interviews with medical faculty, campus views, students in classroom/clinical settings, and various medical facility tours. It contains no direct FLS task performance, no trainer setup, no laparoscopic instruments, and no timed surgical skill demonstration. Multiple frames show talking-head interviews, building exteriors, and educational discussions rather than task execution.",
+  "cannot_score": true,
+  "reason_for_no_score": "No FLS task performance visible. Content is institutional/promotional in nature with interview segments, facility tours, and educational scenes. No trainer box, instruments, or task setup present.",
+  "video_content_summary": "Institutional documentary featuring interviews with medical faculty (Shlomo Melmed MD, Hyung Kim MD, and others), campus architecture, medical facility interiors, student groups observing demonstrations, and clinical/educational environments. No FLS MISTELS task execution is present.",
+  "confidence": 1.0,
+  "video_id": "luIIgtBjs30",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:32:32.004470+00:00"
+}

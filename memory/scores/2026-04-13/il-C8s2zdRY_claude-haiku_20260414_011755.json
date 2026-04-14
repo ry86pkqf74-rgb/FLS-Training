@@ -1,0 +1,260 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "proficiency_benchmark_seconds": 136,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_introduction",
+      "description": "Title slide: 'Laparoscopic Roaders Knot' by Prof. Dr. R. K. Mishra, Laparoscopy Hospital, New Delhi, India. This is an educational introduction.",
+      "technique_notes": "Expert demonstration context established",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "suture_introduction",
+      "description": "Suture (white silk) being held by two hands outside the trainer. Single strand visible, approximately 90cm length estimated.",
+      "technique_notes": "Clean suture presentation, proper hand positioning for knot tying demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.5,
+      "phase": "extracorporeal_throws",
+      "description": "First knot formation begins. Left hand grasps the suture end, right hand begins wrapping to form first throw.",
+      "technique_notes": "Clean, controlled hand positions. Demonstrates proper tension control.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "extracorporeal_throws",
+      "description": "First throw in progress. Loop being formed around the working end of the suture.",
+      "technique_notes": "Smooth wrapping motion, good control of both strands",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 7.5,
+      "phase": "extracorporeal_throws",
+      "description": "First throw nearly complete. Loop formed and positioning for cinching visible.",
+      "technique_notes": "Proper loop geometry for a single throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 9.0,
+      "phase": "extracorporeal_throws",
+      "description": "First throw being tightened. Both hands pulling on opposite strands to cinch the knot.",
+      "technique_notes": "Demonstrates proper tension application without excessive force",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 10.5,
+      "phase": "extracorporeal_throws",
+      "description": "First throw appears set. Clean, square knot formation visible at the junction of the two suture ends.",
+      "technique_notes": "Knot appears secure and properly formed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 12.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw being initiated. Left hand repositioned to begin second throw formation.",
+      "technique_notes": "Smooth transition from first to second throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 13.5,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw in formation. Loop wrapping around suture strand visible.",
+      "technique_notes": "Consistent technique with first throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 15.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw being cinched. Both hands working to tighten the knot.",
+      "technique_notes": "Controlled tensioning, knot positioning maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 16.5,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw secured. Two completed throws now visible at knot site.",
+      "technique_notes": "Knot stack building properly, no slippage observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 18.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw being initiated. Left hand begins final throw formation.",
+      "technique_notes": "Proper hand positioning for third throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 19.5,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw loop formation in progress.",
+      "technique_notes": "Consistent with prior throws, clean technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 21.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw being cinched. Final tightening of the knot structure.",
+      "technique_notes": "Appropriate tension applied to secure final throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 22.5,
+      "phase": "extracorporeal_throws",
+      "description": "All three throws completed and secured. Complete knot stack visible.",
+      "technique_notes": "Knot appears well-formed, three distinct throws visible, no slippage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 24.0,
+      "phase": "slit_closure_assessment",
+      "description": "Penrose drain with tied suture visible. The foam appendage shows the completed knot at the intended closure site.",
+      "technique_notes": "Knot positioned correctly on the drain structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 26.0,
+      "phase": "slit_closure_assessment",
+      "description": "Close-up of the completed knot on the drain. Slit closure appears complete and tension is maintained.",
+      "technique_notes": "Drain slit closed properly around the knot, no visible gap",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 26.0,
+  "phase_timings": [
+    {
+      "phase": "suture_introduction",
+      "start_seconds": 0,
+      "end_seconds": 4.5,
+      "duration_seconds": 4.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_throws",
+      "start_seconds": 4.5,
+      "end_seconds": 22.5,
+      "duration_seconds": 18.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "slit_closure_assessment",
+      "start_seconds": 22.5,
+      "end_seconds": 26.0,
+      "duration_seconds": 3.5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean, controlled throw with proper loop formation and cinching. No slippage observed."
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Smooth transition from first throw. Second throw equally well-formed with appropriate tension."
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw completes knot stack. All three throws maintain integrity without visible slippage."
+      }
+    ],
+    "suture_placement": {
+      "target_marks_visible": false,
+      "deviation_from_mark1_mm": "cannot_determine",
+      "deviation_from_mark2_mm": "cannot_determine",
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.95,
+      "notes": "This is an expert demonstration of knot tying technique on a bench model. Specific target mark placement on a Penrose drain is not shown in the video\u2014the demonstration focuses on the mechanics of forming and securing extracorporeal knots. No suture passages through marked targets are visible."
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "notes": "Final frames show the tied knot seated on the foam appendage with the slit closed. No visible gap or tissue damage."
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 26.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 394.0,
+    "formula_applied": "420 - 26.0 - 0.0 = 394.0"
+  },
+  "confidence": 0.92,
+  "confidence_rationale": "This is clearly an expert demonstration video by Prof. Dr. R. K. Mishra focused on teaching the mechanics of laparoscopic knot tying. The video demonstrates flawless technique in forming and cinching three extracorporeal single throws. However, the video does not show the complete FLS task4 workflow (suture passage through two marked targets on a Penrose drain inside a trainer box, followed by knot advancement with a knot pusher and suture cutting). Instead, it isolates the knot-tying mechanics on a bench model. The completion time is artificially short because it begins with the suture already outside the trainer. If this were scored as a full task4 performance, the time would represent only the knot-tying component. The knot quality, hand switching, and tension control are all expert-level.",
+  "cannot_determine": [
+    "Actual suture placement deviation from marked targets\u2014no targets are shown or referenced in the demonstration",
+    "Whether a knot pusher was used to advance the knots\u2014the video shows hand tying only",
+    "Whether suture ends were cut inside the trainer\u2014the demonstration ends after knot completion"
+  ],
+  "task_completion_status": "partial",
+  "task_completion_notes": "This video demonstrates the extracorporeal knot-tying component of FLS task4 only. The complete task requires: (1) suture introduction into the trainer, (2) passage through two marked targets, (3) extracorporeal knot formation, (4) knot advancement with knot pusher, and (5) suture cutting inside the trainer. This video shows step 3 only.",
+  "technique_summary": "Expert demonstration of extracorporeal single-throw knot tying technique. All three throws are formed cleanly with proper loop geometry, controlled tension, and no slippage. Hand switching between throws is smooth and intentional. The knot stack is symmetric and appears mechanically sound. This is representative of proficiency-level performance for the knot-tying component of the task.",
+  "strengths": [
+    "All three throws formed with clean, controlled technique",
+    "Proper hand switching between throws (right \u2192 left \u2192 right)",
+    "No visible knot slippage or loosening",
+    "Appropriate tension applied to each throw\u2014not excessive, sufficient to secure",
+    "Clear demonstration of knot stack geometry",
+    "Smooth transitions between throw formations"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Loop formation with leading hand wrapping around standing end",
+      "Proper hand positioning to maintain control of both suture strands",
+      "Cinching technique with controlled tension",
+      "Hand alternation for sequential throws (leading hand switch)",
+      "Knot stack geometry and positioning",
+      "Appropriate tension control to avoid knot slippage"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Video implicitly demonstrates avoidance of loose knot formation through consistent cinching",
+      "Video shows proper tension to prevent slippage and knot failure",
+      "Clean loop formations avoid the error of twisted or malformed throws"
+    ],
+    "skill_level_demonstrated": "expert",
+    "instructional_value": "This video serves as an excellent reference for the mechanics of forming three secure extracorporeal single throws. It isolates the knot-tying skill from the full FLS task context, making it useful for trainees focusing on knot technique before attempting the complete task."
+  },
+  "video_type_notes": "Expert demonstration video by Prof. Dr. R. K. Mishra titled 'Laparoscopic Roaders Knot.' The video is not a full FLS task4 performance evaluation but rather a focused technical demonstration of knot-tying mechanics on a bench model. It is suitable for educational purposes and illustrates proficiency-level technique for the knot component of the task.",
+  "video_id": "il-C8s2zdRY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T01:17:55.214682+00:00"
+}

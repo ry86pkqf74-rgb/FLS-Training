@@ -1,0 +1,24 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": null,
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {},
+  "confidence": null,
+  "confidence_rationale": "This video shows product/equipment demonstration content rather than FLS task performance",
+  "cannot_determine": [
+    "All FLS performance metrics - no task execution visible"
+  ],
+  "technique_summary": "Not applicable - equipment demonstration video",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "SLCnnNOCApE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:12:20.439973+00:00"
+}

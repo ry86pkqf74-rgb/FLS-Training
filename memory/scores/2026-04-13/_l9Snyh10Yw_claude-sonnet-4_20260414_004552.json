@@ -1,0 +1,12 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "explanation": "This video shows venepuncture/phlebotomy training at Central London Community Healthcare NHS Trust Academy. The content includes classroom instruction, venepuncture procedure demonstrations on training arms, real patient care scenarios, and training feedback forms. This is unrelated to FLS (Fundamentals of Laparoscopic Surgery) tasks which involve laparoscopic skill training with specific equipment like peg transfer boards, pattern cutting setups, endoloops, or suturing tasks.",
+  "content_summary": "NHS healthcare training program covering venepuncture techniques, patient care protocols, and clinical skills development",
+  "confidence": 1.0,
+  "video_id": "_l9Snyh10Yw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:45:52.551898+00:00"
+}

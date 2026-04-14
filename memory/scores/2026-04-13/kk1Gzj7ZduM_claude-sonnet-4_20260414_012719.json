@@ -1,0 +1,108 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black screen, no activity visible",
+      "technique_notes": "Video beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "demonstration_setup",
+      "description": "FLS peg transfer board visible with 6 rubber objects on left pegs, two graspers positioned above",
+      "technique_notes": "Clean setup with School of Endoscopic Surgery branding visible, professional demonstration environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper picking up first rubber object from left peg",
+      "technique_notes": "Smooth approach and secure grasp, proper instrument control demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "transfer_midair",
+      "description": "Object being transferred from left to right grasper in midair",
+      "technique_notes": "Clean handoff technique demonstrated, minimal object manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "place_dominant",
+      "description": "Right grasper placing first object on right peg",
+      "technique_notes": "Precise placement, object fully seated on peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "continuation",
+      "description": "Multiple objects now transferred, demonstration of continuous workflow",
+      "technique_notes": "Expert-level efficiency and coordination between instruments",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": null,
+    "transfer_direction": "left_to_right_demonstrated",
+    "reverse_direction_completed": null,
+    "drops_outside_field": 0,
+    "objects_not_on_pegs": 0
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot score - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional demonstration video, not a performance to be scored",
+  "cannot_determine": [
+    "Actual completion time - this is a demonstration",
+    "Final score - instructional content not meant for scoring",
+    "Specific performance metrics - showing technique rather than timed performance"
+  ],
+  "technique_summary": "High-quality instructional demonstration of proper peg transfer technique with expert-level instrument control and coordination",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper grasper positioning and approach angles",
+      "Secure object grasping technique",
+      "Smooth midair transfer between instruments",
+      "Precise peg placement",
+      "Coordinated bimanual instrument control",
+      "Efficient workflow patterns"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Avoiding dropped objects through secure grasping",
+      "Maintaining proper instrument angles throughout transfer",
+      "Demonstrating clean handoff technique to prevent fumbling"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "strengths": [
+    "Professional demonstration quality",
+    "Clear visualization of proper technique",
+    "Expert-level instrument coordination"
+  ],
+  "improvement_suggestions": [],
+  "video_id": "kk1Gzj7ZduM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T01:27:19.185046+00:00"
+}

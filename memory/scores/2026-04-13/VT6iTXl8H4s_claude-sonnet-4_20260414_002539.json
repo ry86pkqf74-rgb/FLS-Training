@@ -1,0 +1,81 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Educational Video for Left-Handed Learners",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide: 'Fundamentals of Laparoscopic Surgery (FLS) for Sinistral Learners'",
+      "technique_notes": "Educational video production with formal presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "background",
+      "description": "Background information slide discussing left-handed physician statistics and resource deficiency",
+      "technique_notes": "Addresses specific challenges for left-handed learners in laparoscopic training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "task1_setup",
+      "description": "Peg transfer task setup showing colored objects and pegs arranged in trainer box",
+      "technique_notes": "Standard FLS task 1 configuration with multiple colored rubber objects",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "task2_setup",
+      "description": "Pattern cutting task with gauze suspended and circular pattern marked",
+      "technique_notes": "Task 2 setup with 4cm diameter circle marked on gauze material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "anatomy_education",
+      "description": "Educational slide showing needle anatomy with labeled parts A, B, C",
+      "technique_notes": "Theoretical instruction on suturing needle components and grip points",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "task3_demonstration",
+      "description": "Endoloop task demonstration with foam appendage and pre-tied ligating loop",
+      "technique_notes": "Shows proper setup for task 3 with Position A marking visible",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Left-handed instrument positioning for peg transfer",
+      "Mirror technique adaptation for left-handed learners",
+      "Proper needle anatomy understanding for suturing tasks",
+      "Endoloop deployment technique with appendage targeting",
+      "Pattern cutting setup and gauze handling"
+    ],
+    "verbal_cues": [
+      "Tips and tricks tutorial addressing fundamentals",
+      "Deficiency in teaching left-handed learners addressed",
+      "Mental picture creation for mirror image adaptation"
+    ],
+    "common_errors_addressed": [
+      "Difficulty creating mental picture of mirror image from right-handed demonstration",
+      "Challenges in hand dominance development for left-handed surgeons"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content with professional presentation format, multiple FLS tasks demonstrated with educational overlays and narrated guidance for left-handed learners",
+  "technique_summary": "Comprehensive educational video addressing specific needs of left-handed learners across multiple FLS tasks with theoretical background and practical demonstrations",
+  "video_id": "VT6iTXl8H4s",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:25:39.444354+00:00"
+}

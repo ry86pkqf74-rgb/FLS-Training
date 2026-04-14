@@ -1,0 +1,115 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black screen with Dr Tayyab Ch watermark - video introduction",
+      "technique_notes": "Instructional video beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_setup",
+      "description": "External view of laparoscopic trainer box being prepared",
+      "technique_notes": "Demonstrating proper equipment setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "material_demonstration",
+      "description": "View inside trainer showing Penrose drain with marks and foam appendage setup",
+      "technique_notes": "Clear visualization of task materials and target marks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "material_demonstration",
+      "description": "Close-up of yellow foam with pre-marked slit, showing target marks clearly",
+      "technique_notes": "Educational demonstration of proper mark placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "needle_load",
+      "description": "Laparoscopic view showing needle drivers and purple suture being loaded",
+      "technique_notes": "Demonstrating proper needle loading technique with appropriate grip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65.0,
+      "phase": "suture_placement",
+      "description": "Needle being driven through first mark on Penrose drain",
+      "technique_notes": "Demonstrating perpendicular entry angle and proper needle driving",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 105.0,
+      "phase": "suture_cut",
+      "description": "Final view showing completed suture with scissors cutting excess",
+      "technique_notes": "Demonstrating proper suture tail cutting technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": null,
+      "confidence": null
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "demonstration"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional video demonstrating equipment and technique, not a performance to be scored",
+  "cannot_determine": [
+    "Performance metrics - video shows instructional content with equipment demonstration and technique overview rather than a timed performance"
+  ],
+  "technique_summary": "Instructional video demonstrating FLS Task 5 setup, materials, and basic technique elements including needle loading, suture placement, and cutting",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper FLS trainer setup and preparation",
+      "Correct positioning of Penrose drain with marked targets",
+      "Appropriate needle loading with laparoscopic instruments",
+      "Demonstration of suture driving through tissue marks",
+      "Proper suture tail cutting technique"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Shows proper equipment preparation before beginning task",
+      "Demonstrates clear visualization of target marks before suturing"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "a-eIZIlnMik",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:47:40.217038+00:00"
+}
