@@ -1,0 +1,18 @@
+{
+  "run_id": "fls_round2_vl_v7_20260414_205715",
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "adapter": "LoRA r=32 (fresh)",
+  "data_source": "youtube_sft_v2 = v4 + gold + LASANA rescore (all v002 schema)",
+  "yt_train": 445,
+  "yt_val": 54,
+  "yt_test": 54,
+  "epochs": 5,
+  "lr": 0.0001,
+  "lr_schedule": "cosine",
+  "max_frames_per_example": 8,
+  "loss_masking": "assistant-only (labels[:prompt_len] = -100 + pad masked)",
+  "train_loss": 0.15037112619195667,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "completed_at": "2026-04-14T20:57:15.623886",
+  "supersedes": "049_train_qwen_vl_v6.py (v5/v6 plateaued at loss 5.5; root cause was unmasked prompt tokens in loss \u2014 model memorized the prompt template and never learned the response.)"
+}

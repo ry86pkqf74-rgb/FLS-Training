@@ -1,0 +1,503 @@
+{
+  "summary": {
+    "adapter": "checkpoints_vl_v7/final",
+    "n_examples": 54,
+    "valid_json_rate": 0.6111111111111112,
+    "task_id_accuracy": 0.0,
+    "classification_accuracy": 0.0,
+    "mae_fls_score": null,
+    "mae_n": 0,
+    "unique_prediction_ratio": 0.0,
+    "unique_fls_values": 0,
+    "per_task_mae": {},
+    "completed_at": "2026-04-14T21:30:29.292169"
+  },
+  "results": [
+    {
+      "video_id": "lasana_peg_knaiab",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 292.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_hLlQOZc7pNk_20260408_093516\",\n    \"video_id\": \"hLlQOZc7pNk\",\n    \"video_filename\": \"hLlQOZc7pNk.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_circle_schioub",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 212.5,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1985457635\",\n  \"video_id\": \"1985457635\",\n  \"video_filename\": \"1985457635.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"fls_task2_pattern_cut\",\n  \"stage\": \"cut"
+    },
+    {
+      "video_id": "lasana_suture_plaism",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19874563_2026040411\",\n  \"video_id\": \"19874563\",\n  \"video_filename\": \"19874563.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"sta"
+    },
+    {
+      "video_id": "lasana_peg_duegy",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 252.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7p6E_20260408_093517\",\n    \"video_id\": \"XQznLsU7p6E\",\n    \"video_filename\": \"XQznLsU7p6E.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_miirth",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 25.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_circle_fliully",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854576_202605735\",\n  \"video_id\": \"19854576\",\n  \"video_filename\": \"19854576.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"cut_suture_hypogastric\",\n  \"stage\":"
+    },
+    {
+      "video_id": "lasana_peg_mccuy",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 15.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_suture_siugh",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1987451630\",\n  \"video_id\": \"1987451630\",\n  \"video_filename\": \"1987451630.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"stage\": "
+    },
+    {
+      "video_id": "lasana_peg_mccloork",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 205.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_ciaorth",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsKl7Ns_20260408_093517\",\n    \"video_id\": \"XQznLsKl7Ns\",\n    \"video_filename\": \"XQznLsKl7Ns.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_suture_schmieubs",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1987455633\",\n  \"video_id\": \"1987455633\",\n  \"video_filename\": \"1987455633.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"stage\": "
+    },
+    {
+      "video_id": "lasana_peg_wrak",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 252.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"penulti"
+    },
+    {
+      "video_id": "lasana_peg_xoorts",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 5.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_Y5UqjGm7NWI_20260408_093617\",\n    \"video_id\": \"Y5UqjGm7NWI\",\n    \"video_filename\": \"Y5UqjGm7NWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_mcgiys",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_circle_smuirst",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 209.5,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1985457653\",\n  \"video_id\": \"1985457653\",\n  \"video_filename\": \"1985457653.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"FLS_task2_pattern_cut\",\n  \"stage\": \"cut"
+    },
+    {
+      "video_id": "lasana_peg_bloarr",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 60.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"object_"
+    },
+    {
+      "video_id": "lasana_suture_yaaly",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1987455635\",\n  \"video_id\": \"1987455635\",\n  \"video_filename\": \"1987455635.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"stage\": "
+    },
+    {
+      "video_id": "lasana_peg_smiorry",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 228.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"penulti"
+    },
+    {
+      "video_id": "lasana_peg_cycluts",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 235.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2025030410\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-2025030410\",\n  \"model_version\": \"claude-sonnet-4-2025030410\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"pen"
+    },
+    {
+      "video_id": "lasana_suture_krengly",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1987455635\",\n  \"video_id\": \"1987455635\",\n  \"video_filename\": \"1987455635.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"stage\": "
+    },
+    {
+      "video_id": "9pmAgTE2UzQ",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19845763_2026051143\",\n  \"video_id\": \"19845763\",\n  \"video_filename\": \"19845763.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-2025051143\",\n  \"model_version\": \"claude-sonnet-4-2025051143\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"ls_circle_pfo\",\n  \"stage\": \"cu"
+    },
+    {
+      "video_id": "lasana_circle_swohn",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": -100.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_19854673_20250453\",\n    \"video_id\": \"19854673\",\n    \"video_filename\": \"19854673.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-2025041717\",\n    \"model_version\": \"claude-sonnet-4-2025041717\",\n    \"prompt_version\": \"v002\",\n    \"task\": \"cut_circle_l"
+    },
+    {
+      "video_id": "lasana_circle_schmiects",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 212.5,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1985457653\",\n  \"video_id\": \"1985457653\",\n  \"video_filename\": \"1985457653.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"ls_task2_pattern_cut\",\n  \"stage\": \"cutt"
+    },
+    {
+      "video_id": "lasana_peg_mciown",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 248.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_pains",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 36.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_45897644_20260408_085316\",\n  \"video_id\": \"45897644\",\n  \"video_filename\": \"45897644.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"1_peg_transfer\",\n  \"stage\": \""
+    },
+    {
+      "video_id": "WhUtStkkYHU",
+      "expected_task": "task3_endoloop",
+      "predicted_task": null,
+      "expected_fls": 119.75,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854670_20250108_093517\",\n  \"video_id\": \"19854670\",\n  \"video_filename\": \"19854670.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250108\",\n  \"model_version\": \"claude-sonnet-4-20250108\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"endoloop\",\n  \"stage\": \"cuttin"
+    },
+    {
+      "video_id": "lasana_suture_gluiest",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1987451635\",\n  \"video_id\": \"1987451635\",\n  \"video_filename\": \"1987451635.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"stage\": "
+    },
+    {
+      "video_id": "lasana_circle_niirn",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 209.5,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1985457635\",\n  \"video_id\": \"1985457635\",\n  \"video_filename\": \"1985457635.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"ls_task2_pattern_cut\",\n  \"stage\": \"cut_"
+    },
+    {
+      "video_id": "lasana_circle_weaft",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 162.5,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_19854uqj5Mk_20260403_085718\",\n    \"video_id\": \"19854uqj5Mk\",\n    \"video_filename\": \"19854uqj5Mk.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_circle_tauet",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 206.5,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_19854673_20260577\",\n    \"video_id\": \"19854673\",\n    \"video_filename\": \"19854673.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \"2_pattern_cut\",\n"
+    },
+    {
+      "video_id": "lasana_peg_strieurty",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 42.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_sceufy",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 230.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"object_"
+    },
+    {
+      "video_id": "lasana_circle_skaiw",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 206.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026051143\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-2025051143\",\n  \"model_version\": \"claude-sonnet-4-2025051143\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"fls_task2_pattern_cut\",\n  \"sta"
+    },
+    {
+      "video_id": "lasana_peg_puirr",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 39.5,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7NWI_20260408_093516\",\n    \"video_id\": \"XQznLsU7NWI\",\n    \"video_filename\": \"XQznLsU7NWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_sprutz",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 39.5,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_XQznLsU7p6E_20260408_093517\",\n  \"video_id\": \"XQznLsU7p6E\",\n  \"video_filename\": \"XQznLsU7p6E.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"st"
+    },
+    {
+      "video_id": "lasana_suture_schmeecs",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1987451635\",\n  \"video_id\": \"1987451635\",\n  \"video_filename\": \"1987451635.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"stage\": "
+    },
+    {
+      "video_id": "lasana_peg_pebly",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 74.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7p6E_20260408_093517\",\n    \"video_id\": \"XQznLsU7p6E\",\n    \"video_filename\": \"XQznLsU7p6E.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_hyaix",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 212.5,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_wiidly",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 216.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2025030410\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-2025030410\",\n  \"model_version\": \"claude-sonnet-4-2025030410\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"pen"
+    },
+    {
+      "video_id": "lasana_peg_cucks",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 12.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7pWI_20260408_093517\",\n    \"video_id\": \"XQznLsU7pWI\",\n    \"video_filename\": \"XQznLsU7pWI.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_circle_kwuiwn",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 207.8,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854576_202605735\",\n  \"video_id\": \"19854576\",\n  \"video_filename\": \"19854576.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"cut_suture\",\n  \"stage\": \"cut_suture"
+    },
+    {
+      "video_id": "Orp_c2VsqEE",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 224.8,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_20250108_094517\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250108\",\n  \"model_version\": \"claude-sonnet-4-20250108\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"pe"
+    },
+    {
+      "video_id": "lasana_peg_mcdiirk",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 205.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"incompl"
+    },
+    {
+      "video_id": "lasana_peg_proiarth",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 174.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2025040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-2025040411\",\n  \"model_version\": \"claude-sonnet-4-2025040411\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"pen"
+    },
+    {
+      "video_id": "a0-W5oX_I5s",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 210.7,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026055471\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"FLS_task2_pattern_cut\",\n  \"stage\":"
+    },
+    {
+      "video_id": "lasana_circle_spleipp",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 262.0,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_19854uqj5Mk_2026040411372\",\n    \"video_id\": \"19854uqj5Mk\",\n    \"video_filename\": \"19854uqj5Mk.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \"cu"
+    },
+    {
+      "video_id": "lasana_circle_sqilt",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 210.5,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_19854673_20250104_00000\",\n    \"video_id\": \"19854673\",\n    \"video_filename\": \"19854673.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250104\",\n    \"model_version\": \"claude-sonnet-4-20250104\",\n    \"prompt_version\": \"v002\",\n    \"task\": \"cut_circle"
+    },
+    {
+      "video_id": "lasana_peg_gniom",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 195.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"penulti"
+    },
+    {
+      "video_id": "lasana_suture_theiarty",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": null,
+      "expected_fls": 0.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_1987455635\",\n  \"video_id\": \"1987455635\",\n  \"video_filename\": \"1987455635.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"5_intracorporeal_suturing\",\n  \"stage\": "
+    },
+    {
+      "video_id": "lasana_circle_krioun",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 204.5,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_19854673_20260104_00000\",\n    \"video_id\": \"19854673\",\n    \"video_filename\": \"19854673.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \"cut_circle"
+    },
+    {
+      "video_id": "lasana_peg_plogs",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 41.6,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_XQznLsU7p6E_20260408_093517\",\n    \"video_id\": \"XQznLsU7p6E\",\n    \"video_filename\": \"XQznLsU7p6E.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_peg_shroiank",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 255.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_hLJG5tKl7As_20260403_092818\",\n    \"video_id\": \"hLJG5tKl7As\",\n    \"video_filename\": \"hLJG5tKl7As.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \""
+    },
+    {
+      "video_id": "lasana_circle_bliuntly",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": null,
+      "expected_fls": 209.5,
+      "predicted_fls": null,
+      "json_valid": false,
+      "raw_head": "[\n  {\n    \"id\": \"score_consensus_19854673_20260104_00000\",\n    \"video_id\": \"19854673\",\n    \"video_filename\": \"19854673.mp4\",\n    \"source\": \"consensus\",\n    \"model_name\": \"claude-sonnet-4-20250514\",\n    \"model_version\": \"claude-sonnet-4-20250514\",\n    \"prompt_version\": \"v002\",\n    \"task\": \"ls_task2_p"
+    },
+    {
+      "video_id": "lasana_peg_yeiack",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": null,
+      "expected_fls": 235.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_consensus_19854673_2026040411\",\n  \"video_id\": \"19854673\",\n  \"video_filename\": \"19854673.mp4\",\n  \"source\": \"consensus\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task\": \"peg_transfer\",\n  \"stage\": \"penulti"
+    }
+  ]
+}

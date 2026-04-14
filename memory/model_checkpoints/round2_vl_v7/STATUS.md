@@ -1,13 +1,18 @@
-# v7 Training Status — 2026-04-14
+# v7 Training Status — 2026-04-14 FINAL
 
-## In flight
-- **Pod:** `v7lexoj3odzen4` (fls-train-h100-v2), ssh `root@87.120.211.209 -p 14632`
-- **Process:** PID 37561 on pod, `python3 -u FLS-Training/scripts/050_train_qwen_vl_v7.py`
-- **Log:** `/workspace/trainv7.log`
+## Outcome: FAILED gate (mode collapse persists)
+
+Training completed successfully (final train_loss 0.150 — the loss-masking fix
+worked), but the v7 adapter mode-collapsed at eval. See `DIAGNOSIS.md` for
+full analysis and v8 proposal.
+
+## Training (completed)
+
+- **Pod:** `v7lexoj3odzen4` (fls-train-h100-v2), stopped post-handoff
+- **Process:** PID 37561, `python3 -u FLS-Training/scripts/050_train_qwen_vl_v7.py`
 - **Started:** 2026-04-14 17:22 UTC
-- **Progress @ 2026-04-14 18:54 UTC:** step 246/560 (44%), epoch 2.14, ~1h55m remaining
-- **First checkpoint save:** step 400 → `/workspace/checkpoints_vl_v7/checkpoint-400/`
-- **Final save:** `/workspace/checkpoints_vl_v7/final/`
+- **Completed:** 2026-04-14 20:57 UTC (~3h35m wall)
+- **Final checkpoint:** `checkpoints_vl_v7/final/` (scp'd to this directory)
 
 ## Loss trajectory (v7 vs v6)
 
@@ -19,53 +24,44 @@
 |  80  |  5.58 (plateau)  | n/a             |
 | 150  | —                | 0.149           |
 | 240  | —                | 0.099           |
+| 560 (final) | —         | 0.150           |
 
-v7 is 55x below v6's plateau floor. grad_norm stays in 0.2-0.5 range (healthy,
-active). Mask fix confirmed working.
+Eval loss at step 200 = 0.162. Mask fix confirmed working at the loss level.
 
 ## Mask sanity check (printed at startup)
 ```
 total_tokens=2476  prompt_tokens=2223  supervised_tokens=253
 ```
-90% of tokens in v4/v5/v6 training were prompt/image tokens contributing to
-loss — model memorized them instead of learning the response. v7 masks them.
 
-## Next steps (for new session to execute)
+## Eval results
 
-1. **Monitor training** via the SSH-agent socket (see handoff prompt).
-2. **When training completes** (check for `/workspace/checkpoints_vl_v7/final/`
-   and the `=== Training complete` line in trainv7.log):
-   - scp the final/ adapter to local `memory/model_checkpoints/round2_vl_v7/`
-   - copy `run_manifest.json` + last ~200 lines of trainv7.log
-3. **Run eval:**
-   ```
-   ssh root@87.120.211.209 -p 14632 "cd /workspace && python3 FLS-Training/scripts/042_eval_vl_adapter.py --adapter checkpoints_vl_v7/final --out checkpoints_vl_v7/eval_results.json"
-   ```
-4. **Inspect eval_results.json:**
-   - Must pass: `valid_json_rate > 0.9` AND `unique_prediction_ratio > 0.5`
-   - v5/v6 failed the unique_prediction_ratio gate (both 0%). v7 should clear it.
-5. **Commit v7 artifacts** to `round2-vl-pipeline-fixes`:
-   - `memory/model_checkpoints/round2_vl_v7/run_manifest.json`
-   - `memory/model_checkpoints/round2_vl_v7/eval_results.json`
-   - `memory/training_runs/round2_vl_v7.log` (training tail)
-   - Push and tag `round2-vl-v7`
-6. **Stop the pod** once eval is committed (~$2.99/hr idle H100).
+| Metric | v7 | Gate | Pass? |
+|---|---|---|---|
+| valid_json_rate | 61.11% | > 90% | NO |
+| unique_prediction_ratio | 0.00% | > 50% | NO |
+| task_id_accuracy | 0.00% | — | — |
+| classification_accuracy | 0.00% | — | — |
+| predicted_fls | all null | — | — |
 
-## If v7 fails the gate
-Possible remaining causes in rank order:
-- Image tokens not contributing to learning through 4-bit quantization of
-  the vision encoder → try `lora_target_modules` that include vision proj
-  layers (`merger.*`, `patch_embed`), or unfreeze vision encoder.
-- Data too easy (LASANA synthetic dominates) → oversample real YouTube
-  task3/task4 which have tiny N (12 and 8).
-- `eval_results.json` only measures JSON validity / uniqueness — add a
-  score-accuracy metric (MAE against target.score_components.total_fls_score).
+json_valid=33/54, but *none* of them match the expected `{task_id, fls_score}`
+schema — they are verbatim echoes of training-set row boilerplate
+(`[{"id":"score_consensus_...","video_id":"hLlQOZc7pNk",...}]`). 31 unique
+raw_heads across 54 samples, all drawn from training-input JSON. The model's
+output does not depend on the test video's frames.
 
-## SSH gotcha (important for new session)
-Desktop Commander's default shell env doesn't see the system ssh-agent.
-Before any SSH command, export:
+## Root cause (see DIAGNOSIS.md)
+
+LoRA target_modules cover only the LM transformer blocks. The vision→LM
+merger is frozen, so no gradient pressure forces the LM to condition on
+visual features. Model defaults to memorized training-row continuations.
+
+## v8 proposal
+
+Unfreeze `visual.merger` (either `modules_to_save=["visual.merger"]` or LoRA
+its linears). Keep everything else. Add preflight assert that at least one
+merger param has `requires_grad=True`. See DIAGNOSIS.md §"v8 proposal".
+
+## SSH gotcha
 ```
-export SSH_AUTH_SOCK=/var/run/com.apple.launchd.NWjpYCNETm/Listeners
+export SSH_AUTH_SOCK=$(launchctl getenv SSH_AUTH_SOCK)
 ```
-(Exact socket path may differ across reboots; find with
-`launchctl getenv SSH_AUTH_SOCK`.)
