@@ -1,24 +1,24 @@
 {
   "dataset": "youtube_sft_v1",
-  "created_at": "2026-04-14T00:51:23.669240+00:00",
-  "total": 55,
-  "train": 49,
+  "created_at": "2026-04-14T02:17:27.859411+00:00",
+  "total": 59,
+  "train": 53,
   "val": 6,
   "task_counts": {
     "task5_intracorporeal_suturing": 11,
-    "task4_extracorporeal_knot": 8,
+    "task4_extracorporeal_knot": 11,
+    "task3_endoloop": 9,
     "task1_peg_transfer": 16,
-    "task3_endoloop": 10,
-    "task2_pattern_cut": 10
+    "task2_pattern_cut": 12
   },
   "label_types": {
-    "dual_teacher_consensus": 47,
-    "claude_only_high_conf": 8
+    "dual_teacher_consensus": 54,
+    "claude_only_high_conf": 5
   },
   "drop_stats": {
-    "empty_or_unclassified_task": 48,
-    "dual_rejected": 137,
-    "no_claude": 267,
-    "claude_low_conf": 28
+    "empty_or_unclassified_task": 51,
+    "dual_rejected": 147,
+    "no_claude": 366,
+    "claude_low_conf": 19
   }
 }
