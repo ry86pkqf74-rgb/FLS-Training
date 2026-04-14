@@ -163,10 +163,18 @@ except ImportError:
     from transformers import Qwen2VLForConditionalGeneration as VLModel
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 
-print("\nLoading Qwen2.5-VL-7B-Instruct (4-bit)...")
+print("\nLoading Qwen2.5-VL-7B-Instruct (4-bit LM, bf16 visual)...")
+# CRITICAL vs v7: skip 4-bit quantization for the entire visual subtree. The
+# merger MLP is made of nn.Linear layers — if those get 4-bit quantized,
+# bitsandbytes replaces them with bnb.Linear4bit whose weights are not
+# differentiable, and our later `requires_grad = True` pass would silently
+# produce zero gradients on the merger. llm_int8_skip_modules (despite the
+# name) also controls 4-bit skip patterns; prefix match on "visual." catches
+# both model.visual.* and any reparenting variants.
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True, bnb_4bit_quant_type="nf4",
     bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_use_double_quant=True,
+    llm_int8_skip_modules=["visual"],
 )
 MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
 model = VLModel.from_pretrained(
@@ -179,31 +187,48 @@ model = prepare_model_for_kbit_training(model)
 lora_config = LoraConfig(
     r=32, lora_alpha=32, lora_dropout=0.05,
     target_modules=["q_proj","k_proj","v_proj","o_proj","gate_proj","up_proj","down_proj"],
+    # === v8: fully train the vision→LM merger ===
+    # Qwen2.5-VL routes ViT features through `visual.merger.*` (a small RMSNorm
+    # + 2-layer MLP) to produce the visual token sequence that gets
+    # concatenated into the LM input. v5/v6/v7 left this frozen, which is why
+    # the LM learned to ignore visual features. PEFT's modules_to_save makes a
+    # full trainable copy of matching modules and persists it inside the
+    # adapter's safetensors, so the existing eval path (042_eval_vl_adapter.py)
+    # picks up merger weights automatically via PeftModel.from_pretrained. We
+    # match on "merger" — the only module in the model with that suffix.
+    modules_to_save=["merger"],
     bias="none", task_type="CAUSAL_LM",
 )
 model = get_peft_model(model, lora_config)
 
-# === v8: unfreeze the vision→LM merger ===
-# Qwen2.5-VL routes ViT features through `visual.merger.*` (a small MLP) to
-# produce the visual token sequence that gets concatenated into the LM input.
-# v5/v6/v7 left this frozen, which is why the LM learned to ignore visual
-# features. Unfreezing it — while keeping the ViT frozen — gives the model a
-# narrow, tractable path to route visual information without blowing up VRAM.
-merger_params = 0
+# Verify PEFT set up modules_to_save correctly: at least one `visual.merger`
+# param should now have requires_grad=True, be on GPU, and NOT be 4-bit
+# quantized (else llm_int8_skip_modules didn't match and gradients will be
+# silently zero). Fail fast here, not 3.5h into training.
+merger_trainable = 0
 merger_names = []
+merger_sample_dtypes = set()
+merger_quantized = []
 for name, p in model.named_parameters():
-    if "visual.merger" in name:
-        p.requires_grad = True
-        merger_params += p.numel()
+    if "visual.merger" in name and p.requires_grad:
+        merger_trainable += p.numel()
+        merger_sample_dtypes.add(str(p.dtype))
+        if hasattr(p, "quant_state") or p.dtype == torch.uint8:
+            merger_quantized.append(name)
         if len(merger_names) < 6: merger_names.append(name)
-if merger_params == 0:
-    print("FATAL: no parameters matching 'visual.merger' — module name may differ.")
-    print("      Dump a few candidate names and update this script:")
+if merger_trainable == 0:
+    print("FATAL: no trainable 'visual.merger' params after get_peft_model.")
+    print("       modules_to_save likely did not match. Candidate names (first 40):")
     for n, _ in list(model.named_parameters())[:40]:
         print("       ", n)
     sys.exit(1)
-print(f"\n[v8] Unfroze visual.merger: {merger_params:,} params")
-print("[v8] Sample merger param names:")
+if merger_quantized:
+    print("FATAL: visual.merger params are 4-bit quantized — cannot receive gradients.")
+    print(f"       Offending params: {merger_quantized[:5]}")
+    print("       Fix: ensure llm_int8_skip_modules=[\"visual\"] in BitsAndBytesConfig.")
+    sys.exit(1)
+print(f"\n[v8] Trainable visual.merger params: {merger_trainable:,}  dtypes: {merger_sample_dtypes}")
+print("[v8] Sample trainable merger param names:")
 for n in merger_names: print("     ", n)
 
 trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -330,15 +355,11 @@ print(f"\n=== Training complete — {datetime.now()} ===")
 print(f"Train loss: {result.training_loss:.4f}")
 
 out = Path(CHECKPOINT_DIR) / "final"
-# Save PEFT adapter (LM LoRA) AND the unfrozen merger weights.
+# PEFT's save_pretrained persists LoRA weights AND any modules_to_save
+# submodules (our merger) inside adapter_model.safetensors. Eval loading via
+# PeftModel.from_pretrained restores both automatically — no extra steps.
 model.save_pretrained(str(out))
 processor.save_pretrained(str(out))
-# save_pretrained on a PeftModel does NOT save non-LoRA trainable params,
-# so write merger weights separately so eval can reload them.
-merger_state = {k: v.detach().cpu() for k, v in model.named_parameters()
-                if "visual.merger" in k and v.requires_grad}
-torch.save(merger_state, str(Path(out) / "visual_merger.pt"))
-print(f"Saved {len(merger_state)} merger tensors to visual_merger.pt")
 
 manifest = {
     "run_id": f"fls_round2_vl_v8_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
@@ -348,7 +369,7 @@ manifest = {
     "epochs": EPOCHS, "lr": LR, "lr_schedule": "cosine",
     "max_frames_per_example": MAX_FRAMES,
     "loss_masking": "assistant-only (labels[:prompt_len] = -100 + pad masked)",
-    "merger_params_trainable": merger_params,
+    "merger_params_trainable": merger_trainable,
     "train_loss": result.training_loss, "gpu": gpu,
     "completed_at": datetime.now().isoformat(),
     "supersedes": "050_train_qwen_vl_v7.py (v7 passed loss fix but mode-collapsed "
