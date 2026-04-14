@@ -1,0 +1,16 @@
+{
+  "run_id": "fls_round2_vl_20260414_034645",
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "adapter": "LoRA r=16 (fresh, no warm-start)",
+  "data_source": "youtube_sft_v1 (dual-teacher consensus, v002 schema)",
+  "yt_train": 45,
+  "yt_val": 6,
+  "yt_test": 5,
+  "epochs": 15,
+  "lr": 0.0003,
+  "max_frames_per_example": 8,
+  "train_loss": 6.42247518963284,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "completed_at": "2026-04-14T03:46:45.802033",
+  "supersedes": "031_train_lora_lasana.py (mode-collapsed)"
+}

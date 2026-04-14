@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "adapter": "/workspace/checkpoints_vl/final",
+    "n_examples": 5,
+    "valid_json_rate": 0.8,
+    "task_id_accuracy": 0.8,
+    "classification_accuracy": 0.0,
+    "mae_fls_score": null,
+    "mae_n": 0,
+    "unique_prediction_ratio": 0.0,
+    "unique_fls_values": 0,
+    "per_task_mae": {},
+    "completed_at": "2026-04-14T03:49:00.707903"
+  },
+  "results": [
+    {
+      "video_id": "jMj6yPmw7zU",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": "task5_intracorporeal_suturing",
+      "expected_fls": 517.8,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"task_id\": \"task5_intracorporeal_suturing\",\n  \"completion_time_seconds\": 72.0,\n  \"score_components\": [\n    {\n      \"name\": \"total_fls_score\",\n      \"value\": 19.0,\n      \"description\": \"Expert-level performance with excellent timing (72s vs 60-100s expert benchmark)\",\n      \"formula_applied\": \"20"
+    },
+    {
+      "video_id": "ciGLex6_Tjc",
+      "expected_task": "task4_extracorporeal_knot",
+      "predicted_task": "task4_extracorporeal_knot",
+      "expected_fls": 347.5,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"task_id\": \"task4_extracorporeal_knot\",\n  \"completion_time_seconds\": 75.0,\n  \"score_components\": [\n    {\n      \"type\": \"knot_quality\",\n      \"assessments\": [\n        \"knot_appearance_fls4\",\n        \"suturing_technique_fls4\"\n      ],\n      \"score\": 8.0,\n      \"feedback\": \"Good extracorporeal knot"
+    },
+    {
+      "video_id": "yt_IwrNTRVXuJQ",
+      "error": "no_frames"
+    },
+    {
+      "video_id": "mV3-F4Qf2-Y",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 283.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"task_id\": \"task1_peg_transfer\",\n  \"completion_time_seconds\": 22.0,\n  \"score_components\": [\n    {\n      \"description\": \"Correct bilateral simultaneous transfer technique with both objects moved together\",\n      \"points_awarded\": 6.0,\n      \"points_deducted\": 0.0,\n      \"evidence\": [\n        \"Bot"
+    },
+    {
+      "video_id": "98wkDk8uySc",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 247.0,
+      "predicted_fls": null,
+      "json_valid": true,
+      "raw_head": "{\n  \"task_id\": \"task2_pattern_cut\",\n  \"completion_time_seconds\": 46.0,\n  \"score_components\": [\n    {\n      \"name\": \"pattern_deviation\",\n      \"description\": \"Maximum deviation from the required circular cutting pattern\",\n      \"value\": 1.5,\n      \"maximum_allowed\": 2.0,\n      \"points_deducted\": 1.5,"
+    }
+  ]
+}
