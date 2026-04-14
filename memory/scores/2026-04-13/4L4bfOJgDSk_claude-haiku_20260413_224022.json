@@ -1,0 +1,212 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Precision Cutting (Pattern Cut)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title slide 'Objectives' \u2014 educational introduction to FLS certification requirements and simulation interest.",
+      "technique_notes": "Instructional content only; no task performance visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Slide listing equipment needed: wood, drill, metal brackets, pencil, metal pegs, velcro, measuring tape, C-clamp.",
+      "technique_notes": "Materials list and DIY trainer assembly instructions; not a performance attempt.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "setup",
+      "description": "Photo of sheet wood with drill, red power tool, metal brackets, and metal pegs being assembled.",
+      "technique_notes": "Construction phase of low-cost FLS trainer setup.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "setup",
+      "description": "Close-up labeling sheet wood, drill, and metal bracket with 5cm measurement annotation.",
+      "technique_notes": "Trainer assembly and dimensional specification; instructional.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "setup",
+      "description": "Overhead view of sheet wood with yellow rectangles and FLS port placements marked (8cm, 7cm, 22cm dimensions).",
+      "technique_notes": "Diagram of DIY FLS box trainer layout specifications.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "setup",
+      "description": "Wood platform viewed from above showing velcro strip placements (blue labels) for securing gauze or instruments.",
+      "technique_notes": "Assembly detail for low-cost trainer construction.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "performance_attempt",
+      "description": "Hand holding Maryland dissector (silver instrument) positioned above red foam training block with pink gauze strip attached via velcro.",
+      "technique_notes": "First visible performance attempt; instruments in place, traction setup initialized.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "performance_attempt",
+      "description": "Same view; Maryland dissector held steady, gauze positioned horizontally on foam block, ready for cutting.",
+      "technique_notes": "Traction established; gauze appears planar and stable.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "performance_attempt",
+      "description": "Close-up view of foam training block with white tape band at top and green foam block visible below; gauze strip visible.",
+      "technique_notes": "Green foam block is the training model (porous, mimics tissue for dissection).",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "performance_attempt",
+      "description": "Overhead view of wooden trainer with Maryland dissector and gauze positioned; red foam block with pink/light-colored gauze strip affixed via velcro visible in center.",
+      "technique_notes": "Gauze is suspended between velcro strips; no marked circle visible in this frame.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "performance_attempt",
+      "description": "View of laparoscopic trainer setup from above; two hands operating Maryland dissector and scissors instruments; red foam block and gauze in center of wooden platform.",
+      "technique_notes": "Dual-instrument approach with dissector for traction and scissors ready; unclear if marked circle is visible on gauze from this angle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "performance_attempt",
+      "description": "Operator's hands with blue-handled instruments (teal/cyan colored) controlling Maryland dissector and scissors above laparoscopic trainer; gauze and red foam block visible.",
+      "technique_notes": "Instruments positioned but task action (cutting) not yet initiated or visible in frame.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60.0,
+      "phase": "performance_attempt",
+      "description": "Overhead view of full trainer setup; two trainees visible with instruments engaged with red foam block and gauze; white instructions/documentation visible on wooden platform.",
+      "technique_notes": "Multi-person setup; task performance in progress but detail resolution insufficient to assess cutting accuracy.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65.0,
+      "phase": "performance_attempt",
+      "description": "Close-up of red foam block with white tape band and light-colored gauze strip; gauze appears intact.",
+      "technique_notes": "Mid-task phase; gauze still attached and not yet cut.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "phase": "performance_attempt",
+      "description": "Laparoscopic trainer overhead view; two hands with instruments (teal-handled Maryland dissector and scissors) positioned above red foam block and gauze.",
+      "technique_notes": "Scissors and dissector in operative position; cutting may be occurring but not clearly visible in static frame.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 75.0,
+      "phase": "performance_attempt",
+      "description": "Surgical trainer from operator perspective; foam block, velcro-attached gauze, two laparoscopic instruments visible; gauze appears still intact.",
+      "technique_notes": "Continuation of task; cutting pattern or progress not clearly evident from frame angle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 80.0,
+      "phase": "conclusion",
+      "description": "Slide titled 'Conclusions' with bullet points: survey administered, favorable response, 88% residents/fellows and 86% attendings felt simulator mimicked live laparoscopy feel, low-cost teaching tool conclusion.",
+      "technique_notes": "Instructional conclusion and study results; task performance has ended.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [
+    {
+      "phase": "instructional_setup_and_assembly",
+      "start_seconds": 0,
+      "end_seconds": 30,
+      "duration_seconds": 30,
+      "benchmark_comparison": "instructional_content_only"
+    },
+    {
+      "phase": "performance_attempt",
+      "start_seconds": 30,
+      "end_seconds": 80,
+      "duration_seconds": 50,
+      "benchmark_comparison": "cannot_determine_exact_completion"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "task_completion": "cannot_determine \u2014 video does not show the final cut product clearly enough to assess whether the marked circle was completely freed or to measure deviation from the marked line.",
+    "gauze_status": "cannot_determine \u2014 the marked circle is never shown with sufficient clarity to measure 2mm deviations at cardinal points or to confirm complete separation.",
+    "cutting_quality": "cannot_determine \u2014 camera angles and resolution do not permit assessment of cut path accuracy relative to the marked circle boundary.",
+    "gauze_integrity": "No evidence of gauze detachment or clip release disrupting the task.",
+    "task_incompleteness_note": "The video transitions to a conclusions slide before the final cut product is displayed, making it impossible to confirm task completion or score accuracy penalties."
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Unable to apply \u2014 video is instructional/educational content with embedded demonstration attempt, not a complete performance recording."
+  },
+  "confidence": 0.15,
+  "confidence_rationale": "This video is primarily instructional, showing DIY FLS trainer assembly, educational slides, and objectives/conclusions content. A performance attempt is visible in frames 7\u201316, but the recorded performance is incomplete, the marked circle is never clearly visible for deviation measurement, and the final product is never shown. The video ends with a conclusions slide before task completion is documented. Cannot reliably score as a standalone performance evaluation.",
+  "cannot_determine": [
+    "Exact completion time \u2014 performance begins ~frame 7 (30s) but task end is unclear; video cuts to conclusions before final product shown.",
+    "Line deviation measurements \u2014 marked circle not visible in sufficient detail to measure mm deviation at any cardinal point.",
+    "Task completion status \u2014 final cut product never displayed; cannot confirm marked circle was fully freed.",
+    "Gauge cutting accuracy \u2014 camera resolution and angles prevent assessment of cutting pattern fidelity.",
+    "Whether this is a single-circle official attempt or practice/demonstration run \u2014 video context suggests instructional/research presentation rather than formal FLS exam attempt."
+  ],
+  "video_classification_rationale": "This video is classified as 'instructional' because: (1) It begins with titled slides ('Objectives,' 'What you will need,' conclusions slides); (2) Contains educational narration and curriculum content about FLS certification and simulation; (3) Shows DIY trainer assembly instructions with materials lists and dimensional diagrams; (4) Includes a research study conclusion slide reporting survey results; (5) The embedded performance attempt is incomplete, shown as part of a presentation, and lacks formal scoring documentation; (6) No narration accompanies the performance attempt itself, making it unclear if this is a scored attempt or a demonstration for educational purposes.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Low-cost DIY FLS trainer construction using sheet wood, drill, metal brackets, velcro, and packing tape",
+      "Positioning of camera port and instrument ports (8cm spacing, 22cm depth)",
+      "Gauge setup and traction using velcro attachment",
+      "Instrument handling in a simulated laparoscopic environment"
+    ],
+    "verbal_cues": [
+      "None audibly present in performance portion; instructional slides contain text-based learning objectives related to FLS certification requirements and simulation utility."
+    ],
+    "common_errors_addressed": [
+      "The video does not explicitly address common cutting errors; instead it emphasizes the value of low-cost simulation as a teaching tool to improve access to laparoscopic training."
+    ],
+    "skill_level_demonstrated": "novice \u2014 the performance attempt shown in frames 7\u201316 does not exhibit expert-level speed, precision, or efficiency; however, this appears to be a demonstration for an educational study, not a proficiency assessment.",
+    "research_context": "Video appears to be from a research presentation or educational report on the efficacy of low-cost DIY FLS trainers, with survey data indicating 88% resident/fellow and 86% attending agreement that the simulator adequately mimics live laparoscopy feel."
+  },
+  "improvement_suggestions": [
+    "For scoring purposes: Record complete, uninterrupted performance attempts with clear final product imaging.",
+    "For instructional use: The DIY trainer design is well-documented; adding real-time verbal coaching on cutting technique would enhance the educational value.",
+    "For research: Include pre- and post-performance metrics (time, accuracy) to quantify learning gains from the low-cost simulator."
+  ],
+  "video_id": "4L4bfOJgDSk",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:40:22.044027+00:00",
+  "scoreable": false
+}

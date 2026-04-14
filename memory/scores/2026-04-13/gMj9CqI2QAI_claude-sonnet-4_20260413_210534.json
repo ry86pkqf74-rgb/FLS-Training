@@ -1,0 +1,137 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 41.0,
+      "phase": "needle_load",
+      "description": "Two graspers visible in peg transfer setup, not yet switched to suturing task",
+      "technique_notes": "Setup phase - task has not yet begun",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 90.0,
+      "phase": "suture_placement",
+      "description": "Needle driver and tissue visible, suturing in progress on Penrose drain",
+      "technique_notes": "Active suturing phase, needle placement through drain marks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 95.0,
+      "phase": "suture_placement",
+      "description": "Continued suturing through Penrose drain with needle driver",
+      "technique_notes": "Suture being placed through both marks on drain",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 101.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Suture ends visible, preparing for extracorporeal knot tying",
+      "technique_notes": "Transition to knot formation phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 116.0,
+      "phase": "knot_push",
+      "description": "Knot pusher being used to advance extracorporeal knot",
+      "technique_notes": "Proper use of knot pusher to secure knot",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 126.0,
+      "phase": "task_completion",
+      "description": "Task appears complete with knot secured on Penrose drain",
+      "technique_notes": "Final positioning and completion",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 126.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 50,
+      "duration_seconds": 50,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 50,
+      "end_seconds": 100,
+      "duration_seconds": 50,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 100,
+      "end_seconds": 115,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 115,
+      "end_seconds": 126,
+      "duration_seconds": 11,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0,
+      "deviation_from_mark2_mm": 0,
+      "total_deviation_penalty": 0,
+      "confidence": 0.4
+    },
+    "knot_quality": {
+      "knot_secure": true,
+      "knot_at_surface": true,
+      "extracorporeal_technique_used": true
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 126.0,
+    "total_penalties": 0,
+    "total_fls_score": 294.0,
+    "formula_applied": "420 - 126.0 - 0 = 294.0"
+  },
+  "confidence": 0.5,
+  "confidence_rationale": "Video quality and camera angles make precise measurement of suture placement deviation difficult. Task completion and timing are clearly visible, but penalty assessment is limited by viewing perspective.",
+  "cannot_determine": [
+    "Exact mm deviation from marks - camera angle and resolution insufficient for precise measurement",
+    "Whether any gap exists in drain closure - viewing angle obscures detail"
+  ],
+  "technique_summary": "Good intermediate to expert level performance with efficient knot formation and placement. Completion time of 126 seconds falls within intermediate range.",
+  "strengths": [
+    "Efficient extracorporeal knot formation technique",
+    "Good use of knot pusher for advancement",
+    "Smooth phase transitions"
+  ],
+  "improvement_suggestions": [
+    "Work on faster needle loading to achieve expert benchmark",
+    "Practice to reduce overall time toward 100 second expert range"
+  ],
+  "video_id": "gMj9CqI2QAI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:05:34.035652+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.873748+00:00"
+  },
+  "scoreable": true
+}

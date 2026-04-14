@@ -1,0 +1,154 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Suture material and Penrose drain visible on trainer with laparoscopic instruments",
+      "technique_notes": "Task setup appears complete with green suture and drain positioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 15.0,
+      "phase": "suture_placement",
+      "description": "Green suture being manipulated near the Penrose drain marks",
+      "technique_notes": "Suture appears to be positioned for passage through drain marks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 45.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Hands working above trainer to form knot extracorporeally",
+      "technique_notes": "Proper extracorporeal technique being demonstrated with hands above the trainer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 60.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Continued knot formation with both hands manipulating suture",
+      "technique_notes": "Good hand coordination for knot tying above the trainer surface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 90.0,
+      "phase": "knot_push",
+      "description": "White knot pusher being inserted through trocar to advance knot",
+      "technique_notes": "Proper use of knot pusher tool with controlled advancement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 120.0,
+      "phase": "knot_push",
+      "description": "Knot pusher advancing knot down to drain surface",
+      "technique_notes": "Steady advancement of knot pusher with appropriate tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 300.0,
+      "phase": "suture_cut",
+      "description": "Scissors cutting suture tails near the completed knot",
+      "technique_notes": "Final phase with suture being trimmed appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 330.0,
+      "phase": "completion",
+      "description": "Task appears completed with knot secured on drain",
+      "technique_notes": "Final positioning shows knot at drain with suture trimmed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 330.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 0,
+      "end_seconds": 30,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 30,
+      "end_seconds": 80,
+      "duration_seconds": 50,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 80,
+      "end_seconds": 280,
+      "duration_seconds": 200,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 280,
+      "end_seconds": 330,
+      "duration_seconds": 50,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_marks_mm": 0.0,
+      "confidence": 0.4
+    },
+    "knot_assessment": {
+      "knot_appears_secure": true,
+      "knot_at_appropriate_location": true,
+      "confidence": 0.7
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "confidence": 0.8
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 330.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 90.0,
+    "formula_applied": "420 - 330.0 - 0.0 = 90.0"
+  },
+  "confidence": 0.5,
+  "confidence_rationale": "Camera angle and video quality make it difficult to assess precise suture placement relative to marks and exact knot positioning. Completion time clearly observable.",
+  "cannot_determine": [
+    "Exact deviation from marks in millimeters due to camera angle and distance",
+    "Precise knot security assessment from this viewing angle",
+    "Whether suture passed through both marks accurately"
+  ],
+  "technique_summary": "Novice-level performance with appropriate extracorporeal technique but significantly prolonged execution time, particularly in knot pushing phase (200s vs 20-40s expert benchmark).",
+  "strengths": [
+    "Proper extracorporeal knot formation technique",
+    "Appropriate use of knot pusher",
+    "Task completion without apparent drain damage"
+  ],
+  "improvement_suggestions": [
+    "Practice knot pushing technique to reduce time from 200s to under 60s",
+    "Work on overall task efficiency to achieve sub-200s completion time",
+    "Focus on smoother transitions between task phases"
+  ],
+  "video_id": "Mt-TY4M8fbo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:06:14.642551+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.825972+00:00"
+  },
+  "scoreable": true
+}

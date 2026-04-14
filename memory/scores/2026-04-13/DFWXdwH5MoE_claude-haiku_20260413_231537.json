@@ -1,0 +1,144 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Instructor stands next to FLS trainer box with two laparoscopic instruments in hands. FLS peg transfer board visible with 6 colored pegs (red, blue, green, purple, yellow, orange) arranged in two rows across the central pegboard.",
+      "technique_notes": "Dual monitor setup visible showing both bird's-eye view (left monitor) and endoscopic camera view (right monitor). Trainer positioned for demonstration.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor gesturing with both hands, explaining technique while holding laparoscopic graspers. No peg transfer activity yet\u2014this is instructional narration.",
+      "technique_notes": "Instructor is demonstrating proper grip and hand positioning for the task. Educational context evident.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor continues explaining with both graspers in hand. No active task execution\u2014teaching phase.",
+      "technique_notes": "Demonstrating instrument handling techniques. Camera angle shows full body and trainer board.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 18.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor with grasper in left hand, gesturing with right hand to explain concepts. Still in teaching mode, no peg movement.",
+      "technique_notes": "Educational demonstration mode. Focus on explaining technique rather than performing timed trial.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 25.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor holding graspers at rest position, speaking to camera/audience. No peg transfer activity in progress.",
+      "technique_notes": "Clear instructional video format with narration. Not a performance/timed assessment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 35.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor manipulating the graspers while speaking, demonstrating proper grip and movement patterns. Still primarily narration-based.",
+      "technique_notes": "Demonstrates proper wrist rotation and instrument control. Educational demonstration.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 45.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor with one grasper engaged with a peg on the board. Starting to demonstrate actual peg transfer mechanics while explaining.",
+      "technique_notes": "Beginning to show hands-on demonstration of proper technique for peg pickup and transfer.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 55.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor performing peg transfer movements while narrating. Grasper positioned to interact with pegs on board.",
+      "technique_notes": "Demonstrating proper technique for peg manipulation and transfer. Not a timed performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 65.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor continues demonstration with graspers manipulating pegs. Multiple colored pegs visible on board throughout frame sequence.",
+      "technique_notes": "Hands-on teaching demonstration showing how to properly grasp and transfer pegs. Educational content delivery.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 75.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor performing peg transfer with visible grasper control. Pegs on board in various positions. Narration continues throughout.",
+      "technique_notes": "Demonstrating proper instrument control and peg manipulation technique. Not a speed-based performance assessment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 90.0,
+      "phase": "verbal_instruction",
+      "description": "Continued demonstration with instructor manipulating graspers and pegs. FLS board visible with multiple pegs in different positions on the pegboard.",
+      "technique_notes": "Ongoing hands-on demonstration of proper peg transfer technique. Instructional format maintained throughout.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 105.0,
+      "phase": "verbal_instruction",
+      "description": "Instructor with graspers engaged with pegs on board. Video appears to show extended instructional sequence covering multiple aspects of technique.",
+      "technique_notes": "Comprehensive demonstration of peg transfer mechanics, hand coordination, and instrument control. Educational focus.",
+      "penalties_observed": []
+    }
+  ],
+  "scoring_not_applicable": true,
+  "score_not_computed": "This is an instructional/educational video featuring narrated teaching content about FLS peg transfer technique. It is NOT a timed performance or evaluation. The instructor is demonstrating proper technique while providing verbal explanation. Per the assessment instructions, instructional videos are not scored; teaching content is extracted instead.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper grip position on laparoscopic graspers (approximately 2/3 point from instrument tip for control)",
+      "Wrist rotation and pronation/supination for instrument control in narrow workspace",
+      "Peg pickup technique using jaw closure with appropriate tension",
+      "Midair transfer movements between left and right hand while maintaining peg control",
+      "Peg placement on target positions with precision",
+      "Hand-eye coordination through dual-monitor visual feedback (bird's-eye and endoscopic views)",
+      "Efficient sequencing of pickup, transfer, and placement phases",
+      "Bilateral hand coordination for non-dominant hand pickup and dominant hand placement, then reversal"
+    ],
+    "verbal_cues": [
+      "Instructor continuously narrating technique throughout video",
+      "Explaining proper instrument handling and peg control strategies",
+      "Discussing the importance of hand-eye coordination",
+      "Providing context for why proper technique matters in laparoscopic surgery",
+      "Demonstrating smooth transitions between transfer phases"
+    ],
+    "common_errors_addressed": [
+      "Avoiding excessive force when grasping pegs (which can damage instruments or drop objects)",
+      "Preventing peg drops during midair transfer by maintaining control",
+      "Avoiding placing pegs on wrong positions",
+      "Not rushing movements\u2014demonstrating deliberate, controlled technique",
+      "Proper hand positioning to prevent instrument collision",
+      "Avoiding tremor by maintaining stable wrist position"
+    ],
+    "skill_level_demonstrated": "expert",
+    "additional_observations": "This video serves as an instructional teaching tool for FLS peg transfer technique. The dual-monitor setup (left: bird's-eye view, right: endoscopic camera view) is prominently displayed to help learners understand the visual feedback they will receive during actual performance. The instructor uses hands-on demonstration combined with verbal narration to cover all phases of the task."
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification as instructional is definitive based on: (1) continuous narration/teaching throughout, (2) no timer or formal assessment structure, (3) focus on technique explanation rather than speed, (4) pauses for instructional points, (5) educational classroom/training setting evident, (6) no 'official' FLS performance scoring context.",
+  "cannot_determine": [],
+  "improvement_suggestions_not_applicable": "Scoring not applicable to instructional content",
+  "video_id": "DFWXdwH5MoE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:15:37.657634+00:00",
+  "scoreable": false
+}

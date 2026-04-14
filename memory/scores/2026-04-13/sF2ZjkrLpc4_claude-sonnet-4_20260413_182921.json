@@ -79,5 +79,11 @@
   "video_id": "sF2ZjkrLpc4",
   "source": "teacher_claude",
   "model_name": "claude-sonnet-4-20250514",
-  "scored_at": "2026-04-13T18:29:21.817986+00:00"
+  "scored_at": "2026-04-13T18:29:21.817986+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.897746+00:00"
+  },
+  "scoreable": false
 }

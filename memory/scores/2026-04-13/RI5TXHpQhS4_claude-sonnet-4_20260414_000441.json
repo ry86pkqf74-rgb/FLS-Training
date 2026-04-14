@@ -1,0 +1,93 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_setup",
+      "description": "LAMA Training Academy promotional material and social media handles visible",
+      "technique_notes": "This appears to be promotional/instructional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "classroom_demonstration",
+      "description": "Instructor presenting to seated audience with projection screen showing laparoscopic content",
+      "technique_notes": "Educational setting with formal presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "equipment_demonstration",
+      "description": "Close-up view of laparoscopic trainer box with instruments, appears to be showing pattern cut task setup",
+      "technique_notes": "Demonstrating proper equipment setup and instrument positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 32.0,
+      "phase": "hands_on_instruction",
+      "description": "Multiple trainees at individual laparoscopic trainer stations with instructor supervision",
+      "technique_notes": "Supervised practice environment with multiple simultaneous training stations",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 44.0,
+      "phase": "technique_demonstration",
+      "description": "Instructor demonstrating proper hand positioning and instrument control",
+      "technique_notes": "Focus on ergonomics and proper technique demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 60.0,
+      "phase": "group_instruction",
+      "description": "Wide view of training laboratory with multiple participants and instructors",
+      "technique_notes": "Collaborative learning environment with peer observation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional/educational content showing training academy promotion and classroom instruction. No actual task performance visible for scoring.",
+  "cannot_determine": [
+    "Task performance scoring - this is instructional content, not a performance video",
+    "Completion time - no actual task attempt shown",
+    "Penalties - no performance to evaluate"
+  ],
+  "technique_summary": "This video shows an educational training environment rather than an individual task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper laparoscopic trainer setup",
+      "Instructor-guided hands-on practice",
+      "Multi-station training laboratory organization",
+      "Ergonomic instrument handling demonstration"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "RI5TXHpQhS4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:04:41.418447+00:00",
+  "scoreable": false
+}

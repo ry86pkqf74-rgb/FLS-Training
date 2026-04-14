@@ -1,0 +1,112 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "classification_rationale": "Video contains instructional overlays with text cues ('Make your incision', 'Remove the mass', 'Close') and demonstrates technique step-by-step in a teaching format with pauses and visual guidance. This is not a timed performance by a trainee, but rather a tutorial showing proper technique execution.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Foam appendage model visible suspended between two transparent clamps on white surface with laparoscopic instruments positioned above",
+      "technique_notes": "Standard FLS Endoloop setup with target appendage clearly visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "initial_approach",
+      "description": "Two grasping instruments positioned above appendage, ready for manipulation",
+      "technique_notes": "Appropriate instrument positioning for initial target approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "incision_phase",
+      "description": "Scissors/cutting instrument making initial incision into foam appendage tissue",
+      "technique_notes": "Clean cutting motion demonstrated; appendage being divided with controlled technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "mass_removal",
+      "description": "Red tissue mass visible being separated/removed from main appendage body",
+      "technique_notes": "Demonstrates division and removal of 'pathologic mass' portion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "loop_deployment",
+      "description": "Ligating loop visible above appendage stump, instruments positioned to deploy loop",
+      "technique_notes": "Pre-tied loop ready for deployment over remaining appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "loop_placement",
+      "description": "Loop being advanced over appendage base with grasping instruments guiding placement",
+      "technique_notes": "Loop positioned at marked target line on appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "cinch",
+      "description": "Loop being tightened around appendage base with gentle instrument manipulation",
+      "technique_notes": "Gradual cinching motion demonstrated; loop securing around vascular pedicle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "final_positioning",
+      "description": "Loop fully cinched and secured at marked line; appendage stump visible below loop",
+      "technique_notes": "Loop appears to be at appropriate position on appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "completion",
+      "description": "Instruments withdrawing; ligated appendage secured with loop visible at closure point",
+      "technique_notes": "Task completion with successful loop ligation demonstrated",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper foam appendage setup and positioning between clamps",
+      "Initial surgical approach and tissue incision",
+      "Division and removal of pathologic mass from appendage",
+      "Pre-tied ligating loop deployment technique",
+      "Correct loop placement at marked target line on appendage base",
+      "Gentle cinching motion to secure loop without tissue damage",
+      "Final verification of loop position and appendage ligation"
+    ],
+    "verbal_cues": [
+      "Make your incision \u2014 indicates initial cutting phase",
+      "Remove the mass \u2014 directs focus to pathology removal",
+      "Close \u2014 indicates final loop deployment and closure"
+    ],
+    "common_errors_addressed": [
+      "Avoiding placement of loop too proximal or distal to marked line",
+      "Preventing appendage avulsion through controlled cinching tension",
+      "Ensuring loop is fully seated and secure before removing instruments",
+      "Maintaining proper tissue handling to avoid unnecessary trauma"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "scoring_note": "This video is classified as instructional content with teaching overlays and step-by-step demonstrations. Per FLS scoring protocol, instructional videos are NOT scored as trainee performances. The analysis above extracts teaching content only. No FLS performance score is computed.",
+  "cannot_score": true,
+  "scoring_rationale": "Video contains explicit instructional text overlays ('Make your incision', 'Remove the mass', 'Close') and demonstrates idealized technique sequentially without time pressure or actual trainee performance context. Classification as instructional rather than performance precludes standard scoring methodology.",
+  "video_id": "E4ON0LThOsQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:18:09.635780+00:00",
+  "scoreable": false
+}

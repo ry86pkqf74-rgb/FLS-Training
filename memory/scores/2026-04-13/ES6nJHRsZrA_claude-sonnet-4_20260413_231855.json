@@ -1,0 +1,78 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task Performance",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_slide",
+      "description": "Black slide with title text about simulation-based mastery learning",
+      "technique_notes": "Not applicable - academic presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "presentation_slide",
+      "description": "Slide showing disclosures and funding information",
+      "technique_notes": "Not applicable - academic presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "presentation_slide",
+      "description": "Flexible Endoscopy Curriculum slide with FES certification requirements",
+      "technique_notes": "Educational content about endoscopy training requirements",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "presentation_slide",
+      "description": "Visual showing practice scenarios crossed out with red circle",
+      "technique_notes": "Illustrating shift from practice to simulation-based learning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "presentation_slide",
+      "description": "Endoscopy Training System (ETS) equipment photo",
+      "technique_notes": "Equipment demonstration slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "presentation_slide",
+      "description": "ETS task overview showing different training modules",
+      "technique_notes": "Educational overview of training system capabilities",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Simulation-based mastery learning curriculum design",
+      "Endoscopy Training System (ETS) platform utilization",
+      "Performance benchmarking methodology",
+      "FES certification pathway"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Inadequate manual skills training leading to FES exam failures",
+      "Insufficient practice opportunities in traditional training"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear academic presentation slides with no FLS task performance visible. Content is entirely educational/instructional about endoscopy training systems and research results.",
+  "cannot_determine": [],
+  "technique_summary": "This is an academic presentation about simulation-based mastery learning for endoscopy training using the ETS platform. No FLS task performance is shown.",
+  "video_id": "ES6nJHRsZrA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:18:55.423241+00:00",
+  "scoreable": false
+}

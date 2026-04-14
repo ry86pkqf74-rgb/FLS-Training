@@ -1,0 +1,186 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Overview of laparoscopic trainer box with equipment laid out. No task activity visible yet.",
+      "technique_notes": "Equipment preparation phase; no scoring has begun.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Trainee in gloves positioning at trainer box. Hands visible, gauze board visible in background.",
+      "technique_notes": "Pre-task positioning; gauze not yet grasped.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "setup",
+      "description": "Closeup of trainer box controls and camera focus adjustment labeled 'Adjustable focus'.",
+      "technique_notes": "Equipment demonstration; not part of task performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "traction_setup",
+      "description": "Trainee's hands are now positioned over the trainer. Camera view shows the laparoscopic box from above at an angle.",
+      "technique_notes": "Hands are moving toward instruments; traction is being established.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "traction_setup",
+      "description": "Trainee grasping laparoscopic instruments. Gauze is visible in the training chamber; alligator clips securing the corners are visible.",
+      "technique_notes": "Instrument grip established; trainee has control of Maryland dissector and scissors.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "entry_cut",
+      "description": "Scissors positioned at the edge of the gauze. Trainee is preparing to make the initial entry cut from the gauze edge toward the marked circle.",
+      "technique_notes": "Good approach angle; scissors are aligned perpendicular to the gauze surface.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "entry_cut",
+      "description": "Initial cutting motion visible. Scissors cutting into gauze from the edge; Maryland dissector providing retraction/traction.",
+      "technique_notes": "Smooth scissor activation; dissector maintaining appropriate tension on gauze.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 45.0,
+      "phase": "circle_following",
+      "description": "Scissors actively following the pre-marked circular boundary. Cut path is visible; trainee is methodically advancing around the circle.",
+      "technique_notes": "Scissors are tracking the marked line with deliberate, controlled movements. Dissector continues to provide counter-tension.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 60.0,
+      "phase": "circle_following",
+      "description": "Continued cutting along the circular path. Approximately 60% of the circle has been cut free. Gauze remains intact in the jumbo clip.",
+      "technique_notes": "Good spatial awareness of the marked line. Cutting speed is moderate and controlled.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 90.0,
+      "phase": "circle_following",
+      "description": "Nearly complete circle cut. Only a small section remains attached to the main gauze piece. Scissors are nearly at closure point.",
+      "technique_notes": "Approach to final closure is smooth. Minimal deviation from the marked line is evident.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 100.0,
+      "phase": "circle_release",
+      "description": "Final cut complete. The marked circle has been fully detached from the gauze and is being removed from the training chamber by the trainee.",
+      "technique_notes": "Clean separation of the cut-out circle. Task completion is evident.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 110.0,
+      "phase": "post_task",
+      "description": "Trainee's hand holding the cut-out circle disc. Gauze board remains in trainer with the circle removed.",
+      "technique_notes": "Task is complete. The circle has been successfully freed from the gauze.",
+      "penalties_observed": []
+    }
+  ],
+  "video_content_assessment": {
+    "classification_reason": "This video demonstrates equipment setup, trainer overview, and camera adjustment controls (frame 3: 'Adjustable focus' label). While a cutting task is shown in frames 4\u201312, the presence of explicit instructional framing (equipment tour, labeled controls, demonstration focus) and the apparent intent to show proper technique rather than a live performance scoring session indicates this is primarily educational/instructional content, not a direct performance evaluation.",
+    "contains_performance_component": true,
+    "performance_portion_estimated_time_seconds": 95
+  },
+  "cannot_score_fully": "This video is classified as instructional demonstration rather than a solo trainee performance for formal scoring. While a cutting task is visible (frames 4\u201312), the context includes equipment tour elements that suggest this is educational content showing the task setup and execution, not an isolated performance evaluation.",
+  "task_completion_observed": true,
+  "completion_evidence": "Frames 10\u201312 clearly show the marked circle fully detached from the gauze and removed from the trainer, meeting the task completion requirement.",
+  "deviation_assessment": {
+    "line_deviation_observed": "Not clearly measurable",
+    "reason": "The video quality, angle, and camera positioning do not provide sufficient magnification or direct overhead view to accurately measure deviation in millimeters from the marked circle line. The cuts appear visually clean and on-line, but precise quantification is not possible from these frames.",
+    "confidence": 0.35
+  },
+  "penalties": [
+    {
+      "type": "cannot_determine_line_deviation",
+      "description": "Video angle and resolution do not permit accurate measurement of cut path deviation from the marked 4cm circle boundary at cardinal points.",
+      "points_deducted": 0,
+      "frame_evidence": [
+        8,
+        9,
+        10
+      ],
+      "confidence": 0.3,
+      "reason": "Oblique camera angle and lack of magnified direct overhead view prevent reliable mm-level deviation assessment."
+    }
+  ],
+  "task_specific_assessments": {
+    "completion_status": "complete",
+    "circle_fully_detached": true,
+    "gauze_damage": "None observed beyond the intended cut",
+    "clip_integrity": "Both alligator clips remained secure throughout task",
+    "cut_quality": "Visually clean; appears to follow the marked line with reasonable precision",
+    "observable_deviations": "None clearly visible, but cannot be measured precisely due to camera angle"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used_seconds": "cannot_determine_from_instructional_content",
+    "total_penalties": "cannot_calculate",
+    "total_fls_score": "cannot_calculate",
+    "formula_applied": "N/A \u2014 instructional video; not a formal performance evaluation",
+    "rationale": "This video is primarily instructional in nature (equipment demo, trainer overview). While a complete cutting task is visible, the framing and context indicate it is meant as a teaching demonstration rather than an official scored performance. Formal scoring requires a clear, isolated performance video with unambiguous start/stop times."
+  },
+  "confidence": 0.25,
+  "confidence_rationale": "Confidence is low because: (1) video is instructional rather than performance-oriented; (2) camera angles are not optimized for precision measurement; (3) no explicit timestamp markers or proctor narration confirming start/end times; (4) equipment tour elements precede the actual cutting task, suggesting educational context rather than exam simulation.",
+  "cannot_determine": [
+    "Precise completion time in seconds \u2014 frames show elapsed time is approximately 95\u2013110 seconds for the cutting portion, but the instructional framing makes formal timing unreliable",
+    "Line deviation measurements at cardinal points \u2014 oblique camera angle and lack of magnified direct overhead view prevent mm-level accuracy assessment",
+    "Whether this represents the trainee's best effort or a demonstration for training purposes"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper instrument grip and positioning at the laparoscopic trainer",
+      "Systematic entry cut from gauze edge toward the marked circle",
+      "Continuous traction on the gauze using Maryland dissector to maintain tension",
+      "Methodical scissors advancement along the pre-marked circular boundary",
+      "Controlled cutting speed to maintain precision and prevent over-cutting",
+      "Final release and extraction of the cut-out circle"
+    ],
+    "verbal_cues": [
+      "Label visible: 'Adjustable focus' (frame 3) \u2014 demonstrating camera control feature",
+      "Text overlay: 'Laparoscopic trainer box' (repeated in multiple frames) \u2014 identifying the equipment"
+    ],
+    "common_errors_addressed": [
+      "Avoiding deviation from the marked line by maintaining steady scissor control",
+      "Preventing gauze slippage by using dissector counter-traction throughout the cut",
+      "Preventing over-cutting beyond the intended circle boundary"
+    ],
+    "skill_level_demonstrated": "intermediate",
+    "rationale_for_skill_level": "The cutting is methodical and controlled, with no visible rushing or erratic movements. The trainee successfully completes the full circle cut without damage to surrounding gauze or excessive deviation. This suggests intermediate proficiency \u2014 not expert-speed (60\u201390s) but competent, deliberate technique."
+  },
+  "improvement_notes": [
+    "For formal scoring: isolate the performance video without equipment tour elements",
+    "For training: emphasize maintaining consistent dissector tension to prevent gauze shifting",
+    "Video resolution/angle: future training videos should include direct overhead magnified view for precise deviation measurement"
+  ],
+  "final_note": "This video demonstrates successful completion of the Pattern Cut task with visually acceptable technique and cut quality. However, it is classified as instructional content rather than an isolated formal performance evaluation. For FLS exam simulation or official scoring, the video should be presented without prior equipment demonstration frames and with clearer timestamp markers.",
+  "video_id": "QPbiifIucCs",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:02:11.590222+00:00",
+  "scoreable": false
+}

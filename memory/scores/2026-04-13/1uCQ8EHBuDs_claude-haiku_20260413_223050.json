@@ -1,0 +1,217 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_introduction",
+      "description": "Title card 'Roeder's Knot' displayed with BEST Institute watermark. No suture or instruments visible. Didactic slide.",
+      "technique_notes": "Instructional framing; no operative content yet.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "suture_introduction",
+      "description": "Same title card; red suture beginning to appear in lower frame center.",
+      "technique_notes": "Suture introduction beginning.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "suture_introduction",
+      "description": "Red suture extending vertically from bottom of frame; still in introduction phase.",
+      "technique_notes": "Suture being positioned; no instrument grasp yet visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "suture_introduction",
+      "description": "Red suture fully extended vertically; appears to be straight vertical line (target Penrose drain representation).",
+      "technique_notes": "Suture fully present; appears to represent drain baseline.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "suture_introduction",
+      "description": "Red suture vertical; no change in configuration.",
+      "technique_notes": "Holding position.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture beginning to curve at top; first loop formation initiating. One end bending upward and to the right.",
+      "technique_notes": "First throw beginning; single loop forming above vertical stem.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture forming partial loop; top portion curving to right. Loop approximately 40% formed.",
+      "technique_notes": "First throw mid-formation; clean curve geometry.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture with loop approximately 60% formed; right arm curved upward and rightward.",
+      "technique_notes": "Loop progressing smoothly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture with single loop complete; clean U-shaped loop above vertical stem.",
+      "technique_notes": "First single throw completed and formed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture with first loop still visible; second throw beginning. Right arm of first loop starting to cross over vertical stem.",
+      "technique_notes": "Transitioning to second throw formation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture showing both loops beginning to intertwine. First loop arm crossing down and left; second loop forming.",
+      "technique_notes": "Knot geometry becoming visible; two throws overlapping.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture knot with three distinct loops visible; complex interweaving pattern. Knot density increasing.",
+      "technique_notes": "Multiple throws now stacked; knot architecture taking shape.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture knot with four visible loop portions; tight interweaving at center. Knot becoming progressively more compact.",
+      "technique_notes": "Knot structure maturing; three throws likely complete or near completion.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture knot fully formed with multiple interlocking loops; compact, well-defined geometry.",
+      "technique_notes": "Knot appears complete; clean knot structure with no slippage visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "extracorporeal_throws",
+      "description": "Red suture knot static; identical to frame 14. Knot at rest position.",
+      "technique_notes": "Knot holding tension; no movement or slippage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "slit_closure_assessment",
+      "description": "Red suture knot in identical position; vertical stem continues below knot.",
+      "technique_notes": "Knot secured; ready for assessment or cutting phase.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "slit_closure_assessment",
+      "description": "Red suture knot and stem unchanged; holding position.",
+      "technique_notes": "No motion; static assessment position.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "slit_closure_assessment",
+      "description": "Red suture knot identical configuration; video appears to loop or hold final state.",
+      "technique_notes": "Final knot state: compact, well-formed, no slippage visible.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "single_throw",
+        "description": "First single throw formed cleanly from frames 6\u20139; U-shaped loop with good geometry.",
+        "appears_secure": true,
+        "notes": "Clean formation; no visible weakness."
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "description": "Second throw begins at frame 10 and integrates at frame 11; overlaps first throw appropriately.",
+        "appears_secure": true,
+        "notes": "Smooth transition; proper interweaving."
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "description": "Third throw appears to complete by frame 12\u201313; knot density increases markedly.",
+        "appears_secure": true,
+        "notes": "Final knot compact and well-formed; no slippage observed."
+      }
+    ],
+    "suture_placement": {
+      "note": "No actual suture passage through marked Penrose drain targets is visible in this instructional animation. This is a stylized diagram of Roeder's knot tied extracorporeally."
+    },
+    "drain_assessment": {
+      "note": "No actual drain visible; animation shows red suture line representing the concept of a drain. Slit closure cannot be assessed from this diagram."
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "note": "This is an instructional/educational animation demonstrating Roeder's knot technique, not a performance video of an actual FLS task4 completion. Scoring cannot be applied per standard FLS rubric because: (1) No actual suture is passed through marked targets on a real Penrose drain; (2) No instruments (needle drivers, knot pusher, scissors) are shown; (3) No actual completion time is measurable in a didactic context; (4) Slit closure and drain integrity cannot be assessed; (5) Video does not meet 'performance' or 'expert_demo' classification criteria."
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This is classified as instructional content and therefore cannot be scored using the FLS task4 rubric. The video is a stylized animation of a knot-tying technique (Roeder's knot) with no operative context, no actual equipment, no real drain, and no measurable task completion. Classification overrides performance scoring.",
+  "cannot_determine": [
+    "Completion time \u2014 animation has no clear start or end markers for FLS timing",
+    "Suture passage accuracy \u2014 no actual Penrose drain or marked targets present",
+    "Drain slit closure \u2014 no drain present; only schematic suture line shown",
+    "Knot pusher usage \u2014 no instruments visible; animation only",
+    "Actual knot security under tension \u2014 animation static; no tension testing shown"
+  ],
+  "video_content_summary": "This is an instructional animation demonstrating the formation of Roeder's knot with a single red suture strand representing a drain. The animation progresses smoothly from a vertical stem through three single throws (frames 6\u201313), resulting in a compact, well-formed final knot. While the knot geometry appears correct for teaching purposes, this is not an FLS task4 performance video and therefore does not receive an FLS score.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Sequential single throw formation",
+      "Clean loop geometry with proper spacing",
+      "Interweaving of multiple throws to form compact knot",
+      "Roeder's knot final configuration"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert",
+    "instructional_value": "This animation clearly illustrates the step-by-step construction of Roeder's knot, a secure extracorporeal knot used in laparoscopic surgery. It is suitable for trainees learning knot-tying mechanics before performing on actual task boxes."
+  },
+  "video_id": "1uCQ8EHBuDs",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:30:50.727297+00:00",
+  "scoreable": false
+}

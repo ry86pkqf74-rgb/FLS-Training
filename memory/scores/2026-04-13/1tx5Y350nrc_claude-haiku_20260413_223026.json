@@ -1,0 +1,50 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Not applicable \u2014 instructional content, no performance to score"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is a research presentation (SAGES 2017 conference session SS08) on FLS exam trends and statistical analysis of test data from 2008-2016. It contains slides with Methods, Results, Conclusions, and educational content about cognitive and manual exam performance correlation \u2014 not an actual trainee or surgeon performing a peg transfer task. No performance data is visible.",
+  "cannot_determine": [
+    "Completion time \u2014 no task performance recorded",
+    "Penalties \u2014 no task performance recorded",
+    "FLS score \u2014 no task performance recorded"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "FLS test results from the past 9 years (2008-2016)",
+      "Current trends in cognitive and manual exam scores",
+      "Evaluation of the need to update scoring practices",
+      "Quality initiative of the SAGES FLS committee",
+      "Analysis includes Pearson correlation, internal consistency (Cronbach alpha 0.73), and generalized linear models",
+      "Manual and cognitive scores show low correlation (r=0.09)",
+      "Higher PGY levels have higher likelihood of passing and better cognitive performance",
+      "Future directions include review of content and definition of 'minimum qualified candidate'"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "content_type": "research_presentation",
+    "presenter": "Elif Bilgic",
+    "institution": "SAGES (Society of American Gastrointestinal and Endoscopic Surgeons)",
+    "conference": "SAGES 2017, Houston TX, March 22-25, 2017"
+  },
+  "notes": "This is an educational/research presentation slide deck, not a performance video of an FLS task. No scoring is applicable. The presentation discusses trends in FLS exam results and correlation between manual and cognitive components, but contains no actual task demonstration or trainee performance footage.",
+  "video_id": "1tx5Y350nrc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:30:26.467207+00:00",
+  "scoreable": false
+}

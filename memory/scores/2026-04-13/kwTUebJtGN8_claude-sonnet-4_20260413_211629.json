@@ -1,0 +1,90 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "No FLS Task Performance Observed",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "promotional_content",
+      "description": "Black screen - video opening",
+      "technique_notes": "No surgical content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "promotional_content",
+      "description": "LapAR Pro laparoscopic trainer system display with presenter",
+      "technique_notes": "Equipment demonstration, not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "promotional_content",
+      "description": "Peg transfer setup visible in trainer box with red pegs and objects",
+      "technique_notes": "Static setup view - no active performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "promotional_content",
+      "description": "Top-down view of peg transfer board with white foam appendage and needle visible",
+      "technique_notes": "Mixed task elements shown - not actual FLS performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "promotional_content",
+      "description": "Screen showing laparoscopic view with surgical instruments and appendage model",
+      "technique_notes": "Demonstration content showing appendectomy procedure, not FLS task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 24.0,
+      "phase": "promotional_content",
+      "description": "Final shot of complete LapAR system with trainer box",
+      "technique_notes": "Equipment overview - no task performance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performance observed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows promotional/demonstration content for LapAR training system rather than actual FLS task performance. No continuous task execution observed.",
+  "cannot_determine": [
+    "Task identification - video shows promotional content rather than FLS task performance",
+    "Completion time - no task performance to time",
+    "Performance penalties - no active task execution to assess",
+    "FLS score - cannot score promotional content"
+  ],
+  "technique_summary": "This video contains promotional/demonstration material for the LapAR Pro laparoscopic training system rather than an actual FLS task performance that can be scored.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Submit video showing actual FLS task performance from start to completion",
+    "Ensure video captures continuous task execution rather than equipment demonstration"
+  ],
+  "video_id": "kwTUebJtGN8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:16:29.880107+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.883020+00:00"
+  },
+  "scoreable": false
+}

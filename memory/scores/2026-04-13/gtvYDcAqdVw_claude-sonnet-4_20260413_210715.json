@@ -1,0 +1,44 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": null,
+    "objects_remaining": null,
+    "drops_outside_field": null,
+    "objects_not_on_pegs": null
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot calculate - no FLS task performance visible"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "No FLS peg transfer task performance is visible in any frame. All frames show either black screen, educational presentations, interviews, or general laparoscopic training facility overview without actual task execution.",
+  "cannot_determine": [
+    "Completion time - no task execution visible",
+    "Number of objects transferred - no peg transfer board visible",
+    "Penalties - no task performance to assess",
+    "Phase timings - no identifiable task phases",
+    "Any FLS scoring metrics - no actual task being performed"
+  ],
+  "technique_summary": "No FLS peg transfer task performance observed in provided video frames.",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "gtvYDcAqdVw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:07:15.942727+00:00",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.875422+00:00"
+  },
+  "scoreable": false
+}

@@ -1,0 +1,20 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "explanation": "This video shows an administrative meeting or training session with personnel discussing assessment procedures, attendance, and competency evaluation protocols. No laparoscopic surgical training equipment or FLS task performance is visible in any frame.",
+  "content_type": "administrative_meeting",
+  "visible_elements": [
+    "Conference room setting with tables and chairs",
+    "Personnel in business attire discussing procedures",
+    "Projector screen and presentation materials",
+    "Text overlays describing assessment protocols",
+    "Written feedback and evaluation documentation"
+  ],
+  "recommendation": "Please provide video content showing actual FLS task performance with laparoscopic trainer equipment for scoring.",
+  "video_id": "92qTuWReu2c",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:57:51.409585+00:00",
+  "scoreable": false
+}

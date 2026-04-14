@@ -44,5 +44,11 @@
     "Use bilateral graspers for object manipulation",
     "Focus on transfer technique rather than suturing skills"
   ],
-  "confidence_score": 0.0
+  "confidence_score": 0.0,
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.835796+00:00"
+  },
+  "scoreable": false
 }

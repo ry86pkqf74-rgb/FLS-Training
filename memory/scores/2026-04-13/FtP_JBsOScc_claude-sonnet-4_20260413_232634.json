@@ -1,0 +1,86 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Educational Content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Conference presentation title slide for SAGES Colorectal Postgraduate Course",
+      "technique_notes": "Educational conference setting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "educational_content",
+      "description": "Slide discussing port-site recurrences and clinical observations",
+      "technique_notes": "Graph showing variation by surgeon technique, experience, and expertise",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "educational_content",
+      "description": "Optimal Training slide showing laparoscopic skills and colorectal expertise",
+      "technique_notes": "Images of surgeon at laparoscope and surgical instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "fls_overview",
+      "description": "Grid display of FLS tasks showing all 5 standard exercises",
+      "technique_notes": "Visual representation of peg transfer, pattern cutting, endoloop, extracorporeal and intracorporeal suturing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "validation",
+      "description": "FLS logo and validation examination information",
+      "technique_notes": "Official FLS branding and certification context",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear educational presentation slides with no actual FLS task performance to score",
+  "cannot_determine": [
+    "No FLS task performance visible"
+  ],
+  "technique_summary": "Educational presentation covering FLS program overview, training modules, and validation methodology",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Overview of all 5 FLS tasks",
+      "Training progression methodology",
+      "Validation examination structure",
+      "Integration with surgical education curricula"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Need for structured training to reduce technique variation",
+      "Importance of validated assessment methods"
+    ],
+    "skill_level_demonstrated": "educational_overview"
+  },
+  "improvement_suggestions": [],
+  "video_id": "FtP_JBsOScc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:26:34.614924+00:00",
+  "scoreable": false
+}

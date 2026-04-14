@@ -1,0 +1,138 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Initial setup view with needle driver approaching needle near the green membrane target",
+      "technique_notes": "Timer shows 00:00, exercise beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Left needle driver grasping needle with right hand preparing to assist",
+      "technique_notes": "Good bimanual coordination visible, needle being grasped appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Needle secured in left instrument, positioning for membrane puncture",
+      "technique_notes": "Needle oriented toward membrane as instructed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 4.0,
+      "phase": "transfer_midair",
+      "description": "Needle being transferred through membrane with both instruments coordinating",
+      "technique_notes": "Smooth transfer motion, good instrument control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 9.0,
+      "phase": "transfer_midair",
+      "description": "Continuation of needle transfer through membrane opening",
+      "technique_notes": "Steady progression, instruments working together effectively",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 29.0,
+      "phase": "reverse_transfer",
+      "description": "Video indicates multiple transfers have been completed (1/6 shown on screen)",
+      "technique_notes": "Fast-forward message appears, indicating efficient performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 54.0,
+      "phase": "reverse_transfer",
+      "description": "Continued needle transfers with counter showing progression through task",
+      "technique_notes": "Consistent technique maintained throughout transfers",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 125.0,
+      "phase": "completion",
+      "description": "Final transfers being completed with counter at 3/6",
+      "technique_notes": "Task nearing completion with good rhythm established",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 125.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 4,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 4,
+      "end_seconds": 30,
+      "duration_seconds": 26,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 30,
+      "end_seconds": 125,
+      "duration_seconds": 95,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped": 0,
+    "objects_outside_field": 0,
+    "objects_not_on_pegs": 0,
+    "transfer_efficiency": "good",
+    "bimanual_coordination": "effective throughout task"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 125.0,
+    "total_penalties": 0,
+    "total_fls_score": 175.0,
+    "formula_applied": "300 - 125.0 - 0 = 175.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Clear visualization of needle transfers and timing. Fast-forward segments make exact penalty assessment challenging, but no obvious drops or placement errors observed. Timer progression clearly visible.",
+  "cannot_determine": [
+    "Exact number of drops during fast-forward segments",
+    "Precise peg placement accuracy during accelerated portions"
+  ],
+  "technique_summary": "Solid intermediate-level performance with consistent bimanual coordination. Completion time of 125 seconds places this in the intermediate range (60-120s expert, 120-300s novice), suggesting developing but not yet expert-level skill.",
+  "strengths": [
+    "Smooth initial needle loading and positioning",
+    "Good bimanual coordination throughout transfers",
+    "Consistent rhythm maintained across all transfers"
+  ],
+  "improvement_suggestions": [
+    "Work on speed optimization to achieve sub-120 second expert range",
+    "Practice more efficient instrument exchanges to reduce transfer time",
+    "Focus on minimizing hesitation between transfers"
+  ],
+  "video_id": "tiVgyM1aHP8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:40:04.081727+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.903081+00:00"
+  },
+  "scoreable": true
+}

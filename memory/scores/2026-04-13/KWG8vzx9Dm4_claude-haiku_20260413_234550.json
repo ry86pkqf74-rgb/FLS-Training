@@ -1,0 +1,55 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional content only"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video is clearly identified as instructional/educational content from the SAGES Masters Series on Surgical Coaching. It contains presentation slides, lecture narration, frameworks (Wisconsin Framework), coaching philosophies, and educational diagrams. No actual FLS task performance is visible. No instruments, trainers, or procedural tasks are shown.",
+  "cannot_determine": [
+    "Task performance metrics \u2014 no FLS task is being performed",
+    "Completion time \u2014 no procedure is executed",
+    "Penalties \u2014 no technical performance to evaluate"
+  ],
+  "technique_summary": "This is educational/lecture content, not a performance video. The content focuses on surgical coaching theory, coaching methodology, and peer feedback frameworks applicable to surgical training.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Definition of coaching vs. teaching paradigm",
+      "Wisconsin Framework for surgical coaching (coach knowledge, content, activities, interpersonal skills)",
+      "Peer coaching as distinct from expert instruction",
+      "Active listening and powerful inquiry as coaching activities",
+      "Constructive feedback (descriptive, specific, non-judgmental)"
+    ],
+    "verbal_cues": [
+      "Coaching unlocks potential rather than teaches",
+      "Peer coaching involves equal, non-competitive relationships",
+      "Coaching focuses on helping learners recognize what works and improve",
+      "Constructive feedback is responsive to coachee goals and issues"
+    ],
+    "common_errors_addressed": [
+      "Traditional teaching model assumes students no longer need instruction post-graduation",
+      "Rescue mentality (taking blame, making decisions for learner) vs. responsibility model (empowering learner)",
+      "Weakness-focused feedback vs. strength-based, learning-oriented feedback",
+      "Expert directive approach vs. co-learner curiosity approach"
+    ],
+    "skill_level_demonstrated": "expert",
+    "educational_focus": "Surgical coaching framework and methodology, not technical FLS skill"
+  },
+  "note": "This video presents the Masters Series on Surgical Coaching from SAGES and demonstrates coaching philosophy and framework. It is not a performance evaluation of any FLS task. No scoring is applicable.",
+  "video_id": "KWG8vzx9Dm4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:45:50.711472+00:00",
+  "scoreable": false
+}

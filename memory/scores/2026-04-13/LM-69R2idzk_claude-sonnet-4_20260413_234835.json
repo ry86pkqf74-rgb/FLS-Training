@@ -1,0 +1,128 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_setup",
+      "description": "Person in white coat setting up FLS trainer box on table",
+      "technique_notes": "Proper equipment assembly demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_setup",
+      "description": "Hands positioning trainer box components, blue straps visible",
+      "technique_notes": "Systematic setup approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "equipment_setup",
+      "description": "Trainer box being positioned on wooden table surface",
+      "technique_notes": "Stable platform positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_setup",
+      "description": "Camera/scope assembly being attached to trainer",
+      "technique_notes": "Proper scope mounting technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "equipment_setup",
+      "description": "Final positioning of trainer lid and components",
+      "technique_notes": "Complete setup verification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 85.0,
+      "phase": "system_activation",
+      "description": "Hand inserting power plug into wall outlet",
+      "technique_notes": "Power connection for video system",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 90.0,
+      "phase": "system_activation",
+      "description": "Complete FLS system setup with monitor displaying peg transfer board",
+      "technique_notes": "System operational verification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 95.0,
+      "phase": "demonstration_start",
+      "description": "Monitor showing peg transfer setup with 6 objects on left pegs, hand reaching for instruments",
+      "technique_notes": "Standard task configuration visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 100.0,
+      "phase": "pickup_nondominant",
+      "description": "Both graspers active, picking up first object with left hand from leftmost peg",
+      "technique_notes": "Proper bilateral instrument engagement, coordinated movement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": null,
+    "direction_completed": null,
+    "objects_dropped": 0,
+    "objects_outside_field": 0
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot score - instructional video showing setup and initial demonstration only"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional video showing equipment setup and system demonstration, not a complete task performance",
+  "cannot_determine": [
+    "Completion time - video shows setup and demonstration only",
+    "Final score - no complete task performance visible",
+    "Total penalties - task not completed in video"
+  ],
+  "technique_summary": "Professional instructional demonstration of FLS trainer setup and initial task demonstration",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper FLS trainer assembly sequence",
+      "Systematic equipment setup on stable surface",
+      "Camera/scope mounting and positioning",
+      "Power system connection",
+      "Initial bilateral grasper engagement",
+      "Standard peg transfer task configuration"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Importance of stable trainer positioning",
+      "Proper scope mounting before task initiation",
+      "Systematic setup verification"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "LM-69R2idzk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:48:35.628774+00:00",
+  "scoreable": false
+}

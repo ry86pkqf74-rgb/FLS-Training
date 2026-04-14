@@ -1,0 +1,101 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Black screen with white text 'Objectives' header",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "equipment_demo",
+      "description": "Display of FLS trainer box with instruments and task materials laid out",
+      "technique_notes": "Shows proper equipment setup including laparoscopic graspers, trainer box, and task materials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "trainer_setup",
+      "description": "Ethicon FLS trainer box being demonstrated with hand positioning trainer top",
+      "technique_notes": "Proper trainer box orientation and setup for training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "task_setup",
+      "description": "View inside trainer showing peg transfer board setup",
+      "technique_notes": "Demonstrates task board placement and organization within trainer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "virtual_platform_intro",
+      "description": "Black screen with text 'OPTIMIZING VIRTUAL PLATFORM FOR TRAINING'",
+      "technique_notes": "Transition to virtual training methodology discussion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 18.0,
+      "phase": "virtual_demo",
+      "description": "Computer screen showing laparoscopic view of FLS task setup with suture pad",
+      "technique_notes": "Virtual training environment with proper camera positioning and task visualization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 24.0,
+      "phase": "telesimulation_title",
+      "description": "Black screen with white text 'Tele-simulation for laparoscopic skills training'",
+      "technique_notes": "Final educational content summary",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "instructional_content": true,
+    "no_performance_to_score": true
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No scoring - instructional content only"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video with title cards and equipment demonstrations. No actual FLS task performance visible.",
+  "cannot_determine": [],
+  "technique_summary": "Educational video demonstrating FLS equipment setup and virtual training platform optimization rather than task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper FLS trainer box setup and orientation",
+      "equipment organization and layout",
+      "virtual platform configuration for remote training",
+      "camera positioning for optimal task visualization",
+      "breakout room management for virtual instruction"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "4kY0oY-jq2U",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:42:31.609448+00:00",
+  "scoreable": false
+}

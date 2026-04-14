@@ -86,5 +86,11 @@
   "superseded": false,
   "superseded_by": null,
   "superseded_at": null,
-  "superseded_reason": ""
+  "superseded_reason": "",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.820956+00:00"
+  },
+  "scoreable": true
 }

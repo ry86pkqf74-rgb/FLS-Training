@@ -1,0 +1,103 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown FLS Task",
+  "video_content_summary": "This is a Simsei Simulation Program promotional/instructional video about laparoscopic training. The video contains animated slides and illustrations depicting the Simsei Simulation Program as a comprehensive laparoscopic training solution. It includes: program overview, team/instructor roles, scheduling/logistics information, training equipment illustrations, competency progression charts, and organizational/team-building messaging.",
+  "video_length_seconds": "Approximately 120+ seconds based on slide count",
+  "scoring_applicable": false,
+  "reason_no_score": "This video does not contain a recorded performance of an actual FLS task (peg transfer, pattern cut, endoloop, or suture with knot tying). It is promotional/educational content with narration, animated graphics, and institutional messaging about laparoscopic training programs. No trainee or surgeon is performing a specific FLS MISTELS task with measurable time, penalties, or technique to score.",
+  "video_frames_analyzed": [
+    {
+      "frame_sequence": 1,
+      "content": "Title slide: 'Transform Your Laparoscopic Training with the Simsei Simulation Program'"
+    },
+    {
+      "frame_sequence": 2,
+      "content": "Illustration of surgeon and instructor/proctor"
+    },
+    {
+      "frame_sequence": 3,
+      "content": "Illustration depicting training team, clock (time management), and competency checklist"
+    },
+    {
+      "frame_sequence": 4,
+      "content": "Three medical professionals in Simsei branding context"
+    },
+    {
+      "frame_sequence": 5,
+      "content": "'Simsei Simulation Program' title card"
+    },
+    {
+      "frame_sequence": 6,
+      "content": "Diagram showing program, simulator model, and computer workstation"
+    },
+    {
+      "frame_sequence": 7,
+      "content": "Word 'EFFICIENT' displayed prominently"
+    },
+    {
+      "frame_sequence": 8,
+      "content": "Six medical professionals with checklist graphic"
+    },
+    {
+      "frame_sequence": 9,
+      "content": "Text: 'SCHEDULING, LAB SETUPS, LOGISTICS, AND MORE!'"
+    },
+    {
+      "frame_sequence": 10,
+      "content": "Process flow diagram with arrows and blocks"
+    },
+    {
+      "frame_sequence": 11,
+      "content": "Learning curve chart showing 'Cognitive Knowledge' and 'Technical Competency' over time"
+    },
+    {
+      "frame_sequence": 12,
+      "content": "Illustration of surgical team at simulator trainer"
+    },
+    {
+      "frame_sequence": 13,
+      "content": "Surgical team with equipment icons (foam appendage, scissors, forceps, suture model)"
+    },
+    {
+      "frame_sequence": 14,
+      "content": "Data analytics and metrics visualization with surgeon and instructor"
+    },
+    {
+      "frame_sequence": 15,
+      "content": "Checklist showing 'SCHEDULING, LOGISTICS, LAP TRAINERS, REALISTIC MODELS, COMPETENCY'"
+    },
+    {
+      "frame_sequence": 16,
+      "content": "Multiple medical professionals representing the program team"
+    },
+    {
+      "frame_sequence": 17,
+      "content": "Final title: 'SIMSEI SIMULATION PROGRAM - A Comprehensive Laparoscopic Training Solution'"
+    }
+  ],
+  "teaching_content": {
+    "program_focus": "Simsei Simulation Program overview and institutional training framework",
+    "demonstrated_techniques": [
+      "Structured laparoscopic training program design",
+      "Competency-based progression model",
+      "Integration of cognitive and technical skill development"
+    ],
+    "verbal_cues": "Not explicitly captured from still frames, but promotional messaging around efficiency, comprehensive training solutions, and multi-disciplinary team collaboration",
+    "program_components_highlighted": [
+      "Scheduling and logistics coordination",
+      "Lab setups for training",
+      "Realistic simulation models",
+      "Competency assessment and tracking",
+      "Instructor/proctor oversight",
+      "Data-driven metrics and analytics"
+    ],
+    "skill_level_demonstrated": "institutional/program-level overview; no specific FLS task technique demonstrated"
+  },
+  "conclusion": "This video is a marketing and program overview presentation for the Simsei Simulation Program. It does not show a recorded trainee or expert performance of an FLS MISTELS task. Therefore, no FLS task score can be computed. This video is suitable for understanding the Simsei program structure, team roles, and training philosophy, but cannot be used for performance assessment of FLS competency.",
+  "video_id": "6YzTODXx948",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:49:56.955541+00:00",
+  "scoreable": false
+}

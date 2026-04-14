@@ -1,0 +1,132 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_task",
+      "description": "Black frame, no instruments visible",
+      "technique_notes": "Video appears to start before task initiation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Hands manipulating purple suture extracorporeally, forming initial loops",
+      "technique_notes": "Appears to be demonstrating Mishra's knot technique based on overlay text",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Continuing suture manipulation with both hands, creating interlocking loops",
+      "technique_notes": "Complex loop formation consistent with sliding knot technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Hands working suture through multiple wraps and configurations",
+      "technique_notes": "Appears to be forming a complex sliding knot structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Final knot configuration being formed with both hands manipulating suture ends",
+      "technique_notes": "Complex knot structure nearly complete extracorporeally",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Knot structure formed, visible loop configuration in purple suture",
+      "technique_notes": "Sliding knot appears ready for deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 23.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Hands holding completed extracorporeal knot structure with scissors visible",
+      "technique_notes": "Knot formation complete, ready for cutting excess material",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 25.0,
+  "phase_timings": [
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 1,
+      "end_seconds": 25,
+      "duration_seconds": 24,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "sliding_knot",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Complex sliding knot (Mishra's knot) formed extracorporeally"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0,
+      "confidence": 0
+    },
+    "drain_assessment": {
+      "gap_visible": null,
+      "drain_avulsed": false,
+      "slit_closure_quality": null
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 25.0,
+    "total_penalties": 0,
+    "total_fls_score": 575.0,
+    "formula_applied": "600 - 25.0 - 0 = 575.0"
+  },
+  "confidence": 0.3,
+  "confidence_rationale": "Video shows only knot formation demonstration without actual FLS task performance. No Penrose drain, needle driving, or intracorporeal suturing visible. This appears to be an instructional video for knot tying technique rather than a scored FLS task.",
+  "cannot_determine": [
+    "Actual suture placement through drain marks",
+    "Needle driving technique",
+    "Intracorporeal knot tying performance",
+    "Drain assessment",
+    "True task completion time",
+    "Whether this represents a complete FLS task 5 performance"
+  ],
+  "technique_summary": "Video demonstrates extracorporeal sliding knot formation (Mishra's knot) but does not show complete FLS Task 5 performance including needle driving, suture placement through drain marks, or intracorporeal knot tying.",
+  "strengths": [
+    "Clean extracorporeal knot formation technique",
+    "Smooth hand coordination during knot construction"
+  ],
+  "improvement_suggestions": [
+    "Complete demonstration should include needle loading, suture placement through marked drain, and intracorporeal knot tying as per FLS Task 5 requirements"
+  ],
+  "video_id": "GzeTQZ7niok",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:53:24.232154+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.814537+00:00"
+  },
+  "scoreable": true
+}

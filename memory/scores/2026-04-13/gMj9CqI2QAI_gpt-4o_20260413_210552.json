@@ -1,0 +1,145 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 40.53,
+      "phase": "needle_load",
+      "description": "Needle is being loaded by the right instrument.",
+      "technique_notes": "Initial needle load appears adequate, aligned for entry.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 41.0,
+      "phase": "suture_placement",
+      "description": "Suture is being placed through the marked point.",
+      "technique_notes": "Entry appears close to the mark.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 41.06,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Suture pulled and preparation for knot tying begins.",
+      "technique_notes": "Suture pathway adjusted smoothly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 130.08,
+      "phase": "knot_push",
+      "description": "Knot being pushed using knot pusher.",
+      "technique_notes": "Knot appears tight, and no slipping observed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 130.18,
+      "phase": "knot_push",
+      "description": "Verification of knot securing in place.",
+      "technique_notes": "Secure placement confirmed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 156.31,
+      "phase": "suture_cut",
+      "description": "Cutting of extra suture length.",
+      "technique_notes": "Clean cut achieved confidently.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 156.31,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 40.53,
+      "end_seconds": 41.0,
+      "duration_seconds": 0.47,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 41.0,
+      "end_seconds": 41.06,
+      "duration_seconds": 0.06,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 41.06,
+      "end_seconds": 130.08,
+      "duration_seconds": 89.02,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 130.08,
+      "end_seconds": 130.18,
+      "duration_seconds": 0.1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 156.28,
+      "end_seconds": 156.31,
+      "duration_seconds": 0.03,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "extracorporeal square throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Knot is tight and secure."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.5,
+      "deviation_from_mark2_mm": 0.5,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.85
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 156.31,
+    "total_penalties": 0.0,
+    "total_fls_score": 263.69,
+    "formula_applied": "420 - 156.31 - 0.0 = 263.69"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "All actions and placements well observed with clear angle views. Knot quality and closure complete.",
+  "cannot_determine": [],
+  "technique_summary": "Overall competent technique with secure knot tying and minimal deviation.",
+  "strengths": [
+    "Effective needle handling and placement",
+    "Knot is tightly secured, preventing slippage"
+  ],
+  "improvement_suggestions": [
+    "Consider practice to reduce time on knot formation"
+  ],
+  "video_id": "gMj9CqI2QAI",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:05:52.774737+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.874085+00:00"
+  },
+  "scoreable": true
+}

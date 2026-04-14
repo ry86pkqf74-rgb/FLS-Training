@@ -1,0 +1,151 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_task_title_card",
+      "description": "Title card showing 'Tubal Sterilization Bipolar Coagulation' - introductory slide",
+      "technique_notes": "Instructional content; not actual performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 65.0,
+      "phase": "loop_introduction",
+      "description": "Bipolar KELLY grasper visible on screen grasping isthmus tissue; purple mark indicates target segment; loop equipment not yet in field",
+      "technique_notes": "Task appears to be demonstrating a bipolar coagulation sterilization procedure (tubal sterilization), not the standard FLS endoloop task. Procedural context differs significantly from FLS task3_endoloop rubric.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 110.0,
+      "phase": "tissue_manipulation",
+      "description": "Bipolar grasper actively coagulating marked segment of fallopian tube; blue/purple indicator shows active energy zone",
+      "technique_notes": "This is not endoloop placement; this is bipolar coagulation sterilization - a different procedure entirely",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 114.0,
+      "phase": "tissue_coagulation",
+      "description": "Continued bipolar grasper application with visible coagulation effect on isthmus tissue; uterine manipulator visible assisting with tissue retraction",
+      "technique_notes": "Educational demonstration of surgical sterilization technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 123.0,
+      "phase": "instrument_exchange",
+      "description": "Bipolar KELLY grasper positioned over coagulated segment; instructions indicate next step is retraction of right adnexa",
+      "technique_notes": "Procedural progression shown with on-screen guidance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 131.0,
+      "phase": "tissue_manipulation_continued",
+      "description": "Uterine manipulator being used to move uterus ventrally and to the left; coagulated isthmus visible with white blanching/coagulation marks",
+      "technique_notes": "Demonstrating proper tissue positioning and manipulation for visualization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 140.0,
+      "phase": "bipolar_coagulation_right_side",
+      "description": "Right isthmus now targeted with bipolar KELLY grasper; purple mark visible on right fallopian tube; instruction indicates coagulation of first 3 cm of right isthmus",
+      "technique_notes": "Mirroring the procedure on contralateral side",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 153.0,
+      "phase": "bipolar_grasper_application",
+      "description": "Bipolar grasper actively applying energy to right isthmus; visible coagulation occurring",
+      "technique_notes": "Repeated application of standardized technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 157.0,
+      "phase": "active_coagulation",
+      "description": "Energy application continuing on right isthmus with visible purple/coagulated tissue response",
+      "technique_notes": "Educational demonstration showing proper technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 201.0,
+      "phase": "documentation_phase",
+      "description": "Equipment selection menu visible (Atraumatic Grasper, Bipolar KELLY Grasper, Scissors, Attraumatic Grasper); indicating procedural progression",
+      "technique_notes": "Instructional overlay showing available instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 210.0,
+      "phase": "final_documentation",
+      "description": "Uterus centered in field with visible coagulated fallopian tubes bilaterally (pale/white areas on both isthmic segments); instruction indicates documenting complete coagulation of isthmus",
+      "technique_notes": "Final result showing successful bilateral coagulation of fallopian tubes for sterilization",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "NOT APPLICABLE - instructional content"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is educational content demonstrating TUBAL STERILIZATION via BIPOLAR COAGULATION, NOT the FLS Task 3 Endoloop procedure. The rubric for task3_endoloop requires: (1) pre-tied ligating loop deployment around a foam appendage, (2) loop positioning and cinching, and (3) tail cut inside trainer. This video shows: bilateral fallopian tube coagulation using bipolar electrosurgery on a realistic reproductive anatomy model. No endoloop is used. No foam organ is present. No loop placement, advancement, or tail cutting occurs. The procedures are completely distinct from an FLS perspective.",
+  "cannot_determine": [
+    "FLS Task 3 Endoloop score \u2014 this is not an endoloop procedure",
+    "Completion time for task3_endoloop \u2014 procedure shown is tubal sterilization by coagulation",
+    "Loop placement accuracy \u2014 no loop is used in this procedure",
+    "Loop security or cinching quality \u2014 no loop present"
+  ],
+  "technique_summary": "This video is INSTRUCTIONAL CONTENT demonstrating bilateral tubal sterilization by bipolar electrosurgery coagulation. It is NOT demonstrating the FLS Task 3 Endoloop. Scoring against the task3_endoloop rubric is inappropriate and impossible.",
+  "strengths": [
+    "Clear procedural demonstration of bilateral tubal sterilization technique",
+    "Good tissue visualization and manipulation using uterine manipulator",
+    "Proper bipolar grasper application to marked anatomical targets",
+    "Educational guidance overlays showing step progression"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Bilateral tubal sterilization via bipolar electrosurgery coagulation",
+      "Coagulation of first 3 cm of each fallopian isthmus using bipolar KELLY grasper",
+      "Uterine manipulator use for tissue retraction and visualization",
+      "Identification and marking of target segments (fallopian tube isthmus)",
+      "Proper grasper positioning and activation for hemostatic coagulation",
+      "Procedural documentation by capturing bilateral coagulated tubes in final image"
+    ],
+    "verbal_cues": [
+      "Coagulate the first 3 cm of the left isthmus using a bipolar KELLY grasper. Cut in the coagulated area using scissors (optional).",
+      "Using the 'Uterine manipulator' assistant, move the uterus ventrally and to the left to put tension on the right adnexa.",
+      "Coagulate the first 3 cm of the right isthmus using a bipolar KELLY grasper. Cut in the coagulated area using scissors (optional).",
+      "Using the 'Uterine manipulator' assistant, move the uterus ventrally and capture an image of both fallopian tubes to document complete coagulation of the isthmus."
+    ],
+    "common_errors_addressed": [
+      "Avoiding under-coagulation by ensuring adequate tissue blanching and color change",
+      "Proper tissue stabilization and retraction using the uterine manipulator",
+      "Correct identification of target anatomical landmarks (isthmus vs. ampulla)",
+      "Bilateral completion to ensure adequate sterilization"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "critical_classification_note": "**TASK MISMATCH DETECTED**: This video demonstrates TUBAL STERILIZATION BY BIPOLAR COAGULATION, a gynecologic surgical procedure. It does NOT demonstrate FLS Task 3 (Endoloop - ligating loop deployment on a foam organ appendage). The two procedures are entirely different. NO FLS TASK 3 SCORE CAN BE GENERATED FROM THIS VIDEO.",
+  "video_id": "78TjF2-zyWw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:51:56.595917+00:00",
+  "scoreable": false
+}

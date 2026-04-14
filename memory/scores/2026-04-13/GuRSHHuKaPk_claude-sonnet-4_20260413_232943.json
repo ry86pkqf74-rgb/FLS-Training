@@ -1,0 +1,98 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task performed",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "interview",
+      "description": "Dr. Eugene Washington speaking to camera in office setting",
+      "technique_notes": "Educational content - no FLS task visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "interview",
+      "description": "Dr. Brittany Davidson speaking to camera in simulation lab",
+      "technique_notes": "Educational interview in laparoscopic training facility",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "instruction",
+      "description": "Faculty member pointing at laparoscopic trainer screen showing peg transfer setup",
+      "technique_notes": "Teaching demonstration of FLS equipment, not performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "instruction",
+      "description": "Students observing peg transfer task display on monitor",
+      "technique_notes": "Educational observation, no active task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "instruction",
+      "description": "Faculty teaching students with surgical simulator mannequin",
+      "technique_notes": "Hands-on education with birthing simulator, not FLS task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "interview",
+      "description": "Dr. Washington concluding interview segment",
+      "technique_notes": "Educational content conclusion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 24.0,
+      "phase": "demonstration",
+      "description": "Surgeons working at da Vinci robotic system console",
+      "technique_notes": "Robotic surgery demonstration, not FLS trainer",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed - scoring not applicable"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is educational/promotional content about Duke's simulation lab and training programs, not an FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "Educational video showcasing Duke's laparoscopic training facilities and faculty. No actual FLS task performance observed.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS equipment familiarization",
+      "simulation lab orientation",
+      "robotic surgery exposure"
+    ],
+    "verbal_cues": [
+      "Professional educational interview content"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational_overview"
+  },
+  "improvement_suggestions": [],
+  "video_id": "GuRSHHuKaPk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:29:43.224623+00:00",
+  "scoreable": false
+}

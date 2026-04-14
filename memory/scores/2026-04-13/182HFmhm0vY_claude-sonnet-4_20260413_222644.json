@@ -1,0 +1,14 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine - no FLS task visible",
+  "reason": "Video contains graduation ceremonies, group photos of medical personnel, and general surgical scenes but no identifiable FLS/MISTELS task performance or training equipment",
+  "frames_analyzed": 22,
+  "content_description": "Mixed content including laparoscopic training program certificates, graduation ceremonies with cap and gown presentations, operating room group photos, and brief surgical footage, but no FLS trainer box or specific task execution visible",
+  "fls_equipment_visible": false,
+  "scoreable": false,
+  "video_id": "182HFmhm0vY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:26:44.809870+00:00"
+}

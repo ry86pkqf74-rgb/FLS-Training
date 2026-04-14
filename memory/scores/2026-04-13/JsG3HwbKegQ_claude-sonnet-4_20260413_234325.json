@@ -1,0 +1,17 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task",
+  "confidence": 0.95,
+  "confidence_rationale": "Video shows various food preparation activities with eggs, fruits, and vegetables using surgical instruments, but does not demonstrate any of the five standardized FLS tasks (peg transfer, pattern cut, endoloop, extracorporeal suture, or intracorporeal suture). This appears to be creative content using medical instruments for non-medical purposes.",
+  "cannot_determine": [
+    "FLS task identification - no standardized FLS training equipment visible",
+    "Scoring - not applicable for non-FLS content"
+  ],
+  "technique_summary": "Video demonstrates various food manipulation techniques using laparoscopic instruments, but this is not related to FLS training or assessment.",
+  "video_id": "JsG3HwbKegQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:43:25.428170+00:00",
+  "scoreable": false
+}

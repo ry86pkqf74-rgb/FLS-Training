@@ -1,0 +1,35 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Fundamentals of Endoscopic Surgery (FES) - Educational Overview",
+  "note": "This is an educational/instructional lecture presentation about FES tasks, not a performance video requiring scoring.",
+  "content_summary": "Presentation by Jeffrey Marks MD, FACS on FES Hands-on Modules at Case Medical Center. Covers five FES tasks: (1) Navigation, (2) Loop Reduction, (3) Retroflexion, (4) Mucosal Evaluation, (5) Targeting. Includes introductions and demonstrations of endoscopic techniques.",
+  "video_type": "educational_lecture_with_task_introductions",
+  "scoring_applicable": false,
+  "reasoning": "This is a teaching presentation with narration, multiple slide transitions, and introductory demonstrations of endoscopic procedural tasks. It is not a trainee or expert performing a single FLS task for evaluation. Per classification rules, instructional content with narration and overlays should not be scored.",
+  "teaching_content": {
+    "presenter": "Jeffrey Marks MD, FACS, Director of Surgical Endoscopy, Associate Professor, Department of Surgery, University Hospitals Case Medical Center",
+    "demonstrated_techniques": [
+      "Endoscope navigation through anatomical passages",
+      "Loop snare positioning and reduction technique",
+      "Retroflexion maneuver with endoscope control",
+      "Mucosal evaluation and identification",
+      "Targeting precision with endoscopic instruments"
+    ],
+    "verbal_cues": "Presentation structure: introductions to each of five FES tasks with visual demonstrations of correct technique execution",
+    "common_errors_addressed": "Not explicitly addressed in narration; demonstrations show correct technique execution without error commentary",
+    "skill_level_demonstrated": "expert",
+    "fes_program_context": "FES is described as a validated hands-on testing tool for flex endoscopy skills based on endoscopy 'deconstruction' into five unique skills. Testing intended for Simbionix GI Mentor II platform; training available on any VR or non-VR system."
+  },
+  "cannot_score_because": [
+    "No individual trainee performance on a single task",
+    "Educational presentation with multiple task introductions rather than single task execution",
+    "No completion time to measure (teaching content flow, not procedural timing)",
+    "No observable performance penalties (demonstrations only, not assessment)"
+  ],
+  "video_id": "6wMT3I-Nm1w",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:51:13.603273+00:00",
+  "scoreable": false
+}

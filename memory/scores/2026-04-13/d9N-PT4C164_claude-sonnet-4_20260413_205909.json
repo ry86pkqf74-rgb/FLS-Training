@@ -1,0 +1,74 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Not an FLS Task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Patient positioning view showing draped abdomen",
+      "technique_notes": "This appears to be patient preparation, not an FLS simulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Educational diagram showing fallopian tube anatomy with 'Tubal Ligation Explained' text",
+      "technique_notes": "This is educational content about tubal ligation procedure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "not_applicable",
+      "description": "Diagram showing tubal reversal procedure with text 'Tubal Reversal Explained'",
+      "technique_notes": "Educational content continues with tubal reversal explanation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "not_applicable",
+      "description": "Surgeon in scrubs speaking to camera in what appears to be an interview or educational video",
+      "technique_notes": "This is clearly not an FLS simulation but rather educational/promotional content",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "error_type": "incorrect_video_content",
+    "expected_content": "FLS Task 3 Endoloop - deployment of pre-tied ligating loop around foam appendage in laparoscopic trainer",
+    "actual_content": "Educational video about tubal ligation and tubal reversal procedures featuring anatomical diagrams and surgeon interview"
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS task video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Very clear that this is educational content about tubal procedures, not an FLS simulation. Contains patient positioning, anatomical diagrams with explanatory text, and surgeon interview - none of which are components of FLS Task 3 Endoloop.",
+  "cannot_determine": [
+    "FLS score - video does not show FLS Task 3 Endoloop simulation"
+  ],
+  "technique_summary": "Not applicable - this video shows educational content about tubal ligation and reversal procedures rather than an FLS simulation task.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Please provide a video showing FLS Task 3 Endoloop simulation in a laparoscopic trainer with foam appendage and pre-tied ligating loop"
+  ],
+  "video_id": "d9N-PT4C164",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:59:09.992780+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.869528+00:00"
+  },
+  "scoreable": false
+}

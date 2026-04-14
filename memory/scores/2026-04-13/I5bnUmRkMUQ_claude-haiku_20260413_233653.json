@@ -1,0 +1,54 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_assessment": "cannot_determine",
+    "knot_security": "cannot_determine",
+    "mark_alignment": "cannot_determine"
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "not_applicable"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "Video is purely instructional/educational content (titled 'Ligation of the Uterine Artery - O'Leary Technique') with slide overlays, narration cues, and preparation demonstration of surgical anatomy. Not an actual FLS task performance. Content shows preparation of training model and uterine anatomy education, not execution of the FLS endoloop task on the official trainer box. Scoring does not apply.",
+  "cannot_determine": [
+    "Completion time \u2014 no timed performance captured",
+    "Loop placement accuracy \u2014 anatomy prep only, not task execution",
+    "Knot security or advancement \u2014 no loop deployment or cinching shown",
+    "All penalty calculations \u2014 instructional content lacks task-specific performance metrics"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Uterine artery anatomical identification and palpation",
+      "Uterine massage and tissue manipulation for surgical access",
+      "Proper training model handling and tissue orientation",
+      "O'Leary technique context (ligation approach for hemorrhage control)"
+    ],
+    "verbal_cues": [
+      "Procedure title: 'Ligation of the Uterine Artery - O'Leary Technique'",
+      "Labeled anatomical structures: 'uterine artery', 'uterine massage'",
+      "Educational framing: preparation and model setup"
+    ],
+    "common_errors_addressed": [
+      "Proper identification of uterine artery before ligation",
+      "Appropriate tissue handling to avoid tissue damage during preparation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "notes": "This video is an educational/instructional resource showing anatomical preparation and surgical approach for the O'Leary technique in a clinical context. It is not a trainee performance on the FLS endoloop task and therefore does not receive a performance score. Content is suitable for pre-task instruction but does not demonstrate the specific FLS ligating loop trainer competencies (loop deployment, pusher break, knot advancement, tail cut, mark alignment).",
+  "video_id": "I5bnUmRkMUQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:36:53.726133+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,42 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - no FLS task performance visible",
+  "rationale": "The video contains course promotional material (title slide for 'Laparoscopic Urological Surgery' dated 19-20 November 2021) and interview/presentation footage of Dr. Fariborz Bagheri in a conference or educational setting. No actual FLS task performance (peg transfer, pattern cut, endoloop, or suture knot tying) is visible in any frame. The video is educational/instructional content about a surgical course, not a performance recording of an FLS task.",
+  "scoring_determination": "NOT APPLICABLE",
+  "cannot_score_reason": "No FLS task performance visible in provided frames. Video shows only course promotional slides and speaker interview footage.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "content": "Course promotional slide - Laparoscopic Urological Surgery, University of Sharjah, Royal College of Surgeons branding",
+      "notes": "No task performance"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "content": "Dr. Fariborz Bagheri introduction slide with credentials and title",
+      "notes": "Instructor/speaker identification, not task performance"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "content": "Continued presentation of Dr. Bagheri in interview/lecture setting",
+      "notes": "Conference/educational setting, no FLS equipment or task visible"
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "N/A",
+    "content_type": "Course promotion and faculty introduction for laparoscopic urological surgery educational event"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video content is definitively non-task performance material. Clear identification of promotional/instructional video with no FLS task execution visible.",
+  "video_id": "IV0vEwtcl5U",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:37:57.909374+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,157 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Initial setup of gauze with circle pattern visible.",
+      "technique_notes": "Gauze is correctly tensioned at the start.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 10.0,
+      "phase": "initial_cut",
+      "description": "Initial cut along the marked line begins.",
+      "technique_notes": "Cut begins smoothly with good alignment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 25.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing the circular cut clockwise.",
+      "technique_notes": "Tension appears consistent, minor deviations visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 50.0,
+      "phase": "counterclockwise_cut",
+      "description": "Switching to counterclockwise cutting",
+      "technique_notes": "Grip adjusted, minor tension loss noted.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Cut deviates ~3mm at bottom quadrant.",
+          "points_deducted": 3,
+          "frame_evidence": [
+            14
+          ],
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 70.0,
+      "phase": "completion",
+      "description": "Final cut completing the circle.",
+      "technique_notes": "Circle cut completed, but slight overlap visible.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Final cut overlap by ~2mm.",
+          "points_deducted": 2,
+          "frame_evidence": [
+            18
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "completion_time_seconds": 75.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 5,
+      "end_seconds": 15,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 30,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 30,
+      "end_seconds": 60,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 60,
+      "end_seconds": 75,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Cut deviates ~3mm at bottom quadrant.",
+      "points_deducted": 3,
+      "frame_evidence": [
+        14
+      ],
+      "confidence": 0.75
+    },
+    {
+      "type": "deviation_from_line",
+      "description": "Final cut overlap by ~2mm.",
+      "points_deducted": 2,
+      "frame_evidence": [
+        18
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "cut_completeness": true,
+    "clamp_attachment_maintained": true
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 75.0,
+    "total_penalties": 5,
+    "total_fls_score": 220,
+    "formula_applied": "300 - 75 - 5 = 220"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "The cutting process was well observed with clear visibility except for minor deviation estimates.",
+  "cannot_determine": [],
+  "technique_summary": "Overall competent execution with minor deviations from the line and a completion time within expert range.",
+  "strengths": [
+    "Efficient gauze setup and starting cut.",
+    "Consistent cutting speed."
+  ],
+  "improvement_suggestions": [
+    "Improve tension management during counterclockwise cutting to reduce deviation."
+  ],
+  "video_id": "W12q9XpCr54",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:29:13.422530+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.846331+00:00"
+  },
+  "scoreable": true
+}

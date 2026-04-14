@@ -1,0 +1,93 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "EUREP Educational Overview - Multiple FLS/BASIC Urology Tasks",
+  "cannot_score_reason": "This is an instructional/educational video compilation, not a trainee performance video",
+  "video_content_summary": "This is a promotional and educational video from EUREP (European hands-on training) showcasing their BASIC Laparoscopic Urological Skills program. The video includes:\n- EUREP organization branding and facility overview (24 stations)\n- Instructor/presenter segments in professional attire\n- Demonstration footage of Peg Transfer task (visible at ~2:29 mark showing trainer setup and suture/knot tying station)\n- Endoscopic stone treatment demonstration\n- Educational graphics and titles\n- No actual trainee performance being scored",
+  "frames_analyzed": [
+    {
+      "frame_number": 1,
+      "content": "Black screen - opening title"
+    },
+    {
+      "frame_number": 2,
+      "content": "EUREP hands-on training logo with instructor portrait"
+    },
+    {
+      "frame_number": 3,
+      "content": "Conference/classroom setting with 'over 300 EBLUS exams' text"
+    },
+    {
+      "frame_number": 4,
+      "content": "'24 stations' facility overview"
+    },
+    {
+      "frame_number": 5,
+      "content": "Instructor speaking - professional presentation"
+    },
+    {
+      "frame_number": 6,
+      "content": "Instructor speaking - professional presentation"
+    },
+    {
+      "frame_number": 7,
+      "content": "Instructor speaking - professional presentation"
+    },
+    {
+      "frame_number": 8,
+      "content": "'European BASIC Laparoscopic Urological skills' title slide"
+    },
+    {
+      "frame_number": 9,
+      "content": "Peg Transfer trainer setup - dual camera view showing pegs, colored objects, instruments - LAP CAMERA and UPPER CAMERA labeled at 00:06:24"
+    },
+    {
+      "frame_number": 10,
+      "content": "Knot Tying station demonstration - dual camera view showing gauze/drain material, instruments at 02:29:24 timestamp"
+    },
+    {
+      "frame_number": 11,
+      "content": "Endoscopic stone treatment - high magnification view of tissue with laser treatment (surgical/clinical content, not FLS trainer)"
+    },
+    {
+      "frame_number": 12,
+      "content": "Instructor speaking"
+    },
+    {
+      "frame_number": 13,
+      "content": "Instructor speaking"
+    },
+    {
+      "frame_number": 14,
+      "content": "'Endo Stone Treatment basic (step 1)' title slide"
+    },
+    {
+      "frame_number": 15,
+      "content": "Instructor sitting, professional presentation"
+    },
+    {
+      "frame_number": 16,
+      "content": "Instructor speaking in professional attire"
+    },
+    {
+      "frame_number": 17,
+      "content": "Endoscopic view of tissue/organ - clinical demonstration"
+    },
+    {
+      "frame_number": 18,
+      "content": "Instructor speaking"
+    },
+    {
+      "frame_number": 19,
+      "content": "Closing slide - EUREP/OLYMPUS sponsorship"
+    }
+  ],
+  "why_not_scored": "This video is clearly educational/promotional material created by EUREP hands-on training to showcase their program. Key indicators:\n1. Multiple cut scenes with different topics and speakers\n2. Title cards and organizational branding throughout\n3. Presenter segments with professional setup and lighting changes\n4. No continuous task performance video\n5. Includes clinical footage (endoscopic stone treatment) which is not an FLS task\n6. While brief glimpses of Peg Transfer and knot tying trainers are visible, these are not complete, uninterrupted performance recordings suitable for scoring\n7. No clear task start/stop or performance timing evident",
+  "confidence": 1.0,
+  "recommendation": "This video should not be scored. If training evaluation is needed, request:\n- Complete, uninterrupted single-task performance video\n- Clear task start and completion points\n- Consistent camera angle throughout\n- Trainee performing without narration or interruption",
+  "video_id": "F4IaE5ykbOs",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:21:22.181172+00:00",
+  "scoreable": false
+}

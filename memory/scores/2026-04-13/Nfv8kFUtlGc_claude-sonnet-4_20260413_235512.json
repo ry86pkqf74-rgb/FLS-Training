@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black frame - video appears to be starting",
+      "technique_notes": "No content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Trophy or award display in medical facility",
+      "technique_notes": "Appears to be 'TOP GUN Champion' award in laparoscopic training center",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "not_applicable",
+      "description": "Multiple trainees observing laparoscopic monitors in training facility",
+      "technique_notes": "Educational setting with peg transfer task visible on one monitor",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "not_applicable",
+      "description": "Close-up view of peg transfer pegboard on monitor showing colored pegs and objects",
+      "technique_notes": "Standard FLS peg transfer setup clearly visible - 6 pegs with colored blocks and rubber objects",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 23.0,
+      "phase": "not_applicable",
+      "description": "Close-up of Penrose drain with suture marks - appears to be Task 4 or 5 setup",
+      "technique_notes": "This is suturing task demonstration, not peg transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 27,
+      "timestamp_seconds": 26.0,
+      "phase": "not_applicable",
+      "description": "Award ceremony with surgeon receiving trophy in training center",
+      "technique_notes": "Educational/ceremonial context, multiple training stations visible in background",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Cannot score - this is instructional content showing training facility and award ceremony"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows educational content with training facility tour, equipment demonstrations, and award ceremony. No actual peg transfer performance is visible.",
+  "cannot_determine": [
+    "No actual peg transfer task performance is shown in this video",
+    "Video contains facility tour and ceremonial content only"
+  ],
+  "technique_summary": "This is educational content showing a laparoscopic training facility, equipment demonstrations, and an award ceremony. Brief glimpses of peg transfer setup are visible on monitors but no actual task performance occurs.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS training facility setup and equipment",
+      "Multiple laparoscopic training stations",
+      "Standard peg transfer pegboard configuration"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "facility_demonstration"
+  },
+  "improvement_suggestions": [],
+  "video_id": "Nfv8kFUtlGc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:55:12.899074+00:00",
+  "scoreable": false
+}

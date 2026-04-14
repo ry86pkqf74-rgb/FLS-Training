@@ -1,0 +1,97 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Title screen showing 'Suturing in Parallel and Perpendicular Planes: A Systematic Geometric Approach to Laparoscopic Suturing'",
+      "technique_notes": "This appears to be an educational/instructional video rather than a performance assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "educational_content",
+      "description": "Demonstration of needle placement technique with curved needle through tissue",
+      "technique_notes": "Shows proper needle angle and trajectory - instructional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 110.0,
+      "phase": "educational_content",
+      "description": "Title screen showing 'Systematic Approach' with needle and suture placement demonstration",
+      "technique_notes": "Continuing educational demonstration of technique principles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 170.0,
+      "phase": "educational_content",
+      "description": "Title screen showing 'Knot Tying' with bullet points for preparation, throwing, and securing",
+      "technique_notes": "Educational content covering knot tying principles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 200.0,
+      "phase": "educational_content",
+      "description": "Demonstration of 'Across & Over' technique with instruments manipulating suture",
+      "technique_notes": "Instructional demonstration of knot tying methodology",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0,
+      "confidence": 0
+    },
+    "drain_assessment": {
+      "gap_visible": null,
+      "drain_avulsed": false,
+      "slit_closure_quality": null
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot compute - this is educational content, not a performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "High confidence that this is educational/instructional content based on title screens, systematic presentation format, and lack of timed performance elements. No actual FLS task performance is demonstrated.",
+  "cannot_determine": [
+    "Completion time - no timed performance shown",
+    "Actual task performance metrics - this is instructional content",
+    "Penalty assessment - no performance to evaluate",
+    "FLS score - cannot score educational material"
+  ],
+  "technique_summary": "This video contains educational content demonstrating proper laparoscopic suturing techniques and principles rather than an actual FLS Task 5 performance that can be scored.",
+  "strengths": [
+    "Clear instructional presentation of suturing concepts",
+    "Systematic approach to technique demonstration"
+  ],
+  "improvement_suggestions": [
+    "To score an FLS Task 5 performance, need video of actual timed task execution from setup through completion"
+  ],
+  "video_id": "iI1bj7-6btE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:09:18.262204+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.877199+00:00"
+  },
+  "scoreable": false
+}

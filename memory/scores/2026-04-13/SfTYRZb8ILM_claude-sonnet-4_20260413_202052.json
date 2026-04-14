@@ -1,0 +1,131 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Task already in progress - hands forming extracorporeal knot with purple and white suture strands",
+      "technique_notes": "Proper hand positioning for extracorporeal knot tying technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.5,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Continued knot formation with purple suture strand being manipulated",
+      "technique_notes": "Good control of suture strands, maintaining appropriate tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 7.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Frame shows 'Tyside knot' label - indicating specific knot formation technique",
+      "technique_notes": "Using Tyside knot technique for extracorporeal knot formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 10.5,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Knot formation continues with proper strand manipulation",
+      "technique_notes": "Maintaining good control of both purple and white suture strands",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 14.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Advanced stage of knot formation visible",
+      "technique_notes": "Knot structure taking shape, proper tension maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 63.0,
+      "phase": "knot_push",
+      "description": "Knot pusher being used to advance knot down to tissue",
+      "technique_notes": "Proper knot pusher technique, advancing knot along suture strand",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 77.0,
+      "phase": "knot_push",
+      "description": "Final knot advancement and securing phase",
+      "technique_notes": "Final positioning of knot at target location",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 87.5,
+      "phase": "task_completion",
+      "description": "Video ends - task appears completed",
+      "technique_notes": "Task completion with knot secured",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 87.5,
+  "phase_timings": [
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 0,
+      "end_seconds": 60,
+      "duration_seconds": 60,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 60,
+      "end_seconds": 87.5,
+      "duration_seconds": 27.5,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_technique": "extracorporeal_with_knot_pusher",
+    "knot_type": "tyside_knot",
+    "knot_security": true,
+    "target_structure": "not_visible_in_frames"
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 87.5,
+    "total_penalties": 0,
+    "total_fls_score": 332.5,
+    "formula_applied": "420 - 87.5 - 0 = 332.5"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "Video shows extracorporeal knot formation and knot pusher technique but lacks visibility of initial suture placement, target marks, and final knot position assessment. Cannot verify suture placement accuracy or final knot security at target location.",
+  "cannot_determine": [
+    "Initial suture placement through marks on Penrose drain",
+    "Suture deviation from target marks in mm",
+    "Gap presence in drain after knot tying",
+    "Final knot position relative to marks",
+    "Whether this is actually Task 5 intracorporeal suturing vs Task 4 extracorporeal suturing",
+    "Actual task completion - video may show middle portion only"
+  ],
+  "technique_summary": "Video demonstrates extracorporeal knot formation using Tyside knot technique followed by knot pusher advancement. Technique appears competent but video lacks context of full task performance including suture placement and final assessment.",
+  "strengths": [
+    "Smooth extracorporeal knot formation",
+    "Proper knot pusher technique",
+    "Good suture strand control"
+  ],
+  "improvement_suggestions": [
+    "Unable to assess full task performance from provided video segments"
+  ],
+  "video_id": "SfTYRZb8ILM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:20:52.461100+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.839739+00:00"
+  },
+  "scoreable": true
+}

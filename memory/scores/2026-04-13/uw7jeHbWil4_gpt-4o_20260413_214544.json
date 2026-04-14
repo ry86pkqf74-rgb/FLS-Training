@@ -1,0 +1,134 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "gauze_grasp",
+      "description": "Initial grasping of gauze near the start of the cut line.",
+      "technique_notes": "Adequate grasp, stable positioning.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 4.0,
+      "phase": "initial_cut",
+      "description": "Initial incision made within marked lines.",
+      "technique_notes": "Controlled entry into gauze.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 8.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progresses clockwise along inner marked line.",
+      "technique_notes": "Maintaining proximity to guide line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 14.0,
+      "phase": "counterclockwise_cut",
+      "description": "Direction changed to counterclockwise cut.",
+      "technique_notes": "Smooth transition between directions.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 20.0,
+      "phase": "completion",
+      "description": "Final segment of gauze cut completed.",
+      "technique_notes": "Clean completion of circle with minimal deviation.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 22.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 4,
+      "end_seconds": 14,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 14,
+      "end_seconds": 20,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 20,
+      "end_seconds": 22,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "line_deviation": {
+      "average_deviation_mm": 1.0,
+      "deviation_at_cardinal_points_mm": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "confidence": 0.9
+    },
+    "gauge_assessment": {
+      "detached": false,
+      "confidence": 0.95
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 22.0,
+    "total_penalties": 0,
+    "total_fls_score": 278.0,
+    "formula_applied": "300 - 22.0 - 0 = 278.0"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Deviations clearly within visible range, cutting technique consistently along the guideline.",
+  "cannot_determine": [],
+  "technique_summary": "Expert level performance with precise adherence to guideline and swift completion. No observed errors or significant deviations.",
+  "strengths": [
+    "Consistently maintained cut within deviation limits.",
+    "Transition between cut directions managed smoothly."
+  ],
+  "improvement_suggestions": [
+    "Maintain current skill level, focus on continued practice for retention."
+  ],
+  "video_id": "uw7jeHbWil4",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:45:44.856120+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.908401+00:00"
+  },
+  "scoreable": true
+}

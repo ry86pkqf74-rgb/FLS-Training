@@ -1,0 +1,178 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_content",
+      "description": "Production slate: 'PROD. Basics of Laparoscopy' - Scene 1, Take 1, Roll 1, Nov 2020, Directors Dr. Yamini Kale and Dr. Sanjana Sainani",
+      "technique_notes": "Instructional video production metadata",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_title",
+      "description": "Title slide: 'A Step by Step Approach to Basic Laparoscopy' with presenter credentials",
+      "technique_notes": "Educational framing - not a performance task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 15.0,
+      "phase": "content_outline",
+      "description": "Slide showing instructional topics: 'Instruments', 'Patient Position', 'Trocar Entry'",
+      "technique_notes": "Lecture-style outline of laparoscopic fundamentals",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 45.0,
+      "phase": "equipment_demonstration",
+      "description": "Real laparoscopic tower equipment shown - stacked surgical control console with monitors and instruments",
+      "technique_notes": "Equipment overview, not a task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 65.0,
+      "phase": "instrument_display",
+      "description": "Laparoscopic instruments laid out on green drape: trocars, graspers, scissors, clip appliers",
+      "technique_notes": "Instrument identification and familiarization content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 90.0,
+      "phase": "optical_principles",
+      "description": "Diagram showing camera port field of view concepts at 0\u00b0 and 30\u00b0 angles with Hopkins scope",
+      "technique_notes": "Educational diagram on laparoscope optics and orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 120.0,
+      "phase": "trocar_anatomy",
+      "description": "Labeled diagram of 10mm primary trocar and Veress needle with anatomical components",
+      "technique_notes": "Equipment anatomy teaching content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 140.0,
+      "phase": "instrument_closeup",
+      "description": "Close-up view of laparoscopic instruments on green surgical field, showing cannulae and graspers",
+      "technique_notes": "Instrument detail and handling demonstration setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 160.0,
+      "phase": "patient_setup",
+      "description": "Live demonstration of patient positioning on surgical table with positioning apparatus and bolster",
+      "technique_notes": "Patient positioning for laparoscopic access - not a task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 180.0,
+      "phase": "simulator_model",
+      "description": "Rendering/model of foam organ surrogate used in laparoscopic training, showing anatomy with appendage",
+      "technique_notes": "Training model anatomy overview",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 210.0,
+      "phase": "surgical_technique_diagram",
+      "description": "Anatomical diagram showing trocar insertion angle (45\u00b0) and relationship to internal organs, with needle and vessel anatomy highlighted",
+      "technique_notes": "Safe trocar entry technique and anatomy, educational content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 240.0,
+      "phase": "equipment_closeup",
+      "description": "Storz electronic insufflator control panel with green indicator lights visible",
+      "technique_notes": "Insufflation equipment overview",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 270.0,
+      "phase": "access_methods",
+      "description": "Text slide listing methods: 'Veress Needle', 'Direct Trocar Entry', 'Open Technique (Hasson Technique)'",
+      "technique_notes": "Educational framework of trocar entry methods",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 300.0,
+      "phase": "clinical_anatomy",
+      "description": "Anatomical diagram showing trocar entry site and relationship to uterus, common iliac artery, peritoneal anatomy",
+      "technique_notes": "Safe entry site anatomy teaching",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 330.0,
+      "phase": "surgical_setup",
+      "description": "Labeled diagram of laparoscopic trainer showing port positions: 10mm camera port, 5mm working ports, 10mm working port",
+      "technique_notes": "FLS trainer port configuration overview",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 360.0,
+      "phase": "conclusion_slide",
+      "description": "Title slide reading 'Conclusion' on dark background",
+      "technique_notes": "Instructional content ending",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": null,
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is unambiguous. This is a comprehensive educational/instructional video produced for the NOGS (National Obstetric and Gynaecological Surgeons) titled 'Basics of Laparoscopy.' The content includes production credits, presenter credentials, equipment overviews, anatomical diagrams, patient positioning demonstrations, and instructional slides. No actual FLS task performance (ligating loop deployment around a foam appendage) is shown. The video is narrated educational content with overlays, diagrams, equipment demonstrations, and teaching framework\u2014classic hallmarks of instructional content. No performance scoring is applicable.",
+  "cannot_determine": [
+    "Task performance - no endoloop task execution is shown in this video"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Laparoscopic equipment identification and layout",
+      "Trocar insertion angles and anatomy (45\u00b0 entry angle shown)",
+      "Camera port field-of-view orientation (0\u00b0 vs 30\u00b0 scopes)",
+      "Safe anatomical landmarks for trocar entry (avoiding iliac vessels)",
+      "Patient positioning and bolster setup for supine laparoscopy",
+      "Insufflation equipment operation",
+      "FLS trainer port configuration (10mm camera, 5mm and 10mm working ports)"
+    ],
+    "verbal_cues": [
+      "Title: 'A Step by Step Approach to Basic Laparoscopy'",
+      "Methods listed: Veress Needle, Direct Trocar Entry, Open Technique (Hasson Technique)",
+      "Equipment components identified: Hopkins scope, Veress needle, 10mm primary trocar, graspers, scissors, clip appliers",
+      "Anatomical structures labeled: Uterus, common iliac artery, peritoneal layers"
+    ],
+    "common_errors_addressed": [
+      "Proper trocar entry angle (45\u00b0 angle shown to avoid vascular injury)",
+      "Recognition of anatomical landmarks to prevent major vessel puncture",
+      "Correct patient positioning to optimize laparoscopic access",
+      "Safe insufflation technique (Storz insufflator shown with proper settings)"
+    ],
+    "skill_level_demonstrated": "instructional/expert",
+    "note": "This is an expert-level educational production created to teach fundamentals of laparoscopy to surgical trainees. Dr. Yamini Kale (MBBS, DNB, FMAS) and Dr. Sanjana Sainani (MBBS, MS, FMAS) are presenting expert-curated content. The video is designed for foundational laparoscopic knowledge acquisition, not task performance evaluation."
+  },
+  "video_summary": "This is a professional instructional video produced in November 2020 for the NOGS teaching 'Basics of Laparoscopy' with expert narration, anatomical diagrams, equipment demonstrations, and training setup. No FLS endoloop task performance is present. Scoring is not applicable; teaching content has been extracted.",
+  "recommendation": "Do not score. This is instructional/educational content, not a trainee performance video. Teaching content extraction complete.",
+  "video_id": "RRioxYjpIJY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:06:16.702310+00:00",
+  "scoreable": false
+}

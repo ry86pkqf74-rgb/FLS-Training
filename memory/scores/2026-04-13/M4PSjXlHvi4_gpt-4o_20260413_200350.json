@@ -1,0 +1,48 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Peg transfer board is set up with objects on pegs.",
+      "technique_notes": "Setup looks complete with no missing components.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 0.0,
+    "total_penalties": 0,
+    "total_fls_score": 300,
+    "formula_applied": "300 - 0.0 - 0 = 300"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Images only show setup and materials; no execution frames observed.",
+  "cannot_determine": [
+    "Completion time and penalties due to absence of task execution frames"
+  ],
+  "technique_summary": "No task performance observed. Based on setup, materials are ready, but execution steps are missing.",
+  "strengths": [
+    "Complete board setup"
+  ],
+  "improvement_suggestions": [
+    "Capture and review complete execution of the task for accurate assessment."
+  ],
+  "video_id": "M4PSjXlHvi4",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:03:50.367032+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.824604+00:00"
+  },
+  "scoreable": true
+}

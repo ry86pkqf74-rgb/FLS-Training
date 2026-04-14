@@ -1,0 +1,82 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "cannot_score_reason": "This is an instructional/educational video demonstrating the Adult Pyeloplasty physical module on a LAPARO trainer. The content shows animated title slides and instructional demonstration of suturing/knot-tying technique on a foam appendage model, but does NOT constitute a timed performance by a trainee that can be scored using official FLS rubric.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_slide",
+      "description": "Opening title slide: 'ADULT PYELOPLASTY - PHYSICAL MODULE' with LAPARO Medical Simulators logo",
+      "technique_notes": "Instructional content preamble",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "demonstration_setup",
+      "description": "Wide view of LAPARO trainer box showing foam appendage (pale cream/tan) and suturing instruments positioned. Camera view is through endoscopic lens.",
+      "technique_notes": "Shows proper trainer setup and instrument positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "loop_deployment_demo",
+      "description": "Left grasper manipulates foam appendage; right instrument (knot pusher or grasper) begins approach with green-marked ligating loop visible",
+      "technique_notes": "Demonstrates proper loop approach angle and grasper positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "loop_placement_demo",
+      "description": "Loop is being positioned around the base of the foam appendage; green marks on loop align with target placement zone",
+      "technique_notes": "Shows correct centering of loop on appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 15.0,
+      "phase": "cinch_demo",
+      "description": "Right instrument cinches loop tightly; foam appendage shows red surface indicating contact/tension",
+      "technique_notes": "Demonstrates smooth cinching motion and firm knot tightening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 20.0,
+      "phase": "cut_tail_demo",
+      "description": "Suture tails visible extending from cinched loop; instruments position to cut excess suture material",
+      "technique_notes": "Shows final cleanup phase with suture tail cutting",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper grasper positioning for appendage stabilization",
+      "Ligating loop deployment with controlled trajectory",
+      "Loop centering on appendage base",
+      "Smooth cinching motion with appropriate tension",
+      "Suture tail cutting and cleanup",
+      "One-handed loop manipulation while stabilizing with contralateral grasper"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Maintaining loop position during cinch to prevent slippage",
+      "Avoiding over-tensioning that could transect appendage",
+      "Ensuring loop is seated at marked line before final tightening"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly marked as 'PHYSICAL MODULE' with LAPARO branding. Title slides and continuous demonstration without pause, reset, or timed performance indicate instructional content. No performance timing, no trainee error patterns, no actual scoring context\u2014purely educational demonstration.",
+  "summary": "This is an instructional video demonstrating proper Endoloop technique on a LAPARO Adult Pyeloplasty trainer. It is NOT a trainee performance and therefore cannot be scored using official FLS rubric. The content effectively demonstrates expert-level technique including loop deployment, positioning, cinching, and tail cutting phases.",
+  "video_id": "BntwicYQglo",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:09:41.214473+00:00",
+  "scoreable": false
+}

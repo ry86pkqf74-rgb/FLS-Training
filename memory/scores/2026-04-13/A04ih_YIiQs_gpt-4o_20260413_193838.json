@@ -1,0 +1,119 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 2.0,
+      "phase": "loop_deploy",
+      "description": "Instrument positions loop around target appendage.",
+      "technique_notes": "Smooth positioning of loop around foam appendage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 3.0,
+      "phase": "target_approach",
+      "description": "Instruments approaching marked line on appendage.",
+      "technique_notes": "Approach is controlled and follows prescribed path.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_placement",
+      "description": "Loop is placed very close to marked line.",
+      "technique_notes": "Accurate placement minimizing deviation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 7.0,
+      "phase": "cinch",
+      "description": "Loop is cinched tightly around appendage.",
+      "technique_notes": "Effective cinching with no visible slack.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 9.0,
+      "phase": "cut_tail",
+      "description": "Tail of ligating loop is cut close to appendage.",
+      "technique_notes": "Tail is cut cleanly without shifting loop.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 9.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 2,
+      "end_seconds": 3,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 3,
+      "end_seconds": 5,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 5,
+      "end_seconds": 7,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 7,
+      "end_seconds": 9,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 9,
+      "end_seconds": 9,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_assessment": {
+      "loop_position_deviation_mm": 0.0,
+      "loop_tightness": "secure",
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 9.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 171.0,
+    "formula_applied": "180 - 9.0 - 0.0 = 171.0"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clearly visible tight and correct loop placement, no deviations observed.",
+  "cannot_determine": [],
+  "technique_summary": "Expert performance with efficient and precise action throughout the task.",
+  "strengths": [
+    "Accurate loop placement and cinching.",
+    "Quick and smooth cut of the tail."
+  ],
+  "improvement_suggestions": [],
+  "video_id": "A04ih_YIiQs",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:38:38.424732+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.781983+00:00"
+  },
+  "scoreable": true
+}

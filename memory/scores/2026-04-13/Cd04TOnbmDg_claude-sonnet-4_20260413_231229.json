@@ -1,0 +1,80 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General FLS Educational Content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Title slide showing SAGES educational materials for MIS surgery",
+      "technique_notes": "Introduction to SAGES educational program",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "educational_content",
+      "description": "FLS Program Components overview slide",
+      "technique_notes": "Outlining three main components: multimedia study guide, trainer box, and assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 70.0,
+      "phase": "educational_content",
+      "description": "Expert-derived proficiency metrics table showing target times and error allowances for all 5 tasks",
+      "technique_notes": "Task 1: 48s, Task 2: 98s, Task 3: 53s, Task 4: 136s, Task 5: 112s with specific error criteria",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 140.0,
+      "phase": "educational_content",
+      "description": "McGill University FLS training implementation",
+      "technique_notes": "Describes institutional approach with protected time, proctored sessions, and proficiency goals",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": null,
+  "confidence_rationale": "This is educational content, not a performance video requiring scoring",
+  "cannot_determine": [
+    "No FLS task performance to score"
+  ],
+  "technique_summary": "Educational presentation about FLS program implementation and training methodologies",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proficiency-based training approach",
+      "Expert-derived performance metrics",
+      "Deliberate practice methodology",
+      "Distributed vs massed practice scheduling",
+      "Feedback mechanisms for skill improvement"
+    ],
+    "verbal_cues": [
+      "Practice to proficiency level consistently",
+      "Target should be representative of proficient population",
+      "Distributed practice superior for retention",
+      "Expert feedback during training sessions essential"
+    ],
+    "common_errors_addressed": [
+      "Using experience-based rather than proficiency-based criteria",
+      "Massed practice sessions vs distributed practice",
+      "Inadequate feedback during training",
+      "Not training to overlearning for retention"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "Cd04TOnbmDg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:12:29.901453+00:00",
+  "scoreable": false
+}

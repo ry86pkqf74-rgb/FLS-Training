@@ -1,0 +1,24 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper grasping of instruments",
+      "mid-air transfer"
+    ],
+    "verbal_cues": [
+      "Instruments ka unnecessary crossing",
+      "Proper non-dominant hand usage"
+    ],
+    "common_errors_addressed": [
+      "Unnecessary crossing of instruments"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "video_id": "-Aav3f2E3mQ",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T22:02:01.636978+00:00",
+  "scoreable": false
+}

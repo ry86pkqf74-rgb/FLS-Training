@@ -1,0 +1,23 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": null,
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {},
+  "confidence": null,
+  "confidence_rationale": "This is an animated French language educational video about FSL (French as a Second Language) curriculum resources, not a Fundamentals of Laparoscopic Surgery performance or demonstration.",
+  "cannot_determine": [],
+  "technique_summary": null,
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "HwIanDkYSYY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:36:22.682474+00:00",
+  "scoreable": false
+}

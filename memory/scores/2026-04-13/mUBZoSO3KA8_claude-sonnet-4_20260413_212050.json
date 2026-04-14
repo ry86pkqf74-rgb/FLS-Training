@@ -1,0 +1,232 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Task setup showing gauze with printed circular pattern between clamps, double circle marking visible",
+      "technique_notes": "Clear target circle approximately 4cm diameter with inner and outer guidelines",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 3.0,
+      "phase": "gauze_grasp",
+      "description": "Right grasper and left scissors positioned, grasper making contact with gauze edge",
+      "technique_notes": "Timer starts when instruments touch gauze, proper instrument positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 6.0,
+      "phase": "initial_cut",
+      "description": "Scissors beginning to cut at approximately 5 o'clock position of circle",
+      "technique_notes": "Following tutorial recommendation to start at 5 o'clock, good entry point selection",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 15.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing clockwise around circle, approximately at 7 o'clock position",
+      "technique_notes": "Steady progression, maintaining proximity to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 25.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing clockwise cut, now at approximately 9-10 o'clock position",
+      "technique_notes": "Good tissue handling with grasper providing counter-traction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 35.0,
+      "phase": "clockwise_cut",
+      "description": "Cut progressing toward 11-12 o'clock position, approaching completion of clockwise phase",
+      "technique_notes": "Maintaining consistent distance from marked line throughout",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 45.0,
+      "phase": "clockwise_cut",
+      "description": "Cut reaching top of circle (12 o'clock), preparing for direction change",
+      "technique_notes": "Clean cut line visible, no obvious deviations from target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 55.0,
+      "phase": "counterclockwise_cut",
+      "description": "Beginning counterclockwise cutting from 12 o'clock back toward 5 o'clock start",
+      "technique_notes": "Direction change executed smoothly, continuing precise cutting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 65.0,
+      "phase": "counterclockwise_cut",
+      "description": "Counterclockwise cut progressing, approximately at 2-3 o'clock position",
+      "technique_notes": "Maintaining accuracy in second cutting phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 75.0,
+      "phase": "counterclockwise_cut",
+      "description": "Cut approaching 4-5 o'clock, nearing completion of full circle",
+      "technique_notes": "Final phase of cutting, preparing to close the circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 85.0,
+      "phase": "completion",
+      "description": "Circle cut appears complete, gauze piece becoming free from surrounding material",
+      "technique_notes": "Task completion, circular piece successfully cut out",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 90.0,
+      "phase": "completion",
+      "description": "Cut circular gauze piece fully separated, task completed",
+      "technique_notes": "Clean completion with circular piece intact and free",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 90.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 6,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 6,
+      "end_seconds": 15,
+      "duration_seconds": 9,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 55,
+      "duration_seconds": 40,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 55,
+      "end_seconds": 85,
+      "duration_seconds": 30,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 85,
+      "end_seconds": 90,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Minor deviation observed at 3 o'clock position, estimated 1mm outside target line",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        16
+      ],
+      "confidence": 0.6
+    },
+    {
+      "type": "deviation_from_line",
+      "description": "Slight deviation at 10 o'clock position, estimated 1mm inside target line",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        13
+      ],
+      "confidence": 0.5
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_accuracy": {
+      "deviation_measurements": [
+        {
+          "position": "12_oclock",
+          "deviation_mm": 0.5,
+          "confidence": 0.7
+        },
+        {
+          "position": "3_oclock",
+          "deviation_mm": 1.0,
+          "confidence": 0.6
+        },
+        {
+          "position": "6_oclock",
+          "deviation_mm": 0.5,
+          "confidence": 0.8
+        },
+        {
+          "position": "9_oclock",
+          "deviation_mm": 0.5,
+          "confidence": 0.7
+        }
+      ],
+      "total_deviation_penalty": 2.0
+    },
+    "gauze_handling": {
+      "gauze_detached": false,
+      "cut_complete": true,
+      "tissue_integrity": "maintained"
+    },
+    "cutting_technique": {
+      "direction_followed": "clockwise_then_counterclockwise",
+      "started_at_5_oclock": true,
+      "smooth_direction_change": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 90.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 208.0,
+    "formula_applied": "300 - 90.0 - 2.0 = 208.0"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Clear view of cutting technique and timing, but some deviation measurements estimated due to 2D video limitations and angle. Completion time and major technique elements well-observed.",
+  "cannot_determine": [
+    "Exact millimeter deviations at all 8 cardinal points due to camera angle limitations",
+    "Whether both plys of gauze were cut (task allows cutting only top ply)"
+  ],
+  "technique_summary": "Excellent expert-level performance with smooth cutting technique, proper starting position, and good direction change. Total time of 90 seconds places this in expert range (60-90s benchmark).",
+  "strengths": [
+    "Started at recommended 5 o'clock position per tutorial",
+    "Smooth clockwise to counterclockwise direction change",
+    "Consistent cutting speed and accuracy",
+    "Good tissue handling with counter-traction"
+  ],
+  "improvement_suggestions": [
+    "Minor accuracy improvements at 3 and 10 o'clock positions",
+    "Could potentially achieve even faster time while maintaining accuracy"
+  ],
+  "video_id": "mUBZoSO3KA8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:20:50.885766+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.886300+00:00"
+  },
+  "scoreable": true
+}

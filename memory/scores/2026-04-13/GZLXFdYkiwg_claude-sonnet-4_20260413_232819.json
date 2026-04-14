@@ -1,0 +1,32 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "End-to-Side Vascular Anastomosis",
+  "cannot_determine": [
+    "FLS score - this is a vascular anastomosis demonstration, not an FLS/MISTELS task"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "double-anchor suturing technique for vascular anastomosis",
+      "proper needle angle for vessel wall penetration",
+      "continuous suturing with appropriate spacing",
+      "heel and toe anchor placement",
+      "tension management during vessel approximation",
+      "precise needle driving through vessel walls"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "avoiding excessive tension on suture line",
+      "maintaining consistent bite depth through vessel wall",
+      "preventing purse-string effect with proper spacing"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear title slide identifies this as vascular anastomosis demonstration, not FLS task. Video shows expert-level technique for end-to-side anastomosis using double-anchor method.",
+  "video_id": "GZLXFdYkiwg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:28:19.711610+00:00",
+  "scoreable": false
+}

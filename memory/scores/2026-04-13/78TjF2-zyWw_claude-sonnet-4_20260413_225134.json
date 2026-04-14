@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_title",
+      "description": "Title screen showing 'Tubal Sterilization Bipolar Coagulation'",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 65.0,
+      "phase": "coagulation_demonstration",
+      "description": "Bipolar coagulation being applied to left fallopian tube with visible blue marking",
+      "technique_notes": "Demonstrates proper bipolar placement for tissue coagulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 83.0,
+      "phase": "tissue_manipulation",
+      "description": "Uterine manipulator being used to position anatomy for optimal visualization",
+      "technique_notes": "Shows importance of anatomical positioning during procedure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 113.0,
+      "phase": "bilateral_procedure",
+      "description": "Bipolar instruments positioned on right fallopian tube with coagulation",
+      "technique_notes": "Demonstrates bilateral approach to tubal sterilization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 134.0,
+      "phase": "documentation",
+      "description": "Final documentation view showing completed bilateral coagulation sites",
+      "technique_notes": "Shows proper documentation of completed procedure",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "note": "This video shows tubal sterilization via bipolar coagulation, not FLS Task 3 (Ligating Loop). Cannot assess FLS endoloop performance metrics."
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "Not applicable - video content does not match FLS Task 3"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows tubal sterilization procedure using bipolar coagulation, not FLS endoloop task. Content is instructional/educational showing surgical technique.",
+  "cannot_determine": [
+    "FLS Task 3 endoloop performance - video shows different procedure entirely"
+  ],
+  "technique_summary": "This is an instructional video demonstrating tubal sterilization using bipolar coagulation, not FLS Task 3 ligating loop performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "bipolar coagulation technique for fallopian tubes",
+      "proper instrument positioning for tissue coagulation",
+      "uterine manipulation for optimal visualization",
+      "bilateral surgical approach",
+      "systematic documentation of coagulation sites"
+    ],
+    "verbal_cues": [
+      "Instructions visible in UI for coagulation steps",
+      "Step-by-step guidance for bilateral procedure"
+    ],
+    "common_errors_addressed": [
+      "ensuring adequate coagulation coverage",
+      "proper anatomical identification before coagulation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "78TjF2-zyWw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:51:34.593968+00:00",
+  "scoreable": false
+}

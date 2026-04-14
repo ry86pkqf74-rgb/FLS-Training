@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to score this task based on the provided images as they do not contain the necessary video frames or context for an FLS task evaluation. Please provide sequential video frames or detailed descriptions from the \"Endoloop\" task for scoring.",
+  "video_id": "RRioxYjpIJY",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:17:42.677131+00:00",
+  "task_id": "task3_endoloop",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.836934+00:00"
+  },
+  "scoreable": false
+}

@@ -1,0 +1,15 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - no FLS task visible",
+  "reasoning": "The provided frames show two individuals in a video conference or webinar setting. The left panel shows a man wearing headphones and business attire. The right panel shows a woman in professional clothing. There is no visible FLS trainer box, laparoscopic instruments, gauze, foam appendages, Penrose drains, pegs, or any surgical training equipment. No task-relevant activity is occurring.",
+  "video_content_summary": "This appears to be a remote video call or instructional webinar between two participants. No FLS task performance is visible.",
+  "cannot_score": true,
+  "reason": "No FLS task activity is present in the video frames. Scoring cannot be performed without visible task-specific equipment and performance.",
+  "recommendation": "Verify that the correct video file was submitted. FLS task videos should show the trainer box with task-specific equipment and instruments performing the task.",
+  "video_id": "QPE0osaKjz0",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:01:43.111898+00:00",
+  "scoreable": false
+}

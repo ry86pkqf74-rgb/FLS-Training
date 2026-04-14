@@ -1,0 +1,20 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason_not_scored": "This video documents a training course (Computerised GI Endoscopy Simulator, Dry Lab, Upper GI Endoscopy Course) showing participants in a classroom/lab setting observing endoscopy simulator demonstrations. The content consists of wide-angle room shots, simulator screen views, and instructor interactions with trainees. This is educational/instructional material with narration overlay (text at bottom of frames), not a recorded performance of an FLS task by a single trainee that can be scored against the official rubric.",
+  "content_observed": [
+    "Multiple participants standing in a training lab environment",
+    "GI endoscopy simulator displays showing anatomical views and tool manipulation",
+    "Instructor demonstrations on a computerised endoscopy trainer",
+    "Group learning context with no individual task performance timing",
+    "Educational overlays and captions identifying the course"
+  ],
+  "scoring_not_applicable": "No individual trainee performing a timed FLS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). The video is a documentary/educational recording of a simulator training course, not a scoreable performance video.",
+  "confidence": 0.99,
+  "video_id": "NSKqcn68cmM",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:53:11.720647+00:00",
+  "scoreable": false
+}

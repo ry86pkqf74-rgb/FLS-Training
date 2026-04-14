@@ -60,5 +60,11 @@
     "Maintain consistent pace throughout all 6 transfers",
     "Focus on completing the full transfer sequence"
   ],
-  "confidence_score": 0.45
+  "confidence_score": 0.45,
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.742798+00:00"
+  },
+  "scoreable": false
 }

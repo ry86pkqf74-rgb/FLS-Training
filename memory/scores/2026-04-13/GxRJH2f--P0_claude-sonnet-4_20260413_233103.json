@@ -1,0 +1,100 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Black screen with no visible content",
+      "technique_notes": "Video opening frame",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "educational_content",
+      "description": "Anatomical illustration showing female pelvis with reproductive organs in blue translucent view",
+      "technique_notes": "Medical educational diagram showing anatomical context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "educational_content",
+      "description": "Close-up view of female reproductive anatomy showing fallopian tubes and ovaries",
+      "technique_notes": "Detailed anatomical visualization for educational context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "educational_content",
+      "description": "3D rendered view showing nerve pathways and anatomical structures",
+      "technique_notes": "Advanced anatomical illustration with nerve mapping",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "educational_content",
+      "description": "Text overlay showing 'Birth control methods' with bullet points including Abstinence, Contraception, Sterilization",
+      "technique_notes": "Educational content listing contraceptive options",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "educational_content",
+      "description": "Laparoscopic view showing camera insertion into abdomen with reproductive organs visible",
+      "technique_notes": "Demonstration of laparoscopic approach to tubal ligation procedure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 20.0,
+      "phase": "educational_content",
+      "description": "Text overlay 'Laparotomy Tubal Ligation' over anatomical view",
+      "technique_notes": "Title card identifying the surgical procedure being demonstrated",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is educational content about tubal ligation procedures, not an FLS task performance",
+  "cannot_determine": [
+    "Task completion time",
+    "Performance penalties",
+    "FLS score"
+  ],
+  "technique_summary": "Not applicable - this is educational content about tubal ligation procedures rather than FLS task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic camera insertion",
+      "anatomical identification of reproductive organs",
+      "visualization of tubal structures for ligation"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "GxRJH2f--P0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:31:03.153987+00:00",
+  "scoreable": false
+}

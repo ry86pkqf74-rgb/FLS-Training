@@ -1,0 +1,186 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Endoloop task setup visible with red foam appendage mounted on trainer board",
+      "technique_notes": "Task environment properly prepared, appendage appears intact",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "loop_deploy",
+      "description": "Black grasper introducing endoloop into field, approaching foam appendage",
+      "technique_notes": "Smooth instrument entry, loop appears pre-tied and ready for deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "target_approach",
+      "description": "Loop being positioned over the foam appendage, grasper manipulating loop opening",
+      "technique_notes": "Good control of loop opening, approaching target systematically",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "loop_placement",
+      "description": "Loop being placed around foam appendage, positioning near marked line",
+      "technique_notes": "Loop appears to be positioned at appropriate level on appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "loop_placement",
+      "description": "Continuing to position loop at target location on appendage",
+      "technique_notes": "Fine adjustments being made to achieve proper positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "cinch",
+      "description": "Beginning to cinch the loop tight around the appendage",
+      "technique_notes": "Loop tightening process initiated, good technique visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "cinch",
+      "description": "Loop appears tightly cinched around appendage at target location",
+      "technique_notes": "Loop appears secure and properly positioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 48.0,
+      "phase": "cut_tail",
+      "description": "Grasper positioning to cut excess suture tail",
+      "technique_notes": "Appropriate positioning for tail cutting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 60.0,
+      "phase": "completion",
+      "description": "Task appears completed with loop secured around appendage",
+      "technique_notes": "Clean completion, appendage intact, loop properly positioned",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 60.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 8,
+      "end_seconds": 15,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 15,
+      "end_seconds": 35,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 35,
+      "end_seconds": 50,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 50,
+      "end_seconds": 60,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_positioning_deviation",
+      "description": "Loop appears to be positioned slightly below optimal mark line",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        11,
+        15,
+        17
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "successful": true,
+      "smooth_technique": true,
+      "notes": "Clean deployment with good instrument control"
+    },
+    "positioning_accuracy": {
+      "deviation_from_mark_mm": 2.0,
+      "within_acceptable_range": true,
+      "confidence": 0.6
+    },
+    "cinching_quality": {
+      "tightly_secured": true,
+      "loop_slippage": false,
+      "notes": "Loop appears well-secured around appendage"
+    },
+    "appendage_integrity": {
+      "transected": false,
+      "damaged": false,
+      "notes": "Appendage remains intact throughout procedure"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 60.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 118.0,
+    "formula_applied": "180 - 60.0 - 2.0 = 118.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Good visibility of most key elements. Some uncertainty about exact positioning relative to mark due to camera angle and lighting, but overall technique and completion clearly observed.",
+  "cannot_determine": [
+    "Exact millimeter deviation from marked line due to camera angle and lighting conditions",
+    "Precise tightness assessment of final loop cinching"
+  ],
+  "technique_summary": "Competent performance with smooth instrument handling and systematic approach. Total time of 60 seconds falls within intermediate range but approaches expert benchmark.",
+  "strengths": [
+    "Smooth loop deployment and manipulation",
+    "Systematic approach to positioning",
+    "Good instrument control throughout",
+    "Clean task completion without appendage damage"
+  ],
+  "improvement_suggestions": [
+    "Focus on more precise initial positioning to minimize adjustment time",
+    "Practice loop placement to achieve exact mark alignment consistently"
+  ],
+  "video_id": "NjORVWKvC_s",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:08:57.483291+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.828078+00:00"
+  },
+  "scoreable": true
+}

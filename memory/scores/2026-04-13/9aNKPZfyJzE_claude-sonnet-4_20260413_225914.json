@@ -1,0 +1,59 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task performed",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Healthcare professional in white coat with blue scrubs speaking to camera in office setting with diplomas visible",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "preoperative_care_section",
+      "description": "Green overlay text displays 'PREOPERATIVE CARE' as presenter continues speaking",
+      "technique_notes": "Structured educational content with section headers",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 12.0,
+      "phase": "intraoperative_care_section",
+      "description": "Text overlay changes to 'INTRAOPERATIVE CARE' with continued presentation",
+      "technique_notes": "Sequential educational modules",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 22.0,
+      "phase": "postoperative_care_section",
+      "description": "Text overlay displays 'PACU AND ONGOING POSTOPERATIVE CARE' as final section",
+      "technique_notes": "Comprehensive perioperative care curriculum",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "perioperative care overview",
+      "structured educational presentation"
+    ],
+    "verbal_cues": [
+      "speaking to camera throughout video"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear educational video format with no FLS task equipment or performance visible. Professional presenting perioperative care concepts with text overlays.",
+  "cannot_determine": [],
+  "technique_summary": "Educational presentation covering preoperative, intraoperative, and postoperative care concepts. Not an FLS task performance or demonstration.",
+  "video_id": "9aNKPZfyJzE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:59:14.276465+00:00",
+  "scoreable": false
+}

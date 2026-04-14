@@ -1,0 +1,211 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_introduction",
+      "description": "Red foam organ with three appendages visible. Grasper and ligating loop with pusher are entering the field from upper right.",
+      "technique_notes": "Clean introduction; loop material clearly visible in pre-loaded state.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "loop_positioning",
+      "description": "Grasper is opening the loop around the middle appendage. Loop is being guided to encompass the target appendage at its base.",
+      "technique_notes": "Smooth grasper control; loop opening is controlled and deliberate.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "loop_positioning",
+      "description": "Loop is now fully open and positioned around the middle appendage near its base.",
+      "technique_notes": "Excellent positioning; loop appears centered at the marked level on the appendage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "loop_positioning",
+      "description": "Grasper is withdrawing from the loop. Loop remains in position around appendage.",
+      "technique_notes": "Controlled withdrawal; loop remains secure and properly positioned.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher with loop material is being advanced. Visible score mark on pusher shaft indicating where break should occur.",
+      "technique_notes": "Smooth pusher advancement; knot cinching begins.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher continues advancing; knot is tightening around appendage base. Loop material visible being cinched.",
+      "technique_notes": "Even cinching pressure; loop securing at marked level.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Knot is now secured at the base of the appendage. Pusher is being advanced to the score line for breaking.",
+      "technique_notes": "Loop appears tightly cinched at the target mark. Appendage base shows proper ligation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher reaches the score mark. Breaking occurs at the predetermined line, separating the pusher from the loop tail.",
+      "technique_notes": "Clean break at score line. Pusher separates cleanly from loop tail material.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 16.0,
+      "phase": "tail_cut",
+      "description": "Scissors are being introduced to cut the loop tail material. Tail is visible extending from the appendage base.",
+      "technique_notes": "Proper scissors approach; tail is accessible for cutting.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "tail_cut",
+      "description": "Scissors are cutting the loop tail material close to the knot. Cut is being made inside the trainer field.",
+      "technique_notes": "Clean scissors movement; tail cut appears to be inside the trainer as required.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 20.0,
+      "phase": "tail_cut",
+      "description": "Tail has been cut. Loop material is completely separated and secured on appendage.",
+      "technique_notes": "Final cut complete. Loop knot remains secure at marked level on appendage base.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 20.0,
+  "phase_timings": [
+    {
+      "phase": "loop_introduction",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_positioning",
+      "start_seconds": 1,
+      "end_seconds": 7,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "pusher_break_and_advancement",
+      "start_seconds": 7,
+      "end_seconds": 16,
+      "duration_seconds": 9,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "tail_cut",
+      "start_seconds": 16,
+      "end_seconds": 20,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "target_appendage_correct": true,
+      "knot_at_marked_level": true,
+      "deviation_from_mark_mm": 0,
+      "confidence": 0.95
+    },
+    "loop_security": {
+      "appears_secure_at_mark": true,
+      "tight_cinching_observed": true,
+      "no_slip_visible": true,
+      "confidence": 0.98
+    },
+    "pusher_break": {
+      "broken_at_score_line": true,
+      "clean_separation": true,
+      "performed_outside_trainer": true,
+      "confidence": 0.98
+    },
+    "tail_cut": {
+      "cut_inside_trainer": true,
+      "complete_separation": true,
+      "cut_location_appropriate": true,
+      "confidence": 0.95
+    },
+    "tissue_integrity": {
+      "appendage_damage": "none",
+      "foam_intact": true,
+      "no_transection": true,
+      "confidence": 0.99
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 20.0,
+    "total_penalties": 0,
+    "total_fls_score": 160.0,
+    "formula_applied": "180 - 20.0 - 0 = 160.0"
+  },
+  "confidence": 0.96,
+  "confidence_rationale": "Excellent video quality with clear visualization of all task phases. Loop positioning, knot security, and final cut all clearly visible. Knot at marked level observable with high confidence. Pusher break and tail cut both performed cleanly with full visibility. No penalties identified.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level performance. This is a demonstration video showing optimal endoloop technique. Rapid execution (20 seconds vs 53-second expert benchmark at Wisconsin), perfect loop placement at marked level, tight cinching, clean pusher break at scored line, and proper tail cut inside trainer. No tissue damage or complications.",
+  "strengths": [
+    "Exceptionally fast completion time (20 seconds)",
+    "Perfect loop positioning at marked level on middle appendage",
+    "Smooth grasper control during loop opening and withdrawal",
+    "Even cinching pressure with no slippage",
+    "Clean pusher break at scored line outside trainer",
+    "Proper tail cut inside trainer with clean scissors technique",
+    "No trauma to foam appendage or organ",
+    "Complete task execution with zero penalties"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Controlled loop introduction and positioning around target appendage",
+      "Proper grasper manipulation to open loop without dropping it",
+      "Even cinching pressure for secure knot placement at marked level",
+      "Pusher advancement with controlled pressure",
+      "Accurate pusher break at the scored line outside the trainer",
+      "Proper scissors technique for tail cut inside the trainer",
+      "Appendage control during all phases to maintain loop security"
+    ],
+    "verbal_cues": [
+      "Title card: 'Tubal Ligation' identifies the clinical context"
+    ],
+    "common_errors_addressed": [
+      "Avoiding loop misplacement on wrong appendage by careful initial positioning",
+      "Maintaining loop security throughout cinching to prevent slippage",
+      "Breaking pusher at correct score line rather than proximal or distal to mark",
+      "Cutting tail inside trainer rather than outside to complete task safely",
+      "Avoiding appendage damage by proper cinching technique and controlled grasper use"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is an expert demonstration video; no improvements applicable. Performance represents ideal technique for educational reference."
+  ],
+  "video_id": "8si35f5pa8k",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:56:57.004904+00:00",
+  "scoreable": true
+}

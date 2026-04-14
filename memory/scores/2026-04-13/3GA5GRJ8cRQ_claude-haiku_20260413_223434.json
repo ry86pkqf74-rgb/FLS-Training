@@ -1,0 +1,35 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Patient Positioning for Thoracotomy",
+  "content_type": "Educational demonstration - clinical skill (not FLS task)",
+  "reason_not_scored": "This video is an instructional demonstration of patient positioning techniques for thoracotomy surgery, not an FLS (Fundamentals of Laparoscopic Surgery) task. FLS tasks are standardized laparoscopic procedural simulations (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, Intracorporeal Suture). This content shows bedside clinical teaching with multiple trainees and an attending surgeon demonstrating manual positioning of a patient on a bed/table \u2014 this is not a timed, scored laparoscopic trainer exercise.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Patient supine to lateral positioning transition",
+      "Support of dependent arm and leg during positioning",
+      "Proper alignment of torso for thoracic access",
+      "Use of pillows and padding for patient safety and exposure",
+      "Communication and coordination among multiple handlers"
+    ],
+    "verbal_cues": [
+      "Instructor directing trainees on hand placement and support points",
+      "Emphasis on gentle, controlled movement"
+    ],
+    "common_errors_addressed": [
+      "Avoiding unsupported limb movement that could cause strain",
+      "Maintaining spinal alignment during lateral rotation",
+      "Ensuring adequate padding between dependent surfaces and patient"
+    ],
+    "skill_level_demonstrated": "intermediate",
+    "educational_focus": "Clinical bedside positioning technique for thoracic surgical access"
+  },
+  "score": "N/A \u2014 Not an FLS task",
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly labeled as 'Sample of Instructional Video: Patient Positioning for Thoracotomy' with copyright by General & Thoracic Surgery Education. Content is educational clinical demonstration, not a standardized FLS simulator task.",
+  "video_id": "3GA5GRJ8cRQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:34:34.376125+00:00",
+  "scoreable": false
+}

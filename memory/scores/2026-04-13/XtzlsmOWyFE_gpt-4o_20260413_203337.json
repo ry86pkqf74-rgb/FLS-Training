@@ -1,0 +1,150 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 8.0,
+      "phase": "initial_cut",
+      "description": "Instruments positioned at starting point of the marked circle.",
+      "technique_notes": "Proper alignment at start.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 20.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting initiated along the marked line clockwise.",
+      "technique_notes": "Maintaining close proximity to the marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 33.0,
+      "phase": "clockwise_cut",
+      "description": "Continued cutting around circumference.",
+      "technique_notes": "Steady progression with consistent hand motion.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 45.0,
+      "phase": "counterclockwise_cut",
+      "description": "Switch to counterclockwise cut to adjust angle.",
+      "technique_notes": "Smooth transition; slightly deviated in one segment.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Approx. 3mm outside marked line at one point.",
+          "points_deducted": 3.0,
+          "frame_evidence": [
+            9
+          ],
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 57.0,
+      "phase": "counterclockwise_cut",
+      "description": "Completing the circle cut.",
+      "technique_notes": "Final cuts guided towards completion.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 85.0,
+      "phase": "completion",
+      "description": "Disc is fully cut, instruments withdrawn.",
+      "technique_notes": "Disc appears smooth; minor wavering in cut line.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 87.0,
+  "phase_timings": [
+    {
+      "phase": "initial_cut",
+      "start_seconds": 8,
+      "end_seconds": 20,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 20,
+      "end_seconds": 45,
+      "duration_seconds": 25,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 45,
+      "end_seconds": 70,
+      "duration_seconds": 25,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 70,
+      "end_seconds": 87,
+      "duration_seconds": 17,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Approx. 3mm outside marked line at one point.",
+      "points_deducted": 3.0,
+      "frame_evidence": [
+        9
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "line_cut_quality": {
+      "max_deviation_observed_mm": 3.0,
+      "total_observable_deviation_penalty": 3.0,
+      "deviation_points": [
+        {
+          "point": "top-right",
+          "deviation_mm": 3.0
+        }
+      ],
+      "complete_circumference_cut": true,
+      "confidence": 0.8
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 87.0,
+    "total_penalties": 3.0,
+    "total_fls_score": 210.0,
+    "formula_applied": "300 - 87.0 - 3.0 = 210.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear view of cutting process with high visibility of deviation.",
+  "cannot_determine": [],
+  "technique_summary": "Exhibits high proficiency with minor deviation. Efficient use of time.",
+  "strengths": [
+    "Precise initial alignment and steady hand throughout.",
+    "Smooth transition between cutting directions."
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining blade precisely on line to avoid minor deviations.",
+    "Consider practicing cut anticipation to mitigate small alignment shifts."
+  ],
+  "video_id": "XtzlsmOWyFE",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:33:37.576861+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.849738+00:00"
+  },
+  "scoreable": true
+}

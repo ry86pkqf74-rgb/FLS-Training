@@ -1,0 +1,75 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "media_introduction",
+      "description": "Fox 28 news broadcast title screen showing Columbus, Ohio, date 3/5/2008",
+      "technique_notes": "Not applicable - broadcast introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "equipment_demonstration",
+      "description": "External view of laparoscopic trainer box with yellow pegboard containing black objects and two instrument ports",
+      "technique_notes": "Standard FLS peg transfer setup visible with 6 objects on left side pegs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "monitor_view_demonstration",
+      "description": "Laparoscopic view on monitor showing pegboard with objects, demonstrating camera perspective",
+      "technique_notes": "Good camera positioning showing full working field",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "brief_task_demonstration",
+      "description": "Laparoscopic view showing graspers approaching objects on pegs",
+      "technique_notes": "Demonstration of bilateral instrument coordination",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is a news broadcast segment about laparoscopic training rather than a scored performance",
+  "cannot_determine": [
+    "Task performance metrics - this is educational media content showing equipment and brief demonstrations"
+  ],
+  "technique_summary": "News segment showcasing laparoscopic surgery training at Riverside Methodist Hospital featuring peg transfer task demonstration",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic trainer box setup",
+      "bilateral instrument coordination",
+      "camera positioning for optimal field view",
+      "peg transfer task methodology"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_overview"
+  },
+  "improvement_suggestions": [],
+  "video_id": "B_I0Q3KJ82Y",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:06:26.957447+00:00",
+  "scoreable": false
+}

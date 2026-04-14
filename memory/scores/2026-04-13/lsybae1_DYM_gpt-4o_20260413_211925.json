@@ -1,0 +1,171 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "initial",
+      "description": "Setup showing Penrose drain at start of task.",
+      "technique_notes": "No activity yet.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "needle_load",
+      "description": "Needle is grasped with right needle driver and oriented correctly.",
+      "technique_notes": "Good initial grasp on needle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "suture_placement",
+      "description": "Needle being positioned for entry at marked positions.",
+      "technique_notes": "Angles look correct; potential issues with suture path.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "first_throw",
+      "description": "Surgeon's knot initiated, double throw started.",
+      "technique_notes": "Good knot formation observed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "second_throw",
+      "description": "Second single throw being executed.",
+      "technique_notes": "Proper execution of second throw.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 26.0,
+      "phase": "third_throw",
+      "description": "Third single throw started, hand switching observed.",
+      "technique_notes": "Satisfactory hand switch and tension maintainance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 34.0,
+      "phase": "suture_cut",
+      "description": "Suture ends cut inside trainer; final task completion.",
+      "technique_notes": "Clean cutting observed.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 36.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 4,
+      "end_seconds": 10,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 10,
+      "end_seconds": 18,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 18,
+      "end_seconds": 26,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 26,
+      "end_seconds": 34,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Proper tension and structure."
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Smooth execution."
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Secure throw with appropriate alternating."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": "cannot_determine",
+      "deviation_from_mark2_mm": "cannot_determine",
+      "total_deviation_penalty": 0,
+      "confidence": 0.5
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete and secure"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 36.0,
+    "total_penalties": 0,
+    "total_fls_score": 564.0,
+    "formula_applied": "600 - 36.0 - 0 = 564.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear view and consistent execution; knot security well-observed.",
+  "cannot_determine": [
+    "Exact mm deviation at suture entry points due to angle."
+  ],
+  "technique_summary": "Highly competent execution with secure knots and no visible deviations.",
+  "strengths": [
+    "Smooth instrument handling.",
+    "Consistent hand switching across throws."
+  ],
+  "improvement_suggestions": [
+    "Ensure perpendicular entry to further reduce potential deviation."
+  ],
+  "video_id": "lsybae1_DYM",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:19:25.422560+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.885378+00:00"
+  },
+  "scoreable": true
+}

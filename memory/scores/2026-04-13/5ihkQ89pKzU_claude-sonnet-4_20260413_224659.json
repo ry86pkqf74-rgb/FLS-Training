@@ -1,0 +1,95 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Cannot determine - instructional content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_presentation",
+      "description": "Instructor seated facing camera in professional setting",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "demonstration_preparation",
+      "description": "Instructor holding what appears to be a suture or thread material",
+      "technique_notes": "Demonstrating material handling technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "knot_demonstration",
+      "description": "Instructor demonstrating hand positioning for knot tying with thread",
+      "technique_notes": "Teaching proper finger placement and thread control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "technique_instruction",
+      "description": "Instructor showing thread manipulation with both hands visible",
+      "technique_notes": "Demonstrating bilateral hand coordination for suture control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 45.0,
+      "phase": "detailed_demonstration",
+      "description": "Close view of hands demonstrating suture material handling",
+      "technique_notes": "Showing proper grip and thread tension control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 57.0,
+      "phase": "continued_instruction",
+      "description": "Instructor continuing demonstration with suture material",
+      "technique_notes": "Reinforcing key teaching points about thread manipulation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is instructional content, not a performance to be scored",
+  "cannot_determine": [
+    "Specific FLS task being demonstrated",
+    "Performance metrics - this is educational content"
+  ],
+  "technique_summary": "Educational demonstration of suture handling and knot tying principles",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper suture material grip and control",
+      "Bilateral hand coordination for thread manipulation",
+      "Basic knot tying hand positioning",
+      "Thread tension management"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper thread grip leading to poor control",
+      "Inadequate hand coordination during manipulation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "5ihkQ89pKzU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:46:59.867371+00:00",
+  "scoreable": false
+}

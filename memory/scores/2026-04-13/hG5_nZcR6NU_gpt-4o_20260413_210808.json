@@ -1,0 +1,109 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Initial needle pickup with the left instrument.",
+      "technique_notes": "Smooth needle grasp with the left hand.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.05,
+      "phase": "transfer_midair",
+      "description": "Needle transitioning from left to right instrument.",
+      "technique_notes": "Clean transfer without dropping.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.11,
+      "phase": "place_dominant",
+      "description": "Needle placed through the first ring successfully.",
+      "technique_notes": "Correct placement with minimal error.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 0.43,
+      "phase": "pickup_nondominant",
+      "description": "Pickup with the left hand for reverse direction.",
+      "technique_notes": "Efficient pickup.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 0.54,
+      "phase": "transfer_midair",
+      "description": "Needle transfer in reverse direction.",
+      "technique_notes": "Controlled transfer.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 1.05,
+      "phase": "place_dominant",
+      "description": "Final placement through the last ring.",
+      "technique_notes": "Successful final placement without errors.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 123.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 5.0,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 5.1,
+      "end_seconds": 11.0,
+      "duration_seconds": 5.9,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 11.1,
+      "end_seconds": 23.0,
+      "duration_seconds": 11.9,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 123.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 177.0,
+    "formula_applied": "300 - 123.0 - 0.0 = 177.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear visibility of the needle transfer and placement phases.",
+  "cannot_determine": [],
+  "technique_summary": "Consistent performance with precise needle transfers and placements.",
+  "strengths": [
+    "Smooth transitions between pegs.",
+    "Efficient use of both instruments."
+  ],
+  "improvement_suggestions": [
+    "Increase speed to reduce overall task completion time."
+  ],
+  "video_id": "hG5_nZcR6NU",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:08:08.818391+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.876195+00:00"
+  },
+  "scoreable": true
+}

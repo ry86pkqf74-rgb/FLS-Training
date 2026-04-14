@@ -1,0 +1,73 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "This is an educational presentation, not an FLS task performance",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_title",
+      "description": "Academic presentation title slide about laparoscopic simulation program implementation in Dominican Republic",
+      "technique_notes": "Educational content - not a performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "methods_description",
+      "description": "Methods slide showing simulation lab setup with residents practicing on laparoscopic trainers",
+      "technique_notes": "Study methodology presentation showing FLS tasks: peg transfer, precision cutting, intracorporeal knot tying",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "results_presentation",
+      "description": "Results slide with bar chart showing pre/post-test performance improvements",
+      "technique_notes": "Statistical data showing significant improvement in precision cutting and intracorporeal knot tying tasks",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic simulation training setup",
+      "FLS task implementation in low-resource settings",
+      "structured practice protocols for residents"
+    ],
+    "verbal_cues": [
+      "supervised practice 1hr/week methodology",
+      "importance of external resources and institutional commitment"
+    ],
+    "common_errors_addressed": [
+      "lack of formal laparoscopic training in developing countries",
+      "underutilization of simulation-based training"
+    ],
+    "skill_level_demonstrated": "intermediate"
+  },
+  "completion_time_seconds": "not_applicable",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": "not_applicable",
+    "time_used": "not_applicable",
+    "total_penalties": "not_applicable",
+    "total_fls_score": "not_applicable",
+    "formula_applied": "No scoring - this is educational content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear academic presentation slides with SAGES branding, study methodology, and statistical results - definitively instructional content, not a task performance",
+  "cannot_determine": [],
+  "technique_summary": "Academic presentation demonstrating successful implementation of FLS training program showing significant skill improvements in surgical residents",
+  "strengths": [
+    "Well-structured study methodology",
+    "Clear demonstration of simulation training effectiveness",
+    "Practical implementation guidance for resource-limited settings"
+  ],
+  "improvement_suggestions": [],
+  "video_id": "-JMbnPAeh0M",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:02:27.070215+00:00",
+  "scoreable": false
+}

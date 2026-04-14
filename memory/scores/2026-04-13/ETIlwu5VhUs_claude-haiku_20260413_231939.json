@@ -1,0 +1,13 @@
+{
+  "video_classification": "unusable",
+  "reason": "Video content is unrelated to FLS tasks. The frames show a school contest promotional video ('My School, My Pride Contest' for MMGPS alumni, February 3-5, 2021) with contest rules, contact information, and social media promotion. No laparoscopic surgical training equipment, instruments, or FLS task components are visible.",
+  "task_id": "unclassified",
+  "task_name": "N/A",
+  "cannot_score": true,
+  "note": "This is marketing/promotional content for an educational institution contest, not an FLS performance or training video.",
+  "video_id": "ETIlwu5VhUs",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:19:39.468087+00:00",
+  "scoreable": false
+}

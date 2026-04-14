@@ -1,0 +1,38 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Educational Overview of Suturing Techniques",
+  "note": "This video is an educational tutorial demonstrating multiple suturing techniques (Simple Suture, Simple Buried Suture, Vertical Mattress, Horizontal Mattress, Figure-of-8, Simple Running, Simple Running Locking, Subcuticular Closure, Complex Deep Wound Closure, and Skin Stapling & Removal) on a training model. It is NOT a performance of a single FLS task and therefore is NOT scored per FLS rubric.",
+  "video_type_rationale": "The video contains a menu system on the right side with technique names highlighted in sequence, showing different suturing methods being demonstrated on a trainer pad. This is clearly instructional/educational content with multiple techniques shown sequentially, not a single FLS task performance.",
+  "cannot_score_reasons": [
+    "Video demonstrates multiple different suturing techniques, not a single FLS task",
+    "No timer or completion time tracking visible",
+    "Educational demonstration format with menu interface, not a trainee performance",
+    "No specific FLS task rubric applies to this multi-technique overview"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Simple interrupted suture placement",
+      "Simple buried suture (subcuticular variation)",
+      "Vertical mattress suture",
+      "Horizontal mattress suture",
+      "Figure-of-8 suture pattern",
+      "Simple running suture",
+      "Simple running locking suture",
+      "Subcuticular closure",
+      "Complex deep wound closure with layering",
+      "Skin stapling and removal technique"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert",
+    "educational_intent": "Comprehensive overview of wound closure techniques for surgical training"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is unambiguous \u2014 it is a structured educational tutorial with menu-driven navigation showing multiple techniques, not a single FLS task performance.",
+  "video_id": "Akyr4zlBS9E",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:04:59.335796+00:00",
+  "scoreable": false
+}

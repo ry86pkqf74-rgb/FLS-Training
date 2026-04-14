@@ -1,0 +1,165 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black screen, task has not yet begun",
+      "technique_notes": "No instruments visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "loop_deploy",
+      "description": "L-hook cautery instrument engaging with green gauze and foam appendage setup",
+      "technique_notes": "Instrument appears to be cutting coagulated tissue, suggesting this is a different procedure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "loop_deploy",
+      "description": "Foam appendage with red marking visible, instruments manipulating tissue",
+      "technique_notes": "Red mark clearly visible on pink foam appendage - this appears to be the target zone",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 45.0,
+      "phase": "extracorporeal_preparation",
+      "description": "Hands outside trainer preparing suture material with loop formation",
+      "technique_notes": "Extracorporeal knot preparation visible - this appears to be suturing rather than endoloop deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "target_approach",
+      "description": "Return to trainer view with foam appendage and ligating loop visible",
+      "technique_notes": "Pre-tied loop now visible approaching the marked target area on appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 63.0,
+      "phase": "loop_placement",
+      "description": "Loop being positioned around the foam appendage at the red mark",
+      "technique_notes": "Loop appears to be at approximately the correct position relative to the marking",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 26,
+      "timestamp_seconds": 75.0,
+      "phase": "cinch",
+      "description": "Loop being tightened around the appendage",
+      "technique_notes": "Cinching motion visible, loop appears to be closing appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 28,
+      "timestamp_seconds": 81.0,
+      "phase": "completion",
+      "description": "Final positioning with loop secured around appendage",
+      "technique_notes": "Loop appears tightly secured around the foam appendage",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 81.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 3,
+      "end_seconds": 45,
+      "duration_seconds": 42,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 45,
+      "end_seconds": 60,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 60,
+      "end_seconds": 75,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 75,
+      "end_seconds": 81,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_placement_deviation",
+      "description": "Loop appears to be positioned slightly distal to the red mark",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        22,
+        26
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "successfully_deployed": true,
+      "deployment_time_seconds": 42,
+      "deployment_quality": "adequate"
+    },
+    "target_accuracy": {
+      "deviation_from_mark_mm": 2.0,
+      "placement_penalty": 2.0,
+      "confidence": 0.6
+    },
+    "loop_security": {
+      "tightly_cinched": true,
+      "appendage_transected": false,
+      "knot_integrity": "secure"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 81.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 97.0,
+    "formula_applied": "180 - 81.0 - 2.0 = 97.0"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Video quality allows clear observation of key phases and loop placement. However, exact measurement of deviation from mark is estimated due to camera angle. Task completion and timing are well-documented.",
+  "cannot_determine": [
+    "Exact millimeter deviation from red mark due to oblique camera angle",
+    "Whether this video represents a standard FLS endoloop task given the presence of cautery and tissue cutting elements"
+  ],
+  "technique_summary": "Intermediate level performance with successful loop deployment and securing. Total time of 81 seconds falls within novice range, with time lost primarily in the initial deployment phase. Final loop placement and cinching were executed efficiently.",
+  "strengths": [
+    "Successful loop deployment and securing",
+    "Efficient final cinching phase (6 seconds)",
+    "No appendage transection"
+  ],
+  "improvement_suggestions": [
+    "Reduce initial deployment time from 42s to under 20s for expert level",
+    "Improve precision of loop placement to minimize deviation from target mark",
+    "Practice smoother transition from deployment to targeting phase"
+  ],
+  "video_id": "mWylAVt48WY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:22:20.779914+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.887471+00:00"
+  },
+  "scoreable": true
+}

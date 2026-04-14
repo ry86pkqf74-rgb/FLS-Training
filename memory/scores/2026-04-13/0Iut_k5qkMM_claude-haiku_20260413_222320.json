@@ -1,0 +1,297 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_card",
+      "description": "Title slide: '@MIGS_TIPS KNOT TYING DROP NEEDLE TECHNIQUE' with J.J. Woo M.D. credit",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "setup",
+      "description": "Model setup showing Penrose drain with blue suture and two needle drivers visible. Drain positioned on pink practice board with target marks visible.",
+      "technique_notes": "Drop needle technique setup. Two drivers ready. Blue suture clearly marked.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "suture_introduction",
+      "description": "Right needle driver positioning suture over the drain. Suture lies across the target slit area. Drivers positioned for first pass.",
+      "technique_notes": "Needle driver controls suture trajectory. Drop needle technique uses needle driver to advance suture without needle driver grasping needle directly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "suture_introduction",
+      "description": "Left driver now grasps suture to guide first pass through drain. Blue suture stretched across marked targets.",
+      "technique_notes": "Coordinated two-hand control. Suture angle approaching perpendicular to drain axis.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "target_passes",
+      "description": "First pass in progress. Suture entering drain slit. Both drivers working in tandem to control suture entry angle and depth.",
+      "technique_notes": "Good control of entry angle. Suture passes cleanly through first mark. Appears to align with marked target line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "target_passes",
+      "description": "Suture now passing through drain with right driver maintaining downward force. Blue loop visible on suture as first pass completes.",
+      "technique_notes": "Clean pass. Suture trajectory remains controlled. No visible deviation from marked target.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "target_passes",
+      "description": "Second pass being set up. Right driver retracts, left driver repositions suture for return pass through second target mark.",
+      "technique_notes": "Smooth instrument exchange. Preparing for second mark penetration.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "target_passes",
+      "description": "Suture second pass proceeding. Drivers guide suture through second marked target. Blue suture creates loop pattern as shown.",
+      "technique_notes": "Second mark engagement. Suture placement appears aligned with marked target region. Good perpendicular approach.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 18.0,
+      "phase": "extracorporeal_throws",
+      "description": "First knot formation initiated. Suture ends held at tension by both drivers. Blue loop forming in extracorporeal space (outside trainer on model edge).",
+      "technique_notes": "Drop needle technique: knot tied outside the box using driver tips to manipulate suture. First throw configuration visible with red arrow annotation highlighting wrap direction.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 22.0,
+      "phase": "extracorporeal_throws",
+      "description": "First single throw being cinched. Drivers working in opposition to tighten knot loop. Knot configuration tightening visibly.",
+      "technique_notes": "Controlled cinching. Tension appears adequate but not excessive. Knot sits cleanly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 26.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw being formed. Suture ends repositioned for second loop. Knot pusher not yet visible\u2014throws being formed by driver manipulation alone.",
+      "technique_notes": "Second loop formation. Wrapping pattern consistent with first throw. Clean geometry.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 32.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw cinched. Knot stack building. Left driver holds tension as right driver tightens second throw. Knots sitting at drain entry site.",
+      "technique_notes": "Stacked knot appearance. Both throws appear secure. No visible slippage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 36.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw being formed. Suture ends repositioned again. Pattern continues with alternating driver control.",
+      "technique_notes": "Final throw setup. Consistent wrapping technique across all three throws.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 40.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw cinched tightly. All three knots now stacked and secure at drain entry point. Knot stack appears well-formed with red arrow annotation highlighting final cinch.",
+      "technique_notes": "Knot stack appears secure. Tension adequate. Drain slit region shows knots positioned at marked target area.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 44.0,
+      "phase": "slit_closure_assessment",
+      "description": "Knot positioned at drain slit. Visual inspection shows knot sitting directly on marked slit closure point. Drain slit appears to be closed by knot tension.",
+      "technique_notes": "Slit closure complete. Knot cinching has brought drain edges together. No visible gap at slit site.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 48.0,
+      "phase": "suture_cut",
+      "description": "Scissors brought into frame. Black scissors positioned to cut suture ends proximal to knot stack.",
+      "technique_notes": "Scissors approach. Suture ends still extending from knot. Positioning for clean cut.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 50.0,
+      "phase": "suture_cut",
+      "description": "First suture end being cut. Scissors closing on suture segment. Cut appears to be taking place outside trainer (extracorporeal region).",
+      "technique_notes": "First cut in progress. Suture length cut appears reasonable.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 52.0,
+      "phase": "suture_cut",
+      "description": "Second suture end cut. Both suture tails now severed. Knot remains secured at drain slit. Task approaching completion.",
+      "technique_notes": "Both ends cut. Knot secure. Slit appears closed. Drain intact.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [
+    {
+      "phase": "suture_introduction",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_passes",
+      "start_seconds": 8,
+      "end_seconds": 18,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_throws",
+      "start_seconds": 18,
+      "end_seconds": 44,
+      "duration_seconds": 26,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "slit_closure_assessment",
+      "start_seconds": 44,
+      "end_seconds": 48,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 48,
+      "end_seconds": 52,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "first_pass_alignment": "on_target",
+      "second_pass_alignment": "on_target",
+      "deviation_from_marks_mm": 0,
+      "confidence": 0.75,
+      "notes": "Both target passes appear aligned with marked slit. Perpendicular entry angle maintained."
+    },
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "single_throw",
+        "formed_by": "driver_manipulation",
+        "appears_secure": true,
+        "cinch_quality": "tight",
+        "notes": "First throw cleanly formed and cinched. No visible slippage."
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "formed_by": "driver_manipulation",
+        "appears_secure": true,
+        "cinch_quality": "tight",
+        "notes": "Second throw stacked cleanly on first. Consistent wrapping pattern."
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "formed_by": "driver_manipulation",
+        "appears_secure": true,
+        "cinch_quality": "tight",
+        "notes": "Third throw completes knot stack. Final configuration appears stable."
+      }
+    ],
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete",
+      "knot_position": "at_marked_target",
+      "notes": "Drain slit fully closed by knot tension. No visible gaps. Drain remains intact and properly positioned."
+    },
+    "technique_assessment": {
+      "method": "drop_needle_technique",
+      "description": "Demonstrates drop needle technique for extracorporeal knot tying using needle driver tips to manipulate suture without grasping needle directly",
+      "instrument_control": "excellent",
+      "flow": "smooth"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": "cannot_determine_from_instructional_video",
+    "total_penalties": 0,
+    "total_fls_score": "cannot_compute",
+    "formula_applied": "N/A - instructional content"
+  },
+  "confidence": 0.5,
+  "confidence_rationale": "This is an instructional/educational video with title cards, annotations (red/blue overlays), and teaching commentary embedded. It demonstrates the drop needle technique for task 4 but does not represent an actual timed performance. Completion time cannot be accurately determined as video appears edited with narration and instructional overlays. Cannot score as a performance attempt per FLS guidelines.",
+  "cannot_determine": [
+    "Actual completion time - video is edited instructional content with pauses and annotations",
+    "Real-time performance assessment - this is a teaching demonstration, not a timed trainee performance",
+    "Whether knot pusher was used - video shows only driver manipulation; knot pusher not visible despite being required for task 4 specification"
+  ],
+  "video_classification_note": "This video is classified as 'instructional' rather than 'performance' because: (1) it contains title cards and educational branding (@MIGS_TIPS, J.J. Woo M.D.); (2) it includes graphical overlays (red/blue annotations highlighting technique); (3) intended purpose is teaching 'Drop Needle Technique' as stated in title; (4) video timing does not represent actual task performance timing.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Drop needle technique for extracorporeal knot tying",
+      "Suture introduction and target pass alignment",
+      "Coordinated two-hand driver control",
+      "Perpendicular needle driver entry angle",
+      "Extracorporeal loop formation using driver manipulation",
+      "Single throw cinching with opposing driver tension",
+      "Knot stacking of three throws",
+      "Drain slit closure verification",
+      "Suture cutting with scissors"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Proper perpendicular approach to avoid suture deviation",
+      "Clean driver-to-driver handoff without dropping suture",
+      "Adequate tension during knot cinching (neither too loose nor too tight)",
+      "Complete slit closure verification before cutting",
+      "Controlled suture cutting to avoid drain damage"
+    ],
+    "skill_level_demonstrated": "expert",
+    "instructor": "J.J. Woo M.D."
+  },
+  "technique_summary": "Expert demonstration of drop needle technique for task 4 (extracorporeal suture with knot tying). All completion requirements met: suture passes through both marked targets, three single throws formed and cinched extracorporeally, drain slit fully closed, both suture ends cut. Technique is clean, efficient, and educationally valuable. Video is a teaching resource rather than a scoreable performance.",
+  "strengths": [
+    "Clear visualization of drop needle technique using driver tips",
+    "Excellent suture placement alignment with marked targets",
+    "Consistent wrapping technique across all three throws",
+    "Smooth instrument exchanges without fumbling",
+    "Complete drain slit closure with stable knot",
+    "Proper final suture cutting technique"
+  ],
+  "improvement_suggestions_for_trainees": [
+    "Practice coordinating both drivers simultaneously to maintain suture tension during knot formation",
+    "Develop muscle memory for driver positioning to speed up throw cycles",
+    "Ensure perpendicular entry angle on first pass to avoid deviation penalties",
+    "Verify knot security before cutting to prevent slippage during final suture cut"
+  ],
+  "video_id": "0Iut_k5qkMM",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:23:20.022234+00:00",
+  "scoreable": false
+}

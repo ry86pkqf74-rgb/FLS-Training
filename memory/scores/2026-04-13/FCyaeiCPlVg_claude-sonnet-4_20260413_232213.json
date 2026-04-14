@@ -1,0 +1,63 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Suturing Training Product Demonstration",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "product_showcase",
+      "description": "Pink silicone laparoscopic suture pad with maze-like pattern displayed",
+      "technique_notes": "This is a training product demonstration, not an FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "laparoscopic_view",
+      "description": "Monitor showing laparoscopic view of suture pad with pre-marked suture points and instruments",
+      "technique_notes": "Live demonstration setup visible with 'Live Demonstration' overlay text",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "suturing_demonstration",
+      "description": "Needle driver performing suturing movements on the practice pad through laparoscope",
+      "technique_notes": "Demonstrates proper needle handling and suture placement techniques",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": null,
+  "confidence_rationale": "This is an instructional/product demonstration video, not a scoreable FLS task performance",
+  "cannot_determine": [
+    "Task completion time - this is a product demo",
+    "Specific FLS task being performed - video shows training equipment",
+    "Performance penalties - no actual task execution to evaluate"
+  ],
+  "technique_summary": "Product demonstration video showcasing a silicone laparoscopic suture training pad with various practice patterns for developing suturing skills.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper laparoscopic needle handling",
+      "Suture pad positioning for optimal practice",
+      "Use of pre-marked targets for accuracy training",
+      "Laparoscopic view management during suturing"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_demo"
+  },
+  "improvement_suggestions": [],
+  "video_id": "FCyaeiCPlVg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:22:13.195832+00:00",
+  "scoreable": false
+}

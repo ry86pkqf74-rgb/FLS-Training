@@ -1,0 +1,90 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Title slide for FLS Manual Skills Exam presentation",
+      "technique_notes": "Educational content - not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "setup",
+      "description": "Peg transfer setup showing 6 rubber objects on left pegs, graspers visible",
+      "technique_notes": "Standard setup with pink and brown objects arranged on pegs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "educational_demonstration",
+      "description": "Demonstration of alley-oop technique with graspers manipulating object",
+      "technique_notes": "Shows proper bimanual coordination for mid-air transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 18.0,
+      "phase": "educational_demonstration",
+      "description": "Instruction to rotate graspers 180 degrees for reverse direction",
+      "technique_notes": "Teaching proper technique for second half of task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 24.0,
+      "phase": "educational_demonstration",
+      "description": "Continued demonstration of alley-oop transfer technique",
+      "technique_notes": "Shows smooth bimanual coordination",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": null,
+    "direction_changes_completed": null,
+    "objects_dropped": 0,
+    "objects_remaining_at_timeout": 0,
+    "transfer_technique": "alley-oop demonstrated in educational content"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot compute - educational content, not performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "This is clearly educational content demonstrating technique, not an actual performance to be scored. Multiple frames show instructional text overlays.",
+  "cannot_determine": [
+    "Completion time - no actual task performance shown",
+    "FLS score - educational demonstration only",
+    "Performance penalties - no scored performance visible"
+  ],
+  "technique_summary": "Educational video demonstrating proper peg transfer technique including alley-oop method and 180-degree rotation for direction change. Not a scoreable performance.",
+  "strengths": [
+    "Clear demonstration of bimanual coordination",
+    "Good visualization of alley-oop technique",
+    "Proper instruction of directional change method"
+  ],
+  "improvement_suggestions": [
+    "This is educational content - no performance improvements to suggest"
+  ],
+  "video_id": "E6d80uknJAc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:47:56.497227+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.802133+00:00"
+  },
+  "scoreable": false
+}

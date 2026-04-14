@@ -1,0 +1,115 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Program Overview Presentation",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Blue gradient background with no content visible",
+      "technique_notes": "Opening slide transition",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "program_overview",
+      "description": "FLS overview slide explaining why FLS exists - training module for surgeons, validated assessment, ABS requirement",
+      "technique_notes": "Educational content about FLS purpose and mandate",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "target_audience",
+      "description": "Slide explaining who FLS is designed for - any surgeon using laparoscope including residents, fellows, faculty",
+      "technique_notes": "Broad applicability across surgical specialties",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "program_philosophy",
+      "description": "Universality slide - non-procedure based, fundamental skills, not for experts but minimally acceptable laparoscopist",
+      "technique_notes": "Emphasis on foundational competency rather than advanced skills",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "curriculum_structure",
+      "description": "5-year program curriculum breakdown showing progressive training from didactic sessions to formal testing",
+      "technique_notes": "Structured progression from Years 1-4 with specific hour allocations",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "testing_locations",
+      "description": "Map of United States showing FLS testing centers with 61 locations across North America",
+      "technique_notes": "Wide geographic availability of testing sites",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "implementation_options",
+      "description": "Institutional implementation packages from individual to educational packages with trainer boxes",
+      "technique_notes": "Multiple deployment options for different institutional needs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "contact_information",
+      "description": "How to access FLS - online portals, phone numbers, and upcoming conference information",
+      "technique_notes": "Multiple access methods provided",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear presentation slides with visible text content about FLS program overview",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is an educational presentation about the FLS program structure rather than a performance video",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": null,
+    "educational_topics_covered": [
+      "FLS program rationale and ABS mandate",
+      "Target audience across surgical specialties",
+      "Universality and fundamental skill focus",
+      "5-year curriculum structure with progressive complexity",
+      "Geographic availability of testing centers",
+      "Institutional implementation options",
+      "Access methods and contact information"
+    ],
+    "key_concepts_explained": [
+      "FLS as validated assessment tool",
+      "Non-procedure based training approach",
+      "Minimal competency standards rather than expert level",
+      "Integration into residency training programs",
+      "Multiple educational package options"
+    ]
+  },
+  "improvement_suggestions": [],
+  "video_id": "ResmTufTE4E",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:08:52.313914+00:00"
+}

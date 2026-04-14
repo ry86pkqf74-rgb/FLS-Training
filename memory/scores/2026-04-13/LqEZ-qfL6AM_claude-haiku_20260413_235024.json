@@ -1,0 +1,49 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparoscopic Urological Surgery Course Promotional/Educational Video",
+  "reasoning_for_classification": "This video is a promotional and educational compilation for a 'Laparoscopic Urological Surgery Course for Residents' directed by Jungle Chi-Hsiang WU and Yao-Chou TSAI. It contains course overview, instructor introductions, teaching vignettes about laparoscopic fundamentals, equipment demonstrations, and calls-to-action for registration. There is no single FLS task being performed by a trainee; instead, multiple educational segments are presented with narration, graphics overlays, and instructor commentary.",
+  "video_content_summary": "Promotional course video featuring: (1) title slides identifying the course as a Laparoscopic Urological Surgery Course for Residents; (2) instructor interviews and facility tours; (3) educational content on laparoscopic equipment, tools, energy sources, and pneumoperitoneum; (4) brief demonstrations of instrument handling and knot-tying techniques by instructors; (5) course highlights and objectives; (6) call-to-action messaging ('Register now', 'Guarantee your vacancy'); (7) closing credits with course directors' names.",
+  "fls_scoring_status": "NOT SCORED - Instructional/Promotional Content",
+  "score_computation": "null",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Basic laparoscopic instrument handling and grasping",
+      "Knot-tying fundamentals with laparoscopic instruments",
+      "Proper positioning and use of needle drivers",
+      "Hand coordination and instrument exchange during suturing"
+    ],
+    "verbal_cues": [
+      "To prepare resident doctors ready for safe practice of laparoscopic surgery",
+      "To describe and understand the equipment, tools, energy, and pneumoperitoneum",
+      "To present the fundamentals of laparoscopic techniques",
+      "Course is designed to prepare resident doctors for safe laparoscopic surgical practice"
+    ],
+    "common_errors_addressed": [
+      "Proper instrument grip and positioning (implicitly demonstrated through correct technique)",
+      "Systematic approach to knot-tying with alternating hand control",
+      "Understanding equipment and pneumoperitoneum management before hands-on practice"
+    ],
+    "skill_level_demonstrated": "intermediate_to_expert",
+    "target_audience": "Resident physicians preparing for laparoscopic surgical practice",
+    "course_objectives_identified": [
+      "Prepare residents for safe laparoscopic surgery practice",
+      "Teach fundamental laparoscopic techniques",
+      "Provide hands-on training with simulated models",
+      "Build competency in instrument handling and knot-tying"
+    ]
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video classification as instructional/promotional is definitive based on presence of: (1) course title slides and branding, (2) instructor introductions and facility tours, (3) multiple narrator overlays and educational graphics, (4) no single continuous FLS task performance, (5) registration calls-to-action. This is clearly an educational/marketing video, not a scored performance evaluation.",
+  "cannot_determine": [
+    "Specific FLS task performance metrics \u2014 no single task is performed to completion",
+    "Trainee performance score \u2014 video is not a performance evaluation",
+    "Individual task timing \u2014 demonstrations are brief and integrated into instructional narrative"
+  ],
+  "recommendation": "This video should NOT be scored using FLS rubrics. It is an institutional/course promotional video with educational content. Any individual technique demonstrations within the video are fragmentary and embedded in instructional context, not formal task performances. Instructors shown are demonstrating correct technique for teaching purposes, not undergoing timed evaluation.",
+  "video_id": "LqEZ-qfL6AM",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:50:24.603159+00:00",
+  "scoreable": false
+}

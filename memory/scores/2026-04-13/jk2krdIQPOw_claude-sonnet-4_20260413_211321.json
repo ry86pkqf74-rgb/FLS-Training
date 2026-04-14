@@ -1,0 +1,71 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black screen - video beginning",
+      "technique_notes": "No activity visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "setup",
+      "description": "LAPARO laparoscopic trainer visible with white dome and black ports",
+      "technique_notes": "Equipment setup complete",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 4.46,
+      "phase": "setup",
+      "description": "View of laparoscopic instruments and orange foam pieces visible on screen",
+      "technique_notes": "Timer shows 00:04:46, task setup visible",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": null,
+    "direction_reversal_completed": null,
+    "drops_outside_field": 0,
+    "objects_not_on_pegs": 0,
+    "task_completion_status": "incomplete_or_not_shown"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot compute - task performance not shown in provided frames"
+  },
+  "confidence": 0.1,
+  "confidence_rationale": "The provided frames show only the promotional/setup video for LAPARO equipment and brief glimpse of task setup. No actual peg transfer task performance is visible to assess.",
+  "cannot_determine": [
+    "Completion time - no task performance shown",
+    "Number of objects transferred - task not performed in visible frames",
+    "Any penalties - no task activity to assess",
+    "Final score - cannot assess without seeing task performance"
+  ],
+  "technique_summary": "No technique assessment possible as the provided frames contain only promotional content and equipment setup, not actual FLS peg transfer task performance.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Provide video frames showing actual task performance to enable proper FLS assessment"
+  ],
+  "video_id": "jk2krdIQPOw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:13:21.396983+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.880332+00:00"
+  },
+  "scoreable": false
+}

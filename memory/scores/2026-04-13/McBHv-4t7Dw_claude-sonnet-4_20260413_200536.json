@@ -1,0 +1,175 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Initial view showing two graspers positioned near circular targets arranged in a ring pattern. Right grasper approaching first target.",
+      "technique_notes": "Steady approach, good instrument control visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper has grasped first rubber object, preparing to lift from peg",
+      "technique_notes": "Clean grasp technique, object securely held",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "transfer_midair",
+      "description": "First object being transferred from right to left grasper in midair",
+      "technique_notes": "Smooth transfer motion, both instruments well controlled",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 15.0,
+      "phase": "place_dominant",
+      "description": "Left grasper placing first object onto corresponding peg on opposite side",
+      "technique_notes": "Precise placement, object properly seated on peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 30.0,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper picking up second object from original position",
+      "technique_notes": "Continued efficient movement pattern",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 40.0,
+      "phase": "reverse_pickup",
+      "description": "Beginning reverse direction - left grasper now picking up object to transfer back to right side",
+      "technique_notes": "Smooth transition to reverse direction as per protocol",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 55.0,
+      "phase": "reverse_transfer",
+      "description": "Object being transferred from left to right grasper during reverse phase",
+      "technique_notes": "Maintaining good technique in reverse direction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 70.0,
+      "phase": "reverse_place",
+      "description": "Right grasper placing object back to original side during reverse sequence",
+      "technique_notes": "Consistent placement technique throughout task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 85.0,
+      "phase": "reverse_place",
+      "description": "Final objects being transferred and placed, task nearing completion",
+      "technique_notes": "Maintaining efficiency through completion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 95.0,
+      "phase": "reverse_place",
+      "description": "All objects appear to be successfully transferred back to original positions, instruments withdrawing",
+      "technique_notes": "Task completed successfully, all objects properly placed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 95.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 25,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 10,
+      "end_seconds": 40,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 15,
+      "end_seconds": 45,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 40,
+      "end_seconds": 65,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 50,
+      "end_seconds": 80,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 70,
+      "end_seconds": 95,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped": 0,
+    "objects_outside_field": 0,
+    "objects_not_on_pegs": 0,
+    "transfer_sequence_correct": true,
+    "reverse_direction_completed": true
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 95.0,
+    "total_penalties": 0,
+    "total_fls_score": 205.0,
+    "formula_applied": "300 - 95.0 - 0 = 205.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear visualization of all transfers and placements. No objects observed dropping or placed incorrectly. Timing estimation based on smooth progression through frames with consistent technique.",
+  "cannot_determine": [
+    "Exact frame rate for precise timing calculation",
+    "Whether all 6 objects were definitively transferred (based on ring pattern, appears complete)"
+  ],
+  "technique_summary": "Solid intermediate-level performance with smooth bilateral transfers and proper reverse direction execution. Completion time of 95 seconds falls within intermediate range (60-120s).",
+  "strengths": [
+    "Clean object transfers without drops",
+    "Proper execution of reverse direction sequence",
+    "Consistent instrument control throughout",
+    "Efficient movement patterns"
+  ],
+  "improvement_suggestions": [
+    "Reduce overall time to approach expert range (40-60s)",
+    "Work on faster initial pickup phase to improve efficiency"
+  ],
+  "video_id": "McBHv-4t7Dw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:05:36.128308+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.825477+00:00"
+  },
+  "scoreable": true
+}

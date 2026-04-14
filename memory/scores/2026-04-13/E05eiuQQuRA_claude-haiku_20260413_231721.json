@@ -1,0 +1,75 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task Performance",
+  "content_type": "conference_panel_presentation",
+  "presenter": "Carmen L Mueller",
+  "event": "SAGES 2017 - Meeting the ABS Mandate: The Program Director's Guide to the FEC Galaxy",
+  "scoring_status": "not_applicable",
+  "reason": "This video is an educational/conference presentation about FES training program management and research outcomes at McGill General Surgery, not a recorded performance of an FLS/MISTELS task.",
+  "content_summary": "Panel presentation discussing preparation of surgical residents for FES (Fundamentals of Endoscopic Surgery) examination. Content includes institutional data from McGill General Surgery residency program, survey results showing correlation between FES manual skills test scores and clinical colonoscopy performance (GAGES-C scoring), and recommendations for resident testing strategy.",
+  "frame_analysis": [
+    {
+      "frame_range": "1-3",
+      "content": "Title slide and McGill General Surgery program overview (48 residents, 70+ faculty, 4 core teaching hospitals)"
+    },
+    {
+      "frame_range": "4",
+      "content": "Royal College of Physicians and Surgeons of Canada logo and McGill affiliation"
+    },
+    {
+      "frame_range": "5",
+      "content": "Recent Resident Survey data: 48 total residents, 42 respondents, 3 with unknown scope numbers"
+    },
+    {
+      "frame_range": "6-8",
+      "content": "McGill Resident Self-Report Data table showing GI rotation performance metrics by PGY level (C-scopes and G-scopes)"
+    },
+    {
+      "frame_range": "9-10",
+      "content": "Live Colonoscopy Assessment section with GAGES-C scoring rubric measuring 5 sub-skills (Scope Navigation, Use of Strategies, Keeping Clear Field, Instrumentation, Quality of Exam)"
+    },
+    {
+      "frame_range": "11-13",
+      "content": "Correlation scatter plot showing r=0.78 relationship between GAGES-C clinical colonoscopy performance and FES manual skills test scores, with ellipse highlighting high-performing residents"
+    },
+    {
+      "frame_range": "14-15",
+      "content": "Bar chart showing Experience vs FES Skills Test Success - correlation between number of colonoscopies performed and pass/fail rates on FES"
+    },
+    {
+      "frame_range": "16-18",
+      "content": "McGill Resident Self-Report Data table with individual resident outcomes showing C-scopes, G-scopes, FES attempt status, and pass/fail results"
+    },
+    {
+      "frame_range": "19-20",
+      "content": "Summary slide with key findings: FES correlates with clinical performance and case volume; practice in clinical environment primary training method; recommendation to test PGY4s early; remediation plan for high-risk candidates"
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Program-level training strategy for FES preparation",
+      "Data-driven assessment approach using GAGES-C for colonoscopy performance evaluation",
+      "Correlation analysis between simulation-based and clinical performance"
+    ],
+    "verbal_cues": [
+      "Question posed: 'How can I prepare my residents for FES?'",
+      "Emphasis on strong correlation (r=0.78) between manual skills and clinical performance",
+      "Institutional data showing resident experience levels and outcomes"
+    ],
+    "common_errors_addressed": [
+      "Inadequate clinical colonoscopy experience prior to FES testing",
+      "Lack of early testing strategy (recommendation to test PGY4s early)",
+      "Absence of structured remediation for struggling candidates"
+    ],
+    "skill_level_demonstrated": "program_director_perspective",
+    "key_message": "FES manual skills testing is a valid predictor of clinical endoscopy competence; early testing and structured practice are critical for resident success"
+  },
+  "cannot_score": "This is a conference presentation with research data and program management content, not a recorded FLS task performance video. No individual trainee performance metrics, completion times, penalties, or task-specific scoring are applicable.",
+  "confidence": 1.0,
+  "video_id": "E05eiuQQuRA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:17:21.214088+00:00",
+  "scoreable": false
+}

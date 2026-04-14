@@ -1,0 +1,113 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "initial_phase",
+      "description": "Simulation begins with setup instructions visible.",
+      "technique_notes": "No action taken yet.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 19,
+      "phase": "loop_deploy",
+      "description": "Ligation loop being positioned over the appendage.",
+      "technique_notes": "Loop appears aligned for placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 40,
+      "timestamp_seconds": 38,
+      "phase": "target_approach",
+      "description": "Approach to the right adnexa is being conducted.",
+      "technique_notes": "Steady approach towards target.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 47,
+      "timestamp_seconds": 47,
+      "phase": "loop_placement",
+      "description": "Loop is placed around the appendage, preparatory movements made.",
+      "technique_notes": "Placement appears central but not finalized.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 51,
+      "timestamp_seconds": 51,
+      "phase": "cinch",
+      "description": "Securing the loop is being undertaken.",
+      "technique_notes": "Firm and controlled cinching.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 51.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 19,
+      "end_seconds": 38,
+      "duration_seconds": 19,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 38,
+      "end_seconds": 47,
+      "duration_seconds": 9,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 47,
+      "end_seconds": 51,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_position": {
+      "deviation_from_mark_mm": 0.0,
+      "confidence": 0.8,
+      "notes": "Loop appears well-centered around target"
+    },
+    "cinch_assessment": {
+      "tightness": "appropriate",
+      "confidence": 0.9,
+      "notes": "Cinch process executed with good control"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 51.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 129.0,
+    "formula_applied": "180 - 51.0 - 0.0 = 129.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "The sequence shows all phases clearly with a good use of camera angles and appropriate lighting.",
+  "cannot_determine": [],
+  "technique_summary": "Overall, a precise and efficient execution. The loop was securely placed and properly cinched.",
+  "strengths": [
+    "Quick and effective loop deployment",
+    "Precision in approach and placement"
+  ],
+  "improvement_suggestions": [
+    "Continued practice for maintaining proficiency",
+    "Ensure consistency in placement speed"
+  ],
+  "video_id": "sHEjTYsj0WI",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:35:30.023235+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.898941+00:00"
+  },
+  "scoreable": true
+}

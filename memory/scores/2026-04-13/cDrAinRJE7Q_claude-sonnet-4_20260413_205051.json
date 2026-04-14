@@ -1,0 +1,135 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title slide showing falope ring applicator or laparocator introduction",
+      "technique_notes": "Educational video showing instrument preparation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "loop_deploy",
+      "description": "Hands demonstrating falope ring applicator with loaded ring visible",
+      "technique_notes": "Good visualization of instrument components and ring positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "loop_deploy",
+      "description": "Close-up of gauze on work surface with applicator positioning",
+      "technique_notes": "Practice setup on gauze material rather than foam appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 21.0,
+      "phase": "target_approach",
+      "description": "Applicator positioned over white gauze material in laparoscopic trainer",
+      "technique_notes": "Different target material than standard foam appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 36.0,
+      "phase": "loop_placement",
+      "description": "Ring being deployed around gauze material, white ring visible",
+      "technique_notes": "Deployment technique appears controlled",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 48.0,
+      "phase": "completion",
+      "description": "Ring successfully placed around gauze material, appears secure",
+      "technique_notes": "Good final positioning and tension on deployed ring",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 48.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 15,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 15,
+      "end_seconds": 30,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 30,
+      "end_seconds": 45,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 45,
+      "end_seconds": 48,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "target_material": "gauze instead of foam appendage",
+    "ring_deployment": {
+      "successfully_deployed": true,
+      "ring_position": "appears appropriate on gauze",
+      "cinching": "appears adequate",
+      "deviation_from_mark": "cannot_determine"
+    },
+    "appendage_status": {
+      "transected": false,
+      "avulsed": false
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 48.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 132.0,
+    "formula_applied": "180 - 48.0 - 0.0 = 132.0"
+  },
+  "confidence": 0.4,
+  "confidence_rationale": "This appears to be an educational demonstration video using gauze material rather than the standard foam appendage with marked target line. Unable to assess accuracy of ring placement relative to anatomical landmarks or measure deviation from target mark.",
+  "cannot_determine": [
+    "Exact deviation from target mark - no visible marked line on gauze",
+    "Whether this represents actual task performance vs demonstration",
+    "Precise ring positioning accuracy without anatomical target",
+    "Standard foam appendage assessment criteria"
+  ],
+  "technique_summary": "Educational demonstration of falope ring applicator technique using alternative materials. Smooth deployment and controlled technique demonstrated.",
+  "strengths": [
+    "Controlled ring deployment",
+    "Good instrument handling",
+    "Efficient completion time"
+  ],
+  "improvement_suggestions": [
+    "Practice on standard foam appendage with marked target line",
+    "Focus on precise targeting to marked anatomical position"
+  ],
+  "video_id": "cDrAinRJE7Q",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:50:51.943770+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.863641+00:00"
+  },
+  "scoreable": true
+}

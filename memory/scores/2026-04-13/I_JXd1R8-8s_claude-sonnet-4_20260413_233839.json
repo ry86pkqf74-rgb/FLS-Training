@@ -1,0 +1,65 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General FLS Introduction/Educational Content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Surgeon in blue scrubs standing in operating room environment with laparoscopic trainer visible",
+      "technique_notes": "Professional presentation setting with FLS trainer box visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "presentation",
+      "description": "Continued speaking with hand gestures, maintaining professional demeanor",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "instruction",
+      "description": "Demonstrating concepts with expressive hand movements",
+      "technique_notes": "Using hands to illustrate points during instruction",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No scoring - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video format with surgeon presenting educational content in OR setting. No actual FLS task performance visible.",
+  "cannot_determine": [
+    "Specific task being discussed",
+    "Actual task performance metrics"
+  ],
+  "technique_summary": "Educational presentation format - not a performance video requiring FLS scoring",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Professional presentation of laparoscopic surgery concepts"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "I_JXd1R8-8s",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:38:39.862033+00:00",
+  "scoreable": false
+}

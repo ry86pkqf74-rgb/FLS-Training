@@ -1,0 +1,188 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "LAMA Training Academy facility overview. Signage and branding visible. No FLS peg transfer task equipment visible yet.",
+      "technique_notes": "Instructional/educational setting, not a performance attempt.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Facility ceiling and lighting. Training room overview.",
+      "technique_notes": "Establishing shots of the training facility.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "setup",
+      "description": "Instructor (female, pink hijab, black blazer) presenting in training room.",
+      "technique_notes": "Appears to be an instructional presentation or lecture.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "setup",
+      "description": "Multiple people in training room. Presentation on screen visible in background. Audience watching instruction.",
+      "technique_notes": "Group training session or demonstration.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "setup",
+      "description": "Office/workspace with multiple computers and trainees. Training materials visible.",
+      "technique_notes": "Training facility overview.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "setup",
+      "description": "Trainees working at desks with computers. No active FLS task performance visible.",
+      "technique_notes": "Administrative/educational setting.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "setup",
+      "description": "Close-up view of an instructor's hand holding two Maryland dissector instruments near a peg transfer trainer board.",
+      "technique_notes": "Demonstration of instrument handling for peg transfer task. Shows proper grasp of dissectors.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "setup",
+      "description": "Multiple people gathered around a peg transfer trainer showing purple rubber rings on the board. Instruments visible.",
+      "technique_notes": "Instructional demonstration or review of peg transfer setup. Participants observing.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "setup",
+      "description": "Close-up of peg transfer trainer board with purple-marked training zones. Two instructors examining the board.",
+      "technique_notes": "Detailed review of peg transfer board layout and task structure.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "setup",
+      "description": "Instructor demonstrating dissector grip and positioning over peg transfer trainer. Teaching hand position.",
+      "technique_notes": "Instructional demonstration of proper instrument grip and approach to the board.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "setup",
+      "description": "Instructor in blue checkered shirt demonstrating or explaining peg transfer technique. Trainer board visible. Presentation screen shows anatomical content.",
+      "technique_notes": "Educational lecture/demonstration phase.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "setup",
+      "description": "Wide view of training room with multiple participants seated at tables. Peg transfer board visible on central table. Monitor displaying training content.",
+      "technique_notes": "Group training session in progress.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60.0,
+      "phase": "setup",
+      "description": "Laptop screen displaying surgical/anatomical training content related to laparoscopic procedures (LAPARO visible on screen).",
+      "technique_notes": "Instructional/educational content delivery.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65.0,
+      "phase": "setup",
+      "description": "Instructor in blue blazer and tie demonstrating or presenting information to group. Multiple trainees visible in background.",
+      "technique_notes": "Educational presentation continued.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "phase": "setup",
+      "description": "Wide view of training facility. Multiple people standing around training tables. Several peg transfer boards visible. Monitor showing training content.",
+      "technique_notes": "Multi-station training setup.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 75.0,
+      "phase": "setup",
+      "description": "Participant at table with peg transfer trainer. Female in dark clothing working with instruments. Dissectors visible near the board.",
+      "technique_notes": "Possible hands-on practice or demonstration, but unclear if this is an official timed attempt.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [
+    {
+      "phase": "instructional_content",
+      "start_seconds": 0,
+      "end_seconds": 75,
+      "duration_seconds": 75,
+      "benchmark_comparison": "N/A - instructional video, not a performance"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "scorability": "cannot_determine - This video contains educational/instructional content only. No clear individual performance attempt with timed start and completion is visible. Multiple instructors demonstrate technique, but no single trainee executes a complete, timed peg transfer task from beginning to end."
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": 0,
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is clearly a training facility tour and group instructional session at LAMA Training Academy. It shows setup, equipment overview, instructor demonstrations, and group learning activities, but does NOT show an individual trainee performing a complete, official peg transfer task with timing. No discrete completion time can be identified. Therefore, per the rubric, this is classified as 'instructional' and should not be scored as a performance.",
+  "cannot_determine": [
+    "Completion time - no individual timed performance visible",
+    "Penalties - no complete task execution to assess",
+    "FLS score - instructional content, not a performance attempt"
+  ],
+  "technique_summary": "Video is an instructional/educational recording of a training session at LAMA Training Academy. Shows facility tour, group training, instructor demonstrations of peg transfer setup and dissector handling, but does not contain a scorable individual performance.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper Maryland dissector grip at the handle",
+      "Two-handed instrument positioning over peg transfer board",
+      "Approach angle and hand placement for object pickup",
+      "Peg transfer board layout and task structure"
+    ],
+    "verbal_cues": [
+      "Instructors providing guidance to participants (content not fully audible in frames)"
+    ],
+    "common_errors_addressed": [
+      "Proper instrument control (instructors demonstrate correct technique)"
+    ],
+    "skill_level_demonstrated": "instructional - multiple expert instructors teaching trainees"
+  },
+  "improvement_suggestions": [
+    "If scoring peg transfer tasks, ensure each video captures a single, unambiguous timed individual performance from first object touched to last object released."
+  ],
+  "video_id": "RI5TXHpQhS4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:05:01.769037+00:00",
+  "scoreable": false
+}

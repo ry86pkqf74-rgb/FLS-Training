@@ -1,0 +1,94 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "cannot_determine",
+      "description": "Black screen with no visible content",
+      "technique_notes": "No task activity visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "cannot_determine",
+      "description": "Logo screen showing 'Medics Teaching Medics' and 'Basic Surgical & Laparoscopic Skills Day'",
+      "technique_notes": "Educational material introduction, no task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "cannot_determine",
+      "description": "Training room setup with medical professionals around laparoscopic trainers",
+      "technique_notes": "General training environment, no specific task visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "cannot_determine",
+      "description": "Group of trainees working at table with suturing materials",
+      "technique_notes": "Basic suturing skills demonstration, not FLS peg transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 13.0,
+      "phase": "cannot_determine",
+      "description": "SIMENDO trainers visible with laparoscopic equipment",
+      "technique_notes": "Training station setup, no active task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 20.0,
+      "phase": "cannot_determine",
+      "description": "Final logo screen reappearing",
+      "technique_notes": "End of video segment, no task performance observed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": null,
+    "direction_sequence_correct": null,
+    "drops_outside_field": null,
+    "objects_not_on_pegs": null
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot calculate - no task performance observed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows educational/promotional content about laparoscopic training but contains no actual FLS Task 1 peg transfer performance",
+  "cannot_determine": [
+    "Completion time - no task performance visible",
+    "All penalties - no task attempts observed",
+    "Phase timings - no task phases executed",
+    "Score - no measurable performance data"
+  ],
+  "technique_summary": "No FLS Task 1 peg transfer performance observed in this video. Content appears to be promotional/educational material about laparoscopic training programs.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Provide video showing actual FLS Task 1 peg transfer performance for assessment"
+  ],
+  "video_id": "otEcAvrCaAc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:28:18.789688+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.892178+00:00"
+  },
+  "scoreable": false
+}

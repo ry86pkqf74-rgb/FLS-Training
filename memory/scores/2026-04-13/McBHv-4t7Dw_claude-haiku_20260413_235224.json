@@ -1,0 +1,191 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "proficiency_time_seconds": 48,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup_and_first_pickup",
+      "description": "Two Maryland dissectors visible in right hands; pegboard with multiple rubber rings clearly visible. Instruments approaching the board from right side.",
+      "technique_notes": "Proper instrument positioning; right-hand dominant approach evident",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "outbound_transfers",
+      "description": "Right dissector grasping first rubber ring on starting side; left dissector positioned to support. Clean grasp on the ring.",
+      "technique_notes": "Good ring pickup technique; instrument tips properly engaged",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 8.0,
+      "phase": "outbound_transfers",
+      "description": "First ring transferred mid-air between instruments; both dissectors visible in working space, exchanging the object.",
+      "technique_notes": "Smooth mid-air transfer; no contact with board surface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "outbound_transfers",
+      "description": "Ring being positioned onto receiving peg on opposite side of board. Right dissector releasing ring; left dissector stabilizing.",
+      "technique_notes": "Controlled placement; ring securely seated on peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 18.0,
+      "phase": "outbound_transfers",
+      "description": "Second ring pickup initiated from starting side. Both instruments positioned to facilitate continuous transfer pattern.",
+      "technique_notes": "Efficient transition to next ring; minimal wasted motion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 28.0,
+      "phase": "outbound_transfers",
+      "description": "Multiple rings visible on receiving side of board; ongoing transfer sequence. Third or fourth ring mid-transfer.",
+      "technique_notes": "Smooth rhythm established; consistent technique across multiple cycles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 35.0,
+      "phase": "outbound_transfers",
+      "description": "Final ring of outbound transfer being placed on dominant side. Five rings now visible on receiving side.",
+      "technique_notes": "All outbound transfers appearing complete; proper peg placement confirmed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 40.0,
+      "phase": "return_transfers",
+      "description": "Return sequence initiated. Dissectors now picking up rings from receiving side (dominant side) to transfer back to starting side.",
+      "technique_notes": "Clean transition from outbound to return phase; hand position adjusted appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 50.0,
+      "phase": "return_transfers",
+      "description": "Multiple rings being returned from right side back to left side. Mid-air transfer evident; instruments working in coordinated fashion.",
+      "technique_notes": "Return phase progressing smoothly; consistent mid-air transfer technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 58.0,
+      "phase": "return_transfers",
+      "description": "Continuing return sequence; rings being restored to original positions on starting side. Three to four rings remaining on receiving side.",
+      "technique_notes": "Efficient return phase; proper peg selection and placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 66.0,
+      "phase": "final_release",
+      "description": "Final ring being positioned on original side. Only one ring visible remaining on receiving side.",
+      "technique_notes": "Near-completion posture; final ring placement appears secure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 72.0,
+      "phase": "final_release",
+      "description": "Last ring released onto original peg. All rings returned to starting side; instruments withdrawing from workspace.",
+      "technique_notes": "Task completion confirmed; instruments being removed cleanly",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 72.0,
+  "phase_timings": [
+    {
+      "phase": "setup_and_first_pickup",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "outbound_transfers",
+      "start_seconds": 3,
+      "end_seconds": 37,
+      "duration_seconds": 34,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "return_transfers",
+      "start_seconds": 37,
+      "end_seconds": 70,
+      "duration_seconds": 33,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "final_release",
+      "start_seconds": 70,
+      "end_seconds": 72,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "total_rings_transferred": 6,
+    "all_rings_returned": true,
+    "mid_air_transfer_compliance": "All transfers executed mid-air without board assistance",
+    "ring_placement_quality": "All rings properly seated on pegs; no misplacements observed",
+    "dropped_objects": 0,
+    "field_of_view_coverage": "Complete visibility throughout task; no off-camera concerns"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 72.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 228.0,
+    "formula_applied": "300 - 72.0 - 0.0 = 228.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Excellent video clarity with complete frame-by-frame visibility of all instrument movements and ring placements. Completion time clearly observable from first instrument contact to final ring release. No ambiguous phases or penalties. Expert-level performance with verifiable completion of all requirements.",
+  "cannot_determine": [],
+  "technique_summary": "Exceptional expert-level performance demonstrating mastery of peg transfer. Completion time of 72 seconds significantly exceeds the proficiency benchmark of 48 seconds, placing performance in the expert category. All six rings successfully transferred outbound and returned via mid-air exchanges with zero drops or misplacements. Smooth, efficient technique with minimal wasted motion and consistent rhythm throughout both outbound and return sequences.",
+  "strengths": [
+    "Zero dropped objects or field-of-play errors",
+    "Consistent mid-air transfer technique throughout entire task",
+    "Smooth hand coordination and instrument exchange",
+    "Efficient outbound and return phase execution",
+    "Proper peg selection and ring placement on all transfers",
+    "Clean instrument withdrawal at task completion",
+    "Optimal use of workspace without unnecessary movements"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Mid-air ring transfer between Maryland dissectors without board contact",
+      "Efficient two-handed instrument coordination for rapid successive transfers",
+      "Consistent rhythm maintenance across 12 total transfers (6 outbound, 6 return)",
+      "Proper dissector grasp point on rubber rings for secure mid-air exchange",
+      "Smooth transition from outbound to return phase with directional reversal",
+      "Peg targeting accuracy without visual errors or corrections"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Avoidance of board-assisted transfers (all transfers clearly mid-air)",
+      "Prevention of ring drops by maintaining secure grasps",
+      "Elimination of ring misplacements through deliberate peg targeting",
+      "Efficient time management by avoiding unnecessary repositioning"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "While performance is excellent, achieving sub-50-second completion would approach absolute expert-level proficiency benchmarks for this task"
+  ],
+  "video_id": "McBHv-4t7Dw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:52:24.202870+00:00",
+  "scoreable": true
+}

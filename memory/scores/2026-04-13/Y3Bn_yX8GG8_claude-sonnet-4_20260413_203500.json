@@ -1,0 +1,149 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Initial setup view showing 6 objects (3 orange, 3 green) on left pegs, 6 empty pegs on right",
+      "technique_notes": "Standard FLS peg transfer configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 11.0,
+      "phase": "pickup_nondominant",
+      "description": "Both graspers visible, left grasper approaching green object on left side",
+      "technique_notes": "Proper bimanual approach, left hand leading as expected for non-dominant pickup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 14.0,
+      "phase": "transfer_midair",
+      "description": "Green object grasped by both instruments in midair transfer",
+      "technique_notes": "Clean bimanual grasp during transfer phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 23.0,
+      "phase": "place_dominant",
+      "description": "Green object being placed on rightmost peg by right grasper",
+      "technique_notes": "Proper placement technique, object secured on peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper picking up second green object, first object visible on right peg",
+      "technique_notes": "Efficient continuation, first transfer completed successfully",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 183.0,
+      "phase": "reverse_transfer",
+      "description": "All 6 objects transferred to right side, now beginning reverse direction with orange objects",
+      "technique_notes": "Forward direction completed, reverse phase initiated as required",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 218.0,
+      "phase": "reverse_place",
+      "description": "Green object being transferred from right to left side in reverse direction",
+      "technique_notes": "Proper reverse transfer technique maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 231.0,
+      "phase": "reverse_place",
+      "description": "Final objects being placed on left pegs, task nearing completion",
+      "technique_notes": "Task completion phase, all objects being returned to original side",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 231.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 11,
+      "end_seconds": 35,
+      "duration_seconds": 24,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 14,
+      "end_seconds": 23,
+      "duration_seconds": 9,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 23,
+      "end_seconds": 183,
+      "duration_seconds": 160,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 183,
+      "end_seconds": 218,
+      "duration_seconds": 35,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 218,
+      "end_seconds": 231,
+      "duration_seconds": 13,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped": 0,
+    "direction_changes_completed": 2,
+    "proper_hand_sequence": true,
+    "all_objects_on_pegs": true
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 231.0,
+    "total_penalties": 0,
+    "total_fls_score": 69.0,
+    "formula_applied": "300 - 231.0 - 0 = 69.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Task completion clearly visible with all objects successfully transferred in both directions. No drops or penalties observed. Timing estimate based on visible clock progression.",
+  "cannot_determine": [
+    "Exact timing of some intermediate transfers due to frame sampling gaps"
+  ],
+  "technique_summary": "Novice-level performance with successful task completion but significantly extended time. All required elements executed correctly including bidirectional transfer and proper hand sequencing.",
+  "strengths": [
+    "No dropped objects or penalties",
+    "Proper bimanual coordination throughout",
+    "Successful completion of both directions"
+  ],
+  "improvement_suggestions": [
+    "Focus on speed efficiency - current time of 231s significantly exceeds intermediate benchmark",
+    "Practice smoother transitions between pickup and placement phases"
+  ],
+  "video_id": "Y3Bn_yX8GG8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:35:00.892165+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.850586+00:00"
+  },
+  "scoreable": true
+}

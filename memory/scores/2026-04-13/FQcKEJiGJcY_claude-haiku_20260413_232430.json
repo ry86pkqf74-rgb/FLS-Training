@@ -1,0 +1,37 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - instructional/educational content",
+  "content_type": "Educational tutorial and equipment overview",
+  "rationale_for_classification": "This video contains a person on-camera speaking (likely introducing or explaining FLS curriculum), followed by equipment setup demonstrations, instructional graphics (labeled '3) Assembly' and 'Instrumentation'), and various endoscopic training views. There are no actual timed FLS task performances visible. The content includes educational overlays, section headers, and demonstration footage typical of instructional material rather than scored performance.",
+  "scoring_applicability": "NOT SCORED - This is instructional content, not a performance assessment",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS training box setup with tripod stand",
+      "Endoscopic camera positioning and field of view",
+      "TENS (Training and Educational Nephroureteroscopy System) positioning",
+      "Pencil-mounted stick calibration tool",
+      "File stick handling",
+      "Proper endoscopic visualization angle and technique"
+    ],
+    "verbal_cues": [
+      "Content appears to be part of structured FLS curriculum introduction/overview"
+    ],
+    "common_errors_addressed": [
+      "Proper equipment assembly and positioning to avoid misalignment",
+      "Correct camera angle for optimal visualization",
+      "Appropriate use of reference tools (pencil stick, file stick) for calibration and learning"
+    ],
+    "skill_level_demonstrated": "instructional/foundational",
+    "instructional_focus": "Equipment familiarization, camera setup, and visualization training - foundational to all FLS tasks"
+  },
+  "frames_analyzed": "Frames 1-3: presenter introduction; Frames 4-6: equipment overview with labeled components; Frames 7-13: endoscopic camera demonstration and visual field training; Frames 14-20: assembly task graphics and instrumentation overview",
+  "confidence": 0.95,
+  "confidence_rationale": "Video classification is clear: opening frames show on-camera speaker (instructional format), followed by equipment diagrams, labeled component displays, and educational graphics. No timed task performance, no rubric-eligible completion, no penalty events. This is definitively educational content designed to teach setup and visualization, not assess performance.",
+  "notes": "This appears to be part of a comprehensive FLS tutorial series. The '3) Assembly' and 'Instrumentation' slides suggest this is the introductory/setup segment of a multi-part curriculum. No task scoring is applicable. If a specific task performance exists elsewhere in the video series, please provide that segment for evaluation.",
+  "video_id": "FQcKEJiGJcY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:24:30.147312+00:00",
+  "scoreable": false
+}

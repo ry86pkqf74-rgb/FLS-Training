@@ -1,0 +1,172 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Initial setup showing peg board with 6 colored objects (blue, red, purple, green, red, blue) positioned on left side pegs. No instruments visible yet.",
+      "technique_notes": "Standard starting configuration for peg transfer task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.7,
+      "phase": "pickup_nondominant",
+      "description": "Two laparoscopic graspers entering field. Left grasper approaching red object on left side peg.",
+      "technique_notes": "Instruments entering simultaneously, appropriate approach angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 10.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper grasping red object from peg. Right grasper positioned nearby for transfer.",
+      "technique_notes": "Clean grasp of object, no fumbling observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 13.3,
+      "phase": "transfer_midair",
+      "description": "Red object being transferred from left to right grasper in midair. Purple object visible being manipulated.",
+      "technique_notes": "Smooth midair transfer technique, instruments coordinated well",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 16.7,
+      "phase": "place_dominant",
+      "description": "Right grasper placing red object on right side peg. Purple object also being transferred.",
+      "technique_notes": "Accurate placement on peg, no difficulty with positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 30.0,
+      "phase": "pickup_nondominant",
+      "description": "Multiple objects visible in transfer process. Green and red objects being manipulated simultaneously.",
+      "technique_notes": "Efficient multi-object handling, good coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 46.7,
+      "phase": "reverse_pickup",
+      "description": "Beginning reverse direction transfer. Right grasper picking up objects from right side pegs.",
+      "technique_notes": "Clean transition to reverse direction phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 63.3,
+      "phase": "reverse_transfer",
+      "description": "Objects being transferred back from right to left side. Multiple objects in various stages of transfer.",
+      "technique_notes": "Maintaining good pace in reverse direction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 80.0,
+      "phase": "reverse_place",
+      "description": "Final objects being placed back on left side pegs. Task nearing completion.",
+      "technique_notes": "Accurate final placements, task completing successfully",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 30,
+      "timestamp_seconds": 96.7,
+      "phase": "completion",
+      "description": "All 6 objects returned to starting positions on left side pegs. Instruments withdrawing.",
+      "technique_notes": "Task completed successfully, all objects properly positioned",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 97.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 7,
+      "end_seconds": 25,
+      "duration_seconds": 18,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 13,
+      "end_seconds": 50,
+      "duration_seconds": 37,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 17,
+      "end_seconds": 47,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 47,
+      "end_seconds": 65,
+      "duration_seconds": 18,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 60,
+      "end_seconds": 85,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 80,
+      "end_seconds": 97,
+      "duration_seconds": 17,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped": 0,
+    "objects_outside_field": 0,
+    "direction_changes_completed": 1,
+    "final_object_placement": "all_on_correct_pegs"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 97.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 203.0,
+    "formula_applied": "300 - 97.0 - 0.0 = 203.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear view of all transfers and object placements. No objects observed dropping outside the field or remaining off pegs. Completion time clearly observable from instrument entry to final withdrawal.",
+  "cannot_determine": [],
+  "technique_summary": "Solid intermediate level performance with efficient bilateral coordination. Completed task in 97 seconds with no penalties, demonstrating good fundamental laparoscopic skills.",
+  "strengths": [
+    "Smooth midair transfers between instruments",
+    "Accurate peg placement throughout task",
+    "Efficient bidirectional transfer sequence",
+    "No dropped objects or fumbling"
+  ],
+  "improvement_suggestions": [
+    "Reduce overall completion time to approach expert benchmark of 40-60 seconds",
+    "Work on simultaneous object manipulation to increase efficiency",
+    "Practice faster instrument positioning and coordination"
+  ],
+  "video_id": "COQ0eVwyJ1I",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:42:22.922172+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.792353+00:00"
+  },
+  "scoreable": true
+}

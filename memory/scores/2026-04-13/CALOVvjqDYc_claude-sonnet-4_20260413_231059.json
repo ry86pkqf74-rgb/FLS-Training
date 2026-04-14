@@ -1,0 +1,80 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "LapSim Training Overview - Not FLS Task",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Surgical Science LapSim certification program promotional slide",
+      "technique_notes": "Educational content about laparoscopic training curriculum",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "content_presentation",
+      "description": "Text describing LapSim certification program for general surgery residents",
+      "technique_notes": "Statistical claims about 60% reduction in errors and 40% reduction in operating time",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 16.0,
+      "phase": "demonstration_setup",
+      "description": "Person at LapSim simulator workstation with virtual reality display",
+      "technique_notes": "Shows virtual reality training platform interface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 24.0,
+      "phase": "curriculum_overview",
+      "description": "Table showing Expert Training (40 tasks) and Ahlberg EXAM (12 tasks) phases",
+      "technique_notes": "Structured progression from training to examination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 32.0,
+      "phase": "virtual_skills",
+      "description": "Virtual reality instrument navigation exercise demonstration",
+      "technique_notes": "Shows basic hand-eye coordination training with virtual instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 40.0,
+      "phase": "virtual_grasping",
+      "description": "Virtual grasping exercise with circular target objects",
+      "technique_notes": "Demonstrates precision grasping tasks in virtual environment",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "virtual reality instrument navigation",
+      "precision grasping in simulated environment",
+      "hand-eye coordination development",
+      "structured skills progression from basic to advanced",
+      "metric-based assessment methodology"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "lack of structured training progression",
+      "inadequate hand-eye coordination practice",
+      "insufficient repetition before operating room experience"
+    ],
+    "skill_level_demonstrated": "novice"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly promotional/instructional content about LapSim virtual reality training system, not an actual FLS task performance. Content focuses on curriculum overview and benefits rather than task execution.",
+  "cannot_determine": [],
+  "technique_summary": "Educational overview of LapSim virtual reality training curriculum for laparoscopic surgery, emphasizing structured progression and evidence-based validation for surgical resident education.",
+  "video_id": "CALOVvjqDYc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:10:59.931644+00:00",
+  "scoreable": false
+}

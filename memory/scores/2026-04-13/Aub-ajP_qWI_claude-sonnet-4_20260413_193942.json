@@ -1,0 +1,166 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Gauze with marked circle visible, suspended between clamps, no instruments visible yet",
+      "technique_notes": "Clean setup with clear circular marking approximately 4cm diameter",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "initial_cut",
+      "description": "Scissors entering field from right side, approaching the marked circle",
+      "technique_notes": "Scissors positioned for entry at approximately 6 o'clock position on circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "clockwise_cut",
+      "description": "Active cutting along the marked line, progressing clockwise from 6 o'clock toward 9 o'clock",
+      "technique_notes": "Scissors following marked line closely, steady cutting motion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing clockwise cut, now at approximately 12 o'clock position",
+      "technique_notes": "Cut appears to follow marked line with minimal deviation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 22.0,
+      "phase": "clockwise_cut",
+      "description": "Cut progressing past 3 o'clock position, approximately 75% complete",
+      "technique_notes": "Consistent cutting technique maintained, gauze remains attached to clamps",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 30.0,
+      "phase": "completion",
+      "description": "Cut approaching full circle completion, connecting back to initial cut point",
+      "technique_notes": "Final portion of cut being completed, circular pattern nearly finished",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 38.0,
+      "phase": "completion",
+      "description": "Circle cut completed, cut-out piece visible as separate from main gauze",
+      "technique_notes": "Complete circular cut achieved, gauze remains attached to clamps",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 38.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 4,
+      "end_seconds": 36,
+      "duration_seconds": 32,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 36,
+      "end_seconds": 38,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Minor deviation visible at 3 o'clock position, estimated 1mm outside marked line",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        12,
+        13
+      ],
+      "confidence": 0.6
+    },
+    {
+      "type": "deviation_from_line",
+      "description": "Slight deviation at 9 o'clock position, estimated 0.5mm outside marked line",
+      "points_deducted": 0.5,
+      "frame_evidence": [
+        8,
+        9
+      ],
+      "confidence": 0.5
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "cardinal_point_deviations_mm": {
+        "12_oclock": 0.0,
+        "3_oclock": 1.0,
+        "6_oclock": 0.0,
+        "9_oclock": 0.5
+      },
+      "total_deviation_penalty": 1.5,
+      "confidence": 0.55
+    },
+    "gauze_integrity": {
+      "detached_from_clamp": false,
+      "complete_cut": true,
+      "pattern_quality": "excellent"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 38.0,
+    "total_penalties": 1.5,
+    "total_fls_score": 260.5,
+    "formula_applied": "300 - 38.0 - 1.5 = 260.5"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Excellent visibility of cutting action and timeline. Some uncertainty in measuring exact mm deviations from oblique viewing angle, particularly at 3 and 9 o'clock positions.",
+  "cannot_determine": [
+    "Precise mm measurements at all 8 cardinal points due to camera angle",
+    "Exact deviation measurements at 1:30, 4:30, 7:30, 10:30 o'clock positions"
+  ],
+  "technique_summary": "Excellent expert-level performance with rapid completion time and high precision cutting. Minimal deviations from marked line.",
+  "strengths": [
+    "Very fast completion time (38s vs 60-90s expert benchmark)",
+    "Smooth, continuous cutting motion",
+    "Excellent gauze handling - remained attached throughout",
+    "Complete circular cut achieved"
+  ],
+  "improvement_suggestions": [
+    "Minor attention to precision at 3 o'clock position to eliminate 1mm deviation"
+  ],
+  "video_id": "Aub-ajP_qWI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:39:42.813551+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.785435+00:00"
+  },
+  "scoreable": true
+}

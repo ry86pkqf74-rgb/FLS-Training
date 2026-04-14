@@ -1,0 +1,123 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Right hand initially picks up green peg from right side.",
+      "technique_notes": "Steady grasp, no hesitation observed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 19.0,
+      "phase": "transfer_midair",
+      "description": "Peg transferred to left hand.",
+      "technique_notes": "Smooth mid-air transfer.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 27.0,
+      "phase": "place_dominant",
+      "description": "Left hand places peg on left side peg.",
+      "technique_notes": "Accurate placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 65.0,
+      "phase": "reverse_pickup",
+      "description": "Starting reverse transfer with left hand.",
+      "technique_notes": "Efficient pickup, no misalignment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 138.0,
+      "phase": "reverse_place",
+      "description": "Right hand places a peg on right side during reverse transfer.",
+      "technique_notes": "Accurate placement, moderate speed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 211.0,
+      "phase": "completion",
+      "description": "Final peg placed on peg, task cycle complete.",
+      "technique_notes": "Last peg securely placed.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 211.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 19,
+      "duration_seconds": 19,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 19,
+      "end_seconds": 27,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 27,
+      "end_seconds": 65,
+      "duration_seconds": 38,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 65,
+      "end_seconds": 138,
+      "duration_seconds": 73,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 138,
+      "end_seconds": 211,
+      "duration_seconds": 73,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [],
+  "score_components": {
+    "max_score": 300,
+    "time_used": 211.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 89.0,
+    "formula_applied": "300 - 211.0 - 0.0 = 89.0"
+  },
+  "confidence": 0.8,
+  "confidence_rationale": "Clear visibility throughout task with no penalties observed. Phases were distinctly completed without errors.",
+  "cannot_determine": [],
+  "technique_summary": "The task was performed with clear transitions between phases and smooth grasper manipulation. No objects were dropped during the task.",
+  "strengths": [
+    "Smooth mid-air transfers between hands.",
+    "Accurate placement of objects on pegs."
+  ],
+  "improvement_suggestions": [
+    "Speed up the reverse transfer to meet intermediate performance times.",
+    "Maintain focus on minimizing idle time between task phases."
+  ],
+  "video_id": "8x0UYpC5b6U",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:34:42.183293+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.775557+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,173 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Initial setup with 6 orange rubber objects in center bowl, all 12 pegs visible on board",
+      "technique_notes": "Task not yet started, instruments not visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "pickup_nondominant",
+      "description": "Two graspers enter field, beginning to approach center bowl with objects",
+      "technique_notes": "Instruments positioned appropriately for bimanual manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper picking up first orange object from center bowl",
+      "technique_notes": "Clean pickup with left instrument, right instrument positioned for transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "transfer_midair",
+      "description": "First object being transferred from left to right grasper, one object now on right peg",
+      "technique_notes": "Smooth midair transfer technique, object placement visible on right side",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "place_dominant",
+      "description": "Multiple objects now transferred to right side pegs, continuing forward direction transfers",
+      "technique_notes": "Consistent placement pattern, no objects dropped outside field",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "place_dominant",
+      "description": "All 6 objects successfully placed on right-side pegs, completing forward transfer phase",
+      "technique_notes": "All objects properly seated on pegs, ready for reverse direction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "phase": "reverse_pickup",
+      "description": "Beginning reverse direction - right grasper picking up object from right peg",
+      "technique_notes": "Proper initiation of reverse transfer sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 85.0,
+      "phase": "reverse_transfer",
+      "description": "Multiple objects being transferred back from right to left direction",
+      "technique_notes": "Maintaining good bimanual coordination during reverse phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 95.0,
+      "phase": "reverse_place",
+      "description": "Final objects being placed on left-side pegs, task nearing completion",
+      "technique_notes": "Clean placement technique maintained throughout reverse phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 100.0,
+      "phase": "reverse_place",
+      "description": "Task completed - all 6 objects successfully transferred back to left-side pegs",
+      "technique_notes": "All objects properly placed, instruments withdrawing",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 100.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 25,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 25,
+      "end_seconds": 40,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 40,
+      "end_seconds": 55,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 55,
+      "end_seconds": 70,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 70,
+      "end_seconds": 85,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 85,
+      "end_seconds": 100,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped_outside_field": 0,
+    "objects_not_on_pegs": 0,
+    "forward_direction_completed": true,
+    "reverse_direction_completed": true,
+    "proper_hand_sequence": true
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 100.0,
+    "total_penalties": 0,
+    "total_fls_score": 200.0,
+    "formula_applied": "300 - 100.0 - 0 = 200.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear visual evidence of all 6 objects being transferred successfully in both directions. No objects observed dropping outside the field. Task completion clearly visible with all objects on final pegs.",
+  "cannot_determine": [
+    "Exact sub-second timing transitions between phases due to frame sampling rate"
+  ],
+  "technique_summary": "Solid intermediate-level performance with consistent bimanual coordination. Completed task without penalties in 100 seconds, which falls in the intermediate range (60-120s).",
+  "strengths": [
+    "No dropped objects or placement errors",
+    "Smooth bimanual coordination throughout both phases",
+    "Proper completion of both forward and reverse transfer sequences"
+  ],
+  "improvement_suggestions": [
+    "Work on increasing speed while maintaining accuracy to approach expert benchmark (40-60s)",
+    "Practice more efficient pickup and placement motions to reduce overall cycle time"
+  ],
+  "video_id": "nyHA5zcUKeo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:27:10.121847+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.891252+00:00"
+  },
+  "scoreable": true
+}

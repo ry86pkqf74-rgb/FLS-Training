@@ -1,0 +1,67 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Cannot Determine Task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "cannot_determine",
+      "description": "Completely black frame with no visible content",
+      "technique_notes": "No laparoscopic equipment or task setup visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": null,
+      "phase": "presentation_slide",
+      "description": "Academic presentation slide about pediatric laparoscopic suturing research",
+      "technique_notes": "This appears to be a research presentation, not an FLS task performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": null,
+      "phase": "presentation_slide",
+      "description": "Slide showing primary objectives of research study on automatic OSATS rating",
+      "technique_notes": "Research methodology presentation continues",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot calculate - no task performance visible"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "The provided frames show only a black screen and academic presentation slides about research methodology. No actual FLS task performance is visible in any frame.",
+  "cannot_determine": [
+    "Task identification - no laparoscopic equipment visible",
+    "Performance timing - no task execution shown",
+    "Penalty assessment - no surgical technique demonstrated",
+    "Score calculation - no measurable performance data",
+    "All assessment criteria - this appears to be a research presentation rather than an FLS performance video"
+  ],
+  "technique_summary": "No surgical technique visible - video contains presentation slides only",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Provide video showing actual FLS task performance with laparoscopic instruments and trainer box",
+    "Ensure video captures the complete task from instrument insertion to completion"
+  ],
+  "video_id": "TYkcoKhfLQY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:21:48.105500+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.840771+00:00"
+  },
+  "scoreable": false
+}

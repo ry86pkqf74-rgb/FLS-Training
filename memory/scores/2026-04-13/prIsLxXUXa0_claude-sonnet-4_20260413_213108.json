@@ -1,0 +1,92 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instrument_display",
+      "description": "Static display showing laparoscopic needle driver being held",
+      "technique_notes": "Professional instrument demonstration, not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "instrument_display",
+      "description": "Continued instrument demonstration - laparoscopic needle driver and knot pusher shown",
+      "technique_notes": "Educational demonstration of required instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 30.0,
+      "phase": "instrument_display",
+      "description": "Close-up demonstration of knot pusher mechanism and function",
+      "technique_notes": "Showing proper knot pusher operation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 45.0,
+      "phase": "instrument_display",
+      "description": "Final demonstration frames showing knot pusher positioning",
+      "technique_notes": "Educational content showing instrument handling",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0,
+      "confidence": null
+    },
+    "knot_quality": {
+      "knot_secure": null,
+      "knot_at_tissue_level": null,
+      "extracorporeal_technique_used": null
+    },
+    "drain_assessment": {
+      "gap_visible": null,
+      "drain_avulsed": false
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "No task performance observed - educational video only"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear identification that this is an educational/promotional video showing instrument demonstrations rather than FLS task performance. No Penrose drain, suture materials, or laparoscopic trainer visible.",
+  "cannot_determine": [
+    "Task completion time - no task was performed",
+    "Suture placement accuracy - no suturing demonstrated",
+    "Knot quality - no knots were tied",
+    "Drain assessment - no Penrose drain present",
+    "Any FLS scoring metrics - this is educational content not task performance"
+  ],
+  "technique_summary": "This video contains educational demonstration of laparoscopic instruments (needle drivers and knot pusher) but does not show actual FLS Task 4 performance. No scoring can be applied as no task was executed.",
+  "strengths": [
+    "Clear instrument demonstration for educational purposes"
+  ],
+  "improvement_suggestions": [
+    "Video should show actual FLS Task 4 performance with Penrose drain and suture materials for scoring assessment"
+  ],
+  "video_id": "prIsLxXUXa0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:31:08.935765+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.894792+00:00"
+  },
+  "scoreable": false
+}

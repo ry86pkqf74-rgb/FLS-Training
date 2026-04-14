@@ -1,0 +1,212 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 12.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping curved needle at appropriate position",
+      "technique_notes": "Good needle orientation for backhand entry",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 18.0,
+      "phase": "suture_placement",
+      "description": "Needle driver approaching first mark on Penrose drain",
+      "technique_notes": "Perpendicular approach angle to drain surface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "suture_placement",
+      "description": "Suture placed through drain with small knot visible at entry point",
+      "technique_notes": "Entry appears close to mark, exit point visible",
+      "penalties_observed": [
+        "suture_deviation"
+      ]
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 42.0,
+      "phase": "first_throw",
+      "description": "Beginning first throw formation with right hand leading",
+      "technique_notes": "Surgeon's knot formation - double throw technique initiated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 54.0,
+      "phase": "first_throw",
+      "description": "Double throw completed, appropriate tension applied",
+      "technique_notes": "Clean surgeon's knot, good bite approximation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 90.0,
+      "phase": "second_throw",
+      "description": "Second throw with left hand leading, proper hand switching observed",
+      "technique_notes": "Good alternating technique, single throw formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 108.0,
+      "phase": "third_throw",
+      "description": "Third throw with right hand leading again",
+      "technique_notes": "Final single throw, consistent alternating pattern maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 135.0,
+      "phase": "suture_cut",
+      "description": "Both suture ends being cut with scissors inside trainer",
+      "technique_notes": "Proper intracorporeal cutting technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 145.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 15,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 15,
+      "end_seconds": 35,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 35,
+      "end_seconds": 65,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 65,
+      "end_seconds": 95,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 95,
+      "end_seconds": 125,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 125,
+      "end_seconds": 145,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "description": "Entry point appears approximately 1mm lateral to mark 1",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        3,
+        4
+      ],
+      "confidence": 0.6
+    },
+    {
+      "type": "suture_deviation",
+      "description": "Exit point appears approximately 1.5mm from mark 2",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        4
+      ],
+      "confidence": 0.5
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Proper double throw formation with good tension"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Clean single throw with proper hand alternation"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw completed with appropriate tension"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.0,
+      "deviation_from_mark2_mm": 1.5,
+      "total_deviation_penalty": 2.5,
+      "confidence": 0.55
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 145.0,
+    "total_penalties": 2.5,
+    "total_fls_score": 452.5,
+    "formula_applied": "600 - 145.0 - 2.5 = 452.5"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Camera angle makes precise measurement of suture deviation challenging. Knot formation and hand switching clearly visible. Completion time well-documented.",
+  "cannot_determine": [
+    "Exact millimeter deviation measurements due to camera angle limitations",
+    "Precise assessment of knot security under tension testing"
+  ],
+  "technique_summary": "Solid intermediate-level performance with proper surgical technique. All required elements completed including surgeon's knot formation and alternating hand throws.",
+  "strengths": [
+    "Consistent hand alternation between all throws",
+    "Proper surgeon's knot double throw technique",
+    "Clean intracorporeal suture cutting",
+    "No visible gaps in drain slit closure"
+  ],
+  "improvement_suggestions": [
+    "Focus on more precise needle placement at marked targets",
+    "Practice to reduce overall completion time toward expert range"
+  ],
+  "video_id": "NUBQLqtbcsw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:07:47.443920+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.827056+00:00"
+  },
+  "scoreable": true
+}

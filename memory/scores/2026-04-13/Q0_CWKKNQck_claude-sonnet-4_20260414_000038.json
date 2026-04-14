@@ -1,0 +1,53 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "cannot_determine": [
+    "Task identification - no FLS trainer box or instruments visible",
+    "Completion time - no task performance observed",
+    "Penalties - no task execution to assess",
+    "Score calculation - no scorable FLS task content"
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Clear view of conference presentation setting with speaker at podium and World Laparoscopy Hospital banners. No FLS training equipment, trainer box, or task performance visible in any frame.",
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Conference presentation context visible from setting and banners"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen with no content",
+      "technique_notes": "No visual content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 4.2,
+      "phase": "not_applicable",
+      "description": "Title slide showing 'Feedback of Surgeons and Gynecologists after Training at World Laparoscopy Hospital'",
+      "technique_notes": "Educational presentation context",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 8.4,
+      "phase": "not_applicable",
+      "description": "Speaker in academic gown at podium with World Laparoscopy Hospital banner",
+      "technique_notes": "Conference presentation setting",
+      "penalties_observed": []
+    }
+  ],
+  "technique_summary": "No FLS task performance observed - video shows conference presentation about laparoscopic training feedback rather than actual FLS skill demonstration or assessment.",
+  "video_id": "Q0_CWKKNQck",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:00:38.427884+00:00",
+  "scoreable": false
+}

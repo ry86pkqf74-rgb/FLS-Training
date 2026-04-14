@@ -1,0 +1,86 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "SAGES logo and promotional material for educational platform",
+      "technique_notes": "Not applicable - promotional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "instructional_content",
+      "description": "Disclosure slide stating 'None'",
+      "technique_notes": "Not applicable - lecture format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "instructional_content",
+      "description": "Title slide 'FES: Lessons from FLS - FLS History'",
+      "technique_notes": "Not applicable - educational presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "instructional_content",
+      "description": "Historical timeline of FLS development starting 1997",
+      "technique_notes": "Educational content about FLS program origins",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "instructional_content",
+      "description": "Continuation of FLS history timeline",
+      "technique_notes": "Educational content about test development and standards",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_content",
+      "description": "Discussion of FLS validation and high-stakes exam criteria",
+      "technique_notes": "Educational content about exam validation process",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_score",
+    "formula_applied": "Not applicable - instructional video without task performance"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear identification as educational lecture content about FLS history and development. No actual task performance visible.",
+  "cannot_determine": [
+    "All scoring metrics - this is educational content, not a performance video"
+  ],
+  "technique_summary": "Not applicable - this is an instructional lecture about FLS program history and development challenges, not a task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "improvement_suggestions": [],
+  "video_id": "QmtHFqf55fc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:02:28.410876+00:00",
+  "scoreable": false
+}

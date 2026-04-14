@@ -1,0 +1,162 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Two graspers positioned near the peg board with 6 orange and 6 green rubber objects on pegs",
+      "technique_notes": "Initial setup shows standard peg transfer configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 3.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper picking up green object from left peg",
+      "technique_notes": "Clean pickup with non-dominant hand",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 7.0,
+      "phase": "transfer_midair",
+      "description": "Green object being transferred from left to right grasper in midair",
+      "technique_notes": "Smooth midair transfer technique demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "place_dominant",
+      "description": "Right grasper placing green object on right-side peg",
+      "technique_notes": "Controlled placement onto target peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 16.0,
+      "phase": "reverse_pickup",
+      "description": "Right grasper picking up orange object from right side",
+      "technique_notes": "Beginning reverse direction transfer phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 20.0,
+      "phase": "reverse_transfer",
+      "description": "Orange object being transferred from right to left grasper",
+      "technique_notes": "Continuing reverse transfer sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 24.0,
+      "phase": "reverse_place",
+      "description": "Left grasper placing orange object on left-side peg",
+      "technique_notes": "Completing one full transfer cycle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 49.0,
+      "phase": "place_dominant",
+      "description": "Continuing transfers with multiple objects moved",
+      "technique_notes": "Consistent technique maintained throughout",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 53.0,
+      "phase": "reverse_place",
+      "description": "Final completion phase with all objects transferred",
+      "technique_notes": "Task completion achieved",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 53.16,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 6,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 6,
+      "end_seconds": 10,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 10,
+      "end_seconds": 26,
+      "duration_seconds": 16,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 26,
+      "end_seconds": 35,
+      "duration_seconds": 9,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 35,
+      "end_seconds": 45,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 45,
+      "end_seconds": 53,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "objects_dropped": 0,
+    "objects_outside_field": 0,
+    "objects_not_on_pegs": 0,
+    "transfer_direction_correct": true,
+    "all_objects_completed": true
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 53.16,
+    "total_penalties": 0,
+    "total_fls_score": 246.84,
+    "formula_applied": "300 - 53.16 - 0 = 246.84"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear visualization of all transfers, no objects dropped or penalties observed. Completion time clearly visible on screen timer.",
+  "cannot_determine": [],
+  "technique_summary": "Excellent expert-level performance with smooth transfers, no drops, and efficient completion within expert time range.",
+  "strengths": [
+    "Consistent midair transfer technique",
+    "No dropped objects throughout entire task",
+    "Excellent time management at 53 seconds"
+  ],
+  "improvement_suggestions": [
+    "Could potentially optimize instrument positioning for even faster transfers"
+  ],
+  "video_id": "IUK0O9y1tTA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:59:19.405254+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.819113+00:00"
+  },
+  "scoreable": true
+}

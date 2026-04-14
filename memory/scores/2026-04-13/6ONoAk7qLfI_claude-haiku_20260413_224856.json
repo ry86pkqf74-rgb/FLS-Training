@@ -1,0 +1,119 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup_overview",
+      "description": "Instructor standing, no trainer visible yet. Appears to be introductory/explanatory phase.",
+      "technique_notes": "Preparing to discuss or demonstrate technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 3.0,
+      "phase": "explanation_loop_deployment",
+      "description": "Instructor holding pre-tied ligating loop with applicator, gesturing to explain deployment mechanics. Loop clearly visible with green band (marker) on suture tail.",
+      "technique_notes": "Showing proper grip on applicator, demonstrating how loop will be deployed around target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "explanation_target_approach",
+      "description": "Instructor demonstrating approach of applicator to foam appendage (visible in lower frame area). Explaining positioning relative to target structure.",
+      "technique_notes": "Demonstrating correct angle and alignment for successful loop placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 7.0,
+      "phase": "explanation_loop_deployment_detail",
+      "description": "Holding applicator with loop extended, showing the mechanics of how loop opens around the appendage. Verbal explanation inferred from hand gestures.",
+      "technique_notes": "Clear demonstration of loop opening and target engagement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 10.0,
+      "phase": "explanation_cinching",
+      "description": "Instructor demonstrating cinching mechanism by pulling suture tail with the green marker band visible. Shows tension application.",
+      "technique_notes": "Demonstrating proper cinching technique with controlled tension to secure loop",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 13.0,
+      "phase": "explanation_tail_management",
+      "description": "Holding applicator showing the suture tail post-cinching. Explaining final steps of securing the knot.",
+      "technique_notes": "Shows proper tail handling and knot verification",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 16.0,
+      "phase": "equipment_overview",
+      "description": "Close-up demonstration of applicator mechanism, showing the knot pusher and suture components.",
+      "technique_notes": "Detailed view of instrument components and their function",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 18.0,
+      "phase": "final_explanation",
+      "description": "Instructor holding completed task setup, demonstrating proper positioning of all elements. Appears to be summary of key teaching points.",
+      "technique_notes": "Final review of correct technique and positioning",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional video (no performance to score)"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly classified as instructional demonstration. No actual task performance visible \u2014 this is an expert explaining and demonstrating the Endoloop technique with narration-style presentation.",
+  "cannot_determine": [
+    "Completion time \u2014 no actual task performance, only explanation",
+    "Penalties \u2014 no performance-based errors to assess",
+    "FLS score \u2014 instructional content is not scored per protocol"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper grip and orientation of ligating loop applicator",
+      "Approach angle and alignment to foam appendage target",
+      "Loop deployment mechanics \u2014 how applicator opens the loop around the target",
+      "Cinching mechanics \u2014 applying tension via suture tail to secure the loop",
+      "Knot pusher function and suture tail management",
+      "Positioning of loop at the marked line on the appendage"
+    ],
+    "verbal_cues": [
+      "Instructor uses hand gestures and positional demonstration to explain each phase",
+      "Emphasis on proper alignment before deployment",
+      "Demonstration of tension control during cinching phase"
+    ],
+    "common_errors_addressed": [
+      "Incorrect applicator angle leading to off-target loop placement",
+      "Insufficient tension during cinching (loop may slip)",
+      "Applying tension too quickly (may cause loop to tangle or appendage to avulse)",
+      "Failing to position loop at the marked line",
+      "Improper tail handling post-cinching"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "content_summary": "This is a comprehensive instructional video where an expert surgeon demonstrates the correct technique for the Endoloop task. The instructor methodically walks through each phase: equipment overview, target approach, loop deployment mechanics, cinching procedure, and final verification. The demonstration emphasizes proper positioning, controlled tension application, and anatomically safe technique. Suitable for training novice and intermediate surgeons in FLS Endoloop fundamentals.",
+  "video_id": "6ONoAk7qLfI",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:48:56.399824+00:00",
+  "scoreable": false
+}

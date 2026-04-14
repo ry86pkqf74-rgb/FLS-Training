@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Multi-segment surgical training facility tour and interviews",
+  "notes": "This video is a broadcast/documentary compilation (CCTV+ production) featuring multiple surgical training scenarios, interviews with faculty and industry representatives, facility tours, and educational demonstrations. It is NOT a single FLS task performance and cannot be scored using FLS rubrics.",
+  "content_segments_identified": [
+    {
+      "segment": 1,
+      "description": "Laparoscopic trainer with mannequin and instruments on table",
+      "type": "facility/equipment overview",
+      "not_scorable_reason": "Equipment demo, not task performance"
+    },
+    {
+      "segment": 2,
+      "description": "Woman performing laparoscopic procedure at simulator",
+      "type": "possible_training_scenario",
+      "task_potentially_visible": "Pattern Cut or Endoloop (unclear from angles)",
+      "not_scorable_reason": "Video angles and framing are for broadcast documentation, not FLS scoring. Completion time and detailed phase analysis cannot be reliably extracted from this documentary-style footage."
+    },
+    {
+      "segment": 3,
+      "description": "Large surgical display screen showing laparoscopic cholecystectomy case with time stamp",
+      "type": "clinical_case_review",
+      "not_scorable_reason": "Real surgery simulation playback, not FLS task"
+    },
+    {
+      "segment": 4,
+      "description": "Ian Vlok (Neurosurgery head, Stellenbosch University) interviewed",
+      "type": "expert_interview",
+      "not_scorable_reason": "Talking head interview, not task performance"
+    },
+    {
+      "segment": 5,
+      "description": "Two men in business attire handling 3D-printed vertebral model",
+      "type": "educational_demo",
+      "not_scorable_reason": "Product/technology demonstration with narration"
+    },
+    {
+      "segment": 6,
+      "description": "Facility tour showing surgical training equipment and workstations",
+      "type": "facility_tour",
+      "not_scorable_reason": "Facility overview, not task performance"
+    },
+    {
+      "segment": 7,
+      "description": "3D-printed bone model close-up",
+      "type": "specimen_documentation",
+      "not_scorable_reason": "Equipment/specimen documentation only"
+    },
+    {
+      "segment": 8,
+      "description": "Man at laparoscopic simulator viewing surgical scene on monitor",
+      "type": "training_scenario",
+      "task_potentially_visible": "Endoloop or Extracorporeal Suture",
+      "not_scorable_reason": "Broadcast documentation angle; insufficient close-up of task field and phase timing"
+    },
+    {
+      "segment": 9,
+      "description": "Peter Fuller (Medtronic Sub-Saharan Africa VP) interviewed",
+      "type": "industry_representative_interview",
+      "not_scorable_reason": "Talking head interview"
+    },
+    {
+      "segment": 10,
+      "description": "Facility tour continuation with surgical lights and workstations",
+      "type": "facility_overview",
+      "not_scorable_reason": "Documentary footage of facility, not task"
+    },
+    {
+      "segment": 11,
+      "description": "Close-up of mannequin face/airway management model",
+      "type": "equipment_documentation",
+      "not_scorable_reason": "Model documentation"
+    },
+    {
+      "segment": 12,
+      "description": "Operating room with anesthesia setup and equipment",
+      "type": "clinical_environment_tour",
+      "not_scorable_reason": "Real OR documentation, not FLS task"
+    }
+  ],
+  "scoring_impossibility_explanation": "This is a CCTV+ broadcast documentary featuring multiple surgical training facilities, expert interviews, equipment demonstrations, and brief glimpses of training scenarios. It is NOT formatted as an FLS task performance video. The framings, camera angles, and editorial cuts are designed for broadcast journalism, not FLS assessment. To score an FLS task, video must: (1) show a single continuous task attempt, (2) provide clear overhead or side views of the task field sufficient to measure deviations/penalties, (3) display elapsed time or timestamp throughout, (4) capture all phases without editorial cuts. This video lacks all of these properties.",
+  "fls_scoring": "NOT APPLICABLE",
+  "confidence": 1.0,
+  "recommendation": "Reject for FLS scoring. If a specific FLS task performance is needed, request the isolated task video from the training facility, not the broadcast documentary.",
+  "video_id": "42tgYza4ohQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:38:11.480192+00:00",
+  "scoreable": false
+}

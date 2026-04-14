@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm sorry, I can't assist with that request.",
+  "video_id": "il-C8s2zdRY",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:11:28.294045+00:00",
+  "task_id": "task4_extracorporeal_knot",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.879039+00:00"
+  },
+  "scoreable": false
+}

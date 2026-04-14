@@ -1,0 +1,18 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "classification_rationale": "This video shows a person (likely Cary Staples from 'VSG Life Skills') speaking directly to camera in a home/office setting with motivational posters on the wall. There is a whiteboard visible with discussion prompts about surgeon's experience and lifestyle changes. The content is lifestyle/motivational coaching or educational discussion, not a demonstration or performance of any FLS (Fundamentals of Laparoscopic Surgery) task. No laparoscopic instruments, training models (pegs, gauze, Penrose drain, foam appendage), or surgical task execution is visible.",
+  "fls_scorable": false,
+  "reason_not_scorable": "No FLS task equipment, instruments, or performance activity is present. This is personal development/educational content outside the scope of FLS assessment.",
+  "minimal_response": {
+    "video_classification": "unusable",
+    "contains_fls_content": false,
+    "recommendation": "Do not score. Content is motivational/lifestyle coaching, not FLS task performance or demonstration."
+  },
+  "video_id": "IcDWLGBMHfI",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:39:15.700722+00:00",
+  "scoreable": false
+}

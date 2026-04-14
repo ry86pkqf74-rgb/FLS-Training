@@ -1,0 +1,120 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Left hand picking up green object from first peg",
+      "technique_notes": "Stable grasp, precise movement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "transfer_midair",
+      "description": "Green object transferred from left to right hand mid-air",
+      "technique_notes": "Smooth transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "place_dominant",
+      "description": "Right hand places green object onto peg",
+      "technique_notes": "Accurate placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "reverse_pickup",
+      "description": "Right hand picks up orange object",
+      "technique_notes": "Quick grasp, good control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "reverse_transfer",
+      "description": "Orange object transferred from right to left hand",
+      "technique_notes": "Controlled and precise",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "reverse_place",
+      "description": "Left hand places orange object onto peg",
+      "technique_notes": "Steady placement, no wobbling",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 24.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0.0,
+      "end_seconds": 2.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 2.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 3.0,
+      "end_seconds": 4.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 4.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 5.0,
+      "end_seconds": 7.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 7.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "score_components": {
+    "max_score": 300,
+    "time_used": 24.0,
+    "total_penalties": 0,
+    "total_fls_score": 276.0,
+    "formula_applied": "300 - 24.0 - 0 = 276.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear visibility of all phases and precise task execution with no errors observed.",
+  "video_id": "19FRvCm3NWI",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:18:25.666682+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.735051+00:00"
+  },
+  "scoreable": true
+}

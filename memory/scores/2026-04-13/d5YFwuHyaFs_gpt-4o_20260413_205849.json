@@ -1,0 +1,161 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0,
+      "phase": "needle_load",
+      "description": "Beginning of task, instruments entering the field.",
+      "technique_notes": "Setup for suture placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 30,
+      "phase": "suture_placement",
+      "description": "Needle passes through first mark on Penrose drain.",
+      "technique_notes": "Smooth entry but slightly lateral.",
+      "penalties_observed": [
+        {
+          "type": "suture_deviation",
+          "description": "Entry point approximately 2mm lateral to mark 1.",
+          "points_deducted": 2.0,
+          "frame_evidence": [
+            5,
+            6
+          ],
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 93,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Knot being formed extracorporeally.",
+      "technique_notes": "Appears secure, tension appropriate.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 187,
+      "phase": "knot_push",
+      "description": "Knot pushed down, tension maintained.",
+      "technique_notes": "Visible secure knot placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 220,
+      "phase": "suture_cut",
+      "description": "Second knot tied and cut.",
+      "technique_notes": "Clean cut, ending procedure.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 230,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 30,
+      "duration_seconds": 30,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 30,
+      "end_seconds": 93,
+      "duration_seconds": 63,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 93,
+      "end_seconds": 187,
+      "duration_seconds": 94,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 187,
+      "end_seconds": 220,
+      "duration_seconds": 33,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 220,
+      "end_seconds": 230,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "description": "Entry point approximately 2mm lateral to mark 1.",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        5,
+        6
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "roeder_knot",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Tension maintained throughout."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 2.0,
+      "total_deviation_penalty": 2.0,
+      "confidence": 0.7
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 230.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 188.0,
+    "formula_applied": "420 - 230 - 2 = 188.0"
+  },
+  "confidence": 0.8,
+  "confidence_rationale": "Clear view of suture deviation at mark 1 and knot formation. Knot appearance secure, moderate certainty in deviation measurement.",
+  "cannot_determine": [
+    "Exact mm deviation at second entry point due to camera angle."
+  ],
+  "technique_summary": "Demonstrated intermediate proficiency with consistent tension during knot tying. Minor suture deviation observed.",
+  "strengths": [
+    "Consistent knot tension and secure throws",
+    "Efficient suture cutting phase"
+  ],
+  "improvement_suggestions": [
+    "Aim for more accurate entry point alignment with marks.",
+    "Reduce needle load duration to improve overall task time."
+  ],
+  "video_id": "d5YFwuHyaFs",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:58:49.854731+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.869220+00:00"
+  },
+  "scoreable": true
+}

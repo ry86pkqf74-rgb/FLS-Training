@@ -1,0 +1,134 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Starting to pick up the first pink object with the left grasper.",
+      "technique_notes": "Accurate, quick grasp.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "transfer_midair",
+      "description": "Transferring pink object in midair to right grasper.",
+      "technique_notes": "Smooth transfer without dropping.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 9.0,
+      "phase": "place_dominant",
+      "description": "Placing pink object onto peg with right grasper.",
+      "technique_notes": "Accurate placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 20.0,
+      "phase": "reverse_pickup",
+      "description": "Picking up green object with right grasper.",
+      "technique_notes": "Quick and accurate.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 25.0,
+      "phase": "reverse_transfer",
+      "description": "Transferring green object to left grasper in midair.",
+      "technique_notes": "Controlled movement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 40.0,
+      "phase": "reverse_place",
+      "description": "Placing green object back onto peg with left grasper.",
+      "technique_notes": "Accurate with no hesitation.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 60.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 5,
+      "end_seconds": 9,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 9,
+      "end_seconds": 20,
+      "duration_seconds": 11,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 20,
+      "end_seconds": 25,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 25,
+      "end_seconds": 40,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 40,
+      "end_seconds": 60,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "dropped_objects": 0,
+    "objects_not_placed": 0,
+    "objects_remaining_at_timeout": 0
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 60.0,
+    "total_penalties": 0,
+    "total_fls_score": 240,
+    "formula_applied": "300 - 60.0 - 0 = 240"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "The task was completed without visible errors using efficiently observed techniques and accurate object handling.",
+  "cannot_determine": [],
+  "technique_summary": "Performed with precision and speed corresponding to expert benchmarks. No errors detected.",
+  "strengths": [
+    "Efficient object transfers and placements.",
+    "No objects were dropped."
+  ],
+  "improvement_suggestions": [
+    "Continue to practice for consistency across various object sizes and types."
+  ],
+  "video_id": "COQ0eVwyJ1I",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:42:37.819220+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.792686+00:00"
+  },
+  "scoreable": true
+}

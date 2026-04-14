@@ -1,0 +1,14 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "reason": "This is a television news broadcast (WTTE Fox 28, Columbus Ohio, 3/5/2008) featuring education and innovation segments about various school districts and programs. The content includes news anchors, school facility tours, demonstrations of educational technology and robotics projects, and student interviews. There are no FLS (Fundamentals of Laparoscopic Surgery) tasks visible \u2014 no laparoscopic trainers, suturing, knot tying, peg transfers, pattern cutting, or endoloop procedures.",
+  "content_summary": "News segments covering mechanicsburg exempted village schools, Morgan Local Schools, Mount Gilead Schools, Riverside Methodist Hospital education program, New Hope Christian Elementary, and various STEM/robotics demonstrations in school settings.",
+  "score": null,
+  "confidence": 1.0,
+  "video_id": "B_I0Q3KJ82Y",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:06:31.948796+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,95 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Certification Practice Test 2026 - Educational Content",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_slide",
+      "description": "Title slide showing 'FLS Certification Practice Test 2026 - Fundamentals of Laparoscopic Surgery All You Need to Know'",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "question_01",
+      "description": "Multiple choice question about typical laparoscope diameters with answer A) 2-10mm highlighted in green",
+      "technique_notes": "Basic equipment knowledge assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "question_02",
+      "description": "Question about scope angle for field alignment with port, answer C) 0 degree highlighted",
+      "technique_notes": "Optical principles for laparoscopy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "question_03",
+      "description": "Question about preventing scope fogging, answer B) Use anti-fog solution highlighted with explanation",
+      "technique_notes": "Practical equipment management",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "question_04",
+      "description": "Question about most common light source, answer C) 300W Xenon highlighted with explanation",
+      "technique_notes": "Equipment specifications knowledge",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "question_05",
+      "description": "Question about high flow/low pressure meaning, answer C) Leak in circuit highlighted",
+      "technique_notes": "Troubleshooting insufflation systems",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscope diameter selection (2-10mm range)",
+      "optimal viewing angles for port alignment (0 degree)",
+      "anti-fog solution application for scope maintenance",
+      "xenon light source specifications (300W standard)",
+      "insufflation system troubleshooting",
+      "monopolar electrosurgery benefits and requirements",
+      "coagulation mode effects on tissue",
+      "ASA classification understanding",
+      "trocar length considerations for obese patients",
+      "absolute contraindications recognition",
+      "bipolar vs monopolar electrosurgery differences",
+      "manual skills training emphasis in FLS",
+      "pneumoperitoneum gas selection (CO2)",
+      "navigation safety principles",
+      "standard intra-abdominal pressure settings (12-15 mmHg)",
+      "CO2 embolism risk awareness"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "using incorrect scope angles that don't align with port access",
+      "failing to use anti-fog solutions leading to poor visualization",
+      "misunderstanding insufflation system pressure readings",
+      "confusing monopolar and bipolar electrosurgery requirements",
+      "not recognizing absolute contraindications to laparoscopic surgery",
+      "using inappropriate trocar lengths for patient body habitus",
+      "setting incorrect intra-abdominal pressures"
+    ],
+    "skill_level_demonstrated": "novice"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational content with multiple choice questions and explanations visible. Content covers fundamental FLS knowledge areas including equipment, safety, and technique principles.",
+  "cannot_determine": [],
+  "technique_summary": "Educational presentation covering core FLS certification knowledge including equipment specifications, safety principles, patient selection, and technical fundamentals required for laparoscopic surgery competency.",
+  "video_id": "NhNMzuvhUnc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:55:54.366592+00:00",
+  "scoreable": false
+}

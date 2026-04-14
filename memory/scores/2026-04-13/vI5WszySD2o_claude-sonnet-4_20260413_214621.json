@@ -1,0 +1,172 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Setup view showing gauze suspended between clamps with marked circular pattern (4cm diameter)",
+      "technique_notes": "Good initial setup, gauze properly tensioned, clear circular marking visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 4.0,
+      "phase": "gauze_grasp",
+      "description": "Left grasper approaching gauze while right grasper with scissors positioned",
+      "technique_notes": "Proper instrument approach, good coordination between both hands",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 8.0,
+      "phase": "initial_cut",
+      "description": "Left grasper stabilizing gauze while right scissors making initial entry cut",
+      "technique_notes": "Good gauze tension control, scissors positioned close to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing circular cut in clockwise direction, maintaining gauze tension",
+      "technique_notes": "Smooth cutting motion, maintaining consistent distance from line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 20.0,
+      "phase": "clockwise_cut",
+      "description": "Progressing around circle, gauze being manipulated to maintain optimal cutting angle",
+      "technique_notes": "Good tissue handling, scissors following curved path well",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 28.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing around circle, cut appears to deviate slightly from line at bottom",
+      "technique_notes": "Some deviation visible, gauze tension maintained",
+      "penalties_observed": [
+        "possible_line_deviation"
+      ]
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 44.0,
+      "phase": "clockwise_cut",
+      "description": "Approaching completion of circular cut, gauze still attached to clamps",
+      "technique_notes": "Nearing completion, cut path generally following circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 76.0,
+      "phase": "completion",
+      "description": "Final stages of cutting, circular piece being separated",
+      "technique_notes": "Task appears complete, circular pattern cut out successfully",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 80.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 4,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 4,
+      "end_seconds": 8,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 8,
+      "end_seconds": 76,
+      "duration_seconds": 68,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 76,
+      "end_seconds": 80,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "Minor deviation from marked line visible at bottom portion of circle",
+      "points_deducted": 3.0,
+      "frame_evidence": [
+        8,
+        10
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": {
+        "north": 1.0,
+        "northeast": 1.5,
+        "east": 1.0,
+        "southeast": 2.0,
+        "south": 3.0,
+        "southwest": 2.5,
+        "west": 1.5,
+        "northwest": 1.0
+      },
+      "total_deviation_penalty": 13.5,
+      "average_deviation_mm": 1.69,
+      "confidence": 0.6
+    },
+    "gauze_integrity": {
+      "detached_from_clamp": false,
+      "incomplete_cut": false,
+      "gauze_torn": false
+    },
+    "cut_quality": "smooth_continuous_cut"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 80.0,
+    "total_penalties": 13.5,
+    "total_fls_score": 206.5,
+    "formula_applied": "300 - 80.0 - 13.5 = 206.5"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Time measurement well-observed from video frames. Deviation measurements estimated from camera angle which may not show precise distances at all cardinal points. Task completion clearly visible.",
+  "cannot_determine": [
+    "Exact mm measurements at all cardinal points due to camera perspective",
+    "Precise deviation at some portions where camera angle is oblique"
+  ],
+  "technique_summary": "Good intermediate performance with steady cutting technique and proper gauze handling. Completion time within expert range but precision could be improved.",
+  "strengths": [
+    "Smooth, continuous cutting motion",
+    "Good gauze tension control throughout",
+    "Efficient completion time"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining closer distance to marked line throughout cut",
+    "Take more time at curved portions to ensure precision"
+  ],
+  "video_id": "vI5WszySD2o",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:46:21.407329+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.908697+00:00"
+  },
+  "scoreable": true
+}

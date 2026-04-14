@@ -1,0 +1,140 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Non-dominant hand begins picking up first object.",
+      "technique_notes": "Grasp is stable and object is lifted smoothly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 2.0,
+      "phase": "transfer_midair",
+      "description": "Object is successfully transferred midair to dominant hand.",
+      "technique_notes": "Transfer occurs without dropping the object.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 4.0,
+      "phase": "place_dominant",
+      "description": "Dominant hand places object on peg.",
+      "technique_notes": "Placement is aligned and stable.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 8.0,
+      "phase": "reverse_pickup",
+      "description": "Dominant hand picks up object from peg for reverse transfer.",
+      "technique_notes": "Grasp is slightly off-center.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 10.0,
+      "phase": "reverse_transfer",
+      "description": "Object is transferred midair to non-dominant hand.",
+      "technique_notes": "Transfer is smooth, no drop.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 12.0,
+      "phase": "reverse_place",
+      "description": "Non-dominant hand places object on original peg.",
+      "technique_notes": "Placement successful.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 176.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0.0,
+      "end_seconds": 2.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 2.0,
+      "end_seconds": 3.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 3.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 8.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 10.0,
+      "end_seconds": 11.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 11.0,
+      "end_seconds": 13.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "time_penalty",
+      "description": "Long completion time suggesting inefficiencies.",
+      "points_deducted": 0,
+      "frame_evidence": [],
+      "confidence": 1.0
+    }
+  ],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 176.0,
+    "total_penalties": 0,
+    "total_fls_score": 124.0,
+    "formula_applied": "300 - 176.0 = 124.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Task execution was visible and technique was well demonstrated; completion time was clear.",
+  "cannot_determine": [
+    "Exact reasons for prolonged task time based on observed phases; no penalties were visually evident."
+  ],
+  "technique_summary": "The task was completed with accurate transfers and placements. The primary issue was time taken for completion.",
+  "strengths": [
+    "Stable grasp and precise midair transfers.",
+    "Accurate peg placements without errors."
+  ],
+  "improvement_suggestions": [
+    "Practice to reduce overall task time, aiming closer to expert benchmarks."
+  ],
+  "video_id": "q5lS0G3udjU",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:33:33.129438+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.896948+00:00"
+  },
+  "scoreable": true
+}

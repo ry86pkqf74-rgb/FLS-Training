@@ -1,0 +1,32 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - instructional/documentary content",
+  "reason_for_classification": "This video is a documentary or instructional piece from 'World Laparoscopy Hospital' showing surgical training and procedures in a teaching environment. The frames show multiple surgeons, students, and trainees in an operating room setting with decorative transitions and framing. No single trainee is performing a timed FLS task from the standardized FLS curriculum. The content is educational documentation, not a performance evaluation of a specific FLS module.",
+  "scoring_status": "NOT SCORED",
+  "explanation": "Per assessment instructions, instructional videos with educational/documentary context, multiple participants, and no isolated task performance are classified as 'instructional' and are not scored using the FLS rubric. This video does not show a single trainee performing one of the five standardized FLS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) under timed conditions with observable completion time and penalties.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Laparoscopic instrument handling in a teaching hospital environment",
+      "Surgical team coordination during laparoscopic procedures",
+      "Training environment setup for minimally invasive surgery"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": null,
+    "skill_level_demonstrated": "mixed - shows teaching context rather than single-performance demonstration",
+    "context": "Documentary of World Laparoscopy Hospital training program showing multiple participants and general laparoscopic surgical environment"
+  },
+  "confidence": 1.0,
+  "cannot_score_reasons": [
+    "Multiple participants - no single trainee isolated for performance scoring",
+    "No clear task identification from standardized FLS curriculum",
+    "No visible timing or task-specific setup (Peg Transfer board, Pattern Cut gauze, Endoloop foam, Penrose drain, etc.)",
+    "Decorative framing and transitions indicate documentary/instructional intent rather than task performance",
+    "Multiple scene transitions suggest multiple different procedures/teaching moments, not one task"
+  ],
+  "video_id": "J8NqVmc8_xU",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:41:32.428063+00:00",
+  "scoreable": false
+}

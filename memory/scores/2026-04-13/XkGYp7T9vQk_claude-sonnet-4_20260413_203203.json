@@ -1,0 +1,175 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "initial_setup",
+      "description": "Black frame, no visible instruments or activity",
+      "technique_notes": "Pre-start frame",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 4.2,
+      "phase": "gauze_grasp",
+      "description": "Right grasper holding gauze, left instrument approaching circle. Blue gauze suspended between clamps with black circular marking clearly visible",
+      "technique_notes": "Good initial gauze stabilization, circle appears to be standard 4cm diameter",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 8.4,
+      "phase": "initial_cut",
+      "description": "Both instruments engaged with gauze, left scissors making initial entry cut at approximately 6 o'clock position of circle",
+      "technique_notes": "Entry appears close to marked line, steady positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.6,
+      "phase": "clockwise_cut",
+      "description": "Scissors progressing clockwise around circle, currently at approximately 4 o'clock position. Right grasper providing counter-tension",
+      "technique_notes": "Smooth cutting motion, good instrument coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 16.8,
+      "phase": "clockwise_cut",
+      "description": "Cutting continues around circle, now at approximately 2 o'clock position. Cut edge appears to follow marked line closely",
+      "technique_notes": "Consistent cutting technique maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 42.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing past 12 o'clock position, approaching 10 o'clock. Gauze remains securely attached to clamps",
+      "technique_notes": "Good progress, no visible detachment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 63.0,
+      "phase": "clockwise_cut",
+      "description": "Cut approaching 8-9 o'clock position, nearly three-quarters complete around circle",
+      "technique_notes": "Steady progress maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 84.0,
+      "phase": "completion",
+      "description": "Final cutting at 6 o'clock position, approaching closure of circular cut. Center gauze piece appears ready to separate",
+      "technique_notes": "Clean completion of cut, circle fully excised",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 84.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 8,
+      "end_seconds": 16,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 16,
+      "end_seconds": 84,
+      "duration_seconds": 68,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 84,
+      "end_seconds": 84,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Minor deviation at 3 o'clock position, approximately 1mm outside marked line",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        4,
+        5
+      ],
+      "confidence": 0.7
+    },
+    {
+      "type": "deviation_from_line",
+      "description": "Slight deviation at 9 o'clock position, approximately 1mm outside marked line",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        15
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": {
+        "12_oclock": 0.5,
+        "3_oclock": 1.0,
+        "6_oclock": 0.5,
+        "9_oclock": 1.0
+      },
+      "total_deviation_penalty": 2.0,
+      "confidence": 0.65
+    },
+    "gauze_attachment": {
+      "remained_attached": true,
+      "detachment_penalty": 0
+    },
+    "cut_completion": {
+      "fully_completed": true,
+      "incomplete_penalty": 0
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 84.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 214.0,
+    "formula_applied": "300 - 84.0 - 2.0 = 214.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Clear visualization of cutting progression and completion. Some uncertainty in precise deviation measurements due to camera angle and lighting, but major violations clearly absent. Gauze attachment and completion status well-documented.",
+  "cannot_determine": [
+    "Exact deviation measurements at 1:30, 4:30, 7:30, and 10:30 positions - camera angle provides limited precision for intermediate cardinal points"
+  ],
+  "technique_summary": "Solid intermediate performance with efficient cutting technique and good instrument coordination. Time of 84 seconds falls within intermediate range. Minor precision deviations noted but overall clean execution.",
+  "strengths": [
+    "Smooth cutting progression without hesitation",
+    "Excellent gauze stabilization throughout procedure",
+    "Clean completion without incomplete sections"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining closer adherence to marked line, particularly at 3 and 9 o'clock positions",
+    "Consider slightly slower cutting at critical positions to improve precision"
+  ],
+  "video_id": "XkGYp7T9vQk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:32:03.736904+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.848331+00:00"
+  },
+  "scoreable": true
+}

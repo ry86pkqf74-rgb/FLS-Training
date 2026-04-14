@@ -1,0 +1,85 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Dundee Knot Instructional Video (Not FLS Task)",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_screen",
+      "description": "Pink title screen displaying 'DUNDEE KNOT' by DR R K MISHRA",
+      "technique_notes": "This is an instructional video title screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "demonstration_start",
+      "description": "Hands demonstrating Dundee Jamming knot technique with purple and white suture material",
+      "technique_notes": "Educational demonstration of knot tying technique, not an FLS assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "knot_formation",
+      "description": "Demonstrating loop formation and manipulation for Dundee knot",
+      "technique_notes": "Clear instructional movements showing proper technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "knot_completion",
+      "description": "Final stages of knot formation and tightening",
+      "technique_notes": "Demonstration continues with proper knot securing technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "end_credits",
+      "description": "Black screen with 'World Laparoscopy Hospital' credit",
+      "technique_notes": "End of instructional video",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "assessment_not_applicable": "This is an instructional video demonstrating the Dundee knot technique, not an FLS Task 5 performance assessment. No scoring rubric applies."
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS task performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear visual evidence this is an educational/instructional video with title screens and credits, not a performance assessment of FLS Task 5",
+  "cannot_determine": [
+    "FLS scoring metrics - video shows instructional content, not task performance",
+    "Penrose drain placement - no drain visible in instructional demonstration",
+    "Suture placement accuracy - no marked targets present for assessment"
+  ],
+  "technique_summary": "This video is an educational demonstration of the Dundee knot technique, not an FLS Task 5 intracorporeal suturing performance that can be scored according to the official rubric.",
+  "strengths": [
+    "Clear instructional format",
+    "Good demonstration of knot tying technique"
+  ],
+  "improvement_suggestions": [
+    "This assessment framework is not applicable to instructional videos"
+  ],
+  "video_id": "9bFJWds471w",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:36:01.897669+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.778736+00:00"
+  },
+  "scoreable": false
+}

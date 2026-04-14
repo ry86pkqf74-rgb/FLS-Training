@@ -1,0 +1,63 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "promotional_content",
+      "description": "Multiple medical professionals in surgical attire with heavy digital effects and overlays",
+      "technique_notes": "Not FLS-related content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "promotional_content",
+      "description": "Text overlay 'Laparoscopic Urological Surgery Course For Residents' with instructor pointing",
+      "technique_notes": "Educational promotional material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "promotional_content",
+      "description": "Continued promotional content with text overlays about course highlights",
+      "technique_notes": "Marketing material for surgical course",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - not an FLS task"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows promotional/marketing content for a laparoscopic surgery course, not an FLS task performance or demonstration",
+  "cannot_determine": [],
+  "technique_summary": "This is promotional content for a laparoscopic urological surgery course, not FLS task content",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Course covers fundamentals of laparoscopic techniques",
+      "To prepare resident doctors ready for safe practice"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "promotional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "LqEZ-qfL6AM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:50:12.563498+00:00",
+  "scoreable": false
+}

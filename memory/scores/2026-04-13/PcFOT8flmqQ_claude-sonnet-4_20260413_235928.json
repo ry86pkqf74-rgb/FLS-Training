@@ -1,0 +1,99 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_title",
+      "description": "Title slide showing 'Laparoscopic Sigmoid Resection' with Dr. Kevin Huguet credentials",
+      "technique_notes": "Educational video introduction, not an FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "instructional_content",
+      "description": "Intraoperative view of sigmoid colon anatomy with instruments visible",
+      "technique_notes": "Real surgical footage showing anatomical orientation and tissue handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 16.0,
+      "phase": "instructional_content",
+      "description": "Mobilization of sigmoid colon with dissection instruments",
+      "technique_notes": "Demonstration of proper tissue plane dissection and retraction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 24.0,
+      "phase": "instructional_content",
+      "description": "Continued dissection with clear visualization of anatomical structures",
+      "technique_notes": "Expert-level tissue handling with appropriate traction and countertraction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 32.0,
+      "phase": "instructional_content",
+      "description": "Vessel identification and isolation during sigmoid mobilization",
+      "technique_notes": "Careful vascular dissection with instrument positioning for hemostasis",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 40.0,
+      "phase": "instructional_content",
+      "description": "Extracorporeal view showing specimen handling and suture material",
+      "technique_notes": "Transition to extracorporeal technique demonstration",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": "Not applicable - this is instructional surgical footage, not FLS endoloop task",
+    "knot_security": "Not applicable",
+    "target_accuracy": "Not applicable"
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This video shows actual laparoscopic sigmoid resection surgery, not FLS Task 3 endoloop performance on foam appendages",
+  "cannot_determine": [
+    "FLS endoloop task performance metrics - video shows real surgical procedure"
+  ],
+  "technique_summary": "This is high-quality instructional surgical footage demonstrating laparoscopic sigmoid resection technique, not an FLS endoloop task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Sigmoid colon mobilization and dissection",
+      "Proper tissue plane identification",
+      "Vascular isolation and control",
+      "Instrument coordination in confined spaces",
+      "Transition between intra and extracorporeal techniques"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Maintaining proper tissue tension during dissection",
+      "Avoiding vascular injury through careful dissection"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "PcFOT8flmqQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:59:28.818822+00:00",
+  "scoreable": false
+}

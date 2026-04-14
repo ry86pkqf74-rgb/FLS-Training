@@ -1,0 +1,166 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Initial setup with six rubber pegs visible on board, two laparoscopic graspers visible (one gray, one dark). Instruction displays 'Grab the needle to start the exercise.'",
+      "technique_notes": "Setup phase; trainee preparing to begin",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "initial_grasp",
+      "description": "Right hand (gray grasper) approaching first peg on the left side of the board",
+      "technique_notes": "Instrument alignment perpendicular to board surface; controlled approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper grasping first rubber peg; left hand (dark grasper) visible but not yet engaged with object",
+      "technique_notes": "Single-hand pickup; ready for transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "transfer_midair",
+      "description": "First peg held by right grasper, being transferred toward left grasper held by left hand (dark instrument); both instruments visible in frame",
+      "technique_notes": "Clean transfer motion; steady hand positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 11.0,
+      "phase": "transfer_midair",
+      "description": "Peg exchange in progress; right grasper releasing peg as left grasper closes on it",
+      "technique_notes": "Smooth handoff; instruments coordinated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "place_dominant",
+      "description": "Left grasper (dark instrument) placing first peg onto right side peg post",
+      "technique_notes": "Deliberate placement with controlled descent",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 19.0,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper picking up second peg from left post; preparation for reverse transfer",
+      "technique_notes": "Sequential pickup; second peg secured",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 22.0,
+      "phase": "transfer_midair",
+      "description": "Second peg transferred from right grasper to left grasper; both instruments engaged",
+      "technique_notes": "Coordinated transfer; midair exchange clean",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 30.0,
+      "phase": "transfer_midair",
+      "description": "Multiple pegs now visible in transit; approximately 3 pegs transferred so far; trainee maintaining controlled pace",
+      "technique_notes": "Continued methodical transfers; no drops observed yet",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 104.0,
+      "phase": "late_transfer",
+      "description": "Late phase of task; multiple pegs visible across both posts; final peg transfers in progress",
+      "technique_notes": "Performance maintained throughout; steady pace",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 122.0,
+      "phase": "completion_approach",
+      "description": "Both graspers visible with final peg placements; nearly all pegs successfully transferred between posts",
+      "technique_notes": "Task nearing completion; no major errors visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 124.0,
+      "phase": "task_complete",
+      "description": "Final frame shows both instruments withdrawn; all six pegs successfully transferred from left post to right post and reverse; task completed",
+      "technique_notes": "All pegs on proper posts; clean completion",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 124.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_and_place",
+      "start_seconds": 8,
+      "end_seconds": 124,
+      "duration_seconds": 116,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "none_observed",
+      "description": "No dropped pegs outside field, no peg misplacements, no objects left at timeout",
+      "points_deducted": 0.0,
+      "frame_evidence": [],
+      "confidence": 0.95
+    }
+  ],
+  "task_specific_assessments": {
+    "pegs_transferred": 6,
+    "all_pegs_placed_correctly": true,
+    "drops_observed": 0,
+    "misplacements": 0,
+    "hand_dominance_observed": "right_dominant",
+    "transfer_technique": "smooth_alternating_exchanges"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 124.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 176.0,
+    "formula_applied": "300 - 124.0 - 0.0 = 176.0"
+  },
+  "confidence": 0.92,
+  "confidence_rationale": "Completion time clearly marked in frames. All six pegs successfully transferred with no visible drops or misplacements. Clean task execution with smooth instrument coordination throughout. Timing and penalties are unambiguous from video evidence.",
+  "cannot_determine": [],
+  "technique_summary": "Strong intermediate performance. Trainee demonstrated competent peg transfer with excellent hand coordination and no penalty deductions. Completion time of 124 seconds places performance solidly in intermediate range (60\u2013120s expert benchmark exceeded by 4 seconds, but well within 60\u2013300s intermediate range). All safety and accuracy standards met.",
+  "strengths": [
+    "Smooth coordinated transfers between graspers",
+    "No dropped pegs or placement errors",
+    "Controlled instrument movements with minimal unnecessary motion",
+    "Consistent pace throughout task",
+    "Proper hand switching between dominant and non-dominant transfers"
+  ],
+  "improvement_suggestions": [
+    "Focus on further optimizing pickup and placement speeds to approach expert benchmark of 40\u201360 seconds",
+    "Practice pre-positioning of receiving grasper to reduce midair transfer time",
+    "Maintain excellent technique currently demonstrated while building speed through repetition"
+  ],
+  "video_id": "NU4Q-euYE0Q",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:54:24.085394+00:00",
+  "scoreable": true
+}

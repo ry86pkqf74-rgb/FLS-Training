@@ -1,0 +1,182 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Initial view of gauze suspended between clamps with 4cm marked circle, graspers approaching from left and right sides",
+      "technique_notes": "Good positioning of instruments at corners of marked circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "initial_cut",
+      "description": "Right grasper beginning to cut at 12 o'clock position on marked circle",
+      "technique_notes": "Appropriate starting position at top of circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing clockwise from 12 to approximately 3 o'clock position",
+      "technique_notes": "Smooth cutting motion following circle outline closely",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 70.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting continues around circle, approaching 6 o'clock position",
+      "technique_notes": "Maintaining good proximity to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 110.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing past 6 o'clock toward 9 o'clock position",
+      "technique_notes": "Cut path appears to deviate slightly outside marked line at lower portion",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 150.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting approaching 9 o'clock position, nearing completion of circle",
+      "technique_notes": "Visible deviation from marked line at left side of circle",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 190.0,
+      "phase": "completion",
+      "description": "Final cut connecting back to starting point, circular pattern separated",
+      "technique_notes": "Clean completion with gauze circle fully excised",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 210.0,
+      "phase": "completion",
+      "description": "Task completed, circular gauze piece removed from larger sheet",
+      "technique_notes": "Gauze remains attached to clamps throughout procedure",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 210.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 10,
+      "end_seconds": 25,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 25,
+      "end_seconds": 190,
+      "duration_seconds": 165,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 190,
+      "end_seconds": 210,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Cut path deviates approximately 3mm outside marked line at 6 o'clock position",
+      "points_deducted": 3.0,
+      "frame_evidence": [
+        12,
+        13
+      ],
+      "confidence": 0.7
+    },
+    {
+      "type": "deviation_from_line",
+      "description": "Cut path deviates approximately 2mm outside marked line at 9 o'clock position",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        15,
+        16
+      ],
+      "confidence": 0.65
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "cardinal_point_deviations_mm": {
+        "12_oclock": 0.5,
+        "3_oclock": 1.0,
+        "6_oclock": 3.0,
+        "9_oclock": 2.0
+      },
+      "total_deviation_penalty": 5.0,
+      "confidence": 0.68
+    },
+    "gauze_integrity": {
+      "gauze_detached_from_clamp": false,
+      "incomplete_cut": false
+    },
+    "cut_quality": {
+      "smooth_cutting_motion": true,
+      "circle_completion": true,
+      "cutting_efficiency": "intermediate"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 210.0,
+    "total_penalties": 5.0,
+    "total_fls_score": 85.0,
+    "formula_applied": "300 - 210.0 - 5.0 = 85.0"
+  },
+  "confidence": 0.68,
+  "confidence_rationale": "Clear visualization of cutting path and circle completion. Some uncertainty in precise mm measurements due to camera angle and gauze texture making exact line visualization challenging.",
+  "cannot_determine": [
+    "Exact mm deviations at all 8 cardinal points due to gauze texture and lighting",
+    "Precise deviation measurements at 1:30 and 10:30 positions partially obscured"
+  ],
+  "technique_summary": "Solid intermediate performance with systematic clockwise cutting approach. Primary penalty from modest deviations at lower quadrant of circle. Good overall circle completion and gauze handling.",
+  "strengths": [
+    "Systematic cutting approach starting at 12 o'clock",
+    "Maintained gauze attachment to clamps throughout",
+    "Clean circle completion and excision"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining tighter adherence to marked line, especially at 6 and 9 o'clock positions",
+    "Consider slower cutting pace in challenging curve sections to improve precision"
+  ],
+  "video_id": "TlDQyo-CqM4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:22:29.901536+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.841224+00:00"
+  },
+  "scoreable": true
+}

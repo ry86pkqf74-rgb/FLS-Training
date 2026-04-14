@@ -1,0 +1,86 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No specific FLS task performed",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "event_overview",
+      "description": "Black frame, no content visible",
+      "technique_notes": "No surgical activity",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "event_overview",
+      "description": "Operating room with multiple physicians and laparoscopic equipment visible",
+      "technique_notes": "Educational event or demonstration in progress",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "training_session",
+      "description": "Two individuals at laparoscopic trainer, one instructing the other",
+      "technique_notes": "Appears to be hands-on training or demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "formal_presentation",
+      "description": "Dr. Jane Eggerstedt at podium giving presentation",
+      "technique_notes": "Academic presentation component of event",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "demonstration",
+      "description": "Expert surgeon demonstrating laparoscopic technique to group",
+      "technique_notes": "Teaching demonstration of surgical technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "interview",
+      "description": "Dr. Andrew Chesson being interviewed on camera",
+      "technique_notes": "Media coverage of educational event",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows educational event and media coverage rather than individual FLS task performance. No specific FLS task visible.",
+  "cannot_determine": [
+    "Specific FLS task - video shows general educational event",
+    "Individual performance metrics - multiple people and activities shown",
+    "Task completion time - no single task performed"
+  ],
+  "technique_summary": "Educational event showcasing laparoscopic surgery training and equipment rather than individual FLS task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Laparoscopic instrument handling",
+      "Trainer box setup and positioning",
+      "Educational event organization"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "Pl5TIrOtYzg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:00:09.336242+00:00",
+  "scoreable": false
+}

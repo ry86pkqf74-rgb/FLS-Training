@@ -1,0 +1,142 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Blank gray screen, video opening",
+      "technique_notes": "No task activity visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_demonstration",
+      "description": "Inovus Products black trainer box being held by hands, branded equipment shown",
+      "technique_notes": "Educational content showing FLS trainer equipment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_setup",
+      "description": "Foam hand model visible with marked lines and incisions, showing target anatomy",
+      "technique_notes": "Trainer setup phase, foam appendage with surgical marking visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 25.0,
+      "phase": "tool_introduction",
+      "description": "Marker pen being held next to foam hand model, showing marking technique",
+      "technique_notes": "Educational demonstration of marking procedure on foam model",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35.0,
+      "phase": "incision_demonstration",
+      "description": "Multiple foam hand models with dashed surgical lines showing planned incisions and deployment marks",
+      "technique_notes": "Teaching content showing Step 3 - anatomical landmarks and planned incisions marked",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "glove_inflation",
+      "description": "Foam hand with textual overlay 'Tip: Blow into the glove', demonstrating inflation technique",
+      "technique_notes": "Educational tip for preparing foam model by inflating the glove portion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 65.0,
+      "phase": "pre_operative_setup",
+      "description": "Inflated foam hand model with surgical markings clearly visible, positioned on white surface",
+      "technique_notes": "Model prepared and positioned for demonstration of endoloop deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 85.0,
+      "phase": "operative_initiation",
+      "description": "Text overlay 'Time to Operate' displayed over prepared foam hand model with laparoscopic instruments visible",
+      "technique_notes": "Transition from setup to demonstration of operative technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 105.0,
+      "phase": "loop_deployment",
+      "description": "Laparoscopic grasper approaching foam appendage, beginning deployment of pre-tied loop around target",
+      "technique_notes": "Instrument positioning shows careful approach to appendage for loop placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 125.0,
+      "phase": "loop_placement_and_cinching",
+      "description": "Loop visible being positioned around appendage with laparoscopic instruments manipulating, cinching motion beginning",
+      "technique_notes": "Demonstrating proper loop positioning and initial tightening at marked target line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 145.0,
+      "phase": "cinch_completion",
+      "description": "Loop cinched tightly around appendage at marked line, laparoscopic instruments securing knot",
+      "technique_notes": "Final tightening phase showing secure loop placement at surgical mark",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 160.0,
+      "phase": "conclusion_and_credits",
+      "description": "Text overlay 'Visit: www.inovus.org for more DIY skills videos' displayed on black background",
+      "technique_notes": "Educational content conclusion with resource link",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly instructional/educational content, not a performance evaluation. The video contains narrated text overlays ('Tip: Blow into the glove', 'Step 3:', 'Time to Operate'), product branding (Inovus Products), and educational sequencing showing setup, anatomy, and operative technique demonstration. It is not a timed performance by a trainee.",
+  "cannot_determine": [
+    "This is instructional content, not a scorable performance video"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper foam hand model preparation and inflation",
+      "Anatomical marking and incision planning using dashed lines",
+      "Laparoscopic instrument positioning for loop deployment",
+      "Loop advancement around foam appendage target",
+      "Loop cinching and tightening at marked surgical line",
+      "Appendage securing with pre-tied ligating loop"
+    ],
+    "verbal_cues": [
+      "Tip: Blow into the glove \u2014 preparing foam model",
+      "Step 3 \u2014 anatomical landmark identification",
+      "Time to Operate \u2014 transition to operative phase"
+    ],
+    "common_errors_addressed": [
+      "Proper model inflation ensures realistic tissue handling",
+      "Clear marking of incision sites prevents placement errors",
+      "Careful instrument approach avoids damaging target appendage",
+      "Positioning loop at marked line ensures accurate placement"
+    ],
+    "skill_level_demonstrated": "instructional"
+  },
+  "video_type_explanation": "This is an Inovus Productions educational/instructional video demonstrating the Endoloop task setup and basic operative technique. It is not a performance recording and should not be scored. The content includes equipment demonstration, model preparation instructions, anatomical teaching, and a demonstration of proper endoloop deployment technique.",
+  "video_id": "5g7w6tfbQvk",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:46:38.475465+00:00",
+  "scoreable": false
+}

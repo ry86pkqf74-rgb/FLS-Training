@@ -1,0 +1,130 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Right grasper approaching peg to grasp object.",
+      "technique_notes": "Controlled grip and approach.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "transfer_midair",
+      "description": "Both graspers engaged transferring object in the air.",
+      "technique_notes": "Smooth handoff.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "place_dominant",
+      "description": "Left grasper placing object onto a new peg.",
+      "technique_notes": "Object placed securely on peg.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 41.0,
+      "phase": "reverse_pickup",
+      "description": "Left grasper picking up an object.",
+      "technique_notes": "Consistent grip applied.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 80.0,
+      "phase": "reverse_transfer",
+      "description": "Both graspers transferring object midair.",
+      "technique_notes": "Steady transfer achieved.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 95.0,
+      "phase": "reverse_place",
+      "description": "Right grasper placing object onto peg.",
+      "technique_notes": "Accurate placement observed.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 120.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 5.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 5.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 5.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 10.0,
+      "end_seconds": 20.0,
+      "duration_seconds": 10.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 41.0,
+      "end_seconds": 46.0,
+      "duration_seconds": 5.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 80.0,
+      "end_seconds": 85.0,
+      "duration_seconds": 5.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 95.0,
+      "end_seconds": 105.0,
+      "duration_seconds": 10.0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 120.0,
+    "total_penalties": 0,
+    "total_fls_score": 180.0,
+    "formula_applied": "300 - 120.0 - 0 = 180.0"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clear visibility of all phases and no observable penalties ensures high confidence in scoring.",
+  "cannot_determine": [],
+  "technique_summary": "The peg transfer was performed efficiently with steady handoffs and accurate placements, indicative of expert competency.",
+  "strengths": [
+    "Smooth midair transfers with precise timing.",
+    "Accurate peg placements minimizing potential drops."
+  ],
+  "improvement_suggestions": [
+    "Maintain current techniques as proficiency levels are evident."
+  ],
+  "video_id": "uGjoHzX0Wcw",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:43:27.157732+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.906290+00:00"
+  },
+  "scoreable": true
+}

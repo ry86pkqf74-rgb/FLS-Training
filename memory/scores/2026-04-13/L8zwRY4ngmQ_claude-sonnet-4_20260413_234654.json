@@ -1,0 +1,66 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Female presenter in black v-neck top against office building background with World Laparoscopy Hospital branding",
+      "technique_notes": "Not an FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "not_applicable",
+      "description": "Title overlay 'Do's & Don'ts after Laparoscopic Surgery' with subtitle about following guidelines",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "not_applicable",
+      "description": "Presenter providing post-operative care instructions with subtitle about cleaning incision site",
+      "technique_notes": "Patient education content",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Gently clean the incision site with mild soap and water and pat it dry",
+      "This helps prevent blood clots and promotes healing",
+      "Choose loose-fitting clothing that won't put pressure on the incision area",
+      "Maintain a healthy diet: Follow a balanced diet rich in fruits, vegetables, whole grains, and lean proteins",
+      "Attend follow-up appointments: Schedule and attend all post-operative appointments with your surgeon",
+      "Avoid lifting heavy objects or engaging in strenuous activities",
+      "Lifting heavy objects can strain the abdominal muscles and increase the risk of hernia or other complications",
+      "Report any abnormal symptoms or concerns to your surgeon promptly",
+      "Avoid picking at or scratching the incision site",
+      "Don't discontinue prescribed medications without consulting your surgeon",
+      "Alcohol and smoking can impair the healing process and increase the risk of complications",
+      "The healing time after laparoscopic surgery varies, but typically the initial recovery period is shorter",
+      "By 4-6 weeks, incisions are typically well-healed, energy levels improve, and normal activities can be resumed",
+      "However, complete healing may take several months depending on the surgery and individual factors"
+    ],
+    "common_errors_addressed": [
+      "Avoiding heavy lifting to prevent hernia",
+      "Not discontinuing medications without medical consultation",
+      "Avoiding alcohol and smoking during recovery",
+      "Not picking at incision sites"
+    ],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video about post-operative care after laparoscopic surgery. No FLS task performance visible.",
+  "cannot_determine": [],
+  "technique_summary": "This is an educational video providing post-operative care instructions for laparoscopic surgery patients, not an FLS task performance or demonstration.",
+  "video_id": "L8zwRY4ngmQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:46:54.928026+00:00",
+  "scoreable": false
+}

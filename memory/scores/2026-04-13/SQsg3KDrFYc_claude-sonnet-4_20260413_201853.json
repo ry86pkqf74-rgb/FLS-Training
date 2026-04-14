@@ -1,0 +1,198 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Setup view showing gauze suspended between clamps with two circular contour lines marked. Instruments positioned for initial approach.",
+      "technique_notes": "Good initial positioning of both instruments, gauze properly tensioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 5.0,
+      "phase": "initial_cut",
+      "description": "Left instrument grasping gauze for stabilization, right instrument (scissors) beginning initial cut at approximately 6 o'clock position",
+      "technique_notes": "Proper stabilization technique with non-cutting hand",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing clockwise around outer circle, currently at approximately 9 o'clock position",
+      "technique_notes": "Smooth cutting motion, maintaining appropriate distance from line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "clockwise_cut",
+      "description": "Cut has progressed to approximately 12 o'clock position, showing some deviation from marked line",
+      "technique_notes": "Some minor wandering from optimal cutting path visible",
+      "penalties_observed": [
+        "line_deviation"
+      ]
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 55.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting continues around circle at approximately 3 o'clock position",
+      "technique_notes": "Maintaining steady progress with reasonable line following",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 75.0,
+      "phase": "clockwise_cut",
+      "description": "Cut approaching completion of full circle at approximately 5 o'clock position",
+      "technique_notes": "Good coordination between instruments for final approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 90.0,
+      "phase": "counterclockwise_cut",
+      "description": "Beginning inner circle cut, instruments repositioned for counterclockwise cutting",
+      "technique_notes": "Smooth transition to inner circle cutting phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 110.0,
+      "phase": "counterclockwise_cut",
+      "description": "Inner circle cutting in progress, maintaining counterclockwise direction",
+      "technique_notes": "Good instrument coordination for inner circle precision",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 130.0,
+      "phase": "counterclockwise_cut",
+      "description": "Continuing inner circle cut with careful attention to marked line",
+      "technique_notes": "Deliberate cutting pace appropriate for precision",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 145.0,
+      "phase": "completion",
+      "description": "Inner circle cut nearly complete, final cuts being made",
+      "technique_notes": "Task nearing completion with both circles cut",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 150.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 5,
+      "end_seconds": 15,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 90,
+      "duration_seconds": 75,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 90,
+      "end_seconds": 145,
+      "duration_seconds": 55,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 145,
+      "end_seconds": 150,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "Minor deviation from marked line visible at 12 o'clock position on outer circle",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        8
+      ],
+      "confidence": 0.7
+    },
+    {
+      "type": "line_deviation",
+      "description": "Small deviations observed at various points around both circles",
+      "points_deducted": 3.0,
+      "frame_evidence": [
+        8,
+        10,
+        16
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "outer_circle_deviation_mm": 2.5,
+      "inner_circle_deviation_mm": 1.5,
+      "total_deviation_penalty": 5.0,
+      "cutting_technique": "good",
+      "line_following_consistency": "adequate"
+    },
+    "gauze_integrity": {
+      "gauze_detached": false,
+      "cuts_complete": true,
+      "between_lines_cut": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 150.0,
+    "total_penalties": 5.0,
+    "total_fls_score": 145.0,
+    "formula_applied": "300 - 150.0 - 5.0 = 145.0"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Line deviation measurements estimated from video angle and resolution. Exact millimeter deviations difficult to assess precisely from overhead view. Completion time and overall technique clearly observable.",
+  "cannot_determine": [
+    "Exact millimeter measurements of line deviation at all cardinal points due to camera resolution and angle",
+    "Precise measurement of deviation at 3 and 9 o'clock positions due to instrument obstruction"
+  ],
+  "technique_summary": "Intermediate level performance with systematic approach to both circles. Good instrument coordination and gauze stabilization. Primary penalties from minor line deviations during cutting phases.",
+  "strengths": [
+    "Excellent gauze stabilization throughout procedure",
+    "Smooth transition between cutting directions",
+    "Appropriate cutting speed for precision work",
+    "Complete task execution within reasonable time"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining consistent distance from marked lines throughout cutting",
+    "Practice smoother cutting motions to reduce minor deviations",
+    "Work on reducing total time while maintaining precision"
+  ],
+  "video_id": "SQsg3KDrFYc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:18:53.666537+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.837800+00:00"
+  },
+  "scoreable": true
+}

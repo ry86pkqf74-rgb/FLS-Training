@@ -1,0 +1,56 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": null,
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Person in gym setting with fitness equipment visible",
+      "technique_notes": "This appears to be fitness/workout content, not medical simulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Text overlay 'JAYCE DEFYfitness' visible in gym environment",
+      "technique_notes": "Promotional/branding content for fitness facility",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "not_applicable",
+      "description": "Person packing gym bag near exercise equipment",
+      "technique_notes": "Standard gym preparation activities",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows gym/fitness content with branding overlays. No laparoscopic equipment, medical simulation trainer, or FLS task materials visible in any frame.",
+  "cannot_determine": [
+    "FLS task identification - video contains no medical simulation content"
+  ],
+  "technique_summary": "Not applicable - this is fitness/gym content, not FLS training",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "KOfKgkbqiIs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:45:10.410033+00:00",
+  "scoreable": false
+}

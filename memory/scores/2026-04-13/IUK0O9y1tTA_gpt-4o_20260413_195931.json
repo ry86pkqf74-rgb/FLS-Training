@@ -1,0 +1,136 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Beginning transfer with non-dominant hand picking up first green peg.",
+      "technique_notes": "Smooth initial pick-up.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.2,
+      "phase": "transfer_midair",
+      "description": "Midair transfer from non-dominant to dominant hand.",
+      "technique_notes": "Stable transfer with no drops.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 7.24,
+      "phase": "place_dominant",
+      "description": "Placing first green peg onto opposite peg.",
+      "technique_notes": "Accurate placement without hesitation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 32.22,
+      "phase": "reverse_pickup",
+      "description": "Non-dominant hand picking up orange peg for reverse transfer.",
+      "technique_notes": "Quick and effective pickup.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 49.52,
+      "phase": "reverse_transfer",
+      "description": "Transfer from non-dominant to dominant hand.",
+      "technique_notes": "Stable control over the object.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 53.16,
+      "phase": "reverse_place",
+      "description": "Placing final peg back onto starting position.",
+      "technique_notes": "Efficient placement without misalignment.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 53.16,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0.0,
+      "end_seconds": 3.2,
+      "duration_seconds": 3.2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 3.2,
+      "end_seconds": 32.22,
+      "duration_seconds": 29.02,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 32.22,
+      "end_seconds": 53.16,
+      "duration_seconds": 20.94,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 32.22,
+      "end_seconds": 49.52,
+      "duration_seconds": 17.3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 49.52,
+      "end_seconds": 53.16,
+      "duration_seconds": 3.64,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 53.16,
+      "end_seconds": 53.16,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "object_management": {
+      "drops_outside_field": 0,
+      "inaccurate_placements": 0,
+      "confidence": 0.95
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 53.16,
+    "total_penalties": 0,
+    "total_fls_score": 246.84,
+    "formula_applied": "300 - 53.16 - 0 = 246.84"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clear visibility of each phase, no penalties observed, smooth performance.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level execution with quick and accurate movements throughout. Excellent handling and no penalties.",
+  "strengths": [
+    "Stable and controlled midair transfers.",
+    "Accurate and quick peg placements."
+  ],
+  "improvement_suggestions": [
+    "Maintain consistent speed throughout to further optimize time."
+  ],
+  "video_id": "IUK0O9y1tTA",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:59:31.496408+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.819390+00:00"
+  },
+  "scoreable": true
+}

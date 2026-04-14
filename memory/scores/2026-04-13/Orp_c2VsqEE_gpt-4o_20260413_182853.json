@@ -118,5 +118,11 @@
   "video_id": "Orp_c2VsqEE",
   "source": "teacher_gpt4o",
   "model_name": "gpt-4o",
-  "scored_at": "2026-04-13T18:28:53.870505+00:00"
+  "scored_at": "2026-04-13T18:28:53.870505+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.830868+00:00"
+  },
+  "scoreable": true
 }

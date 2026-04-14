@@ -1,0 +1,172 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Setup view showing yellow board with multiple purple ropes stretched between posts and green ropes at bottom. White circle marking visible as cutting target.",
+      "technique_notes": "Task setup complete, cutting instrument approaching",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Left hand instrument (cutting tool) positioned near green rope at bottom of board",
+      "technique_notes": "Proper instrument positioning for initial cut",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 0.0,
+      "phase": "initial_cut",
+      "description": "Cutting tool engaging first green rope, showing clean cutting action",
+      "technique_notes": "Smooth cutting motion initiated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 0.0,
+      "phase": "initial_cut",
+      "description": "First green rope severed completely, tool moving to next rope",
+      "technique_notes": "Clean cut achieved, no fraying visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 3.0,
+      "phase": "clockwise_cut",
+      "description": "Tool cutting second green rope (2/6 progress indicator visible)",
+      "technique_notes": "Systematic progression through rope cutting sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 6.0,
+      "phase": "clockwise_cut",
+      "description": "Tool cutting third green rope, maintaining steady cutting pace",
+      "technique_notes": "Consistent cutting technique maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "clockwise_cut",
+      "description": "Tool positioned to cut fourth rope, showing good instrument control",
+      "technique_notes": "Smooth transitions between cutting targets",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 17.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting fifth rope with precise positioning",
+      "technique_notes": "Maintaining accuracy through sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 23.0,
+      "phase": "completion",
+      "description": "Tool positioned at final green rope (4/6 progress shown)",
+      "technique_notes": "Approaching task completion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 32.0,
+      "phase": "completion",
+      "description": "Final cutting action on last green rope (5/6 progress)",
+      "technique_notes": "Task nearing completion with good technique throughout",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 35.0,
+      "phase": "completion",
+      "description": "All green ropes cut, task completed successfully",
+      "technique_notes": "Clean completion of cutting sequence",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 35.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 0,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 3,
+      "end_seconds": 32,
+      "duration_seconds": 29,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 32,
+      "end_seconds": 35,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": "Cannot determine exact mm deviations - no circular pattern or marked line visible for measurement",
+      "cut_quality": "Clean cuts observed on all ropes",
+      "pattern_completion": "All target ropes successfully severed"
+    },
+    "material_handling": {
+      "gauze_detached": false,
+      "material_integrity": "No visible damage to setup"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 35.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 265.0,
+    "formula_applied": "300 - 35.0 - 0.0 = 265.0"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "Video shows rope cutting exercise rather than standard FLS pattern cutting task. No circular pattern, gauze material, or precision markings visible. Task appears to be rope severing rather than pattern cutting along marked lines.",
+  "cannot_determine": [
+    "Deviation from marked circular pattern - no circular cutting line visible",
+    "Exact mm measurements for precision penalties - no measurement reference available",
+    "Whether this represents actual FLS Task 2 or alternative cutting exercise"
+  ],
+  "technique_summary": "Excellent cutting speed and clean technique on rope severing exercise. Completion time of 35 seconds would be exceptional for FLS pattern cutting if this were the standard task.",
+  "strengths": [
+    "Rapid cutting pace with clean cuts",
+    "Systematic progression through all targets",
+    "Excellent instrument control and positioning"
+  ],
+  "improvement_suggestions": [
+    "Verify task setup matches FLS standard pattern cutting requirements",
+    "If this is pattern cutting, ensure circular pattern marking is visible for precision assessment"
+  ],
+  "video_id": "e4MnDRENBA8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:00:41.621544+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.870464+00:00"
+  },
+  "scoreable": true
+}

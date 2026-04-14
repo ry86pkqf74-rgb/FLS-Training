@@ -1,0 +1,127 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Two instructors (Colin Gause, MD and Katherine Barsness, MD) standing in OR holding laparoscopic instruments, trainer box visible in background",
+      "technique_notes": "Educational setup, no task performance yet",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_narration",
+      "description": "Instructor explaining endoloop technique with hand gestures, foam appendage model visible on table",
+      "technique_notes": "Verbal instruction and demonstration mode",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "laparoscopic_view",
+      "description": "Endoscopic camera view showing white foam appendage on brown tissue background with ligating loop visible",
+      "technique_notes": "Loop positioned near target appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 20.0,
+      "phase": "loop_placement_demonstration",
+      "description": "Close-up endoscopic view showing loop being advanced toward appendage with grasper",
+      "technique_notes": "Smooth instrument control, loop deployment appears controlled",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 28.0,
+      "phase": "instructional_cadaver_model",
+      "description": "Instructor (Katherine Barsness, MD) discussing technique while cadaver models (orange appendix model, yellow anatomical structures) are visible on table",
+      "technique_notes": "Educational content with anatomical demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 35.0,
+      "phase": "suture_placement_view",
+      "description": "Endoscopic view showing ligating loop placement around simulated appendage with clear visualization of loop cinching",
+      "technique_notes": "Loop appears to be at appropriate position relative to target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 42.0,
+      "phase": "instructor_dialogue",
+      "description": "Ben Schwab, MD (Resident, Northwestern) providing verbal instruction and review of technique",
+      "technique_notes": "Expert-level instructional narration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 50.0,
+      "phase": "knot_cinching_view",
+      "description": "Endoscopic close-up showing final cinching of ligating loop around appendage base with careful knot tightening",
+      "technique_notes": "Cinching appears firm and complete",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "video_type": "Educational/Instructional demonstration with multiple expert instructors",
+    "performance_component": "None - no actual trainee task performance visible",
+    "instructional_content_present": true,
+    "anatomical_models_shown": true,
+    "laparoscopic_footage_included": true
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content only"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video is clearly educational/instructional in nature with expert narration, multiple instructors, cadaver/foam models, and teaching dialogue. No actual task performance by a trainee is present to score.",
+  "cannot_determine": [
+    "Completion time (not a performance)",
+    "Actual task penalties (instructional only)",
+    "FLS score (instructional content, not performance)"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper ligating loop deployment technique",
+      "Target appendage approach and identification",
+      "Loop positioning at base of appendage",
+      "Safe cinching without tissue damage",
+      "Loop security assessment",
+      "Instrument coordination with two graspers"
+    ],
+    "verbal_cues": [
+      "Expert physicians explain proper loop placement in relation to appendage anatomy",
+      "Discussion of safety margins to avoid appendage transection",
+      "Emphasis on complete cinching before tail cutting",
+      "Explanation of tissue handling during loop deployment"
+    ],
+    "common_errors_addressed": [
+      "Inadequate loop positioning away from target organ",
+      "Premature cutting of tail before secure cinching",
+      "Inconsistent loop tension",
+      "Poor visualization during deployment",
+      "Tissue grasping errors during loop advancement"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "overall_assessment": "This is a professional educational video featuring endoloop technique instruction by attending surgeons at academic medical centers (Case Western Reserve University, Lurie Children's Hospital of Chicago, Northwestern University). The video contains expert-level instruction, anatomical models, laparoscopic footage examples, and verbal explanation of best practices. No trainee performance is present to score according to FLS rubric. Content is appropriate for instructional/teaching purposes only.",
+  "recommendation": "Do not score as FLS performance. Use as teaching resource for endoloop technique training.",
+  "video_id": "0pHxz3lFxto",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:24:15.780118+00:00",
+  "scoreable": false
+}

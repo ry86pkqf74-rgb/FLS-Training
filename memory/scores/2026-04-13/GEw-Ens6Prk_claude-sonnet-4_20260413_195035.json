@@ -1,0 +1,92 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Instructional Video - Not FLS Task Performance",
+  "max_time_seconds": 0,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_slide",
+      "description": "Educational presentation title slide about laparoscopic extracorporeal knot tying and suturing",
+      "technique_notes": "This is an instructional video, not a task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "demonstration",
+      "description": "Instructor demonstrating Roeder's knot technique with yellow rope/suture material",
+      "technique_notes": "Teaching demonstration of extracorporeal knot formation steps",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "single_reef_knot",
+      "description": "Demonstration of single reef knot formation step",
+      "technique_notes": "Educational content showing knot technique components",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "360_degree_loop",
+      "description": "Demonstration of second 360 degree loop formation",
+      "technique_notes": "Instructional demonstration of loop creation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "animation",
+      "description": "Computer animation showing Roeder's knot tying technique with green and white suture representation",
+      "technique_notes": "Educational animation demonstrating knot mechanics",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0,
+      "deviation_from_mark2_mm": 0,
+      "total_deviation_penalty": 0,
+      "confidence": 1.0
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "knot_quality": "not_applicable"
+    }
+  },
+  "score_components": {
+    "max_score": 0,
+    "time_used": 0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an educational/instructional video showing technique demonstration and animation, not an FLS task performance that can be scored.",
+  "cannot_determine": [],
+  "technique_summary": "This video contains instructional content about extracorporeal knot tying techniques, including live demonstration and animation, but does not show an actual FLS Task 4 performance.",
+  "strengths": [
+    "Clear educational demonstration of Roeder's knot technique",
+    "Well-structured instructional content with animation"
+  ],
+  "improvement_suggestions": [
+    "This is educational content - no performance improvements applicable"
+  ],
+  "video_id": "GEw-Ens6Prk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:50:35.487277+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.811566+00:00"
+  },
+  "scoreable": true
+}

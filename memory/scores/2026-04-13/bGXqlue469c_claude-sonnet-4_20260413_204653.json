@@ -1,0 +1,160 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Empty laparoscopic trainer field visible with pink foam appendage template in background",
+      "technique_notes": "Task setup phase before instrument insertion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "loop_deploy",
+      "description": "Pink foam appendage being held by hand, examining the target structure",
+      "technique_notes": "Manual inspection of appendage before laparoscopic approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 32.0,
+      "phase": "loop_deploy",
+      "description": "Right grasper visible in field with pre-tied ligating loop being introduced",
+      "technique_notes": "Loop deployment initiated with appropriate instrument positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 56.0,
+      "phase": "target_approach",
+      "description": "Grasper with loop approaching pink foam appendage positioned in field",
+      "technique_notes": "Controlled approach to target structure with loop visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 88.0,
+      "phase": "loop_placement",
+      "description": "Loop being positioned around the foam appendage with careful manipulation",
+      "technique_notes": "Precise placement technique with loop opening maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 112.0,
+      "phase": "cinch",
+      "description": "Loop appears to be cinched around appendage with tension being applied",
+      "technique_notes": "Cinching motion visible with appropriate tension control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 136.0,
+      "phase": "cut_tail",
+      "description": "Scissors being used to cut excess suture tail after loop placement",
+      "technique_notes": "Clean cutting technique with appropriate tail length maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 152.0,
+      "phase": "completion",
+      "description": "Hand holding completed appendage showing final loop placement",
+      "technique_notes": "Task completion with manual verification of result",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 152.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 8,
+      "end_seconds": 32,
+      "duration_seconds": 24,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 32,
+      "end_seconds": 56,
+      "duration_seconds": 24,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 56,
+      "end_seconds": 88,
+      "duration_seconds": 32,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 88,
+      "end_seconds": 112,
+      "duration_seconds": 24,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 112,
+      "end_seconds": 152,
+      "duration_seconds": 40,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0,
+      "loop_at_marked_line": true,
+      "confidence": 0.7
+    },
+    "loop_security": {
+      "tightly_cinched": true,
+      "knot_secure": true,
+      "confidence": 0.8
+    },
+    "appendage_integrity": {
+      "transected": false,
+      "damaged": false,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 152.0,
+    "total_penalties": 0,
+    "total_fls_score": 28.0,
+    "formula_applied": "180 - 152.0 - 0 = 28.0"
+  },
+  "confidence": 0.7,
+  "confidence_rationale": "Loop placement at marked line appears accurate from available views, though exact positioning difficult to assess from camera angles. Task completion clearly visible with no obvious penalties.",
+  "cannot_determine": [
+    "Exact millimeter deviation from marked line due to camera angle limitations",
+    "Precise loop tightness measurement"
+  ],
+  "technique_summary": "Competent novice performance with methodical approach to each phase. Time primarily lost in cutting phase (40s vs expert 5-10s benchmark). No major technical errors observed.",
+  "strengths": [
+    "Controlled loop deployment and positioning",
+    "Maintained appendage integrity throughout procedure",
+    "Systematic approach to each task phase"
+  ],
+  "improvement_suggestions": [
+    "Reduce time in cutting phase - practice efficient tail trimming",
+    "Work on faster loop deployment to improve overall time to intermediate level (under 90s)"
+  ],
+  "video_id": "bGXqlue469c",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:46:53.878100+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.860673+00:00"
+  },
+  "scoreable": true
+}

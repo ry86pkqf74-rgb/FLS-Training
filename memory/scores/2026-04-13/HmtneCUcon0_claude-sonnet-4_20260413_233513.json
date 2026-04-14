@@ -1,0 +1,69 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task performed",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "Purple presentation slide with white text and presenter in corner",
+      "technique_notes": "Academic lecture format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_content",
+      "description": "Slide titled 'Traditional Surgical Training' discussing apprenticeship model and Dr. William Halstead",
+      "technique_notes": "Historical context presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "instructional_content",
+      "description": "Slide about 'New Challenges in Modern Surgical Training' with bullet points",
+      "technique_notes": "Educational content delivery",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed - no score applicable"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional presentation about surgical training evolution, not an FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "This video contains educational lecture content about surgical training innovations and does not show any FLS task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "use of simulators in surgical training",
+      "3D printing for surgical models",
+      "virtual reality training systems",
+      "smartphone-based assessment tools (SIMPL)",
+      "structured objective assessment methods"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "traditional 'see one, do one, teach one' limitations",
+      "inadequate feedback in traditional training"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "HmtneCUcon0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:35:13.337173+00:00",
+  "scoreable": false
+}

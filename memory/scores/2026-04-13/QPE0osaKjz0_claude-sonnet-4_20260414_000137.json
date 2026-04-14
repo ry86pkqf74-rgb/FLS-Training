@@ -1,0 +1,36 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Split-screen video conference call showing two people in business attire with headphones/earbuds",
+      "technique_notes": "No surgical instruments or FLS training box visible",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "penalties": [],
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows a video conference call between two people, not an FLS task performance or demonstration",
+  "cannot_determine": [
+    "FLS task type",
+    "Performance metrics"
+  ],
+  "technique_summary": "Not applicable - no FLS task content present",
+  "video_id": "QPE0osaKjz0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:01:37.880792+00:00",
+  "scoreable": false
+}

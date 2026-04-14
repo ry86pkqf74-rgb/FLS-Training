@@ -1,0 +1,51 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task performed",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Surgeon in surgical attire speaking directly to camera",
+      "technique_notes": "Professional presentation setting with World Laparoscopy Hospital branding",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "not_applicable",
+      "description": "Continued direct address to camera, appears to be explaining concepts",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "not_applicable",
+      "description": "Surgeon maintaining eye contact with camera while speaking",
+      "technique_notes": "Instructional delivery style",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Direct educational presentation to camera"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video format with surgeon speaking directly to camera - no FLS task performance visible",
+  "cannot_determine": [
+    "Which FLS task is being discussed - no laparoscopic trainer or instruments visible",
+    "Specific teaching content without audio"
+  ],
+  "technique_summary": "Educational video featuring surgeon providing instruction to camera. No FLS task performance observed.",
+  "video_id": "D4ENe4V5W14",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:14:22.722678+00:00",
+  "scoreable": false
+}

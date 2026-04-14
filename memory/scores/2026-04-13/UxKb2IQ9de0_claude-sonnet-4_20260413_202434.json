@@ -1,0 +1,123 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Initial view of FLS trainer with 3 blue circular markers visible on white gauze. Setup appears ready for pattern cutting task.",
+      "technique_notes": "Clear view of circular targets - appears to be standard 4cm diameter circles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "gauze_grasp",
+      "description": "Trainee beginning to grasp and position gauze with both hands. Right hand approaching top blue circle.",
+      "technique_notes": "Good bilateral hand coordination for gauze manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "gauze_grasp",
+      "description": "Gauze being lifted and repositioned. Trainee appears to be orienting the cutting pattern.",
+      "technique_notes": "Smooth gauze handling without tearing visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "gauze_grasp",
+      "description": "Continued gauze manipulation and positioning. No cutting instruments visible yet.",
+      "technique_notes": "Extended setup phase - may impact overall time efficiency",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "gauze_grasp",
+      "description": "Gauze still being positioned and adjusted. Task appears to be in extended preparation phase.",
+      "technique_notes": "Prolonged setup without instrument introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 57.0,
+      "phase": "gauze_grasp",
+      "description": "Final frame shows trainee still manipulating gauze. No cutting has commenced.",
+      "technique_notes": "Task incomplete - only gauze manipulation observed throughout sequence",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 300,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 6,
+      "end_seconds": 57,
+      "duration_seconds": 51,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "incomplete_task_timeout",
+      "description": "Task not completed within time limit - no cutting performed",
+      "points_deducted": 243,
+      "frame_evidence": [
+        1,
+        20
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_assessments": {
+      "circles_attempted": 0,
+      "circles_completed": 0,
+      "deviation_measurements": [],
+      "cutting_technique": "not_attempted"
+    },
+    "gauze_management": {
+      "gauze_detached": false,
+      "gauze_torn": false,
+      "positioning_efficiency": "poor"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 300,
+    "total_penalties": 243,
+    "total_fls_score": -243,
+    "formula_applied": "300 - 300 - 243 = -243 (minimum score is 0)"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear video sequence showing extended gauze manipulation without any cutting activity. Task clearly incomplete with timeout penalty applicable.",
+  "cannot_determine": [
+    "Exact circle diameter measurements - no cutting performed to assess precision",
+    "Cutting deviation from marked lines - no cutting attempted"
+  ],
+  "technique_summary": "Incomplete performance with extended preparation phase but no actual cutting attempted. Task resulted in timeout without any scoring elements completed.",
+  "strengths": [
+    "Gentle gauze handling without visible tearing",
+    "Bilateral hand coordination during manipulation"
+  ],
+  "improvement_suggestions": [
+    "Practice task initiation and setup efficiency to begin cutting within first 10-15 seconds",
+    "Focus on instrument introduction and basic cutting technique before attempting precision work",
+    "Review task requirements to ensure understanding of cutting objectives"
+  ],
+  "video_id": "UxKb2IQ9de0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:24:34.302031+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.842899+00:00"
+  },
+  "scoreable": true
+}

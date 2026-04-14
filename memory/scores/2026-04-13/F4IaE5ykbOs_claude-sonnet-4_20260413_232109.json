@@ -1,0 +1,73 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "European BLUS Course Overview",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "peg transfer with dual camera view showing lap camera and upper camera perspectives",
+      "extracorporeal knot tying technique demonstration",
+      "proper timing display for task completion"
+    ],
+    "verbal_cues": [
+      "Course introduction and overview presentation",
+      "EBLUS examination program explanation",
+      "24 stations training facility description",
+      "Endoscopic stone treatment procedures"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Black screen with course introduction",
+      "technique_notes": "Educational content beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "course_overview",
+      "description": "Portrait and course branding for European laparoscopic training",
+      "technique_notes": "EUREP educational program introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 25.0,
+      "phase": "peg_transfer_demo",
+      "description": "Dual camera view showing FLS peg transfer task setup with timer at 00:06:24",
+      "technique_notes": "Orange and green objects visible on pegs, proper camera positioning demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "knot_tying_demo",
+      "description": "Extracorporeal knot tying setup with timer at 02:29:24",
+      "technique_notes": "Penrose drain with suture material setup for knot tying demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 50.0,
+      "phase": "endoscopic_procedure",
+      "description": "Live endoscopic view during stone treatment procedure",
+      "technique_notes": "Clinical application demonstration showing real surgical technique",
+      "penalties_observed": []
+    }
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "This is clearly an instructional/educational video from the European BLUS course program showing multiple FLS tasks and procedures for teaching purposes, not a performance to be scored.",
+  "cannot_determine": [
+    "Individual task scoring not applicable - this is educational overview content"
+  ],
+  "technique_summary": "Comprehensive educational overview of European Basic Laparoscopic Urological Skills program featuring multiple FLS tasks, endoscopic procedures, and training facility capabilities.",
+  "video_id": "F4IaE5ykbOs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:21:09.518185+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,126 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "reasoning_classification": "First frame shows Dr. Kevin Huguet introduction slide and title card 'Laparoscopic Sigmoid Resection' from Minimally Invasive Institute of Surgery. Subsequent frames show actual surgical footage of sigmoidectomy with endoloop placement on an appendage structure. This is an instructional/demonstration video from an educational institution, not a scored trainee performance. While endoloop technique is demonstrated, the context is surgical education/tutorial rather than an isolated FLS task performance.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Title slide: 'Laparoscopic Sigmoid Resection' with Dr. Kevin Huguet, MD, MPH, FACS introduction",
+      "technique_notes": "Educational content header",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.5,
+      "phase": "loop_introduction",
+      "description": "Laparoscopic view of abdominal cavity with pink/red tissue visible; orange appendage structures visible in upper abdomen",
+      "technique_notes": "Anatomical survey phase; multiple appendices apparent",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_introduction",
+      "description": "Grasper instrument visible on right side approaching target appendage; pink tissue and vessel detail visible",
+      "technique_notes": "Instrument orientation toward surgical field",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "loop_positioning",
+      "description": "Endoscopic view with scissor instrument visible; dissection of appendage base beginning; red/pink mesoappendix tissue visible",
+      "technique_notes": "Mesoappendical dissection phase; clear field exposure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "loop_positioning",
+      "description": "White-colored ligating loop material visible in laparoscopic field; loop beginning to encircle target appendage",
+      "technique_notes": "Loop introduction and positioning around appendage base",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "loop_positioning",
+      "description": "Loop clearly encircles appendage at marked site; proper positioning on base visible",
+      "technique_notes": "Loop fully positioned around target appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher instrument visible advancing loop; loop cinching beginning at marked level on appendage",
+      "technique_notes": "Pusher activation and knot advancement phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 22.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Loop fully cinched at base of appendage; tight knot at marked site visible",
+      "technique_notes": "Loop secured; knot appearance tight and at appropriate location",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 26.0,
+      "phase": "tail_cut",
+      "description": "Scissor instrument positioned at loop tail; cutting about to occur",
+      "technique_notes": "Final phase preparation; scissors ready to transect excess loop",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 30.0,
+      "phase": "tail_cut",
+      "description": "Loop tail cut; appendage fully ligated and transected from base",
+      "technique_notes": "Task completion; appendage isolated from field",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 35.0,
+      "phase": "completion",
+      "description": "Final view showing ligated appendage with intact loop at base; no slippage visible; clean closure",
+      "technique_notes": "Final inspection showing secure ligature",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper mesoappendical dissection and exposure",
+      "Loop introduction into surgical field with correct orientation",
+      "Positioning loop fully around appendage base at marked site",
+      "Pusher advancement for knot cinching with appropriate tension",
+      "Loop tail transection inside the trainer/abdomen",
+      "Anatomical identification and selective appendage targeting"
+    ],
+    "verbal_cues": [
+      "Video title indicates sigmoid resection context (routine colorectal endoscopic procedure)"
+    ],
+    "common_errors_addressed": [
+      "Video demonstrates avoidance of loop placement on wrong appendage by careful anatomical dissection",
+      "Shows proper depth control to place knot at marked base rather than on body of appendage",
+      "Demonstrates complete cinching to avoid loop slippage",
+      "Shows clean internal tail transection within cavity rather than external"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "scoring_status": "NOT SCORED",
+  "scoring_rationale": "This video is classified as instructional/educational demonstration content, not a trainee performance evaluation. Scoring FLS tasks is appropriate only for isolated task performances by trainees being evaluated. This footage is from an educational surgical video demonstrating endoloop technique within the context of a full sigmoidectomy procedure. No individual completion time, penalties against an isolated task, or trainee-specific performance metrics can be meaningfully extracted.",
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational framing with title slide and expert surgeon identifier. Footage shows complete, flawless endoloop execution integrated into live surgical procedure rather than isolated FLS task box setup. Cannot be scored as FLS task performance per rubric guidelines.",
+  "video_id": "PcFOT8flmqQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:59:45.501348+00:00",
+  "scoreable": false
+}

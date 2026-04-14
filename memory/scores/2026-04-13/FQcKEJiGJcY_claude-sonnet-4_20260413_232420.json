@@ -1,0 +1,81 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Equipment Setup and Introduction",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Instructor speaking to camera in formal setting",
+      "technique_notes": "Educational introduction format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_overview",
+      "description": "Display of laparoscopic training equipment components including box trainer, tripod, camera, and instruments",
+      "technique_notes": "Comprehensive equipment layout with labels",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 45.0,
+      "phase": "task_templates",
+      "description": "Showing printed task templates and patterns for FLS exercises",
+      "technique_notes": "Visual reference materials for multiple FLS tasks including peg transfer, pattern cutting, and suturing templates",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 60.0,
+      "phase": "camera_setup",
+      "description": "Brief view of endoscopic camera feed showing white material",
+      "technique_notes": "Demonstration of camera functionality and field of view",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content showing equipment setup and task preparation. No actual FLS task performance to score.",
+  "cannot_determine": [
+    "Specific FLS task performance",
+    "Completion time",
+    "Technical skill assessment"
+  ],
+  "technique_summary": "Educational video demonstrating laparoscopic training equipment setup and task preparation materials.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper equipment layout and organization",
+      "Camera setup and positioning",
+      "Task template preparation and organization"
+    ],
+    "verbal_cues": [
+      "Equipment identification and labeling",
+      "Systematic approach to training setup"
+    ],
+    "common_errors_addressed": [
+      "Importance of proper equipment preparation before training"
+    ],
+    "skill_level_demonstrated": "instructor"
+  },
+  "improvement_suggestions": [],
+  "video_id": "FQcKEJiGJcY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:24:20.253359+00:00",
+  "scoreable": false
+}

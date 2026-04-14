@@ -1,0 +1,199 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Ergonomics in Surgery - Educational Lecture",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_opening",
+      "description": "Title slide: 'Ergonomics in Surgery' by Brendan Browne, MD, Emory Department of Urology Grand Rounds, June 4, 2020. Vitruvian Man image displayed.",
+      "technique_notes": "Formal presentation setting with Emory University branding and speaker identification.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 15.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Significance of WMSD' with bar chart showing work-related musculoskeletal disorder rates by industry. Healthcare highlighted at 39.8 MSDs per 10,000 FTEs.",
+      "technique_notes": "Data-driven educational content establishing the importance of ergonomic awareness in surgical practice.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 30.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'History of Ergonomics' defining ergon (labor) and nomia (arrangement). IEA Council definition provided with cartoon illustration of workers.",
+      "technique_notes": "Foundational definitions and historical context for ergonomics discipline.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 45.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'How far have we come?' showing evolution of laparoscopic instruments from early graspers to modern robotic surgical systems.",
+      "technique_notes": "Visual demonstration of technological advancement in surgical instrumentation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 60.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Does ergonomics work?' listing three bullet points on health outcomes, workplace productivity, and ongoing process implementation.",
+      "technique_notes": "Educational messaging on efficacy and scope of ergonomic interventions.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 75.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'WMSD in Surgery' citing American College of Surgeons survey (N=260) with statistics on work-related injuries, medical care, missed work, and OR impact.",
+      "technique_notes": "Evidence-based data presented to highlight prevalence of surgeon injuries.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 90.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Ergonomics in Surgery - What to Teach?' outlining measurement challenges in OR settings including sensor weight, recall bias, and sampling bias.",
+      "technique_notes": "Discussion of research methodology constraints in studying surgical ergonomics.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 105.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Metrics (Objective)' listing EMG, force plate analysis, goniometry, accelerometry, postural tracking, optical/kinematic systems, and inertial measurement units with example data visualization.",
+      "technique_notes": "Comprehensive overview of objective measurement tools for ergonomic assessment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 120.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Open Surgery' dividing content into Challenges (team coordination, table height, foot pedals, illumination, instrument design) and Risk Factors for WMSD (age, case volume).",
+      "technique_notes": "Problem identification specific to open surgical environment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 135.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Laparoscopic Surgery' listing challenges (limited movement, poor instrument design, table/monitor position, foot pedals) and WMSD risk factors (younger age, hand-assist technique, stature, BMI, case volume).",
+      "technique_notes": "Specific ergonomic considerations for minimally invasive surgery.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 150.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'You Are Not Alone' showing comparative bar charts of posture-related muscle activation percentages across surgical approaches (Vaginal, Laparoscopic, Open) for surgeons and assistants.",
+      "technique_notes": "EMG data demonstrating that ergonomic strain affects multiple surgical team members across all surgical approaches.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 165.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Comparison Lap v. Robotic' citing EMG studies showing robotic reduces lower body/core strain but similar shoulder/arm strain with possibly higher hand strain. Mentions reduced stress with robotic (NASA-TLX).",
+      "technique_notes": "Comparative evidence on ergonomic benefits of robotic vs. laparoscopic surgery.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 180.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'OR Equipment - Find the Soft' discussing leg strain mitigation (anti-fatigue mats, compression stockings) and lumbar strain (foot stool alternation). AORN guideline cited for caregiver standing duration limits.",
+      "technique_notes": "Practical equipment and environmental modifications for ergonomic support.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 195.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'OR Equipment - Lead' comparing lead apron designs (one-piece vs. vest/kilt) with biomechanical implications for spine and pelvis load distribution.",
+      "technique_notes": "Evidence-based equipment selection guidance for radiation protection and ergonomics.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 210.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Ergonomic devices' listing ASSyst (forearm support) and ETHOS (laparoscopy chair) with photographs of devices in surgical settings.",
+      "technique_notes": "Introduction to commercially available ergonomic support devices.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 225.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Guidelines - Equipment' with five specific recommendations: anti-fatigue mats for prolonged standing, monitor position (10-30\u00b0 below eye level), table height at surgeon's elbow height, laparoscopy table at 70-80% of elbow height, foot pedals aligned.",
+      "technique_notes": "Actionable evidence-based guidelines for OR setup and configuration.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 240.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Guidelines - Behaviors' recommending side rotation to balance strain, intraoperative stretching/postural resets, micropause breaks (20s q20min), working angle ~60\u00b0 during stitching/knotting, neck/hamstring/back stretching post-scrub, incorporation of stretching/yoga/pilates into exercise programs.",
+      "technique_notes": "Behavioral and lifestyle recommendations for ergonomic health in surgery.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 255.0,
+      "phase": "instructional_content",
+      "description": "Slide: 'Interventions (Easiest to Hardest)' listing ten strategies ranked from simple awareness and injury acknowledgment to advanced ergonomic timeout and ETHOS chair implementation.",
+      "technique_notes": "Tiered approach to implementation of ergonomic interventions in surgical practice.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": null,
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "This is a clear educational lecture on ergonomics in surgery delivered by an Emory University faculty member. No FLS task performance is present. The video contains structured instructional content with slides, speaker narration visible via video conferencing interface, and no surgical task execution or timed performance component.",
+  "cannot_determine": [],
+  "technique_summary": "This is an instructional presentation, not an FLS task performance. No scoring applies.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Definition and history of ergonomics in occupational health",
+      "Work-related musculoskeletal disorder (WMSD) epidemiology in surgery",
+      "Objective measurement methods for surgical ergonomics (EMG, force plate, goniometry, accelerometry, motion tracking)",
+      "Ergonomic challenges specific to open, laparoscopic, and robotic surgery",
+      "Evidence-based comparative analysis of surgical approaches and WMSD risk",
+      "Equipment modifications for ergonomic support (anti-fatigue mats, lead vests, forearm supports, specialized chairs)",
+      "OR environment optimization (table height, monitor positioning, foot pedal placement)",
+      "Behavioral interventions (postural resets, micropause breaks, stretching protocols, working angles)",
+      "Tiered implementation strategy from awareness to advanced interventions"
+    ],
+    "verbal_cues": [
+      "Healthcare ranks 2nd among all industries for WMSD incidence",
+      "40% of surgeons in ACS survey sustained work-related injuries",
+      "Ergonomic interventions measurably reduce sick leave and lost workdays",
+      "First measure something before you can change it",
+      "Ergonomics is an ongoing process rather than individual project",
+      "Younger surgeons at higher risk in laparoscopic surgery despite technology"
+    ],
+    "common_errors_addressed": [
+      "Misconception that surgeons don't complain about pain or ergonomic issues",
+      "Underestimation of ergonomic strain in laparoscopic and robotic surgery",
+      "Use of suboptimal radiation protection (one-piece lead aprons vs. distributed vests)",
+      "Failure to implement postural resets and micropause breaks during long cases",
+      "Neglect of team member ergonomics (assistants and support staff)",
+      "Insufficient OR environmental optimization (table/monitor positioning)"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "note": "This video is educational content and does not represent an FLS task performance. It should not be scored using the FLS rubric. No FLS task_id applies.",
+  "video_id": "HLlyLEk4MIk",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:34:20.293002+00:00",
+  "scoreable": false
+}

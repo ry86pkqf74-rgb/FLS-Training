@@ -1,0 +1,132 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Initial view shows FLS trainer with foam appendage in center, red ligating loop visible, laparoscopic graspers approaching",
+      "technique_notes": "Setup appears correct with appendage properly positioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "loop_deploy",
+      "description": "Both graspers engaged with red ligating loop, beginning deployment process",
+      "technique_notes": "Good bilateral instrument coordination visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "target_approach",
+      "description": "Loop being maneuvered toward foam appendage, loop partially opened",
+      "technique_notes": "Smooth loop manipulation, appropriate opening technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around base of foam appendage, beginning placement at target zone",
+      "technique_notes": "Good positioning technique, loop appears properly oriented",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "loop_placement",
+      "description": "Loop fully positioned around appendage, preparing for cinching",
+      "technique_notes": "Loop placement appears accurate relative to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "cinch",
+      "description": "Loop being tightened around appendage base, cinching process in progress",
+      "technique_notes": "Appropriate tension being applied, good instrument control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 72.0,
+      "phase": "cinch",
+      "description": "Loop appears fully cinched and secured around appendage",
+      "technique_notes": "Task appears completed successfully",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 72.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 12,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 12,
+      "end_seconds": 24,
+      "duration_seconds": 12,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 24,
+      "end_seconds": 45,
+      "duration_seconds": 21,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 45,
+      "end_seconds": 72,
+      "duration_seconds": 27,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0,
+      "loop_properly_cinched": true,
+      "appendage_transected": false,
+      "notes": "Loop appears correctly positioned at marked line with appropriate tension"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 72.0,
+    "total_penalties": 0,
+    "total_fls_score": 108.0,
+    "formula_applied": "180 - 72.0 - 0 = 108.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Task phases and completion clearly visible. Loop placement appears accurate though precise measurement of deviation from mark line is challenging from this camera angle. No obvious penalties observed.",
+  "cannot_determine": [
+    "Exact millimeter deviation from marked line due to camera angle and resolution",
+    "Whether loop was cut after cinching as final step is not visible in provided frames"
+  ],
+  "technique_summary": "Competent intermediate-level performance with smooth loop deployment and placement. Total time of 72 seconds falls within intermediate range (40-90s). Good bilateral instrument coordination throughout.",
+  "strengths": [
+    "Efficient loop deployment and manipulation",
+    "Accurate placement around appendage base",
+    "Good instrument coordination between both hands"
+  ],
+  "improvement_suggestions": [
+    "Could potentially reduce time in cinching phase to approach expert benchmarks",
+    "Practice to achieve sub-60 second completion times for expert level performance"
+  ],
+  "video_id": "-p4IpB3ZCbo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:19:56.800809+00:00",
+  "scoreable": true
+}

@@ -1,0 +1,11 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "reason": "Content is not an FLS task performance video. The frames show personal/social media content including: person in surgical scrubs in various locations (locker room, hallway, office), Zoom video call, ultrasound machine, presentation at conference, casual outdoor photos, Instagram profile page, and personal promotional content. No FLS trainer setup, no laparoscopic instruments, no task-specific apparatus (pegs, gauze, drain, foam appendage), and no attempt to perform any FLS task is visible.",
+  "scoreable": false,
+  "recommendation": "This video cannot be scored as an FLS performance. Please submit actual FLS task video footage showing performance on one of the five MISTELS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture).",
+  "video_id": "6kmHn8rrwdQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:50:34.187082+00:00"
+}

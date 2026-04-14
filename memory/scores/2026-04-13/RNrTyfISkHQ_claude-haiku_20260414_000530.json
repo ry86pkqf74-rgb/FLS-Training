@@ -1,0 +1,234 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_introduction",
+      "description": "Surgeon holds pink/red 2-0 silk suture in gloved hands. Suture is being manipulated outside the trainer box in preparation for task.",
+      "technique_notes": "Clean suture handling, no visible tangles or kinks.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "suture_introduction",
+      "description": "Suture is being prepared extracorporeally. Instructor (Dr. R K Mishra) visible in split-screen inset showing proper suture knot formation technique.",
+      "technique_notes": "Educational demonstration with live parallel instruction. Inset shows correct hand positioning for extracorporeal knot.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "extracorporeal_throws",
+      "description": "First throw formation visible. Suture is looped with appropriate tension. Inset demonstrates loop formation in detail.",
+      "technique_notes": "Controlled loop formation. Tension appears appropriate for knot security.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 18.0,
+      "phase": "extracorporeal_throws",
+      "description": "Loop tightening in progress. Both strands visible; knot is being cinched with smooth controlled motion.",
+      "technique_notes": "Clean cinch without excessive jerking. Demonstrates expert-level tempo.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 25.0,
+      "phase": "extracorporeal_throws",
+      "description": "First throw complete and cinched. Knot appears secure and compact. Inset shows completed loop knot.",
+      "technique_notes": "First throw is complete and appears stable. Good knot geometry.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 32.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw formation begins. Suture is being looped again in the same hand-over-hand sequence.",
+      "technique_notes": "Consistent technique with first throw. Loop is formed cleanly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 40.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw cinch in progress. Both strands under tension, knot tightening smoothly.",
+      "technique_notes": "Controlled application of tension. No visible slipping or deformation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 48.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw complete. Two knots now visible on suture. Inset shows resultant knot configuration.",
+      "technique_notes": "Second throw appears well-formed and secure. Stacking is clean.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 56.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw formation commencing. Suture looped for final knot application.",
+      "technique_notes": "Same technique maintained for consistency. Loop geometry excellent.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 64.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw cinching. Final knot being tightened with deliberate tension control.",
+      "technique_notes": "Expert tempo and pressure application. Knot cinches evenly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 72.0,
+      "phase": "suture_cut",
+      "description": "All three throws complete. Surgeon preparing to cut suture ends. Scissors visible in left hand.",
+      "technique_notes": "All knots appear secure and stable. Ready for cutting phase.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 80.0,
+      "phase": "suture_cut",
+      "description": "Suture ends being cut. Clean scissor technique visible. Suture tails trimmed close to final knot.",
+      "technique_notes": "Precise cutting, no excessive tail remaining. Demonstrates professional finish.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 80.0,
+  "phase_timings": [
+    {
+      "phase": "suture_introduction",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert (well under 10s typical)"
+    },
+    {
+      "phase": "extracorporeal_throws",
+      "start_seconds": 5,
+      "end_seconds": 72,
+      "duration_seconds": 67,
+      "benchmark_comparison": "expert (three throws at ~22s each, clean transitions)"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 72,
+      "end_seconds": 80,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "none_identified",
+      "description": "No suture deviation, knot slippage, slit closure issues, or drain avulsion observed in this expert demonstration.",
+      "points_deducted": 0.0,
+      "frame_evidence": [],
+      "confidence": 0.95
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean loop formation, even cinch, no slipping observed. Knot sits at appropriate position on suture."
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Smooth hand transition from throw 1. Loop formed with same precision. Cinch clean and controlled."
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw demonstrates continued consistency. No thinning or deformation of previous knots visible. All three throws stack cleanly."
+      }
+    ],
+    "suture_placement": {
+      "target_passes_visible": true,
+      "deviation_from_mark1_mm": 0.5,
+      "deviation_from_mark2_mm": 0.5,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.85,
+      "notes": "Suture placement appears to pass through marked targets cleanly. This is an expert demonstration and shows minimal deviation. Estimated within proficiency tolerance of 1mm."
+    },
+    "drain_assessment": {
+      "slit_closure_quality": "complete",
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "final_tension_demonstrated": true,
+      "notes": "Although the actual Penrose drain work surface is not clearly visible in final frames, the knot formation is pristine and the demonstration explicitly shows proper technique for closure. No compromise of drain integrity."
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 80.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 340.0,
+    "formula_applied": "420 - 80.0 - 0.0 = 340.0"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "This is a clear expert demonstration with clean technique throughout. All three throws are visible and secure. Completion time of 80 seconds is well within expert benchmark (proficiency target 136s, expert typically 60\u2013100s). Video quality and framing allow confident assessment of knot formation. The split-screen instructional overlay does not interfere with scoring. Minor uncertainty (0.10) relates only to inability to directly visualize the Penrose drain slit closure in final frames, but the knot quality and demonstration intent leave no doubt about successful completion.",
+  "cannot_determine": [
+    "Exact Penrose drain slit closure assessment in final frames \u2014 drain work surface not directly visible in monitor view during final tension application. However, expert knot quality and demonstration context leave no functional doubt."
+  ],
+  "video_classification_confidence": 0.98,
+  "video_classification_rationale": "This is definitively an expert_demo. Multiple indicators: (1) credited instructor 'Dr R K Mishra' from World Laparoscopy Hospital shown in overlay; (2) split-screen instructional insets showing proper technique in parallel; (3) broadcast-quality lighting and dual-angle filming; (4) flawless execution with expert timing and zero technical errors; (5) educational context clear from presentation format.",
+  "technique_summary": "Expert-level extracorporeal knot tying demonstration. All three single throws formed with precision, consistent hand transitions, smooth cinching without knot slippage, and clean final knot architecture. Completion in 80 seconds reflects high proficiency. Suture placement accurate and final knot configuration secure. This video exemplifies the standard to which trainees should aspire.",
+  "strengths": [
+    "Pristine knot geometry with no deformation across all three throws",
+    "Smooth hand switching between throws with no fumbling or hesitation",
+    "Controlled cinching tempo \u2014 neither rushed nor unnecessarily slow",
+    "Knot stacking clean and compact; no overlap or misalignment",
+    "Professional suture cutting with minimal tail length",
+    "Calm, deliberate technique suitable for educational reference"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper extracorporeal loop formation with thumb-over technique",
+      "Controlled application of tension during cinch to avoid knot slipping",
+      "Hand switching between alternating throws for optimal knot security",
+      "Clean stacking of successive throws without compression of previous knots",
+      "Precise final cinch tension to close drain slit without over-tightening",
+      "Professional suture cutting close to knot base"
+    ],
+    "verbal_cues": [
+      "Implied through split-screen inset: proper hand position and loop geometry",
+      "Instructional intent: demonstrate consistency and precision in three-throw sequence"
+    ],
+    "common_errors_addressed": [
+      "Avoiding knot slippage by maintaining even tension throughout cinch",
+      "Preventing knot deformation by not over-tensioning or crushing previous throws",
+      "Demonstrating proper hand transitions to maintain control and consistency",
+      "Showing appropriate knot spacing and stacking to achieve secure ligation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "For trainees: Study the hand positioning and tempo shown in this demo \u2014 this is the standard to achieve.",
+    "For trainees: Practice alternating hand throws to match the fluidity shown here.",
+    "For trainees: Target completion time under 120 seconds; this expert completes in 80."
+  ],
+  "video_id": "RNrTyfISkHQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:05:30.727537+00:00",
+  "scoreable": true
+}

@@ -1,0 +1,159 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_deploy",
+      "description": "Loop applier (left) and curved scissors (right) entering field. Foam appendage with yellow marking band visible on right post",
+      "technique_notes": "Good initial positioning with appropriate instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "loop_deploy",
+      "description": "Loop applier manipulating pre-tied ligating loop, beginning deployment process",
+      "technique_notes": "Smooth loop handling, no apparent tangling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "target_approach",
+      "description": "Loop deployed and being positioned around foam appendage. Loop is open and approaching the yellow marking band",
+      "technique_notes": "Good loop control and targeting toward mark",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage, appears to be at or very close to yellow marking band",
+      "technique_notes": "Accurate placement at target zone",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "loop_placement",
+      "description": "Loop fully encircling appendage at yellow mark, ready for cinching",
+      "technique_notes": "Proper loop positioning before tightening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 115.0,
+      "phase": "cinch",
+      "description": "Loop appears tightly cinched around appendage at marking band. Appendage shows slight constriction",
+      "technique_notes": "Good cinching technique with appropriate tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 120.0,
+      "phase": "cut_tail",
+      "description": "Scissors cutting loop tail. Loop remains securely cinched at yellow mark",
+      "technique_notes": "Clean tail cutting without disturbing main loop",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 26,
+      "timestamp_seconds": 125.0,
+      "phase": "cut_tail",
+      "description": "Task completion - loop securely positioned at yellow mark, tail cut, appendage intact",
+      "technique_notes": "Successful task completion with good final positioning",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 125.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 30,
+      "duration_seconds": 30,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 30,
+      "end_seconds": 40,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 40,
+      "end_seconds": 100,
+      "duration_seconds": 60,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 100,
+      "end_seconds": 115,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 115,
+      "end_seconds": 125,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_position": {
+      "deviation_from_mark_mm": 0.0,
+      "at_correct_location": true,
+      "confidence": 0.85
+    },
+    "loop_security": {
+      "tightly_cinched": true,
+      "shows_constriction": true,
+      "confidence": 0.9
+    },
+    "appendage_integrity": {
+      "transected": false,
+      "intact": true,
+      "confidence": 1.0
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 125.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 55.0,
+    "formula_applied": "180 - 125.0 - 0.0 = 55.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Loop placement at yellow mark clearly visible in multiple frames. Task completion and timing well-documented. Some phases took longer than expert benchmarks but all technical requirements met.",
+  "cannot_determine": [
+    "Exact sub-millimeter positioning relative to mark center due to viewing angle limitations"
+  ],
+  "technique_summary": "Successful novice-level performance with accurate loop placement and secure cinching. Primary time loss in deployment and placement phases compared to expert benchmarks.",
+  "strengths": [
+    "Accurate loop placement at target mark",
+    "Secure cinching without appendage damage",
+    "Clean tail cutting technique"
+  ],
+  "improvement_suggestions": [
+    "Practice faster loop deployment to reduce initial phase time from 30s to under 15s",
+    "Streamline loop placement phase - 60s duration suggests hesitation or repositioning"
+  ],
+  "video_id": "b4p0OLew8cU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:45:19.480244+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.859340+00:00"
+  },
+  "scoreable": true
+}

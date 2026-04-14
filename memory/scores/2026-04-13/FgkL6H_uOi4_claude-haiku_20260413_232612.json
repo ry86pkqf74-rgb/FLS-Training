@@ -1,0 +1,49 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional content only"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video is a SAGES 2015 Surgical Spring Week presentation on 'Validity Evidence for Novel Advanced Laparoscopic Suturing Tasks' by Yusuke Watanabe, MD and colleagues. This is an educational/research presentation with slides, no actual task performance video. Content includes research objectives, advanced suturing models (Needle Handling, Under Tension, Continuous Suturing), study methods, participant data (18 senior residents, 13 MIS surgeons), performance comparisons, validity correlations, and conclusions. No trainee performing an FLS task is visible.",
+  "cannot_determine": [
+    "Completion time \u2014 no performance video",
+    "Phase timings \u2014 no performance video",
+    "Penalties \u2014 no performance video",
+    "FLS score \u2014 no performance video"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Advanced suturing model concepts: Needle Handling, Under Tension, Continuous Suturing",
+      "Presentation of validity evidence framework for measuring laparoscopic suturing skills",
+      "Research-based comparison of resident vs. MIS surgeon performance metrics"
+    ],
+    "verbal_cues": [
+      "60% of program graduates felt NOT proficient in laparoscopic suturing (Matter et al., Annals of Surgery 2014)",
+      "Objective: Develop advanced suturing models and metrics; collect validity evidence",
+      "Performance correlates significantly with training level and self-reported experience",
+      "Spearman correlation coefficients (r) between 0.51\u20130.70 across three task metrics"
+    ],
+    "common_errors_addressed": [
+      "Lack of proficiency in laparoscopic suturing among surgical graduates highlighted as motivating problem",
+      "Study addresses need for improved skills assessment via novel, validated task models"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "video_id": "FgkL6H_uOi4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:26:12.393145+00:00",
+  "scoreable": false
+}

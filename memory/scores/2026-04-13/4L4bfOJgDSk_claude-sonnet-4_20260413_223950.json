@@ -1,0 +1,112 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Precision Cutting",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black screen, no content visible",
+      "technique_notes": "Video beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "instructional_content",
+      "description": "Educational slide showing objectives for FLS certification",
+      "technique_notes": "Presentation slide explaining need for simulation training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "equipment_demonstration",
+      "description": "Slide showing required materials for DIY trainer construction",
+      "technique_notes": "Lists materials: sheet wood, drill, brackets, pegs, Velcro, measuring tape, C-clamp",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "setup_demonstration",
+      "description": "Completed homemade trainer with port layout and measurements",
+      "technique_notes": "Shows proper spacing: 8cm between ports, 7cm height, 22cm width",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "equipment_demonstration",
+      "description": "Interior view showing Velcro attachment points and task materials",
+      "technique_notes": "Demonstrates modular setup for different FLS tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "task_setup",
+      "description": "Maryland dissector visible with red task module",
+      "technique_notes": "Shows proper instrument insertion through ports",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "trainer_overview",
+      "description": "Full trainer setup with multiple task stations and instruments",
+      "technique_notes": "Comprehensive view of complete training environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 60.0,
+      "phase": "camera_view",
+      "description": "Laparoscopic camera view showing red gauze with marked circle",
+      "technique_notes": "Simulated surgical field view through trainer",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video showing DIY trainer construction and setup. No actual task performance to score.",
+  "cannot_determine": [
+    "No task performance visible - this is educational content only"
+  ],
+  "technique_summary": "Educational video demonstrating construction of low-cost FLS trainer alternative",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "DIY trainer construction using standard hardware materials",
+      "Proper port spacing and layout measurements",
+      "Modular task station setup using Velcro attachments",
+      "Camera positioning for laparoscopic view simulation"
+    ],
+    "verbal_cues": [
+      "Cost-effective alternative to expensive commercial trainers",
+      "Survey results showing 88% of trainees felt realistic simulation"
+    ],
+    "common_errors_addressed": [
+      "Expensive equipment barriers to FLS training access"
+    ],
+    "skill_level_demonstrated": "instructional"
+  },
+  "improvement_suggestions": [],
+  "video_id": "4L4bfOJgDSk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:39:50.186219+00:00",
+  "scoreable": false
+}

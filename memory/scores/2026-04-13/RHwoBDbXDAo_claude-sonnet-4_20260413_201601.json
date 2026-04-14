@@ -1,0 +1,66 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Not an FLS Task Performance",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Title slide showing 'New FLS Requirements for 2020 Graduates'",
+      "technique_notes": "Educational content, not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 15.0,
+      "phase": "not_applicable",
+      "description": "Information slide describing FLS as comprehensive web-based education module",
+      "technique_notes": "Educational content about FLS program structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 30.0,
+      "phase": "not_applicable",
+      "description": "Map showing FLS testing centers across the United States",
+      "technique_notes": "Informational content about test locations",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "error_reason": "This video contains educational/informational content about FLS requirements rather than a performance of any FLS task. No laparoscopic instruments, trainer box, or task performance is visible."
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Not a task performance video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows educational slides and information about FLS program requirements, not a task performance",
+  "cannot_determine": [
+    "Task performance assessment - video does not show any FLS task being performed"
+  ],
+  "technique_summary": "Not applicable - this is an educational video about FLS program requirements for 2020 graduates",
+  "strengths": [
+    "Clear educational content about FLS program structure and requirements"
+  ],
+  "improvement_suggestions": [
+    "To score an FLS task, provide video showing actual task performance with laparoscopic instruments in a trainer box"
+  ],
+  "video_id": "RHwoBDbXDAo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:16:01.815420+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.834061+00:00"
+  },
+  "scoreable": false
+}

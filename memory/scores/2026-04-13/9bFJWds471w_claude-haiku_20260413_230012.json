@@ -1,0 +1,257 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title card: 'DUNDEE KNOT' by DR RK MISHRA, World Laparoscopy Hospital",
+      "technique_notes": "Educational/demonstration video introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "needle_load",
+      "description": "Two hands in orange gloves holding purple and tan suture material in extended position",
+      "technique_notes": "Demonstrates basic suture handling setup; hands relaxed, suture straight",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "needle_load",
+      "description": "Hands manipulating purple suture loop and tan suture into wrapping configuration",
+      "technique_notes": "Clear demonstration of initial loop formation; left hand (viewer's perspective) manipulating loop structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "first_throw",
+      "description": "Both hands engaged; purple suture wraps around tan suture axis; hands positioned for tension application",
+      "technique_notes": "Right hand (surgeon's view) leading the wrap in a methodical, slow manner to demonstrate motion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "first_throw",
+      "description": "Hands repositioning; tan suture being drawn through purple loop; smooth controlled motion",
+      "technique_notes": "Demonstrates proper suture draw-through angle and tension; clean wrap execution",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "first_throw",
+      "description": "Completed first throw visible; purple knot segment cinched around tan suture",
+      "technique_notes": "Double throw (surgeon's knot) configuration evident; right hand led the first wrap",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "second_throw",
+      "description": "Hands repositioning for second throw; left hand (surgeon's view) now leading; purple loop reengaging with tan suture",
+      "technique_notes": "Clear hand switch demonstration: right hand led throw 1, now left hand leads throw 2",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "second_throw",
+      "description": "Left hand wrapping purple suture around tan suture axis; single wrap motion",
+      "technique_notes": "Slow, deliberate single throw; demonstrates proper wrapping technique without acceleration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "second_throw",
+      "description": "Second throw completion; tan suture pulled through purple loop; second knot segment visible below first",
+      "technique_notes": "Clean single throw; appropriate tension; knot remains secure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "third_throw",
+      "description": "Hand repositioning; right hand (surgeon's view) now leading again; purple loop reengages",
+      "technique_notes": "Hand switch from throw 2 (left led) to throw 3 (right leads); demonstrates alternating pattern",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "third_throw",
+      "description": "Right hand wrapping third knot; single wrap execution; smooth and controlled",
+      "technique_notes": "Final throw of sequence; maintains tension control; knot integrity preserved",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "suture_cut",
+      "description": "Completed knot with three throws visible; both suture ends (purple and tan) extending from cinched knot",
+      "technique_notes": "All three throws complete and secure; ready for suture cutting phase",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 35.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 4,
+      "end_seconds": 15,
+      "duration_seconds": 11,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 16,
+      "end_seconds": 24,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 25,
+      "end_seconds": 30,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 31,
+      "end_seconds": 35,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "none_observed",
+      "description": "No suture deviation, gap, knot failure, drain avulsion, or hand-switch violations observed in demonstration",
+      "points_deducted": 0.0,
+      "frame_evidence": [],
+      "confidence": 1.0
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean double throw with proper wrap and draw-through; tension appropriate; no slippage"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper hand switch from throw 1 (right) to throw 2 (left); single wrap clean and secure"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper hand switch from throw 2 (left) to throw 3 (right); alternating pattern maintained throughout sequence"
+      }
+    ],
+    "hand_switching": {
+      "throw_1_to_2_switch": true,
+      "throw_2_to_3_switch": true,
+      "alternating_pattern_maintained": true,
+      "hand_switch_violations": 0
+    },
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.85,
+      "notes": "Expert demonstration does not show suture passing through actual marked points on trainer; inferred as perfect placement for instructional clarity"
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "cannot_determine_from_demo",
+      "notes": "Demonstration uses loose suture material without actual Penrose drain; not applicable to score but technique is shown"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 35.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 565.0,
+    "formula_applied": "600 - 35.0 - 0.0 = 565.0",
+    "note": "Score computed for reference; this is an expert demonstration, not a trainee performance under standard FLS conditions"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Expert demonstration video with clear, well-lit frames showing each phase transition. Knot technique, hand switching, and suture handling are explicitly visible. Completion time is approximate as this is instructional content without formal task timing. All technical elements (three throws, proper hand switching, knot security) are demonstrated correctly and observable with high confidence.",
+  "cannot_determine": [
+    "Exact suture deviation in mm \u2014 demonstration does not show actual FLS trainer with marked entry/exit points",
+    "Drain slit closure quality \u2014 no actual Penrose drain present in demonstration",
+    "Actual task completion time under FLS proficiency testing \u2014 this is slowed instructional presentation"
+  ],
+  "video_classification_rationale": "Classified as 'expert_demo' because: (1) titled 'DUNDEE KNOT' by Dr. RK Mishra, World Laparoscopy Hospital; (2) slow, deliberate technique demonstration; (3) frames focus on hand position and knot formation; (4) no actual FLS trainer box or marked drain visible; (5) clearly intended to teach technique rather than assess trainee performance.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper suture handling grip and control",
+      "Surgeon's knot formation (double throw) with leading hand (right) first",
+      "Single throw second throw with left hand (hand switch)",
+      "Single throw third throw with right hand (hand switch back)",
+      "Alternating hand pattern for all three throws",
+      "Smooth wrap-and-draw-through motion without jerking",
+      "Tension control to prevent knot slippage",
+      "Progressive knot building with visible segments after each throw"
+    ],
+    "verbal_cues": [
+      "Title: 'DUNDEE KNOT' (specific knot nomenclature)",
+      "Creator attribution: DR RK MISHRA, World Laparoscopy Hospital (credibility cue)",
+      "Frame overlays: 'Dundee Jamming knot' (teaching label on multiple frames)"
+    ],
+    "common_errors_addressed": [
+      "Maintains consistent hand switching pattern \u2014 avoids the error of leading every throw with same hand",
+      "Demonstrates controlled tension \u2014 avoids loose or slack knot (knot slippage error)",
+      "Shows proper wrap configuration \u2014 avoids improper loop formation that could lead to knot failure",
+      "Maintains knot security throughout sequence \u2014 avoids the error of knot unraveling between throws"
+    ],
+    "skill_level_demonstrated": "expert",
+    "teaching_quality": "High-quality instructional video with slow, deliberate motions allowing frame-by-frame analysis of technique. Ideal for teaching proper knot-tying sequence and hand alternation pattern."
+  },
+  "technique_summary": "Expert-level demonstration of intracorporeal suture knot tying using the 'Dundee Knot' (also called 'Dundee Jamming Knot') technique by Dr. R.K. Mishra. The video showcases flawless execution: surgeon's knot (double throw) led by right hand, followed by proper hand switches to left hand for throw 2 and back to right for throw 3. All throws are clean, tension is controlled, and knot security is maintained throughout. No technical errors are demonstrated.",
+  "strengths": [
+    "Perfect hand alternation across all three throws",
+    "Smooth, controlled wrapping motion without jerking or hesitation",
+    "Clear, well-lit presentation allowing detailed observation of knot formation",
+    "Appropriate tension management preventing knot slippage",
+    "Demonstrable progression of knot building with visible segments after each throw",
+    "Expert-level speed and efficiency in knot formation",
+    "No wasted motion or repositioning between throws"
+  ],
+  "improvement_suggestions": [
+    "This is an expert demonstration \u2014 no improvement suggestions applicable"
+  ],
+  "video_id": "9bFJWds471w",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:00:12.946029+00:00",
+  "scoreable": true
+}

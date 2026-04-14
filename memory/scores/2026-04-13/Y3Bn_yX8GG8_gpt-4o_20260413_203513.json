@@ -1,0 +1,116 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Initiating the pickup of a green peg with non-dominant hand",
+      "technique_notes": "Accurate grip, moderate speed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "transfer_midair",
+      "description": "Peg transferred mid-air to dominant hand",
+      "technique_notes": "Smooth transfer, no drops",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 10.0,
+      "phase": "place_dominant",
+      "description": "Placed the first peg onto the pin",
+      "technique_notes": "Successful placement with stable hand control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 130.0,
+      "phase": "reverse_pickup",
+      "description": "Initiated pickup of pegs from right side with non-dominant hand",
+      "technique_notes": "Consistent use of instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 150.0,
+      "phase": "reverse_transfer",
+      "description": "Transferring peg with stable mid-air control",
+      "technique_notes": "Swift operation without errors",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 160.0,
+      "phase": "reverse_place",
+      "description": "Successful placement of peg onto the original side",
+      "technique_notes": "Accurate alignment, efficient drop",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 10,
+      "end_seconds": 15,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 130,
+      "end_seconds": 150,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 180,
+    "total_penalties": 0,
+    "total_fls_score": 120,
+    "formula_applied": "300 - 180 - 0 = 120"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear view of task execution with no penalties observed, consistent with expert performance benchmarks.",
+  "cannot_determine": [],
+  "technique_summary": "Consistent and accurate transfers with smooth and stable hand movements. Efficient pickup and placement cycles.",
+  "strengths": [
+    "Smooth and accurate peg transfers",
+    "Consistent hand control and stable instrument handling"
+  ],
+  "improvement_suggestions": [
+    "Continue practicing to reduce overall task completion time"
+  ],
+  "video_id": "Y3Bn_yX8GG8",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:35:13.476757+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.850865+00:00"
+  },
+  "scoreable": true
+}

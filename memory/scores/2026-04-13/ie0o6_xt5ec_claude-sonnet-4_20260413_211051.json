@@ -1,0 +1,194 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Two needle drivers visible entering field, Penrose drain positioned on red platform with visible marks",
+      "technique_notes": "Setup appears proper, drain positioned for suturing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping needle, left instrument positioning",
+      "technique_notes": "Needle appears loaded appropriately in right driver",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 10.0,
+      "phase": "needle_load",
+      "description": "Both instruments working with needle and suture, preparing for placement",
+      "technique_notes": "Coordinated bimanual manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 15.0,
+      "phase": "suture_placement",
+      "description": "Needle being driven through Penrose drain at marked location",
+      "technique_notes": "Needle entry appears to be at appropriate location near marks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 20.0,
+      "phase": "suture_placement",
+      "description": "Suture being pulled through drain, both marks appear to be engaged",
+      "technique_notes": "Good technique, suture passing through both target areas",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 25.0,
+      "phase": "suture_placement",
+      "description": "Suture fully through drain, preparing for knot formation",
+      "technique_notes": "Clean passage through drain, adequate suture length",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 30.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Hands working extracorporeally to form knot, suture ends visible",
+      "technique_notes": "Transition to extracorporeal technique, both suture ends accessible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 40.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Continuing extracorporeal knot tying with both hands",
+      "technique_notes": "Proper extracorporeal technique being employed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 45.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Hands manipulating suture to form extracorporeal knot",
+      "technique_notes": "Good hand coordination for knot formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 60.0,
+      "phase": "knot_push",
+      "description": "Preparing knot pusher or using instrument to advance knot down",
+      "technique_notes": "Transitioning to knot advancement phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 70.0,
+      "phase": "knot_push",
+      "description": "Knot being advanced down to tissue level",
+      "technique_notes": "Appropriate knot advancement technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 75.0,
+      "phase": "suture_cut",
+      "description": "Task appears completed, suture cut and knot secured at drain",
+      "technique_notes": "Task completion with knot at appropriate level",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 75.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 10,
+      "end_seconds": 30,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 30,
+      "end_seconds": 60,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 60,
+      "end_seconds": 70,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 70,
+      "end_seconds": 75,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.7
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "closure_quality": "complete"
+    },
+    "knot_assessment": {
+      "knot_secure": true,
+      "knot_at_tissue_level": true,
+      "knot_failure": false
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 75.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 345.0,
+    "formula_applied": "420 - 75.0 - 0.0 = 345.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Good visibility of key phases and technique. Camera angle provides clear view of suture placement and knot formation. Some uncertainty in exact mm measurements for suture deviation due to viewing angle, but placement appears accurate to marks.",
+  "cannot_determine": [
+    "Exact mm deviation measurements - marks partially obscured by instruments in some frames",
+    "Precise knot pusher vs instrument technique - extracorporeal method clearly used but specific tools not always visible"
+  ],
+  "technique_summary": "Excellent expert-level performance with efficient needle loading, accurate suture placement, and smooth extracorporeal knot technique. Completion time of 75 seconds falls within expert benchmark range.",
+  "strengths": [
+    "Very efficient needle loading and suture placement (30s total)",
+    "Clean extracorporeal knot formation technique",
+    "Accurate suture placement at both marks",
+    "No visible penalties or complications"
+  ],
+  "improvement_suggestions": [
+    "Extracorporeal knot formation could be slightly faster to achieve sub-60s expert times",
+    "Continue practicing to maintain this excellent technique consistency"
+  ],
+  "video_id": "ie0o6_xt5ec",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:10:51.855295+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.878201+00:00"
+  },
+  "scoreable": true
+}

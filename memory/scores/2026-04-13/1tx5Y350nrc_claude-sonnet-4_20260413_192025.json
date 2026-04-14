@@ -1,0 +1,86 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Not an FLS Task Video",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation",
+      "description": "Black screen - no FLS task visible",
+      "technique_notes": "This appears to be a presentation or slide deck",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": null,
+      "phase": "presentation",
+      "description": "SAGES presentation slide showing 'Purpose' - FLS study methodology",
+      "technique_notes": "Academic presentation about FLS exam trends, not a task performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": null,
+      "phase": "presentation",
+      "description": "Methods slide showing FLS data 2008-2016",
+      "technique_notes": "Research methodology slide, no task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": null,
+      "phase": "presentation",
+      "description": "Analysis slide showing statistical methods",
+      "technique_notes": "Statistical analysis description, no FLS task visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": null,
+      "phase": "presentation",
+      "description": "Results table showing PGY levels and sample sizes",
+      "technique_notes": "Data presentation showing 7232 total participants across PGY levels",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": null,
+      "phase": "presentation",
+      "description": "Results showing cognitive vs manual score differences",
+      "technique_notes": "Statistical results comparing performance by year and PGY level",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed - this is a research presentation"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear academic presentation slides visible throughout - no FLS task performance, no laparoscopic trainer, no instruments, no task materials",
+  "cannot_determine": [
+    "FLS task performance - this video contains only presentation slides about FLS research data"
+  ],
+  "technique_summary": "This video shows a SAGES conference presentation about FLS exam trends over 9 years (2008-2016), not an actual FLS task performance.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Please provide a video showing actual FLS task performance for scoring"
+  ],
+  "video_id": "1tx5Y350nrc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:20:25.104227+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.739199+00:00"
+  },
+  "scoreable": false
+}

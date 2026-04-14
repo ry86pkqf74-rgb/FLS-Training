@@ -1,0 +1,65 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Not an FLS Task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Healthcare professional in scrubs seated at desk discussing permanent contraception procedures",
+      "technique_notes": "This is educational/informational content, not an FLS skills assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "educational_content",
+      "description": "Anatomical diagram showing tubal occlusion methods with rubber band illustration",
+      "technique_notes": "Educational diagram explaining fallopian tube occlusion techniques",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "educational_content",
+      "description": "Continuation of educational presentation about outpatient procedures",
+      "technique_notes": "Discussion of procedure timing and recovery expectations",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "error_explanation": "This video contains educational content about tubal sterilization procedures, not an FLS (Fundamentals of Laparoscopic Surgery) skills assessment. FLS tasks involve hands-on manipulation of instruments within a laparoscopic trainer box to complete specific standardized tasks like peg transfer, pattern cutting, endoloop placement, or suturing."
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS task video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear visual evidence throughout all frames shows this is educational content about medical procedures, not a hands-on FLS skills assessment. No laparoscopic trainer box, instruments, or standardized FLS tasks are visible.",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this video shows educational content about tubal sterilization procedures rather than FLS task performance.",
+  "strengths": [
+    "Clear educational presentation",
+    "Good use of anatomical diagrams"
+  ],
+  "improvement_suggestions": [
+    "For FLS assessment, would need video of actual hands-on task performance within a laparoscopic trainer"
+  ],
+  "video_id": "0vfT5DvRZro",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:17:31.620304+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.733826+00:00"
+  },
+  "scoreable": false
+}

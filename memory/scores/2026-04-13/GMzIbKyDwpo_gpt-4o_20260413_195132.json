@@ -1,0 +1,134 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Instruments positioning to grasp the gauze at the starting point.",
+      "technique_notes": "Grasp is firm; preparing for initial cut.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "initial_cut",
+      "description": "Scalpel initiates the cut along the marked line.",
+      "technique_notes": "Cut begins smoothly on line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 20.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting motion follows clockwise path along the line.",
+      "technique_notes": "Consistent cutting motion observed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 35.0,
+      "phase": "counterclockwise_cut",
+      "description": "Instruments adjusting for counterclockwise cut.",
+      "technique_notes": "Switching direction handled efficiently.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 50.0,
+      "phase": "completion",
+      "description": "Cut nearing completion with few minor deviations.",
+      "technique_notes": "Cut finished; minor alignment issues noted.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 60.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 10,
+      "end_seconds": 30,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 30,
+      "end_seconds": 50,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 50,
+      "end_seconds": 60,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Approximately 1-2mm deviation noted during counterclockwise cut.",
+      "points_deducted": 5.0,
+      "frame_evidence": [
+        13,
+        18
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "line_accuracy": {
+      "deviation_max_mm": 2,
+      "typical_deviation_mm": 1,
+      "total_deviation_penalty": 5.0,
+      "confidence": 0.75
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 60.0,
+    "total_penalties": 5.0,
+    "total_fls_score": 235.0,
+    "formula_applied": "300 - 60.0 - 5.0 = 235.0"
+  },
+  "confidence": 0.78,
+  "confidence_rationale": "Minor deviations noted with reasonable accuracy from available angles.",
+  "cannot_determine": [],
+  "technique_summary": "Efficient and mostly accurate cutting performance with minor deviations.",
+  "strengths": [
+    "Smooth transition between cutting directions",
+    "Maintained a swift cutting pace"
+  ],
+  "improvement_suggestions": [
+    "Practice maintaining alignment to reduce minor deviations",
+    "Adjust grip to better control fine movements"
+  ],
+  "video_id": "GMzIbKyDwpo",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:51:32.221620+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.812650+00:00"
+  },
+  "scoreable": true
+}

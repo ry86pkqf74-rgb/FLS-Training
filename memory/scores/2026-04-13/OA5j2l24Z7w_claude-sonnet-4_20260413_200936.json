@@ -1,0 +1,158 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Static view of blank trainer - no instruments visible",
+      "technique_notes": "Pre-task setup phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "setup",
+      "description": "Title card displaying 'Precision cutting'",
+      "technique_notes": "Task identification screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "setup",
+      "description": "Gauze visible suspended between clamps with marked circular cutting pattern",
+      "technique_notes": "Proper gauze setup with 4cm diameter circle marked, secured at both ends",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "gauze_grasp",
+      "description": "Left grasper approaching gauze, right scissors visible",
+      "technique_notes": "Standard instrument positioning for pattern cutting task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "initial_cut",
+      "description": "Left grasper stabilizing gauze, scissors beginning initial cut at marked line",
+      "technique_notes": "Good stabilization technique, scissors perpendicular to cutting line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 28.0,
+      "phase": "clockwise_cut",
+      "description": "Continued cutting around circular pattern in clockwise direction",
+      "technique_notes": "Smooth cutting motion following marked line closely",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 42.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing around top portion of circle",
+      "technique_notes": "Maintaining good line following, steady instrument control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 46.0,
+      "phase": "completion",
+      "description": "Final view showing completed circular cut with gauze still attached to clamps",
+      "technique_notes": "Task completed successfully, gauze remains secured",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 46.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 12,
+      "end_seconds": 14,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 14,
+      "end_seconds": 18,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 18,
+      "end_seconds": 46,
+      "duration_seconds": 28,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 46,
+      "end_seconds": 46,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": {
+        "north_mm": 0,
+        "northeast_mm": 0,
+        "east_mm": 0,
+        "southeast_mm": 0,
+        "south_mm": 0,
+        "southwest_mm": 0,
+        "west_mm": 0,
+        "northwest_mm": 0
+      },
+      "total_deviation_penalty": 0,
+      "confidence": 0.4
+    },
+    "gauze_integrity": {
+      "detached_from_clamp": false,
+      "cut_complete": true,
+      "circle_fully_excised": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 46.0,
+    "total_penalties": 0,
+    "total_fls_score": 254.0,
+    "formula_applied": "300 - 46.0 - 0 = 254.0"
+  },
+  "confidence": 0.4,
+  "confidence_rationale": "Camera angle and video quality make precise measurement of cutting line deviation difficult. Task completion and timing are clearly visible, but exact penalty assessment is limited by viewing angle.",
+  "cannot_determine": [
+    "Exact millimeter deviation from cutting line at cardinal points - camera angle is not optimal for precision measurement",
+    "Whether cutting line deviations exceed 2mm threshold for penalties"
+  ],
+  "technique_summary": "Expert-level performance with excellent time (46s vs 60-90s expert benchmark). Smooth, controlled cutting technique with good gauze stabilization throughout.",
+  "strengths": [
+    "Excellent completion time indicating high proficiency",
+    "Steady instrument control throughout cutting sequence",
+    "Proper gauze stabilization technique",
+    "Maintained gauze attachment to clamps"
+  ],
+  "improvement_suggestions": [
+    "Camera angle optimization would allow better assessment of cutting precision",
+    "Continue practicing to maintain this expert-level timing"
+  ],
+  "video_id": "OA5j2l24Z7w",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:09:36.429859+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.828595+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,13 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason": "This video is a graduation/award ceremony at World Laparoscopy Hospital showing medical students or professionals receiving certificates and awards. It contains no FLS task performance, equipment, trainer box, or surgical instruments. The final frame shows an abstract 3D medical visualization unrelated to any MISTELS task. No scoring is applicable.",
+  "content_type": "celebration_event",
+  "fls_scorable": false,
+  "video_id": "0h8k1TM5slA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:23:43.008097+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,192 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Title card: 'CMTGS TIPS - Lap. Intracorporeal Slip-Knot (Two Half-Hitches)' by J.J. Woo MD",
+      "technique_notes": "Educational/tutorial content with narrator and title overlays",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "first_throw_demonstration",
+      "description": "Animated diagram showing first half-hitch (first throw) with magenta and green colored thread paths. Label: 'FIRST HALF HITCH'. Instruction text: 'Always Above Horizon'",
+      "technique_notes": "Teaching demonstration of proper thread geometry for first throw. Emphasis on keeping active thread above the horizon line for optimal knot security.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "first_throw_demonstration",
+      "description": "Continuation of first half-hitch diagram. Label: 'SECOND HALF HITCH'. Shows second wrap with 'Always Above Horizon' instruction.",
+      "technique_notes": "Demonstrates that the first throw consists of TWO half-hitches (surgeon's knot structure). Both wraps shown with consistent orientation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "cinch_and_lock",
+      "description": "Red suture block showing completed two-half-hitch knot being tightened. Label: 'TIGHTEN TWO-HALF HITCHES'. Shows tightening action with arrow indicating pull direction.",
+      "technique_notes": "Clear demonstration of cinching the surgeon's knot after formation. Both suture ends pulled downward to secure.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "cinch_and_lock",
+      "description": "Close-up of knot being tightened. Split-screen showing trainer view (left) and macro view (right) of multicolored suture with arrows labeled 'Pull' in two directions.",
+      "technique_notes": "Demonstrates simultaneous pulling technique. Both hands work actively to apply tension. Shows proper knot geometry during cinching.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "cinch_and_lock",
+      "description": "Continuation of cinching phase. Yellow arrow annotations show 'Pull Down' direction. Knot being compressed and locked.",
+      "technique_notes": "Emphasizes downward pressure and tension application for knot security.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 22.0,
+      "phase": "cinch_and_lock",
+      "description": "Label: 'LOCK TWO-HALF HITCHES'. Shows completed and secured surgeon's knot with no slack visible.",
+      "technique_notes": "Knot properly tensioned and locked. No motion or slippage. Clean, tight configuration.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 25.0,
+      "phase": "blocking_sequence_first_throw",
+      "description": "Label: 'BLOCKING SEQUENCE - 1ST CONVERT ACTIVE TO PASSIVE'. Shows suture in diagram form with one thread labeled 'Converted Active' (yellow) and other labeled 'Passive Thread' (green).",
+      "technique_notes": "Teaching the concept of thread role conversion. After the first throw, the active thread (which tied the knot) becomes passive. This is critical for proper hand alternation on subsequent throws.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 28.0,
+      "phase": "blocking_sequence_first_throw",
+      "description": "Close-up macro view of actual multicolored suture showing the knot junction. Arrows pointing to 'Active Thread' (orange/yellow) and 'Passive Thread' (green).",
+      "technique_notes": "Real suture demonstration of thread color convention used in tutorial. Helps viewer track which thread is active vs. passive after knot formation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 32.0,
+      "phase": "blocking_sequence_first_throw",
+      "description": "Trainer box view showing the knot on red suture block. Label indicates 'Converted Passive' (now becoming active for second throw) and 'Converted Active' (now passive).",
+      "technique_notes": "Demonstrates that after first throw is locked, the previously passive thread becomes the active thread for the second throw. This allows proper hand switching.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 35.0,
+      "phase": "second_throw_setup",
+      "description": "Label: 'BLOCKING SEQUENCE - 1ST CONVERT ACTIVE TO PASSIVE'. Shows pulling action with arrows labeled 'Pull' in two directions simultaneously.",
+      "technique_notes": "Shows the mechanics of the thread conversion\u2014both ends pulled to finalize the blocking sequence and lock the first throw completely.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 40.0,
+      "phase": "second_throw",
+      "description": "Label: 'BLOCKING SEQUENCE - 2ND NO CONVERSION ACTIVE & PASSIVE'. Red suture block showing second throw formation. Both threads visible with different roles.",
+      "technique_notes": "Second throw is explicitly labeled as having NO thread conversion. This throw uses a different hand from the first (single throw, not double). Hand alternation demonstrated.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 43.0,
+      "phase": "second_throw",
+      "description": "Close-up of the second single throw in progress. Macro view of multicolored suture showing knot formation on this throw.",
+      "technique_notes": "Clear demonstration of second throw (single throw only, no double wrap like the first). Knot geometry distinct from surgeon's knot.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 48.0,
+      "phase": "third_throw",
+      "description": "Label: 'BLOCKING SEQUENCE - 3RD CONVERT ACTIVE & PASSIVE'. Shows third throw being formed on red suture block.",
+      "technique_notes": "Third throw shown with proper hand alternation from second throw. Single throw configuration, opposite hand from second throw.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 52.0,
+      "phase": "third_throw",
+      "description": "Close-up macro view of third throw knot on multicolored suture. Knot appears well-formed and symmetric.",
+      "technique_notes": "Third single throw appears clean and properly tensioned. Good knot geometry.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 57.0,
+      "phase": "summary",
+      "description": "Final macro photograph of completed three-throw knot (surgeon's knot plus two single throws). Label: 'Blocking Sequence - Two Half-Hitches'.",
+      "technique_notes": "Complete knot assembly shown: two half-hitches for the surgeon's knot, then two alternating single throws. All three throws visible and appear well-secured.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable\u2014instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This video is educational/instructional content, not a performance recording. It contains title cards, animated diagrams, verbal instruction implied by overlay text, and teaching demonstrations by an expert (J.J. Woo MD). Scoring is not applicable per assessment instructions.",
+  "cannot_determine": [
+    "Completion time (instructional, not performance)",
+    "Actual task penalties (no task execution by trainee)",
+    "FLS score (no trainee performance to score)",
+    "Hand-switching verification during actual knot formation (only demonstrations shown)"
+  ],
+  "video_classification_rationale": "The video is clearly educational content: (1) Title card identifies it as 'CMTGS TIPS', (2) Narrator attribution to J.J. Woo MD (implied by credits), (3) Extensive overlay text and colored annotations guiding viewers, (4) Animated diagrams with labeled components, (5) Slow-motion macro closeups used pedagogically, (6) Progressive labeling of 'blocking sequences' and conversion steps, (7) No real-time task performance by a single surgeon\u2014instead a structured lesson with multiple camera angles and educational visual aids.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Surgeon's knot formation (first throw: two half-hitches, both wraps above horizon)",
+      "Second throw: single wrap, opposite hand from first throw",
+      "Third throw: single wrap, opposite hand from second throw",
+      "Thread role conversion after first throw (active becomes passive, passive becomes active)",
+      "Proper cinching and tensioning technique (simultaneous bilateral pull)",
+      "Knot locking procedure to prevent slippage",
+      "Horizon rule for thread orientation\u2014keeping active thread above plane of suture block for geometry optimization",
+      "Color-coded thread tracking (orange/yellow for active, green for passive) to teach hand switching"
+    ],
+    "verbal_cues": [
+      "Always Above Horizon (critical instruction for first throw geometry)",
+      "First Half Hitch, Second Half Hitch (labels for surgeon's knot components)",
+      "Tighten Two-Half Hitches (cinching instruction)",
+      "Lock Two-Half Hitches (securing instruction)",
+      "Blocking Sequence 1st Convert Active to Passive (post-first-throw state)",
+      "Blocking Sequence 2nd No Conversion Active & Passive (second throw, no conversion)",
+      "Blocking Sequence 3rd Convert Active & Passive (third throw)"
+    ],
+    "common_errors_addressed": [
+      "Failing to keep active thread above horizon on first two wraps (error would create weak knot geometry)",
+      "Forgetting to switch hands between throws (addressed by explicit 'Convert' vs 'No Conversion' labels and color coding)",
+      "Insufficient cinching tension (demo emphasizes bilateral pull and locking)",
+      "Improper blocking sequence or failure to understand thread role conversion (entire tutorial section devoted to this)"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "This is instructional content only. Viewers should use this as a reference to practice the actual FLS task under timed conditions."
+  ],
+  "video_id": "8OrfizM-RSo",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:55:50.607859+00:00",
+  "scoreable": false
+}

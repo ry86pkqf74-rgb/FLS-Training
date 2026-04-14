@@ -1,0 +1,117 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "initial_loop_formation",
+      "description": "Hands positioned with suture material, beginning to form initial loop structure",
+      "technique_notes": "Clean hand positioning, suture appears to be appropriate material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.8,
+      "phase": "loop_formation",
+      "description": "Creating the basic loop structure for Roeder knot, following step 1 of diagram",
+      "technique_notes": "Loop formation appears consistent with Roeder knot technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.2,
+      "phase": "wrapping_phase",
+      "description": "Beginning the multiple wrapping sequence as shown in step 2 of diagram",
+      "technique_notes": "Systematic wrapping technique, maintaining loop integrity",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.6,
+      "phase": "wrapping_completion",
+      "description": "Continuing wrapping sequence, multiple turns visible through the loop",
+      "technique_notes": "Consistent wrapping pattern, good suture control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.2,
+      "phase": "final_pass_preparation",
+      "description": "Preparing for final pass through loop as shown in step 3",
+      "technique_notes": "Knot structure appears properly formed before final locking step",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.6,
+      "phase": "knot_completion",
+      "description": "Completing the Roeder knot structure, final threading visible",
+      "technique_notes": "Knot appears properly constructed according to diagram sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 24.8,
+      "phase": "knot_tightening",
+      "description": "Final knot completed and being prepared for use",
+      "technique_notes": "Roeder knot structure complete, ready for application",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 25.0,
+  "phase_timings": [
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 0,
+      "end_seconds": 25,
+      "duration_seconds": 25,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_type": "roeder_sliding_knot",
+    "knot_quality": "well_formed",
+    "suture_material": "appears_appropriate",
+    "technique_assessment": "expert_level_execution"
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 25.0,
+    "total_penalties": 0,
+    "total_fls_score": 395.0,
+    "formula_applied": "420 - 25.0 - 0 = 395.0"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "Video shows only extracorporeal knot formation without the complete FLS Task 4 sequence. Cannot assess suture placement through Penrose drain marks, knot pushing, or final positioning which are essential components of Task 4 scoring.",
+  "cannot_determine": [
+    "Penrose drain presence and suture placement accuracy",
+    "Suture deviation from target marks",
+    "Knot pusher technique and final knot positioning",
+    "Gap closure in drain",
+    "Complete task completion including suture cutting",
+    "Actual FLS Task 4 performance versus knot tying demonstration"
+  ],
+  "technique_summary": "Excellent extracorporeal Roeder knot formation technique demonstrated with clean, systematic approach. However, this appears to be a knot tying demonstration rather than complete FLS Task 4 performance.",
+  "strengths": [
+    "Clean, methodical knot formation",
+    "Good suture control throughout process",
+    "Proper Roeder knot construction sequence"
+  ],
+  "improvement_suggestions": [
+    "Complete demonstration should include full FLS Task 4 sequence with Penrose drain",
+    "Show knot pusher technique and final positioning at target marks"
+  ],
+  "video_id": "DAVNrNg1nGA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:45:08.120207+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.797395+00:00"
+  },
+  "scoreable": true
+}

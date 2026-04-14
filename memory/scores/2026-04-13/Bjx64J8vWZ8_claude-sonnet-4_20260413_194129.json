@@ -1,0 +1,173 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 96.0,
+      "phase": "loop_deploy",
+      "description": "Initial view showing foam appendage with marking and pre-tied ligating loop visible in upper portion of field",
+      "technique_notes": "Loop appears properly positioned for deployment, foam appendage clearly marked",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 103.0,
+      "phase": "target_approach",
+      "description": "Both graspers visible, approaching the ligating loop to begin manipulation",
+      "technique_notes": "Instruments positioned appropriately for loop handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 109.0,
+      "phase": "loop_placement",
+      "description": "Right grasper manipulating loop while left assists, beginning to position loop around appendage",
+      "technique_notes": "Coordinated bimanual technique, loop being opened appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 123.0,
+      "phase": "loop_placement",
+      "description": "Loop being positioned over the foam appendage, approaching the marked target area",
+      "technique_notes": "Good technique with loop opening maintained while advancing over appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 136.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage, appears to be at or very close to the marked line",
+      "technique_notes": "Precise positioning achieved, loop properly oriented around appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 196.0,
+      "phase": "cinch",
+      "description": "Loop being tightened around appendage at the marked position",
+      "technique_notes": "Appropriate cinching technique, maintaining position at mark during tightening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 216.0,
+      "phase": "cinch",
+      "description": "Loop appears fully cinched and secured around appendage at marked position",
+      "technique_notes": "Loop appears tight and well-positioned, no visible gaps",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 230.0,
+      "phase": "cut_tail",
+      "description": "Scissors cutting the excess loop tail material",
+      "technique_notes": "Clean cutting technique, appropriate length of tail being removed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 240.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 96,
+      "end_seconds": 103,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 103,
+      "end_seconds": 109,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 109,
+      "end_seconds": 196,
+      "duration_seconds": 87,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 196,
+      "end_seconds": 216,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 216,
+      "end_seconds": 240,
+      "duration_seconds": 24,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "timeout_penalty",
+      "description": "Task completed beyond 180 second time limit",
+      "points_deducted": 60.0,
+      "frame_evidence": [
+        8
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "successfully_deployed": true,
+      "deployment_technique": "appropriate bimanual coordination"
+    },
+    "target_positioning": {
+      "loop_at_mark": true,
+      "deviation_from_mark_mm": 0.0,
+      "positioning_accuracy": "excellent"
+    },
+    "cinching_quality": {
+      "loop_cinched_tightly": true,
+      "no_gaps_visible": true,
+      "cinching_technique": "appropriate tension applied"
+    },
+    "appendage_integrity": {
+      "appendage_transected": false,
+      "appendage_damaged": false
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 240.0,
+    "total_penalties": 60.0,
+    "total_fls_score": 0.0,
+    "formula_applied": "180 - 240.0 - 0 = -60 (minimum score is 0)"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Clear view of loop placement and cinching. Time measurement based on visible timestamps. Loop positioning at mark well-observed, though exact mm measurements difficult from camera angle.",
+  "cannot_determine": [
+    "Exact mm deviation from mark - appears to be at mark but precise measurement limited by camera resolution"
+  ],
+  "technique_summary": "Good technical execution with appropriate loop deployment and precise positioning. Primary issue was extended time beyond the 180-second limit, resulting in timeout penalty.",
+  "strengths": [
+    "Excellent loop positioning at the marked line",
+    "Good bimanual coordination throughout procedure",
+    "Proper cinching technique with tight closure",
+    "Clean tail cutting"
+  ],
+  "improvement_suggestions": [
+    "Focus on speed during loop placement phase to stay within time limit",
+    "Practice more efficient loop manipulation to reduce overall procedure time"
+  ],
+  "video_id": "Bjx64J8vWZ8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:41:29.857744+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.788942+00:00"
+  },
+  "scoreable": true
+}

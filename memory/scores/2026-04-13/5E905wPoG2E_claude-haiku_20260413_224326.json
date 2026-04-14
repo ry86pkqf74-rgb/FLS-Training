@@ -1,0 +1,26 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - educational/institutional content",
+  "reasoning": "This video is a compilation of institutional/educational content including: (1) company branding/intro slides, (2) instructor introduction (Elliot Wagner from Southeast Community College), (3) facility tours and classroom setup, (4) surgical instrument inventory/setup demonstrations, and (5) instructor commentary about surgical technology program. The video does not contain a trainee performing a discrete FLS task in the standard trainer box with laparoscopic instruments on a timed performance.",
+  "video_content_summary": [
+    "Intelligent Video Solutions company logo and branding",
+    "Instructor introduction: Elliot Wagner, Surgical Technology Instructor",
+    "Surgical Technology & Surgical First Assist program classroom (Room 109B)",
+    "Operating room facility tour (lit with green/amber lighting)",
+    "Surgical instrument inventory management and setup (ROAM cart sharps count)",
+    "Instructor commentary on surgical technology education",
+    "Simulated patient draping and surgical field preparation",
+    "Team-based surgical setup demonstrations"
+  ],
+  "is_fls_task_performance": false,
+  "scoring_applicable": false,
+  "confidence": 0.98,
+  "notes": "This content documents a surgical technology educational program and institutional practices. It is not a recorded FLS task performance by a trainee, and therefore does not meet criteria for FLS scoring. No task_id parameter was provided, and visual inspection confirms absence of standard FLS trainer box, laparoscopic peg boards, or timed individual performance metrics.",
+  "recommendation": "Return to sender. Provide an actual FLS task performance video (e.g., trainee performing Peg Transfer, Pattern Cut, Endoloop, or Suturing task with laparoscopic instruments in a MISTELS/FLS trainer box with visible timer).",
+  "video_id": "5E905wPoG2E",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:43:26.226375+00:00",
+  "scoreable": false
+}

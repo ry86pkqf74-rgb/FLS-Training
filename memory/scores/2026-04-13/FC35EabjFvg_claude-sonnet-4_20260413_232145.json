@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Aerial view of UAB medical center buildings with green overlay",
+      "technique_notes": "Promotional video opening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Title card showing 'UAB SURGERY MINIMALLY INVASIVE SURGERY FELLOWSHIP'",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "not_applicable",
+      "description": "Dr. Richard Stahl, MD speaking to camera in clinical setting",
+      "technique_notes": "Expert physician introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "not_applicable",
+      "description": "Surgeons operating da Vinci robotic system",
+      "technique_notes": "Demonstration of robotic surgery platform",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "not_applicable",
+      "description": "Live surgical procedure with laparoscopic view on monitor",
+      "technique_notes": "Real surgical case documentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "not_applicable",
+      "description": "Surgical team in operating room with multiple monitors",
+      "technique_notes": "Team-based surgical approach",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed - promotional/educational video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear promotional video for UAB Surgery fellowship program. No FLS trainer, instruments, or standardized tasks visible.",
+  "cannot_determine": [
+    "FLS task performance - this is institutional promotional content"
+  ],
+  "technique_summary": "Not applicable - promotional video showcasing minimally invasive surgery fellowship program at UAB",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "robotic surgery platform operation",
+      "laparoscopic surgical techniques",
+      "team-based surgical approach"
+    ],
+    "verbal_cues": [
+      "Fellowship program overview by program director"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "FC35EabjFvg",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:21:45.427158+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,42 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - product marketing video",
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - not a performance video"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This is a Lapstar Laparoscopic Training System product marketing and features overview video. It contains only logos, equipment photographs, and promotional slides showing portability and ease of use. No FLS task performance is visible. No trainee or expert performing any task on the simulator is shown.",
+  "cannot_determine": [
+    "Task identity",
+    "Performance metrics",
+    "Completion time",
+    "Technical execution",
+    "Penalty assessment"
+  ],
+  "technique_summary": "Not applicable - this is promotional content only.",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": null
+  },
+  "notes": "Video consists entirely of Lapstar branding, equipment demonstrations, transport and usability features. No FLS task execution is present. Scoring cannot be performed.",
+  "video_id": "7nv0A69MQlc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:54:58.290631+00:00",
+  "scoreable": false
+}

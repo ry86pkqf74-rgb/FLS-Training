@@ -138,5 +138,11 @@
   "video_id": "Orp_c2VsqEE",
   "source": "teacher_claude",
   "model_name": "claude-sonnet-4-20250514",
-  "scored_at": "2026-04-13T18:28:42.044311+00:00"
+  "scored_at": "2026-04-13T18:28:42.044311+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.830278+00:00"
+  },
+  "scoreable": true
 }

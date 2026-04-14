@@ -1,0 +1,44 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Graduation ceremony with students in caps and gowns holding certificates",
+      "technique_notes": "No surgical training equipment visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "not_applicable",
+      "description": "Group photo of graduates with World Laparoscopy Hospital branding",
+      "technique_notes": "Educational institution branding visible but no FLS training content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 23.0,
+      "phase": "not_applicable",
+      "description": "Final celebration frame with graduates throwing caps",
+      "technique_notes": "Ceremonial conclusion of educational program",
+      "penalties_observed": []
+    }
+  ],
+  "cannot_determine": [
+    "Any FLS task performance - video shows graduation ceremony only",
+    "Completion time - no surgical task performed",
+    "Technical penalties - no laparoscopic training equipment visible",
+    "Skill assessment - content is ceremonial rather than training-focused"
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Video content is clearly identifiable as a graduation ceremony for a laparoscopic surgery training program. No FLS task equipment, trainers, or performance activities are visible throughout the sequence.",
+  "video_id": "0h8k1TM5slA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:23:38.591661+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,142 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Setup visible with laparoscopic trainer, no instruments yet visible",
+      "technique_notes": "Clean workspace setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "loop_deploy",
+      "description": "Hands manipulating endoloop outside trainer, preparing for insertion",
+      "technique_notes": "Proper handling of loop device",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "loop_deploy",
+      "description": "Endoloop being inserted through trocar with grasper assistance",
+      "technique_notes": "Controlled insertion technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "target_approach",
+      "description": "Loop deployed inside trainer, approaching foam appendage target",
+      "technique_notes": "Good visualization of target structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "loop_placement",
+      "description": "Loop being positioned around foam appendage, grasper manipulating loop opening",
+      "technique_notes": "Careful positioning of loop around target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 45.0,
+      "phase": "cinch",
+      "description": "Loop appears to be cinching down on appendage, tightening process initiated",
+      "technique_notes": "Appropriate cinching technique visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 57.0,
+      "phase": "completion",
+      "description": "Final positioning and securing of loop, task appears complete",
+      "technique_notes": "Loop secured around appendage",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 57.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 15,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 15,
+      "end_seconds": 25,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 25,
+      "end_seconds": 40,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 40,
+      "end_seconds": 57,
+      "duration_seconds": 17,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "confidence": 0.4
+    },
+    "loop_security": {
+      "properly_cinched": true,
+      "confidence": 0.7
+    },
+    "appendage_status": {
+      "transected": false,
+      "confidence": 0.8
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 57.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 123.0,
+    "formula_applied": "180 - 57.0 - 0.0 = 123.0"
+  },
+  "confidence": 0.5,
+  "confidence_rationale": "Camera angle and lighting make it difficult to clearly assess exact loop placement relative to marked line. Loop cinching and appendage integrity are reasonably visible, but precise positioning assessment is limited by viewing angle.",
+  "cannot_determine": [
+    "Exact mm deviation from marked line due to camera angle and lighting",
+    "Precise final loop position relative to target mark"
+  ],
+  "technique_summary": "Competent intermediate performance with smooth loop deployment and placement. Completion time of 57 seconds falls within intermediate range (40-90s). No obvious major errors observed.",
+  "strengths": [
+    "Smooth loop deployment and insertion",
+    "Controlled approach to target",
+    "Appropriate cinching technique"
+  ],
+  "improvement_suggestions": [
+    "Focus on more precise loop placement relative to marked line",
+    "Consider faster deployment to approach expert time range (20-40s)"
+  ],
+  "video_id": "yvo7mOHOd8k",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:56:04.170718+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.916195+00:00"
+  },
+  "scoreable": true
+}

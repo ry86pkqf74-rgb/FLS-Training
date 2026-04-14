@@ -1,0 +1,135 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Initial positioning of instruments near gauze",
+      "technique_notes": "Appropriate instrument approach",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "initial_cut",
+      "description": "Initiating the cut along marked line",
+      "technique_notes": "Entry point aligned with marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 12.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting in a clockwise direction along the line",
+      "technique_notes": "Maintaining proximity to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 26.0,
+      "phase": "counterclockwise_cut",
+      "description": "Reversed direction to counterclockwise",
+      "technique_notes": "Cutting remains in proximity to the line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 38.0,
+      "phase": "completion",
+      "description": "Finalizing cut, gauze still intact at clips",
+      "technique_notes": "Central segment removed with minimal deviation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 40.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 6,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 6,
+      "end_seconds": 15,
+      "duration_seconds": 9,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 38,
+      "duration_seconds": 23,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 38,
+      "end_seconds": 40,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Minor deviation observed during counterclockwise cut",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        17,
+        18
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "gauze_attachment": {
+      "gauze_detached": false,
+      "confidence": 0.95
+    },
+    "cut_assessment": {
+      "completion_status": "complete",
+      "confidence": 0.95
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 40.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 258.0,
+    "formula_applied": "300 - 40 - 2 = 258.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "The cuts were clearly observable with only minor deviations noted. All critical steps were well-documented.",
+  "cannot_determine": [],
+  "technique_summary": "High proficiency demonstrated with smooth transitions and adherence to the line in most sections.",
+  "strengths": [
+    "Consistent pace and instrument control",
+    "Minimal gauze disturbance"
+  ],
+  "improvement_suggestions": [
+    "Maintain tighter adherence to the marked line during direction change"
+  ],
+  "video_id": "vI5WszySD2o",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:46:32.779630+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.908986+00:00"
+  },
+  "scoreable": true
+}

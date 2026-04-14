@@ -1,0 +1,57 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_slides",
+      "description": "Black screen with SAGES conference branding",
+      "technique_notes": "Not applicable - this is a presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "presentation_slides",
+      "description": "Title slide for presentation on laparoscopic instrument tracking technology",
+      "technique_notes": "Not applicable - academic presentation content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "presentation_slides",
+      "description": "Disclosures slide showing financial conflicts of interest",
+      "technique_notes": "Not applicable - presentation material",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Computer vision-based instrument tracking using structured light patterns",
+      "Tool-to-surface distance measurement with millimeter precision",
+      "Real-time feedback for surgical performance assessment"
+    ],
+    "verbal_cues": [
+      "Making every surgeon an expert through data-driven training",
+      "Importance of objective metrics in surgical skill assessment",
+      "Value proposition of expert surgical performance"
+    ],
+    "common_errors_addressed": [
+      "Lack of objective measurement tools in surgical training",
+      "Inability to relate instrument tracking to surgical surface topology"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an academic presentation about surgical technology, not an FLS task performance. The slides discuss instrument tracking technology and surgical training methodologies.",
+  "cannot_determine": [],
+  "technique_summary": "This video contains presentation slides about emerging laparoscopic instrument tracking technology, not an FLS task performance.",
+  "video_id": "NTjY4N3rpL0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:53:31.745052+00:00",
+  "scoreable": false
+}

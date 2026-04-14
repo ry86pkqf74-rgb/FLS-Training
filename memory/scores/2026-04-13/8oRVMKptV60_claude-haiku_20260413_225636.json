@@ -1,0 +1,213 @@
+{
+  "video_classification": "expert_demo",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title slide showing 'ZigZag Loop' by Masie Rahimi MD at Amsterdam UMC",
+      "technique_notes": "Educational expert demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "loop_deploy",
+      "description": "Foam appendage mounted on FLS trainer board visible. Loop deployer instrument positioned approaching the appendage.",
+      "technique_notes": "Clean setup, appendage clearly visible with marked line visible on target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_deploy",
+      "description": "Loop deployer advancing toward appendage, beginning loop deployment motion",
+      "technique_notes": "Smooth controlled advancement, proper instrument orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "target_approach",
+      "description": "Loop being positioned around the foam appendage. Loop appears to be opening around target structure.",
+      "technique_notes": "Loop opening cleanly, appendage centered within loop opening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "loop_placement",
+      "description": "Loop successfully deployed around appendage. Loop positioned at or very near the marked line on appendage.",
+      "technique_notes": "Excellent placement\u2014loop appears to be at the correct anatomical mark. Loop slack visible, ready for cinching.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 16.0,
+      "phase": "cinch",
+      "description": "Loop being cinched tightly around appendage using cinch mechanism. Pink/red colored tail of loop visible as it tightens.",
+      "technique_notes": "Smooth, controlled cinching motion. Appropriate tension being applied. Loop appears to be compressing appendage uniformly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 22.0,
+      "phase": "cinch",
+      "description": "Loop fully cinched. Appendage clearly constricted by loop at marked line. Loop tail clearly visible beneath loop pusher.",
+      "technique_notes": "Loop is tight and secure. Constriction appears uniform. Tail positioned for easy access for cutting.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 28.0,
+      "phase": "cut_tail",
+      "description": "Scissors or cutting instrument being positioned to cut the loop tail. Tail is clearly visible and accessible.",
+      "technique_notes": "Clean approach to tail. Instrument positioned for precise cutting without damaging the cinched loop.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 32.0,
+      "phase": "cut_tail",
+      "description": "Loop tail being cut. Cutting action visible with scissors engaging the tail.",
+      "technique_notes": "Precise cutting motion. Tail cut cleanly at appropriate length from the cinched loop.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 36.0,
+      "phase": "completion",
+      "description": "Final result shown. Loop is securely cinched around the appendage at the marked line. Tail has been cut. Appendage remains intact and firmly constricted by loop.",
+      "technique_notes": "Excellent completion. Loop is tight, positioned correctly, and secured. No appendage transection. No slippage visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 40.0,
+      "phase": "completion",
+      "description": "Final view of completed task from different angle. Loop and constriction clearly visible. Appendage stable.",
+      "technique_notes": "Task successfully completed. Loop placement precise, cinch secure, tail cut cleanly.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 36.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 12,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 5,
+      "end_seconds": 12,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 12,
+      "end_seconds": 16,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 16,
+      "end_seconds": 28,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 28,
+      "end_seconds": 36,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "loop_positioned_correctly": true,
+      "confidence": 0.95,
+      "notes": "Loop appears to be precisely at the marked line. No visible deviation."
+    },
+    "cinch_quality": {
+      "loop_cinched_tightly": true,
+      "uniform_constriction": true,
+      "tension_appropriate": true,
+      "confidence": 0.95,
+      "notes": "Loop tightened evenly with no slippage or gaps. Appendage compressed uniformly."
+    },
+    "appendage_assessment": {
+      "appendage_transected": false,
+      "appendage_avulsed": false,
+      "structural_integrity": "intact",
+      "confidence": 0.98,
+      "notes": "Appendage remains fully intact. No tears, transection, or avulsion visible."
+    },
+    "tail_management": {
+      "tail_cut_cleanly": true,
+      "appropriate_length_remaining": true,
+      "cut_does_not_compromise_loop": true,
+      "confidence": 0.92,
+      "notes": "Tail cut at appropriate distance from cinched loop. Cut is clean and does not affect loop security."
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 36.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 144.0,
+    "formula_applied": "180 - 36.0 - 0 = 144.0"
+  },
+  "confidence": 0.96,
+  "confidence_rationale": "Video is an expert demonstration with clear visibility of all phases. Loop placement appears precise at the marked line (high confidence: 0.95). Cinch quality is excellent with uniform tightening visible (confidence: 0.95). Appendage integrity confirmed intact throughout (confidence: 0.98). Completion time is exceptionally fast, well within expert range (20-40s). All phases executed smoothly with no observable errors or penalties. The only minor uncertainty is exact mm deviation measurement, but visual inspection shows no perceptible deviation from the mark.",
+  "cannot_determine": [
+    "Exact millimeter deviation at mark\u2014camera angle is favorable but measurement scale not provided in video"
+  ],
+  "technique_summary": "Exemplary expert-level performance. The demonstration shows flawless endoloop technique with rapid, smooth execution of all phases. Loop deployment is controlled and precise. Placement at the marked line appears perfect. Cinching is uniform and secure with no slippage. Tail cutting is clean and does not compromise loop security. Appendage remains fully intact. Completion in 36 seconds is well within the expert benchmark (20-40s) and exemplifies optimal laparoscopic knot-tying efficiency.",
+  "strengths": [
+    "Rapid and smooth loop deployment with excellent control",
+    "Precise loop placement directly at the marked anatomical line",
+    "Uniform, secure cinching with no visible slippage or gaps",
+    "Clean tail cutting technique that preserves loop integrity",
+    "Appendage remains fully intact throughout the procedure",
+    "Overall time of 36 seconds demonstrates expert-level efficiency",
+    "No unnecessary movements or hesitations"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Controlled loop deployer advancement",
+      "Proper positioning of loop around appendage target",
+      "Smooth cinching motion with appropriate tension application",
+      "Precise placement at anatomical mark",
+      "Efficient tail cutting without compromising loop security",
+      "One-handed loop manipulation under laparoscopic visualization"
+    ],
+    "verbal_cues": [
+      "Title indicates this is 'ZigZag Loop' technique by Masie Rahimi MD"
+    ],
+    "common_errors_addressed": [
+      "Avoiding loop slippage by applying uniform cinching tension",
+      "Preventing appendage transection by proper loop securing before tail cut",
+      "Ensuring loop is at correct anatomical mark\u2014not proximal or distal"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "No improvements needed\u2014this is an exemplary demonstration suitable as a reference standard"
+  ],
+  "video_id": "8oRVMKptV60",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:56:36.336096+00:00",
+  "scoreable": true
+}

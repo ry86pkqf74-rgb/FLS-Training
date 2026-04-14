@@ -1,0 +1,115 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "N/A - Educational Presentation",
+  "content_type": "Conference presentation slide deck",
+  "presentation_title": "Simulation Based Mastery Learning for Endoscopy Using the Endoscopy Training System",
+  "presenter": "E Matthew Ritter",
+  "conference": "SAGES 2017 - Panel: Meeting the ABS Mandate - The Program Director's Guide to the FEC Galaxy",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "content": "Title slide with SAGES logo and abstract presentation title",
+      "type": "opening_slide"
+    },
+    {
+      "frame_number": 2,
+      "content": "Disclosures slide detailing funding sources and conflicts of interest",
+      "type": "disclosure_statement"
+    },
+    {
+      "frame_number": 3,
+      "content": "Flexible Endoscopy Curriculum slide with FES certification requirements and failure rate statistics",
+      "type": "background_context"
+    },
+    {
+      "frame_number": 4,
+      "content": "Circular diagram showing practice/learning cycle with multiple endoscopy images",
+      "type": "conceptual_diagram"
+    },
+    {
+      "frame_number": 5,
+      "content": "Endoscopy Training System (formerly SCOPE) equipment overview with complete ETS model",
+      "type": "equipment_introduction"
+    },
+    {
+      "frame_number": 6,
+      "content": "ETS Tasks slide showing straight model (A) with tasks 1-3 and body form model (B) with tasks 4-5",
+      "type": "task_taxonomy"
+    },
+    {
+      "frame_number": 7,
+      "content": "Hypothesis slide stating that SBML using ETS will result in higher FES pass rates",
+      "type": "study_hypothesis"
+    },
+    {
+      "frame_number": 8,
+      "content": "Methods - Training Goals table with expert mean times, time standards, allowable errors, and overtraining parameters for 5 ETS tasks",
+      "type": "methods_table"
+    },
+    {
+      "frame_number": 9,
+      "content": "Methods - Demographics table showing 17 subjects (10 PGY1, 9 female, 13 right-hand dominant) with baseline endoscopy experience",
+      "type": "demographic_data"
+    },
+    {
+      "frame_number": 10,
+      "content": "Study design flowchart: Pre-training Assessment (n=17) \u2192 ETS SBML Training (n=14) \u2192 Post-training Assessment (n=15)",
+      "type": "study_design"
+    },
+    {
+      "frame_number": 11,
+      "content": "Results table showing 48 mean training trials, 5 mean training sessions, 71% achieved expert standard on all tasks, 0.57 correlation between tasks completed and FES score",
+      "type": "quantitative_results"
+    },
+    {
+      "frame_number": 12,
+      "content": "Results - FES Score bar chart: Pre-training 50.5 (18% pass rate, n=3), Post-training 72.7 (100% pass rate), p<0.0001, effect size 2.4",
+      "type": "primary_outcome"
+    },
+    {
+      "frame_number": 13,
+      "content": "Results - FES Tasks individual task scores pre/post training across all 5 tasks with statistical significance markers",
+      "type": "secondary_outcomes"
+    },
+    {
+      "frame_number": 14,
+      "content": "Performance Benchmarks chart showing mean FES scores by total endoscopy experience (1-150, 151-300, >300) with pass rates 70%, 88%, 89%",
+      "type": "subgroup_analysis"
+    },
+    {
+      "frame_number": 15,
+      "content": "Conclusions slide: SBML using ETS platform is feasible for novice learners",
+      "type": "closing_summary"
+    }
+  ],
+  "cannot_score": "This is an educational conference presentation, not a trainee performance video. It contains no actual FLS task execution by a performer.",
+  "reason_for_classification": "Video consists entirely of PowerPoint slides with static text, tables, charts, and diagrams. Contains no live or recorded performance of any FLS/MISTELS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). The ETS (Endoscopy Training System) is discussed as an educational platform but is distinct from FLS tasks.",
+  "confidence": 1.0,
+  "teaching_content": {
+    "presentation_focus": "Simulation-based mastery learning (SBML) curriculum using Endoscopy Training System for novice endoscopy trainees",
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Expert mean times and standards for 5 ETS endoscopy tasks",
+      "Allowable error thresholds and overtraining protocols",
+      "Study design: pre-training FES assessment \u2192 SBML via ETS \u2192 post-training FES assessment"
+    ],
+    "key_findings": [
+      "71% of trainees achieved expert standard performance on all ETS tasks after SBML",
+      "FES passing rate improved from 18% pre-training to 100% post-training (p<0.0001, effect size 2.4)",
+      "Mean 48 training trials across 5 training sessions required to reach mastery",
+      "Significant improvement across all 5 individual FES tasks",
+      "Performance benchmarks show correlation between total endoscopy experience and FES scores"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "N/A - presentation of educational research, not technical skill demonstration",
+    "study_design": "Pre-post intervention with 17 PGY1 residents (14 completed training, 15 post-tested)",
+    "study_population_characteristics": "10/7 from two institutions, 9 female, 13 right-hand dominant, median glove size 7, minimal baseline endoscopy experience (0 median endoscopies)"
+  },
+  "return_summary": "No FLS task score can be computed. This video is educational/instructional content presenting a research study on simulation-based mastery learning for endoscopy training. It is not a performance video requiring FLS scoring.",
+  "video_id": "ES6nJHRsZrA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:19:13.663335+00:00",
+  "scoreable": false
+}

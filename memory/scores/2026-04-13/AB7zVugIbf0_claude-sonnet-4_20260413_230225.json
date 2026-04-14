@@ -1,0 +1,82 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparoscopic Box Trainer Construction",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Instructor seated at table with laparoscopic training materials and cardboard box",
+      "technique_notes": "Educational setup with FLS training equipment visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 15.0,
+      "phase": "theory_presentation",
+      "description": "Slide presentation about simulation training definition and benefits",
+      "technique_notes": "Theoretical foundation for laparoscopic simulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 120.0,
+      "phase": "box_construction",
+      "description": "Demonstrating cutting of cardboard box to create pyramid trainer shape",
+      "technique_notes": "DIY approach using household materials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 210.0,
+      "phase": "equipment_setup",
+      "description": "Assembled box trainer with smartphone/tablet for visualization",
+      "technique_notes": "Low-cost alternative to commercial laparoscopic equipment",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content with slides, narration context, and demonstration of box trainer construction. No actual FLS task performance observed.",
+  "cannot_determine": [
+    "FLS task scoring parameters - this is educational content about equipment setup"
+  ],
+  "technique_summary": "Educational video demonstrating construction of low-cost laparoscopic training simulator using cardboard box and smartphone/tablet technology.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "cardboard box modification for laparoscopic trainer",
+      "smartphone/tablet integration as visualization system",
+      "ergonomic port placement at 60-degree angles",
+      "DIY approach to laparoscopic simulation"
+    ],
+    "verbal_cues": [
+      "optimal manipulation angle of 60 degrees",
+      "port placement ergonomics",
+      "cost-effective simulation solutions"
+    ],
+    "common_errors_addressed": [
+      "expensive equipment barriers to practice",
+      "need for camera assistant in traditional setups"
+    ],
+    "skill_level_demonstrated": "instructor"
+  },
+  "improvement_suggestions": [],
+  "video_id": "AB7zVugIbf0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:02:25.078134+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,173 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "gauze_grasp",
+      "description": "Yellow foam dome visible with circular cutting pattern marked, scissors approaching from right side",
+      "technique_notes": "Good visibility of 4cm diameter circle marked on foam surface",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "initial_cut",
+      "description": "Scissors making initial entry cut into foam along marked circle line",
+      "technique_notes": "Cut initiated at approximately 12 o'clock position on circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "clockwise_cut",
+      "description": "Progressive cutting along circular pattern in clockwise direction",
+      "technique_notes": "Scissors following marked line reasonably well, foam being lifted by left instrument",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "clockwise_cut",
+      "description": "Continued clockwise cutting, approximately 1/3 of circle completed",
+      "technique_notes": "Cut line appears to deviate slightly outside marked circle at 3 o'clock position",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing toward 6 o'clock position, foam dome partially separated",
+      "technique_notes": "Some irregular cutting pattern visible, cut line not perfectly smooth",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "clockwise_cut",
+      "description": "Nearly complete circular cut, small connection remaining at starting point",
+      "technique_notes": "Final portion of cut being completed to close the circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "completion",
+      "description": "Yellow foam piece appears to be completely separated from base",
+      "technique_notes": "Circular cut completed, foam piece being lifted by grasper",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 33.0,
+      "phase": "completion",
+      "description": "Dark blue Penrose drain visible, indicating transition to different task setup",
+      "technique_notes": "Task appears complete, foam cutting phase finished",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 21.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 3,
+      "end_seconds": 6,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 6,
+      "end_seconds": 18,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 18,
+      "end_seconds": 21,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Cut line deviates outside marked circle at approximately 3 o'clock position, estimated 1-2mm deviation",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        5,
+        6
+      ],
+      "confidence": 0.6
+    },
+    {
+      "type": "deviation_from_line",
+      "description": "Minor irregular cutting pattern visible at multiple points around circle perimeter",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        4,
+        5,
+        6
+      ],
+      "confidence": 0.5
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "circle_completion": "complete",
+      "line_adherence": "acceptable_with_minor_deviations",
+      "total_deviation_penalty": 3.5
+    },
+    "gauze_integrity": {
+      "detached_from_clamp": false,
+      "complete_separation": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 21.0,
+    "total_penalties": 3.5,
+    "total_fls_score": 275.5,
+    "formula_applied": "300 - 21.0 - 3.5 = 275.5"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Completion time clearly observable, but precise measurement of cutting deviations limited by camera angle and foam material visibility. Pattern appears to be on foam rather than suspended gauze as specified in task definition.",
+  "cannot_determine": [
+    "Exact mm deviation measurements at all 8 cardinal points due to camera angle",
+    "Whether material is suspended gauze or foam dome - appears to be foam-based cutting exercise"
+  ],
+  "technique_summary": "Excellent speed with expert-level completion time of 21 seconds. Clean circular cutting technique with minor precision issues. Performance suggests high skill level despite minor deviations from marked line.",
+  "strengths": [
+    "Very fast completion time well within expert range",
+    "Complete circular cut with good overall technique",
+    "Efficient instrument coordination"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining closer adherence to marked cutting line",
+    "Ensure smoother, more consistent cut line throughout circle perimeter"
+  ],
+  "video_id": "a0-W5oX_I5s",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:43:52.826182+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.858153+00:00"
+  },
+  "scoreable": true
+}

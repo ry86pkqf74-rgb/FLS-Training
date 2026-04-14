@@ -1,0 +1,85 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black frame, task not yet started",
+      "technique_notes": "Video begins with black frame",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "setup",
+      "description": "Laparoscopic training trophy display",
+      "technique_notes": "Shows 'TOP GUN' award trophy, indicating context is laparoscopic training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "setup",
+      "description": "Training lab environment with multiple FLS trainers visible",
+      "technique_notes": "Multiple laparoscopic trainers set up with yellow peg boards visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "setup",
+      "description": "Close-up view of FLS trainer showing peg board setup",
+      "technique_notes": "Shows standard FLS peg transfer setup with pegs and rubber objects on left side",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 22.0,
+      "phase": "pickup_nondominant",
+      "description": "White Penrose drain visible on red background - this appears to be suturing task setup, not peg transfer",
+      "technique_notes": "This frame shows task 4 or 5 setup, not peg transfer",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0.0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 0,
+    "objects_remaining": 6,
+    "direction_reversal_completed": false,
+    "drops_outside_field": 0
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 0.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 0.0,
+    "formula_applied": "Task not performed - no actual peg transfer activity observed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video clearly shows laparoscopic training environment but does not contain actual peg transfer task performance. Shows setup/demonstration context and other task setups.",
+  "cannot_determine": [
+    "Actual peg transfer performance - video shows training environment and other tasks but no peg transfer execution",
+    "Completion time - task was not performed",
+    "Technical performance metrics - no task activity to assess"
+  ],
+  "technique_summary": "No peg transfer task performed. Video appears to be educational/promotional content showing training facility and various FLS setups.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Submit video that shows actual peg transfer task performance from start to completion"
+  ],
+  "video_id": "Nfv8kFUtlGc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:08:17.939884+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.827535+00:00"
+  },
+  "scoreable": true
+}

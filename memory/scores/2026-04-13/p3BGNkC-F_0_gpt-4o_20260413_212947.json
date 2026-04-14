@@ -1,0 +1,133 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "pickup_nondominant",
+      "description": "Non-dominant hand picking up green object from peg 1.",
+      "technique_notes": "Efficient pickup with correct grip.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "transfer_midair",
+      "description": "Green object transferred midair from non-dominant to dominant hand.",
+      "technique_notes": "Smooth transfer maintaining object stability.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "place_dominant",
+      "description": "Green object placed on peg 2 by dominant hand.",
+      "technique_notes": "Accurate placement without wobble.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 20.0,
+      "phase": "reverse_pickup",
+      "description": "Orange object picked up by dominant hand for reverse transfer.",
+      "technique_notes": "Accurate pickup without hesitation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 22.0,
+      "phase": "reverse_transfer",
+      "description": "Orange object transferred back midair from dominant to non-dominant hand.",
+      "technique_notes": "Stable transfer with good hand coordination.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 28.0,
+      "phase": "reverse_place",
+      "description": "Orange object placed back on peg 1 with non-dominant hand.",
+      "technique_notes": "Precise placement on peg.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 30.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 3,
+      "end_seconds": 6,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 6,
+      "end_seconds": 8,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 18,
+      "end_seconds": 20,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 20,
+      "end_seconds": 22,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 22,
+      "end_seconds": 30,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "total_objects_transferred": 6,
+    "penalties_detail": []
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 30.0,
+    "total_penalties": 0,
+    "total_fls_score": 270.0,
+    "formula_applied": "300 - 30.0 = 270.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "All phases are clearly visible with no dropped or misplaced objects. Time is accurately calculated.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level performance with efficient object transfer and precise placement.",
+  "strengths": [
+    "Consistent grip and placement precision",
+    "Smooth, stable transfer between hands"
+  ],
+  "improvement_suggestions": [
+    "Continue practicing for maintaining expert-level proficiency"
+  ],
+  "video_id": "p3BGNkC-F_0",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:29:47.012848+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.893615+00:00"
+  },
+  "scoreable": true
+}

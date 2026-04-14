@@ -1,0 +1,173 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_task",
+      "description": "Title screen showing 'Cutting a circle left handed'",
+      "technique_notes": "Task preparation screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "gauze_grasp",
+      "description": "Gauze suspended between clamps with marked circle pattern visible, scissors positioned for initial entry",
+      "technique_notes": "Good visualization of target circle with inner and outer boundary lines",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "initial_cut",
+      "description": "Timer shows 00:00, scissors making first cut within the circle pattern",
+      "technique_notes": "Cut initiated properly within the marked boundaries, 4% progress shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:01, continuing circular cut with 7% progress",
+      "technique_notes": "Smooth cutting motion following the circular pattern",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:03, cutting progress at 7%, maintaining circular path",
+      "technique_notes": "Consistent cutting technique, staying within boundaries",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:04, cutting progress still at 7%",
+      "technique_notes": "Steady progress around the circle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 18.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:06, cutting progress at 7%",
+      "technique_notes": "Continuing around the circle perimeter",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:07, progress shows 11%",
+      "technique_notes": "Progress increasing, cut appears to follow the marked line well",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 20.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:08, progress at 11%",
+      "technique_notes": "Maintaining steady cutting rhythm",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:10, progress at 11%",
+      "technique_notes": "Continuing circular cutting motion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 22.0,
+      "phase": "clockwise_cut",
+      "description": "Timer 00:11, progress shows 14%",
+      "technique_notes": "Good progression around the circle",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [
+    {
+      "phase": "initial_cut",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 1,
+      "end_seconds": 11,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": {
+        "north_point_mm": null,
+        "northeast_point_mm": null,
+        "east_point_mm": null,
+        "southeast_point_mm": null,
+        "south_point_mm": null,
+        "southwest_point_mm": null,
+        "west_point_mm": null,
+        "northwest_point_mm": null
+      },
+      "total_deviation_penalty": 0,
+      "confidence": 0.1
+    },
+    "gauze_attachment": {
+      "detached_from_clamps": false,
+      "remains_suspended": true
+    },
+    "cut_completion": {
+      "fully_completed": false,
+      "progress_percentage": 14,
+      "incomplete_cut_penalty": null
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot calculate - task incomplete at end of provided video"
+  },
+  "confidence": 0.25,
+  "confidence_rationale": "Video shows only the first 11 seconds of cutting with 14% completion. Cannot assess final performance, cutting precision, or completion time. Gauze remains properly suspended and cutting technique appears good for the visible portion.",
+  "cannot_determine": [
+    "Final completion time",
+    "Total cutting deviation penalties - only 14% of cut visible",
+    "Whether task was completed successfully",
+    "Precision measurements at cardinal points",
+    "Final FLS score"
+  ],
+  "technique_summary": "Video shows initial 14% of pattern cutting task. Left-handed cutting technique appears smooth and controlled. Cut appears to follow the marked circle appropriately in the visible portion.",
+  "strengths": [
+    "Proper initial cut placement within boundaries",
+    "Smooth cutting motion",
+    "Good gauze management - remains suspended"
+  ],
+  "improvement_suggestions": [
+    "Cannot provide meaningful suggestions as only 14% of task is visible"
+  ],
+  "video_id": "scr0WOc0pVU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:36:07.433921+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.899215+00:00"
+  },
+  "scoreable": false
+}

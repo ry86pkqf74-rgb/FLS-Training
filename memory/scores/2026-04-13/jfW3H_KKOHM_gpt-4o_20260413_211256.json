@@ -1,0 +1,138 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Initial entry with loop visible above the foam appendage.",
+      "technique_notes": "Good entry position with loop already open.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 1.5,
+      "phase": "target_approach",
+      "description": "Loop is approaching the base of the appendage.",
+      "technique_notes": "Steady approach ensuring alignment with the target.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 3.0,
+      "phase": "loop_placement",
+      "description": "Loop is positioned around the base of the appendage.",
+      "technique_notes": "Loop looks adequately placed for cinching.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 5.0,
+      "phase": "cinch",
+      "description": "The loop is being tightened around the appendage.",
+      "technique_notes": "Tension applied correctly, no visible slack.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 7.5,
+      "phase": "cut_tail",
+      "description": "Securing the loop and preparing to cut the excess tail.",
+      "technique_notes": "Precision in cutting, no disturbance to the loop.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 9.5,
+      "phase": "completion",
+      "description": "Final adjustment and removing instruments from the field.",
+      "technique_notes": "Final inspection confirms loop placement is secure.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 9.5,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 1.5,
+      "duration_seconds": 1.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 1.5,
+      "end_seconds": 3.0,
+      "duration_seconds": 1.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 3.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 5.0,
+      "end_seconds": 7.5,
+      "duration_seconds": 2.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 7.5,
+      "end_seconds": 9.5,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "none",
+      "description": "No penalties observed.",
+      "points_deducted": 0,
+      "frame_evidence": [],
+      "confidence": 0.9
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_assessment": {
+      "loop_at_mark": true,
+      "secure_cinch": true,
+      "deviation_from_mark_mm": 0,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 9.5,
+    "total_penalties": 0,
+    "total_fls_score": 170.5,
+    "formula_applied": "180 - 9.5 - 0 = 170.5"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clear visibility on loop placement and cinching. No deviation from mark observed.",
+  "cannot_determine": [],
+  "technique_summary": "Expert performance characterized by smooth, efficient deployment and cinching of the ligating loop.",
+  "strengths": [
+    "Swift and accurate loop deployment",
+    "Ensured tight cinch without any slack"
+  ],
+  "improvement_suggestions": [
+    "Continue practicing to maintain precision under varying conditions"
+  ],
+  "video_id": "jfW3H_KKOHM",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:12:56.090152+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.880079+00:00"
+  },
+  "scoreable": true
+}

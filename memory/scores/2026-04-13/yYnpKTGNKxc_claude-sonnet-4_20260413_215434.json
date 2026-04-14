@@ -1,0 +1,134 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "demonstration_setup",
+      "description": "Black screen, video beginning",
+      "technique_notes": "Video starting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "demonstration_setup",
+      "description": "Title card showing 'ELFATIH's laparoscopic extracorporeal knot'",
+      "technique_notes": "Instructional video setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Purple suture being formed into initial loop configuration",
+      "technique_notes": "Clean suture handling, forming basic loop structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Suture loop being adjusted and positioned",
+      "technique_notes": "Proper loop manipulation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Knot configuration being refined with proper throw placement",
+      "technique_notes": "Good knot geometry formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Final knot configuration with loop and working end properly positioned",
+      "technique_notes": "Completed extracorporeal knot ready for pushing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Knot being tightened and adjusted",
+      "technique_notes": "Proper tensioning technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Final knot configuration with both tails visible",
+      "technique_notes": "Well-formed knot structure",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 24.0,
+  "phase_timings": [
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 6,
+      "end_seconds": 24,
+      "duration_seconds": 18,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_quality": {
+      "knot_type": "slip_knot",
+      "appears_secure": true,
+      "proper_geometry": true,
+      "notes": "Well-formed extracorporeal knot with good loop configuration"
+    },
+    "suture_placement": {
+      "through_marks": "cannot_determine",
+      "deviation_penalty": 0,
+      "confidence": 0.0
+    },
+    "drain_assessment": {
+      "gap_visible": "cannot_determine",
+      "drain_avulsed": false,
+      "notes": "No drain visible in demonstration"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 24.0,
+    "total_penalties": 0,
+    "total_fls_score": 396.0,
+    "formula_applied": "420 - 24.0 - 0 = 396.0"
+  },
+  "confidence": 0.2,
+  "confidence_rationale": "This appears to be an instructional demonstration video rather than an actual FLS task performance. No drain, marks, or actual task elements are visible. Only knot tying technique is demonstrated.",
+  "cannot_determine": [
+    "Actual task performance vs demonstration",
+    "Suture placement through drain marks",
+    "Drain gap assessment",
+    "Whether this represents a complete FLS task attempt"
+  ],
+  "technique_summary": "Excellent knot tying demonstration with clean technique and proper extracorporeal knot formation. However, this appears to be an instructional video rather than a scored FLS task performance.",
+  "strengths": [
+    "Clean extracorporeal knot formation",
+    "Proper suture handling",
+    "Good knot geometry"
+  ],
+  "improvement_suggestions": [
+    "This appears to be a demonstration rather than a task performance requiring improvement feedback"
+  ],
+  "video_id": "yYnpKTGNKxc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:54:34.489634+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.915072+00:00"
+  },
+  "scoreable": true
+}

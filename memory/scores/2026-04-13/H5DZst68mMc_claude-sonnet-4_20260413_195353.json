@@ -1,0 +1,120 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title screen showing 'Peg Transfer'",
+      "technique_notes": "Instructional video beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "pickup_nondominant",
+      "description": "Both graspers positioned above peg transfer board with 6 rubber objects on pegs",
+      "technique_notes": "Setup shows 3 orange and 3 green objects on left pegs, empty pegs on right",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper picking up green object from left peg",
+      "technique_notes": "Clean grasp with left (non-dominant) hand",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "transfer_midair",
+      "description": "Green object being transferred from left grasper to right grasper in midair",
+      "technique_notes": "Smooth hand-to-hand transfer without dropping",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "place_dominant",
+      "description": "Right grasper placing green object on right peg",
+      "technique_notes": "Controlled placement with dominant hand",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "reverse_pickup",
+      "description": "Scene transitions to different task setup - Pattern Cut with circular gauze",
+      "technique_notes": "Video shows multiple FLS tasks sequentially",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 25.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 5,
+      "end_seconds": 15,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 15,
+      "end_seconds": 17,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 17,
+      "end_seconds": 25,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 1,
+    "total_objects_required": 6,
+    "task_completed": false,
+    "direction_reversal_performed": false,
+    "drops_outside_field": 0,
+    "objects_not_on_pegs": 0
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 25.0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "Task incomplete - only 1/6 objects transferred, no score assigned"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clear visualization of setup and initial transfer. Video appears to be instructional showing task demonstration rather than complete performance.",
+  "cannot_determine": [
+    "Complete task performance - video transitions to different tasks after showing initial demonstration"
+  ],
+  "technique_summary": "Demonstrated portion shows excellent technique with smooth grasping, clean midair transfer, and controlled placement. However, this appears to be an instructional video showing only the beginning of the task.",
+  "strengths": [
+    "Clean object grasping technique",
+    "Smooth hand-to-hand transfer",
+    "Controlled placement without fumbling"
+  ],
+  "improvement_suggestions": [
+    "Complete full task sequence with all 6 objects",
+    "Demonstrate direction reversal phase"
+  ],
+  "video_id": "H5DZst68mMc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:53:53.987197+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.815068+00:00"
+  },
+  "scoreable": true
+}

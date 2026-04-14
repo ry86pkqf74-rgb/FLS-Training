@@ -1,0 +1,133 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Initial grasping of gauze with both instruments.",
+      "technique_notes": "Secure grasp observed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 2.3,
+      "phase": "initial_cut",
+      "description": "Scissors begin to make initial cut into gauze.",
+      "technique_notes": "Good alignment to start cutting on the marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 15.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing cutting in a clockwise direction.",
+      "technique_notes": "Stable hand position, following the marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 25.8,
+      "phase": "counterclockwise_cut",
+      "description": "Reversing direction, continuing cut.",
+      "technique_notes": "Maintains proximity to line; slight deviation noted.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 45.0,
+      "phase": "completion",
+      "description": "Final segment of gauze cut through.",
+      "technique_notes": "Cut completed with full detachment.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 45.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2.3,
+      "duration_seconds": 2.3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2.3,
+      "end_seconds": 15.0,
+      "duration_seconds": 12.7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 15.0,
+      "end_seconds": 25.8,
+      "duration_seconds": 10.8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 25.8,
+      "end_seconds": 45.0,
+      "duration_seconds": 19.2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 45.0,
+      "end_seconds": 45.0,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Deviation at final segment approximately 3mm off line.",
+      "points_deducted": 3.0,
+      "frame_evidence": [
+        19
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "gauze_grasp": {
+      "grasp_quality": "secure"
+    },
+    "pattern_cutting": {
+      "deviation_penalty": 3.0,
+      "confidence": 0.8
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 45.0,
+    "total_penalties": 3.0,
+    "total_fls_score": 252.0,
+    "formula_applied": "300 - 45.0 - 3.0 = 252.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear visibility of gauze and cut line throughout, minor angle issues on final deviation.",
+  "cannot_determine": [],
+  "technique_summary": "Excellent execution with minor final deviation. Maintained stable positioning and accurate alignment.",
+  "strengths": [
+    "Consistent cutting speed and precision.",
+    "Effective grasping maintained stable control of gauze."
+  ],
+  "improvement_suggestions": [
+    "Improve alignment and completion accuracy to minimize deviation on final cuts."
+  ],
+  "video_id": "OA5j2l24Z7w",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:09:54.603129+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.828897+00:00"
+  },
+  "scoreable": true
+}

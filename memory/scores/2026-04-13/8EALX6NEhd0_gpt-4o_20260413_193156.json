@@ -1,0 +1,158 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_load",
+      "description": "Needle loaded in right needle driver, slightly oblique angle.",
+      "technique_notes": "Needle grasp could be more perpendicular.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 30.0,
+      "phase": "suture_placement",
+      "description": "Needle passing through marked points on drain.",
+      "technique_notes": "Entry closer to mark, shows good control.",
+      "penalties_observed": [
+        {
+          "type": "suture_deviation",
+          "description": "Deviation approximately 2mm from first mark.",
+          "points_deducted": 2.0,
+          "frame_evidence": [
+            6
+          ],
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 65.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Knot formation outside of laparoscopic field.",
+      "technique_notes": "Consistent hand movements.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 90.0,
+      "phase": "knot_push",
+      "description": "Knot being pushed down onto the suture line.",
+      "technique_notes": "Knot appears secure after push.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 110.0,
+      "phase": "suture_cut",
+      "description": "Suture tails cut accurately.",
+      "technique_notes": "Clean cut without fraying.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 115.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 20,
+      "end_seconds": 40,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 40,
+      "end_seconds": 80,
+      "duration_seconds": 40,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 80,
+      "end_seconds": 95,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 95,
+      "end_seconds": 115,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "description": "Deviation approximately 2mm from first mark.",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        6
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "extracorporeal_knot",
+        "hand_leading": "right",
+        "hand_switched_from_previous": false,
+        "appears_secure": true,
+        "notes": "Secure knot with proper tension."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 2.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 2.0,
+      "confidence": 0.7
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 115.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 303.0,
+    "formula_applied": "420 - 115.0 - 2.0 = 303.0"
+  },
+  "confidence": 0.8,
+  "confidence_rationale": "Good visibility of needle loading and placement phases, slight deviations noted.",
+  "cannot_determine": [],
+  "technique_summary": "Competent intermediate performance with secure knot configuration and satisfactory suture placement.",
+  "strengths": [
+    "Secure extrusion of knot.",
+    "Consistent pace throughout the task."
+  ],
+  "improvement_suggestions": [
+    "Enhance needle angle during load to decrease deviation.",
+    "Aim for faster transitions between phases."
+  ],
+  "video_id": "8EALX6NEhd0",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:31:56.148289+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.770471+00:00"
+  },
+  "scoreable": true
+}

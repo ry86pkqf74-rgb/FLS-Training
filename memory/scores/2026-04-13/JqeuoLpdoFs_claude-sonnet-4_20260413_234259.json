@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "DIY Laparoscopic Trainer Setup and Basic Skills Practice",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title card showing 'Practice basic laparoscopic skills at home' with MediSkillsLab branding",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_setup",
+      "description": "Demonstrating DIY trainer box construction using simple materials",
+      "technique_notes": "Shows phone placement for camera view and lighting setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 45.0,
+      "phase": "hole_preparation",
+      "description": "Creating instrument ports in cardboard box using utility knife",
+      "technique_notes": "Proper port spacing and sizing for ergonomic instrument use",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 75.0,
+      "phase": "basic_exercises",
+      "description": "Demonstrating laparoscopic view with instruments and practice objects",
+      "technique_notes": "Shows triangulation principle and depth perception challenges",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 90.0,
+      "phase": "skill_practice",
+      "description": "Page turning exercise for fine motor coordination",
+      "technique_notes": "Bilateral coordination using both instruments simultaneously",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video showing DIY laparoscopic trainer setup and basic skills exercises. Not an actual FLS task performance.",
+  "cannot_determine": [],
+  "technique_summary": "Comprehensive tutorial for creating home laparoscopic training environment using common materials.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "DIY trainer box construction with proper port placement",
+      "Phone camera setup for laparoscopic view simulation",
+      "Basic triangulation principles with wooden instruments",
+      "Depth perception training using small objects",
+      "Bilateral coordination exercises with page turning",
+      "Eye-hand coordination development through object manipulation"
+    ],
+    "verbal_cues": [
+      "Place holes 3-5 cm from side and 10-14 cm from each other",
+      "Use phone flash as light source",
+      "Practice without touching the wall",
+      "Smaller and smoother objects make it harder"
+    ],
+    "common_errors_addressed": [
+      "Improper port spacing leading to instrument collision",
+      "Inadequate lighting affecting depth perception",
+      "Lack of systematic progression in difficulty"
+    ],
+    "skill_level_demonstrated": "novice"
+  },
+  "improvement_suggestions": [],
+  "video_id": "JqeuoLpdoFs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:42:59.570130+00:00",
+  "scoreable": false
+}

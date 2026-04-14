@@ -1,0 +1,200 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping needle with suture attached, left instrument positioning",
+      "technique_notes": "Good needle grasp position, clean instrument handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "suture_placement",
+      "description": "Needle being positioned for entry through Penrose drain at marked location",
+      "technique_notes": "Approaching first mark, good needle angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "suture_placement",
+      "description": "Needle passed through drain, working toward second mark",
+      "technique_notes": "Clean needle passage, suture following appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "first_throw",
+      "description": "Beginning knot tying sequence, forming first throw (surgeon's knot double throw)",
+      "technique_notes": "Right hand leading the throw, good loop formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "first_throw",
+      "description": "Completing first throw with double wrap, cinching down",
+      "technique_notes": "Clean surgeon's knot formation, appropriate tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "phase": "second_throw",
+      "description": "Forming second throw, left hand now leading",
+      "technique_notes": "Good hand switching, single throw formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 95.0,
+      "phase": "third_throw",
+      "description": "Final throw being formed, right hand leading again",
+      "technique_notes": "Proper alternating hand sequence maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 115.0,
+      "phase": "suture_cut",
+      "description": "Cutting suture tails with scissors inside trainer box",
+      "technique_notes": "Both tails being cut intracorporeally as required",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 120.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8,
+      "end_seconds": 35,
+      "duration_seconds": 27,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 35,
+      "end_seconds": 55,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 55,
+      "end_seconds": 80,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 80,
+      "end_seconds": 105,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 105,
+      "end_seconds": 120,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_deviation",
+      "description": "Entry point appears approximately 1-2mm from mark 1",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        3,
+        4
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean double throw formation with appropriate tension"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper hand switching maintained, good throw quality"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw completed with proper alternating sequence"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.5,
+      "deviation_from_mark2_mm": 1.0,
+      "total_deviation_penalty": 1.5,
+      "confidence": 0.6
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 120.0,
+    "total_penalties": 1.5,
+    "total_fls_score": 478.5,
+    "formula_applied": "600 - 120.0 - 1.5 = 478.5"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Clear view of knot tying sequence and hand switching. Suture placement deviation estimated from available camera angles. Task completion and timing well-documented.",
+  "cannot_determine": [
+    "Exact millimeter measurements at suture entry points due to camera angle limitations"
+  ],
+  "technique_summary": "Excellent intermediate to expert-level performance with proper knot sequence, consistent hand switching, and efficient timing. Minimal penalties for slight suture placement deviation.",
+  "strengths": [
+    "Excellent knot tying technique with proper surgeon's knot formation",
+    "Consistent hand switching between all throws as required",
+    "Efficient overall timing at 120 seconds (intermediate range)",
+    "Clean intracorporeal suture cutting"
+  ],
+  "improvement_suggestions": [
+    "Focus on more precise needle placement at marked locations to eliminate deviation penalties",
+    "Consider reducing suture placement time from 27s to under 20s for expert-level performance"
+  ],
+  "video_id": "cUjouySqTM8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:53:16.400434+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.865242+00:00"
+  },
+  "scoreable": true
+}

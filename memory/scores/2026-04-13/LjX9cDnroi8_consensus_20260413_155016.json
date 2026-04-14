@@ -56,5 +56,11 @@
     "Reduce overall completion time to achieve expert level performance",
     "Streamline loop deployment and cinching phases"
   ],
-  "confidence_score": 0.36
+  "confidence_score": 0.36,
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.823457+00:00"
+  },
+  "scoreable": false
 }

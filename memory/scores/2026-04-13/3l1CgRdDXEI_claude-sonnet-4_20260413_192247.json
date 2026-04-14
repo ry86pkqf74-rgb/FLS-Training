@@ -1,0 +1,198 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Initial setup with green foam block visible, curved suture needle present, instruments positioned around foam block",
+      "technique_notes": "Clean workspace setup, needle appears to be curved suturing needle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping needle, suture tail visible extending from foam",
+      "technique_notes": "Good needle grasp position approximately 2/3 from tip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "suture_placement",
+      "description": "Needle being positioned for entry through foam block, suture thread visible",
+      "technique_notes": "Controlled needle positioning, appropriate entry angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "suture_placement",
+      "description": "Needle has penetrated through foam block with suture following, both ends of suture now visible",
+      "technique_notes": "Clean penetration through foam material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "first_throw",
+      "description": "Beginning knot tying sequence with suture ends being manipulated by instruments",
+      "technique_notes": "Initial throw formation in progress",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 28.0,
+      "phase": "first_throw",
+      "description": "Continuing first throw formation with instruments manipulating suture ends",
+      "technique_notes": "Proper instrument technique for intracorporeal knot tying",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 34.0,
+      "phase": "second_throw",
+      "description": "Second throw being formed, can see knot taking shape on foam surface",
+      "technique_notes": "Good throw formation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 38.0,
+      "phase": "third_throw",
+      "description": "Final throw being completed, knot appears secure on foam block",
+      "technique_notes": "Completing knot sequence appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 42.0,
+      "phase": "suture_cut",
+      "description": "Scissors being used to cut suture ends, knot appears complete and secure",
+      "technique_notes": "Appropriate cutting technique leaving adequate tail length",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 44.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 4,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 4,
+      "end_seconds": 14,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 14,
+      "end_seconds": 24,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 24,
+      "end_seconds": 32,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 32,
+      "end_seconds": 40,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 40,
+      "end_seconds": 44,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean first throw formation"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper hand switching demonstrated"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw completed with hand switch"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0,
+      "deviation_from_mark2_mm": 0,
+      "total_deviation_penalty": 0,
+      "confidence": 0.4
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 44.0,
+    "total_penalties": 0,
+    "total_fls_score": 556.0,
+    "formula_applied": "600 - 44.0 - 0 = 556.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Good visibility of overall task completion and knot formation. Unable to clearly identify specific suture marks on foam block due to camera angle and foam texture, but no obvious deviations observed.",
+  "cannot_determine": [
+    "Exact location of suture marks on foam block - foam texture and camera angle make precise measurement difficult",
+    "Whether this is actually a Penrose drain with slit or foam block substitute - appears to be foam training block rather than drain"
+  ],
+  "technique_summary": "Excellent expert-level performance with very fast completion time of 44 seconds. Clean technique throughout all phases with proper hand switching between throws.",
+  "strengths": [
+    "Extremely efficient needle loading and placement",
+    "Smooth knot tying sequence with proper hand alternation",
+    "Clean cutting technique",
+    "No apparent technical errors or fumbles"
+  ],
+  "improvement_suggestions": [
+    "Performance appears expert-level with minimal room for improvement",
+    "Maintain this level of efficiency and technique"
+  ],
+  "video_id": "3l1CgRdDXEI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:22:47.523463+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.747011+00:00"
+  },
+  "scoreable": true
+}

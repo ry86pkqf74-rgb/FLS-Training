@@ -1,0 +1,78 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "Healthcare professional in traditional attire with stethoscope presenting to camera",
+      "technique_notes": "Educational video setup with branded background",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_content",
+      "description": "Display slide showing 'Recovery from Laparoscopic Surgery' with 10-point checklist",
+      "technique_notes": "Educational content covering post-operative care instructions",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "instructional_content",
+      "description": "Food and diet slide showing various soups and bowls with text 'Avoid food rich in spices and oil'",
+      "technique_notes": "Dietary guidance for post-laparoscopic surgery recovery",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 110.0,
+      "phase": "instructional_content",
+      "description": "Heart symbol slide with 'Being Intimate' heading",
+      "technique_notes": "Discussion of intimacy considerations post-surgery",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 120.0,
+      "phase": "instructional_content",
+      "description": "'Return to Work' slide with professional presentation format",
+      "technique_notes": "Guidance on work resumption after laparoscopic procedures",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is instructional content about post-operative care, not an FLS task performance",
+  "cannot_determine": [
+    "FLS task performance metrics - video contains educational content about recovery, not endoloop technique"
+  ],
+  "technique_summary": "Educational video covering post-laparoscopic surgery recovery guidelines",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational"
+  },
+  "improvement_suggestions": [],
+  "video_id": "3ookYtx7B8M",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:36:11.147940+00:00",
+  "scoreable": false
+}

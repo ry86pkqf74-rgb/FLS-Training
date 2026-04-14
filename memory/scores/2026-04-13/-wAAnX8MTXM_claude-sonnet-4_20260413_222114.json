@@ -1,0 +1,122 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_task",
+      "description": "Black frame - video starting",
+      "technique_notes": "No activity visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_preparation",
+      "description": "Hands demonstrating needle positioning with needle driver outside of trainer",
+      "technique_notes": "Expert demonstration of proper needle grip at 2/3 point from tip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "suture_loading",
+      "description": "Hands showing suture threading technique with needle and silk suture",
+      "technique_notes": "Proper suture loading demonstration, showing needle orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "instrument_demonstration",
+      "description": "Close-up of needle driver manipulation with suture",
+      "technique_notes": "Demonstrating proper instrument handling and suture control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "needle_handling",
+      "description": "Further demonstration of needle positioning and grip adjustment",
+      "technique_notes": "Shows multiple grip positions and needle orientation techniques",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "suture_preparation",
+      "description": "Demonstration of suture length management and needle positioning",
+      "technique_notes": "Expert showing optimal suture length and needle angle preparation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "instrument_setup",
+      "description": "Close-up view of needle driver with suture in training position",
+      "technique_notes": "Final preparation before task execution",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "trainer_entry",
+      "description": "Laparoscope view showing needle driver with suture entering trainer field",
+      "technique_notes": "Clean entry into laparoscopic field with proper instrument positioning",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "video_type": "instructional_demo",
+    "actual_performance": false,
+    "teaching_value": "high"
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content showing technique demonstration rather than actual task performance. No completion of full task sequence observed.",
+  "cannot_determine": [
+    "Actual task completion time - video shows technique demonstration only",
+    "Performance penalties - no actual task execution to assess",
+    "Final knot quality - demonstration stops before completion"
+  ],
+  "technique_summary": "Expert demonstration of proper needle handling, suture loading, and instrument positioning techniques for intracorporeal suturing.",
+  "strengths": [
+    "Clear demonstration of proper needle grip positioning",
+    "Excellent suture loading technique shown",
+    "Proper instrument handling demonstrated"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper needle grip at 2/3 point from tip",
+      "Correct needle driver positioning and control",
+      "Suture loading and management techniques",
+      "Instrument entry into laparoscopic field",
+      "Needle orientation for optimal driving angle"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper needle grip position",
+      "Poor suture control during loading",
+      "Suboptimal instrument positioning"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "-wAAnX8MTXM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:21:14.921443+00:00",
+  "scoreable": false
+}

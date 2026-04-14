@@ -1,0 +1,145 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Both instruments positioned at the starting point on the circle for gauze stabilization.",
+      "technique_notes": "Stable grasp established.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 5.0,
+      "phase": "initial_cut",
+      "description": "Initiated the cut slightly within boundary; deviation appears minimal.",
+      "technique_notes": "Consistent instrument motion but slight inward deviation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 10.0,
+      "phase": "clockwise_cut",
+      "description": "Continued cuts in clockwise direction; maintains close to line.",
+      "technique_notes": "Good control and direction; minimal deviation observed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 15.0,
+      "phase": "counterclockwise_cut",
+      "description": "Cutting in counterclockwise direction; some inward and outward deviation noted.",
+      "technique_notes": "Consistent grip, but periodic deviations noted.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Minor deviations at 2 o'clock and 10 o'clock positions.",
+          "points_deducted": 4.0,
+          "frame_evidence": [
+            14,
+            15
+          ],
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 30.0,
+      "phase": "completion",
+      "description": "Completed circle; gauze remains intact with the clamp, cut appears mostly complete.",
+      "technique_notes": "Efficient technique maintained up to completion.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 30.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 10,
+      "end_seconds": 15,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 30,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Minor deviations at 2 o'clock and 10 o'clock positions.",
+      "points_deducted": 4.0,
+      "frame_evidence": [
+        14,
+        15
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "deviation_measurements": [
+      {
+        "position": "2 o'clock",
+        "deviation_mm": 1.5
+      },
+      {
+        "position": "10 o'clock",
+        "deviation_mm": 2.5
+      }
+    ],
+    "gauze_attachment": {
+      "gauze_detached": false,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 30.0,
+    "total_penalties": 4.0,
+    "total_fls_score": 266.0,
+    "formula_applied": "300 - 30.0 - 4.0 = 266.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Overall task execution is clear with minor deviations noted. Camera angles provided a good view of the cutting path.",
+  "cannot_determine": [],
+  "technique_summary": "Precision cutting task completed within the expert time range, with minor line deviations observed but remained controlled.",
+  "strengths": [
+    "Strong control throughout the cutting phases.",
+    "Efficient use of time, completed within expert time."
+  ],
+  "improvement_suggestions": [
+    "Focus on reducing minor deviations, especially in areas like 2 o'clock and 10 o'clock positions."
+  ],
+  "video_id": "Y4QNDNwaeQc",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:36:05.718102+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.851494+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,33 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "N/A - Not an FLS Task Video",
+  "explanation": "This video is an educational presentation from SAGES 2014 (Surgical Spring Week) focused on operating room teamwork, communication, and simulation-based training. It contains lecture slides, narration about team dynamics in the OR, case study examples, and educational content about high-reliability teams. It does NOT contain any FLS/MISTELS task performance (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). The frames show presentation slides, conference speakers, operating room team photos, and conceptual diagrams\u2014not laparoscopic task execution.",
+  "scoring_not_applicable": true,
+  "reason_for_non_scoring": "This is purely instructional/lecture content with no trainee or expert performance of an FLS task visible. No laparoscopic instruments, trainer box, or task-specific equipment (pegs, gauze, foam appendage, Penrose drain, suture) are present. The video's educational value is in teaching OR team communication and safety concepts, not in demonstrating technical laparoscopic skills.",
+  "content_summary": "The presentation discusses teamwork failures in the OR, communication breakdowns, consequences of poor team function, solutions via simulation-based training, and the expansion of such programs to inter-professional students globally.",
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Current status of teamwork in the OR is suboptimal",
+      "Surgeon-initiated communication occurs 80% of the time",
+      "High-reliability teams possess teachable knowledge, skills, and attitudes",
+      "Simulation-based OR team training improves team-based attitudes and function"
+    ],
+    "common_errors_addressed": [
+      "Misunderstanding of information in the OR",
+      "Information confusion and ambiguous messaging",
+      "Lack of early/timely information sharing",
+      "Disruptive behaviors: yelling, disrespect, patronizing, berating, abusive language",
+      "External interruptions and distractions (one every 4 minutes in real OR)",
+      "Lack of coordination between hospital departments"
+    ],
+    "skill_level_demonstrated": "N/A - Educational/leadership content, not technical surgical skill",
+    "primary_topic": "Operating Room Team Training and Safety Culture"
+  },
+  "video_id": "IGWS1rf2WxQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:37:29.429168+00:00",
+  "scoreable": false
+}

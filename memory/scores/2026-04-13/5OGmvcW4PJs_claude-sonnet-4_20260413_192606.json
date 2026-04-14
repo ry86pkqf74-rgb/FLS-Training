@@ -1,0 +1,79 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Product Demonstration Video",
+  "max_time_seconds": 0,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "promotional_content",
+      "description": "Product branding slide showing 'pyxus HD' logo and Inovus Medical equipment",
+      "technique_notes": "This appears to be a promotional/educational video, not an FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "promotional_content",
+      "description": "Dr. Elliot Street introduction with laparoscopic trainer and instruments displayed",
+      "technique_notes": "Equipment overview showing trainer box and various task modules",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "promotional_content",
+      "description": "Close-up of laparoscopic instruments and task modules with labels",
+      "technique_notes": "Educational content showing threading base, AZE base, and ring stack base",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "promotional_content",
+      "description": "Presenter explaining features of the training system",
+      "technique_notes": "No actual task performance occurring",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "pattern_cut_assessment": {
+      "deviation_measurements": "No task performed",
+      "gauze_status": "Not applicable",
+      "cut_completion": "Not applicable"
+    }
+  },
+  "score_components": {
+    "max_score": 0,
+    "time_used": 0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "No FLS task performed"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly a product demonstration/promotional video for Inovus Medical laparoscopic training equipment, not an actual FLS task performance video.",
+  "cannot_determine": [
+    "FLS task performance metrics - no task was performed"
+  ],
+  "technique_summary": "This video shows product demonstration and educational content about laparoscopic training equipment rather than an actual FLS task performance.",
+  "strengths": [
+    "Clear presentation of training equipment",
+    "Professional educational format"
+  ],
+  "improvement_suggestions": [
+    "For FLS scoring, please provide video of actual task performance rather than promotional content"
+  ],
+  "video_id": "5OGmvcW4PJs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:26:06.742154+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.756705+00:00"
+  },
+  "scoreable": true
+}

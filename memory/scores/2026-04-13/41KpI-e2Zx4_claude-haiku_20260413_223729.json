@@ -1,0 +1,36 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Uterine Vessel Coagulation (VirtaMed EDU - Surgical Simulation)",
+  "content_type": "Educational/Tutorial - VirtaMed surgical simulator demonstration",
+  "note": "This video is a surgical simulation tutorial on uterine vessel coagulation, not an FLS (Fundamentals of Laparoscopic Surgery) task. FLS tasks are limited to: (1) Peg Transfer, (2) Pattern Cut, (3) Endoloop, (4) Extracorporeal Suture, and (5) Intracorporeal Suture. This content demonstrates advanced gynecological surgical technique using the VirtaMed simulator platform with instructional overlays, step-by-step guidance, and equipment selection menus visible throughout.",
+  "why_not_scored": "VirtaMed surgical simulations are not part of the official FLS curriculum. This demonstrates a different surgical skill (hemostasis and vessel management in gynecology) using a different simulation platform and assessment framework. No FLS scoring rubric applies.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Exposure and mobilization of uterine vessels",
+      "Blunt and sharp dissection for vessel identification",
+      "Bipolar electrosurgical coagulation technique",
+      "Safe vessel sealing close to uterus to minimize bleeding",
+      "Tool selection (bipolar grasper, unipolar grasper, scissors, suction/irrigation)"
+    ],
+    "verbal_cues": [
+      "Make sure to expose and mobilize the uterine artery and vein at the ascending portion using blunt and sharp dissection until it can be safely identified.",
+      "Sufficiently coagulate and cut the left uterine vessels close to the uterus (about 1cm). Make sure not to cause any bleeding."
+    ],
+    "common_errors_addressed": [
+      "Inadequate exposure of vessels before coagulation",
+      "Excessive force during dissection risking tissue injury",
+      "Coagulation too far from uterus increasing bleeding risk",
+      "Tool selection errors for specific dissection vs. coagulation phases"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "completion_time_seconds": 107,
+  "confidence": 0.95,
+  "confidence_rationale": "Content is clearly identified as VirtaMed EDU simulator with on-screen tutorial overlays, step progression indicators, and equipment menus. This is unambiguously not an FLS task.",
+  "video_id": "41KpI-e2Zx4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:37:29.711663+00:00",
+  "scoreable": false
+}

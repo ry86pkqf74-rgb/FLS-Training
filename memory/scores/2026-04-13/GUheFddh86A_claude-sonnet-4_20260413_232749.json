@@ -1,0 +1,87 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Equipment Setup and Multiple Task Overview",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "DIY laparoscopic trainer construction using plastic box and webcam",
+      "Proper lighting setup with fluorescent light source",
+      "Access port positioning at 4cm diameter spacing",
+      "Equipment assembly and calibration procedures",
+      "Basic instrument handling and positioning"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Improper camera angle setup",
+      "Inadequate lighting for task visualization",
+      "Poor access port positioning"
+    ],
+    "skill_level_demonstrated": "instructional"
+  },
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_screen",
+      "description": "Clinical Teacher title screen with ASME logo",
+      "technique_notes": "Educational content identifier",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "equipment_setup",
+      "description": "Laptop-based laparoscopic trainer setup demonstration",
+      "technique_notes": "Shows complete portable training system",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "schematic_review",
+      "description": "Technical diagram showing trainer dimensions and component placement",
+      "technique_notes": "28cm x 17cm box with specified component positions",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "lighting_demo",
+      "description": "Fluorescent light component display",
+      "technique_notes": "Proper illumination equipment for training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "multiple_task_overview",
+      "description": "Various FLS task setups visible including peg transfer and pattern cutting circles",
+      "technique_notes": "Multiple training modules in single frame",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "assembly_demo",
+      "description": "Hands demonstrating trainer box assembly and setup",
+      "technique_notes": "Proper construction technique shown",
+      "penalties_observed": []
+    }
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video showing equipment setup rather than task performance. Multiple FLS tasks visible but no specific task being performed for scoring.",
+  "cannot_determine": [
+    "Specific task completion time - this is equipment demonstration",
+    "Task-specific penalties - no single task being performed",
+    "Performance score - instructional content not performance"
+  ],
+  "technique_summary": "Comprehensive instructional video demonstrating DIY laparoscopic trainer construction and setup procedures for FLS training.",
+  "completion_time_seconds": null,
+  "penalties": [],
+  "score_components": null,
+  "video_id": "GUheFddh86A",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:27:49.655366+00:00",
+  "scoreable": false
+}

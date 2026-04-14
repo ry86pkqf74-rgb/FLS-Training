@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to process requests involving video content, including scoring or analyzing it. However, if you can provide information about the task, such as deviations from the cutting line, completion time, and any penalties observed, I can help generate a score using that data.",
+  "video_id": "4L4bfOJgDSk",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:24:07.125563+00:00",
+  "task_id": "task2_pattern_cut",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.751744+00:00"
+  },
+  "scoreable": false
+}

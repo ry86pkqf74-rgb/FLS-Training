@@ -1,0 +1,141 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Both participants begin grasping the gauze",
+      "technique_notes": "Experienced participant shows a steady grasp with no initial hesitation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 6.0,
+      "phase": "initial_cut",
+      "description": "Experienced participant initiates smooth cut along the line",
+      "technique_notes": "Cut appears controlled; novice shows mild waver",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 16.0,
+      "phase": "clockwise_cut",
+      "description": "Experienced participant continues a clean cut; novice stumbles slightly",
+      "technique_notes": "Experienced participant maintains alignment to line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 30,
+      "timestamp_seconds": 30.0,
+      "phase": "counterclockwise_cut",
+      "description": "Experienced participant well into counterclockwise cutting phase",
+      "technique_notes": "Novice participant visibly struggling with line adherence",
+      "penalties_observed": [
+        {
+          "type": "line_deviation",
+          "description": "Notable deviation from marked line",
+          "frame_evidence": [
+            30
+          ],
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "frame_number": 55,
+      "timestamp_seconds": 55.0,
+      "phase": "completion",
+      "description": "Experienced participant finishes cut successfully",
+      "technique_notes": "Novice participant still cutting; experienced shows smooth closure",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 60.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 1,
+      "end_seconds": 6,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 6,
+      "end_seconds": 30,
+      "duration_seconds": 24,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 30,
+      "end_seconds": 55,
+      "duration_seconds": 25,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 55,
+      "end_seconds": 60,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "Deviation from marked line observed in novice track",
+      "points_deducted": 5.0,
+      "frame_evidence": [
+        30
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "cut_quality": {
+      "deviation_points": 5,
+      "gauze_detached": false,
+      "completion_quality": "smooth"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 60.0,
+    "total_penalties": 5.0,
+    "total_fls_score": 235.0,
+    "formula_applied": "300 - 60.0 - 5.0 = 235.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear visibility of deviations during novice performance; experienced cuts within expected parameters",
+  "cannot_determine": [],
+  "technique_summary": "Experienced participant exhibits excellent control with smooth, timely completion. Novice participant shows notable deviation affecting overall cut quality.",
+  "strengths": [
+    "Experienced participant maintains consistent cutting speed and precision",
+    "Efficient handling of instruments by experienced participant"
+  ],
+  "improvement_suggestions": [
+    "Novice should practice maintaining line adherence",
+    "Reduce hesitation during initial and counterclockwise cut phases"
+  ],
+  "video_id": "uHnRkkSbYV4",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:44:14.788777+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.907077+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,130 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0,
+      "phase": "pickup_nondominant",
+      "description": "Initial pickup with nondominant hand.",
+      "technique_notes": "Object grasped securely.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2,
+      "phase": "transfer_midair",
+      "description": "Transfer midair to dominant hand.",
+      "technique_notes": "Smooth handoff.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5,
+      "phase": "place_dominant",
+      "description": "Object placed on peg using dominant hand.",
+      "technique_notes": "Accurate placement on first try.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 10,
+      "phase": "reverse_pickup",
+      "description": "Pickup with dominant hand for reversal.",
+      "technique_notes": "Quick grasp.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 15,
+      "phase": "reverse_transfer",
+      "description": "Transfer midair back to nondominant hand.",
+      "technique_notes": "Stable handoff.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 20,
+      "phase": "reverse_place",
+      "description": "Reversed placement back on peg.",
+      "technique_notes": "Secured without error.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 30.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 2,
+      "end_seconds": 5,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 10,
+      "end_seconds": 15,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 15,
+      "end_seconds": 20,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 20,
+      "end_seconds": 30,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 30.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 270.0,
+    "formula_applied": "300 - 30.0 - 0.0 = 270.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear view of all phases, precise placement, and no observed penalties.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level performance with efficient movements and accurate placements. No objects dropped.",
+  "strengths": [
+    "Consistent and smooth handoffs.",
+    "Accurate peg placements with first attempts."
+  ],
+  "improvement_suggestions": [
+    "Maintain steady speed to further improve efficiency."
+  ],
+  "video_id": "Orp_c2VsqEE",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:12:26.030961+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.831163+00:00"
+  },
+  "scoreable": true
+}

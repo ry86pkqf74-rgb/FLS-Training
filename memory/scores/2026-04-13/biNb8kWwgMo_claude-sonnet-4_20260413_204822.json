@@ -1,0 +1,82 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "cannot_determine",
+      "description": "Black frame - video not yet started",
+      "technique_notes": "No visual content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "cannot_determine",
+      "description": "Open surgical field showing organs and vessels, no FLS trainer box visible",
+      "technique_notes": "This appears to be actual surgery footage, not FLS training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "cannot_determine",
+      "description": "Continued surgical footage showing liver and other organs",
+      "technique_notes": "Real surgical procedure, not standardized FLS setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 60.0,
+      "phase": "cannot_determine",
+      "description": "Final frame shows what appears to be completed surgical anastomosis",
+      "technique_notes": "Real surgery completion, not FLS task",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "loop_visible": false,
+      "appendage_visible": false,
+      "marked_line_visible": false,
+      "loop_at_mark": null,
+      "loop_cinched_properly": null,
+      "appendage_transected": null
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "Cannot score - not FLS Task 3 content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "High confidence this is not FLS Task 3 (Endoloop) based on clear visual evidence. This appears to be actual surgical footage rather than standardized FLS training with foam appendage and ligating loop in trainer box.",
+  "cannot_determine": [
+    "Task completion time - wrong video content",
+    "Loop placement accuracy - no endoloop visible",
+    "Appendage target marks - no foam appendage present",
+    "All FLS-specific measurements - this is real surgery footage"
+  ],
+  "technique_summary": "Cannot assess FLS technique as this video shows actual surgical procedures rather than Task 3 Endoloop training exercise.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Provide correct FLS Task 3 video showing endoloop deployment on foam appendage in standardized trainer box"
+  ],
+  "video_id": "biNb8kWwgMo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:48:22.129926+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.861890+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,174 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Initial view showing gauze suspended between clamps with circular cutting pattern marked",
+      "technique_notes": "Gauze properly tensioned, pattern clearly visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 12.0,
+      "phase": "initial_cut",
+      "description": "Left grasper holding gauze, right scissors beginning initial cut at pattern edge",
+      "technique_notes": "Good instrument positioning, cutting started at appropriate location",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 24.0,
+      "phase": "clockwise_cut",
+      "description": "Scissors cutting along outer circle in clockwise direction, approximately 1/8 around circle",
+      "technique_notes": "Steady cutting technique, staying close to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 36.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing clockwise cut, approximately 1/4 around circle completed",
+      "technique_notes": "Maintaining consistent distance from line, good gauze tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 48.0,
+      "phase": "clockwise_cut",
+      "description": "Progressing through clockwise cut, approximately 3/8 around circle",
+      "technique_notes": "Cut appears to deviate slightly outside line at some points",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 60.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting continues around circle, approximately halfway complete",
+      "technique_notes": "Some deviation visible from marked line, cut appears jagged in places",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 168.0,
+      "phase": "clockwise_cut",
+      "description": "Cut nearly complete around circle, approaching starting point",
+      "technique_notes": "Final portion of cut showing some deviation from line",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 180.0,
+      "phase": "completion",
+      "description": "Cut completed, circular piece separated from gauze",
+      "technique_notes": "Task completed with cut circle removed, gauze remains attached to clamps",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 180.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 10,
+      "end_seconds": 20,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 20,
+      "end_seconds": 175,
+      "duration_seconds": 155,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 175,
+      "end_seconds": 180,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Multiple points where cut deviates beyond 2mm from marked line",
+      "points_deducted": 8.0,
+      "frame_evidence": [
+        5,
+        6,
+        15
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "total_deviation_penalty": 8.0,
+      "cut_completion": "complete",
+      "gauze_detachment": false,
+      "cut_quality": "acceptable_with_deviations"
+    },
+    "deviation_measurements": {
+      "north_cardinal": 1.5,
+      "northeast_diagonal": 2.5,
+      "east_cardinal": 1.0,
+      "southeast_diagonal": 2.0,
+      "south_cardinal": 1.5,
+      "southwest_diagonal": 2.5,
+      "west_cardinal": 1.0,
+      "northwest_diagonal": 1.5,
+      "measurement_confidence": 0.7
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 180.0,
+    "total_penalties": 8.0,
+    "total_fls_score": 112.0,
+    "formula_applied": "300 - 180.0 - 8.0 = 112.0"
+  },
+  "confidence": 0.7,
+  "confidence_rationale": "Completion time clearly observed. Deviation penalties estimated from visible cut path relative to marked lines, though exact millimeter measurements difficult from camera angle. Gauze remained attached throughout.",
+  "cannot_determine": [
+    "Exact millimeter deviations at all cardinal points due to camera perspective",
+    "Precise timing of individual deviation occurrences"
+  ],
+  "technique_summary": "Intermediate performance with extended cutting phase taking 155 seconds. Cut completed successfully but with visible deviations from the marked pattern line resulting in penalty points.",
+  "strengths": [
+    "Task completed successfully without gauze detachment",
+    "Maintained consistent cutting motion throughout",
+    "Good instrument coordination"
+  ],
+  "improvement_suggestions": [
+    "Focus on staying closer to marked line to reduce deviation penalties",
+    "Practice faster cutting technique to reduce total time from 180s toward 90-120s range",
+    "Work on smoother, more controlled cutting motion to reduce jagged edges"
+  ],
+  "video_id": "9pmAgTE2UzQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:37:38.119457+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.781075+00:00"
+  },
+  "scoreable": true
+}

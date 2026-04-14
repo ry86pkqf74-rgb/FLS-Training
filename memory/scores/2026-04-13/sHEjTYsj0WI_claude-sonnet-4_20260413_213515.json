@@ -1,0 +1,175 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 19.0,
+      "phase": "loop_deploy",
+      "description": "Initial view showing uterine anatomy with blue marking tape on isthmus, uterine manipulator in place",
+      "technique_notes": "Good visualization of target anatomy, clear marking visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 22.0,
+      "phase": "loop_deploy",
+      "description": "Blue marking tape clearly visible on right fallopian tube isthmus",
+      "technique_notes": "Target marking is well-defined and positioned appropriately",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 29.0,
+      "phase": "target_approach",
+      "description": "Instrument selection menu visible, clip applicator being selected",
+      "technique_notes": "Appropriate instrument selection for endoloop task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 31.0,
+      "phase": "target_approach",
+      "description": "Multiple instrument options displayed including sterilization clip applicator",
+      "technique_notes": "System showing various laparoscopic instruments available",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 38.0,
+      "phase": "loop_placement",
+      "description": "Sterilization clip applicator approaching the blue-marked isthmus",
+      "technique_notes": "Good approach angle, instrument properly oriented toward target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 40.0,
+      "phase": "loop_placement",
+      "description": "Clip applicator positioning over the blue marking on isthmus",
+      "technique_notes": "Precise positioning at the target mark, good alignment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 42.0,
+      "phase": "cinch",
+      "description": "Clip applicator jaws opening around the marked isthmus tissue",
+      "technique_notes": "Appropriate jaw positioning, tissue captured within clip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 44.0,
+      "phase": "cinch",
+      "description": "Clip being applied to the isthmus at the blue marking",
+      "technique_notes": "Good clip placement directly on target mark",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 47.0,
+      "phase": "cinch",
+      "description": "Clip deployment in progress, tissue being compressed",
+      "technique_notes": "Clip mechanism engaging properly, tissue compression visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 49.0,
+      "phase": "completion",
+      "description": "Clip successfully placed on isthmus, verification phase beginning",
+      "technique_notes": "Clip appears securely positioned at target mark",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 51.0,
+      "phase": "completion",
+      "description": "Final verification of clip placement on the marked isthmus",
+      "technique_notes": "Clip positioned directly over blue marking, good final placement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 51.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 28,
+      "duration_seconds": 28,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 28,
+      "end_seconds": 37,
+      "duration_seconds": 9,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 37,
+      "end_seconds": 42,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 42,
+      "end_seconds": 49,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 49,
+      "end_seconds": 51,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "loop_cinched_tightly": true,
+      "appendage_transected": false,
+      "confidence": 0.85
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 51.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 129.0,
+    "formula_applied": "180 - 51.0 - 0.0 = 129.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "This appears to be a surgical simulation video showing tubal sterilization with clip placement rather than FLS endoloop task. The timing and technique are well-observed, but task identification may not match standard FLS Task 3 endoloop parameters.",
+  "cannot_determine": [
+    "Whether this is actually FLS Task 3 endoloop or a different laparoscopic procedure",
+    "Exact loop material and pre-tied status typical of FLS endoloop task"
+  ],
+  "technique_summary": "Excellent precision and timing for clip placement procedure. Very efficient approach and deployment with accurate targeting of the marked tissue.",
+  "strengths": [
+    "Precise instrument positioning at target mark",
+    "Efficient completion time well within expert range",
+    "Smooth clip deployment technique"
+  ],
+  "improvement_suggestions": [
+    "Verify this matches standard FLS endoloop task parameters",
+    "Confirm use of appropriate endoloop material rather than sterilization clips"
+  ],
+  "video_id": "sHEjTYsj0WI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:35:15.245935+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.898633+00:00"
+  },
+  "scoreable": true
+}

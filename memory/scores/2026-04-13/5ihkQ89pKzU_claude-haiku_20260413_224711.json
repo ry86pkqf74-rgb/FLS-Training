@@ -1,0 +1,89 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - no FLS task visible",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "unknown",
+      "description": "Woman seated in office chair against plain wall, facing camera directly. No FLS equipment, trainer box, or surgical instruments visible.",
+      "technique_notes": "Subject is delivering speech or lecture content directly to camera",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "unknown",
+      "description": "Subject gesturing with hands while speaking; appears to be demonstrating hand positions or concepts using bare hands without equipment.",
+      "technique_notes": "Gesture-based instruction; no task-specific tools or trainer visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 15.0,
+      "phase": "unknown",
+      "description": "Subject holding what appears to be a suture or thread in hands, demonstrating knot-tying or suture handling technique using bare hands/string.",
+      "technique_notes": "Appears to be educational demonstration of knot or suture concepts without FLS trainer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 25.0,
+      "phase": "unknown",
+      "description": "Subject demonstrating with thread/suture held between both hands, simulating knot-tying motion or suture placement without laparoscopic instruments or trainer box.",
+      "technique_notes": "Bare-hands educational demonstration; no FLS-specific equipment present",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 30.0,
+      "phase": "unknown",
+      "description": "Subject continues hand demonstration of suture or knot technique.",
+      "technique_notes": "Educational lecture/demonstration format",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Video content is clearly instructional/educational in nature. Subject is delivering lecture content to camera with hand gestures and bare-hands demonstration of concepts (likely suture or knot tying concepts). No FLS trainer box, no laparoscopic instruments, no task workspace is visible. This is an educational lecture, not a performance of an FLS task.",
+  "cannot_determine": [
+    "Task ID - no FLS trainer or instruments visible",
+    "Completion time - no task performance occurring",
+    "Any FLS-specific metrics - video does not contain task performance"
+  ],
+  "technique_summary": "This is an instructional/educational video with narration and demonstration using bare hands and generic thread/suture. It does not constitute an FLS task performance and cannot be scored using FLS rubrics.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Hand positioning for suture manipulation",
+      "Conceptual knot-tying or suture handling principles",
+      "Educational demonstration of manual techniques without instruments"
+    ],
+    "verbal_cues": [
+      "Subject is speaking throughout, providing educational commentary (content not fully audible from frames alone)"
+    ],
+    "common_errors_addressed": [
+      "Cannot determine from visual frames alone - appears to be general educational content about suture or knot concepts"
+    ],
+    "skill_level_demonstrated": "instructional/educational"
+  },
+  "improvement_suggestions": [
+    "This is not an FLS performance. To receive an FLS score, video must show actual task performance using FLS trainer box with laparoscopic instruments."
+  ],
+  "video_id": "5ihkQ89pKzU",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:47:11.086869+00:00",
+  "scoreable": false
+}

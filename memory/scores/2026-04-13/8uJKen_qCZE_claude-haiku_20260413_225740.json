@@ -1,0 +1,75 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoscopy Simulation & Training Educational Lecture",
+  "content_type": "educational_presentation",
+  "presentation_title": "The New Face of Colorectal Cancer: What Every Surgeon and Endoscopist Should Know",
+  "presenter": "Richard L. Whelan, MD (Mount Sinai West Hospital, New York, NY)",
+  "conference": "A View Through the Scope \u2013 Past, Present & Future \u2013 2019",
+  "chair": "Peter W. Marcello, MD; Co-Chair: James Ellsmere, MD",
+  "scoring_status": "not_scored",
+  "reasoning": "This is an instructional/educational presentation delivered at a surgical conference. It contains narrated lecture slides, educational content with overlays, and demonstration materials. It is NOT a performance video of a trainee executing an FLS task. Therefore, it does not receive an FLS task score.",
+  "teaching_content": {
+    "video_purpose": "Educational lecture on endoscopy simulation and training for surgeons and endoscopists preparing for colorectal cancer management",
+    "demonstrated_topics": [
+      "Simulation: Basic Concept \u2013 why simulation-based training is superior to patient-based learning",
+      "Importance of endoscopic skills in general surgery \u2013 diagnostic and therapeutic applications",
+      "American Board of Surgery Training Mandate for Endoscopy \u2013 5-level certification requirements, FES certification, case minimums",
+      "Dedicated training time requirements across all training models",
+      "First skill to be learned: control of scope and insertion \u2013 scope anatomy, deflection wheels, suction/air/water buttons, image capture, scope tip anatomy",
+      "Endoscopy Simulators \u2013 Simbionix, CAE/Endo VR, Accutouch platforms",
+      "Torso Trainers \u2013 physical models with adjustable tethering points for variable difficulty",
+      "Ex-vivo porcine and bovine bowel models for interventional training \u2013 realistic but resource-intensive",
+      "Materials and equipment required for endoscopic training \u2013 comprehensive list provided",
+      "Endoscopic Submucosal Dissection (ESD) Training \u2013 tissue cutting mechanics, scope positioning, hot knife control",
+      "ESD in Japan \u2013 stomach-focused training progression (40-60 cases), advancement to colon after proficiency",
+      "Figure-tracing inanimate model for knife tip control \u2013 hollow plastic tube colon model, modified sclerotherapy catheter pen, dye-colored saline ink",
+      "Skill acquisition metrics \u2013 trainee performance graph showing learning curve across 4 pattern types over 8 training sessions",
+      "ESD Training Model: Bovine Large Bowel \u2013 30 cases per surgeon, repetition-based skill development",
+      "Summary points: modern surgeon must be endoscopist, endoscopy now mandated, FES accessible, multiple training platforms available, ex-vivo models more realistic for advanced skills, dedicated time carving essential"
+    ],
+    "key_concepts": [
+      "Learning on patients is suboptimal \u2013 simulation provides stress-free, repetitive practice",
+      "Simulation models allow independent skill acquisition without clinical volume constraints",
+      "Multiple simulation modalities exist with varying fidelity and resource requirements",
+      "Scope control and insertion is foundational skill \u2013 must master before advanced procedures",
+      "ESD is exceedingly difficult skill requiring dedicated training with appropriate models",
+      "Progression from computer-based to ex-vivo models reflects increasing complexity and realism",
+      "Regular repetition on appropriate models drives competency acquisition",
+      "Institutional programs must dedicate protected training time for competency development",
+      "FES Certification (Fundamentals of Endoscopic Surgery) required by American Board of Surgery"
+    ],
+    "verbal_cues": [
+      "Richard L. Whelan, MD explicitly states simulation rationale and training requirements",
+      "Presenter discusses American Board of Surgery mandates and certification levels",
+      "Educational slides clearly label each training modality and its applications",
+      "Graph data shows trainee performance improvement over repeated sessions",
+      "Summary slide reinforces key takeaways for surgical training programs"
+    ],
+    "educational_modalities_shown": [
+      "Text-based learning objectives and concepts",
+      "Visual demonstrations of training equipment (Simbionix, CAE/Endo VR, Accutouch, Torso Trainers)",
+      "Endoscopic video clips showing clinical anatomy and procedural landmarks",
+      "Equipment photographs and material lists",
+      "Schematic diagrams of training models (figure-tracing model cross-section)",
+      "Quantitative data (trainee learning curve graph)",
+      "Clinical images of ex-vivo tissue training models"
+    ],
+    "skill_level_demonstrated": "expert",
+    "common_errors_addressed": [
+      "Learning fundamentals on real patients \u2013 ineffective and dangerous approach",
+      "Insufficient scope control training before advanced endoscopic procedures",
+      "Inadequate repetition on models to achieve proficiency",
+      "Failure to carve protected training time in clinical schedules",
+      "Adoption of unrealistic training models that do not translate to clinical skill"
+    ],
+    "target_audience": "Surgical residents, surgical educators, program directors, general surgeons transitioning to endoscopy, endoscopists"
+  },
+  "frame_summary": "Presentation consists of 20+ slides covering simulation principles, training mandates, equipment options, procedural techniques, and skill acquisition data. Each slide contains educational content with supporting visuals, photographs, diagrams, and clinical images. No live task performance is present.",
+  "fls_scoring_comment": "This video does not contain an FLS task performance and therefore receives no FLS score. It is educational content supporting the broader context of surgical skills training.",
+  "video_id": "8uJKen_qCZE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:57:40.823092+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,23 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Unknown - No FLS task content visible",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Static document showing FLS exam questions and answers with yellow highlighting",
+      "technique_notes": "No surgical performance visible",
+      "penalties_observed": []
+    }
+  ],
+  "reason_for_unusable": "Video contains only static educational material - FLS exam questions and answers document. No actual FLS task performance, demonstration, or surgical content visible. This appears to be advertising content for exam preparation materials.",
+  "confidence": 1.0,
+  "confidence_rationale": "Clear view of document content throughout all frames - definitively not FLS task performance content",
+  "video_id": "Mcg8T8zMBQA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:52:38.379979+00:00",
+  "scoreable": false
+}

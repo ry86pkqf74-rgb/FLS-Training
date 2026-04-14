@@ -1,0 +1,146 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Gauze secured between clamps.",
+      "technique_notes": "Gauze placement appears stable; no slippage noted.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 1.0,
+      "phase": "initial_cut",
+      "description": "Initial incision made into gauze along marked line.",
+      "technique_notes": "Incision appears to start on marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 2.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing cut along the top and right side of the pattern.",
+      "technique_notes": "Cut follows marked line with minor deviation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 4.0,
+      "phase": "counterclockwise_cut",
+      "description": "Cutting along the bottom side of the pattern.",
+      "technique_notes": "Deviation from the line is approximately 2mm.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "points_deducted": 2.0,
+          "frame_evidence": [
+            11
+          ],
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 5.0,
+      "phase": "completion",
+      "description": "Cut completed and gauze lifted.",
+      "technique_notes": "Cutting completed smoothly.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 5.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 0.5,
+      "duration_seconds": 0.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 0.5,
+      "end_seconds": 1,
+      "duration_seconds": 0.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 1,
+      "end_seconds": 3,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 3,
+      "end_seconds": 5,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 5,
+      "end_seconds": 5,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Cut deviated approximately 2mm from line during bottom side cut.",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        11
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "line_deviation": {
+      "deviations_mm": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "average_deviation_mm": 0.5,
+      "total_deviation_penalty": 2.0,
+      "penalties_applied": 2.0
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 5.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 293.0,
+    "formula_applied": "300 - 5.0 - 2.0 = 293.0"
+  },
+  "confidence": 0.8,
+  "confidence_rationale": "Clear view of cutting path and deviation from marked line.",
+  "cannot_determine": [],
+  "technique_summary": "Efficient cutting with minor deviation. Overall performance is at expert level.",
+  "strengths": [
+    "Stable gauze grasp and precise cutting initiation.",
+    "Consistent cutting speed and approach."
+  ],
+  "improvement_suggestions": [
+    "Ensure alignment with marked line to minimize deviation."
+  ],
+  "video_id": "ORaV-7PsAaA",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:10:45.858881+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.829454+00:00"
+  },
+  "scoreable": true
+}

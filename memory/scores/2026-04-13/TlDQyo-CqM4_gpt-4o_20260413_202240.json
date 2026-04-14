@@ -1,0 +1,121 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Instruments approaching gauze to grasp for initial cut.",
+      "technique_notes": "Good positioning of instruments for initial grasp.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "initial_cut",
+      "description": "First incision made at the top of the circle.",
+      "technique_notes": "Initial cut appears within 2mm of the line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 7.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting along the side of the circle, counterclockwise.",
+      "technique_notes": "Deviation from line appears minimal.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 15.0,
+      "phase": "counterclockwise_cut",
+      "description": "Continuing cut back up from the bottom in a clockwise direction.",
+      "technique_notes": "Maintains proximity to line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 25.0,
+      "phase": "completion",
+      "description": "Circle cut complete, inspecting cut.",
+      "technique_notes": "Completion of task.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 25.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 7,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 7,
+      "end_seconds": 15,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 25,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "deviation_measurements": {
+      "north_deviation_mm": 1.0,
+      "east_deviation_mm": 1.0,
+      "south_deviation_mm": 1.5,
+      "west_deviation_mm": 1.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.85
+    },
+    "gauze_attachment": {
+      "detached_points": 0,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 25.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 275.0,
+    "formula_applied": "300 - 25.0 - 0.0 = 275.0"
+  },
+  "confidence": 0.88,
+  "confidence_rationale": "Clear view of cutting line and minimal deviation observable.",
+  "cannot_determine": [],
+  "technique_summary": "Very precise and efficient cutting, demonstrating expert-level proficiency with minimal deviation.",
+  "strengths": [
+    "Excellent control and steady cutting along the line.",
+    "Fast completion time indicates surgical efficiency."
+  ],
+  "improvement_suggestions": [
+    "Maintain focus on minimizing any minor deviations from the marked line."
+  ],
+  "video_id": "TlDQyo-CqM4",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:22:40.945592+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.841541+00:00"
+  },
+  "scoreable": true
+}

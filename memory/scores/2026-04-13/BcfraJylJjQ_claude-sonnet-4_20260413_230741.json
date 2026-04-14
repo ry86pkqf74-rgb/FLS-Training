@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "General Laparoscopy Skills Course Introduction",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro_branding",
+      "description": "Richard Wolf company logo and branding displayed",
+      "technique_notes": "Professional medical equipment company introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "course_introduction",
+      "description": "Prima Vista Academy presents laparoscopy skills course with Dr. Walid Farhat",
+      "technique_notes": "Educational course introduction format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "instructor_presentation",
+      "description": "Dr. Farhat in surgical scrubs speaking to camera in hospital setting",
+      "technique_notes": "Professional instructor introduction with credentials displayed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 30.0,
+      "phase": "surgical_demonstration",
+      "description": "Two surgeons in full surgical attire performing laparoscopic procedure with trainer box visible",
+      "technique_notes": "Demonstrates proper sterile technique and instrument handling",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 37.5,
+      "phase": "equipment_overview",
+      "description": "Close-up view of FLS trainer box with multiple laparoscopic instruments laid out",
+      "technique_notes": "Shows standard FLS equipment setup and instrument array",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 45.0,
+      "phase": "live_surgery_context",
+      "description": "Operating room scene with laparoscopic monitor showing surgical view",
+      "technique_notes": "Demonstrates real-world application of laparoscopic skills",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is instructional/promotional content, not a performance to be scored",
+  "cannot_determine": [],
+  "technique_summary": "Professional educational video introducing laparoscopic skills training course with expert instructor and proper equipment demonstration",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper sterile technique in OR environment",
+      "correct laparoscopic instrument handling posture",
+      "professional setup of FLS trainer box",
+      "integration of simulation training with real surgical application"
+    ],
+    "verbal_cues": [
+      "Course introduction by qualified instructor",
+      "Academic affiliation and credentials presentation"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "BcfraJylJjQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:07:41.098944+00:00",
+  "scoreable": false
+}

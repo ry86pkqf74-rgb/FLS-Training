@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to process video content for scoring directly. However, if you provide details about the phases, penalties, completion time, and other necessary observations related to the task, I can help generate an FLS task assessment. Let me know how you'd like to proceed!",
+  "video_id": "zcxXUhK17dc",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T22:00:34.325126+00:00",
+  "task_id": "task5_intracorporeal_suturing",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.919833+00:00"
+  },
+  "scoreable": false
+}

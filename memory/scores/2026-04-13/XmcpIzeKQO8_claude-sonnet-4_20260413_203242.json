@@ -1,0 +1,104 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "promotional_content",
+      "description": "Video shows promotional/educational content about LapPass training system",
+      "technique_notes": "Not actual task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "promotional_content",
+      "description": "Continued promotional content showing laparoscopic trainer setup",
+      "technique_notes": "Training system demonstration, no task execution visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "promotional_content",
+      "description": "View of trainer box with foam appendage visible but no task activity",
+      "technique_notes": "Setup visible but no instruments engaged",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 18.0,
+      "phase": "promotional_content",
+      "description": "Hands operating trainer controls, computer display visible",
+      "technique_notes": "System operation demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "promotional_content",
+      "description": "Continued demonstration of trainer operation",
+      "technique_notes": "Still promotional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "promotional_content",
+      "description": "Final promotional content frame",
+      "technique_notes": "No actual task performance observed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "successful": false,
+      "at_target_mark": false,
+      "deviation_from_mark_mm": null,
+      "confidence": null
+    },
+    "loop_cinching": {
+      "tightly_cinched": false,
+      "confidence": null
+    },
+    "appendage_status": {
+      "transected": false,
+      "intact": true
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "No task performance to score - promotional video only"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video content is clearly promotional/educational material showing the LapPass training system. No actual FLS Task 3 endoloop performance is visible in any frame.",
+  "cannot_determine": [
+    "Completion time - no task performance visible",
+    "Loop placement accuracy - no loop deployment observed",
+    "Cinching quality - no cinching performed",
+    "Any task-specific penalties - no task execution"
+  ],
+  "technique_summary": "No technique assessment possible - video contains only promotional content for the LapPass laparoscopic training system without showing actual Task 3 endoloop performance.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Submit actual task performance video for scoring"
+  ],
+  "video_id": "XmcpIzeKQO8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:32:42.000853+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.848922+00:00"
+  },
+  "scoreable": true
+}

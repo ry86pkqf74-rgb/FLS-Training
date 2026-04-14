@@ -1,0 +1,151 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Two laparoscopic scissors positioned at gauze with visible 4cm diameter black circle pattern marked with red dots",
+      "technique_notes": "Gauze appears properly suspended between clamps, clear pattern visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 12.0,
+      "phase": "initial_cut",
+      "description": "Left scissors initiating cut at top of circle pattern, right scissors providing counter-traction",
+      "technique_notes": "Good bimanual coordination, cut starting at 12 o'clock position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 21.0,
+      "phase": "clockwise_cut",
+      "description": "Scissors progressing clockwise around circle, approximately at 3 o'clock position",
+      "technique_notes": "Steady cutting motion, maintaining proximity to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 30.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting continues at 6 o'clock position, small deviation visible from marked line",
+      "technique_notes": "Some imprecision noted at bottom of circle",
+      "penalties_observed": [
+        "deviation_from_line"
+      ]
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 45.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting at 9 o'clock position, returning toward starting point",
+      "technique_notes": "Consistent cutting technique maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 57.0,
+      "phase": "completion",
+      "description": "Final connection made, circular pattern cut complete with instruments withdrawing",
+      "technique_notes": "Clean completion of circle, gauze remains attached to clamps",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 57.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 8,
+      "end_seconds": 15,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 55,
+      "duration_seconds": 40,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 55,
+      "end_seconds": 57,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Deviation at 6 o'clock position approximately 1.5mm outside marked line",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        13
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "cardinal_point_deviations": {
+        "12_oclock_mm": 0.5,
+        "3_oclock_mm": 1.0,
+        "6_oclock_mm": 1.5,
+        "9_oclock_mm": 0.8,
+        "total_deviation_penalty": 3.8,
+        "confidence": 0.65
+      }
+    },
+    "gauze_attachment": {
+      "remained_attached": true,
+      "clamp_integrity": "maintained"
+    },
+    "cut_completeness": {
+      "fully_completed": true,
+      "clean_separation": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 57.0,
+    "total_penalties": 3.8,
+    "total_fls_score": 239.2,
+    "formula_applied": "300 - 57.0 - 3.8 = 239.2"
+  },
+  "confidence": 0.7,
+  "confidence_rationale": "Camera angle provides good view of cutting path, but some deviation measurements are estimates due to perspective. Time measurement clear from instrument appearance to task completion.",
+  "cannot_determine": [
+    "Exact mm measurements at all 8 cardinal points due to camera angle limitations"
+  ],
+  "technique_summary": "Expert-level performance with excellent time (57s vs 60-90s benchmark) and minimal deviation penalties. Smooth bimanual coordination throughout cutting sequence.",
+  "strengths": [
+    "Excellent completion time well within expert range",
+    "Consistent cutting technique with good instrument coordination",
+    "Maintained gauze suspension throughout task"
+  ],
+  "improvement_suggestions": [
+    "Focus on precision at 6 o'clock position to minimize deviation",
+    "Consider slightly slower cutting speed at curve transitions"
+  ],
+  "video_id": "l6gQg2VbGcc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:17:08.767559+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.883439+00:00"
+  },
+  "scoreable": true
+}

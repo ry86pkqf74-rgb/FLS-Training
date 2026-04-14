@@ -1,0 +1,62 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Not an FLS Task - Presentation Slides",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Static presentation slide showing title 'Reimagining a Healthier World - 2021' and 'Education / Simulation Session I'",
+      "technique_notes": "This is not an FLS task video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Presentation slide about 'Laparoscopic Surgery Globally' showing advantages and barriers",
+      "technique_notes": "Educational content slide, not surgical simulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "not_applicable",
+      "description": "Same slide about laparoscopic surgery advantages and barriers",
+      "technique_notes": "Static educational content",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS task video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear static presentation slides about laparoscopic surgery education in Bolivia. No surgical simulation or FLS task performance visible.",
+  "cannot_determine": [
+    "FLS task performance - video shows presentation slides only"
+  ],
+  "technique_summary": "This video contains presentation slides about a virtual laparoscopic surgery course implementation in Bolivia, not an FLS task performance.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Please provide a video showing actual FLS task performance for assessment"
+  ],
+  "video_id": "FGoMUdowIVs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:50:03.442215+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.807679+00:00"
+  },
+  "scoreable": false
+}

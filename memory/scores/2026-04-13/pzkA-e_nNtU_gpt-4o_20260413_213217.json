@@ -1,0 +1,151 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Needle presented at entry point.",
+      "technique_notes": "Proper grasp, positioned for entry.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 5.0,
+      "phase": "suture_placement",
+      "description": "Suture threaded through tissue.",
+      "technique_notes": "Smooth passage through mark.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 10.0,
+      "phase": "first_throw",
+      "description": "First throw started with appropriate C-shape.",
+      "technique_notes": "Correct formation, under tension.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "second_throw",
+      "description": "Second throw initiated, reversed hand.",
+      "technique_notes": "Good hand switch.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 20.0,
+      "phase": "third_throw",
+      "description": "Third single throw completed.",
+      "technique_notes": "Consistent tension and form.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 25.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 10,
+      "end_seconds": 15,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 15,
+      "end_seconds": 20,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 20,
+      "end_seconds": 25,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Secure knot with appropriate tension."
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Good hand switch, maintained tension."
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Consistent technique."
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.9
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 25.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 575.0,
+    "formula_applied": "600 - 25.0 - 0.0 = 575.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear visibility of technique, no observed deviation from intended marks or knot failures.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level execution with minimal time and no penalties. Smooth suturing with consistent knotting technique.",
+  "strengths": [
+    "Efficient and precise needle handling.",
+    "Excellent knot formation and tension control."
+  ],
+  "improvement_suggestions": [],
+  "video_id": "pzkA-e_nNtU",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:32:17.108167+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.895765+00:00"
+  },
+  "scoreable": true
+}

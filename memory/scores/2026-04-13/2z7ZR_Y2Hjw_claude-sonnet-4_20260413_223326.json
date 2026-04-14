@@ -1,0 +1,80 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen - video beginning",
+      "technique_notes": "No FLS task content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "presentation",
+      "description": "Professional presenter in suit and tie speaking to camera in office setting",
+      "technique_notes": "Educational presentation format, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "data_presentation",
+      "description": "Chart showing 'Access to laparoscopic techniques in residents' departments' with percentages for conventional laparoscopy, LESS, and RAL",
+      "technique_notes": "Educational slide showing survey data about laparoscopic training access",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 39.0,
+      "phase": "data_presentation",
+      "description": "Chart showing 'Laparoscopic experience of residents at time of survey' with experience levels from None to Very Good",
+      "technique_notes": "Educational slide presenting resident experience survey results",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "data_presentation",
+      "description": "Chart showing 'Laparoscopic training facilities at residents' institution' with different facility types",
+      "technique_notes": "Educational slide showing training facility availability data",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Survey results indicate limited access to advanced laparoscopic techniques",
+      "Need for improved training facilities"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "educational_topics": [
+      "Resident access to laparoscopic training",
+      "Survey data on laparoscopic experience levels",
+      "Training facility availability statistics",
+      "Gaps in laparoscopic surgical education"
+    ]
+  },
+  "completion_time_seconds": null,
+  "penalties": [],
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear educational presentation with survey data slides. No FLS equipment, trainer boxes, or task performance visible.",
+  "cannot_determine": [],
+  "technique_summary": "This is an educational presentation about laparoscopic training survey results, not an FLS task performance.",
+  "video_id": "2z7ZR_Y2Hjw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:33:26.897461+00:00",
+  "scoreable": false
+}

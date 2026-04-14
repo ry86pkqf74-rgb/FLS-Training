@@ -1,0 +1,83 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Cannot Determine - Educational Presentation Only",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_content",
+      "description": "SAGES logo and educational presentation title screen",
+      "technique_notes": "This appears to be an educational presentation about FLS training methods",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "presentation_content",
+      "description": "Research study title slide about reversed camera view training",
+      "technique_notes": "Study by Sattarzadeh and Tsuda on laparoscopic training methods",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "presentation_content",
+      "description": "Methods slide showing study design with 30 laparoscopic novices",
+      "technique_notes": "References FLS Peg Transfer training in reversed camera orientation (180 degrees)",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "presentation_content",
+      "description": "Results graph showing Forward vs Reverse Camera Practice performance",
+      "technique_notes": "Statistical data showing p < 0.01 significance in performance improvement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "presentation_content",
+      "description": "Conclusion slide summarizing study findings",
+      "technique_notes": "States that practicing validated tasks with reversed camera view improves performance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot apply - no task performance visible"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "High confidence that this is an educational presentation slide deck about FLS training research, not an actual task performance video. All frames show presentation slides with text and graphs.",
+  "cannot_determine": [
+    "Task performance metrics - no actual FLS task execution visible",
+    "Completion time - no task being performed",
+    "Penalties - no task performance to assess",
+    "FLS score - presentation content only, not task performance"
+  ],
+  "technique_summary": "This video contains educational presentation slides about a research study on reversed camera view training for FLS tasks, specifically peg transfer. No actual task performance is visible.",
+  "strengths": [
+    "Educational content appears to be well-structured research presentation"
+  ],
+  "improvement_suggestions": [
+    "To score an FLS task performance, a video showing actual instrument manipulation and task execution would be needed"
+  ],
+  "video_id": "pTG6VZzh-7s",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:30:37.728587+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.894321+00:00"
+  },
+  "scoreable": false
+}

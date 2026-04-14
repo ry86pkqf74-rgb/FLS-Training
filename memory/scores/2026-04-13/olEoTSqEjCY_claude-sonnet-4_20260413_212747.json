@@ -1,0 +1,133 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Surgeon seated at laparoscopic trainer with instruments laid out",
+      "technique_notes": "Professional setup with multiple laparoscopic instruments visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "needle_load",
+      "description": "Pink foam appendage visible with surgeon manipulating suture material",
+      "technique_notes": "Foam appendage appears to be Penrose drain substitute for Task 3 endoloop",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "loop_manipulation",
+      "description": "Surgeon working with what appears to be endoloop around pink foam appendage",
+      "technique_notes": "Task appears to be endoloop (Task 3) rather than extracorporeal suture (Task 4)",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "loop_deployment",
+      "description": "Pre-tied loop being positioned around foam appendage",
+      "technique_notes": "Confirms this is Task 3 endoloop deployment, not Task 4 extracorporeal suture",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "loop_cinching",
+      "description": "Loop being tightened around foam appendage",
+      "technique_notes": "Standard endoloop cinching technique observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 63.0,
+      "phase": "completion",
+      "description": "Final positioning and securing of endoloop",
+      "technique_notes": "Task appears completed with loop secured around appendage",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 65.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 20,
+      "end_seconds": 35,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 35,
+      "end_seconds": 50,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 50,
+      "end_seconds": 65,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "successful": true,
+      "cinched_tightly": true,
+      "at_marked_line": true,
+      "appendage_transected": false
+    },
+    "loop_position": {
+      "deviation_from_mark_mm": 0.0,
+      "confidence": 0.3
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 65.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 115.0,
+    "formula_applied": "180 - 65.0 - 0.0 = 115.0"
+  },
+  "confidence": 0.4,
+  "confidence_rationale": "Task identification uncertain - video shows endoloop procedure (Task 3) but was labeled as extracorporeal suture (Task 4). Scoring applied Task 3 rubric based on observed procedure. Loop position relative to mark cannot be clearly assessed due to camera angle and lighting.",
+  "cannot_determine": [
+    "Exact position of loop relative to marked line due to camera angle",
+    "Precise measurement of any deviation from target mark",
+    "Whether this is actually Task 4 or Task 3 based on visual evidence alone"
+  ],
+  "technique_summary": "Competent intermediate performance of endoloop deployment with smooth cinching technique. Time falls within intermediate range (40-90s benchmark).",
+  "strengths": [
+    "Smooth loop deployment and cinching",
+    "No visible appendage damage",
+    "Efficient completion time"
+  ],
+  "improvement_suggestions": [
+    "Verify task identification - procedure appears to be endoloop rather than extracorporeal suture",
+    "Ensure precise positioning at marked line"
+  ],
+  "video_id": "olEoTSqEjCY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:27:47.375887+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.891743+00:00"
+  },
+  "scoreable": true
+}

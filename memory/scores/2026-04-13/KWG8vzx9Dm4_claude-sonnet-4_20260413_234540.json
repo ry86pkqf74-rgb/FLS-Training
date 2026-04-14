@@ -1,0 +1,74 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task - Educational presentation on surgical coaching",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_intro",
+      "description": "Black screen - video beginning",
+      "technique_notes": "Not applicable - presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "presentation_content",
+      "description": "Title slide: Masters Series: Surgical Coaching - Tips to Enhance Skills of Trainees and Peers",
+      "technique_notes": "Educational presentation by Justin B Dimick",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "presentation_content",
+      "description": "Slide discussing 'The Black Box of Surgery' with illustration",
+      "technique_notes": "Conceptual framework presentation about technique and technical skill",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS task performance"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear educational presentation slides about surgical coaching methodology, not an FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is an educational presentation about coaching methodology, not a performance of any FLS task",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "peer coaching framework using Wisconsin model",
+      "constructive feedback methodology",
+      "active listening techniques for surgical education",
+      "goal-setting and review processes",
+      "video-based peer coaching implementation"
+    ],
+    "verbal_cues": [
+      "Definition of coaching as unlocking potential rather than teaching",
+      "Emphasis on constructive feedback being descriptive, specific, and non-judgmental",
+      "Distinction between rescue mode vs responsibility mode in learner interaction"
+    ],
+    "common_errors_addressed": [
+      "Traditional teaching assumption that students no longer need instruction after graduation",
+      "Weakness-focused rather than strength-based coaching approaches",
+      "Making decisions for learners rather than building their capacity"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "KWG8vzx9Dm4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:45:40.926825+00:00",
+  "scoreable": false
+}

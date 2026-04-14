@@ -1,0 +1,157 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to Determine - Product/Equipment Demonstration",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "product_overview",
+      "description": "Silicone laparoscopic suture pad shown in isolation, top-down view",
+      "technique_notes": "Pink silicone practice pad with raised suture line patterns and grooves",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "product_demonstration",
+      "description": "Text overlay: 'Silicone Laparoscopic Suture Pad'",
+      "technique_notes": "Labeled product demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "product_detail",
+      "description": "Close-up view of pad surface showing suture grooves and patterns",
+      "technique_notes": "Demonstrates pad texture and channel design",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "material_demonstration",
+      "description": "Gloved hands manipulating pad, showing flexibility",
+      "technique_notes": "Text overlay: 'With Soft / Durable Silicone Material'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "material_demonstration",
+      "description": "Hands flexing pad to show durability and material properties",
+      "technique_notes": "Demonstrating silicone flexibility",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "live_demonstration_start",
+      "description": "Monitor display showing live surgical demonstration on anatomical model",
+      "technique_notes": "Text overlay: 'Live D[emonstration]' - surgical demonstration on tissue model with marked suture points",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 12.0,
+      "phase": "live_demonstration_suturing",
+      "description": "Laparoscopic instruments performing suturing on anatomical model with marked entry/exit points",
+      "technique_notes": "Demonstrates proper suture placement technique using laparoscopic instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "live_demonstration_suturing",
+      "description": "Continuing suture placement; needle passing through tissue marks",
+      "technique_notes": "Shows perpendicular needle entry and exit technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 16.0,
+      "phase": "live_demonstration_suturing",
+      "description": "Suture line being formed with multiple passes visible",
+      "technique_notes": "Demonstrates sequential suture placement along marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "live_demonstration_suturing",
+      "description": "Completed suture line on anatomical model",
+      "technique_notes": "Shows final appearance of properly executed suture line with appropriate spacing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 20.0,
+      "phase": "product_display",
+      "description": "Suture pad shown in isolation against white background",
+      "technique_notes": "Another angle of the pink silicone pad",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 22.0,
+      "phase": "product_display",
+      "description": "Alternative pad orientation showing different suture pathway configurations",
+      "technique_notes": "Demonstrates multiple practice patterns available on pad",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 24.0,
+      "phase": "product_display",
+      "description": "Hands demonstrating pad flexibility and manipulation",
+      "technique_notes": "Shows durability and ease of handling",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is a product/equipment demonstration and instructional material for a silicone laparoscopic suture pad. It is NOT a performance video of an FLS trainee completing a task. The video contains: (1) Product overview showing the suture pad, (2) Material demonstration highlighting silicone properties, (3) Live demonstration on an anatomical model showing proper suturing technique. No trainee performance is being evaluated, therefore no FLS scoring is applicable.",
+  "cannot_determine": [
+    "Task ID - video does not show a trainee performing an official FLS task",
+    "Completion time - demonstration is educational, not timed performance",
+    "Performance penalties - no trainee performance to assess",
+    "FLS score - not a performance evaluation"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper perpendicular needle entry technique",
+      "Sequential suture placement along marked pathway",
+      "Appropriate suture spacing and tension",
+      "Use of laparoscopic needle drivers for suturing",
+      "Anatomically-informed suture line placement"
+    ],
+    "verbal_cues": [
+      "Product labeled as 'Silicone Laparoscopic Suture Pad'",
+      "Material highlighted as 'Soft / Durable Silicone Material'",
+      "Live demonstration context indicated"
+    ],
+    "common_errors_addressed": [
+      "Demonstrates perpendicular needle entry to avoid tissue damage",
+      "Shows proper spacing between suture passes",
+      "Illustrates clean, controlled needle movement through tissue"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "summary": "This is an instructional/promotional video demonstrating a silicone laparoscopic suture practice pad and proper suturing technique. No FLS task performance evaluation is possible. The video serves as educational material showing correct technique on an anatomical model.",
+  "video_id": "FCyaeiCPlVg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:22:28.174581+00:00",
+  "scoreable": false
+}

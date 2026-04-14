@@ -1,0 +1,122 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Endoloop is introduced and positioned around the appendage.",
+      "technique_notes": "Good initial placement, loop appears open and ready for deployment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 2.0,
+      "phase": "target_approach",
+      "description": "Loop is adjusted and approached target mark.",
+      "technique_notes": "Steady navigation towards marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 4.0,
+      "phase": "loop_placement",
+      "description": "Final adjustment of the loop around the target, loop carefully placed at the marked line.",
+      "technique_notes": "Accurate placement observed with minor adjustments.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 10.0,
+      "phase": "cinch",
+      "description": "Loop cinched tightly around the appendage.",
+      "technique_notes": "Secure cinching observed, appropriate tension maintained.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 18.0,
+      "phase": "cut_tail",
+      "description": "Instrument used to cut the tail of the loop, finalizing the task.",
+      "technique_notes": "Clean cut, task appears complete.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 23.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 4,
+      "end_seconds": 10,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 10,
+      "end_seconds": 18,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 18,
+      "end_seconds": 23,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_positioning": {
+      "deviation_from_mark_mm": 0,
+      "confidence": 0.9
+    },
+    "cinching_quality": {
+      "loop_tight": true,
+      "notes": "Secure cinch without slack."
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 23.0,
+    "total_penalties": 0,
+    "total_fls_score": 157.0,
+    "formula_applied": "180 - 23.0 - 0 = 157.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear visibility in all frames, accurate loop positioning and cinching observed.",
+  "cannot_determine": [],
+  "technique_summary": "Expert performance with precise loop placement and swift task completion.",
+  "strengths": [
+    "Excellent loop orientation and cinching technique.",
+    "Efficient movement and instrument handling."
+  ],
+  "improvement_suggestions": [],
+  "video_id": "-7iWDuqJBjs",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:13:11.128418+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.720817+00:00"
+  },
+  "scoreable": true
+}

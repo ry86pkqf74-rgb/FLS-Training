@@ -1,0 +1,176 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_overview",
+      "description": "Title card showing 'Coordination' simulation procedure with instructional text about calibration and exercise setup",
+      "technique_notes": "Educational content with step-by-step setup instructions for LapSim trainer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_content",
+      "description": "Detailed instructions displayed covering gallstone pickup, target bag placement, and repetition cycles",
+      "technique_notes": "Written instructions explaining that gallstones disappear when fully within target, time pressure element mentioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_demo",
+      "description": "LapSim trainer interface loading screen showing 'LapSim by surgicalscience' branding",
+      "technique_notes": "Software interface preparation before performance begins",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "performance_start",
+      "description": "Laparoscopic view of simulated abdominal cavity with textured tissue surface. Instruction: 'Find the gallstone and touch it with the instrument'",
+      "technique_notes": "Clear view of simulated anatomy with gallstone visible as small gold-colored object. Single laparoscopic instrument visible entering field",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 18.0,
+      "phase": "pickup_nondominant",
+      "description": "Instrument tip approaching gallstone from superior aspect. Gallstone clearly visible and stationary",
+      "technique_notes": "Good visualization. Instrument moving deliberately toward target with controlled motion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 22.0,
+      "phase": "pickup_nondominant",
+      "description": "Instrument grasping gallstone. Gallstone remains in view and appears grasped",
+      "technique_notes": "Clean pickup motion. Instrument orientation appropriate for grasp",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 26.0,
+      "phase": "transfer_midair",
+      "description": "Gallstone being transported upward and rightward toward target bag visible at upper right of field",
+      "technique_notes": "Smooth transport movement. Target bag location clearly indicated by mesh structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 30.0,
+      "phase": "place_dominant",
+      "description": "Gallstone being lowered into target bag. Instruction updated: 'Move the gallstone into the target bag'",
+      "technique_notes": "Controlled placement. Gallstone positioned for entry into target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 33.0,
+      "phase": "place_dominant",
+      "description": "Gallstone fully within target bag - object begins to disappear/dissolve confirming successful placement",
+      "technique_notes": "Successful transfer indicated by gallstone disappearance. Instruction counter updated to '(# gallstones left: 4)'",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 36.0,
+      "phase": "reverse_pickup",
+      "description": "Next gallstone located in lower left field. Instruction: 'Find the next gallstone and touch it with the instrument tip'. Counter shows 4 remaining",
+      "technique_notes": "Good field visualization for locating subsequent gallstones. Trainee efficiently searching field",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 38.88,
+      "phase": "task_completion",
+      "description": "Results screen displayed showing performance metrics. Task completed with Status: 'You Passed!' and Score: 81%",
+      "technique_notes": "Automated performance evaluation shown. Total Time: 38.88 seconds. Multiple performance parameters displayed with color-coded scoring (red/yellow/green gradient)",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 38.88,
+  "phase_timings": [
+    {
+      "phase": "task_execution",
+      "start_seconds": 0,
+      "end_seconds": 38.88,
+      "duration_seconds": 38.88,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "gallstone_transfers": {
+      "total_completed": 4,
+      "total_possible": 6,
+      "incomplete_status": true,
+      "note": "Video ends with results screen showing 4 gallstones transferred (counter shows 1 remaining at 38.88s mark)"
+    },
+    "performance_metrics_reported": {
+      "total_time_seconds": 38.88,
+      "instrument_path_length_m": 1.2,
+      "instrument_angular_path_degrees": 387.52,
+      "instrument_outside_view_count": 1,
+      "instrument_outside_view_time_s": 1.25,
+      "camera_path_length_m": 0.26,
+      "camera_angular_path_degrees": 73.85,
+      "tissue_damage_count": 3,
+      "maximum_damage_mm": 0.25
+    },
+    "automated_score_result": "81%"
+  },
+  "score_components": {
+    "note": "This is an INSTRUCTIONAL video, not a performance to be scored under FLS official rubric. The embedded results screen shows LapSim software scores, which differ from official MISTELS FLS scoring. Official FLS peg transfer scoring would be: 300 - 38.88 - (penalties for any drops/failures) = approximately 261 points if no penalties, placing this in the EXPERT range (40-60s is expert benchmark).",
+    "cannot_score_as_official_fls": true,
+    "lapsim_embedded_score": "81%",
+    "hypothetical_official_fls_score_if_all_6_completed_no_penalties": 261.12
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "This is clearly an instructional/educational video showing LapSim training software interface with embedded automated scoring. The video includes setup instructions, tutorial text, and an automated performance evaluation. While the video contains a simulated performance, it is presented as an instructional demonstration by the LapSim platform itself, not a raw trainee performance. Completion appears interrupted (video ends during transfer 5 of 6), and scoring is from LapSim's proprietary algorithm, not FLS official rubric.",
+  "cannot_determine": [
+    "Official FLS MISTELS score \u2014 video uses LapSim proprietary metrics rather than FLS rubric",
+    "Whether performance is trainee or instructional demo \u2014 likely instructional given interface presentation",
+    "Exact reason for task incompleteness (timeout vs. intentional demo end)",
+    "Penalty breakdown under official FLS scoring \u2014 LapSim reports tissue damage (3 events, 0.25mm max) but this differs from FLS penalty structure"
+  ],
+  "video_classification_rationale": "This video is classified as 'instructional' because: (1) it begins with titled setup procedures and written instructional text; (2) it displays the LapSim trainer interface with overlay instructions ('Find gallstone...', 'Move into target bag'); (3) it ends with an automated results screen showing LapSim scoring, not raw video of a standalone performance; (4) the presentation includes educational framing (Didactics, Instructions, Results tabs visible) rather than simple performance capture.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Gallstone pickup using controlled grasper approach",
+      "Smooth midair transport of objects between pegs",
+      "Placement of object into target container with precision",
+      "Field awareness and efficiency in locating sequential objects",
+      "Efficient camera control to track instrument and target"
+    ],
+    "verbal_cues": [
+      "Calibrate instruments before beginning exercise",
+      "Follow instrument movements with camera",
+      "Only have a few seconds before gallstone times out and disappears",
+      "Continue to move gallstones until exercise completed"
+    ],
+    "common_errors_addressed": [
+      "Inadequate instrument calibration before task start",
+      "Poor camera following leading to loss of field visualization",
+      "Hesitation or slow movement causing gallstone timeout/disappearance",
+      "Inefficient search patterns for locating multiple objects"
+    ],
+    "skill_level_demonstrated": "intermediate_to_expert"
+  },
+  "improvement_suggestions": [
+    "Understand that LapSim scoring (81%) differs from official FLS MISTELS rubric \u2014 official training should use validated FLS scoring",
+    "If performing for official FLS certification, maintain completion of all 6 transfers within 300 second maximum",
+    "Review tissue damage events (3 recorded) to identify unnecessary collisions or aggressive movements",
+    "Optimize camera control to reduce outside-field moments (1 recorded) for improved visualization"
+  ],
+  "note_on_scoring": "This video does NOT receive an official FLS score because it is instructional content with embedded LapSim software results, not a standalone performance video suitable for FLS proctor evaluation. If a trainee's raw performance were submitted for official FLS MISTELS scoring on the Peg Transfer task, the scoring formula would be: Score = 300 \u2212 completion_time \u2212 penalties (drops, failures, inefficiencies). The hypothetical official FLS score for this embedded performance (assuming all 6 transfers completed with only the 3 tissue damage events as minor penalties) would approximate 255\u2013265 points, indicating expert-level speed.",
+  "video_id": "2r3CAb0XLKk",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:33:02.946904+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to process this request with a valid JSON output as you have provided static images and not a continuous video. To accurately score an FLS task, I would need sequential frames from a video to observe each phase transition and technique. If you have a video or a series of sequential frames",
+  "video_id": "bAEagj-IaqA",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:46:18.245034+00:00",
+  "task_id": "task4_extracorporeal_knot",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.860358+00:00"
+  },
+  "scoreable": false
+}

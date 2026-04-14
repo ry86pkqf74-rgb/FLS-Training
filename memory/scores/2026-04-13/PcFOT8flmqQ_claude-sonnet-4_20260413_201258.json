@@ -1,0 +1,122 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Initial view of sigmoid colon anatomy with appendage visible",
+      "technique_notes": "Real surgical procedure rather than FLS trainer - this appears to be actual laparoscopic sigmoid resection",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "dissection",
+      "description": "Electrocautery hook dissecting tissue planes around sigmoid colon",
+      "technique_notes": "Surgical dissection technique visible, not standard FLS endoloop task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "dissection",
+      "description": "Continued dissection with hook cautery around vascular pedicle",
+      "technique_notes": "This is clearly a real surgical case, not FLS training exercise",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "dissection",
+      "description": "Grasper manipulation of sigmoid colon with cautery work",
+      "technique_notes": "Real tissue handling in surgical case",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "dissection",
+      "description": "Hook cautery working on mesenteric attachments",
+      "technique_notes": "Standard laparoscopic surgical technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "dissection",
+      "description": "Grasper retracting tissue while cautery divides adhesions",
+      "technique_notes": "Coordinated bimanual technique in real surgery",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "extracorporeal_work",
+      "description": "View changes to extracorporeal work - hands visible manipulating tissue specimen",
+      "technique_notes": "Specimen extraction and processing outside body",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "extracorporeal_work",
+      "description": "Hands manipulating resected sigmoid specimen with suture material",
+      "technique_notes": "Standard specimen processing",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "loop_successfully_deployed": false,
+      "loop_placed_at_mark": false,
+      "loop_cinched_properly": false,
+      "appendage_transected": false
+    },
+    "target_identification": {
+      "foam_appendage_visible": false,
+      "marking_line_visible": false,
+      "proper_target_approach": false
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot compute - this is not an FLS endoloop task"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Very high confidence this is NOT an FLS Task 3 endoloop exercise. This is clearly a real laparoscopic sigmoid resection surgery with real patient anatomy, not the standardized foam appendage trainer used for FLS.",
+  "cannot_determine": [
+    "FLS endoloop score - video shows real surgery, not FLS training task",
+    "Completion time for endoloop task - no endoloop was performed",
+    "Loop placement accuracy - no pre-tied loop visible",
+    "Foam appendage assessment - real colon tissue, not foam trainer"
+  ],
+  "technique_summary": "This video shows a competent laparoscopic sigmoid resection with proper dissection technique, tissue handling, and instrument coordination. However, it is not an FLS Task 3 endoloop exercise and cannot be scored using FLS criteria.",
+  "strengths": [
+    "Excellent real surgical technique demonstrated",
+    "Good tissue handling and instrument coordination",
+    "Appropriate use of electrocautery for dissection"
+  ],
+  "improvement_suggestions": [
+    "For FLS scoring, this video should show the standard endoloop task with foam appendage",
+    "FLS Task 3 requires deployment of pre-tied ligating loop, not surgical resection"
+  ],
+  "video_id": "PcFOT8flmqQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:12:58.851991+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.831490+00:00"
+  },
+  "scoreable": false
+}

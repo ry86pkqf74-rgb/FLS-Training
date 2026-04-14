@@ -1,0 +1,74 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Not an FLS Task - Educational Material",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen - no video content visible",
+      "technique_notes": "No laparoscopic instruments or FLS task setup visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Educational diagram showing female reproductive system anatomy",
+      "technique_notes": "Static anatomical illustration, not a surgical performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "not_applicable",
+      "description": "Educational diagram showing laparoscopic tubal sterilization procedure",
+      "technique_notes": "Anatomical illustration showing laparoscope insertion and Filshie clip placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "not_applicable",
+      "description": "Continuation of tubal sterilization educational content",
+      "technique_notes": "Shows bilateral fallopian tube occlusion technique - educational material only",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "error_type": "incorrect_content",
+    "expected_content": "FLS Task 3 (Endoloop) performance video showing foam appendage and ligating loop",
+    "actual_content": "Educational slides about female reproductive anatomy and tubal sterilization procedures"
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot score - not an FLS task performance video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Content is clearly educational material about gynecological procedures, not an FLS task performance. No laparoscopic trainer box, foam appendage, or endoloop visible.",
+  "cannot_determine": [
+    "All FLS scoring parameters - video contains educational diagrams rather than task performance"
+  ],
+  "technique_summary": "This is educational content about laparoscopic tubal sterilization, not an FLS Task 3 (Endoloop) performance video.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Please provide a video showing actual FLS Task 3 performance with foam appendage and pre-tied ligating loop in a laparoscopic trainer box"
+  ],
+  "video_id": "kgNLACVbjX4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:16:00.071412+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.882566+00:00"
+  },
+  "scoreable": false
+}

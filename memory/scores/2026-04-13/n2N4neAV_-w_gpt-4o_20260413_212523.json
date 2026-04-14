@@ -1,0 +1,128 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Beginning of the task; instruments are visible, and user is preparing to grasp the first ring with the left instrument.",
+      "technique_notes": "Instruments positioned correctly for initial grasp.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "transfer_midair",
+      "description": "Ring is lifted mid-air and is being transferred from left to right instrument.",
+      "technique_notes": "Transfer appears controlled.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "place_dominant",
+      "description": "Ring placed on matching peg on the right side.",
+      "technique_notes": "Ring is aligned well on the peg.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 8.0,
+      "phase": "reverse_pickup",
+      "description": "Right instrument lifting a ring for reverse transfer back.",
+      "technique_notes": "Extraction looks steady.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 12.0,
+      "phase": "reverse_transfer",
+      "description": "Ring is held in mid-air during reverse transfer from right to left.",
+      "technique_notes": "Maintaining adequate distance from pegs.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 16.0,
+      "phase": "reverse_place",
+      "description": "Ring placed back on a peg in the starting position.",
+      "technique_notes": "Placement is accurate.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 18.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 4,
+      "end_seconds": 8,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 8,
+      "end_seconds": 12,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 12,
+      "end_seconds": 16,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 16,
+      "end_seconds": 18,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 18.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 282.0,
+    "formula_applied": "300 - 18.0 - 0.0 = 282.0"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "All phases of the task were clearly visible and well-executed without visible errors or dropped objects.",
+  "cannot_determine": [],
+  "technique_summary": "An exemplary performance with precise handling and minimal time usage.",
+  "strengths": [
+    "Efficient and precise instrument handling.",
+    "Smooth transitions and steady placements."
+  ],
+  "improvement_suggestions": [],
+  "video_id": "n2N4neAV_-w",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:25:23.837144+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.889969+00:00"
+  },
+  "scoreable": true
+}

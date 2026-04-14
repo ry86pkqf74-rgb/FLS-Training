@@ -1,0 +1,42 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "not_applicable"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "Video contains only FLS program history slides and administrative/educational content about FLS (Fundamentals of Laparoscopic Surgery) curriculum development, costs, and logistical/political considerations. No actual peg transfer task performance is visible. The first image shows SAGES/FLS branding; all subsequent frames are text-based slides covering FLS history (~1997-2010), test development, administration, security, economics, and professional/political context. No instruments, pegboard, or rubber objects are shown.",
+  "cannot_determine": [
+    "Completion time \u2014 no task performance video present",
+    "Penalties \u2014 no task performance video present",
+    "Phase timings \u2014 no task performance video present",
+    "FLS score \u2014 video is instructional/educational content only, not a trainee performance"
+  ],
+  "technique_summary": "Not applicable. Video is educational material about FLS program history and administration, not a task performance recording.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "educational_focus": "FLS program history, test development methodology, logistical/administrative considerations, economic sustainability, professional and industry relationships"
+  },
+  "improvement_suggestions": [],
+  "scoring_decision": "No score assigned. Video does not contain peg transfer task performance. Instructional content only.",
+  "video_id": "QmtHFqf55fc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:02:35.907661+00:00",
+  "scoreable": false
+}

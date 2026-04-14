@@ -1,0 +1,221 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Starting position. Left grasper (non-dominant hand) positioned to grasp first peg at lower left position. Right grasper visible at lower right.",
+      "technique_notes": "Ready stance, instruments positioned at cardinal points around board",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper grasping first black peg object at lower left position. Peg is elevated from board.",
+      "technique_notes": "Clean grasp of peg, minimal hesitation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "transfer_midair",
+      "description": "Left grasper holding peg elevated, beginning transfer toward center of board. Peg held securely.",
+      "technique_notes": "Smooth midair transport, peg positioned above board",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "transfer_midair",
+      "description": "Peg in transit, left grasper moving peg toward central area of board.",
+      "technique_notes": "Controlled movement, peg remains secure in grasp",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "place_dominant",
+      "description": "Right grasper approaching to receive peg from left grasper. Exchange occurring in central area of board.",
+      "technique_notes": "Coordinated instrument exchange, both hands working in tandem",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "place_dominant",
+      "description": "Right grasper now holding peg, left grasper released. Peg positioned for placement on opposite side of board.",
+      "technique_notes": "Clean hand-off, right hand now in control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "place_dominant",
+      "description": "Right grasper placing first peg onto upper right position on board. Peg being lowered onto target location.",
+      "technique_notes": "Precise placement, peg seated on board",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "reverse_pickup",
+      "description": "Right grasper now picking up peg from upper right location (reverse direction beginning). Left grasper repositioning.",
+      "technique_notes": "Smooth transition to reverse phase, instrument repositioning efficient",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 30.0,
+      "phase": "reverse_transfer",
+      "description": "Right grasper transferring peg across midline toward left side. Midair transport of multiple pegs evident on board.",
+      "technique_notes": "Multiple pegs now positioned on board from initial transfers. Controlled midair movement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "reverse_place",
+      "description": "Left grasper receiving and placing pegs back to starting positions. Multiple pegs visible already transferred on board.",
+      "technique_notes": "Coordinated bilateral transfer, rhythm established",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 65.0,
+      "phase": "reverse_place",
+      "description": "Final pegs being positioned. Board shows configuration near completion with pegs distributed across positions.",
+      "technique_notes": "Movements becoming more deliberate as completion approaches, maintaining control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 82.0,
+      "phase": "reverse_place",
+      "description": "Final peg placement. All pegs appear to be successfully transferred and seated on board. Task nearing completion.",
+      "technique_notes": "Final positioning secure, no visible loose or dropped objects",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 82.5,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 12,
+      "duration_seconds": 12,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 6,
+      "end_seconds": 21,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 12,
+      "end_seconds": 27,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 27,
+      "end_seconds": 40,
+      "duration_seconds": 13,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 40,
+      "end_seconds": 65,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 65,
+      "end_seconds": 82.5,
+      "duration_seconds": 17.5,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "no_dropped_objects",
+      "description": "No objects dropped outside field of view or requiring retrieval",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "confidence": 0.95
+    },
+    {
+      "type": "all_objects_placed",
+      "description": "All 6 pegs appear to be successfully placed on board positions",
+      "points_deducted": 0.0,
+      "frame_evidence": [
+        12
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "task_specific_assessments": {
+    "peg_transfer_details": {
+      "total_pegs": 6,
+      "pegs_successfully_transferred": 6,
+      "pegs_dropped_outside_field": 0,
+      "pegs_not_placed_on_target": 0,
+      "forward_direction_completion": "complete",
+      "reverse_direction_completion": "complete",
+      "hand_coordination": "smooth and efficient"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 82.5,
+    "total_penalties": 0.0,
+    "total_fls_score": 217.5,
+    "formula_applied": "300 - 82.5 - 0 = 217.5"
+  },
+  "confidence": 0.88,
+  "confidence_rationale": "Video frames clearly show peg positions and transfers throughout task. All 6 pegs are visible on the board at completion. Completion time estimated from final frame where all pegs are seated. No dropped objects observed. Minor ambiguity in exact moment of task completion (final frame precision) reduces confidence slightly.",
+  "cannot_determine": [
+    "Exact frame count at completion \u2014 video frames provided do not include timestamp overlay; estimate based on sequential frame position"
+  ],
+  "technique_summary": "Intermediate-level performance demonstrating solid bilateral coordination and efficient peg transfer technique. All pegs successfully transferred with no penalties. Time of 82.5 seconds places performance in intermediate range (60\u2013120s benchmark).",
+  "strengths": [
+    "No dropped objects throughout task",
+    "Clean instrument exchanges between dominant and non-dominant hands",
+    "Smooth peg placement without overshooting or positioning errors",
+    "Efficient transition between forward and reverse phases",
+    "Steady hand control and coordinated bilateral movements"
+  ],
+  "improvement_suggestions": [
+    "Reduce overall time to 60\u201370s range to reach expert level performance",
+    "Increase speed of midair transfers while maintaining control",
+    "Optimize reverse phase timing \u2014 currently slightly slower than forward phase"
+  ],
+  "video_id": "5EPWRtM_Nwg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:44:35.672980+00:00",
+  "scoreable": true
+}

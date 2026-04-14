@@ -1,0 +1,91 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS Task Identified",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Stanford Medicine Surgery VAMIS Fellowship title screen",
+      "technique_notes": "Institutional branding slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "not_applicable",
+      "description": "Female presenter speaking to camera outside hospital building",
+      "technique_notes": "Educational presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "not_applicable",
+      "description": "Two surgeons performing laparoscopic surgery in operating room",
+      "technique_notes": "Clinical surgical environment, not training simulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "not_applicable",
+      "description": "Continuation of OR scene with surgeons at laparoscopic console",
+      "technique_notes": "Real surgical case documentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 170.0,
+      "phase": "not_applicable",
+      "description": "Surgeon at da Vinci robotic console",
+      "technique_notes": "Robotic surgery demonstration, not FLS training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 240.0,
+      "phase": "not_applicable",
+      "description": "Operating room with da Vinci robot and surgical team",
+      "technique_notes": "Clinical robotics showcase",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No scoring applicable - not an FLS task performance"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows institutional promotional/educational content about Stanford's surgery program and robotic capabilities, not FLS training tasks",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - video contains promotional content about Stanford Surgery VAMIS Fellowship and robotic surgery capabilities",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic surgery overview",
+      "robotic surgery console operation",
+      "multi-port laparoscopic access"
+    ],
+    "verbal_cues": [
+      "institutional program description",
+      "surgical training pathway information"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "NqLIj89zz3I",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:57:55.080649+00:00",
+  "scoreable": false
+}

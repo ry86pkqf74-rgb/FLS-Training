@@ -1,0 +1,167 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Endoloop applicator visible with pre-tied loop, foam appendage with blue marks visible on white Penrose drain",
+      "technique_notes": "Setup appears correct with marked target on appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_deploy",
+      "description": "Applicator being maneuvered, loop partially deployed",
+      "technique_notes": "Smooth deployment technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "target_approach",
+      "description": "Loop fully deployed, approaching foam appendage target area",
+      "technique_notes": "Good loop visualization, appropriate size deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "loop_placement",
+      "description": "Loop being positioned around appendage near blue mark",
+      "technique_notes": "Careful positioning technique observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "loop_placement",
+      "description": "Loop appears positioned around appendage at target mark",
+      "technique_notes": "Loop placement looks accurate to mark",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 75.0,
+      "phase": "cinch",
+      "description": "Red-handled instrument (scissors) visible, loop being cinched",
+      "technique_notes": "Appropriate instrument selection for cinching",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 125.0,
+      "phase": "cut_tail",
+      "description": "Scissors cutting suture tail, loop appears secured around appendage",
+      "technique_notes": "Clean cutting technique, loop maintains position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 30,
+      "timestamp_seconds": 150.0,
+      "phase": "cut_tail",
+      "description": "Final cutting of excess suture material, task completion",
+      "technique_notes": "Task completed successfully, appendage intact",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 150.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 10,
+      "end_seconds": 25,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 25,
+      "end_seconds": 75,
+      "duration_seconds": 50,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 75,
+      "end_seconds": 125,
+      "duration_seconds": 50,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 125,
+      "end_seconds": 150,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_deviation_from_mark",
+      "description": "Loop appears positioned approximately 1-2mm distal to blue mark",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        9,
+        15
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 1.5,
+      "loop_cinched_tightly": true,
+      "appendage_transected": false,
+      "loop_security": "secure"
+    },
+    "final_assessment": {
+      "loop_at_correct_location": false,
+      "task_completed_successfully": true,
+      "appendage_integrity": "intact"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 150.0,
+    "total_penalties": 1.5,
+    "total_fls_score": 28.5,
+    "formula_applied": "180 - 150.0 - 1.5 = 28.5"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Clear visualization of loop deployment and cinching process. Some uncertainty in exact measurement of deviation from mark due to camera angle and mark visibility. Appendage integrity well-observed.",
+  "cannot_determine": [
+    "Exact mm deviation measurement - estimated from visual assessment of loop position relative to mark"
+  ],
+  "technique_summary": "Competent intermediate performance with smooth deployment and appropriate instrument handling. Primary issue was minor positioning inaccuracy of loop relative to target mark.",
+  "strengths": [
+    "Smooth loop deployment technique",
+    "Appropriate instrument selection and handling",
+    "Secure loop cinching without appendage damage",
+    "Efficient cutting of excess suture material"
+  ],
+  "improvement_suggestions": [
+    "Focus on precise loop positioning at the marked line",
+    "Consider multiple positioning attempts before cinching if placement appears suboptimal"
+  ],
+  "video_id": "GZZjbgSyqjM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:52:07.464805+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.813393+00:00"
+  },
+  "scoreable": true
+}

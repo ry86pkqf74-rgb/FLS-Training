@@ -1,0 +1,145 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Left instrument approaching gauze, preparing to grasp.",
+      "technique_notes": "Initial positioning appears stable.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 10.0,
+      "phase": "initial_cut",
+      "description": "Initiating the cut along the marked line.",
+      "technique_notes": "Cut starts well on the line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 40.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing cut in a clockwise direction.",
+      "technique_notes": "Maintaining alignment with the line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 60.0,
+      "phase": "counterclockwise_cut",
+      "description": "Reversing direction to refine edges.",
+      "technique_notes": "Minor deviation observed.",
+      "penalties_observed": [
+        {
+          "type": "deviation",
+          "description": "Approximately 2mm deviation noted at middle right.",
+          "points_deducted": 2.0,
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 90.0,
+      "phase": "completion",
+      "description": "Cut completion, removing gauze.",
+      "technique_notes": "Overall cut appears clean.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 90.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 10.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 10.0,
+      "end_seconds": 20.0,
+      "duration_seconds": 10.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 20.0,
+      "end_seconds": 40.0,
+      "duration_seconds": 20.0,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 40.0,
+      "end_seconds": 70.0,
+      "duration_seconds": 30.0,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 70.0,
+      "end_seconds": 90.0,
+      "duration_seconds": 20.0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation",
+      "description": "Approximately 2mm deviation on right side.",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        18
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "deviation_assessments": [
+      {
+        "location": "right",
+        "measured_deviation_mm": 2.0,
+        "frame_reference": 18,
+        "confidence": 0.7
+      }
+    ],
+    "gauze_attachment": {
+      "gauze_detached": false
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 90.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 208.0,
+    "formula_applied": "300 - 90 - 2 = 208"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Except for a single observed deviation, cutting was consistently on the marked line with robust tooling. Overall, high confidence in this assessment.",
+  "cannot_determine": [],
+  "technique_summary": "Execution showed skill with consistent alignment and minor deviations observed.",
+  "strengths": [
+    "Effective gauze handling and cutting technique",
+    "Maintained focus on the line."
+  ],
+  "improvement_suggestions": [
+    "Strive for reduced deviation during directional changes.",
+    "Aim to reduce task time further into expert range."
+  ],
+  "video_id": "k2EO-yyqafY",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:14:52.869879+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.881613+00:00"
+  },
+  "scoreable": true
+}

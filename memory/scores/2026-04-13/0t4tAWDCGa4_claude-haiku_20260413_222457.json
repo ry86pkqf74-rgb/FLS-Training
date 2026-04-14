@@ -1,0 +1,93 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not applicable - instructional/educational content",
+  "content_type": "Conference presentation - FLS 2.0 competency framework",
+  "presenter": "Neal E Seymour, MD",
+  "presentation_title": "What are the Fundamental Skills Required to Perform Laparoscopic Surgery? We Asked and You Answered!",
+  "conference": "SAGES 2022 - Welcome Home",
+  "is_fls_performance_video": false,
+  "is_fls_expert_demo": false,
+  "scoring_performed": false,
+  "reason_no_score": "Video is an educational/instructional presentation about FLS competencies and framework development, not a performance or expert demonstration of an FLS task. Contains slides, narration, survey data, and competency domain definitions rather than actual task execution.",
+  "teaching_content": {
+    "presentation_focus": "FLS 2.0 development and updated competency framework for laparoscopic surgery",
+    "key_topics_covered": [
+      "Evolution of FLS technical skills testing",
+      "Working group methodology using SMEs from 12 North American institutions",
+      "Nominal Group Technique for competency identification",
+      "Five competency domains: Setup for laparoscopy, Abdominal access and port placement, Laparoscope and instrument use, Tissue management, Managing the operative environment"
+    ],
+    "survey_methodology": {
+      "total_items": 65,
+      "rating_scale": "Anchored (importance, frequency, priority for testing)",
+      "participants": "2336 opened surveys, 6963 surveys (34% response rate)",
+      "participant_groups": [
+        "SAGES Membership",
+        "APDS Membership",
+        "Recent successful FLS test takers",
+        "Practicing surgeons, fellows, residents"
+      ]
+    },
+    "five_fls_tasks_mapped": [
+      {
+        "task": "Task 1: Peg Transfer",
+        "mapped_competencies": [
+          "Navigate instruments to target with both hands",
+          "Show bimanual dexterity"
+        ]
+      },
+      {
+        "task": "Task 2: Precision Cutting",
+        "mapped_competencies": [
+          "Demonstrate angled laparoscope use",
+          "Navigate instruments to target with both hands",
+          "Show bimanual dexterity",
+          "Use traction and countratraction for exposure of target tissue"
+        ]
+      },
+      {
+        "task": "Task 3: Ligating Loop",
+        "mapped_competencies": [
+          "Use traction and countratraction for exposure",
+          "Apply laparoscopic clip for tissue ligation",
+          "Use monopolar instrument to divide tissue"
+        ]
+      },
+      {
+        "task": "Task 4: Extracorporeal Suture with Knot",
+        "mapped_competencies": [
+          "Perform sharp tissue division with laparoscopic shears",
+          "Use interrupted suturing and intracorporeal knot tying"
+        ]
+      },
+      {
+        "task": "Task 5: Intracorporeal Suture with Knot",
+        "mapped_competencies": [
+          "Use interrupted suturing and intracorporeal knot tying"
+        ]
+      }
+    ],
+    "high_priority_competencies_identified": 17,
+    "competency_domains_emphasized": [
+      "Abdominal Access and Port Placement",
+      "Laparoscope and Instrument Use",
+      "Tissue Management",
+      "Managing the Operative Environment"
+    ],
+    "verbal_cues": [
+      "Educational experience in laparoscopy and competency expectations have evolved since FLS inception",
+      "Laparoscopic surgery performed at basic/fundamental level is initial step to update FLS technical skills test",
+      "Given correlation and survey purpose, focused on priority for testing",
+      "Competencies of interest: maximum survey score reached 50th percentile",
+      "Technical skills testing incorporated in larger competency-based education framework for FLS"
+    ]
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video content is clearly an educational/instructional conference presentation with slides, speaker narration, data tables, and competency frameworks. Not a task performance or expert demonstration requiring FLS scoring.",
+  "video_id": "0t4tAWDCGa4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:24:57.620333+00:00",
+  "scoreable": false
+}

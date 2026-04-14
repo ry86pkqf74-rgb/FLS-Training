@@ -1,0 +1,225 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Needle driver (left, black handle) approaching needle on pink foam pad. Needle positioned for grasping near mid-shaft.",
+      "technique_notes": "Needle entry angle appears perpendicular to long axis; standard grip position at approximately 2/3 point from needle tip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "needle_load",
+      "description": "Needle secured in driver. Suture trailing from needle eye is visible. Preparing for first pass through Penrose drain.",
+      "technique_notes": "Needle firmly grasped; suture aligned with needle trajectory",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 15.0,
+      "phase": "suture_placement",
+      "description": "Needle driver advancing toward first marked point on pink foam Penrose model. Needle entering at upper mark location.",
+      "technique_notes": "Entry angle perpendicular to model surface; instrument alignment suggests accurate targeting of mark 1",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 25.0,
+      "phase": "suture_placement",
+      "description": "Needle passing through Penrose model from mark 1. Suture following needle path cleanly. Second pass being prepared.",
+      "technique_notes": "Clean single-pass entry; no tissue drag or deviation observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35.0,
+      "phase": "suture_placement",
+      "description": "Needle approaching second marked point on lower aspect of foam model. Entry at mark 2 location being established.",
+      "technique_notes": "Needle positioned perpendicular to entry; mark 2 appears well-targeted with <1mm deviation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "suture_placement",
+      "description": "Needle exiting Penrose model at mark 2. Both suture entry and exit complete. Suture loop forming around marked area.",
+      "technique_notes": "Clean exit with no tearing or drag marks visible on foam",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 65.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "Suture withdrawn from model. Both needle and suture ends now extracorporeal on white surgical pad. First knot throw being initiated (surgeon's knot - double throw).",
+      "technique_notes": "Right-hand driver forming first loop; suture ends clearly visible and separated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 90.0,
+      "phase": "extracorporeal_knot_formation",
+      "description": "First throw (surgeon's knot double throw) completed. Knot visibly formed with two wraps around standing line. Proper tension evident.",
+      "technique_notes": "Clean double wrap with appropriate tightness; knot appears symmetric and well-formed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 120.0,
+      "phase": "knot_push",
+      "description": "Knot pusher tool being loaded with first completed knot. Knot positioned at instrument opening for advancement toward model.",
+      "technique_notes": "Proper knot pusher technique; knot secured in pusher without slipping",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 155.0,
+      "phase": "knot_push",
+      "description": "Knot pusher advancing knot down suture toward model. First knot sliding smoothly along suture length with knot pusher maintaining control.",
+      "technique_notes": "Smooth advancement; no evidence of knot slipping or loosening during push",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 180.0,
+      "phase": "knot_push",
+      "description": "First knot arriving at model surface near entry point. Knot beginning to compress against Penrose drain surface.",
+      "technique_notes": "Proper contact between knot and model; knot pusher maintaining support until knot fully seated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 210.0,
+      "phase": "suture_cut",
+      "description": "Suture cut beyond the knot on model. Both tail ends trimmed with scissors. Task completion verified - knot secure on Penrose, suture ends cut.",
+      "technique_notes": "Clean cut without disrupting knot; appropriate cut length leaving small tail",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 210.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8,
+      "end_seconds": 50,
+      "duration_seconds": 42,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 50,
+      "end_seconds": 120,
+      "duration_seconds": 70,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 120,
+      "end_seconds": 200,
+      "duration_seconds": 80,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 200,
+      "end_seconds": 210,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "suture_deviation_mark1",
+      "description": "Entry point at mark 1 approximately 1mm medial to marked line",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        3,
+        4
+      ],
+      "confidence": 0.65
+    },
+    {
+      "type": "suture_deviation_mark2",
+      "description": "Exit point at mark 2 approximately 0.5mm superior to marked line",
+      "points_deducted": 0.5,
+      "frame_evidence": [
+        5,
+        6
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": 1.0,
+      "deviation_from_mark2_mm": 0.5,
+      "total_deviation_penalty": 1.5,
+      "confidence": 0.62
+    },
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean double wrap with symmetric tension; knot well-formed and held tightly during push"
+      }
+    ],
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "intact_after_completion": true,
+      "knot_position_at_mark": "accurate"
+    },
+    "knot_push_quality": {
+      "pusher_control": "excellent",
+      "knot_advancement": "smooth",
+      "knot_slippage": "none",
+      "final_cinch": "tight"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 210.0,
+    "total_penalties": 1.5,
+    "total_fls_score": 208.5,
+    "formula_applied": "420 - 210.0 - 1.5 = 208.5"
+  },
+  "confidence": 0.78,
+  "confidence_rationale": "Completion time clearly visible from frame sequence. Suture deviations estimated from camera perspective on mark entry/exit points; angles make precise mm measurement uncertain. Knot formation and pusher technique well-observed. No visible drain compromise. Conservative penalty assignment due to minor measurement ambiguity from oblique camera angles.",
+  "cannot_determine": [
+    "Exact mm deviation at mark 2 \u2014 camera angle is slightly oblique to exit point, making perpendicular measurement estimation approximate",
+    "Micromotion during knot push \u2014 resolution insufficient to detect sub-mm slippage"
+  ],
+  "technique_summary": "Excellent competent performance. Fast needle loading (8s, expert range). Suture placement accurate with minimal deviation (<2mm total). Clean surgeon's knot formation with proper double-throw syntax. Smooth knot pusher technique with secure final cinch. Completion time 210s places performance in upper-intermediate range. Penrose drain remained intact throughout with knot properly positioned at mark.",
+  "strengths": [
+    "Rapid, efficient needle loading and grasping technique",
+    "Accurate suture passage through both marks with minimal deviation",
+    "Clean, well-formed surgeon's knot with proper tension",
+    "Excellent knot pusher control with no slippage during advancement",
+    "Secure final knot cinch with appropriate tail management"
+  ],
+  "improvement_suggestions": [
+    "Knot formation phase (70s) could be reduced to 50-60s with practice on hand coordination",
+    "Knot push phase (80s) is within acceptable range but could be optimized to 60-70s with more confident pusher technique",
+    "Overall time trajectory: aim for 160-180s completion with additional practice on extracorporeal knot tying efficiency"
+  ],
+  "video_id": "0uqQeKXvK7o",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:25:56.288217+00:00",
+  "scoreable": true
+}

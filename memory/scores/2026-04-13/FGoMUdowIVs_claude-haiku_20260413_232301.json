@@ -1,0 +1,40 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "Not applicable \u2014 instructional content, no performance to score"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "Video consists entirely of presentation slides from a conference (SAGES 2021 'Reimagining a Healthier World') describing a virtual laparoscopic surgery course implemented in Bolivia. No actual FLS task performance is visible. Slides show course structure, participant demographics, evaluation results, and conclusions \u2014 all educational/didactic content with no trainee performing peg transfer.",
+  "cannot_determine": [
+    "No task performance visible in any frame",
+    "No peg transfer equipment, pegboard, or Maryland dissectors shown",
+    "No timing data available",
+    "No penalties applicable"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "N/A \u2014 presentation only, no skill demonstration",
+    "course_summary": "Virtual Basic Laparoscopic Surgery Course delivered Fall 2020 in Santa Cruz de la Sierra, Bolivia. Two synchronous cohorts (July-September and November-December 2020) via Zoom. Content included didactics (pneumoperitoneum physiology, electrosurgery, access, equipment, risks/benefits) and skills training (object transfer, precision cutting, intra- and extracorporeal knot tying). Evaluation via pre/post multiple-choice tests and video submission of skills. Participants: 24 total (8 hospitals represented, 63% male, 50% resident/50% attending). Post-course skill confidence improved significantly in object transfer and precision cutting. Instructors included Bolivian and US-based faculty."
+  },
+  "improvement_suggestions": [],
+  "scoring_decision": "No FLS task1 performance to score. This is an educational presentation about a laparoscopic surgery training program, not a recorded performance of the peg transfer task. Return minimal assessment per protocol for unusable/instructional content.",
+  "video_id": "FGoMUdowIVs",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:23:01.373663+00:00",
+  "scoreable": false
+}

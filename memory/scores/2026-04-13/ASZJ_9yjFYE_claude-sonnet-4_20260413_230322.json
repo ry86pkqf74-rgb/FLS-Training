@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Laparoscopic Skills Training Course",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "classroom_instruction",
+      "description": "Instructor Dr. Rajkishore Sawant explaining instrumentation to seated students in classroom setting",
+      "technique_notes": "Educational lecture format with FLS trainer boxes visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_demonstration",
+      "description": "Close-up of instructor demonstrating laparoscopic instruments to students",
+      "technique_notes": "Hands-on instrument familiarization session",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "dry_lab_practice",
+      "description": "Students practicing eye-hand coordination exercises at multiple laparoscopic trainers",
+      "technique_notes": "Structured skill development environment with multiple practice stations",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 30.0,
+      "phase": "peg_transfer_practice",
+      "description": "Close-up view of peg transfer task setup with graspers and rubber objects",
+      "technique_notes": "Standard FLS Task 1 setup visible on training monitor",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 50.0,
+      "phase": "silicon_pad_suturing",
+      "description": "Student practicing suturing techniques on silicon practice pads",
+      "technique_notes": "Introductory suturing practice before advancing to FLS tasks",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 65.0,
+      "phase": "wet_lab_instruction",
+      "description": "Dr. Gayatri Rao teaching suturing on harvested animal tissue",
+      "technique_notes": "Advanced tissue-based practice with realistic tactile feedback",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 80.0,
+      "phase": "tissue_suturing_demo",
+      "description": "Close-up of laparoscopic suturing being performed on animal tissue",
+      "technique_notes": "Expert demonstration of proper needle driving and tissue handling",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper laparoscopic instrument handling and grip",
+      "Eye-hand coordination development exercises",
+      "Peg transfer object manipulation",
+      "Basic suturing on synthetic materials",
+      "Advanced tissue suturing techniques",
+      "Needle driving and positioning",
+      "Intracorporeal knot tying fundamentals"
+    ],
+    "verbal_cues": [
+      "Equipment familiarization lectures visible from context",
+      "Structured progression from dry lab to wet lab practice"
+    ],
+    "common_errors_addressed": [
+      "Improper instrument grip through guided practice",
+      "Poor depth perception through coordination exercises",
+      "Inadequate tissue handling through progressive skill building"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear educational content with multiple instructors, structured curriculum progression, and comprehensive skill development visible throughout video sequence.",
+  "technique_summary": "Comprehensive laparoscopic skills training program showing structured progression from basic instrument familiarization through advanced tissue-based practice, following established educational methodology for minimally invasive surgery training.",
+  "video_id": "ASZJ_9yjFYE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:03:22.223233+00:00",
+  "scoreable": false
+}

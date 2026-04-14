@@ -1,0 +1,138 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Both needle drivers positioned to start cutting along the marked circle.",
+      "technique_notes": "Initial grasp on gauze close to the starting point, with cutting initiated at the edge.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "initial_cut",
+      "description": "The first segment of the cut initiated towards the first quadrant.",
+      "technique_notes": "Cut closely follows the line, showing good alignment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "clockwise_cut",
+      "description": "Progress through top half of the circle.",
+      "technique_notes": "Minor deviation observed at the top edge, slightly outside the marked line.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Cut deviates approximately 2mm at the top cardinal point.",
+          "points_deducted": 2.0,
+          "frame_evidence": [
+            11
+          ],
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 15.0,
+      "phase": "counterclockwise_cut",
+      "description": "Continuing cut below the circle midpoint.",
+      "technique_notes": "Maintained close adherence to the cut line, with minor deviations.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 20.0,
+      "phase": "completion",
+      "description": "Final segments are completed, meeting starting point with a small misalignment.",
+      "technique_notes": "Slight misalignment at closure, no gauze detachment.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 25.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 1,
+      "end_seconds": 5,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 5,
+      "end_seconds": 12,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 12,
+      "end_seconds": 20,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 20,
+      "end_seconds": 25,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Cut deviates approximately 2mm from the marked line at the top cardinal point.",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        11
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "overall_cut_quality": "Very close adherence with minimal deviation.",
+    "completion_circularity": "Slight misalignment at closure, completing the circle with satisfactory circularity."
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 25.0,
+    "total_penalties": 2.0,
+    "total_fls_score": 273.0,
+    "formula_applied": "300 - 25.0 - 2.0 = 273.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Penalties estimated with clear visibility on minor deviations; phases well-timed.",
+  "cannot_determine": [],
+  "technique_summary": "Excellent control with precise cutting technique, minor deviation noted.",
+  "strengths": [
+    "Efficient cutting speed, well within expert benchmarks",
+    "Minimal deviation along the marked path"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining alignment at circle closure to avoid minor mismatches"
+  ],
+  "video_id": "XxaNmr5RncY",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:34:26.487894+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.850301+00:00"
+  },
+  "scoreable": true
+}

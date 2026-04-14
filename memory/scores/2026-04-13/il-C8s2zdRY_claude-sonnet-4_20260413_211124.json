@@ -1,0 +1,126 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "knot_formation",
+      "description": "Blue background with title slide visible",
+      "technique_notes": "Educational video introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "knot_formation",
+      "description": "Title slide showing 'Laparoscopic Roaders Knot' demonstration",
+      "technique_notes": "Video appears to be instructional demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "knot_formation",
+      "description": "Hands holding white suture, beginning extracorporeal knot formation",
+      "technique_notes": "Clean initial suture handling, appropriate tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "knot_formation",
+      "description": "Creating first loop in extracorporeal knot sequence",
+      "technique_notes": "Smooth loop formation with controlled movements",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "knot_formation",
+      "description": "Advancing through knot formation with precise finger movements",
+      "technique_notes": "Good suture control and loop management",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "knot_formation",
+      "description": "Continuing knot construction with multiple throws",
+      "technique_notes": "Consistent technique with appropriate suture tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "knot_formation",
+      "description": "Complex knot formation with multiple loops visible",
+      "technique_notes": "Advanced knot technique demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "knot_formation",
+      "description": "Final stages of extracorporeal knot construction",
+      "technique_notes": "Preparing for knot advancement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0,
+      "deviation_from_mark2_mm": 0,
+      "total_deviation_penalty": 0,
+      "confidence": 0
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "knot_security": "unknown"
+    },
+    "knot_quality": {
+      "knot_type": "roaders_knot",
+      "appears_secure": true,
+      "pushed_adequately": false
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "Cannot score - this is an instructional video, not a timed FLS task performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "This is clearly an instructional video demonstrating knot tying technique rather than a timed FLS task performance. No Penrose drain, marks, or FLS trainer setup visible. Cannot assess task completion or score.",
+  "cannot_determine": [
+    "Task completion time - this is a demonstration video",
+    "Suture placement accuracy - no target marks visible",
+    "Drain status - no Penrose drain present in demonstration",
+    "FLS score - not an actual task performance"
+  ],
+  "technique_summary": "This appears to be an educational demonstration of extracorporeal knot tying technique (Roaders knot) rather than an actual FLS Task 4 performance. The video shows proper knot formation technique but lacks the required FLS trainer setup, Penrose drain with marks, and timing elements.",
+  "strengths": [
+    "Clear demonstration of knot formation technique",
+    "Smooth suture handling and loop management"
+  ],
+  "improvement_suggestions": [
+    "For actual FLS scoring, need video of complete task performance with drain and marks visible",
+    "Should include timing from first instrument appearance to task completion"
+  ],
+  "video_id": "il-C8s2zdRY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:11:24.166319+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.878793+00:00"
+  },
+  "scoreable": true
+}

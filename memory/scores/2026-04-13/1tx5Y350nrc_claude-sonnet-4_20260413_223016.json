@@ -1,0 +1,97 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black slide with title showing 'Fundamentals of Laparoscopic Surgery (FLS) Certification Exam: Trends Over the Past 9 Years' by Elif Bilgic",
+      "technique_notes": "Educational presentation content - no task performance visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 10.0,
+      "phase": "not_applicable",
+      "description": "Slide showing 'Purpose' with bullet points about FLS test results analysis and SAGES FLS committee quality initiative",
+      "technique_notes": "Research presentation describing study objectives",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 20.0,
+      "phase": "not_applicable",
+      "description": "Methods slide describing FLS data from 2008-2016, demographics, and cognitive/manual exam scores",
+      "technique_notes": "Academic methodology presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 30.0,
+      "phase": "not_applicable",
+      "description": "Analysis slide mentioning Pearson correlation, internal consistency, and generalized linear models",
+      "technique_notes": "Statistical analysis methodology",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 40.0,
+      "phase": "not_applicable",
+      "description": "Results table showing PGY level demographics with N values and percentages",
+      "technique_notes": "Data presentation showing trainee distribution across training levels",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 50.0,
+      "phase": "not_applicable",
+      "description": "Results showing mean estimates and confidence intervals for cognitive and manual scores by year and PGY level",
+      "technique_notes": "Statistical outcomes showing score differences over time",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "cannot_determine",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred_outbound": "cannot_determine",
+    "objects_transferred_return": "cannot_determine",
+    "transfer_quality": "cannot_determine",
+    "drop_events": "none_observed"
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": "cannot_determine",
+    "total_penalties": "cannot_determine",
+    "total_fls_score": "cannot_determine",
+    "formula_applied": "cannot_determine - no task performance visible"
+  },
+  "confidence": "not_applicable",
+  "confidence_rationale": "This is an academic research presentation about FLS exam trends, not a task performance video",
+  "cannot_determine": [
+    "All task performance metrics - video contains only presentation slides"
+  ],
+  "technique_summary": "Not applicable - this is a research presentation analyzing FLS exam data trends over 9 years",
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable",
+    "educational_content": [
+      "FLS exam performance trends 2008-2016",
+      "Correlation analysis between cognitive and manual scores (r=0.09)",
+      "Internal consistency measurements across tasks (0.73)",
+      "PGY level performance differences",
+      "Statistical significance of training level on exam outcomes"
+    ]
+  },
+  "improvement_suggestions": [],
+  "video_id": "1tx5Y350nrc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:30:16.224375+00:00",
+  "scoreable": false
+}

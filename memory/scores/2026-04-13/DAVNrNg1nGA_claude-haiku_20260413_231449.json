@@ -1,0 +1,162 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_introduction",
+      "description": "Hands holding two ends of suture, demonstrating Roeder knot formation technique. Diagram shows step 1: initial loop configuration.",
+      "technique_notes": "Educational demonstration of extracorporeal knot tying; not an actual task performance. Instructional content with labeled diagrams.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.5,
+      "phase": "extracorporeal_throws",
+      "description": "Hands manipulating suture to form first throw of Roeder knot. Diagram step 1 visible on right.",
+      "technique_notes": "Demonstrating proper hand positioning and suture manipulation for sliding knot formation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 3.0,
+      "phase": "extracorporeal_throws",
+      "description": "Continuing first throw formation. Suture looped around fingers demonstrating controlled loop.",
+      "technique_notes": "Clear demonstration of loop control and tension management during throw formation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 4.5,
+      "phase": "extracorporeal_throws",
+      "description": "First throw cinching phase. Hands pulling suture ends to tighten the loop.",
+      "technique_notes": "Demonstrates proper tensioning of first throw before advancing with knot pusher.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 6.0,
+      "phase": "extracorporeal_throws",
+      "description": "Diagram shows step 2: multiple wraps configuration for subsequent throws. Hand demonstrating loop formation.",
+      "technique_notes": "Educational illustration of throw progression; step 2 shows multiple wraps for intermediate throws.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 7.5,
+      "phase": "extracorporeal_throws",
+      "description": "Hands forming second throw (multiple-wrap configuration). Diagram step 2 visible.",
+      "technique_notes": "Demonstrating controlled formation of multi-wrap throw with proper hand mechanics.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 9.0,
+      "phase": "extracorporeal_throws",
+      "description": "Second throw being cinched. Suture pulled taut to secure wrap configuration.",
+      "technique_notes": "Even tension applied; demonstrates knot security verification during formation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 10.5,
+      "phase": "extracorporeal_throws",
+      "description": "Continuing second throw cinching. Hands controlling suture with precision.",
+      "technique_notes": "Methodical approach to knot tightening; demonstrates control over loop tightness.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 12.0,
+      "phase": "extracorporeal_throws",
+      "description": "Diagram shows step 3: final throw configuration with single wrap. Hands preparing for third throw.",
+      "technique_notes": "Educational transition showing step 3 diagram; final throw uses single wrap.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 13.5,
+      "phase": "extracorporeal_throws",
+      "description": "Hands forming third throw (single-wrap configuration). Diagram step 3 visible.",
+      "technique_notes": "Final throw uses different wrap configuration; demonstrates technique variation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 15.0,
+      "phase": "extracorporeal_throws",
+      "description": "Third throw being cinched and completed. Suture ends pulled to final tension.",
+      "technique_notes": "Final knot appears secure and properly tensioned. Completes three-throw sequence.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 16.5,
+      "phase": "suture_cut",
+      "description": "Final view showing completed knot configuration with suture ends visible. Knot pusher tool visible in final frame.",
+      "technique_notes": "Demonstration concludes with secured knot ready for knot pusher advancement or cutting.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 420,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "NOT SCORED \u2014 instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video is classified as INSTRUCTIONAL \u2014 not a trainee performance. Contains step-by-step diagrams labeled 'ROEDER KNOT: Extracorporeal Sliding Knot' with numbered steps (1, 2, 3) showing knot-tying technique. Content is educational demonstration with narration context of teaching proper knot methodology. No task completion timing or FLS scoring applicable.",
+  "cannot_determine": [
+    "Completion time \u2014 no start/end markers for actual task attempt",
+    "Suture placement accuracy \u2014 no Penrose drain or marked targets visible",
+    "Knot pusher advancement \u2014 demonstration does not show knot pusher insertion or advancement",
+    "Slit closure assessment \u2014 no actual drain slit visible to assess closure quality",
+    "Actual FLS task performance \u2014 video is educational content, not a scored performance"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Roeder knot sliding-knot construction",
+      "First throw single-wrap formation and cinching",
+      "Second throw multiple-wrap configuration and tensioning",
+      "Third throw single-wrap final throw",
+      "Hand mechanics for controlled suture manipulation",
+      "Loop control during throw formation",
+      "Progressive knot advancement technique"
+    ],
+    "verbal_cues": [
+      "Video labeled 'ROEDER KNOT Extracorporeal Sliding Knot' \u2014 identifies the specific knot type",
+      "Numbered steps (1, 2, 3) demonstrate sequential progression of throw formation"
+    ],
+    "common_errors_addressed": [
+      "Avoiding loose or uncontrolled loop formation by demonstrating precise hand positioning",
+      "Preventing knot slippage by showing methodical cinching of each throw",
+      "Demonstrating proper wrap configuration differences between throws (single vs. multiple wraps)",
+      "Showing consistent tension control throughout knot formation sequence"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "technique_summary": "Instructional video demonstrating expert-level technique for Roeder extracorporeal sliding knot formation. Content shows proper progression through three throws with diagram overlays illustrating each step. Emphasis on hand mechanics, loop control, and sequential cinching. Educational content intended to teach proper knot-tying methodology rather than assess trainee performance.",
+  "strengths": [
+    "Clear step-by-step visual demonstration with labeled diagrams",
+    "Controlled hand mechanics showing smooth transitions between throws",
+    "Explicit illustration of throw-type variations (wrap configurations) across sequence",
+    "Methodical tension application preventing premature knot looseness"
+  ],
+  "improvement_suggestions": [
+    "Not applicable \u2014 instructional content, not a performance assessment"
+  ],
+  "video_intent": "Educational demonstration of proper extracorporeal Roeder knot-tying technique for FLS task 4. Intended for trainee instruction rather than performance evaluation. No FLS scoring or completion metrics available.",
+  "video_id": "DAVNrNg1nGA",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:14:49.676966+00:00",
+  "scoreable": false
+}

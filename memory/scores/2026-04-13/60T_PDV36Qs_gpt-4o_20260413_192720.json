@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to process or score individual video tasks directly without specific frame-by-frame breakdowns. If you provide detailed observations from each frame, penalties, and timing information, I can help generate a complete analysis in JSON format.",
+  "video_id": "60T_PDV36Qs",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:27:20.658155+00:00",
+  "task_id": "task1_peg_transfer",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.761001+00:00"
+  },
+  "scoreable": false
+}

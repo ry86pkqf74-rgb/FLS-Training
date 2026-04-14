@@ -1,0 +1,78 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "No FLS task identified",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Video production company logo - Intelligent Video Solutions",
+      "technique_notes": "Not applicable - promotional content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "introduction",
+      "description": "Instructor Elliot Wagner in surgical attire in operating room setting",
+      "technique_notes": "Educational context - Southeast Community College Surgical Technology program",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "facility_tour",
+      "description": "OR suite with surgical instruments displayed on blue drapes",
+      "technique_notes": "General surgical setup demonstration, not FLS-specific equipment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 30.0,
+      "phase": "instruction",
+      "description": "Instructor explaining surgical procedures with patient simulator",
+      "technique_notes": "General surgical education, no laparoscopic trainer visible",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task performed - scoring not applicable"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is educational content about surgical technology training, not an FLS task performance",
+  "cannot_determine": [
+    "FLS task identification - no laparoscopic trainer or FLS-specific equipment visible",
+    "Task performance metrics - video shows general surgical education content"
+  ],
+  "technique_summary": "Educational video about surgical technology program and general OR procedures",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper surgical attire and sterile technique",
+      "OR setup and instrument organization",
+      "Professional communication in surgical environment"
+    ],
+    "verbal_cues": [
+      "Instructor providing general surgical education",
+      "Discussion of surgical technology training program"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructor"
+  },
+  "improvement_suggestions": [],
+  "video_id": "5E905wPoG2E",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:43:18.024194+00:00",
+  "scoreable": false
+}

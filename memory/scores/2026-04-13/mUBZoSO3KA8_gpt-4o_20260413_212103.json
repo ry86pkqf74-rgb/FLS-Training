@@ -1,0 +1,137 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Initial grasping of gauze close to cutting line with the left instrument.",
+      "technique_notes": "Proper placement, minimal gauze tension.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 2.5,
+      "phase": "initial_cut",
+      "description": "Scissors begin cutting at 5 o'clock position, proceeding clockwise.",
+      "technique_notes": "Good control, following marked line closely.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 15.5,
+      "phase": "clockwise_cut",
+      "description": "Continued cutting towards the 10 o'clock position following the marked line.",
+      "technique_notes": "Slight deviation visible.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Deviation approximately 3mm from the line.",
+          "points_deducted": 3,
+          "frame_evidence": [
+            11
+          ],
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 30.0,
+      "phase": "counterclockwise_cut",
+      "description": "Resuming cut from 10 o'clock back to 6 o'clock in counterclockwise direction.",
+      "technique_notes": "Maintaining closer adherence to the line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 50.0,
+      "phase": "completion",
+      "description": "Final cut completed, circle is free from the gauze.",
+      "technique_notes": "Final section detached cleanly.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 50.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 15,
+      "duration_seconds": 13,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 15,
+      "end_seconds": 30,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 30,
+      "end_seconds": 50,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 50,
+      "end_seconds": 50,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Slight deviation seen at frame 11, approximately 3mm from the marked line.",
+      "points_deducted": 3,
+      "frame_evidence": [
+        11
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "score_components": {
+    "max_score": 300,
+    "time_used": 50.0,
+    "total_penalties": 3,
+    "total_fls_score": 247.0,
+    "formula_applied": "300 - 50 - 3 = 247"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "The video's angle and quality provide clear evidence of instrument placement and cutting path, except in slight deviations difficult to measure precisely.",
+  "cannot_determine": [
+    "Exact mm deviation during the entirety of the cut due to angle changes."
+  ],
+  "technique_summary": "The performance displayed efficient cutting technique with minimal overshoot. Precise control was maintained, except for slight deviation midway.",
+  "strengths": [
+    "Consistent handling and movement control.",
+    "Smooth transition across different phases of the task."
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining cutting within 2mm of the marked line to avoid deviations.",
+    "Practice consistent pressure to ensure uniform cuts."
+  ],
+  "video_id": "mUBZoSO3KA8",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:21:03.142794+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.886654+00:00"
+  },
+  "scoreable": true
+}

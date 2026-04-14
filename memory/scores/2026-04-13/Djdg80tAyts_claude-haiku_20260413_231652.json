@@ -1,0 +1,30 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "cannot_score": true,
+  "reason": "This video is an instructional/recruitment presentation about the MCG-AU Urology Residency Program (PGY-1 through PGY-5 positions), delivered by Z. Klaassen. It contains information about interview dates, program facts, rotations, faculty, residents, benefits, and location highlights. No FLS (Fundamentals of Laparoscopic Surgery) task is being performed or demonstrated. This is a career/recruitment webinar, not a surgical skills assessment video.",
+  "content_classification": "recruitment_presentation",
+  "presented_by": "Z. Klaassen - PGY 11",
+  "institution": "Augusta University, Medical College of Georgia (MCG)",
+  "topics_covered": [
+    "2021 MCG-AU Urology Interview Dates",
+    "Program Facts and Funding",
+    "Columbia County Expansion",
+    "Resident Rotations (PGY-1 through PGY-5)",
+    "Call Responsibilities",
+    "Case Volume Statistics",
+    "Faculty Information",
+    "Staff Members",
+    "Current Residents",
+    "Annual Conferences",
+    "Career Paths Post-Residency",
+    "Resident Benefits",
+    "Augusta Regional Highlights"
+  ],
+  "video_id": "Djdg80tAyts",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:16:52.881647+00:00",
+  "scoreable": false
+}

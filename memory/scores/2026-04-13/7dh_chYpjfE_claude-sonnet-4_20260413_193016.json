@@ -1,0 +1,146 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Surgeon examining endoloop device with hands, appears to be preparing for deployment",
+      "technique_notes": "Initial setup phase, handling endoloop outside of laparoscopic trainer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "loop_deploy",
+      "description": "Surgeon manipulating endoloop device, checking mechanism",
+      "technique_notes": "Careful inspection of loop mechanism before deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "loop_deploy",
+      "description": "Close-up view of endoloop device being prepared for insertion",
+      "technique_notes": "Detailed examination of loop pusher mechanism",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 22.0,
+      "phase": "target_approach",
+      "description": "Surgeon handling what appears to be foam appendage target",
+      "technique_notes": "Preparing target appendage for loop placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 28.0,
+      "phase": "loop_placement",
+      "description": "Surgeon working with endoloop and foam appendage together",
+      "technique_notes": "Attempting to position loop around appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 36.0,
+      "phase": "loop_placement",
+      "description": "Continued manipulation of loop around foam appendage",
+      "technique_notes": "Working to achieve proper loop positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 38.0,
+      "phase": "cinch",
+      "description": "Close-up view showing hands working with appendage",
+      "technique_notes": "Appears to be in final positioning/cinching phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 40.0,
+      "phase": "cinch",
+      "description": "Final manipulation of loop and appendage",
+      "technique_notes": "Completing loop cinching process",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 40.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 18,
+      "duration_seconds": 18,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 18,
+      "end_seconds": 22,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 22,
+      "end_seconds": 36,
+      "duration_seconds": 14,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 36,
+      "end_seconds": 40,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "distance_from_mark_mm": 0,
+      "loop_properly_cinched": true,
+      "appendage_transected": false,
+      "notes": "Loop appears properly positioned and secured"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 40.0,
+    "total_penalties": 0,
+    "total_fls_score": 140.0,
+    "formula_applied": "180 - 40.0 - 0 = 140.0"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "Video shows tabletop demonstration rather than laparoscopic trainer environment. Cannot verify precise loop positioning relative to marked line, appendage integrity, or exact cinching quality due to hand manipulation outside proper testing environment.",
+  "cannot_determine": [
+    "Exact distance from marked line - no clear view of measurement marks",
+    "Loop cinching tightness - cannot assess tension adequately from hand demonstration",
+    "Whether this represents actual FLS testing conditions - appears to be educational demonstration"
+  ],
+  "technique_summary": "Demonstration shows understanding of endoloop mechanics and deployment sequence. However, this appears to be a tabletop educational demonstration rather than formal FLS testing in a laparoscopic trainer.",
+  "strengths": [
+    "Systematic approach to loop deployment",
+    "Careful handling of endoloop mechanism",
+    "Efficient completion time"
+  ],
+  "improvement_suggestions": [
+    "Perform task in proper laparoscopic trainer environment",
+    "Ensure clear visibility of measurement marks for accurate placement",
+    "Use proper laparoscopic instruments for deployment"
+  ],
+  "video_id": "7dh_chYpjfE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:30:16.027316+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.768128+00:00"
+  },
+  "scoreable": true
+}

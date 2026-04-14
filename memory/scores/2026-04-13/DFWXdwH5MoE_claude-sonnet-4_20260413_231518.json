@@ -1,0 +1,101 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup_demonstration",
+      "description": "Instructor in blue scrubs standing beside FLS trainer, demonstrating proper setup with dual monitor configuration",
+      "technique_notes": "Professional training environment with multiple camera angles for optimal viewing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 24.0,
+      "phase": "instrument_demonstration",
+      "description": "Instructor holding laparoscopic instruments, explaining proper grasping technique",
+      "technique_notes": "Demonstrating correct instrument handling and ergonomic positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 48.0,
+      "phase": "technique_instruction",
+      "description": "Instructor positioned at FLS trainer, showing proper body mechanics and instrument insertion",
+      "technique_notes": "Demonstrating correct stance and hand positioning for optimal performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 72.0,
+      "phase": "active_demonstration",
+      "description": "Instructor performing peg transfer movements while explaining technique",
+      "technique_notes": "Live demonstration of transfer sequence with both hands coordinated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 108.0,
+      "phase": "continued_demonstration",
+      "description": "Ongoing demonstration with focus on smooth object manipulation",
+      "technique_notes": "Emphasis on controlled movements and proper instrument coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 150.0,
+      "phase": "completion_demonstration",
+      "description": "Final phases of demonstration showing task completion techniques",
+      "technique_notes": "Demonstrating proper task conclusion and instrument withdrawal",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video showing expert demonstration of peg transfer techniques. Instructor is clearly teaching proper form and technique rather than performing a scored task.",
+  "cannot_determine": [
+    "Actual completion time - this is instructional content, not a timed performance",
+    "Specific penalties - demonstration focuses on correct technique rather than errors"
+  ],
+  "technique_summary": "Expert-level instructional demonstration of FLS peg transfer task with emphasis on proper instrument handling, body mechanics, and coordination techniques.",
+  "strengths": [
+    "Clear demonstration of proper instrument grip and control",
+    "Professional training environment with optimal viewing angles",
+    "Systematic approach to teaching fundamental laparoscopic skills"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper laparoscopic instrument grip and control",
+      "Correct body positioning at FLS trainer",
+      "Coordinated bimanual manipulation",
+      "Systematic object transfer methodology",
+      "Professional instrument handling and ergonomics"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Poor instrument grip leading to loss of control",
+      "Inadequate body positioning causing fatigue",
+      "Uncoordinated hand movements reducing efficiency"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "DFWXdwH5MoE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:15:18.328398+00:00",
+  "scoreable": false
+}

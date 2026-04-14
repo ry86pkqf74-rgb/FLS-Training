@@ -1,0 +1,64 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not Applicable - Educational Presentation",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_intro",
+      "description": "Title slide showing 'Analysis of the Initial Psychometric Performance of the Fundamentals of Endoscopic Surgery (FES) Skills Examination' by E Matthew Ritter, MD at SAGES conference",
+      "technique_notes": "Academic presentation format with professional slide layout",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "fes_overview",
+      "description": "Slide showing FES logo and various images of laparoscopic training equipment including simulators and task setups",
+      "technique_notes": "Educational overview of FES training system components",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "research_background",
+      "description": "Research citation slide showing validation study details with reliability measures and correlation data",
+      "technique_notes": "Academic research presentation with statistical validation data",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is an educational presentation"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear academic presentation slides with no FLS task performance visible",
+  "cannot_determine": [],
+  "technique_summary": "Educational presentation analyzing psychometric properties of FES examination rather than actual task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FES validation methodology",
+      "Psychometric analysis of laparoscopic skills assessment",
+      "Statistical correlation analysis between FES scores and clinical performance"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "RXKTO01VWSU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:06:40.201758+00:00",
+  "scoreable": false
+}

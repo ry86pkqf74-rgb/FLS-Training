@@ -1,0 +1,73 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_setup",
+      "description": "Title slide showing 'Ligation of the Uterine Artery - O'Leary Technique'",
+      "technique_notes": "Educational video introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_setup",
+      "description": "Real surgical demonstration of uterine artery identification and massage",
+      "technique_notes": "Shows anatomical orientation and tissue handling in actual surgery",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_demo",
+      "description": "Demonstration of surgical technique with mesh placement and suturing",
+      "technique_notes": "Expert surgical technique demonstration with multiple hands assisting",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an instructional video about actual surgical technique, not an FLS task performance. Content shows real surgery with title overlays and educational formatting.",
+  "cannot_determine": [
+    "FLS task performance metrics - this is not an FLS task video"
+  ],
+  "technique_summary": "This video demonstrates the O'Leary technique for uterine artery ligation in actual surgery, not FLS Task 3 endoloop performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Uterine artery identification and palpation",
+      "Proper tissue massage technique",
+      "Surgical mesh placement and positioning",
+      "Multi-handed surgical coordination",
+      "Anatomical landmark identification"
+    ],
+    "verbal_cues": [
+      "3 centimeters measurement indication shown on screen"
+    ],
+    "common_errors_addressed": [
+      "Proper tissue handling to avoid damage",
+      "Correct anatomical approach to uterine artery"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "I5bnUmRkMUQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:36:43.693902+00:00",
+  "scoreable": false
+}

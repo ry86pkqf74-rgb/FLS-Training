@@ -1,0 +1,84 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "No FLS Task Detected",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "disclaimer",
+      "description": "Medical disclaimer screen about patient education resource",
+      "technique_notes": "Not applicable - disclaimer screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "educational_content",
+      "description": "Dr. Rajeshwari Reddy presenting about laparoscopic tubal ligation",
+      "technique_notes": "Educational medical video about contraception procedure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "educational_content",
+      "description": "Title slide explaining role of tubes in conception",
+      "technique_notes": "Educational content about reproductive anatomy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "educational_content",
+      "description": "Diagram showing fertilization process in fallopian tube",
+      "technique_notes": "Anatomical diagram with labeled structures",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "educational_content",
+      "description": "Text about two types of contraception",
+      "technique_notes": "Educational information about contraceptive methods",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "educational_content",
+      "description": "Question about ideal time for sterilization",
+      "technique_notes": "Educational Q&A format",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "No FLS task detected"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows educational medical content about laparoscopic tubal ligation rather than any FLS skills training task. No laparoscopic trainer, instruments, or task materials visible.",
+  "cannot_determine": [],
+  "technique_summary": "This is an educational video about laparoscopic tubal ligation procedure, not an FLS skills assessment task.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Please provide video of actual FLS task performance for assessment"
+  ],
+  "video_id": "q5FfjCCaAnc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:32:36.743495+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.896092+00:00"
+  },
+  "scoreable": false
+}

@@ -32,5 +32,11 @@
   "improvement_suggestions": [
     "Video does not contain Task 3 content - would need actual endoloop demonstration for assessment"
   ],
-  "confidence_score": 0.0
+  "confidence_score": 0.0,
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.854138+00:00"
+  },
+  "scoreable": false
 }

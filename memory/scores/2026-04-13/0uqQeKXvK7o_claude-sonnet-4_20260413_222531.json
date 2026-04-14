@@ -1,0 +1,157 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Black screen - no activity visible",
+      "technique_notes": "Cannot assess technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "loop_deploy",
+      "description": "Pre-tied endoloop being deployed using grasper, foam appendage visible with marked line",
+      "technique_notes": "Proper grasper positioning on loop, appendage appears properly mounted",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 16.0,
+      "phase": "target_approach",
+      "description": "Loop being opened and positioned around foam appendage, marked line clearly visible",
+      "technique_notes": "Good loop control, appendage stable",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 24.0,
+      "phase": "loop_placement",
+      "description": "Loop being placed around appendage base, approaching marked line",
+      "technique_notes": "Controlled approach to target area",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 32.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage, appears to be at or very close to marked line",
+      "technique_notes": "Good positioning accuracy",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 40.0,
+      "phase": "cinch",
+      "description": "Loop being cinched down on appendage at marked line",
+      "technique_notes": "Proper cinching technique demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 48.0,
+      "phase": "cut_tail",
+      "description": "Scissors being used to cut loop tail, loop appears secure at marked line",
+      "technique_notes": "Clean cutting motion, loop remains properly positioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 56.0,
+      "phase": "cut_tail",
+      "description": "Final cutting of loop tail, task completion",
+      "technique_notes": "Complete tail removal, loop secure",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 56.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 8,
+      "end_seconds": 16,
+      "duration_seconds": 8,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 16,
+      "end_seconds": 24,
+      "duration_seconds": 8,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 24,
+      "end_seconds": 40,
+      "duration_seconds": 16,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 40,
+      "end_seconds": 48,
+      "duration_seconds": 8,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 48,
+      "end_seconds": 56,
+      "duration_seconds": 8,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "loop_properly_cinched": true,
+      "appendage_transected": false
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 56.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 124.0,
+    "formula_applied": "180 - 56.0 - 0.0 = 124.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Good visual clarity throughout demonstration. Loop placement at marked line clearly visible, cinching and cutting well-demonstrated. Completion time accurately tracked from frame sequence.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level demonstration of endoloop placement with precise positioning at marked line, proper cinching technique, and clean tail cutting. Performance within intermediate time range.",
+  "strengths": [
+    "Precise loop placement at marked line",
+    "Controlled cinching without over-tightening",
+    "Clean instrument handling throughout",
+    "Complete tail removal"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper endoloop deployment from grasper",
+      "Controlled loop opening and positioning",
+      "Accurate placement at marked target line",
+      "Progressive cinching technique",
+      "Clean scissor cutting of loop tail"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Demonstrates avoiding loop slippage during cinching",
+      "Shows proper appendage stabilization during placement",
+      "Avoids excessive force that could transect appendage"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "0uqQeKXvK7o",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:25:31.855393+00:00",
+  "scoreable": false
+}

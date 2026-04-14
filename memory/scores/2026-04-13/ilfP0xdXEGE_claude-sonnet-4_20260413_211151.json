@@ -1,0 +1,77 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_content",
+      "description": "Educational video title slide - not actual task performance",
+      "technique_notes": "This appears to be an instructional video rather than a performance assessment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "setup_demonstration",
+      "description": "Peg transfer setup shown with triangular objects on pegs",
+      "technique_notes": "This is Task 1 (Peg Transfer) demonstration, not Task 3 (Endoloop)",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "setup_demonstration",
+      "description": "Pattern cutting setup with gauze and marked circle",
+      "technique_notes": "This is Task 2 (Pattern Cut) demonstration, not Task 3 (Endoloop)",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "setup_demonstration",
+      "description": "Red foam appendage setup for endoloop task visible",
+      "technique_notes": "Finally showing Task 3 setup with red foam appendage and pre-tied loop",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "successful": null,
+      "deviation_from_mark_mm": null,
+      "loop_cinched_properly": null,
+      "appendage_transected": null
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot calculate - no actual task performance observed"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "High confidence that this is an instructional video showing setup demonstrations for multiple FLS tasks rather than an actual Task 3 performance to be scored.",
+  "cannot_determine": [
+    "Completion time - no actual task performance shown",
+    "Loop placement accuracy - only setup demonstration visible",
+    "Final score - no performance to assess"
+  ],
+  "technique_summary": "This video contains educational content and setup demonstrations for FLS tasks rather than an actual Task 3 (Endoloop) performance that can be scored.",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "ilfP0xdXEGE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:11:51.802022+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.879257+00:00"
+  },
+  "scoreable": false
+}

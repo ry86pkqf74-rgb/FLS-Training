@@ -1,0 +1,160 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Laparoscopic instruments visible with endoloop device approaching foam appendage structure",
+      "technique_notes": "Clean initial positioning, endoloop appears pre-loaded in device",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "loop_deploy",
+      "description": "Laparoscope providing clear view of surgical field with appendage-like structure",
+      "technique_notes": "Good visualization established before instrument insertion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 21.0,
+      "phase": "target_approach",
+      "description": "Endoloop device positioned near foam appendage with loop partially deployed",
+      "technique_notes": "Controlled approach to target structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "phase": "target_approach",
+      "description": "Device maneuvering around appendage base, loop opening visible",
+      "technique_notes": "Precise positioning at target location",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 30.0,
+      "phase": "loop_placement",
+      "description": "Endoloop being positioned around appendage structure",
+      "technique_notes": "Loop deployment progressing smoothly",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 33.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage, preparing for cinching",
+      "technique_notes": "Good loop placement achieved",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 45.0,
+      "phase": "cinch",
+      "description": "Loop being tightened around appendage base",
+      "technique_notes": "Cinching mechanism activated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 57.0,
+      "phase": "cut_tail",
+      "description": "Final positioning with loop secured, preparing to cut excess",
+      "technique_notes": "Loop appears properly cinched and secured",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 60.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 15,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 15,
+      "end_seconds": 25,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 25,
+      "end_seconds": 40,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 40,
+      "end_seconds": 55,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 55,
+      "end_seconds": 60,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "loop_positioned_at_mark": true,
+      "confidence": 0.7
+    },
+    "cinching_assessment": {
+      "loop_properly_cinched": true,
+      "appears_tight": true,
+      "confidence": 0.8
+    },
+    "appendage_integrity": {
+      "appendage_transected": false,
+      "structure_intact": true,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 60.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 120.0,
+    "formula_applied": "180 - 60.0 - 0.0 = 120.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Good visualization of key phases and completion. Loop placement assessment limited by camera angle in some frames. No clear penalties observed but exact mark positioning difficult to measure precisely.",
+  "cannot_determine": [
+    "Exact millimeter deviation from marked line due to camera angle",
+    "Whether cut was performed inside vs outside trainer box"
+  ],
+  "technique_summary": "Competent intermediate-level performance with smooth progression through all phases. Time efficient at 60 seconds, falling within intermediate range.",
+  "strengths": [
+    "Efficient target approach and loop deployment",
+    "Smooth cinching technique",
+    "Good overall timing"
+  ],
+  "improvement_suggestions": [
+    "Could reduce initial setup time to achieve expert-level benchmark",
+    "Ensure more precise positioning at marked line if deviation present"
+  ],
+  "video_id": "8si35f5pa8k",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:33:46.451632+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.774196+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "{\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"task_name\": \"Intracorporeal Suture with Knot Tying\",\n  \"max_time_seconds\": 600,\n  \"frame_analyses\": [\n    {\n      \"frame_number\": 10,\n      \"timestamp_seconds\": 0.0,\n      \"phase\": \"needle_load\",\n      \"description\": \"Grasper positioned to load needle",
+  "video_id": "_Gh1ZtMSbeA",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:40:14.411588+00:00",
+  "task_id": "task5_intracorporeal_suturing",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.855292+00:00"
+  },
+  "scoreable": false
+}

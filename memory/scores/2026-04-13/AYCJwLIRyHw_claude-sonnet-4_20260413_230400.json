@@ -1,0 +1,95 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Title slide showing 'LAPAROSCOPIC EXTRACORPOREAL KNOTS/ TUMBLE SQUARE KNOT' with author credit",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "knot_formation_demo",
+      "description": "Hands demonstrating extracorporeal knot tying technique with suture material",
+      "technique_notes": "Proper finger positioning for tumble square knot formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "phase": "knot_formation_demo",
+      "description": "Continuing demonstration of knot formation with multiple throws",
+      "technique_notes": "Sequential throw formation showing proper tension and orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 36.0,
+      "phase": "knot_formation_demo",
+      "description": "Advanced knot tying technique demonstration with complex finger movements",
+      "technique_notes": "Expert-level dexterity and control displayed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 48.0,
+      "phase": "instructional_overlay",
+      "description": "Text overlay stating 'Both limbs should be tightened with graspers intracorporeally'",
+      "technique_notes": "Key technical instruction for proper knot security",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 60.0,
+      "phase": "conclusion",
+      "description": "Final thank you slide with instructor portrait and speech bubble",
+      "technique_notes": "Educational content conclusion",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video with title slides, demonstration content, and educational overlays. Not a performance to be scored.",
+  "cannot_determine": [
+    "Performance scoring not applicable for instructional content"
+  ],
+  "technique_summary": "Expert demonstration of extracorporeal knot tying techniques with educational overlays and clear instructional intent.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Extracorporeal tumble square knot formation",
+      "Proper finger positioning and suture manipulation",
+      "Sequential throw technique",
+      "Tension control during knot formation"
+    ],
+    "verbal_cues": [
+      "Both limbs should be tightened with graspers intracorporeally"
+    ],
+    "common_errors_addressed": [
+      "Improper tension application - demonstrates correct bilateral tightening technique"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "AYCJwLIRyHw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:04:00.838319+00:00",
+  "scoreable": false
+}

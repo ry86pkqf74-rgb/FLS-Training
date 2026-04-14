@@ -1,0 +1,171 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title slide 'Setup and positioning' - instructional content begins",
+      "technique_notes": "Instructional framing; not a performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "introduction",
+      "description": "Expert instructor (female, CareRusher logo visible) speaking to camera in office setting",
+      "technique_notes": "Educational introduction by subject matter expert",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "equipment_overview",
+      "description": "3-DMed trainer box visible with Penrose drain setup on suture block; instructor hands visible holding instruments",
+      "technique_notes": "Equipment and workspace orientation shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 22.0,
+      "phase": "needle_positioning",
+      "description": "Right needle driver approaching drain with suture needle visible; instructional demonstration of needle loading",
+      "technique_notes": "Needle positioned approximately 2/3 from tip; perpendicular approach to drain",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 35.0,
+      "phase": "suture_placement_entry",
+      "description": "Needle driver executing entry through Penrose drain at marked location; suture trajectory shown",
+      "technique_notes": "Clean perpendicular needle entry; mark visibility good",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 48.0,
+      "phase": "suture_placement_exit",
+      "description": "Needle exiting drain through second mark; suture passed completely through with good positioning",
+      "technique_notes": "Exit point appears well-aligned with mark; smooth needle passage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 62.0,
+      "phase": "first_throw_initiation",
+      "description": "Right hand (leading) beginning first throw wrapping motion around suture; double throw formation visible",
+      "technique_notes": "Surgeon's knot double throw initiated; right hand leads wrap",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 78.0,
+      "phase": "first_throw_completion",
+      "description": "First throw (double wrap) complete and cinched down; knot appears secure and centered on drain slit",
+      "technique_notes": "Smooth cinching motion; knot positioned well; good tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 92.0,
+      "phase": "second_throw_initiation",
+      "description": "Left hand (switched from first throw) beginning second throw; single wrap formation",
+      "technique_notes": "Hand switch executed cleanly; left hand leads second throw as required",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 106.0,
+      "phase": "second_throw_completion",
+      "description": "Second throw completed and cinched; alternating hand switching demonstrates proper technique",
+      "technique_notes": "Single throw correct; secure cinch; alternating hand pattern maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 120.0,
+      "phase": "third_throw_initiation",
+      "description": "Right hand (switched from second throw) beginning third throw; single wrap visible",
+      "technique_notes": "Hand switch back to right; third single throw initiated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 135.0,
+      "phase": "third_throw_completion",
+      "description": "Third throw completed and cinched; complete knot sequence finished with all three throws secure",
+      "technique_notes": "Final knot appears tight and well-approximated; drain slit closure visible and complete",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 148.0,
+      "phase": "suture_cut",
+      "description": "Laparoscopic scissors visible approaching completed knot; suture tails being cut",
+      "technique_notes": "Scissors positioned to cut both tails inside trainer as required",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 160.0,
+      "phase": "completion_and_final_review",
+      "description": "Final knot with both suture tails cut; drain slit appears fully approximated; task completion achieved",
+      "technique_notes": "Clean completion; no visible gaps in drain slit; knot remains secure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 175.0,
+      "phase": "instructional_summary",
+      "description": "Instructor returning to camera view; summary of technique and common errors being discussed",
+      "technique_notes": "Educational wrap-up; expert provides verbal context",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "note_on_performance_scoring": "This is an INSTRUCTIONAL/EXPERT DEMONSTRATION video, not a trainee performance. Scoring for proficiency cannot be applied because: (1) This is a teaching video with narration, educational framing ('Setup and positioning' title slide), and expert instructor present throughout; (2) The demonstration is segmented for teaching purposes with pauses and camera work that does not reflect actual task timing; (3) The purpose is to show correct technique, not to assess a learner under timed conditions. No FLS score is computed for instructional content.",
+  "video_classification_details": "This video is clearly instructional/expert_demo hybrid: presence of title slides, expert instructor on camera (CareRusher affiliation), segmented presentation of technique phases, equipment orientation, and verbal instruction indicate this is educational content designed to teach correct FLS task5 technique rather than assess trainee performance.",
+  "cannot_determine": [
+    "Actual completion time \u2014 video is edited for instruction and does not represent real-time task performance",
+    "Real penalty assessment \u2014 expert demo avoids errors by design; penalties from a true performance cannot be inferred",
+    "Trainee proficiency level \u2014 this is not a trainee performance"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Needle loading at 2/3 point from tip for optimal control",
+      "Perpendicular needle entry into Penrose drain to ensure mark alignment",
+      "Surgeon's knot (double throw) as first throw \u2014 right hand leading wrap",
+      "Alternating hand switches between throws 2 and 3 (left hand leads throw 2, right hand leads throw 3)",
+      "Single throws for throws 2 and 3 (no double wraps after surgeon's knot)",
+      "Smooth cinching technique to secure knot without excessive tension",
+      "Proper knot positioning centered on drain slit",
+      "Drain slit closure verification \u2014 no gaps visible after knot",
+      "Cutting both suture tails inside the trainer box with laparoscopic scissors"
+    ],
+    "verbal_cues": [
+      "Setup and positioning emphasis (title slide)",
+      "Instructor discusses technique and common pitfalls (visible in summary segment)",
+      "Step-by-step phasing of suture placement, throws, and completion"
+    ],
+    "common_errors_addressed": [
+      "Avoiding non-perpendicular needle entry (expert shows clean perpendicular approach)",
+      "Incorrect hand switching pattern (expert demonstrates proper alternation)",
+      "Inadequate knot security (expert shows firm cinching with appropriate tension)",
+      "Leaving gaps in drain slit approximation (expert closure is complete)",
+      "Improper throw sequencing (expert clearly shows surgeon's knot first, then two single throws)",
+      "Failure to cut suture ends inside trainer (expert completes all cuts within box)"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "assessment_summary": "This is a high-quality instructional/expert demonstration video of FLS Task 5 (Intracorporeal Suture with Knot Tying). The expert instructor demonstrates textbook-correct technique including proper needle positioning, perpendicular entry, accurate mark placement, correct surgeon's knot formation, proper hand switching across all three throws, secure knot cinching, complete drain slit approximation, and proper suture cutting. The video is structured for teaching with clear phase transitions and visual focus on technique details. As instructional content, no FLS score is computed; instead, teaching content has been extracted for reference.",
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification as instructional is certain: title slides, expert instructor on camera, edited presentation format, and educational framing make it unambiguous this is not a trainee performance requiring scoring. Teaching content extraction is based on clearly visible expert technique demonstration.",
+  "video_id": "Gusm6-P45OE",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:30:43.870738+00:00",
+  "scoreable": false
+}

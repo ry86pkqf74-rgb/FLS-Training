@@ -1,0 +1,59 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "summary": "This video is an educational/conference presentation on AI application to laparoscopic simulation skills training (SAGES 2022). It is NOT a performance video of an FLS task. The content discusses: (1) AI algorithms for assessing peg transfer and bean drop exercises; (2) Materials and methods comparing AI detection to expert evaluator gold standard; (3) Results showing 93.02% Cohen Kappa agreement for peg transfer and 79.17% for bean drop; (4) Limitations of the current approach; (5) Future projections for expanding to 11 exercises.",
+  "cannot_score": "This is instructional/conference content with narration, slides, and discussion of research methodology. No individual trainee FLS task performance is visible. Scoring rubric does not apply.",
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "AI algorithm detects position of grasper-clamps",
+      "Identifies if objects have fallen",
+      "Measures exercise time",
+      "Compares AI assessment to expert evaluators using Cohen Kappa",
+      "Feasibility of developing AI algorithms for laparoscopic simulation training",
+      "High agreement levels between AI and gold standard evaluators"
+    ],
+    "common_errors_addressed": [],
+    "research_focus": "Validation of AI-based objective assessment of FLS exercises (peg transfer, bean drop) against expert gold standard evaluations",
+    "skill_level_demonstrated": "Not applicable\u2014research presentation, not task demonstration"
+  },
+  "key_research_findings": {
+    "peg_transfer": {
+      "agreement_percentage": "93.02%",
+      "cohen_kappa": 0.86,
+      "ai_precision_within_video_frame": "98%",
+      "ai_precision_within_working_environment": "74%"
+    },
+    "bean_drop": {
+      "agreement_percentage": "79.17%",
+      "cohen_kappa": 0.58
+    },
+    "study_population": {
+      "total_trainees": 369,
+      "total_video_recorded_exercises": 6729,
+      "exercises_analyzed": [
+        "bean_drop",
+        "peg_transfer"
+      ],
+      "training_videos_for_bean_drop": 400,
+      "training_videos_for_peg_transfer": 480
+    }
+  },
+  "limitations_noted": [
+    "Standardized training system requirement",
+    "Limited sample size",
+    "Detection of fallen objects requires improvement",
+    "Current application restricted to assessment use"
+  ],
+  "future_projections": [
+    "Expansion to 11 basic laparoscopic exercises",
+    "Application to other similar programs and simulators",
+    "Automated certification of basic laparoscopic skills"
+  ],
+  "video_id": "21ASBfLbHmw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:31:30.535439+00:00",
+  "scoreable": false
+}

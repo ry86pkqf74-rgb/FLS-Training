@@ -1,0 +1,136 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Non-dominant hand approaches first object for pickup.",
+      "technique_notes": "Efficient approach to object, slight misalignment corrected quickly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 1.0,
+      "phase": "transfer_midair",
+      "description": "Object is transferred midair from non-dominant to dominant hand.",
+      "technique_notes": "Smooth midair transfer with controlled hand movements.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 2.0,
+      "phase": "place_dominant",
+      "description": "Object is placed onto peg with dominant hand.",
+      "technique_notes": "Correct placement onto peg without overshooting.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 3.0,
+      "phase": "reverse_pickup",
+      "description": "Dominant hand picks up an object to reverse direction.",
+      "technique_notes": "Stable grasp at initial attempt.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 4.0,
+      "phase": "reverse_transfer",
+      "description": "Object is transferred from dominant to non-dominant hand.",
+      "technique_notes": "Seamless transition with good coordination.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 5.0,
+      "phase": "reverse_place",
+      "description": "Non-dominant hand places the object onto peg.",
+      "technique_notes": "Accurate and gentle object placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 10.0,
+      "phase": "place_dominant",
+      "description": "Final object being placed with the dominant hand.",
+      "technique_notes": "Final placement completed without errors.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 11.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 1,
+      "end_seconds": 2,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 2,
+      "end_seconds": 3,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 3,
+      "end_seconds": 4,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 4,
+      "end_seconds": 5,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 5,
+      "end_seconds": 6,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": 11.0,
+    "total_penalties": 0,
+    "total_fls_score": 289.0,
+    "formula_applied": "300 - 11.0 - 0 = 289.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear visibility of all key actions and no observable errors or penalties.",
+  "cannot_determine": [],
+  "technique_summary": "Flawless expert-level execution with precise and efficient movements.",
+  "strengths": [
+    "Excellent hand coordination and transition.",
+    "Precise object handling and placement."
+  ],
+  "improvement_suggestions": [],
+  "video_id": "NA0hZhKQfrk",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:07:09.145640+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.826780+00:00"
+  },
+  "scoreable": true
+}

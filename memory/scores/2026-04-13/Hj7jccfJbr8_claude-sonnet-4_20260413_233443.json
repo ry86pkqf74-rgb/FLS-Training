@@ -1,0 +1,84 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task - Instructional/Interview content",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "SAGES TV logo and promotional material showing skiing imagery",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "not_applicable",
+      "description": "Interview setting with surgeon in office with bookshelves",
+      "technique_notes": "Educational interview format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "not_applicable",
+      "description": "Dr. Gerald Fried, Chief of Surgery - MUHC, speaking in interview",
+      "technique_notes": "Expert providing educational content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "not_applicable",
+      "description": "Dr. Harvey Sigman, General Surgeon - JGH, in office setting",
+      "technique_notes": "Expert interview continuing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "not_applicable",
+      "description": "Dr. Jacob Garzon, General Surgeon - JGH, in office with documents",
+      "technique_notes": "Expert providing educational commentary",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "not_applicable",
+      "description": "Additional expert interviews continuing educational content",
+      "technique_notes": "Multiple expert perspectives being presented",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video with multiple expert interviews, SAGES branding, and no FLS task performance visible",
+  "cannot_determine": [],
+  "technique_summary": "Not applicable - this is educational interview content, not an FLS task performance",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "Hj7jccfJbr8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:34:43.792054+00:00",
+  "scoreable": false
+}

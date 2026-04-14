@@ -1,0 +1,131 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Initial setup - instruments visible on sterile field with suture and Penrose drain visible",
+      "technique_notes": "Standard FLS trainer setup with instruments arranged",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "suture_preparation",
+      "description": "Hands manipulating white suture material outside trainer box",
+      "technique_notes": "Extracorporeal suture handling, preparing for needle loading",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "suture_preparation",
+      "description": "Continued extracorporeal suture manipulation with both hands",
+      "technique_notes": "Proper extracorporeal technique being used",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "suture_preparation",
+      "description": "Suture being threaded and prepared, red bead visible on suture",
+      "technique_notes": "Red bead confirms this is FLS extracorporeal suture task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 36.0,
+      "phase": "suture_preparation",
+      "description": "Suture manipulation continues with red bead clearly visible",
+      "technique_notes": "Proper extracorporeal suture handling technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 45.0,
+      "phase": "suture_preparation",
+      "description": "Final suture preparation with red bead on long suture strand",
+      "technique_notes": "Suture appears properly prepared for insertion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 54.0,
+      "phase": "suture_preparation",
+      "description": "Hands positioning suture material, preparation phase continuing",
+      "technique_notes": "Methodical preparation of extracorporeal suture",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 63.0,
+      "phase": "suture_preparation",
+      "description": "Final positioning of suture with red bead clearly visible",
+      "technique_notes": "Long preparation time but thorough technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 63.0,
+  "phase_timings": [
+    {
+      "phase": "suture_preparation",
+      "start_seconds": 0,
+      "end_seconds": 63,
+      "duration_seconds": 63,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.0
+    },
+    "drain_assessment": {
+      "gap_visible": null,
+      "drain_avulsed": false,
+      "completion_status": "incomplete"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 63.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 357.0,
+    "formula_applied": "420 - 63.0 - 0.0 = 357.0"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "Video shows only the preparation phase of the task. No actual suture placement through Penrose drain marks or knot tying was observed. Unable to assess the core components of Task 4.",
+  "cannot_determine": [
+    "Suture placement accuracy at drain marks",
+    "Knot tying technique and security",
+    "Final drain gap assessment",
+    "Whether task was completed beyond preparation phase",
+    "Actual task completion time"
+  ],
+  "technique_summary": "Video shows only extensive suture preparation phase (63 seconds) which is longer than typical expert total completion time (60-100s). The actual suturing and knot tying phases were not captured in this video segment.",
+  "strengths": [
+    "Thorough suture preparation",
+    "Proper extracorporeal technique visible during prep phase"
+  ],
+  "improvement_suggestions": [
+    "Reduce preparation time - 63 seconds for prep alone exceeds many expert total times",
+    "Video incomplete - unable to assess core task components"
+  ],
+  "video_id": "W7QV4EFlbNw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:29:46.158024+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.846718+00:00"
+  },
+  "scoreable": true
+}

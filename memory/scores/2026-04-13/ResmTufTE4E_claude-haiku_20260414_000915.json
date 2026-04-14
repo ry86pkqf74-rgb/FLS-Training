@@ -1,0 +1,205 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Fundamentals of Laparoscopic Surgery - Overview Presentation",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Blue gradient background with no FLS task content visible",
+      "technique_notes": "Presentation opening frame",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.5,
+      "phase": "educational_content",
+      "description": "Title slide: 'Why?' - Lists reasons for FLS (ready-made training module, validated assessment, ABS mandate, credentials, self-learning)",
+      "technique_notes": "Educational/informational content with lecture format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "educational_content",
+      "description": "Title slide: 'Who?' - Describes target audience (residents, fellows, teaching faculty, community surgeons, GYN, pediatric surgery, urology)",
+      "technique_notes": "Educational content explaining FLS program scope",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 7.5,
+      "phase": "educational_content",
+      "description": "Continuation of 'Who?' slide with same content",
+      "technique_notes": "Reinforcing target population information",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 10.0,
+      "phase": "educational_content",
+      "description": "Title slide: 'Universality' - Explains FLS as non-procedure based, fundamental knowledge/skill, not for experts, reviewed by GYN and Pediatric Surgery, being validated as GYN competency tool",
+      "technique_notes": "Educational content on program universality and validation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 12.5,
+      "phase": "educational_content",
+      "description": "Title slide: 'When?' - Covers FLS as training tool (resident training, skills acquisition, graduation certification) and competency measurement (credentialing, risk management)",
+      "technique_notes": "Educational content on timing and applications",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 15.0,
+      "phase": "educational_content",
+      "description": "Continuation of 'When?' slide with same content",
+      "technique_notes": "Reinforcing timing and application information",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 17.5,
+      "phase": "educational_content",
+      "description": "Title slide: 'Suggested 5 year program curricula' - Year 1 and 2 details (didactic sessions 1hr q 2 weeks, 1 hour manual skills training FLS box peg transfer; Year 3 formal FLS manual skills sessions 2X month; Year 4 self study online/web, testing day with didactic and test sessions)",
+      "technique_notes": "Educational content on curriculum structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 20.0,
+      "phase": "educational_content",
+      "description": "Continuation of suggested 5 year program curricula slide",
+      "technique_notes": "Reinforcing curriculum information",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 22.5,
+      "phase": "educational_content",
+      "description": "Title slide: 'Resident Curricula 2' - Details for junior residents year 1 (16 hr FLS didactic slide set, 1hr/2x month), Year 2 and 3 skills training (FLS box proctored 1 hr/month, required self study 1 hr/month, peg transfer, suturing, etc, FLS tasks $student per year), Year 4 (Afternoon FLS cognitive study 4 hr slide set, manual skills practice session 1 hour, FLS proctored testing 2.5 hours/resident)",
+      "technique_notes": "Educational content on resident-specific curriculum",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 25.0,
+      "phase": "educational_content",
+      "description": "Title slide: 'Where?' - Map of North America showing 61 test centers with stars indicating locations across USA, Canada, and border regions. Lists specific testing centers by state.",
+      "technique_notes": "Educational content on geographic distribution of FLS testing centers",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 27.5,
+      "phase": "educational_content",
+      "description": "Title slide: 'FLS Testing' - Lists 61 test centers in North America and counting, detailed list of testing center locations, SAGES and ACS Annual Meetings, Australia and New Zealand testing options",
+      "technique_notes": "Educational content on testing availability and locations",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 30.0,
+      "phase": "educational_content",
+      "description": "Title slide: 'At your institution!' - Individual Package (Self study and test center voucher), Education Packages (A - Online Access 3 vouchers; B - Online Access 5 Vouchers Trainer Box; C - Online Access 5 Vouchers Trainer Box on-site testing proctor)",
+      "technique_notes": "Educational content on FLS purchasing/implementation options",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 32.5,
+      "phase": "educational_content",
+      "description": "Title slide: 'How?' - Online (www.flsprogram.org, www.SAGES.org), By phone (310) 437-0544, By email (fls@sages.org), On site (FLS Postgraduate Courses SAGES April 2010 Washington DC, ACS Clinical Congress October 2010 Washington DC)",
+      "technique_notes": "Educational content on how to access FLS program",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 35.0,
+      "phase": "educational_content",
+      "description": "Title slide: 'Additional questions?' - Closing slide with background image of surgeons at laparoscopic trainer",
+      "technique_notes": "Educational content closing/Q&A prompt",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 37.5,
+      "phase": "educational_content",
+      "description": "Continuation of 'Additional questions?' slide",
+      "technique_notes": "Same closing slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 40.0,
+      "phase": "educational_content",
+      "description": "Continuation of 'Additional questions?' slide",
+      "technique_notes": "Same closing slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 42.5,
+      "phase": "educational_content",
+      "description": "Continuation of 'Additional questions?' slide",
+      "technique_notes": "Same closing slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 45.0,
+      "phase": "educational_content",
+      "description": "Continuation of 'Additional questions?' slide",
+      "technique_notes": "Same closing slide",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - Instructional content, not scored"
+  },
+  "confidence": null,
+  "confidence_rationale": "Video is classified as instructional educational material, not a performance or expert demonstration. It is a PowerPoint-style presentation about the FLS program overview, including why it exists, who should take it, when it should be integrated into training, where testing centers are located, and how to access the program. No actual FLS task performance is shown.",
+  "cannot_determine": [
+    "Task identification from video content",
+    "Performance metrics (completion time, technique assessment)",
+    "Any scoring data"
+  ],
+  "technique_summary": "Not applicable \u2014 this is educational/informational content, not a task performance video.",
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "FLS designed for 'any surgeon who uses the laparoscope'",
+      "Non-procedure based fundamental knowledge and skill",
+      "Results expected for a 'minimally acceptable' laparoscopist",
+      "Currently being validated as GYN competency measuring tool"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": null,
+    "presentation_type": "FLS Program Overview Lecture",
+    "key_topics_covered": [
+      "Program rationale and validation",
+      "Target audience (residents, fellows, faculty, community surgeons, GYN, pediatric, urology)",
+      "Program universality and non-procedure specificity",
+      "Integration into training (year 1-4 curricula)",
+      "Testing center distribution (61 centers in North America)",
+      "Purchase and implementation options",
+      "Contact and access methods"
+    ]
+  },
+  "improvement_suggestions": [],
+  "video_id": "ResmTufTE4E",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:09:15.287404+00:00"
+}

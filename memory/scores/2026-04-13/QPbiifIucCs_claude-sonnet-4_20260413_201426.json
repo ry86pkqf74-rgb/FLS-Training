@@ -1,0 +1,156 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Laparoscopic trainer box visible with gauze material suspended between clamps, circular cutting pattern marked",
+      "technique_notes": "Pre-task setup appears appropriate with gauze properly positioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "gauze_grasp",
+      "description": "Hands inserting laparoscopic instruments through ports, preparing to grasp gauze",
+      "technique_notes": "Bilateral instrument insertion, good port utilization",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "initial_cut",
+      "description": "Scissors positioned at gauze, beginning to cut along marked circular line",
+      "technique_notes": "Scissors properly oriented, gauze under appropriate tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 39.0,
+      "phase": "clockwise_cut",
+      "description": "Progressing around circular pattern in clockwise direction, maintaining cut line",
+      "technique_notes": "Smooth cutting motion, gauze remains attached to clamps",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "counterclockwise_cut",
+      "description": "Continuing cutting pattern, approaching completion of circle",
+      "technique_notes": "Consistent technique maintained throughout cutting sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 63.0,
+      "phase": "completion",
+      "description": "Final cuts being made to complete circular pattern, gauze still secured",
+      "technique_notes": "Task appears completed, gauze remains attached to clamps",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 72.0,
+      "phase": "completion",
+      "description": "Hands removing cut gauze piece from trainer box for inspection",
+      "technique_notes": "Task completed, examining cut pattern quality",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 72.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 15,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 15,
+      "end_seconds": 30,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 30,
+      "end_seconds": 50,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 50,
+      "end_seconds": 65,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 65,
+      "end_seconds": 72,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": {
+        "north_mm": 0.0,
+        "northeast_mm": 0.0,
+        "east_mm": 0.0,
+        "southeast_mm": 0.0,
+        "south_mm": 0.0,
+        "southwest_mm": 0.0,
+        "west_mm": 0.0,
+        "northwest_mm": 0.0
+      },
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.4
+    },
+    "gauze_integrity": {
+      "remained_attached": true,
+      "complete_cut": true,
+      "detachment_penalty": 0.0
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 72.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 228.0,
+    "formula_applied": "300 - 72.0 - 0.0 = 228.0"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "Video quality and camera angle make precise measurement of cutting deviation difficult to assess. Gauze attachment and completion are clearly visible. Time measurement is reliable from instrument insertion to task completion.",
+  "cannot_determine": [
+    "Precise deviation measurements at 8 cardinal points due to camera angle and video resolution",
+    "Exact cutting precision within 2mm tolerance - would require closer inspection of cut edges"
+  ],
+  "technique_summary": "Competent intermediate-level performance with smooth cutting technique and good instrument handling. Completion time of 72 seconds falls within intermediate range (60-180s).",
+  "strengths": [
+    "Maintained gauze attachment throughout procedure",
+    "Smooth, continuous cutting motion",
+    "Appropriate instrument positioning and technique"
+  ],
+  "improvement_suggestions": [
+    "Cannot provide specific precision feedback due to video limitations",
+    "Time performance suggests room for improvement toward expert level (60-90s)"
+  ],
+  "video_id": "QPbiifIucCs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:14:26.587412+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.832606+00:00"
+  },
+  "scoreable": true
+}

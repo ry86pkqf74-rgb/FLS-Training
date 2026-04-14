@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm sorry, but I can't analyze the task or score it based on the images provided.",
+  "video_id": "8OrfizM-RSo",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:32:34.825415+00:00",
+  "task_id": "task5_intracorporeal_suturing",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.771732+00:00"
+  },
+  "scoreable": false
+}

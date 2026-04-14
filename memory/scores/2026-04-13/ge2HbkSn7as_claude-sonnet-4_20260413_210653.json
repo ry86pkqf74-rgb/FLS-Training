@@ -1,0 +1,114 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Educational presentation title slide about laparoscopic intracorporeal knot tying",
+      "technique_notes": "This is instructional content, not performance video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "educational_content",
+      "description": "Fact slides about laparoscopic suturing skills",
+      "technique_notes": "Educational material explaining importance of skill",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "educational_content",
+      "description": "Video demonstration of practice setup with instruments over training pad",
+      "technique_notes": "Showing technique demonstration with suture loop formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "educational_content",
+      "description": "Demonstration of Step 1 - loop creation with instruments",
+      "technique_notes": "Educational content showing proper loop formation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "educational_content",
+      "description": "Step 2 instruction slides with demonstration images",
+      "technique_notes": "Teaching proper instrument positioning and loop alignment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "educational_content",
+      "description": "Step 3 demonstration - picking up short arm from tip",
+      "technique_notes": "Instructional content on proper suture manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "educational_content",
+      "description": "Step 4 - knot tying demonstration with instruments",
+      "technique_notes": "Educational demonstration of knot formation technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0,
+      "confidence": 0
+    },
+    "drain_assessment": {
+      "gap_visible": null,
+      "drain_avulsed": false,
+      "slit_closure_quality": null
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot calculate - no performance video provided"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This is educational/instructional content, not an actual FLS Task 5 performance video. No timing, drain marks, or actual task execution is present to score.",
+  "cannot_determine": [
+    "Completion time - no performance video",
+    "Suture placement accuracy - no actual suturing shown",
+    "Knot quality - only demonstration, no scored performance",
+    "All FLS scoring criteria - educational content only"
+  ],
+  "technique_summary": "Educational presentation demonstrating intracorporeal knot tying technique steps. Not a scoreable performance.",
+  "strengths": [
+    "Clear instructional content",
+    "Step-by-step technique breakdown"
+  ],
+  "improvement_suggestions": [
+    "Provide actual FLS Task 5 performance video for scoring",
+    "Include timing and Penrose drain with marked targets"
+  ],
+  "video_id": "ge2HbkSn7as",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:06:53.151459+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.874942+00:00"
+  },
+  "scoreable": false
+}

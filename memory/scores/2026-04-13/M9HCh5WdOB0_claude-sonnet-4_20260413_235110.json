@@ -1,0 +1,92 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Multiple FLS Tasks Demonstration",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "equipment_overview",
+      "description": "Black frame with no visible content",
+      "technique_notes": "Video beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup_display",
+      "description": "Laparoscopic trainer box setup with peg transfer board showing 6 pegs arranged in triangle pattern with colored objects",
+      "technique_notes": "Standard FLS peg transfer configuration visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "trainer_overview",
+      "description": "Wide view of laparoscopic trainer with hands positioned for operation, instruments visible entering trainer box",
+      "technique_notes": "Proper hand positioning for laparoscopic manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "instrument_demo",
+      "description": "Close view of laparoscopic instruments inside trainer, demonstrating basic grasping technique",
+      "technique_notes": "Basic instrument manipulation demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "trainer_setup",
+      "description": "Overview shot showing complete laparoscopic training setup from above with multiple training modules visible",
+      "technique_notes": "Multiple FLS tasks visible in trainer setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "suturing_demo",
+      "description": "Pink tissue model with suturing demonstration, needle driver and suture material visible",
+      "technique_notes": "Demonstrates suturing technique on tissue model",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content showing multiple FLS tasks and equipment. JDMeditech branding and promotional overlays indicate this is educational/marketing material rather than performance assessment.",
+  "cannot_determine": [
+    "Specific task performance metrics - video shows equipment demonstration rather than scored performance"
+  ],
+  "technique_summary": "Instructional video demonstrating various FLS training equipment and basic laparoscopic techniques across multiple tasks including peg transfer and suturing.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Basic laparoscopic grasping with needle drivers",
+      "Peg transfer setup and object manipulation",
+      "Suturing on tissue models",
+      "Proper instrument insertion and positioning",
+      "Bimanual coordination techniques"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "basic_demonstration"
+  },
+  "improvement_suggestions": [],
+  "video_id": "M9HCh5WdOB0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:51:10.831790+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,152 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Gauze material visible between transparent clamps, single grasper approaching",
+      "technique_notes": "Clean setup with gauze properly suspended",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "gauze_grasp",
+      "description": "Text overlay 'Make your incision' appears, both instruments positioned at gauze",
+      "technique_notes": "Dual instrument approach for stability",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "initial_cut",
+      "description": "Initial incision being made in gauze material, opening visible",
+      "technique_notes": "Controlled initial entry point established",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "initial_cut",
+      "description": "Large triangular opening created in center of gauze",
+      "technique_notes": "Significant material removal, not following circular pattern",
+      "penalties_observed": [
+        "excessive_material_removal"
+      ]
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "pattern_cutting",
+      "description": "Text overlay 'Remove the mass' appears, continued cutting with instruments",
+      "technique_notes": "Focus on mass removal rather than precise circular cutting",
+      "penalties_observed": [
+        "deviation_from_pattern"
+      ]
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "completion",
+      "description": "Text overlay 'Close' appears with suture material visible for closure",
+      "technique_notes": "Task transitioning to closure phase with suture preparation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 300,
+  "phase_timings": [
+    {
+      "phase": "setup",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 10,
+      "end_seconds": 25,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "pattern_cutting",
+      "start_seconds": 25,
+      "end_seconds": 40,
+      "duration_seconds": 15,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "pattern_deviation": {
+      "cardinal_point_deviations_mm": [],
+      "total_deviation_penalty": 0,
+      "confidence": 0.3
+    },
+    "gauze_integrity": {
+      "detached_from_clamp": false,
+      "complete_cut": true
+    },
+    "cutting_technique": {
+      "follows_marked_line": false,
+      "maintains_circular_pattern": false,
+      "notes": "Demonstrates mass removal technique rather than precision pattern cutting"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 300,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "Not scored - instructional content"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clear instructional video with text overlays demonstrating surgical technique concepts rather than FLS task performance. Focus is on mass removal and closure principles.",
+  "cannot_determine": [
+    "Exact FLS scoring metrics as this demonstrates surgical technique rather than FLS task completion",
+    "Precise pattern deviation measurements - no circular cutting pattern followed",
+    "Actual completion time for FLS task performance"
+  ],
+  "technique_summary": "Instructional demonstration showing mass removal technique and closure preparation rather than FLS pattern cutting task performance.",
+  "strengths": [
+    "Clear demonstration of mass removal technique",
+    "Good instrument control and coordination",
+    "Logical progression from cutting to closure preparation"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "mass removal approach to tissue cutting",
+      "dual instrument coordination",
+      "transition from cutting to closure preparation",
+      "suture preparation and positioning"
+    ],
+    "verbal_cues": [
+      "Make your incision",
+      "Remove the mass",
+      "Close"
+    ],
+    "common_errors_addressed": [
+      "demonstrates controlled cutting technique",
+      "shows proper instrument positioning for tissue manipulation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "E4ON0LThOsQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:17:55.186627+00:00",
+  "scoreable": false
+}

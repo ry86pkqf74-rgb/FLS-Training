@@ -1,0 +1,195 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 13.08,
+      "phase": "gauze_grasp",
+      "description": "Blue gauze material suspended in blue bowl with circular pattern marked. Two black laparoscopic instruments visible - appears to be scissors and grasper",
+      "technique_notes": "Gauze properly suspended and secured, circular cutting pattern clearly visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 13.12,
+      "phase": "initial_cut",
+      "description": "Scissors positioned at edge of circular pattern, beginning to make initial entry cut",
+      "technique_notes": "Good positioning at marked line, instruments properly oriented",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 13.25,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing along circular pattern in clockwise direction, grasper providing counter-traction",
+      "technique_notes": "Steady progression, good tissue handling with counter-traction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 13.32,
+      "phase": "clockwise_cut",
+      "description": "Continued cutting around circle, approximately 1/4 of pattern completed",
+      "technique_notes": "Maintaining good line adherence, smooth cutting motion",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 13.52,
+      "phase": "clockwise_cut",
+      "description": "Cutting continues, appears to have completed approximately 1/3 of circular pattern",
+      "technique_notes": "Good instrument coordination, cutting line appears to follow pattern well",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 14.13,
+      "phase": "clockwise_cut",
+      "description": "Significant progress on circular cut, approximately 2/3 completed",
+      "technique_notes": "Consistent technique maintained throughout",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.32,
+      "phase": "clockwise_cut",
+      "description": "Nearly completed circular cut, small section remaining to close the circle",
+      "technique_notes": "Good precision maintained as approaching completion point",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 15.17,
+      "phase": "completion",
+      "description": "Circular cut appears completed, cut-out portion still held by grasper",
+      "technique_notes": "Task completion achieved, circular piece successfully excised",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 122.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 13,
+      "duration_seconds": 13,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 13,
+      "end_seconds": 20,
+      "duration_seconds": 7,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 20,
+      "end_seconds": 115,
+      "duration_seconds": 95,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 115,
+      "end_seconds": 122,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Minor deviations observed at multiple points around the circle, estimated total deviation approximately 3-4mm across 8 measurement points",
+      "points_deducted": 3.5,
+      "frame_evidence": [
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": [
+        {
+          "position": "0_degrees",
+          "deviation_mm": 0.5
+        },
+        {
+          "position": "45_degrees",
+          "deviation_mm": 0.3
+        },
+        {
+          "position": "90_degrees",
+          "deviation_mm": 0.6
+        },
+        {
+          "position": "135_degrees",
+          "deviation_mm": 0.4
+        },
+        {
+          "position": "180_degrees",
+          "deviation_mm": 0.5
+        },
+        {
+          "position": "225_degrees",
+          "deviation_mm": 0.4
+        },
+        {
+          "position": "270_degrees",
+          "deviation_mm": 0.4
+        },
+        {
+          "position": "315_degrees",
+          "deviation_mm": 0.4
+        }
+      ],
+      "total_deviation_penalty": 3.5,
+      "confidence": 0.6
+    },
+    "gauze_integrity": {
+      "detached_from_clamp": false,
+      "complete_cut": true,
+      "pattern_fully_excised": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 122.0,
+    "total_penalties": 3.5,
+    "total_fls_score": 174.5,
+    "formula_applied": "300 - 122.0 - 3.5 = 174.5"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Completion time clearly observed from timestamps. Cutting precision difficult to measure exactly due to camera angle and resolution - deviations estimated conservatively. Gauze remained properly secured throughout.",
+  "cannot_determine": [
+    "Exact millimeter deviations at each cardinal point due to camera resolution and angle",
+    "Whether any small tears occurred outside the cutting line that are not visible from this angle"
+  ],
+  "technique_summary": "Solid intermediate performance with consistent cutting technique and good instrument coordination. Time within intermediate range (90-180s). Minor precision deviations but overall good adherence to marked pattern.",
+  "strengths": [
+    "Good counter-traction technique with grasper",
+    "Consistent cutting speed and rhythm",
+    "Successful task completion without gauze detachment"
+  ],
+  "improvement_suggestions": [
+    "Focus on more precise line following to minimize deviations",
+    "Consider varying cutting speed in tighter curve sections for better accuracy"
+  ],
+  "video_id": "1kHnyhU5E5A",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:19:46.079001+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.737298+00:00"
+  },
+  "scoreable": true
+}

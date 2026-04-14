@@ -1,0 +1,117 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_title",
+      "description": "Movie clapperboard showing 'Basics of Laparoscopy' presentation title with production credits",
+      "technique_notes": "Educational video introduction - not a performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "instructional_title",
+      "description": "Title slide showing 'A Step by Step Approach to Basic Laparoscopy' with presenter credentials",
+      "technique_notes": "Dr. Yamini Kale and Dr. Sanjana Sainani presenting for NOGS",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "instructional_content",
+      "description": "Educational slide showing topic outline: Instruments, Patient Position, Trocar Entry",
+      "technique_notes": "Overview of laparoscopic fundamentals being covered",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "instructional_content",
+      "description": "View of complete laparoscopic tower with monitor, insufflator, and light source",
+      "technique_notes": "Equipment demonstration showing proper setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "instructional_content",
+      "description": "Array of laparoscopic instruments laid out on green surgical drape",
+      "technique_notes": "Comprehensive instrument display including trocars, graspers, scissors",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "instructional_content",
+      "description": "Diagram showing laparoscope field of view angles at 0\u00b0 and 30\u00b0",
+      "technique_notes": "Educational illustration of scope optics and viewing angles",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "instructional_content",
+      "description": "Close-up of 10mm primary trocar and Veress needle components",
+      "technique_notes": "Detailed view of trocar assembly and safety mechanisms",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "instructional_content",
+      "description": "Various laparoscopic instrument shafts displayed showing different tip designs",
+      "technique_notes": "Comparison of different instrument tip configurations",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": null,
+    "knot_security": null,
+    "pusher_break_technique": null,
+    "tail_cutting": null
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content only"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional video about basic laparoscopy, not a performance of FLS Task 3 endoloop. No scoring is appropriate.",
+  "cannot_determine": [
+    "Task performance metrics - this is educational content, not a task performance"
+  ],
+  "technique_summary": "Not applicable - this is instructional content about general laparoscopic techniques and equipment, not an endoloop task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "laparoscopic equipment setup and tower configuration",
+      "comprehensive instrument identification and layout",
+      "trocar assembly and component recognition",
+      "scope angle understanding (0\u00b0 vs 30\u00b0 optics)",
+      "patient positioning fundamentals",
+      "Veress needle vs direct trocar entry methods"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "proper equipment preparation and organization",
+      "understanding scope viewing angles for optimal visualization"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "RRioxYjpIJY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:05:55.021635+00:00",
+  "scoreable": false
+}

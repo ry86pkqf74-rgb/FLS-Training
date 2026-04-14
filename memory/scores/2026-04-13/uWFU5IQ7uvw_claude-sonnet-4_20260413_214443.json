@@ -1,0 +1,143 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "loop_deploy",
+      "description": "Endoloop device visible with purple suture loop being manipulated by two graspers",
+      "technique_notes": "Both instruments positioned to control loop deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "target_approach",
+      "description": "Loop being positioned and opened, target appendage visible in background",
+      "technique_notes": "Controlled opening of loop with bilateral instrument manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "loop_placement",
+      "description": "Loop being positioned around target structure with instruments maintaining control",
+      "technique_notes": "Good coordination between instruments to maintain loop shape",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "loop_placement",
+      "description": "Loop appears to be positioned around appendage, instruments working to adjust placement",
+      "technique_notes": "Fine adjustments being made to loop position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 36.0,
+      "phase": "cinch",
+      "description": "Cinching motion initiated, loop beginning to tighten around target",
+      "technique_notes": "Controlled cinching with maintained instrument control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 45.0,
+      "phase": "cinch",
+      "description": "Loop tightening continues, instruments maintaining tension",
+      "technique_notes": "Progressive tightening with good instrument coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 51.0,
+      "phase": "cut_tail",
+      "description": "Task appears complete, instruments positioned near final loop position",
+      "technique_notes": "Final positioning achieved",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 51.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 10,
+      "end_seconds": 20,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 20,
+      "end_seconds": 35,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 35,
+      "end_seconds": 50,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 50,
+      "end_seconds": 51,
+      "duration_seconds": 1,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0,
+      "loop_cinched_tightly": true,
+      "appendage_transected": false
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 51.0,
+    "total_penalties": 0,
+    "total_fls_score": 129.0,
+    "formula_applied": "180 - 51.0 - 0 = 129.0"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Video quality limits precise assessment of loop position relative to marks. Task completion and basic technique clearly visible but exact penalty measurements cannot be determined with high confidence.",
+  "cannot_determine": [
+    "Exact mm deviation from marked line due to video resolution and angle",
+    "Precise location of target marks on appendage",
+    "Whether tail cutting was performed (not clearly visible in final frames)"
+  ],
+  "technique_summary": "Competent intermediate performance with smooth loop deployment and controlled cinching. Total time of 51 seconds falls within intermediate range (40-90s benchmark).",
+  "strengths": [
+    "Good bilateral instrument coordination",
+    "Controlled loop deployment and manipulation",
+    "Efficient cinching technique"
+  ],
+  "improvement_suggestions": [
+    "Reduce deployment time to move toward expert benchmark (20-40s)",
+    "Ensure precise positioning at marked line before cinching"
+  ],
+  "video_id": "uWFU5IQ7uvw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:44:43.663138+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.907408+00:00"
+  },
+  "scoreable": true
+}

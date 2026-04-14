@@ -1,0 +1,48 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine",
+  "reason": "The provided frames show product equipment/supplies display (Lincoln Logs, borescope, alligator forceps, copper tube) in the first two images, followed by office/desk environment shots with a computer monitor displaying what appears to be laparoscopic video content. However, the actual laparoscopic task video is being displayed ON a monitor in an office setting rather than being the primary recording. The frames show a secondary/indirect recording of a task video through a computer screen, which creates poor visibility, glare, and angle distortion. Additionally, the content visible on the monitor (wooden blocks/connector pieces with clamps and instruments) does not clearly correspond to any standard FLS task (Peg Transfer, Pattern Cut, Endoloop, or Extracorporeal/Intracorporeal Suture tasks). The task depicted appears to be a non-standard training or demonstration setup, possibly a DIY/low-cost trainer setup rather than an official FLS box trainer.",
+  "scoring_status": "Cannot score",
+  "confidence": 0.15,
+  "confidence_rationale": "Video quality is severely compromised by indirect recording through a monitor screen. Equipment and setup do not match standard FLS trainer box specifications. Task identity cannot be reliably determined from the obscured and distorted monitor display.",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0,
+      "description": "Product display: Lincoln Logs ($10), borescope ($20), alligator forceps ($12), copper tube ($4)",
+      "notes": "Equipment/supply list, not task performance"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1,
+      "description": "Identical product display frame",
+      "notes": "Equipment/supply list, not task performance"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2,
+      "description": "Office desk with computer monitor displaying laparoscopic content indirectly",
+      "notes": "Indirect recording of task through monitor screen"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3,
+      "description": "Monitor display shows two brass/metal cylinders and white instrument",
+      "notes": "Non-standard trainer setup visible on monitor"
+    }
+  ],
+  "cannot_score_reasons": [
+    "Task is displayed on a computer monitor rather than being directly recorded",
+    "Secondary screen recording introduces glare, distortion, and poor visibility",
+    "Equipment setup does not match official FLS task trainer box specifications",
+    "Task type cannot be reliably identified from obscured monitor display",
+    "Frame-by-frame analysis of actual task performance is not possible due to indirect recording method"
+  ],
+  "recommendation": "Please provide a direct recording of the FLS task performance from the trainer box camera/phone camera, not a recording of a monitor displaying the task. This will allow proper scoring according to official FLS rubrics.",
+  "video_id": "9Rg7mZhuo_I",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:58:51.892355+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,104 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "The loop is positioned ready for deployment over the foam appendage.",
+      "technique_notes": "The loop is visibly open and well-positioned above the target.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 5.0,
+      "phase": "target_approach",
+      "description": "The loop is tightened around the foam appendage, approaching the marked line.",
+      "technique_notes": "Approach is controlled and aligns with the target.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 10.0,
+      "phase": "loop_placement",
+      "description": "The loop is positioned down to the marking line on the appendage.",
+      "technique_notes": "Positioning appears precise with minimal deviation.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 60.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 10,
+      "end_seconds": 20,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_not_at_mark",
+      "description": "Loop placed slightly above marked line by approximately 1mm.",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        18
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_position": {
+      "deviation_from_mark_mm": 1.0,
+      "confident_assessment": true
+    },
+    "cinch_assessment": {
+      "fully_cinched": true,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 60.0,
+    "total_penalties": 1.0,
+    "total_fls_score": 119.0,
+    "formula_applied": "180 - 60.0 - 1.0 = 119.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Penalties assessed based on visible precise loop marking; cinch action well-documented.",
+  "cannot_determine": [],
+  "technique_summary": "Excellent precision in loop deployment and cinch with minimal deviation from mark. Efficient time utilization.",
+  "strengths": [
+    "Quick and controlled deployment of the endoloop.",
+    "Clean cinch with no observable slack."
+  ],
+  "improvement_suggestions": [
+    "Focus on precise positioning at marked line to eliminate any deviation."
+  ],
+  "video_id": "ilfP0xdXEGE",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:12:05.255683+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.879496+00:00"
+  },
+  "scoreable": true
+}

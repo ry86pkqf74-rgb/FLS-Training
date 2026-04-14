@@ -1,0 +1,82 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - no FLS task performance visible",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Male surgeon in blue scrubs standing in front of laparoscopic training station with equipment visible in background. No instruments or task materials in use.",
+      "technique_notes": "Presenter appears to be addressing camera; FLS training equipment visible but not in use",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 2.0,
+      "phase": "presentation",
+      "description": "Surgeon gesturing while speaking; no task performance occurring. Training station visible behind.",
+      "technique_notes": "Lecture/instructional mode - person is demonstrating or explaining something",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 4.0,
+      "phase": "presentation",
+      "description": "Continuing presentation stance; hands in various gesture positions. No laparoscopic instruments visible or in use.",
+      "technique_notes": "Continued verbal instruction/demonstration phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 6.0,
+      "phase": "presentation",
+      "description": "Presenter gesturing with both hands; maintaining eye contact with camera. FLS station remains unused in background.",
+      "technique_notes": "Educational content delivery - no task execution",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 8.0,
+      "phase": "presentation",
+      "description": "Surgeon continues speaking and gesturing. No change in setup or task initiation.",
+      "technique_notes": "Instructional narration continues",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no task performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Frames clearly show an instructional/lecture video in a surgical training environment. No FLS task is being performed - the surgeon is presenting or explaining material to the camera without using any laparoscopic instruments or performing any of the five standard FLS tasks.",
+  "cannot_determine": [
+    "Which FLS task was intended - no task setup or performance visible",
+    "Completion time - no task execution occurred",
+    "Any technical performance metrics - instructional content only"
+  ],
+  "technique_summary": "This is educational/instructional content showing a surgeon in a training facility, not a performance-based FLS task video. No scoring is applicable.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": "Unable to transcribe - audio not provided; however, gestures suggest explanation or discussion of surgical principles or FLS methodology",
+    "common_errors_addressed": "Unknown - no specific task demonstrated",
+    "skill_level_demonstrated": "Instructor/educator level - presenting to audience rather than performing"
+  },
+  "improvement_suggestions": [
+    "To score this video, provide a recording of actual task performance by a trainee or surgeon executing one of the five FLS tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture)"
+  ],
+  "video_id": "I_JXd1R8-8s",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:38:51.665843+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,165 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Black screen - task not yet started",
+      "technique_notes": "Pre-task state",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "vessel_preparation",
+      "description": "Two graspers approaching red vessel, instruction to stretch vessel for clip application",
+      "technique_notes": "Good bilateral approach to vessel manipulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "vessel_stretching",
+      "description": "Both graspers engaged on vessel, stretching to create optimal working length",
+      "technique_notes": "Appropriate tension application, vessel well-positioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "clip_application",
+      "description": "Instruction to place clips in highlighted areas, both applier jaws visible",
+      "technique_notes": "Proper clip applier positioning, vessel maintained under tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "clip_application",
+      "description": "First clip being applied to vessel, applier jaws closing",
+      "technique_notes": "Clean clip application technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "clip_application",
+      "description": "Both clips applied to vessel, second clip visible",
+      "technique_notes": "Sequential clip placement completed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70.0,
+      "phase": "cutting_preparation",
+      "description": "Scissors introduced, instruction to cut highlighted area between clips",
+      "technique_notes": "Appropriate cutting zone identified between clips",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 80.0,
+      "phase": "vessel_cutting",
+      "description": "Scissors cutting vessel between the two clips",
+      "technique_notes": "Clean cut between clips, proper technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 95.0,
+      "phase": "completion",
+      "description": "Exercise completed message displayed, vessel successfully divided",
+      "technique_notes": "Task completed successfully",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 95.0,
+  "phase_timings": [
+    {
+      "phase": "vessel_preparation",
+      "start_seconds": 5,
+      "end_seconds": 15,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "vessel_stretching",
+      "start_seconds": 15,
+      "end_seconds": 25,
+      "duration_seconds": 10,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "clip_application",
+      "start_seconds": 25,
+      "end_seconds": 45,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cutting_preparation",
+      "start_seconds": 45,
+      "end_seconds": 70,
+      "duration_seconds": 25,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "vessel_cutting",
+      "start_seconds": 70,
+      "end_seconds": 95,
+      "duration_seconds": 25,
+      "benchmark_comparison": "novice"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_deployment": "Not applicable - this appears to be a vessel clipping exercise",
+    "target_approach": "Good approach to vessel target",
+    "loop_placement": "Not applicable - clips used instead of endoloop",
+    "cinching_quality": "Not applicable - mechanical clips used",
+    "cutting_assessment": {
+      "cut_location": "Between clips as instructed",
+      "cut_quality": "Clean division",
+      "vessel_transection": "Complete and appropriate"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 95.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 85.0,
+    "formula_applied": "180 - 95.0 - 0.0 = 85.0"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "Video appears to show vessel clipping exercise rather than endoloop task. Instructions mention clips and cutting, not endoloop deployment. Task identification uncertain based on visual content.",
+  "cannot_determine": [
+    "Whether this is actually Task 3 Endoloop or a different exercise",
+    "Exact target marks for endoloop placement",
+    "Loop positioning relative to marked line",
+    "Actual endoloop deployment technique"
+  ],
+  "technique_summary": "Well-executed vessel management and clipping technique, but does not appear to demonstrate endoloop deployment as required for FLS Task 3.",
+  "strengths": [
+    "Good bimanual coordination",
+    "Clean clip application",
+    "Appropriate vessel handling"
+  ],
+  "improvement_suggestions": [
+    "Confirm task requirements - should use endoloop rather than clips",
+    "Focus on endoloop deployment technique if this is intended as Task 3",
+    "Reduce overall task time from 95s toward expert benchmark of 20-40s"
+  ],
+  "video_id": "sfxTCd4Ew-8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:36:52.956177+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.900062+00:00"
+  },
+  "scoreable": true
+}

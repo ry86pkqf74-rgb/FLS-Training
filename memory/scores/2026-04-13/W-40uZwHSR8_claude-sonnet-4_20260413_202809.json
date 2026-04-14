@@ -1,0 +1,202 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Right needle driver visible with suture, preparing to grasp needle",
+      "technique_notes": "Instructional video showing proper needle loading technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_load",
+      "description": "Left grasper grabbing thread 2cm from needle as instructed",
+      "technique_notes": "Proper thread management during needle loading",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "needle_load",
+      "description": "Right instrument grasping needle 1/3 from tip, positioning for optimal control",
+      "technique_notes": "Correct needle grasp position demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "needle_load",
+      "description": "Needle holder performing internal rotation to set 90-degree angle",
+      "technique_notes": "Proper needle orientation technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "suture_placement",
+      "description": "Needle entering tissue vertically with internal rotation technique",
+      "technique_notes": "Good perpendicular entry angle demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "suture_placement",
+      "description": "Suture placed through tissue, visible on practice pad with marked targets",
+      "technique_notes": "Suture placement appears accurate to marked targets",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "first_throw",
+      "description": "Beginning knot tying sequence with C-loop formation using left grasper",
+      "technique_notes": "Proper C-loop technique demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65.0,
+      "phase": "first_throw",
+      "description": "Completing first throw with instruments tip-to-tip for precision",
+      "technique_notes": "Excellent instrument coordination shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 85.0,
+      "phase": "second_throw",
+      "description": "Forming second throw with alternating hand technique",
+      "technique_notes": "Proper hand switching technique demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 105.0,
+      "phase": "third_throw",
+      "description": "Completing final throw with proper tension and hand alternation",
+      "technique_notes": "Clean knot completion technique",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 120.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 20,
+      "end_seconds": 40,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 40,
+      "end_seconds": 65,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 65,
+      "end_seconds": 85,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 85,
+      "end_seconds": 105,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 105,
+      "end_seconds": 120,
+      "duration_seconds": 15,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean double throw with proper C-loop technique"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper hand alternation demonstrated"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final throw with good tension and technique"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.9
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 120.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 480.0,
+    "formula_applied": "600 - 120.0 - 0.0 = 480.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "This is an instructional demonstration video showing ideal technique. All steps are clearly visible and executed properly. High confidence in assessment due to clear visualization of all phases.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level demonstration of intracorporeal suturing technique with textbook execution of all phases including proper needle loading, precise suture placement, and clean knot tying sequence.",
+  "strengths": [
+    "Perfect needle loading and positioning technique",
+    "Accurate suture placement at target marks",
+    "Smooth knot tying with proper hand alternation",
+    "Excellent instrument coordination throughout"
+  ],
+  "improvement_suggestions": [
+    "This appears to be an instructional video demonstrating optimal technique - no improvements needed"
+  ],
+  "video_id": "W-40uZwHSR8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:28:09.936459+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.845422+00:00"
+  },
+  "scoreable": true
+}

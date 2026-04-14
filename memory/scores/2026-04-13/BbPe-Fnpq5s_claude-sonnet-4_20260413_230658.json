@@ -1,0 +1,97 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine specific FLS task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_screen",
+      "description": "Blue background with LAPAROSIM logo and website URL",
+      "technique_notes": "Product branding/introduction screen",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "title_screen",
+      "description": "Continuation of branding screen with company logo",
+      "technique_notes": "Marketing content",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "training_environment",
+      "description": "Training room with multiple participants using laparoscopic simulators",
+      "technique_notes": "Educational setting with 'Easy to teach' overlay text",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_demo",
+      "description": "Mobile phone/tablet showing laparoscopic view mounted on trainer",
+      "technique_notes": "Demonstrating mobile device compatibility",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "training_environment",
+      "description": "Group training session with instructors and trainees",
+      "technique_notes": "Multiple participants practicing on simulators simultaneously",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "product_features",
+      "description": "Split screen showing various FLS tasks including peg transfer, cutting, suturing",
+      "technique_notes": "Product capability demonstration across multiple FLS tasks",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear identification of promotional/instructional content with no actual task performance to score",
+  "cannot_determine": [
+    "Specific FLS task being performed",
+    "Completion time",
+    "Performance penalties",
+    "Individual technique assessment"
+  ],
+  "technique_summary": "Promotional video demonstrating LAPAROSIM training equipment capabilities across multiple FLS tasks in educational settings",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Use of mobile devices as laparoscopic displays",
+      "Group training methodology",
+      "Multiple FLS task setup on portable simulators"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional"
+  },
+  "strengths": [
+    "Demonstrates equipment portability",
+    "Shows group training capabilities",
+    "Illustrates multiple task compatibility"
+  ],
+  "improvement_suggestions": [],
+  "video_id": "BbPe-Fnpq5s",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:06:58.621990+00:00",
+  "scoreable": false
+}

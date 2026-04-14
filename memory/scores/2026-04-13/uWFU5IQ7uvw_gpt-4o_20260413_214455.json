@@ -1,0 +1,124 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.3,
+      "phase": "loop_deploy",
+      "description": "Initial loop deployment over target area.",
+      "technique_notes": "Loop held loosely, appears ready for placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 0.6,
+      "phase": "target_approach",
+      "description": "Instruments adjusting position for loop placement.",
+      "technique_notes": "Careful adjustments, loop center aligned with target.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 1.0,
+      "phase": "loop_placement",
+      "description": "Loop placed over appendage, nearing marked line.",
+      "technique_notes": "Placement appears accurate, close to the line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 1.5,
+      "phase": "cinch",
+      "description": "Loop cinched tightly around target.",
+      "technique_notes": "Proper tension applied, loop not slipping.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 1.8,
+      "phase": "cut_tail",
+      "description": "Excess suture tail cut off.",
+      "technique_notes": "Efficient and precise cut, minimal residual tail.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 2.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0.3,
+      "end_seconds": 0.6,
+      "duration_seconds": 0.3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 0.6,
+      "end_seconds": 1.0,
+      "duration_seconds": 0.4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 1.0,
+      "end_seconds": 1.5,
+      "duration_seconds": 0.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 1.5,
+      "end_seconds": 1.8,
+      "duration_seconds": 0.3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 1.8,
+      "end_seconds": 2.0,
+      "duration_seconds": 0.2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_positioning": {
+      "deviation_from_mark_mm": 0.0,
+      "confidence": 1.0
+    },
+    "cinch_tension": {
+      "properly_cinched": true,
+      "confidence": 1.0
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 2.0,
+    "total_penalties": 0,
+    "total_fls_score": 178.0,
+    "formula_applied": "180 - 2.0 - 0 = 178.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "The entire task was visible with clear application of techniques. No observable missteps or penalties.",
+  "cannot_determine": [],
+  "technique_summary": "Exceptionally rapid and precise execution of endoloop placement. Demonstrated expert proficiency in loop deployment and tensioning.",
+  "strengths": [
+    "Excellent speed and precision in all phases.",
+    "Proper loop placement and cinching with no deviations."
+  ],
+  "improvement_suggestions": [
+    "Maintain current level of precision and speed. Focus on consistency across repeated exercises."
+  ],
+  "video_id": "uWFU5IQ7uvw",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:44:55.612391+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.907746+00:00"
+  },
+  "scoreable": true
+}

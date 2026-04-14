@@ -1,0 +1,17 @@
+{
+  "video_classification": "unusable",
+  "reason": "Content is unrelated to FLS task performance. Video shows a promotional/recruitment presentation for a surgical fellowship program filmed in an airport or public facility. No FLS trainer, instruments, or task performance is visible. Text overlays reference 'Fellowship in Minimal Access Surgery' and 'Hand on Training in USA' and 'Laparoscopy Florida USA' - this is marketing/informational content, not an FLS assessment.",
+  "task_id": "unclassified",
+  "task_name": null,
+  "contains_fls_task_performance": false,
+  "frame_count_analyzed": 25,
+  "content_summary": "Presenter in casual setting promoting surgical fellowship opportunities at various international locations (USA, India, UAE). No surgical training equipment or performance-based assessment visible.",
+  "score": null,
+  "confidence": 0.99,
+  "assessment_not_applicable": true,
+  "video_id": "EnHKOz6v0Qw",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:20:44.776173+00:00",
+  "scoreable": false
+}

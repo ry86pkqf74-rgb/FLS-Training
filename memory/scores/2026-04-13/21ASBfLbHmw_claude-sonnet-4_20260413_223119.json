@@ -1,0 +1,82 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "AI Assessment Research Presentation",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_start",
+      "description": "Academic presentation title slide showing 'Welcome Home SAGES - 2022 AI Session' with presenter Dr. Francisca Belmar",
+      "technique_notes": "Not an FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": null,
+      "phase": "disclosure_slide",
+      "description": "Presenter reading financial disclosures for research team members",
+      "technique_notes": "Standard academic presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": null,
+      "phase": "methodology_discussion",
+      "description": "Slide showing peg transfer task with orange triangular objects and blue pegs in laparoscopic trainer",
+      "technique_notes": "Educational slide showing FLS Task 1 setup, not live performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": null,
+      "phase": "results_presentation",
+      "description": "Results slide showing AI precision metrics with computer vision analysis overlay",
+      "technique_notes": "Research data presentation with visual tracking annotations",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is a research presentation, not an FLS task performance"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clearly identifiable as an academic research presentation about AI assessment of laparoscopic skills, not a task performance video",
+  "cannot_determine": [],
+  "technique_summary": "This is an instructional research presentation discussing the development and validation of AI algorithms for automated assessment of FLS tasks, specifically focusing on peg transfer and bean drop exercises.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Computer vision-based instrument tracking for laparoscopic tasks",
+      "Automated detection of grasper positions and object movements",
+      "Objective measurement of exercise completion time",
+      "AI-based assessment of fallen objects in training exercises"
+    ],
+    "verbal_cues": [
+      "Limitations of current laparoscopic skills training including geographical barriers and expert evaluator network constraints",
+      "AI advantages: objective, standardized, easy to scale up, unlimited availability",
+      "Research methodology using digital platform with 369 trainees and 6,729 video-recorded exercises",
+      "Validation against expert evaluators as gold standard using Cohen Kappa statistics"
+    ],
+    "common_errors_addressed": [
+      "Subjectivity in human evaluation of laparoscopic skills",
+      "Limited access to expert evaluators for consistent assessment",
+      "Geographic barriers to standardized training evaluation"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "21ASBfLbHmw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:31:19.925135+00:00",
+  "scoreable": false
+}

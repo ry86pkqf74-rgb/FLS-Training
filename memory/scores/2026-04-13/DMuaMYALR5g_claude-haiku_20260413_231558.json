@@ -1,0 +1,185 @@
+{
+  "video_classification": "performance",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "proficiency_time_seconds": 48,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup_and_first_pickup",
+      "description": "Pegboard in initial state with 6 orange rings on left (nondominant) side, 6 black pegs distributed across board, and green rings on right (dominant) side. No instruments visible yet.",
+      "technique_notes": "Standard FLS peg transfer setup clearly visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.5,
+      "phase": "setup_and_first_pickup",
+      "description": "Both Maryland dissectors now visible approaching pegboard from above. Right instrument (dominant hand) and left instrument (nondominant hand) positioned.",
+      "technique_notes": "Bilateral instrument entry established. Instruments oriented for grasping.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 3.0,
+      "phase": "outbound_transfers",
+      "description": "Left dissector grasping first orange ring on nondominant side. Ring is lifted off peg cleanly.",
+      "technique_notes": "Good grasp technique, ring elevated above board surface.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 5.0,
+      "phase": "outbound_transfers",
+      "description": "First orange ring held in midair between left and right dissectors. Ring transfer in progress from nondominant to dominant side.",
+      "technique_notes": "Smooth hand-to-hand transfer visible. Ring maintained in stable position.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "outbound_transfers",
+      "description": "Right dissector grasping the transferred orange ring. Left dissector releasing. Ring positioned for placement on dominant side.",
+      "technique_notes": "Clean exchange between instruments. Right hand securing ring for placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 18.0,
+      "phase": "outbound_transfers",
+      "description": "Second orange ring being transferred midair. One orange ring already placed on dominant (green) side. Fluid motion continuing.",
+      "technique_notes": "Rhythm established. Multiple rings visible in transfer sequence.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 35.0,
+      "phase": "outbound_transfers",
+      "description": "Approximately 4 orange rings now on dominant (green) side pegs. Continuing transfers of remaining rings from nondominant side. Left dissector preparing to pick up next ring.",
+      "technique_notes": "Efficient transfer technique. Good peg placement accuracy.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 52.0,
+      "phase": "return_transfers",
+      "description": "Orange rings visible on dominant side. Green rings now being picked up from dominant side pegs and transferred back. Direction reversal in progress.",
+      "technique_notes": "Smooth transition to return phase. Right hand now handling first green ring for transfer back to left side.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 68.0,
+      "phase": "return_transfers",
+      "description": "Multiple green rings transferred back to nondominant side. One orange and one green ring visible on nondominant side. Most rings successfully transferred and returned.",
+      "technique_notes": "Efficient mid-air transfers maintained throughout return phase.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 85.0,
+      "phase": "return_transfers",
+      "description": "Near completion: 3 orange rings on nondominant (left) side, 3 green rings on dominant (right) side, with final rings being positioned.",
+      "technique_notes": "Careful final placements. Hand positioning steady for last transfers.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 95.0,
+      "phase": "final_release",
+      "description": "Last green ring being placed on right side peg. Both sides now showing completed transfer pattern: orange rings on left, green rings on right.",
+      "technique_notes": "Controlled final placement. Task approaching completion.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 100.0,
+      "phase": "final_release",
+      "description": "Final green ring released onto right peg. All 6 orange rings returned to nondominant side, all 6 green rings on dominant side. Task complete. Instruments withdrawn.",
+      "technique_notes": "Clean completion with all objects properly placed on pegs.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 100.0,
+  "phase_timings": [
+    {
+      "phase": "setup_and_first_pickup",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "outbound_transfers",
+      "start_seconds": 3,
+      "end_seconds": 52,
+      "duration_seconds": 49,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "return_transfers",
+      "start_seconds": 52,
+      "end_seconds": 95,
+      "duration_seconds": 43,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "final_release",
+      "start_seconds": 95,
+      "end_seconds": 100,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "transfer_completion": {
+      "all_six_objects_transferred_outbound": true,
+      "all_six_objects_returned_to_original_side": true,
+      "midair_transfer_requirement_met": true,
+      "no_objects_dropped": true,
+      "no_objects_misplaced": true
+    },
+    "object_placement_quality": {
+      "all_rings_securely_placed_on_pegs": true,
+      "no_rings_remaining_in_midair": true,
+      "final_configuration_correct": true
+    },
+    "technique_observations": {
+      "hand_coordination": "Excellent bilateral dissector control with smooth exchanges",
+      "transfer_efficiency": "Minimal hesitation between picks and placements",
+      "peg_accuracy": "All placements accurate on first attempt",
+      "instrument_control": "Steady grasp and release throughout task"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 100.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 200.0,
+    "formula_applied": "300 - 100.0 - 0.0 = 200.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "All 12 objects (6 outbound, 6 return) clearly visible being transferred and placed. No dropped objects, no misplacements, and no board edge contact observed. Completion time easily determined from first instrument contact to final release. Task unambiguously completed within time limit with zero penalties.",
+  "cannot_determine": [],
+  "technique_summary": "Strong intermediate performance. Trainee demonstrated competent bilateral instrument coordination with smooth hand-to-hand transfers throughout both outbound and return phases. Task completed in 100 seconds with zero penalties, showing consistent grasp quality, efficient peg placement accuracy, and proper mid-air transfer technique.",
+  "strengths": [
+    "Excellent bilateral dissector control and coordination",
+    "Smooth, efficient hand-to-hand transfer exchanges with minimal repositioning",
+    "Consistently accurate peg placements on first attempt throughout task",
+    "Clean instrument handling with no dropped objects or misplacements",
+    "Rapid setup and efficient execution of return phase"
+  ],
+  "improvement_suggestions": [
+    "Aim to reduce outbound transfer time from 49s to 30-35s to achieve expert-level proficiency",
+    "Consider increasing transfer velocity while maintaining accuracy to approach 48s proficiency benchmark",
+    "Reduce setup phase to 1-2 seconds for maximum efficiency"
+  ],
+  "video_id": "DMuaMYALR5g",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:15:58.056096+00:00",
+  "scoreable": true
+}

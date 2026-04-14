@@ -1,0 +1,96 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Multiple FLS Tasks Training Session",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Empty laparoscopic simulator lab with multiple training stations set up",
+      "technique_notes": "Professional training environment with MEDISIMU branding",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "group_training",
+      "description": "Multiple trainees practicing various FLS tasks simultaneously at different stations",
+      "technique_notes": "Supervised group learning environment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "phase": "individual_practice",
+      "description": "Close-up view of trainee performing task with laparoscopic instruments",
+      "technique_notes": "Proper instrument handling visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 60.0,
+      "phase": "task_demonstration",
+      "description": "Clear view of foam pad with markings for suturing tasks",
+      "technique_notes": "Standard FLS suturing substrate with marked targets",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 66.0,
+      "phase": "transition_to_OR",
+      "description": "Operating room scene with text overlay about real surgery",
+      "technique_notes": "Educational progression from simulation to clinical practice",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 75.0,
+      "phase": "product_showcase",
+      "description": "Product comparison slides showing different MEDISIMU models",
+      "technique_notes": "Commercial product information display",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video showing training environment and product information. Multiple FLS tasks visible but no individual performance assessment possible.",
+  "cannot_determine": [
+    "Individual task performance metrics",
+    "Specific completion times",
+    "Performance penalties"
+  ],
+  "technique_summary": "Instructional video showcasing laparoscopic simulation training environment with multiple FLS tasks being practiced simultaneously in a group setting.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Group training methodology",
+      "Multiple simultaneous task practice",
+      "Proper training station setup",
+      "Supervised learning environment",
+      "Progression from simulation to clinical practice"
+    ],
+    "verbal_cues": [
+      "Text overlay: 'At the end of the simulator training, its time for the real thing...'"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "novice"
+  },
+  "improvement_suggestions": [],
+  "video_id": "OweA0Y-HXa8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:58:58.262284+00:00",
+  "scoreable": false
+}

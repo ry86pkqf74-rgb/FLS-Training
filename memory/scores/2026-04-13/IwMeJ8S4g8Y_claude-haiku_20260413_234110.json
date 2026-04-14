@@ -1,0 +1,211 @@
+{
+  "video_classification": "performance",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "proficiency_benchmark_seconds": 53,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_introduction",
+      "description": "Instructor logo and setup visible; trainee examining equipment on table with red foam organ model visible on blue drape with marked appendages.",
+      "technique_notes": "Standard FLS setup with Laproscopic Hands On Training Institute branding; single foam appendage model with multiple appendages visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "loop_introduction",
+      "description": "Trainee standing at table, manipulating endoloop (white/tan colored loop with pusher visible). Grasper in left hand, beginning to orient loop toward target.",
+      "technique_notes": "Loop material and pusher clearly visible; trainee establishing working position.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_positioning",
+      "description": "Close-up overhead view showing trainee holding grasper with right hand, loop being opened and guided. Multiple appendages visible on foam model; trainee appears to be targeting middle appendage.",
+      "technique_notes": "Grasper positioning good; loop beginning to open around target site. Right-handed dominant manipulation visible.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "loop_positioning",
+      "description": "Loop is now partially opened around the middle appendage base. Pusher and loop material clearly visible. Trainee holding steady with grasper.",
+      "technique_notes": "Loop positioning appears centered on middle appendage; smooth advancement of loop material.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "loop_positioning",
+      "description": "Loop fully opened and encircling middle appendage near base. Pusher with scored break line visible in hand. Loop appears to be at approximately the marked target site.",
+      "technique_notes": "Loop placement appears well-positioned relative to marked line on appendage. Pusher held ready for advancement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 16.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Trainee breaking the pusher at the scored mark. Hands positioned to snap/break the plastic pusher exterior while holding the loop. Break point clearly visible.",
+      "technique_notes": "Pusher break technique executed with both hands; clean break attempted at scored line. Loop remains in position on appendage.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 20.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Pusher broken; trainee advancing the internal pusher rod to cinch the knot down on the appendage. Close-up shows hands repositioning for advancement force.",
+      "technique_notes": "Advancement of pusher rod to secure loop appears smooth. Loop knot tightening visible on appendage base.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Loop knot being advanced and tightened on appendage. Pusher rod visible being pushed down to cinch knot. Appendage base shows loop cinching.",
+      "technique_notes": "Knot appears to be cinching securely at the marked target site. Tension appropriate for ligature.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 28.0,
+      "phase": "pusher_break_and_advancement",
+      "description": "Knot fully cinched on appendage. Pusher rod completely advanced. Loop material visible extending beyond cinched knot at base of appendage.",
+      "technique_notes": "Loop secured at target mark; knot appears tight and in final position. Tail material ready for cutting.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 32.0,
+      "phase": "tail_cut",
+      "description": "Trainee picking up scissors with right hand. Left hand stabilizing loop tail. Scissors positioned to cut the loop material tail close to the knot.",
+      "technique_notes": "Proper scissor positioning for precise tail cut. Loop tail being held with left hand/grasper for control.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 36.0,
+      "phase": "tail_cut",
+      "description": "Scissors cutting through loop tail material. Cut is occurring inside the trainer field (on the blue drape), close to the secured knot on appendage.",
+      "technique_notes": "Cut executed cleanly with scissors; tail material separated from knot.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 40.0,
+      "phase": "tail_cut",
+      "description": "Loop tail cut completely. Trainee removing scissors and excess loop material. Final view shows ligated appendage with secured knot at marked site; no visible tail remaining.",
+      "technique_notes": "Task completion evident. Loop material completely removed except for secured knot. Appendage base shows tight ligature at target location.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 40.0,
+  "phase_timings": [
+    {
+      "phase": "loop_introduction",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "faster than proficiency (53s)"
+    },
+    {
+      "phase": "loop_positioning",
+      "start_seconds": 5,
+      "end_seconds": 12,
+      "duration_seconds": 7,
+      "benchmark_comparison": "well-controlled"
+    },
+    {
+      "phase": "pusher_break_and_advancement",
+      "start_seconds": 12,
+      "end_seconds": 28,
+      "duration_seconds": 16,
+      "benchmark_comparison": "appropriate pace"
+    },
+    {
+      "phase": "tail_cut",
+      "start_seconds": 28,
+      "end_seconds": 40,
+      "duration_seconds": 12,
+      "benchmark_comparison": "efficient"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_positioning_alignment",
+      "description": "Loop knot placement appears approximately 1-2mm superior (proximal) to the marked target line on the middle appendage. Knot secured slightly above intended mark.",
+      "points_deducted": 1.5,
+      "frame_evidence": [
+        5,
+        8,
+        9
+      ],
+      "confidence": 0.65
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "target_appendage": "middle",
+      "correct_appendage_selected": true,
+      "knot_position_relative_to_mark": "approximately 1-2mm proximal",
+      "deviation_mm": 1.5,
+      "notes": "Loop secured on correct appendage but slightly above marked target line"
+    },
+    "knot_security": {
+      "appears_secure": true,
+      "cinched_tightly": true,
+      "knot_slippage_observed": false,
+      "notes": "Knot appears well-secured and tight on appendage base; no evidence of loosening during tail cut"
+    },
+    "pusher_technique": {
+      "break_executed_at_mark": true,
+      "advancement_smooth": true,
+      "notes": "Clean break of pusher at scored line; smooth advancement of internal rod to cinch knot"
+    },
+    "tail_cut": {
+      "cut_inside_trainer": true,
+      "complete_cut": true,
+      "no_residual_tail": true,
+      "notes": "Loop tail completely severed; final state shows clean ligation with no tail material remaining"
+    },
+    "appendage_integrity": {
+      "tissue_damage_observed": false,
+      "appendage_transected": false,
+      "appendage_avulsed": false,
+      "notes": "No visible damage to foam appendage; ligature applied without destructive compression"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 40.0,
+    "total_penalties": 1.5,
+    "total_fls_score": 138.5,
+    "formula_applied": "180 - 40.0 - 1.5 = 138.5"
+  },
+  "confidence": 0.78,
+  "confidence_rationale": "Task completion clearly visible across all phases. Timing well-documented from frame sequence. Loop placement accuracy judgment based on overhead camera view at frames 5, 8, 9; slight proximal deviation apparent but margin of confidence is moderate (\u00b11mm) due to viewing angle. Knot security and tail cut completion are unambiguous. No significant ambiguities in task execution.",
+  "cannot_determine": [
+    "Exact millimeter deviation at mark\u2014camera angle is slightly oblique; estimated deviation 1-2mm based on visual inspection but not measured with ruler"
+  ],
+  "technique_summary": "Expert-level performance. Trainee completed ligating loop task in 40 seconds, well below proficiency benchmark of 53 seconds. Loop positioned on correct middle appendage with minor (1-2mm) deviation proximal to marked target. Knot secured tightly, pusher broken cleanly at mark, advancement smooth, and tail cut completely inside trainer. No procedural errors or tissue damage. Final ligation appearance clean and secure.",
+  "strengths": [
+    "Rapid task completion (40s vs 53s benchmark) demonstrates high proficiency",
+    "Correct target appendage selection and approach",
+    "Smooth, controlled pusher advancement and cinching",
+    "Clean tail cut with complete removal of excess material",
+    "No tissue damage or appendage compromise",
+    "Confident instrument handling throughout"
+  ],
+  "improvement_suggestions": [
+    "Verify final knot position is exactly at the marked line; current position is 1-2mm proximal",
+    "Consider using visual landmarks (mark on appendage) to guide final knot position before cinching"
+  ],
+  "video_id": "IwMeJ8S4g8Y",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:41:10.270327+00:00",
+  "scoreable": true
+}

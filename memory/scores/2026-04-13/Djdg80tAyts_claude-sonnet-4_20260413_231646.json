@@ -1,0 +1,11 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task",
+  "reason": "Video contains presentation slides about Augusta University Urology residency program, not FLS task performance",
+  "video_id": "Djdg80tAyts",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:16:46.769331+00:00",
+  "scoreable": false
+}

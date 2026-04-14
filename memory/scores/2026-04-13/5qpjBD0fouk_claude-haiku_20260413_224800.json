@@ -1,0 +1,32 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unknown - General Surgery Department Induction",
+  "analysis": "This video is an instructional/documentary-style General Surgery department induction video from SASH (Surrey and Sussex NHS Healthcare Trust), produced April 2017. It contains interviews with medical staff, facility tours, administrative discussions, and educational content about departmental orientation. No FLS task performance is visible. The video shows multiple speakers in hospital/office settings discussing training, roles, and departmental structure, not a timed laparoscopic skills task.",
+  "cannot_score_reason": "No FLS task performance present. This is a department induction documentary with interviews, facility walkthroughs, and administrative content. No trainer box, instruments, or task-specific apparatus (pegs, gauze, Penrose drain, appendage model, etc.) are visible. No timer or performance measurement occurs.",
+  "video_content_summary": {
+    "content_type": "Department induction educational video",
+    "institution": "Surrey and Sussex Healthcare NHS Trust (SASH)",
+    "production_date": "April 2017",
+    "scenes_observed": [
+      "Title slide with SASH logo and NHS branding",
+      "Interview with male consultant (introduction to department)",
+      "Classroom/conference room with multiple trainees watching educational content on screen",
+      "P.O.P.P.A room signage",
+      "Interviews with individual trainees (ST6 level, nursing staff)",
+      "Office/administrative spaces",
+      "Multiple staff interviews discussing induction, roles, and training opportunities"
+    ]
+  },
+  "fls_assessment": {
+    "applicable": false,
+    "reason": "No FLS/MISTELS task visible. This is institutional orientation content, not a scored performance task."
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows institutional induction content with interviews and facility tours. Complete absence of FLS trainer apparatus, task-specific instruments, or performance measurement.",
+  "video_id": "5qpjBD0fouk",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:48:00.558388+00:00",
+  "scoreable": false
+}

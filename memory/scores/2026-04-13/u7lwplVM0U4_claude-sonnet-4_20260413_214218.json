@@ -1,0 +1,197 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping needle, left needle driver supporting suture thread",
+      "technique_notes": "Good initial needle grip position, appears to be at 2/3 point from tip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "needle_load",
+      "description": "Both instruments coordinating to orient needle perpendicular to needle driver",
+      "technique_notes": "Internal rotation technique being used to adjust needle angle to 90 degrees",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 14.0,
+      "phase": "suture_placement",
+      "description": "Needle being pushed through tissue with proper perpendicular approach",
+      "technique_notes": "Following needle curvature, rotating instrument to avoid tissue injury",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "suture_placement",
+      "description": "Needle has passed through tissue, left instrument supporting on far side",
+      "technique_notes": "Good needle path following curvature, adequate tissue bite",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 22.0,
+      "phase": "suture_placement",
+      "description": "Thread being pulled through tissue with sufficient tail length visible",
+      "technique_notes": "Maintaining proper support to avoid tissue tearing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 28.0,
+      "phase": "first_throw",
+      "description": "C-loop formation beginning for surgeon's knot double throw",
+      "technique_notes": "Left instrument forming C-shaped loop, right instrument approaching with thread",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 34.0,
+      "phase": "first_throw",
+      "description": "Right instrument passed through C-loop, grasping tail for first throw",
+      "technique_notes": "Proper tip-to-tip instrument positioning for double throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 38.0,
+      "phase": "first_throw",
+      "description": "First throw (surgeon's knot double throw) being completed",
+      "technique_notes": "Both instruments working together to tighten the double throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 42.0,
+      "phase": "second_throw",
+      "description": "Second C-loop formation for single throw in opposite direction",
+      "technique_notes": "Hand positions switched for alternating direction throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 48.0,
+      "phase": "third_throw",
+      "description": "Final single throw being formed with hand position switched again",
+      "technique_notes": "Proper alternating hand technique maintained throughout",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 52.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 12,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 12,
+      "end_seconds": 26,
+      "duration_seconds": 14,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 26,
+      "end_seconds": 38,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 38,
+      "end_seconds": 45,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 45,
+      "end_seconds": 52,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Proper double throw technique with good tension"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Single throw in opposite direction, proper hand switching"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final single throw with alternating hands maintained"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0,
+      "deviation_from_mark2_mm": 0,
+      "total_deviation_penalty": 0,
+      "confidence": 0.95
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 52.0,
+    "total_penalties": 0,
+    "total_fls_score": 548.0,
+    "formula_applied": "600 - 52.0 - 0 = 548.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear video quality with good visualization of needle placement, knot formation, and hand switching. All critical elements well-documented throughout the procedure.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level performance demonstrating textbook intracorporeal suturing technique with proper needle loading, precise placement, and flawless knot sequence with consistent hand alternation.",
+  "strengths": [
+    "Excellent completion time of 52 seconds (expert benchmark 80-120s)",
+    "Perfect suture placement with no visible deviation from marks",
+    "Proper surgeon's knot followed by two alternating single throws",
+    "Consistent hand switching between throws",
+    "Smooth instrument coordination throughout",
+    "No tissue damage or drain gaps"
+  ],
+  "improvement_suggestions": [
+    "Performance is already at expert level with minimal room for improvement"
+  ],
+  "video_id": "u7lwplVM0U4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:42:18.395121+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.905063+00:00"
+  },
+  "scoreable": true
+}

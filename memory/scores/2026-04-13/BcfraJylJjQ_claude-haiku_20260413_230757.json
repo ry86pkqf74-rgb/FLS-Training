@@ -1,0 +1,112 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine - no specific FLS task performance visible",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "Richard Wolf brand logo and 'spirit of excellence' tagline displayed",
+      "technique_notes": "Branding/title card",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "intro",
+      "description": "Richard Wolf Academy Prima Vista course title with Dr. Walid Farhat introduction",
+      "technique_notes": "Educational course introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 8.0,
+      "phase": "instructor_presentation",
+      "description": "Dr. Walid Farhat (MD, FRCSC, FACS) standing in surgical facility wearing pink scrubs, introducing laparoscopy skills course",
+      "technique_notes": "Instructor credentials: Professor & Chief of Pediatric Urology, University of Wisconsin School of Medicine and Public Health",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "demonstration_setup",
+      "description": "Surgical team in sterile attire with laparoscopic trainer setup visible on table with white foam models",
+      "technique_notes": "Educational demonstration environment with multiple participants",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 22.0,
+      "phase": "equipment_overview",
+      "description": "Close-up of laparoscopic instruments laid out on surgical field - needle drivers and graspers visible",
+      "technique_notes": "Instrument inventory display, not active task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 32.0,
+      "phase": "demonstration_technique",
+      "description": "Surgical team performing laparoscopic demonstration with both hands holding instruments over white foam model",
+      "technique_notes": "Bimanual technique demonstration with purple-gloved hands",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 42.0,
+      "phase": "live_demonstration",
+      "description": "Monitor display shows endoscopic view of operative field; instructor and assistant visible at trainer working with instruments",
+      "technique_notes": "Real-time laparoscopic demonstration with video feed displayed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 50.0,
+      "phase": "instructor_debrief",
+      "description": "Dr. Farhat returns to speaking position in front of Prima Vista signage after demonstration segment",
+      "technique_notes": "Transition back to didactic commentary",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - no scorable task performance"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video is an educational course introduction and demonstration tutorial, not a recorded FLS trainee performance. No specific FLS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) is completed from start to finish with measurable timing and penalties. The content shows Dr. Walid Farhat introducing a laparoscopy skills course and demonstrating general laparoscopic technique concepts, but does not constitute a scorable FLS task attempt.",
+  "cannot_determine": [
+    "Specific task identity - multiple tasks may be referenced but none completed in isolation",
+    "Completion time - video is instructional narration with brief demonstration segments",
+    "Penalties - no graded task performance occurring",
+    "Knot quality or suture placement - if present, only shown as educational example, not scored attempt"
+  ],
+  "video_content_summary": "Educational/instructional video presenting a Richard Wolf Academy Prima Vista laparoscopy skills course led by Dr. Walid Farhat. Content includes course introduction, instructor credentials, surgical team setup, laparoscopic instrument overview, and brief technique demonstrations on foam models. Video is designed to teach fundamentals and introduce course content rather than assess trainee performance on standardized FLS tasks.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Bimanual laparoscopic instrument manipulation",
+      "Proper instrument positioning over trainer models",
+      "Endoscopic camera orientation and visualization",
+      "Surgical team sterile field setup"
+    ],
+    "verbal_cues": [
+      "Dr. Farhat's introduction emphasizes comprehensive laparoscopy skills training",
+      "Course positioned as foundational educational content from University of Wisconsin pediatric urology program"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "expert"
+  },
+  "recommendation": "This video is NOT appropriate for FLS task scoring. It is educational/instructional content. For scoring purposes, a video showing a trainee or surgeon performing a complete, isolated FLS task (with clear start/stop markers and uninterrupted performance) is required.",
+  "video_id": "BcfraJylJjQ",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:07:57.884708+00:00",
+  "scoreable": false
+}

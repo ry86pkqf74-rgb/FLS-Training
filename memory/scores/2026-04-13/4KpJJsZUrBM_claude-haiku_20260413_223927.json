@@ -1,0 +1,105 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "SIMA Robotic & Medical Innovators - Essential Skills Training Platform",
+  "note": "This is a comprehensive instructional video demonstrating multiple virtual surgical training tasks on the SIMA platform, not a single FLS task performance.",
+  "content_summary": "The video shows an instructor presenting the SIMA Essential Skills training platform, which includes multiple modules: Camera Navigation (finding and zooming on gallstones), 2D Path Navigation (transferring spheres along paths), 3D Path Navigation (3D path following), Object Manipulation (precision grasping and placement), Sorting Objects (color-based categorization), Working With Cauter (cauterization along marked paths), Appendectomy (robotic appendix surgery simulation), Hysterectomy (robotic uterine surgery), Cholecystectomy (robotic gallbladder removal), and a Results/Progress tracking screen.",
+  "video_type": "educational_platform_demonstration",
+  "scoring_applicable": false,
+  "reason_no_score": "This video is instructional content showing a training platform interface and multiple tasks, not a performance of a single FLS task by a trainee. It contains narration in Farsi (Persian), UI overlays, system prompts, and educational demonstrations. No individual task is performed to completion for scoring.",
+  "teaching_content": {
+    "platform_overview": "SIMA (Robotic & Medical Innovators) platform offering essential laparoscopic and robotic surgery skills training",
+    "demonstrated_tasks": [
+      "Camera Navigation - locate and zoom on targets (gallstones) without excessive proximity",
+      "2D Path Navigation - transfer objects along 2D constrained paths using bilateral hand coordination",
+      "3D Path Navigation - transfer objects along 3D constrained paths with increased spatial complexity",
+      "Object Manipulation - precision grasping and placement using bimanual coordination",
+      "Sorting Objects - color-based object sorting using both hands",
+      "Working With Cauter - cauterization along marked anatomical paths",
+      "Appendectomy - simulated robotic appendix removal with tool exchange",
+      "Hysterectomy - simulated robotic uterine surgery anatomy",
+      "Cholecystectomy - simulated robotic gallbladder removal anatomy"
+    ],
+    "skill_progression": "Tasks progress from basic object manipulation (2D navigation) to complex spatial tasks (3D navigation) to full surgical procedure simulations (appendectomy, hysterectomy, cholecystectomy)",
+    "performance_metrics_shown": "The platform tracks total time per task, error time penalties, completion rates, and provides graphical progress tracking across multiple training attempts",
+    "verbal_instructional_content": "Farsi-language narration throughout; English UI prompts visible explaining task objectives (e.g., 'In this task, you should find 10 gallstones and zoom on them until they disappear', 'Your goal is to cauterize all green area in a least total time and in a least error time')",
+    "common_educational_themes": [
+      "Importance of camera control and spatial awareness",
+      "Bilateral hand coordination and tool exchange",
+      "Precision placement and manipulation under time constraint",
+      "Error time penalties for out-of-bounds or improper technique",
+      "Progressive difficulty levels (Level 1, 2, 3 visible in some tasks)"
+    ],
+    "skill_level_demonstrated": "instructional_platform_beginner_to_intermediate_progression"
+  },
+  "frames_observed": [
+    {
+      "frame_range": "1-3",
+      "content": "Instructor standing beside SIMA training console, Farsi text overlay identifying instructor role at company"
+    },
+    {
+      "frame_range": "4-6",
+      "content": "Close-up of trainee hand position on console controls during Penrose drain Pattern Cut-like task shown on monitor"
+    },
+    {
+      "frame_range": "7",
+      "content": "Menu screen showing 'Essential Skills' and 'Your Performance' tabs; SIMA logo"
+    },
+    {
+      "frame_range": "8",
+      "content": "Camera Navigation task: yellow target object with crosshair overlay, red background indicating tissue, timer showing 8s elapsed, instruction 'Use the right handle to move the camera'"
+    },
+    {
+      "frame_range": "9",
+      "content": "2D Path Navigation task: blue path with green target sphere, cyan background, task description visible"
+    },
+    {
+      "frame_range": "10",
+      "content": "3D Path Navigation task: blue 3D path with red and green spheres in yellow-green container, dual laparoscopic instruments visible"
+    },
+    {
+      "frame_range": "11",
+      "content": "Object Manipulation task: purple background, green arrow object, dual graspers manipulating spheres, 'Too Close' warning visible in red"
+    },
+    {
+      "frame_range": "12",
+      "content": "Sorting Objects task: three colored containers (red, blue, yellow) with mixed objects (screws, balls, rings), left tool displayed, task instructions below"
+    },
+    {
+      "frame_range": "13",
+      "content": "Working With Cauter task: pink/red tissue with black vessels, cautery hook visible, yellow cauterized path marked, FPS: 155 counter top-left"
+    },
+    {
+      "frame_range": "14",
+      "content": "Appendectomy task: simulated abdominal cavity with appendix highlighted, anatomical structures labeled, robotic instruments visible, 19s timer"
+    },
+    {
+      "frame_range": "15",
+      "content": "Hysterectomy task: pelvic anatomy labeled with Bladder, Uterus, Fallopian Tubes, Ovaries, Uterosacral Ligaments, Uterine Arteries, Bowel"
+    },
+    {
+      "frame_range": "16",
+      "content": "Dermoid Cyst task: pelvic anatomy with cyst highlighted in yellow box on left ovary, full anatomical labeling"
+    },
+    {
+      "frame_range": "17",
+      "content": "Cholecystectomy task: hepatic anatomy showing Liver, Gallbladder, Hepatic Artery, Enteric Structure (Duodenum/Stomach), dual robotic instruments"
+    },
+    {
+      "frame_range": "18",
+      "content": "Results/Progress screen: line graph showing time (s) vs number of attempts across 28 training sessions, average total time 170.8s, average penalty time 15.9s, performance trend analysis visible"
+    }
+  ],
+  "confidence": 1.0,
+  "confidence_rationale": "Content is clearly identifiable as instructional platform demonstration with multiple distinct task simulations shown. No ambiguity about classification.",
+  "cannot_determine": [
+    "Individual task completion times (platform overview only)",
+    "Trainee skill level (not a performance)",
+    "Specific FLS rubric compliance (different platform, different scoring system)"
+  ],
+  "video_id": "4KpJJsZUrBM",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:39:27.237318+00:00",
+  "scoreable": false
+}

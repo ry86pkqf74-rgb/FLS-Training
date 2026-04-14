@@ -1,0 +1,98 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_screen",
+      "description": "Title screen showing 'Peg Transfer' on blue background",
+      "technique_notes": "Instructional video beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_overview",
+      "description": "Split screen showing pegboard with objects and control panel with hands demonstrating",
+      "technique_notes": "Setup view showing proper equipment configuration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "demonstration_start",
+      "description": "Maryland dissectors positioned over pegboard with 6 rubber objects on left side pegs",
+      "technique_notes": "Proper starting position with all objects on nondominant side",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "outbound_transfers",
+      "description": "Objects being transferred from left to right side, some already moved",
+      "technique_notes": "Clean midair transfers demonstrated, no board contact",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "pattern_cutting_task",
+      "description": "Different task shown - circular cutting pattern on gauze",
+      "technique_notes": "This is Task 2 demonstration, not Peg Transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 80.0,
+      "phase": "suturing_demonstration",
+      "description": "Penrose drain with suture marks visible - Task 5 content",
+      "technique_notes": "Instructional overlay showing precision penalty information",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an instructional video with title screens, overlays, and demonstrations of multiple FLS tasks. No performance to score.",
+  "cannot_determine": [
+    "Performance timing - this is instructional content",
+    "Penalties - no actual performance shown",
+    "Score - educational material not scorable performance"
+  ],
+  "technique_summary": "Educational video demonstrating proper FLS techniques across multiple tasks with instructional overlays.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper pegboard setup with 6 objects on nondominant side",
+      "Midair transfer technique without board contact",
+      "Maryland dissector positioning and grip",
+      "Sequential object movement from nondominant to dominant side",
+      "Clean object placement on target pegs"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Avoiding board contact during transfers",
+      "Proper object release timing",
+      "Maintaining field of view during transfers"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "H5DZst68mMc",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:32:34.765482+00:00",
+  "scoreable": false
+}

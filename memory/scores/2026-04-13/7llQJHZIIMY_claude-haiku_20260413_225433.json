@@ -1,0 +1,102 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not Applicable - Educational Conference Presentation",
+  "summary": "This is a conference presentation slide deck from SAGES 2016 Surgical Spring Week titled 'Using Simulation in FLS, FES, and FUSE' by Dimitrios Stefanidis, MD, PhD. The content is educational and informational, discussing simulation-based training programs and their efficacy in surgical education. No actual FLS task performance is depicted.",
+  "video_type": "educational_lecture",
+  "content_description": "PowerPoint presentation with slides covering: (1) Title and speaker introduction, (2) Overview of Fundamentals of Laparoscopic Surgery (FLS), Fundamentals of Endoscopic Surgery (FES), and Fundamental Use of Surgical Energy (FUSE) programs, (3) Research evidence on simulation training effectiveness, (4) Implementation guidelines for simulation centers, (5) References to peer-reviewed literature demonstrating improved surgical outcomes from FLS training",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "content": "Title slide with speaker name and conference affiliation"
+    },
+    {
+      "frame_number": 2,
+      "content": "Book cover image referencing 'The Fundamentals' and speaker presenting"
+    },
+    {
+      "frame_number": 3,
+      "content": "FLS program description with 5 simulated tasks listed and images of task equipment"
+    },
+    {
+      "frame_number": 4,
+      "content": "FES program definition and 12 online education modules with VR simulation tasks"
+    },
+    {
+      "frame_number": 5,
+      "content": "FUSE program description covering safe surgical energy device use"
+    },
+    {
+      "frame_number": 6,
+      "content": "Research citation: Sroka et al. on FLS simulator training improving laparoscopic performance in OR with GOALS score graph"
+    },
+    {
+      "frame_number": 7,
+      "content": "Research citation: Hafford et al. on FLS training necessity, showing 33% baseline failure rate, 13% post-training failure rate"
+    },
+    {
+      "frame_number": 8,
+      "content": "Research citation: Bedada et al. on establishing laparoscopic programs in resource-restricted environments using FLS certification"
+    },
+    {
+      "frame_number": 9,
+      "content": "Clinical context discussion on endoscopy training challenges and competency requirements"
+    },
+    {
+      "frame_number": 10,
+      "content": "Research citation: Muller et al. on colonoscopy performance correlation with FES simulator scores (Pearson r=0.78)"
+    },
+    {
+      "frame_number": 11,
+      "content": "Discussion of surgical knowledge gaps in safe energy device use and justification for FUSE training"
+    },
+    {
+      "frame_number": 12,
+      "content": "Research citation: Madani et al. on structured FUSE curriculum improving exam scores from 46% to 84%"
+    },
+    {
+      "frame_number": 13,
+      "content": "Implementation guidelines: required resources, personnel, space, curriculum, assessment tools"
+    }
+  ],
+  "cannot_score": "This is an educational lecture presentation, not a performance video. No trainee or expert is executing any FLS task. Therefore, no task score, completion time, phases, or penalties can be assessed.",
+  "teaching_content": {
+    "educational_purpose": "Comprehensive overview of simulation-based training programs (FLS, FES, FUSE) and evidence supporting their implementation in surgical education",
+    "key_teaching_points": [
+      "FLS comprises 5 hands-on tasks for laparoscopic surgery fundamentals",
+      "FES includes 12 online modules and 5 VR simulation tasks for gastrointestinal endoscopy",
+      "FUSE certifies safe use of surgical energy devices with 10 online modules",
+      "Simulation training improves operating room performance >3-fold (Sroka et al.)",
+      "33% of practicing surgeons fail baseline FLS exam; 13% fail after training (Hafford et al.)",
+      "FES simulator scores correlate with colonoscopy performance (r=0.78, Muller et al.)",
+      "Structured FUSE curriculum improves knowledge assessment scores significantly",
+      "FLS certification feasible in resource-restricted environments (Botswana study)"
+    ],
+    "research_evidence_presented": [
+      "Randomized controlled trial showing FLS training improves laparoscopic performance in OR with p<0.001",
+      "Correlation study demonstrating FES hands-on test validity for predicting colonoscopy competence",
+      "Multicenter study on surgeon knowledge gaps in safe energy device use",
+      "Structured simulation curriculum trial showing 46% to 84% improvement in FUSE exam scores",
+      "International feasibility study establishing FLS in low-resource surgical programs"
+    ],
+    "implementation_requirements": [
+      "Organized skills laboratory or simulation center",
+      "FLS and endoscopy simulators",
+      "Dedicated supervising personnel and faculty",
+      "Dedicated physical space",
+      "Supplies and equipment",
+      "Protected training time for learners",
+      "Structured curriculum based on SAGES literature",
+      "Assessment tools and metrics",
+      "Certification examination"
+    ],
+    "skill_level_demonstrated": "expert",
+    "speaker_credentials": "Dimitrios Stefanidis, MD, PhD, FACS, FASMBS \u2014 Associate Professor of Surgery, Director of Simulation Center, Carolinas HealthCare System"
+  },
+  "conclusion": "This is a high-quality educational presentation on simulation-based surgical training. It is NOT a performance video and therefore cannot be scored using the FLS rubric. The content is informational and instructional in nature.",
+  "video_id": "7llQJHZIIMY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:54:33.781126+00:00",
+  "scoreable": false
+}

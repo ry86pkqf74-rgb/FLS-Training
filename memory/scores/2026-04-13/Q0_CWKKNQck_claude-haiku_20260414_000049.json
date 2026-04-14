@@ -1,0 +1,85 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not applicable - no FLS task performance",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_card",
+      "description": "Black screen with title overlay: 'Feedback of Surgeons and Gynecologists after Training at World Laparoscopy Hospital'",
+      "technique_notes": "Educational/promotional content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "speaker_presentation",
+      "description": "Male speaker in dark blazer at podium with checkered shirt, standing in front of World Laparoscopy Hospital and World Association of Laparoscopic Surgeons banners",
+      "technique_notes": "Conference/presentation setting. Speaker is providing testimony or feedback about training.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "speaker_presentation",
+      "description": "Speaker gesturing with hand while speaking, maintaining professional posture at podium",
+      "technique_notes": "Continuing verbal testimony",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.0,
+      "phase": "speaker_presentation",
+      "description": "Speaker in profile, continuing presentation with hand gestures",
+      "technique_notes": "No FLS task visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "speaker_presentation",
+      "description": "Speaker addressing audience, making emphatic gestures",
+      "technique_notes": "Oral presentation continues throughout frames",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performed"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This video is clearly instructional/testimonial content. It shows a surgeon or gynecologist providing feedback at a World Laparoscopy Hospital conference. No FLS training task (peg transfer, pattern cut, endoloop, extracorporeal suture, or intracorporeal suture) is being performed. The content is a presentation or interview, not a task performance.",
+  "cannot_determine": [
+    "Task identity - no FLS task is visible",
+    "Completion time - no task is being performed",
+    "Any performance metrics"
+  ],
+  "technique_summary": "Not applicable. This is instructional/testimonial content only.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [
+      "Speaker is providing verbal feedback about training experience at World Laparoscopy Hospital"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": null,
+    "content_type": "Professional testimonial/feedback presentation at laparoscopic surgery training conference"
+  },
+  "improvement_suggestions": [],
+  "scoring_not_applicable": true,
+  "reason_for_no_score": "Video contains no FLS task performance. It is a conference presentation or testimonial by a surgeon about their training experience at World Laparoscopy Hospital. No surgical task, trainer box, instruments, or task materials are visible. This is instructional/promotional content, not performance-based content requiring FLS scoring.",
+  "video_id": "Q0_CWKKNQck",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:00:49.435356+00:00",
+  "scoreable": false
+}

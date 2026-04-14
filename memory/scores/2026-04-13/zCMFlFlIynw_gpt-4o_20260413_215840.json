@@ -1,0 +1,141 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 18.0,
+      "phase": "gauze_grasp",
+      "description": "Right needle driver gripping the gauze close to the cutting area.",
+      "technique_notes": "Grasp is secure with no slip.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "initial_cut",
+      "description": "Left-hand scissor begins cutting motion from the marked line.",
+      "technique_notes": "Cutting initiated smoothly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 49.0,
+      "phase": "clockwise_cut",
+      "description": "Steady cutting motion following the marked line. Small deviations visible.",
+      "technique_notes": "Cut direction maintained with minimal deviation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 73.0,
+      "phase": "counterclockwise_cut",
+      "description": "Transition to counterclockwise cutting around the circle.",
+      "technique_notes": "Maintaining alignment moderately well.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 85.0,
+      "phase": "completion",
+      "description": "Final cut completing the circle, gauze nearly intact on clamps.",
+      "technique_notes": "End of cut slightly deviated from original path.",
+      "penalties_observed": [
+        {
+          "type": "line_deviation",
+          "description": "Deviations approximately 3mm at the North point and 2mm at the East point.",
+          "points_deducted": 5.0,
+          "frame_evidence": [
+            10,
+            16
+          ],
+          "confidence": 0.7
+        }
+      ]
+    }
+  ],
+  "completion_time_seconds": 86.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 18,
+      "end_seconds": 25,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 25,
+      "end_seconds": 49,
+      "duration_seconds": 24,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 49,
+      "end_seconds": 73,
+      "duration_seconds": 24,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 73,
+      "end_seconds": 85,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "Deviations approximately 3mm at the North point and 2mm at the East point.",
+      "points_deducted": 5.0,
+      "frame_evidence": [
+        10,
+        16
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "cut_accuracy": {
+      "total_deviation_penalty": 5.0,
+      "confidence": 0.7
+    },
+    "gauze_status": {
+      "detached_from_clamp": false
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 86.0,
+    "total_penalties": 5.0,
+    "total_fls_score": 209.0,
+    "formula_applied": "300 - 86.0 - 5.0 = 209.0"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Deviations were moderately visible, gauze remained well-secured overall. Completion time was short.",
+  "cannot_determine": [
+    "Exact millimeter deviation at remaining cardinal points due to oblique view angles."
+  ],
+  "technique_summary": "Execution showed strong control and adherence to the marked line except for slight deviations at a couple of sections.",
+  "strengths": [
+    "Efficient and controlled cutting motion.",
+    "Good precision with right-hand instrument control."
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining alignment during transitions around curves.",
+    "Minimize deviations at critical points by adjusting grip angle."
+  ],
+  "video_id": "zCMFlFlIynw",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:58:40.071703+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.918179+00:00"
+  },
+  "scoreable": true
+}

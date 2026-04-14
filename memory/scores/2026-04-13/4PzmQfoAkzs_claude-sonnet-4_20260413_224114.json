@@ -1,0 +1,93 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Bladder Repair Training Model",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "materials_overview",
+      "description": "Black screen, appears to be start of instructional video",
+      "technique_notes": "Not an FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "materials_presentation",
+      "description": "Materials slide showing ping pong ball, water balloon, packing tape, bowl, water, felt/biosynthetic material, suture, needle drivers, adsons, scalpel, scissors",
+      "technique_notes": "Educational content about bladder repair simulation materials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "model_setup",
+      "description": "Text overlay: 'BLADDER MUCULARIS ALTERNATIVE MATERIAL' with white cylindrical objects",
+      "technique_notes": "Showing alternative materials for bladder simulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "demonstration_setup",
+      "description": "Laparoscopic trainer box setup with camera view of simulation model",
+      "technique_notes": "Professional simulation environment for bladder repair training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "suturing_technique",
+      "description": "Laparoscopic view showing suturing of simulated bladder defect with purple suture material",
+      "technique_notes": "Demonstrates proper laparoscopic suturing technique on tissue simulator",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "conclusion",
+      "description": "Text overlay: 'We present an innovative technique for bladder repair model that can be translated from laparotomy to laparoscopy'",
+      "technique_notes": "Educational conclusion about translating technique between approaches",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS task performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional video about bladder repair simulation model, not an FLS task performance. Contains educational slides, materials overview, and technique demonstration.",
+  "cannot_determine": [],
+  "technique_summary": "Educational video demonstrating setup and use of a bladder repair simulation model for laparoscopic training",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "bladder repair simulation model construction",
+      "laparoscopic suturing technique on simulated tissue",
+      "use of alternative materials for surgical simulation",
+      "translation of technique from open to laparoscopic approach"
+    ],
+    "verbal_cues": [
+      "advise creating larger defect in muscularis layer than mucosal layer for better visualization"
+    ],
+    "common_errors_addressed": [
+      "importance of proper defect size ratio between tissue layers for optimal training"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "4PzmQfoAkzs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:41:14.581353+00:00",
+  "scoreable": false
+}

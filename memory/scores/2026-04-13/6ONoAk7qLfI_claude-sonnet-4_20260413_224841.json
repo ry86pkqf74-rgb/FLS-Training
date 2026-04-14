@@ -1,0 +1,97 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FLS Instrumentation Overview",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Instructor in surgical attire addressing camera in clinical setting",
+      "technique_notes": "Professional presentation setup with laparoscopic equipment visible in background",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "needle_demonstration",
+      "description": "Instructor displaying laparoscopic needle between fingers",
+      "technique_notes": "Demonstrating proper needle visualization and handling technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "suture_material_demo",
+      "description": "Holding blue suture material, likely for Tasks 4 or 5",
+      "technique_notes": "Showing suture characteristics and handling properties",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_driver_intro",
+      "description": "Presenting laparoscopic needle driver with suture loaded",
+      "technique_notes": "Demonstrating instrument grip and needle positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 6.0,
+      "phase": "syringe_demonstration",
+      "description": "Showing medical syringe, possibly for injection techniques",
+      "technique_notes": "Educational component on medical device usage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "grasper_demonstration",
+      "description": "Displaying laparoscopic grasper with articulation demonstration",
+      "technique_notes": "Showing proper grasper mechanics and jaw function",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {},
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content with expert demonstrating laparoscopic instruments and techniques. No actual FLS task performance to score.",
+  "cannot_determine": [
+    "Specific FLS task being taught",
+    "Task performance metrics",
+    "Completion time or penalties"
+  ],
+  "technique_summary": "Comprehensive instructional demonstration of laparoscopic instruments including needles, needle drivers, graspers, and suture materials with focus on proper handling techniques.",
+  "strengths": [
+    "Clear instrument demonstrations",
+    "Professional presentation style",
+    "Good visibility of instrument details"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper needle handling and visualization",
+      "laparoscopic needle driver grip and positioning",
+      "suture material characteristics demonstration",
+      "grasper articulation and jaw mechanics",
+      "instrument exchange and handling protocols"
+    ],
+    "verbal_cues": [
+      "Contextual instruction delivery based on gestures and presentation flow"
+    ],
+    "common_errors_addressed": [
+      "improper needle grip positioning",
+      "inadequate instrument visualization before use"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "6ONoAk7qLfI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:48:41.132759+00:00",
+  "scoreable": false
+}

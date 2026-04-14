@@ -1,0 +1,131 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Grasping first peg with left hand.",
+      "technique_notes": "Initial grasp appears secure.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 11.0,
+      "phase": "transfer_midair",
+      "description": "Transferring first peg midair to right hand.",
+      "technique_notes": "Stable transfer.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 24.0,
+      "phase": "place_dominant",
+      "description": "Placing first peg onto left side peg.",
+      "technique_notes": "Accurate placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 37.0,
+      "phase": "reverse_pickup",
+      "description": "Grasping peg with right hand to start reverse direction.",
+      "technique_notes": "Efficient grasp.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 51.0,
+      "phase": "reverse_transfer",
+      "description": "Transferring peg midair to left hand.",
+      "technique_notes": "Smooth transfer.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 157.0,
+      "phase": "reverse_place",
+      "description": "Placing peg onto right side peg.",
+      "technique_notes": "Successful placement.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 223.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0.0,
+      "end_seconds": 11.0,
+      "duration_seconds": 11.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 11.0,
+      "end_seconds": 37.0,
+      "duration_seconds": 26.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 37.0,
+      "end_seconds": 111.0,
+      "duration_seconds": 74.0,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 157.0,
+      "end_seconds": 173.0,
+      "duration_seconds": 16.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 173.0,
+      "end_seconds": 205.0,
+      "duration_seconds": 32.0,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 205.0,
+      "end_seconds": 223.0,
+      "duration_seconds": 18.0,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": {
+    "max_score": 300,
+    "time_used": 223.0,
+    "total_penalties": 0,
+    "total_fls_score": 77.0,
+    "formula_applied": "300 - 223.0 - 0 = 77.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Completion time and all phases observed without dropping objects or incomplete placements.",
+  "cannot_determine": [],
+  "technique_summary": "Efficient task execution with smooth transfers and accurate placements but longer than optimal overall time.",
+  "strengths": [
+    "Accurate peg placement",
+    "Stable transfers"
+  ],
+  "improvement_suggestions": [
+    "Reduce overall task time for higher score.",
+    "Focus on faster peg placement phases."
+  ],
+  "video_id": "VwFzFKhjO2I",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:27:32.246412+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.845161+00:00"
+  },
+  "scoreable": true
+}

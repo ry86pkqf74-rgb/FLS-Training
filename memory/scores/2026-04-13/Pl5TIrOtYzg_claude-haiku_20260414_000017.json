@@ -1,0 +1,26 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Unable to determine specific FLS task",
+  "reason_not_scored": "This video is an educational/conference presentation and facility tour, not a trainee or expert performance of an FLS task. The content shows: (1) Multiple speakers at podium delivering lectures (Jane Eggerstedt, MD and Andrew Chesson, MD), (2) Facility tours and equipment demonstrations at LSU Health Shreveport, (3) Demonstrations of surgical instruments and simulator setups to an audience, (4) Exhibits and visualizations of FLS equipment, but NO actual timed performance of a standardized FLS task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture). The video serves as promotional/educational content about surgical training programs rather than a scoreable performance.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Overview of FLS/MISTELS simulator training program",
+      "Surgical instrument handling and equipment setup",
+      "Laparoscopic trainer visualization",
+      "Multi-station surgical skills lab configuration"
+    ],
+    "verbal_cues": [
+      "Educational presentations by faculty leadership (Associate Dean for Academic Affairs, School of Medicine Dean)"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "educational_institutional_overview",
+    "content_focus": "FLS program infrastructure, equipment, and training facility at LSU Health Shreveport"
+  },
+  "cannot_score": "No individual FLS task performance present \u2014 video is an institutional tour and educational presentation, not a timed task execution",
+  "video_id": "Pl5TIrOtYzg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:00:17.371476+00:00",
+  "scoreable": false
+}

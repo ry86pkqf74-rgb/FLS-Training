@@ -1,0 +1,113 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Suture with Extracorporeal Knot",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_intro",
+      "description": "Professor Bijendra Patel title slide for laparoscopic extracorporeal knot tying and suturing course",
+      "technique_notes": "Educational presentation by expert surgeon from Queen Mary University of London",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 10.5,
+      "phase": "extracorporeal_technique_demo",
+      "description": "Expert demonstrating Roeder's knot formation using thick yellow rope/fishing line",
+      "technique_notes": "Clear demonstration of initial simple reef knot formation using both hands",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 13.5,
+      "phase": "extracorporeal_technique_demo",
+      "description": "Formation of second 360 degree loop around the knot structure",
+      "technique_notes": "Text overlay 'Second 360 degree loop' - systematic approach to complex knot construction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 16.5,
+      "phase": "extracorporeal_technique_demo",
+      "description": "Final loop configuration with text 'Loop over left only to unlock'",
+      "technique_notes": "Critical safety feature - left-only loop prevents premature locking",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 19.5,
+      "phase": "extracorporeal_technique_demo",
+      "description": "Demonstration of unlocking mechanism with directional arrows",
+      "technique_notes": "Push and slide technique for controlled knot advancement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 28.5,
+      "phase": "animation_demo",
+      "description": "Computer animation showing Roeder's knot formation with laparoscopic instruments",
+      "technique_notes": "Professional animation demonstrating knot pusher use and instrument coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 37.5,
+      "phase": "animation_demo",
+      "description": "Animation showing final knot sliding and locking mechanism",
+      "technique_notes": "Clear visualization of knot pusher advancement and final tissue approximation",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "educational_content": {
+      "knot_type_taught": "Roeder's knot using thick rope demonstration",
+      "technique_complexity": "advanced",
+      "visual_aids": "live demonstration, text overlays, computer animation",
+      "target_audience": "surgical trainees learning extracorporeal knot techniques"
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional content with expert presenter credentials visible. No actual FLS task performance to score, but excellent teaching demonstration.",
+  "cannot_determine": [
+    "Task completion time - no actual performance shown",
+    "FLS scoring penalties - educational demonstration only",
+    "Suture placement accuracy - demonstration uses rope, not FLS equipment"
+  ],
+  "technique_summary": "Expert-level instructional demonstration of Roeder's knot technique using multimodal teaching approach combining live demonstration with professional animation.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Roeder's knot formation using thick rope for visibility",
+      "Sequential loop construction with safety mechanisms",
+      "Push and slide knot advancement technique",
+      "Proper instrument coordination for extracorporeal knot tying",
+      "Knot pusher use for controlled advancement"
+    ],
+    "verbal_cues": [
+      "Text overlays indicating 'Single reef knot', 'Second 360 degree loop', 'Loop over left only to unlock', 'Push and slide'"
+    ],
+    "common_errors_addressed": [
+      "Premature knot locking prevented by left-only loop design",
+      "Uncontrolled knot advancement avoided through proper pusher technique"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "GEw-Ens6Prk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:27:09.613317+00:00",
+  "scoreable": false
+}

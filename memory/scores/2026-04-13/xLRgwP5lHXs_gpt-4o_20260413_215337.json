@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to process video inputs directly. However, if you provide detailed descriptions and times for key events or phases observed in the video, I can help create an assessment in JSON format based on that information.",
+  "video_id": "xLRgwP5lHXs",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:53:37.973842+00:00",
+  "task_id": "task1_peg_transfer",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.914435+00:00"
+  },
+  "scoreable": false
+}

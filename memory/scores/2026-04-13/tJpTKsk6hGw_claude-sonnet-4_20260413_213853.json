@@ -1,0 +1,134 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Initial view of FLS board with multiple rope cutting stations setup",
+      "technique_notes": "Setup shows various rope configurations between pegs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Scissors approaching the rope cutting area",
+      "technique_notes": "Single instrument visible - scissors positioned for cutting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 3.0,
+      "phase": "initial_cut",
+      "description": "First rope segment cut - green rope separated",
+      "technique_notes": "Clean cutting motion, rope sections now visible as separate pieces",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 5.0,
+      "phase": "sequential_cutting",
+      "description": "Continuing to cut rope segments systematically",
+      "technique_notes": "Methodical approach cutting from left to right",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "sequential_cutting",
+      "description": "Multiple rope segments now cut, scissors continuing work",
+      "technique_notes": "Good control maintaining clean cuts",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 16.0,
+      "phase": "sequential_cutting",
+      "description": "Further progression through rope cutting sequence",
+      "technique_notes": "Consistent technique maintained throughout",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 23.0,
+      "phase": "final_cuts",
+      "description": "Nearing completion of rope cutting sequence",
+      "technique_notes": "Multiple rope segments successfully separated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 27.0,
+      "phase": "completion",
+      "description": "All visible rope segments appear to be cut",
+      "technique_notes": "Task appears complete with all ropes separated",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 34.0,
+  "phase_timings": [
+    {
+      "phase": "preparation",
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cutting_sequence",
+      "start_seconds": 3,
+      "end_seconds": 34,
+      "duration_seconds": 31,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": "cannot_determine",
+      "cut_completeness": "complete",
+      "rope_attachment_status": "maintained"
+    },
+    "technique_quality": {
+      "instrument_control": "excellent",
+      "cutting_efficiency": "high",
+      "systematic_approach": "demonstrated"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 34.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 266.0,
+    "formula_applied": "300 - 34.0 - 0.0 = 266.0"
+  },
+  "confidence": 0.45,
+  "confidence_rationale": "This appears to be a rope cutting exercise rather than the standard FLS Task 2 pattern cutting which involves cutting a circular pattern from gauze. The setup and execution differ significantly from the official Task 2 protocol.",
+  "cannot_determine": [
+    "Whether this represents the official FLS Task 2 pattern cut or a different cutting exercise",
+    "Precise deviation measurements from marked lines - no circular pattern or gauze visible",
+    "Whether gauze remains attached to clamps - no gauze or clamps visible in standard configuration"
+  ],
+  "technique_summary": "Efficient systematic cutting approach with good instrument control, though the exercise setup does not match standard FLS Task 2 protocol.",
+  "strengths": [
+    "Smooth, controlled cutting motions",
+    "Systematic approach to multiple cuts",
+    "Excellent completion time"
+  ],
+  "improvement_suggestions": [
+    "Ensure exercise matches official FLS Task 2 requirements with circular pattern on suspended gauze"
+  ],
+  "video_id": "tJpTKsk6hGw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:38:53.047112+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.901840+00:00"
+  },
+  "scoreable": true
+}

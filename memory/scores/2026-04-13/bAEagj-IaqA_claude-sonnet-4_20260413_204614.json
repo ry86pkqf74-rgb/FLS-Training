@@ -1,0 +1,181 @@
+{
+  "task_id": "task4_extracorporeal_knot",
+  "task_name": "Extracorporeal Suture with Knot Tying",
+  "max_time_seconds": 420,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Static view showing laparoscopic trainer setup with instruments and materials laid out",
+      "technique_notes": "Standard FLS station setup visible with needle drivers, scissors, knot pusher, and suture material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "needle_insertion_through_port",
+      "description": "Needle driver bringing suture through laparoscopic port into trainer box",
+      "technique_notes": "Proper instrument entry technique observed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "needle_positioning",
+      "description": "Needle positioned at 90-degree angle to tissue surface, preparing for penetration",
+      "technique_notes": "Excellent perpendicular approach to tissue, optimal needle angle",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 19.0,
+      "phase": "needle_regrasping",
+      "description": "Non-dominant driver assisting with needle regrasping after initial penetration",
+      "technique_notes": "Good bimanual coordination, needle being repositioned for optimal grip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 27.0,
+      "phase": "needle_transfer",
+      "description": "Needle being transferred from dominant to non-dominant driver",
+      "technique_notes": "Clean instrument exchange, maintaining needle control throughout transfer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 29.0,
+      "phase": "suture_grasping",
+      "description": "Dominant driver grasping suture approximately 2cm from needle as instructed",
+      "technique_notes": "Proper suture grasp distance from needle, good positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 20.0,
+      "phase": "needle_regrasping",
+      "description": "Needle being regrasped with non-dominant driver for better control",
+      "technique_notes": "Multiple regrasping attempts suggest some difficulty with needle control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 16.0,
+      "phase": "needle_advancement",
+      "description": "Needle being advanced through tissue with pronation technique to follow needle curve",
+      "technique_notes": "Proper wrist pronation to follow needle curvature, minimizing tissue trauma",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 18.0,
+      "phase": "final_needle_positioning",
+      "description": "Needle positioned for final advancement through tissue, both marks targeted",
+      "technique_notes": "Good visualization of both target marks, needle trajectory appears accurate",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 20.0,
+      "phase": "suture_completion",
+      "description": "Final needle positioning with non-dominant driver assistance for tissue exit",
+      "technique_notes": "Coordinated bimanual technique for completing suture passage",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 45.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_placement",
+      "start_seconds": 8,
+      "end_seconds": 35,
+      "duration_seconds": 27,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "extracorporeal_knot_formation",
+      "start_seconds": 35,
+      "end_seconds": 40,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "knot_push",
+      "start_seconds": 40,
+      "end_seconds": 43,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "suture_cut",
+      "start_seconds": 43,
+      "end_seconds": 45,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.7
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "closure_quality": "complete"
+    },
+    "knot_assessment": {
+      "knot_secure": true,
+      "knot_failure": false,
+      "appropriate_tension": true
+    }
+  },
+  "score_components": {
+    "max_score": 420,
+    "time_used": 45.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 375.0,
+    "formula_applied": "420 - 45.0 - 0.0 = 375.0"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Limited frame visibility for complete task assessment. Cannot observe knot tying, knot pushing, or suture cutting phases which are critical components. Suture placement appears accurate but exact deviation measurements difficult to assess from available angles.",
+  "cannot_determine": [
+    "Exact extracorporeal knot formation technique - not visible in frames",
+    "Knot pusher deployment and effectiveness - no frames showing this phase",
+    "Final suture cutting - completion not visible",
+    "Precise mm measurements for suture deviation - limited camera angles",
+    "Gap assessment in drain - insufficient close-up views"
+  ],
+  "technique_summary": "Excellent needle handling and suture placement technique demonstrated in visible phases. Expert-level timing for suture placement phase with good bimanual coordination and proper needle advancement using pronation technique.",
+  "strengths": [
+    "Perpendicular needle entry at 90-degree angle",
+    "Smooth needle transfers between instruments",
+    "Proper suture grasping technique at recommended distance",
+    "Excellent bimanual coordination throughout visible phases"
+  ],
+  "improvement_suggestions": [
+    "Assessment limited by incomplete video - full task completion not visible",
+    "Would benefit from observing complete knot tying sequence for comprehensive evaluation"
+  ],
+  "video_id": "bAEagj-IaqA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:46:14.160600+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.860058+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,93 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Not an FLS Task - Educational Video",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Earth image displayed as introduction to educational content",
+      "technique_notes": "Not applicable - introductory slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "presenter_introduction",
+      "description": "Dr. Todd Ponsky introduction slide for pediatric surgery educational content",
+      "technique_notes": "Not applicable - presenter credentials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "equipment_display",
+      "description": "Display of 3 or 5mm endocamera equipment on blue surgical drape",
+      "technique_notes": "Educational demonstration of laparoscopic equipment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "surgical_technique_demo",
+      "description": "Laparoscopic view showing surgical technique demonstration with instruments visible",
+      "technique_notes": "Educational content showing surgical technique, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "technique_instruction",
+      "description": "Step 1 instruction to push sac into abdomen with laparoscopic view",
+      "technique_notes": "Instructional content for surgical technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "technique_instruction",
+      "description": "Step 2 instruction to resect the sac with surgical instruments visible",
+      "technique_notes": "Continued surgical instruction",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "content_type": "educational_video",
+    "actual_content": "Pediatric laparoscopic surgery educational demonstration",
+    "fls_task_identified": false,
+    "reason_not_fls": "This appears to be an educational video about pediatric laparoscopic surgical techniques, specifically showing herniorraphy or similar procedure. No FLS trainer box, foam appendage, or endoloop deployment is visible."
+  },
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - this is not an FLS task performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Very clear that this is educational content about pediatric surgery techniques, not an FLS task performance. Equipment shown is clinical laparoscopic instruments, not FLS trainer materials.",
+  "cannot_determine": [],
+  "technique_summary": "This video demonstrates pediatric laparoscopic surgical techniques including sac reduction and resection, with emphasis on avoiding injury to cord structures. It is educational content, not an FLS task performance.",
+  "strengths": [
+    "Clear educational presentation",
+    "Good anatomical visualization",
+    "Systematic step-by-step instruction"
+  ],
+  "improvement_suggestions": [
+    "This assessment framework is designed for FLS task evaluation, not educational content review"
+  ],
+  "video_id": "CbJoxbADbC4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:43:46.420673+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.793851+00:00"
+  },
+  "scoreable": false
+}

@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm unable to provide person identification or specific video analysis given images or text alone. However, I can help guide you on how to score the task if you have access to the video footage by following these instructions:\n\n1. **Identify the Task:** Ensure this is Task 3: Endoloop (Ligating Loop",
+  "video_id": "cDrAinRJE7Q",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:51:04.371872+00:00",
+  "task_id": "task3_endoloop",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.863914+00:00"
+  },
+  "scoreable": false
+}

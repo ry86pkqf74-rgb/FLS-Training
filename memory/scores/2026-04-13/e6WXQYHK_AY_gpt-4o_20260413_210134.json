@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "{\n  \"task_id\": \"task2_pattern_cut\",\n  \"task_name\": \"Pattern Cut\",\n  \"max_time_seconds\": 300,\n  \"frame_analyses\": [\n    {\n      \"frame_number\": 1,\n      \"timestamp_seconds\": 0.0,\n      \"phase\": \"gauze_grasp\",\n      \"description\": \"Right instrument approaching the gauze for grasping.\",\n      \"techniqu",
+  "video_id": "e6WXQYHK_AY",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:01:34.989867+00:00",
+  "task_id": "task2_pattern_cut",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.871285+00:00"
+  },
+  "scoreable": false
+}

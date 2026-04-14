@@ -1,0 +1,81 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Not an FLS Task",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_video",
+      "description": "Healthcare professional in traditional Indian attire with stethoscope presenting to camera",
+      "technique_notes": "This appears to be an educational video about laparoscopic surgery recovery, not an FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "educational_content",
+      "description": "Slide showing 'Recovery from Laparoscopic Surgery' with 10 numbered points including pain, sore throat, bath, food, etc.",
+      "technique_notes": "Educational content slide, not FLS task video",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "educational_content",
+      "description": "Food and diet slide showing 'Avoid food rich in spices and oil' with various food images",
+      "technique_notes": "Continuing educational content about post-operative diet",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "educational_content",
+      "description": "'Being Intimate' slide with heart graphic",
+      "technique_notes": "Educational slide about intimacy after surgery",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 23.0,
+      "phase": "educational_content",
+      "description": "'Return to Work' slide with blue background",
+      "technique_notes": "Final educational slide about returning to work",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "N/A - This is not an FLS task video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an educational video about post-operative care after laparoscopic surgery, not a performance of any FLS task. No laparoscopic trainer, instruments, or task materials are visible.",
+  "cannot_determine": [
+    "Any FLS task scoring - this video does not contain FLS task performance"
+  ],
+  "technique_summary": "This video contains educational content about recovery from laparoscopic surgery presented by a healthcare professional. It is not an FLS task performance video and cannot be scored using FLS rubrics.",
+  "strengths": [
+    "Clear educational presentation",
+    "Well-organized content slides"
+  ],
+  "improvement_suggestions": [
+    "To score FLS tasks, please provide video of actual task performance in a laparoscopic trainer with appropriate instruments and materials"
+  ],
+  "video_id": "3ookYtx7B8M",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:23:30.922315+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.747854+00:00"
+  },
+  "scoreable": false
+}

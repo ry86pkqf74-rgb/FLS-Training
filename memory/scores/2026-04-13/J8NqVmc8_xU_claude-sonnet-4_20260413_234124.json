@@ -1,0 +1,31 @@
+{
+  "video_classification": "unusable",
+  "task_id": "unclassified",
+  "task_name": "Cannot be determined",
+  "max_time_seconds": null,
+  "frame_analyses": [],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot be applied - not an FLS task video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows live surgery in operating room with multiple surgeons and patient, not FLS trainer or simulation environment",
+  "cannot_determine": [
+    "This is not an FLS task - appears to be actual surgical footage"
+  ],
+  "technique_summary": "Not applicable - this is live surgery footage, not FLS training",
+  "strengths": [],
+  "improvement_suggestions": [],
+  "video_id": "J8NqVmc8_xU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:41:24.059949+00:00",
+  "scoreable": false
+}

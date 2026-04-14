@@ -1,0 +1,186 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Foam appendage visible on mount with orange marking line, no instruments present yet",
+      "technique_notes": "Clear view of target structure and marking line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_deploy",
+      "description": "Endoloop applicator approaching from left side, loop beginning to emerge",
+      "technique_notes": "Smooth instrument introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "target_approach",
+      "description": "Loop deployed and approaching appendage, second instrument (grasper) entering field",
+      "technique_notes": "Good bimanual coordination developing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "loop_placement",
+      "description": "Loop being positioned around appendage with grasper assistance",
+      "technique_notes": "Careful manipulation of loop around target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage, appears to be at appropriate level near marking",
+      "technique_notes": "Good positioning relative to target line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "cinch",
+      "description": "Loop being cinched down on appendage",
+      "technique_notes": "Appropriate tightening technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 75.0,
+      "phase": "cinch",
+      "description": "Loop fully cinched and secured around appendage",
+      "technique_notes": "Loop appears tight and well-positioned",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 95.0,
+      "phase": "cut_tail",
+      "description": "Cutting excess suture tail from secured loop",
+      "technique_notes": "Clean cutting technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 24,
+      "timestamp_seconds": 115.0,
+      "phase": "completion",
+      "description": "Task completed with loop secured around appendage, excess tail removed",
+      "technique_notes": "Final position appears appropriate",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 115.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 10,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 10,
+      "end_seconds": 20,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 20,
+      "end_seconds": 45,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 45,
+      "end_seconds": 85,
+      "duration_seconds": 40,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 85,
+      "end_seconds": 115,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_position_deviation",
+      "description": "Loop positioned approximately 3-4mm proximal to the marked line",
+      "points_deducted": 3.5,
+      "frame_evidence": [
+        8,
+        12,
+        16
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_deployment": {
+      "smooth_deployment": true,
+      "proper_opening": true,
+      "notes": "Clean deployment with good loop opening"
+    },
+    "final_position": {
+      "at_marked_line": false,
+      "deviation_mm": 3.5,
+      "proximal_to_mark": true,
+      "confidence": 0.7
+    },
+    "loop_security": {
+      "tightly_cinched": true,
+      "knot_secure": true,
+      "notes": "Loop appears well-secured around appendage"
+    },
+    "appendage_integrity": {
+      "transected": false,
+      "intact": true,
+      "notes": "Appendage remains intact throughout procedure"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 115.0,
+    "total_penalties": 3.5,
+    "total_fls_score": 61.5,
+    "formula_applied": "180 - 115.0 - 3.5 = 61.5"
+  },
+  "confidence": 0.75,
+  "confidence_rationale": "Clear view of most phases, though exact measurement of deviation from marking line estimated from camera angle. Loop security and appendage integrity well-observed.",
+  "cannot_determine": [
+    "Precise millimeter measurement of deviation from marked line due to camera perspective"
+  ],
+  "technique_summary": "Solid intermediate performance with smooth deployment and secure loop placement. Primary penalty from positioning slightly proximal to target line.",
+  "strengths": [
+    "Smooth bimanual coordination",
+    "Secure loop cinching",
+    "Clean tail cutting technique",
+    "Good overall timing for intermediate level"
+  ],
+  "improvement_suggestions": [
+    "Focus on precise positioning at the marked line",
+    "Consider using marking line as exact target rather than approximate placement"
+  ],
+  "video_id": "jfW3H_KKOHM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:12:43.333713+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.879782+00:00"
+  },
+  "scoreable": true
+}

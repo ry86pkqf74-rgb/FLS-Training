@@ -1,0 +1,207 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 0.0,
+      "phase": "suture_placement",
+      "description": "Penrose drain visible with two green marking dots, suture already placed through both marks",
+      "technique_notes": "Suture appears to be correctly positioned through marked points",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "phase": "first_throw",
+      "description": "Beginning first throw of surgeon's knot with right hand leading, left hand assisting",
+      "technique_notes": "Good hand positioning for knot tying sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "first_throw",
+      "description": "Continuing surgeon's knot formation, creating loop for double throw",
+      "technique_notes": "Proper technique for surgeon's knot double throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 15.0,
+      "phase": "first_throw",
+      "description": "Pulling first surgeon's knot throw tight, right hand maintaining control",
+      "technique_notes": "Good tension control during knot tightening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 20.0,
+      "phase": "first_throw",
+      "description": "Completing first throw tightening, preparing for second throw",
+      "technique_notes": "Surgeon's knot appears secure and properly formed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 35.0,
+      "phase": "second_throw",
+      "description": "Left hand now leading for second throw, demonstrating proper hand switching",
+      "technique_notes": "Correct alternating hand technique between throws",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 50.0,
+      "phase": "second_throw",
+      "description": "Forming single throw knot with left hand leading",
+      "technique_notes": "Appropriate single throw formation after surgeon's knot",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 55.0,
+      "phase": "second_throw",
+      "description": "Tightening second throw with left hand control",
+      "technique_notes": "Good knot tightening technique maintaining proper tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 60.0,
+      "phase": "second_throw",
+      "description": "Second throw secured, preparing for third throw",
+      "technique_notes": "Knot appears secure, proper progression through throws",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 65.0,
+      "phase": "third_throw",
+      "description": "Right hand leading again for third throw, completing hand alternation sequence",
+      "technique_notes": "Proper hand switching maintained throughout knot sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 70.0,
+      "phase": "third_throw",
+      "description": "Final throw completed and tightened, knot sequence complete",
+      "technique_notes": "All three throws appear secure and properly formed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 75.0,
+      "phase": "completion",
+      "description": "Task completed with suture in place and knot secured",
+      "technique_notes": "Drain appears intact, suture placement maintained",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 75.0,
+  "phase_timings": [
+    {
+      "phase": "suture_placement",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "first_throw",
+      "start_seconds": 5,
+      "end_seconds": 25,
+      "duration_seconds": 20,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "second_throw",
+      "start_seconds": 25,
+      "end_seconds": 50,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "third_throw",
+      "start_seconds": 50,
+      "end_seconds": 75,
+      "duration_seconds": 25,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_double_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean double throw surgeon's knot formation"
+      },
+      {
+        "throw_number": 2,
+        "type": "single_throw",
+        "hand_leading": "left",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Proper single throw with hand switching"
+      },
+      {
+        "throw_number": 3,
+        "type": "single_throw",
+        "hand_leading": "right",
+        "hand_switched_from_previous": true,
+        "appears_secure": true,
+        "notes": "Final single throw completing knot sequence"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0.0,
+      "deviation_from_mark2_mm": 0.0,
+      "total_deviation_penalty": 0.0,
+      "confidence": 0.8
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 75.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 525.0,
+    "formula_applied": "600 - 75.0 - 0.0 = 525.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear visualization of all three throws with proper hand switching. Suture placement appears accurate through both marks. No visible penalties observed. Task appears complete with secure knot formation.",
+  "cannot_determine": [
+    "Exact suture cut completion - video ends before showing final suture trimming",
+    "Precise measurement of any minor suture deviations due to camera angle"
+  ],
+  "technique_summary": "Excellent expert-level performance with rapid completion time of 75 seconds. Proper surgeon's knot formation followed by alternating single throws with correct hand switching throughout.",
+  "strengths": [
+    "Rapid completion time well within expert range",
+    "Perfect hand switching sequence between all throws",
+    "Clean knot formation with appropriate tension",
+    "Accurate suture placement through both marks"
+  ],
+  "improvement_suggestions": [
+    "Video cuts off before showing final suture trimming which would be required for complete task"
+  ],
+  "video_id": "cHSizu7WOtU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:52:28.430707+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.864748+00:00"
+  },
+  "scoreable": true
+}

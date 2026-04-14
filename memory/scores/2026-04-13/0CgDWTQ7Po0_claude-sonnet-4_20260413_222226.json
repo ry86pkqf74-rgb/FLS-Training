@@ -1,0 +1,38 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Virtual Reality Marble Sorting Exercise",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Using VR controller as zero degrees scope for instrument manipulation",
+      "Gentle grasping technique with instrument tips",
+      "Using empty bucket in middle for workspace management",
+      "Controlled camera movement to prevent disorientation"
+    ],
+    "verbal_cues": [
+      "Grab the marble gently with the tip of your instrument",
+      "Moving too fast will result in pinching the floor or bucket",
+      "Follow the controller with your scope",
+      "Drop the marble above the bucket",
+      "Moving the camera too fast or uncontrolled will result in misorientation or dizziness"
+    ],
+    "common_errors_addressed": [
+      "Moving instruments too quickly causing collision damage",
+      "Uncontrolled camera movements leading to disorientation",
+      "Improper grasping technique"
+    ],
+    "skill_level_demonstrated": "novice"
+  },
+  "cannot_determine": [
+    "This is not a standard FLS task but rather a VR training exercise for basic laparoscopic skills",
+    "No formal FLS scoring rubric applies to this marble sorting exercise",
+    "Exercise appears to be a preliminary training module before actual FLS tasks"
+  ],
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional overlays and text prompts indicate this is a tutorial for VR-based laparoscopic training, not an actual FLS task performance. The exercise involves color-coded marble sorting which is not part of the standard 5 FLS tasks.",
+  "video_id": "0CgDWTQ7Po0",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:22:26.520631+00:00",
+  "scoreable": false
+}

@@ -1,0 +1,127 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "initial_setup",
+      "description": "FLS setup with gauze suspended, ready for endoloop deployment.",
+      "technique_notes": "Center line visible on gauze where loop will be placed.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "loop_deploy",
+      "description": "Endoloop introduced, approaching target gauze.",
+      "technique_notes": "Approach appears direct, with loop opening correctly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 3.0,
+      "phase": "target_approach",
+      "description": "Loop approaching near side of gauze.",
+      "technique_notes": "Instrument angling corrected to maintain central approach.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 10.0,
+      "phase": "loop_placement",
+      "description": "Loop placed circumferentially around the gauze.",
+      "technique_notes": "Placement appears centered over target line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 13.0,
+      "phase": "cinch",
+      "description": "Loop being cinched tightly.",
+      "technique_notes": "Care taken to tighten loop without any gauze displacement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 15.0,
+      "phase": "cut_tail",
+      "description": "Cinch completed and suture tail cut.",
+      "technique_notes": "Final cut appears smooth and close to knot.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 18.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 1,
+      "end_seconds": 3,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 3,
+      "end_seconds": 7,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 7,
+      "end_seconds": 12,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 12,
+      "end_seconds": 15,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 15,
+      "end_seconds": 18,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement_quality": "precise",
+    "loop_tension": "tight",
+    "gauze_security": "intact"
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 18,
+    "total_penalties": 0,
+    "total_fls_score": 162,
+    "formula_applied": "180 - 18 - 0 = 162"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear view of loop placement and cinching phases. No observable penalties.",
+  "cannot_determine": [],
+  "technique_summary": "Exceptional execution across all phases with precise placement and tension control. Minimal time used.",
+  "strengths": [
+    "Efficient loop deployment and approach",
+    "Tight and secure loop cinching"
+  ],
+  "improvement_suggestions": [
+    "Continue practicing timing for potential enhancement even though it is already excellent."
+  ],
+  "video_id": "GZZjbgSyqjM",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:52:21.863714+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.813766+00:00"
+  },
+  "scoreable": true
+}

@@ -1,0 +1,76 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen with no visible content",
+      "technique_notes": "No FLS task performance visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 8.0,
+      "phase": "not_applicable",
+      "description": "Conference presentation slide about FES exam background",
+      "technique_notes": "Educational content showing exam structure and requirements",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 80.0,
+      "phase": "not_applicable",
+      "description": "Slide showing curriculum comparison between Y1 and Y2 programs",
+      "technique_notes": "Shows simulation training tasks and proficiency standards",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 120.0,
+      "phase": "not_applicable",
+      "description": "Results slide showing FES exam pass rates and statistics",
+      "technique_notes": "Data presentation about training effectiveness",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 160.0,
+      "phase": "not_applicable",
+      "description": "Discussion slide about training outcomes and future directions",
+      "technique_notes": "Academic discussion of curriculum effectiveness",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "not_applicable"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows academic presentation slides about FES curriculum, not an FLS task performance",
+  "cannot_determine": [],
+  "technique_summary": "This video contains academic presentation content about FES training curriculum outcomes, not an FLS peg transfer task performance.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "not_applicable"
+  },
+  "improvement_suggestions": [],
+  "video_id": "60T_PDV36Qs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:48:16.138700+00:00",
+  "scoreable": false
+}

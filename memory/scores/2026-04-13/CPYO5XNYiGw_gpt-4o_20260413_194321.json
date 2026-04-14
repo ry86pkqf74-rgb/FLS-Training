@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "{\n  \"task_id\": \"task4_extracorporeal_knot\",\n  \"task_name\": \"Extracorporeal Suture with Knot Tying\",\n  \"max_time_seconds\": 420,\n  \"frame_analyses\": [\n    {\n      \"frame_number\": 3,\n      \"timestamp_seconds\": 0.0,\n      \"phase\": \"needle_load\",\n      \"description\": \"Participant preparing to load the ne",
+  "video_id": "CPYO5XNYiGw",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:43:21.396179+00:00",
+  "task_id": "task4_extracorporeal_knot",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.793267+00:00"
+  },
+  "scoreable": false
+}

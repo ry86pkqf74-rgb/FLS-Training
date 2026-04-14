@@ -1,0 +1,189 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Pre-tied ligating loop visible with black suture extending from instruments",
+      "technique_notes": "Loop appears properly formed, instruments positioned for deployment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 6.7,
+      "phase": "loop_deploy",
+      "description": "Both instruments manipulating the loop, beginning deployment process",
+      "technique_notes": "Coordinated bimanual technique, loop maintaining integrity",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 13.3,
+      "phase": "loop_deploy",
+      "description": "Loop being opened and positioned, instruments working in coordination",
+      "technique_notes": "Good instrument coordination, loop opening smoothly",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 20.0,
+      "phase": "target_approach",
+      "description": "Loop being maneuvered toward target area, instruments adjusting position",
+      "technique_notes": "Deliberate movements toward target, maintaining loop control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 26.7,
+      "phase": "loop_placement",
+      "description": "Loop being positioned around the green foam appendage structure",
+      "technique_notes": "Careful placement technique, loop appears to be correctly sized",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 33.3,
+      "phase": "loop_placement",
+      "description": "Loop positioned around appendage, instruments preparing for cinching",
+      "technique_notes": "Loop appears properly positioned around target structure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 40.0,
+      "phase": "cinch",
+      "description": "Cinching process initiated, loop being tightened around appendage",
+      "technique_notes": "Smooth cinching technique, controlled tightening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 46.7,
+      "phase": "cinch",
+      "description": "Loop being further tightened, instruments maintaining control",
+      "technique_notes": "Continued cinching with good control, no slippage visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 53.3,
+      "phase": "cinch",
+      "description": "Loop appears fully cinched around appendage structure",
+      "technique_notes": "Loop appears secure and tight against target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 60.0,
+      "phase": "cinch",
+      "description": "Final positioning and securing of the cinched loop",
+      "technique_notes": "Loop appears well-secured, instruments maintaining position",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 126.7,
+      "phase": "cut_tail",
+      "description": "Cutting the excess suture tail after successful loop placement",
+      "technique_notes": "Clean cutting technique to remove excess material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 21,
+      "timestamp_seconds": 133.3,
+      "phase": "cut_tail",
+      "description": "Final cut being completed, task nearing completion",
+      "technique_notes": "Precise cutting, maintaining loop integrity",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 140.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "duration_seconds": 20,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 20,
+      "end_seconds": 27,
+      "duration_seconds": 7,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 27,
+      "end_seconds": 40,
+      "duration_seconds": 13,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 40,
+      "end_seconds": 127,
+      "duration_seconds": 87,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 127,
+      "end_seconds": 140,
+      "duration_seconds": 13,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "loop_cinched_tightly": true,
+      "appendage_transected": false,
+      "confidence": 0.7
+    },
+    "deployment_quality": {
+      "smooth_deployment": true,
+      "loop_integrity_maintained": true,
+      "proper_cinching": true
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 140.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 40.0,
+    "formula_applied": "180 - 140.0 - 0.0 = 40.0"
+  },
+  "confidence": 0.7,
+  "confidence_rationale": "Loop deployment and cinching phases clearly visible, but exact positioning relative to marked line difficult to assess from camera angles. No obvious penalties observed but marking precision cannot be fully verified.",
+  "cannot_determine": [
+    "Exact mm deviation from marked line on appendage - marking not clearly visible in video frames",
+    "Precise measurement of loop tightness - can only assess visually that loop appears secure"
+  ],
+  "technique_summary": "Competent intermediate to novice performance with smooth loop deployment and placement. Primary time loss occurred during extended cinching phase (87s vs 20-40s expert benchmark). No major technical errors observed.",
+  "strengths": [
+    "Smooth bimanual coordination during deployment",
+    "Controlled loop placement without dropping or tangling",
+    "Maintained loop integrity throughout procedure"
+  ],
+  "improvement_suggestions": [
+    "Reduce cinching time from 87s to under 30s for expert level",
+    "Practice more efficient tightening technique",
+    "Work on faster but controlled movements during securing phase"
+  ],
+  "video_id": "JQznLrebcXE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:00:58.174386+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.821265+00:00"
+  },
+  "scoreable": true
+}

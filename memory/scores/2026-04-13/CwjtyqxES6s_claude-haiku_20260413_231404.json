@@ -1,0 +1,146 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Ureter Identification (Right) \u2014 VirtaMed ED Surgical Simulation Tutorial",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "intro",
+      "description": "VirtaMed ED splash screen and title card showing 'Ureter Identification Right'",
+      "technique_notes": "Educational module introduction \u2014 no performance task underway",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 16.0,
+      "phase": "identification_guidance",
+      "description": "Instructional overlay: 'Palpate ureter at right pelvic brim'; uterine manipulator visible in training model; laparoscopic view of pelvic anatomy with yellow structures (bowel) and pink structures (reproductive organs)",
+      "technique_notes": "Narrated instruction with text guidance and anatomical landmark highlighting. Shows expert hand placement technique for palpating ureter.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 19.0,
+      "phase": "identification_guidance",
+      "description": "Laparoscopic instrument (appears to be grasper/dissector) approaching right pelvic anatomy; instruction: 'Identify the ureter provoking peristalsis at the level of the right pelvic brim where it crosses over the iliac vessels.'",
+      "technique_notes": "Demonstrates careful palpation technique; shows proper instrument angle and approach to avoid vessel injury. Verbal cue emphasizes anatomical landmarks (iliac vessels).",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 22.0,
+      "phase": "follow_ureter",
+      "description": "Instructions transition to 'Follow ureter' phase; narrator instructs: 'Follow the course of the ureter into the pouch of Douglas.' Instrument continues palpating and tracing tissue planes.",
+      "technique_notes": "Demonstrates dissection technique and tissue handling. Shows smooth, controlled instrument movement along anatomical structure.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 27.0,
+      "phase": "follow_ureter",
+      "description": "Both laparoscopic instruments visible; fine dissection continuing along right pelvic sidewall. Anatomy becomes clearer as peritoneum is mobilized.",
+      "technique_notes": "Two-handed laparoscopic technique demonstrated; coordinated grasping and retracting to expose ureter course.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 30.0,
+      "phase": "follow_ureter",
+      "description": "Continued tracing of ureter into pouch of Douglas; anatomy now well-visualized with pink tissue (peritoneum) retracted laterally.",
+      "technique_notes": "Smooth dissection, no excessive trauma to surrounding structures; demonstrates patient, systematic approach to anatomical identification.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 32.0,
+      "phase": "follow_ureter",
+      "description": "Ureter course fully delineated into pouch of Douglas; laparoscopic view now wide, showing full extent of dissection from pelvic brim to cul-de-sac.",
+      "technique_notes": "Complete anatomical visualization achieved; demonstrates importance of gentle, systematic dissection for safe identification.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 43.0,
+      "phase": "activate_led_stents",
+      "description": "Instruction changes to 'Activate LED stents'; menu appears on right side showing assistant options (Hold camera position, Activate LED Stent, Show guidance hints). Instruction reads: 'Activate LED stents by pressing the \"Activate led stent\" button to highlight the course of the ureters.'",
+      "technique_notes": "Interactive learning feature \u2014 demonstrates use of simulation tools to confirm anatomical identification. LED stent activation is a teaching aid, not a clinical technique.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 46.0,
+      "phase": "activate_led_stents",
+      "description": "LED stent visualization activated; bright pink/fluorescent highlight now visible along entire ureter course from pelvic brim to pouch of Douglas.",
+      "technique_notes": "Shows correct anatomical path of right ureter for reference and self-assessment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 48.0,
+      "phase": "activate_led_stents",
+      "description": "LED stent highlighting remains visible; broader anatomical view showing relationship of ureter to surrounding structures (bowel, peritoneal reflection).",
+      "technique_notes": "Educational reinforcement of anatomical landmarks and spatial relationships.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 51.0,
+      "phase": "cleanup",
+      "description": "Final instruction appears: 'Remove the instruments'; laparoscopic view shows anatomical structures with LED stent still highlighted.",
+      "technique_notes": "Module conclusion phase \u2014 demonstrates safe instrument withdrawal protocol.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 53.0,
+      "phase": "completion",
+      "description": "VirtaMed ED branding and contact information displayed (sales@virtamed.com); module conclusion.",
+      "technique_notes": "End-of-module screen; instructional content fully completed.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly instructional/educational content from VirtaMed, not a performance-based FLS task. No scoring is applicable. The video demonstrates expert technique for ureteral identification in a surgical simulation environment with narrated guidance, anatomical overlays, and interactive learning tools. No trainee performance to evaluate.",
+  "cannot_determine": [],
+  "technique_summary": "This is a structured surgical simulation tutorial demonstrating the identification and dissection of the right ureter in a pelvic anatomy trainer. The module uses laparoscopic simulation with expert-level technique, anatomical landmarks, interactive LED stent visualization, and step-by-step verbal guidance. This is educational content, not an FLS performance task.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Palpation of ureter at right pelvic brim",
+      "Identification of ureter by peristalsis provocation",
+      "Recognition of iliac vessel crossing as anatomical landmark",
+      "Gentle dissection along tissue planes using two-handed laparoscopic technique",
+      "Systematic tracing of ureter from pelvic brim into pouch of Douglas",
+      "Safe instrument handling to avoid vascular injury",
+      "Use of retraction and counter-retraction for visualization"
+    ],
+    "verbal_cues": [
+      "Palpate ureter at right pelvic brim",
+      "Identify the ureter provoking peristalsis at the level of the right pelvic brim where it crosses over the iliac vessels",
+      "Follow the course of the ureter into the pouch of Douglas",
+      "Activate LED stents by pressing the 'Activate led stent' button to highlight the course of the ureters",
+      "Safely remove the instruments and the laparoscope from the patient to finish"
+    ],
+    "common_errors_addressed": [
+      "Avoiding excessive traction on peritoneum (demonstrated by gentle dissection technique)",
+      "Preventing vascular injury by respecting anatomical planes around iliac vessels",
+      "Careful palpation without crushing ureter tissue",
+      "Systematic approach rather than random probing"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "Not applicable \u2014 this is instructional content, not a performance evaluation"
+  ],
+  "video_id": "CwjtyqxES6s",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:14:04.525155+00:00",
+  "scoreable": false
+}

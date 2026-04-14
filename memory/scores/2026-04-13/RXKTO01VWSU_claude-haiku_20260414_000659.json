@@ -1,0 +1,152 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "FES Skills Examination - Research Presentation",
+  "content_type": "educational_conference_presentation",
+  "presentation_title": "Analysis of the Initial Psychometric Performance of the Fundamentals of Endoscopic Surgery (FES) Skills Examination",
+  "presenter": "E Matthew Ritter, MD",
+  "conference": "SAGES 2017 (Houston, TX, March 22-25, 2017)",
+  "presentation_scope": "Research and validation study of FES manual skills exam, not a performance task video",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0,
+      "content": "Title slide - Disclosures",
+      "type": "instructional_slide"
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5,
+      "content": "FES task equipment and simulator overview",
+      "type": "instructional_reference"
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10,
+      "content": "Research paper citation - Vassilou et al., validation study (111 test takers analyzed)",
+      "type": "evidence_based_content"
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15,
+      "content": "Mueller et al. study - portable platform validity evidence (r=0.86, p<0.001)",
+      "type": "validation_evidence"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20,
+      "content": "Mueller et al. colonoscopy performance correlation (r=0.8 with GAGES-C score)",
+      "type": "clinical_validity_evidence"
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25,
+      "content": "Flexible endoscopy curriculum - FES certification requirements",
+      "type": "curriculum_framework"
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30,
+      "content": "Goal statement - validate FES exam with increased test taker volume",
+      "type": "research_objective"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35,
+      "content": "Methods - 344 FES examinees, first attempt; PGY2 through 20+ years experience; 77% male",
+      "type": "study_design"
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40,
+      "content": "Measures - five endoscopic tasks (Navigation, Loop Reduction, Retroflexion, Mucosal Inspection, Tool Targeting); demographics",
+      "type": "assessment_measures"
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45,
+      "content": "Score distributions across five FES endoscopic tasks; 81% overall pass rate; Loop Reduction lowest median",
+      "type": "results_summary"
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50,
+      "content": "Task-specific vs. general ability - correlations small to moderate (r=.08-.48); item-total correlations .27-.54",
+      "type": "psychometric_analysis"
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55,
+      "content": "Scores by experience - little relationship to training level; total endoscopy case volume positively related (8-point jump 1-150 vs. 151-300+ cases)",
+      "type": "validity_findings"
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60,
+      "content": "Scores by experience continued - lower endoscopy case volume predicts most tasks; upper endoscopy case volume predicts Loop Reduction",
+      "type": "validity_findings"
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 65,
+      "content": "Other variables - no difference between simulator types (Mentor II vs. Express); glove size, height, gender all related; markedly lower pass rates for glove size 6 (59% vs. 83-85%)",
+      "type": "confounding_variables"
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 70,
+      "content": "Conclusions - 5 tasks assess similar but distinct skills; Loop Reduction and Mucosal Inspection most task-specific; Loop Reduction most difficult",
+      "type": "conclusions"
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 75,
+      "content": "Future considerations - non-compensatory scoring, closer evaluation of Loop Reduction task, monitor validity threats over time",
+      "type": "future_directions"
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 80,
+      "content": "Closing slide - SAGES 2017 conference branding",
+      "type": "closing"
+    }
+  ],
+  "scoring_applicability": "NOT APPLICABLE - This is a research presentation, not a performance video",
+  "why_not_scoreable": "This video contains PowerPoint slides presenting research findings on FES exam validity and reliability. It is not a video of a trainee or surgeon performing an FES task. No performance data, timing, or technical execution is visible. The presentation discusses the *design* and *outcomes* of an FES validation study but does not show actual task performance.",
+  "teaching_content": {
+    "research_focus": "Psychometric validation of FES manual skills examination",
+    "key_findings": [
+      "111-344 test takers analyzed; 81% overall pass rate",
+      "Strong correlation with clinical colonoscopy performance (r=0.73-0.86)",
+      "Loop Reduction and Mucosal Inspection are most task-specific skills",
+      "Total endoscopy case volume predicts FES performance more than training level",
+      "Glove size 6 associated with significantly lower pass rates (59% vs. 83-85%)",
+      "No difference between simulator platforms (Mentor II vs. Express)",
+      "Gender and physical anthropometry (height, glove size) significantly related to performance"
+    ],
+    "validity_evidence": [
+      "Internal structure: Small to moderate inter-task correlations (r=.08-.48), suggesting distinct skill constructs",
+      "Relationship to clinical variables: Colonoscopy performance correlates with FES scores (r=0.8)",
+      "Construct-related evidence: Case volume more predictive than training level",
+      "Threats to validity: Potential construct-irrelevant variance from glove size and physical factors"
+    ],
+    "clinical_implications": [
+      "FES exam demonstrates validity for assessing foundational endoscopic skills",
+      "Case volume/experience is better predictor of competency than tenure level",
+      "Equipment standardization (simulator type) does not significantly impact scores",
+      "Physical factors (glove size) may create barriers independent of skill competency"
+    ],
+    "implications_for_fls_assessment": [
+      "Loop Reduction identified as most challenging and most task-specific task",
+      "FES tasks measure a mix of general and task-specific abilities",
+      "Recommendation for future non-compensatory scoring to address construct validity"
+    ]
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is certain - this is unambiguously a conference presentation slide deck with research findings, not a performance video. No FLS task is being executed.",
+  "video_id": "RXKTO01VWSU",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:06:59.414027+00:00",
+  "scoreable": false
+}

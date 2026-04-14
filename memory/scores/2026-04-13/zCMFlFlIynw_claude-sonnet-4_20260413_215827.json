@@ -1,0 +1,170 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 18.0,
+      "phase": "gauze_grasp",
+      "description": "Initial view of FLS trainer with gauze suspended between clamps, graspers approaching",
+      "technique_notes": "Gauze appears properly secured between clamps with visible circular pattern",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 23.0,
+      "phase": "gauze_grasp",
+      "description": "Right grasper picking up pink object from right side of field",
+      "technique_notes": "Appears to be grasping rubber object rather than gauze - this may be task 1",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 27.0,
+      "phase": "gauze_grasp",
+      "description": "Both graspers active, pink object being manipulated",
+      "technique_notes": "Continued manipulation of rubber objects, not cutting gauze",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 39.0,
+      "phase": "gauze_grasp",
+      "description": "Pink object being transferred between graspers",
+      "technique_notes": "Clear peg transfer activity - this is Task 1, not Task 2",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 47.0,
+      "phase": "gauze_grasp",
+      "description": "Object placement on peg visible in upper area",
+      "technique_notes": "Definitive Task 1 peg transfer activity",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 57.0,
+      "phase": "gauze_grasp",
+      "description": "Orange object being grasped from center area",
+      "technique_notes": "Multiple colored objects being transferred - clearly Task 1",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 62.0,
+      "phase": "gauze_grasp",
+      "description": "Left grasper picking up orange object",
+      "technique_notes": "Continuing peg transfer sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 68.0,
+      "phase": "gauze_grasp",
+      "description": "Orange object being placed on left peg",
+      "technique_notes": "Task 1 progression with systematic object placement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 104.0,
+      "phase": "gauze_grasp",
+      "description": "Graspers approaching upper left area with objects on pegs",
+      "technique_notes": "Multiple objects already transferred to pegs",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 146.0,
+      "phase": "gauze_grasp",
+      "description": "Final frame showing completed peg transfer setup",
+      "technique_notes": "Objects positioned on various pegs - Task 1 completion",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 146.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 18,
+      "end_seconds": 146,
+      "duration_seconds": 128,
+      "benchmark_comparison": "not_applicable"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "task_identification_error",
+      "description": "Video shows Task 1 (Peg Transfer) not Task 2 (Pattern Cut)",
+      "points_deducted": 0,
+      "frame_evidence": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_assessment": {
+      "pattern_followed": false,
+      "deviation_measurements": {
+        "north": "cannot_determine",
+        "northeast": "cannot_determine",
+        "east": "cannot_determine",
+        "southeast": "cannot_determine",
+        "south": "cannot_determine",
+        "southwest": "cannot_determine",
+        "west": "cannot_determine",
+        "northwest": "cannot_determine"
+      },
+      "total_deviation_penalty": 0,
+      "confidence": 0.0
+    },
+    "gauze_attachment": {
+      "remained_attached": true,
+      "detachment_penalty": 0
+    },
+    "cut_completeness": {
+      "fully_cut": false,
+      "incomplete_penalty": 300
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 146.0,
+    "total_penalties": 300,
+    "total_fls_score": 0,
+    "formula_applied": "300 - 146.0 - 300 = -146 \u2192 0 (minimum)"
+  },
+  "confidence": 0.05,
+  "confidence_rationale": "Video clearly shows Task 1 (Peg Transfer) with rubber objects being moved between pegs, not Task 2 (Pattern Cut) with gauze cutting. No cutting activity observed throughout the video.",
+  "cannot_determine": [
+    "Pattern cutting accuracy - no cutting performed",
+    "Gauze cutting technique - wrong task performed",
+    "Circular pattern adherence - no pattern cutting attempted"
+  ],
+  "technique_summary": "Video shows Task 1 (Peg Transfer) performance rather than Task 2 (Pattern Cut). No cutting activity was observed on the suspended gauze.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Ensure correct task identification before beginning",
+    "Focus on gauze cutting rather than object transfer for Task 2"
+  ],
+  "video_id": "zCMFlFlIynw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:58:27.385493+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.917877+00:00"
+  },
+  "scoreable": true
+}

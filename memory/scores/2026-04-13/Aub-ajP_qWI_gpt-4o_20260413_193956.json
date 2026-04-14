@@ -1,0 +1,150 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "gauze_grasp",
+      "description": "Both needle drivers approaching gauze at the initial grasp points.",
+      "technique_notes": "Stable grasp, positioned for initial cut.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "initial_cut",
+      "description": "Begin cutting along the circular line.",
+      "technique_notes": "Cut initiated close to the line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 10.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing cut in the clockwise direction.",
+      "technique_notes": "Cut remains mostly on line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 28.0,
+      "phase": "counterclockwise_cut",
+      "description": "Switch to counterclockwise cutting.",
+      "technique_notes": "Slight deviation observed.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Approx. 3mm deviation from line at 8 o'clock position.",
+          "points_deducted": 3.0,
+          "frame_evidence": [
+            13
+          ],
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 36.0,
+      "phase": "completion",
+      "description": "Cut completed and gauze circle removed.",
+      "technique_notes": "Final trimming kept close to line.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 40.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 4,
+      "end_seconds": 28,
+      "duration_seconds": 24,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 28,
+      "end_seconds": 36,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 36,
+      "end_seconds": 40,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Approx. 3mm deviation from line at 8 o'clock position.",
+      "points_deducted": 3.0,
+      "frame_evidence": [
+        13
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": null,
+      "confidence": null
+    },
+    "drain_assessment": {
+      "gap_visible": null,
+      "drain_avulsed": null,
+      "slit_closure_quality": null
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 40.0,
+    "total_penalties": 3.0,
+    "total_fls_score": 257.0,
+    "formula_applied": "300 - 40.0 - 3.0 = 257.0"
+  },
+  "confidence": 0.8,
+  "confidence_rationale": "Deviations were clearly visible in the frame provided and the task was completed efficiently with minimal deviation.",
+  "cannot_determine": [
+    "Exact deviation measurements at other cardinal points due to limited camera angles."
+  ],
+  "technique_summary": "Efficient expert performance with a minor deviation noted during counterclockwise cutting.",
+  "strengths": [
+    "Quick and stable initial grasping.",
+    "Efficient cutting with minimal unnecessary motion."
+  ],
+  "improvement_suggestions": [
+    "Ensure closer adherence to the line to avoid deviations.",
+    "Maintain consistent pressure during cutting to minimize deviations."
+  ],
+  "video_id": "Aub-ajP_qWI",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:39:56.075249+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.785755+00:00"
+  },
+  "scoreable": true
+}

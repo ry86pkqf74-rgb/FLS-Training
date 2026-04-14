@@ -1,0 +1,90 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "E-BLUS Study Results Presentation",
+  "max_time_seconds": "N/A",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "presentation_title",
+      "description": "Title slide showing 'Results of the European Basic Laparoscopic Urological Skills Examination'",
+      "technique_notes": "Academic presentation format",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 1.0,
+      "phase": "peg_transfer_demo",
+      "description": "Split screen showing participant and expert performing peg transfer task with timing at 0:01",
+      "technique_notes": "Demonstrates proper dual-view comparison methodology",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 16.0,
+      "phase": "pattern_cut_demo",
+      "description": "Pattern cutting task demonstration with timing at 0:16, showing circular cutting pattern",
+      "technique_notes": "Clean cutting technique demonstrated",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 23.0,
+      "phase": "endoloop_demo",
+      "description": "Endoloop task demonstration at 0:23 showing foam appendage and loop placement",
+      "technique_notes": "Proper loop deployment technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "suturing_demo",
+      "description": "Suturing practice board with numbered positions and marking 'stitch not through the black dot'",
+      "technique_notes": "Educational overlay showing common error avoidance",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": "N/A",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": "N/A",
+    "time_used": "N/A",
+    "total_penalties": "N/A",
+    "total_fls_score": "N/A",
+    "formula_applied": "N/A - instructional content"
+  },
+  "confidence": "N/A",
+  "confidence_rationale": "This is an academic presentation about E-BLUS study results, not a performance to be scored",
+  "cannot_determine": [],
+  "technique_summary": "N/A - instructional presentation",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Peg transfer with dual-hand coordination",
+      "Circular pattern cutting with precision",
+      "Endoloop deployment and securing",
+      "Suture placement accuracy",
+      "Comparative performance analysis methodology"
+    ],
+    "verbal_cues": [
+      "Target time expectations for each task",
+      "Common error identification (stitch placement)",
+      "Performance benchmarking against experience levels"
+    ],
+    "common_errors_addressed": [
+      "Incorrect suture placement through marked dots",
+      "Time management issues in task completion",
+      "Need for skills lab training to improve performance"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "-lANam-KzlM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:18:35.996150+00:00",
+  "scoreable": false
+}

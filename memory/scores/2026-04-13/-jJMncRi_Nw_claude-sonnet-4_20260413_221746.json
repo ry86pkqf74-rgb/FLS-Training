@@ -1,0 +1,148 @@
+{
+  "video_classification": "performance",
+  "task_id": "unclassified",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper positioned near first rubber object on left peg",
+      "technique_notes": "Proper approach angle, steady positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper grasping first rubber object",
+      "technique_notes": "Good grip on object, controlled movement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 4.0,
+      "phase": "transfer_midair",
+      "description": "Object being lifted and transferred toward right grasper",
+      "technique_notes": "Smooth lifting motion, object secure in left grasper",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 6.0,
+      "phase": "transfer_midair",
+      "description": "Both graspers in contact with object for midair transfer",
+      "technique_notes": "Proper handoff technique, both instruments engaged",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 8.0,
+      "phase": "place_dominant",
+      "description": "Right grasper moving object toward right peg",
+      "technique_notes": "Controlled movement toward target peg",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 18.0,
+      "phase": "pickup_nondominant",
+      "description": "Left grasper picking up another object from left peg",
+      "technique_notes": "Efficient movement, good grip",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 28.0,
+      "phase": "reverse_pickup",
+      "description": "Right grasper picking up object from right peg for reverse transfer",
+      "technique_notes": "Beginning reverse direction transfer phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 38.0,
+      "phase": "reverse_place",
+      "description": "Left grasper placing object on left peg in reverse direction",
+      "technique_notes": "Completing reverse transfer, object properly placed",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 45.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 0,
+      "end_seconds": 15,
+      "duration_seconds": 15,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 4,
+      "end_seconds": 8,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 8,
+      "end_seconds": 22,
+      "duration_seconds": 14,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 25,
+      "end_seconds": 35,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 35,
+      "end_seconds": 40,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 40,
+      "end_seconds": 45,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "objects_transferred": 6,
+    "direction_changes_completed": true,
+    "drops_outside_field": 0,
+    "objects_not_on_pegs": 0,
+    "midair_transfers_successful": 6
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 45.0,
+    "total_penalties": 0,
+    "total_fls_score": 255.0,
+    "formula_applied": "300 - 45.0 - 0 = 255.0"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear view of all object transfers and placements. All 6 objects appear to be successfully transferred in both directions. No visible drops or missed placements. Completion time estimated from first instrument movement to final object placement.",
+  "cannot_determine": [],
+  "technique_summary": "Expert-level performance with smooth, efficient transfers. Excellent midair handoff technique and consistent peg placement. Total time of 45 seconds places this in the expert range.",
+  "strengths": [
+    "Smooth midair transfers with no visible drops",
+    "Efficient instrument coordination between hands",
+    "Consistent peg placement accuracy",
+    "Expert-level completion time"
+  ],
+  "improvement_suggestions": [],
+  "video_id": "-jJMncRi_Nw",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:17:46.766420+00:00",
+  "scoreable": true
+}

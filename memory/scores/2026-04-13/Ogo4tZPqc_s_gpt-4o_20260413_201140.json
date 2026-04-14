@@ -1,0 +1,125 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 0.5,
+      "phase": "needle_load",
+      "description": "Initial hand positioning with blue and white ties to set up the knot",
+      "technique_notes": "Adequate positioning for knot tying",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 1.5,
+      "phase": "knot_tying",
+      "description": "First knot formation begun using the blue tie",
+      "technique_notes": "Smooth transition to knot tying phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 3.0,
+      "phase": "knot_security",
+      "description": "Tightening of the first throw observed",
+      "technique_notes": "Proper tension applied during knot tightening",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 4.0,
+      "phase": "knot_tying",
+      "description": "Final adjustment of the knot",
+      "technique_notes": "Consistent knot tying technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 5.0,
+      "phase": "knot_security",
+      "description": "Ensuring knot is secure by pulling ends",
+      "technique_notes": "Knot appears well-cinched",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 5.5,
+      "phase": "completion",
+      "description": "Final inspection of the knot's integrity",
+      "technique_notes": "Final knot appears secure with no visible slippage",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 5.5,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 0,
+      "end_seconds": 0.5,
+      "duration_seconds": 0.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "knot_tying",
+      "start_seconds": 0.5,
+      "end_seconds": 4.0,
+      "duration_seconds": 3.5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "knot_security",
+      "start_seconds": 4.0,
+      "end_seconds": 5.5,
+      "duration_seconds": 1.5,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "Roeder's knot",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Clean knot, appropriate tension"
+      }
+    ],
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "complete"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 5.5,
+    "total_penalties": 0,
+    "total_fls_score": 594.5,
+    "formula_applied": "600 - 5.5 - 0 = 594.5"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear visibility of knot tying and securing process, no deviation or penalties observed.",
+  "cannot_determine": [],
+  "technique_summary": "Exemplary expert performance with quick completion and clean knot ties. Maintained control throughout the task.",
+  "strengths": [
+    "Efficient technique with minimal wasted motion",
+    "Consistent and secure knot application"
+  ],
+  "improvement_suggestions": [
+    "Maintain current technique for consistent expert-level performance"
+  ],
+  "video_id": "Ogo4tZPqc_s",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:11:40.767974+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.830024+00:00"
+  },
+  "scoreable": true
+}

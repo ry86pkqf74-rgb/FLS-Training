@@ -1,0 +1,82 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "DIY Skills Training Video - Not FLS Task",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "video_introduction",
+      "description": "Empty gray background, appears to be video beginning",
+      "technique_notes": "Not applicable - no FLS content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_display",
+      "description": "Hands holding black device labeled 'Inovus Products'",
+      "technique_notes": "Product demonstration, not laparoscopic training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "glove_demonstration",
+      "description": "Hands positioning surgical gloves with marked circle pattern",
+      "technique_notes": "Glove preparation technique demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "instructional_overlay",
+      "description": "Text overlay 'Step 3:' visible over glove manipulation",
+      "technique_notes": "Clear instructional formatting with step-by-step guidance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "technique_demonstration",
+      "description": "Text overlay 'Tip: Blow into the glove' during glove preparation",
+      "technique_notes": "Teaching specific technique for glove donning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 85.0,
+      "phase": "practice_setup",
+      "description": "Text overlay 'Time to Operate' with prepared glove showing marked pattern",
+      "technique_notes": "Transition to practice phase of tutorial",
+      "penalties_observed": []
+    }
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper surgical glove preparation and donning",
+      "using air inflation to expand glove fingers",
+      "marking patterns on gloves for practice cutting",
+      "step-by-step tutorial methodology"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "difficulty with glove finger positioning",
+      "proper preparation before practice cutting"
+    ],
+    "skill_level_demonstrated": "novice"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an instructional video for DIY surgical skills training using household materials (gloves), not an official FLS task performance. Text overlays, step numbering, and Inovus website reference confirm educational content classification.",
+  "cannot_determine": [
+    "FLS task identification - this is not an FLS task",
+    "Performance scoring - no standardized task being performed",
+    "Completion time - this is a tutorial, not a timed performance"
+  ],
+  "technique_summary": "Educational video demonstrating how to prepare surgical gloves for DIY cutting practice. Uses clear step-by-step instruction format with text overlays and practical tips for novice learners.",
+  "video_id": "5g7w6tfbQvk",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:46:22.146083+00:00",
+  "scoreable": false
+}

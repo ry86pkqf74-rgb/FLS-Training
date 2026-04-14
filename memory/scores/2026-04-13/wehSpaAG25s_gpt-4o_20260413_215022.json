@@ -1,0 +1,127 @@
+{
+  "task_id": "task1_peg_transfer",
+  "task_name": "Peg Transfer",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 3.0,
+      "phase": "pickup_nondominant",
+      "description": "Initial object picked up with non-dominant hand.",
+      "technique_notes": "Stable grasp, appropriate approach angle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 5.0,
+      "phase": "transfer_midair",
+      "description": "Object transferred midair from non-dominant to dominant hand.",
+      "technique_notes": "Smooth transfer without object drop.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 6.0,
+      "phase": "place_dominant",
+      "description": "Object placed on the peg by dominant hand.",
+      "technique_notes": "Accurate placement, immediate release.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 8.0,
+      "phase": "reverse_pickup",
+      "description": "Dominant hand picking up object to reverse direction.",
+      "technique_notes": "Quick grasp and lift.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 10.0,
+      "phase": "reverse_transfer",
+      "description": "Object transferred back midair from dominant to non-dominant hand.",
+      "technique_notes": "Fluid motion without hesitation.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 12.0,
+      "phase": "reverse_place",
+      "description": "Object placed successfully back on original peg position by non-dominant hand.",
+      "technique_notes": "Precise placement, direct release.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 12.0,
+  "phase_timings": [
+    {
+      "phase": "pickup_nondominant",
+      "start_seconds": 3.0,
+      "end_seconds": 4.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "transfer_midair",
+      "start_seconds": 4.0,
+      "end_seconds": 5.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "place_dominant",
+      "start_seconds": 5.0,
+      "end_seconds": 6.0,
+      "duration_seconds": 1.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_pickup",
+      "start_seconds": 6.0,
+      "end_seconds": 8.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_transfer",
+      "start_seconds": 8.0,
+      "end_seconds": 10.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "reverse_place",
+      "start_seconds": 10.0,
+      "end_seconds": 12.0,
+      "duration_seconds": 2.0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "score_components": {
+    "max_score": 300,
+    "time_used": 12.0,
+    "total_penalties": 0,
+    "total_fls_score": 288.0,
+    "formula_applied": "300 - 12.0 - 0 = 288.0"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "All phases clearly visible with no penalties observed. Completion time far below novice level, consistent with expert performance.",
+  "cannot_determine": [],
+  "technique_summary": "Excellent execution with fast and precise object transfers and placements.",
+  "strengths": [
+    "Consistent speed and accuracy in pickups and placements.",
+    "Smooth midair hand transitions."
+  ],
+  "improvement_suggestions": [],
+  "video_id": "wehSpaAG25s",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:50:22.109579+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.912163+00:00"
+  },
+  "scoreable": true
+}

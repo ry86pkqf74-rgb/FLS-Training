@@ -1,0 +1,100 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "FLS trainer visible with monitor showing laparoscopic view, gauze material visible on screen with circular cutting pattern marked",
+      "technique_notes": "Standard FLS setup with laparoscopic view displayed",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 10.0,
+      "phase": "gauze_grasp",
+      "description": "White foam appendage visible in trainer, hands manipulating external instruments",
+      "technique_notes": "This appears to be Task 3 endoloop setup, not Task 2 pattern cutting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "demonstration",
+      "description": "Split screen showing laparoscopic view and external trainer view with hands demonstrating technique",
+      "technique_notes": "Instructional format with dual camera angles for educational purposes",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 26.0,
+      "phase": "demonstration",
+      "description": "Continued demonstration with instrument manipulation visible",
+      "technique_notes": "Educational demonstration continuing with proper instrument handling shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 40.0,
+      "phase": "demonstration",
+      "description": "Laparoscopic view shows instruments working around what appears to be endoloop material",
+      "technique_notes": "This confirms Task 3 endoloop rather than Task 2 pattern cutting",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 53.0,
+      "phase": "completion",
+      "description": "Final frame shows 'ENDOS' text overlay indicating end of demonstration",
+      "technique_notes": "Video concludes with text overlay suggesting this is an instructional segment",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_assessment": {
+      "deviation_measurements": [],
+      "total_deviation_penalty": 0,
+      "gauze_detached": false,
+      "cut_completed": false
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot score - instructional video, not a performance"
+  },
+  "confidence": 0.95,
+  "confidence_rationale": "Clear instructional format with dual camera views, text overlays, and demonstration purpose. Video shows endoloop task setup rather than pattern cutting, but classified based on apparent educational intent.",
+  "cannot_determine": [
+    "Actual task performance metrics - this is instructional content",
+    "Completion time - no actual task performance",
+    "Specific penalties - demonstration format"
+  ],
+  "technique_summary": "Educational demonstration video showing FLS trainer setup and basic instrument manipulation techniques.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper FLS trainer setup and positioning",
+      "Basic laparoscopic instrument handling",
+      "Dual camera angle viewing for educational purposes",
+      "Standard instrument insertion and manipulation"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_demo"
+  },
+  "improvement_suggestions": [],
+  "video_id": "LXs1R2ymZ7w",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:49:46.758361+00:00",
+  "scoreable": false
+}

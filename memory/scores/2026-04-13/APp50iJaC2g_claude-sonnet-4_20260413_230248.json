@@ -1,0 +1,46 @@
+{
+  "video_classification": "unusable",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Precision Cutting",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Graduation ceremony with students in caps and gowns holding certificates",
+      "technique_notes": "No FLS equipment or task performance visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Continued graduation ceremony with confetti effects and 'Fellowship in Laparoscopy November 2023' text overlay",
+      "technique_notes": "No surgical training or FLS task content",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - no FLS task performance present"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows graduation ceremony content only, with no FLS equipment, gauze, scissors, or task performance visible in any frame.",
+  "cannot_determine": [
+    "All FLS scoring parameters - video contains graduation ceremony content only"
+  ],
+  "technique_summary": "Not applicable - video shows graduation ceremony rather than FLS task performance",
+  "video_id": "APp50iJaC2g",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T23:02:48.945968+00:00",
+  "scoreable": false
+}

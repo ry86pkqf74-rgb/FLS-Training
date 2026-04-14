@@ -1,0 +1,94 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS Task - FlexDex Instrument Demonstration",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "title_slide",
+      "description": "Title slide for FlexDex presentation - Minimally Invasive Surgical Tool with Enhanced Degrees of Freedom",
+      "technique_notes": "Academic presentation format with University of Michigan affiliation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "instrument_demonstration",
+      "description": "FlexDex instrument shown with wrist attachment demonstrating traditional four degrees of freedom mapping",
+      "technique_notes": "Educational overlay showing roll, translation movements with colored arrows",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "wrist_rotation_demo",
+      "description": "Demonstration of wrist-like end-effector rotational capabilities",
+      "technique_notes": "Shows enhanced dexterity beyond traditional laparoscopic instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 7.0,
+      "phase": "transmission_explanation",
+      "description": "Explanation of compliant transmission strips and pulley-based mechanism",
+      "technique_notes": "Technical breakdown of instrument mechanics",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "six_dof_summary",
+      "description": "Summary slide showing all six degrees of freedom with enhanced dexterity capabilities",
+      "technique_notes": "Complete technical specification of instrument capabilities",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 13.0,
+      "phase": "conventional_instruments",
+      "description": "Demonstration with conventional laparoscopic graspers for comparison",
+      "technique_notes": "Shows limitations of traditional rigid instruments",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "flexdex_demonstration",
+      "description": "FlexDex instrument demonstration showing enhanced maneuverability around foam appendage",
+      "technique_notes": "Demonstrates superior dexterity and approach angles",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": null,
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly an academic presentation about the FlexDex instrument, not an FLS task performance. Content is educational/instructional in nature.",
+  "cannot_determine": [],
+  "technique_summary": "This video demonstrates the FlexDex surgical instrument capabilities and mechanical design principles rather than performing any FLS task.",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Enhanced degrees of freedom with wrist-like articulation",
+      "One-to-one motion mapping between handle and end-effector",
+      "Six degrees of freedom movement capabilities",
+      "Compliant transmission mechanism design",
+      "Pulley-based actuation system"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Limitations of traditional rigid laparoscopic instruments",
+      "Reduced dexterity with conventional four degrees of freedom"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [],
+  "video_id": "RebfmCJZTwY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-14T00:08:14.902559+00:00"
+}

@@ -1,0 +1,57 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS MISTELS task",
+  "reasoning": "This video is educational/promotional content showing live surgical procedures (laparoscopic cystostomy and cholecystectomy on live pig models) with on-screen text overlays and branding. It is NOT an FLS (Fundamentals of Laparoscopic Surgery) MISTELS task video. The content depicts actual surgical procedures on live animal tissue, not the standardized FLS trainer box tasks (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture).",
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "description": "Surgical team in OR gowns preparing for procedure",
+      "classification_evidence": "Live surgical setting, not FLS trainer box"
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 5.0,
+      "description": "On-screen text: 'ObGyn Laparoscopy Training - Laparoscopic Cystostomy on Live Pig'",
+      "classification_evidence": "Educational overlay; live animal model, not FLS simulator"
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 8.0,
+      "description": "Scene transition to laparoscopic monitor showing live tissue during cholecystectomy",
+      "classification_evidence": "Actual surgical procedure visualization, not FLS task box"
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 15.0,
+      "description": "Equipment setup and surgical team observing monitor",
+      "classification_evidence": "OR equipment and live surgery, not FLS trainer"
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 20.0,
+      "description": "Final slides showing branding: 'Surgical / ObGyn Residents and Consultants. www.miss.com.ng'",
+      "classification_evidence": "Promotional/educational conclusion; confirms non-FLS content"
+    }
+  ],
+  "scoring_status": "NOT SCORED",
+  "reason_no_score": "This video does not depict any of the five FLS MISTELS tasks. It is educational/promotional content showing live laparoscopic surgical procedures on animal models. FLS scoring requires completion of one of five standardized trainer box tasks: Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture. This video contains none of these.",
+  "teaching_content": {
+    "video_type": "live_surgical_education",
+    "procedures_demonstrated": [
+      "Laparoscopic cystostomy on live pig model",
+      "Laparoscopic cholecystectomy on live pig model"
+    ],
+    "target_audience": "Surgical/OB-GYN residents and consultants",
+    "educational_value": "Demonstrates real-world laparoscopic surgical technique on live tissue; intended for graduate surgical education rather than fundamental skills training",
+    "note": "This is advanced surgical training content, not entry-level FLS MISTELS training"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video content is unambiguously NOT an FLS MISTELS task. Clear on-screen text labels identify it as live surgical training on animal models, which is entirely outside the scope of FLS assessment.",
+  "video_id": "1pmduTrZm24",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:29:00.335094+00:00",
+  "scoreable": false
+}

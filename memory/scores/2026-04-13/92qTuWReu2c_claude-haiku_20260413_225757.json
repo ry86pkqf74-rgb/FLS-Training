@@ -1,0 +1,29 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason_not_scored": "This video is an instructional/training session about assessment administration procedures, not a performance of an FLS surgical task. The content shows training on how to conduct assessments (attendance checks, candidate qualification explanation, re-assessment procedures, feedback provision, confidentiality requirements, occupational safety, and assessment administration), with narration and procedural explanations throughout. No laparoscopic surgical task (Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture) is being performed.",
+  "video_type": "Assessment administrator training",
+  "content_observed": [
+    "Opening remarks acknowledging AC Manager, Processing Officer, and TeSDa Representative",
+    "Candidate attendance checking and admission slip collection procedures",
+    "Explanation of qualifications and competencies to be assessed",
+    "Assessment procedure instructions",
+    "Re-assessment procedure explanations",
+    "Confidentiality of assessment outcomes briefing",
+    "Occupational Safety and Health Requirements discussion",
+    "Distribution of Specific Instruction documents to candidates",
+    "Candidate demonstration scenarios (written test and simulated task performance)",
+    "Feedback provision to candidates",
+    "Candidate interview/consultation sessions",
+    "Overall assessment administration protocol walkthrough"
+  ],
+  "fls_score": null,
+  "confidence": 1.0,
+  "rationale": "This is clearly instructional content about assessment administration and proctor training, not a performance of any FLS surgical task. No scoring is applicable.",
+  "video_id": "92qTuWReu2c",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:57:57.983001+00:00",
+  "scoreable": false
+}

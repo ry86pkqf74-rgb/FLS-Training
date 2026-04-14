@@ -7,5 +7,11 @@
   "source": "teacher_gpt4o",
   "model_name": "gpt-4o",
   "scored_at": "2026-04-13T18:29:27.749189+00:00",
-  "task_id": "unclassified"
+  "task_id": "unclassified",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.898180+00:00"
+  },
+  "scoreable": false
 }

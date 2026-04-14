@@ -1,0 +1,145 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "SIM*VIVO Portable Laparoscopic Box Trainer Product Announcement",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "product_announcement_intro",
+      "description": "SIM*VIVO logo with 'Announcing' text overlay on blank background",
+      "technique_notes": "Marketing/instructional introduction slide",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 3.0,
+      "phase": "equipment_showcase",
+      "description": "Portable laparoscopic box trainer shown from above with 5 trocar ports visible, white base, blue top component, connected cable",
+      "technique_notes": "Equipment specification and features presentation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "equipment_features",
+      "description": "HDTV telescope included annotation with red arrow pointing to camera entry port",
+      "technique_notes": "Highlighting built-in visualization component",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 9.0,
+      "phase": "equipment_versatility",
+      "description": "Tablet connectivity shown with laparoscopic view on tablet screen connected to box trainer",
+      "technique_notes": "Demonstrating flexible visualization options",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "training_modules_display",
+      "description": "Training modules laid out on blue surface showing instruments (grasper, scissors, needle holder) and various practice models (Penrose drains, gauze, foam intestinal model, circular cutting target, peg transfer setup, suturing pads)",
+      "technique_notes": "Overview of comprehensive FLS task modules available",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "peg_transfer_demo",
+      "description": "Peg transfer task module shown with pegs and colored rings (orange and green), grasper manipulating green ring in mid-transfer",
+      "technique_notes": "Demonstrating Task 1 - Peg Transfer setup and execution",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "pattern_cut_demo",
+      "description": "Pattern cutting task showing circular target with marked lines and grasper scissors positioned for cutting demonstration",
+      "technique_notes": "Demonstrating Task 2 - Pattern Cut with precision target visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 21.0,
+      "phase": "suturing_demo",
+      "description": "Suturing module shown with marked Penrose drain (with two white circles marking entry/exit points) and needle driver preparing for suture placement",
+      "technique_notes": "Demonstrating Tasks 4-5 - Extracorporeal and Intracorporeal suturing setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 24.0,
+      "phase": "endoloop_demo",
+      "description": "Foam appendage model with ligating loop visible and instruments positioned for endoloop application task",
+      "technique_notes": "Demonstrating Task 3 - Endoloop application on anatomical model",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 27.0,
+      "phase": "mass_excision_demo",
+      "description": "Foam mass excision module showing yellow foam tissue with simulated lesion (red marking) and grasper-scissors positioned for excision",
+      "technique_notes": "Advanced surgical skills demonstration - tissue handling and precise dissection",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 30.0,
+      "phase": "portability_messaging",
+      "description": "Text overlay stating 'It's Portable! Practice Anytime or Anyplace!' with trainer visible in background",
+      "technique_notes": "Marketing message emphasizing accessibility of training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 33.0,
+      "phase": "closing_statement",
+      "description": "Final slide: 'From SIM*VIVO - High Fidelity ... Low Price' with company logo",
+      "technique_notes": "Product positioning and value proposition messaging",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": null,
+  "score_components": null,
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly instructional/promotional content - a product announcement video for the SIM*VIVO laparoscopic trainer system. It is NOT a performance recording of an actual trainee performing FLS tasks. The video showcases multiple FLS task modules (Peg Transfer, Pattern Cut, Endoloop, Suturing, Mass Excision) but contains no actual timed performance to score. Content is entirely marketing-oriented with narrated equipment features and task overview slides.",
+  "cannot_determine": [
+    "No actual performance metrics - this is a product showcase, not a scored trainee attempt",
+    "No timing data available for any individual task",
+    "No quantifiable penalties - demonstrations are instructional only"
+  ],
+  "technique_summary": "This is a SIM*VIVO portable laparoscopic box trainer product announcement video. It provides visual overview of five FLS training modules available in the system and highlights key product features: portability, HDTV telescope integration, tablet connectivity, and comprehensive training module library. The video is educational/marketing content designed to inform viewers about the trainer's capabilities, not to score an individual's FLS performance.",
+  "strengths": [
+    "Comprehensive visual overview of all major FLS tasks",
+    "Clear demonstration of training module variety",
+    "Good product feature presentation with labeled annotations"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Peg transfer manipulation with grasper coordination",
+      "Precision cutting technique with marked targets",
+      "Suture placement on marked anatomical model",
+      "Endoloop application on foam appendage",
+      "Mass excision technique on synthetic tissue"
+    ],
+    "verbal_cues": [
+      "Portability messaging - 'Practice Anytime or Anyplace'",
+      "Value proposition - 'High Fidelity ... Low Price'",
+      "Equipment features emphasized: HDTV telescope, tablet connectivity, modular training design"
+    ],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_overview"
+  },
+  "improvement_suggestions": [],
+  "scoring_decision": "NOT SCORED - This is promotional/instructional content showing equipment and general task overview, not an actual trainee performance recording. No individual task was performed to completion within a measurable timeframe. Video content is appropriate for educational context but unsuitable for FLS rubric scoring.",
+  "video_id": "H-vm0y1HEMY",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:32:13.952476+00:00",
+  "scoreable": false
+}

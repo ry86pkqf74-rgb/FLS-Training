@@ -1,0 +1,151 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "VR Laparoscopic Training Simulator",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Healthcare professional in hijab and white coat standing next to VR laparoscopic training simulator",
+      "technique_notes": "Educational introduction to VR training equipment",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "equipment_demonstration",
+      "description": "Person positioned at VR simulator console with hands on instruments",
+      "technique_notes": "Demonstrating proper positioning at training console",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "camera_navigation_tutorial",
+      "description": "Screen showing camera navigation exercise with gallstones in virtual environment",
+      "technique_notes": "VR exercise for camera control skills",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "path_navigation_2d",
+      "description": "2D path navigation exercise showing sphere transfer task",
+      "technique_notes": "Basic coordination training exercise",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "path_navigation_3d",
+      "description": "3D path navigation with complex curved pathway",
+      "technique_notes": "Advanced spatial coordination training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "object_manipulation",
+      "description": "Object manipulation exercise showing bimanual coordination task",
+      "technique_notes": "Training proper instrument coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "sorting_exercise",
+      "description": "Color-coded object sorting task with multiple targets",
+      "technique_notes": "Precision grasping and placement training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "cautery_training",
+      "description": "Working with cautery tool exercise showing green target areas",
+      "technique_notes": "Electrocautery precision training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "appendectomy_simulation",
+      "description": "Virtual appendectomy with anatomical structures labeled",
+      "technique_notes": "Advanced surgical procedure simulation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "hysterectomy_simulation",
+      "description": "Virtual hysterectomy with detailed pelvic anatomy",
+      "technique_notes": "Complex gynecological procedure training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 21.0,
+      "phase": "cholecystectomy_simulation",
+      "description": "Virtual gallbladder surgery with hepatic structures",
+      "technique_notes": "Critical view of safety demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 22.0,
+      "phase": "results_analysis",
+      "description": "Performance graph showing training progression over multiple attempts",
+      "technique_notes": "Data-driven learning assessment",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is instructional content demonstrating VR training capabilities, not an actual FLS task performance",
+  "cannot_determine": [
+    "FLS scoring not applicable for VR training demonstration"
+  ],
+  "technique_summary": "Comprehensive demonstration of VR-based laparoscopic training system covering basic skills through complex surgical procedures",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "proper positioning at VR training console",
+      "camera navigation and control",
+      "2D and 3D path navigation exercises",
+      "bimanual instrument coordination",
+      "object manipulation and sorting",
+      "electrocautery technique training",
+      "virtual surgical procedure simulation",
+      "performance tracking and analysis"
+    ],
+    "verbal_cues": [
+      "instructions for camera control",
+      "guidance for object transfer tasks",
+      "procedural steps for complex surgeries"
+    ],
+    "common_errors_addressed": [
+      "improper camera positioning leading to red indicator warnings",
+      "path deviation penalties in navigation exercises",
+      "coordination errors in bimanual tasks"
+    ],
+    "skill_level_demonstrated": "progressive from novice to expert across various exercises"
+  },
+  "improvement_suggestions": [],
+  "video_id": "4KpJJsZUrBM",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:39:07.385331+00:00",
+  "scoreable": false
+}

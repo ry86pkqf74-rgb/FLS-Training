@@ -1,0 +1,97 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Educational setup with Penrose drain marked with target points",
+      "technique_notes": "This appears to be an instructional demonstration rather than a timed performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "needle_load",
+      "description": "Hands positioning needle driver to grasp needle",
+      "technique_notes": "Direct hand manipulation visible - not laparoscopic technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 18.0,
+      "phase": "suture_placement",
+      "description": "Needle being positioned near first mark on Penrose drain",
+      "technique_notes": "Open technique demonstration, not through laparoscopic ports",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 42.0,
+      "phase": "knot_formation",
+      "description": "Beginning knot tying sequence with suture ends",
+      "technique_notes": "Educational demonstration of knot tying fundamentals",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 54.0,
+      "phase": "knot_completion",
+      "description": "Final knot being secured on the Penrose drain",
+      "technique_notes": "Knot appears to be completed successfully",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": 0,
+      "deviation_from_mark2_mm": 0,
+      "total_deviation_penalty": 0,
+      "confidence": 0.0
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "not_applicable"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "No valid FLS performance to score"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video shows an educational demonstration of suturing techniques on a benchtop, not a formal FLS Task 5 performance in a laparoscopic trainer box with proper timing and evaluation criteria.",
+  "cannot_determine": [
+    "Completion time - this is not a timed performance",
+    "Laparoscopic technique assessment - performed with direct hand manipulation",
+    "Formal FLS scoring criteria - this is an instructional video, not an assessment"
+  ],
+  "technique_summary": "This video demonstrates educational content about surgical knot tying techniques rather than a formal FLS Task 5 intracorporeal suturing performance that can be scored according to FLS criteria.",
+  "strengths": [
+    "Clear demonstration of knot tying fundamentals",
+    "Educational value for learning suturing techniques"
+  ],
+  "improvement_suggestions": [
+    "For FLS assessment, performance must be conducted in a laparoscopic trainer box",
+    "Timing and formal evaluation criteria must be applied during the performance"
+  ],
+  "video_id": "cEis_EH2bQQ",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:51:32.882601+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.864102+00:00"
+  },
+  "scoreable": true
+}

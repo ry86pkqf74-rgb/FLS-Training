@@ -1,0 +1,88 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Not an FLS Task",
+  "max_time_seconds": 0,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "not_applicable",
+      "description": "Black screen with no visible content",
+      "technique_notes": "No task performance visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 1.0,
+      "phase": "not_applicable",
+      "description": "Text overlay describing Bilateral Tubal Ligation procedure",
+      "technique_notes": "Educational content, not FLS task demonstration",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "not_applicable",
+      "description": "Hospital manager Mr. Simon Narh speaking to camera in interview setup",
+      "technique_notes": "Interview format, not laparoscopic training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "not_applicable",
+      "description": "Continuation of interview with hospital staff member",
+      "technique_notes": "No FLS task equipment or setup visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "not_applicable",
+      "description": "Blurred transition shot showing surgical environment",
+      "technique_notes": "Clinical setting but no specific FLS task visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "not_applicable",
+      "description": "Surgeons in operating room with laparoscopic equipment",
+      "technique_notes": "Real surgical procedure, not FLS training task",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 0,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "video_content_type": "hospital_promotional_video",
+    "contains_fls_task": false,
+    "primary_content": "bilateral_tubal_ligation_procedure_overview"
+  },
+  "score_components": {
+    "max_score": 0,
+    "time_used": 0,
+    "total_penalties": 0,
+    "total_fls_score": 0,
+    "formula_applied": "N/A - Not an FLS task video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly shows hospital promotional content about BTL procedures, not FLS training. No laparoscopic trainer box, foam appendage, or endoloop deployment visible.",
+  "cannot_determine": [],
+  "technique_summary": "This video contains hospital promotional material about bilateral tubal ligation procedures, not FLS Task 3 (Endoloop) training.",
+  "strengths": [],
+  "improvement_suggestions": [
+    "Please provide video showing FLS Task 3 (Endoloop) performance with foam appendage and pre-tied ligating loop for proper assessment"
+  ],
+  "video_id": "naah8dqdNs8",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:26:31.041951+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.890765+00:00"
+  },
+  "scoreable": true
+}

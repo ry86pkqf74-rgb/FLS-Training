@@ -1,0 +1,148 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Instruments positioned to begin grasping gauze.",
+      "technique_notes": "Good positioning for initial gauze grasp.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "initial_cut",
+      "description": "Initial incision made on the outer circle.",
+      "technique_notes": "Cut appears to be well-aligned with the outer contour.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "clockwise_cut",
+      "description": "Continued cutting along the outer circle.",
+      "technique_notes": "Maintaining alignment with outer contour.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 10.0,
+      "phase": "counterclockwise_cut",
+      "description": "Switched direction to counterclockwise cutting.",
+      "technique_notes": "Slight deviation observed inward.",
+      "penalties_observed": [
+        {
+          "type": "deviation_from_line",
+          "description": "Approximately 3mm inward deviation noted.",
+          "points_deducted": 3,
+          "frame_evidence": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 20.0,
+      "phase": "completion",
+      "description": "Final cuts completed, and gauze is detached.",
+      "technique_notes": "Gauze is completely separated. Small deviations seen.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 20.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 5,
+      "duration_seconds": 3,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 5,
+      "end_seconds": 10,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 10,
+      "end_seconds": 20,
+      "duration_seconds": 10,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 20,
+      "end_seconds": 20,
+      "duration_seconds": 0,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "deviation_from_line",
+      "description": "Approximately 3mm deviation at one point.",
+      "points_deducted": 3,
+      "frame_evidence": [
+        10
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "deviation_measurements": [
+      {
+        "point": "Left cardinal",
+        "deviation_mm": 3,
+        "frame_evidence": [
+          10
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "gauze_dettachment": {
+      "detachment_occurred": false,
+      "completed_cut": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 20.0,
+    "total_penalties": 3,
+    "total_fls_score": 277,
+    "formula_applied": "300 - 20.0 - 3 = 277"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "Clear view of cutting accuracy and completion time throughout. Minor deviation well-documented.",
+  "cannot_determine": [],
+  "technique_summary": "Precise initial incision, with a minor deviation during counterclockwise phase. Overall efficient performance.",
+  "strengths": [
+    "Rapid and precise initial and clockwise cutting phases."
+  ],
+  "improvement_suggestions": [
+    "Minor deviation correction in counterclockwise phase could improve score."
+  ],
+  "video_id": "SQsg3KDrFYc",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:19:06.768374+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.838200+00:00"
+  },
+  "scoreable": true
+}

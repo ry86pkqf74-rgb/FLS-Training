@@ -1,0 +1,113 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "instructional_material",
+      "description": "Educational title slide showing jungle background with 'Lap. Intracorporeal Slip-Knot (Two Half-Hitches)' and Dr. J.J. Woo MD branding",
+      "technique_notes": "This appears to be the beginning of an instructional video, not actual task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 2.0,
+      "phase": "knot_instruction_first_half_hitch",
+      "description": "Animated diagram showing first half-hitch formation with green thread path traced 'Always Above Horizon' and yellow directional arrows",
+      "technique_notes": "Educational demonstration of proper thread routing for first half-hitch",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 3.0,
+      "phase": "knot_instruction_second_half_hitch",
+      "description": "Animated diagram showing second half-hitch formation with purple instrument and 'Above Horizon' guidance text",
+      "technique_notes": "Educational demonstration continuing with second half-hitch technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 4.0,
+      "phase": "knot_instruction_tightening",
+      "description": "Demonstration of tightening two half-hitches with suture visible in trainer box, showing proper pulling technique",
+      "technique_notes": "Shows final tightening step with both working and tail ends being pulled",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 9.0,
+      "phase": "knot_instruction_blocking_sequence",
+      "description": "Close-up view showing blocking sequence with active and passive thread conversion, demonstrating proper thread management",
+      "technique_notes": "Educational frame showing thread conversion from active to passive positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "knot_instruction_final_blocking",
+      "description": "Final blocking sequence demonstration showing converted passive and active threads with proper instrument positioning",
+      "technique_notes": "Shows completed thread conversion with clear labeling of converted active and passive threads",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "instructional_summary",
+      "description": "Close-up of completed two half-hitches knot with blocking sequence and thread identification labels",
+      "technique_notes": "Final educational frame showing completed knot structure with clear thread identification",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [],
+    "suture_placement": {
+      "deviation_from_mark1_mm": null,
+      "deviation_from_mark2_mm": null,
+      "total_deviation_penalty": 0,
+      "confidence": 0
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "not_applicable"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": 0,
+    "total_fls_score": null,
+    "formula_applied": "Cannot calculate - this is instructional content, not task performance"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly educational/instructional content demonstrating knot tying techniques, not an actual FLS task performance video that can be scored.",
+  "cannot_determine": [
+    "Completion time - no actual task performance shown",
+    "Suture placement accuracy - no marks or Penrose drain visible in actual performance",
+    "Task score - this is instructional material, not a scoreable performance"
+  ],
+  "technique_summary": "This video consists entirely of educational content demonstrating proper intracorporeal slip-knot (two half-hitches) technique. No actual FLS task performance is shown that can be scored according to the official rubric.",
+  "strengths": [
+    "Clear educational demonstration of knot tying technique",
+    "Good visualization of thread management and blocking sequences",
+    "Proper labeling of active and passive threads"
+  ],
+  "improvement_suggestions": [
+    "This assessment cannot provide performance improvement suggestions as no actual task performance was demonstrated"
+  ],
+  "video_id": "8OrfizM-RSo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:32:30.483744+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.771137+00:00"
+  },
+  "scoreable": false
+}

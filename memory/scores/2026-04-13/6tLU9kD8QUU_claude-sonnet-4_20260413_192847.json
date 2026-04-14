@@ -1,0 +1,188 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 9.0,
+      "phase": "gauze_grasp",
+      "description": "Gauze material visible with marked circular pattern, scissors positioned at edge",
+      "technique_notes": "Good visualization of cutting target, circular pattern clearly marked",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 19.0,
+      "phase": "initial_cut",
+      "description": "Scissors beginning initial entry cut at top of circle",
+      "technique_notes": "Entry point appears close to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 29.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing clockwise around circle, approximately 1/4 complete",
+      "technique_notes": "Steady cutting motion, maintaining proximity to line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 35.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting continues, approximately 1/2 circle completed",
+      "technique_notes": "Some deviation visible from marked line at lower portion",
+      "penalties_observed": [
+        "line_deviation"
+      ]
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 49.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting near 3/4 completion, some irregular cutting pattern visible",
+      "technique_notes": "Cut line shows some waviness, particularly in lower quadrants",
+      "penalties_observed": [
+        "line_deviation"
+      ]
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 59.0,
+      "phase": "clockwise_cut",
+      "description": "Nearly complete circle cut, approaching starting point",
+      "technique_notes": "Final quarter shows improved technique",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 105.0,
+      "phase": "completion",
+      "description": "Circle completely cut out, examining final product",
+      "technique_notes": "Cut circle removed from surrounding gauze material",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 109.0,
+      "phase": "completion",
+      "description": "Final assessment of cut circle quality",
+      "technique_notes": "Overall circular shape maintained with some deviation from perfect line",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 109.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 9,
+      "duration_seconds": 9,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 9,
+      "end_seconds": 19,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 19,
+      "end_seconds": 105,
+      "duration_seconds": 86,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 105,
+      "end_seconds": 109,
+      "duration_seconds": 4,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "Estimated 3-4mm deviation from marked line in lower left quadrant",
+      "points_deducted": 3.5,
+      "frame_evidence": [
+        10,
+        13
+      ],
+      "confidence": 0.6
+    },
+    {
+      "type": "line_deviation",
+      "description": "Estimated 2-3mm deviation in right side of circle",
+      "points_deducted": 2.5,
+      "frame_evidence": [
+        13,
+        16
+      ],
+      "confidence": 0.5
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "deviation_measurements": {
+        "north": "cannot_determine_exact_mm",
+        "northeast": "approximately_1mm",
+        "east": "approximately_3mm",
+        "southeast": "approximately_2mm",
+        "south": "approximately_4mm",
+        "southwest": "approximately_3mm",
+        "west": "approximately_2mm",
+        "northwest": "approximately_1mm"
+      },
+      "total_deviation_penalty": 6.0,
+      "confidence": 0.55
+    },
+    "gauze_integrity": {
+      "detached_from_clamp": false,
+      "complete_cut": true,
+      "circular_shape_maintained": true
+    },
+    "cutting_technique": {
+      "smooth_motion": "moderate",
+      "consistent_speed": "good",
+      "instrument_handling": "competent"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 109.0,
+    "total_penalties": 6.0,
+    "total_fls_score": 185.0,
+    "formula_applied": "300 - 109.0 - 6.0 = 185.0"
+  },
+  "confidence": 0.6,
+  "confidence_rationale": "Timer clearly visible throughout showing 109 seconds completion time. Line deviations estimated from available camera angle but exact millimeter measurements difficult to determine precisely. Gauze remained attached and cut was completed successfully.",
+  "cannot_determine": [
+    "Exact millimeter deviations at each cardinal point due to camera angle and resolution",
+    "Precise measurement of deviation at north and south cardinal points"
+  ],
+  "technique_summary": "Intermediate level performance with completion time of 109 seconds. Cutting technique was generally steady but showed some deviation from the marked line, particularly in the lower quadrants. Overall task completed successfully with maintained gauze integrity.",
+  "strengths": [
+    "Completed full circle cut without detaching gauze",
+    "Maintained general circular shape",
+    "Reasonable completion time for intermediate level"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining closer adherence to marked line throughout cut",
+    "Practice smoother cutting motion to reduce waviness",
+    "Improve precision in lower quadrants where most deviation occurred"
+  ],
+  "video_id": "6tLU9kD8QUU",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:28:47.150080+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.764069+00:00"
+  },
+  "scoreable": true
+}

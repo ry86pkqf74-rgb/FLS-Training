@@ -1,0 +1,152 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Equipment overview showing laparoscopic training box and instruments",
+      "technique_notes": "Pre-task setup phase with training materials visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 6.0,
+      "phase": "needle_practice",
+      "description": "Needle dancing practice with two needle drivers on pink practice pad",
+      "technique_notes": "Good instrument control during practice phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "continuous_suture_training",
+      "description": "Practicing continuous suture technique on practice pad",
+      "technique_notes": "Smooth instrument movements during training",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 18.0,
+      "phase": "counter_clockwise_practice",
+      "description": "Counter-clockwise suture practice demonstrated",
+      "technique_notes": "Good directional control for knot tying preparation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 24.0,
+      "phase": "actual_task_start",
+      "description": "Transition to actual FLS task with Penrose drain visible",
+      "technique_notes": "Beginning of scored task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 42.0,
+      "phase": "knot_failure",
+      "description": "Knot appears to slip or fail as indicated by on-screen text",
+      "technique_notes": "Significant technical failure requiring restart",
+      "penalties_observed": [
+        "knot_slippage"
+      ]
+    },
+    {
+      "frame_number": 23,
+      "timestamp_seconds": 54.0,
+      "phase": "task_completion",
+      "description": "Final view of completed suture in Penrose drain within training box",
+      "technique_notes": "Task completed with visible suture placement",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 54.0,
+  "phase_timings": [
+    {
+      "phase": "practice_phases",
+      "start_seconds": 0,
+      "end_seconds": 24,
+      "duration_seconds": 24,
+      "benchmark_comparison": "pre-task"
+    },
+    {
+      "phase": "actual_task_execution",
+      "start_seconds": 24,
+      "end_seconds": 54,
+      "duration_seconds": 30,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "knot_slippage_failure",
+      "description": "Knot slipped or failed during task as indicated by on-screen notation",
+      "points_deducted": 25.0,
+      "frame_evidence": [
+        18
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "surgeon_knot_attempt",
+        "hand_leading": "right",
+        "hand_switched_from_previous": null,
+        "appears_secure": false,
+        "notes": "Knot failed or slipped as noted in video"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": "cannot_determine",
+      "deviation_from_mark2_mm": "cannot_determine",
+      "total_deviation_penalty": 0,
+      "confidence": 0.0
+    },
+    "drain_assessment": {
+      "gap_visible": false,
+      "drain_avulsed": false,
+      "slit_closure_quality": "appears_adequate"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 54.0,
+    "total_penalties": 25.0,
+    "total_fls_score": 521.0,
+    "formula_applied": "600 - 54.0 - 25.0 = 521.0"
+  },
+  "confidence": 0.6,
+  "confidence_rationale": "Video shows practice phases and final result, but actual task execution details are limited. Knot failure clearly indicated by on-screen text. Suture mark placement cannot be assessed from available views.",
+  "cannot_determine": [
+    "Exact suture placement relative to marks - marks not clearly visible",
+    "Detailed knot tying sequence - limited view of actual task execution",
+    "Hand switching between throws - task execution not fully shown",
+    "Precise suture deviation measurements"
+  ],
+  "technique_summary": "Fast completion time suggesting expert-level skill, but knot failure indicates technical execution issues. Practice phases show good instrument control.",
+  "strengths": [
+    "Excellent completion time of 54 seconds",
+    "Good instrument control during practice phases",
+    "No drain avulsion"
+  ],
+  "improvement_suggestions": [
+    "Focus on knot security - ensure proper tension and locking technique",
+    "Practice knot tying fundamentals to prevent slippage",
+    "Verify knot integrity before considering task complete"
+  ],
+  "video_id": "t8-jkG1sTlE",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:37:31.915535+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.900595+00:00"
+  },
+  "scoreable": true
+}

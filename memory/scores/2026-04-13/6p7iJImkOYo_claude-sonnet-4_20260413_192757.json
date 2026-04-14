@@ -1,0 +1,191 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Initial view showing three cylindrical foam appendages with pre-tied endoloop visible on left instrument",
+      "technique_notes": "Loop appears properly loaded on deployment instrument",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "target_approach",
+      "description": "Instruments positioning around leftmost appendage, loop being guided toward target",
+      "technique_notes": "Smooth approach, good instrument coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 15.0,
+      "phase": "loop_placement",
+      "description": "Loop being placed around first appendage, positioning appears accurate to marked line",
+      "technique_notes": "Precise placement technique, loop opening adequately sized",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 30.0,
+      "phase": "cinch",
+      "description": "First loop being cinched tight around appendage at marked line",
+      "technique_notes": "Good tension application, loop appears secure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "target_approach",
+      "description": "Moving to second appendage (middle), new loop deployment initiated",
+      "technique_notes": "Efficient transition between targets",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 60.0,
+      "phase": "loop_placement",
+      "description": "Second loop being placed around middle appendage",
+      "technique_notes": "Consistent technique maintained",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 75.0,
+      "phase": "target_approach",
+      "description": "Approaching third appendage (rightmost) for final loop placement",
+      "technique_notes": "Systematic left-to-right progression",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 90.0,
+      "phase": "loop_placement",
+      "description": "Third loop being positioned around rightmost appendage",
+      "technique_notes": "Maintained precision throughout sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 100.0,
+      "phase": "cinch",
+      "description": "Final loop being cinched, all three appendages now secured",
+      "technique_notes": "Consistent tension application across all loops",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 110.0,
+      "phase": "completion",
+      "description": "Task completed - all three appendages secured with loops at marked lines, 'Exercise completed' message visible",
+      "technique_notes": "Clean completion, all loops appear properly positioned and secured",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 110.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "duration_seconds": 5,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 5,
+      "end_seconds": 15,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 15,
+      "end_seconds": 100,
+      "duration_seconds": 85,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 100,
+      "end_seconds": 110,
+      "duration_seconds": 10,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "loop_placement_deviation",
+      "description": "Minor deviation from marked line on middle appendage - approximately 1mm below mark",
+      "points_deducted": 1.0,
+      "frame_evidence": [
+        12,
+        13
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "task_specific_assessments": {
+    "loop_placements": [
+      {
+        "appendage_number": 1,
+        "deviation_from_mark_mm": 0.5,
+        "properly_cinched": true,
+        "notes": "Excellent placement at marked line"
+      },
+      {
+        "appendage_number": 2,
+        "deviation_from_mark_mm": 1.0,
+        "properly_cinched": true,
+        "notes": "Slight deviation below mark but within acceptable range"
+      },
+      {
+        "appendage_number": 3,
+        "deviation_from_mark_mm": 0.0,
+        "properly_cinched": true,
+        "notes": "Perfect placement at marked line"
+      }
+    ],
+    "appendage_integrity": {
+      "any_transected": false,
+      "all_loops_secure": true,
+      "notes": "All appendages remain intact with secure loop placement"
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 110.0,
+    "total_penalties": 1.0,
+    "total_fls_score": 69.0,
+    "formula_applied": "180 - 110.0 - 1.0 = 69.0"
+  },
+  "confidence": 0.8,
+  "confidence_rationale": "Clear view of all three loop placements and cinching actions. Minor uncertainty in precise measurement of deviation on middle appendage due to viewing angle, but overall assessment is well-supported by visual evidence.",
+  "cannot_determine": [
+    "Exact millimeter measurement of deviation on appendage 2 - estimated from overhead view"
+  ],
+  "technique_summary": "Competent intermediate-level performance with systematic approach and consistent technique. Time of 110 seconds places this in the intermediate range (40-90s expert, 90-180s intermediate). Good instrument control and loop deployment throughout.",
+  "strengths": [
+    "Systematic left-to-right progression",
+    "Consistent loop deployment technique",
+    "Appropriate tension application for secure cinching",
+    "No appendage transection or loop failures"
+  ],
+  "improvement_suggestions": [
+    "Focus on more precise placement to minimize deviation from marked lines",
+    "Work on speed to approach expert benchmark of under 90 seconds",
+    "Practice loop positioning to achieve consistent accuracy across all placements"
+  ],
+  "video_id": "6p7iJImkOYo",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:27:57.479856+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.763339+00:00"
+  },
+  "scoreable": true
+}

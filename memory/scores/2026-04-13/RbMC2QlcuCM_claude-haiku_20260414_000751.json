@@ -1,0 +1,37 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Not an FLS task performance",
+  "reason_for_classification": "This is an educational conference presentation about surgical training programmes, accreditation systems, and endosurgery education frameworks. It contains lecture slides, panel discussions, institutional overviews, and teaching content but does NOT contain any actual performance of an FLS (Fundamentals of Laparoscopic Surgery) task such as Peg Transfer, Pattern Cut, Endoloop, Extracorporeal Suture, or Intracorporeal Suture.",
+  "content_summary": "The video documents the 12th World Congress of Endoscopic Surgery panel on 'IFSES Surgical Education Around the World.' Topics include training resident vs. training surgeons, SAGES guidelines, laparoscopic fellowship learning curves, accreditation of surgical training in Hong Kong, training programme structures, animal model training, live animal models, lectures, proctoring, and training audits.",
+  "scoring_status": "NOT APPLICABLE",
+  "teaching_content": {
+    "educational_topics_covered": [
+      "Surgical training programme design and accreditation",
+      "Resident vs. established surgeon training pathways",
+      "Laparoscopic fellowship learning curves (11\u20137050 cases to competence)",
+      "Basic vs. advanced laparoscopic training modules",
+      "Animal model training for tissue handling",
+      "Mentorship and proctoring in live surgical settings",
+      "Training audit criteria and competence assessment",
+      "Granting and periodic renewal of surgical privileges"
+    ],
+    "institutional_examples": [
+      "Minimal Access Surgery Training Centre (MASTC) in Hong Kong, established 1995",
+      "Asia Endosurgery Task Force (AETF) initiatives",
+      "SAGES and ASCRS guidelines for laparoscopic colectomy training"
+    ],
+    "key_messages": [
+      "Structured training programmes with designated directors and mentorship are essential",
+      "High case volume with experienced mentors is needed to reach competence",
+      "Animal model training transfers skills to patient care and shortens learning curve",
+      "Accreditation and periodic renewal of privileges require objective measures (procedure volume, success rate, complications)"
+    ]
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video clearly identifies itself as a conference presentation panel. No FLS task performance is present; this is educational/instructional content about training frameworks and surgical education policy.",
+  "video_id": "RbMC2QlcuCM",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-14T00:07:51.239224+00:00"
+}

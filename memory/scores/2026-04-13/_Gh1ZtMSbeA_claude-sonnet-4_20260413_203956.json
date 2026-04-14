@@ -1,0 +1,147 @@
+{
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "preparation",
+      "description": "Black frame - video not yet started",
+      "technique_notes": "No content visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 10.0,
+      "phase": "needle_load",
+      "description": "Right needle driver grasping curved needle near tip, left grasper visible",
+      "technique_notes": "Needle held at appropriate position on shaft, good initial orientation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 11.0,
+      "phase": "needle_load",
+      "description": "Both instruments manipulating needle, adjusting grip position",
+      "technique_notes": "Fine adjustment of needle position, proper two-handed coordination",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "knot_formation",
+      "description": "Beginning intracorporeal knot tying with suture material visible",
+      "technique_notes": "Suture appears to be silk material, appropriate length visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 14.0,
+      "phase": "knot_formation",
+      "description": "Active knot tying in progress, instruments crossed",
+      "technique_notes": "Proper crossing technique for intracorporeal knot formation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 16.0,
+      "phase": "knot_formation",
+      "description": "Continued knot manipulation, suture being wrapped around instruments",
+      "technique_notes": "Good wrapping technique visible, maintaining suture control",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 18.0,
+      "phase": "knot_formation",
+      "description": "Final knot tightening phase, instruments pulling in opposite directions",
+      "technique_notes": "Appropriate tensioning technique for securing knot",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 19.0,
+      "phase": "completion",
+      "description": "Knot appears complete, instruments being withdrawn",
+      "technique_notes": "Final knot positioning achieved",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 19.0,
+  "phase_timings": [
+    {
+      "phase": "needle_load",
+      "start_seconds": 10,
+      "end_seconds": 12,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "knot_formation",
+      "start_seconds": 12,
+      "end_seconds": 19,
+      "duration_seconds": 7,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "knot_assessments": [
+      {
+        "throw_number": 1,
+        "type": "cannot_determine_throw_type",
+        "hand_leading": "cannot_determine",
+        "hand_switched_from_previous": null,
+        "appears_secure": true,
+        "notes": "Knot formation visible but specific throw sequence not clearly distinguishable"
+      }
+    ],
+    "suture_placement": {
+      "deviation_from_mark1_mm": "cannot_determine",
+      "deviation_from_mark2_mm": "cannot_determine",
+      "total_deviation_penalty": 0,
+      "confidence": 0.0
+    },
+    "drain_assessment": {
+      "gap_visible": "cannot_determine",
+      "drain_avulsed": false,
+      "slit_closure_quality": "cannot_determine"
+    }
+  },
+  "score_components": {
+    "max_score": 600,
+    "time_used": 19.0,
+    "total_penalties": 0,
+    "total_fls_score": 581.0,
+    "formula_applied": "600 - 19.0 - 0 = 581.0"
+  },
+  "confidence": 0.15,
+  "confidence_rationale": "Video appears to be educational material showing knot tying technique rather than actual FLS task performance. No Penrose drain, target marks, or FLS trainer box visible. Cannot assess suture placement accuracy, drain closure, or specific throw sequence requirements.",
+  "cannot_determine": [
+    "Actual suture placement through marked targets - no drain or marks visible",
+    "Deviation measurements - no reference marks present",
+    "Specific throw sequence (surgeon's knot vs single throws)",
+    "Hand switching between throws",
+    "Drain slit closure quality",
+    "Whether this represents actual FLS task performance vs demonstration"
+  ],
+  "technique_summary": "Video shows skilled intracorporeal knot tying technique but does not appear to represent actual FLS Task 5 performance with required elements (Penrose drain, target marks, complete suturing sequence).",
+  "strengths": [
+    "Smooth instrument handling",
+    "Efficient knot formation technique"
+  ],
+  "improvement_suggestions": [
+    "Video does not show actual FLS task components for meaningful assessment"
+  ],
+  "video_id": "_Gh1ZtMSbeA",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:39:56.950746+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.855035+00:00"
+  },
+  "scoreable": true
+}

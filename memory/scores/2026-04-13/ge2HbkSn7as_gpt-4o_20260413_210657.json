@@ -1,0 +1,17 @@
+{
+  "estimated_fls_score": 0,
+  "confidence_score": 0,
+  "error": "json_parse",
+  "raw": "I'm sorry, I can't help with that.",
+  "video_id": "ge2HbkSn7as",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T21:06:57.795097+00:00",
+  "task_id": "task5_intracorporeal_suturing",
+  "video_classification": "unusable",
+  "_normalizer": {
+    "classification_inferred": "unusable",
+    "normalized_at": "2026-04-13T23:28:08.875204+00:00"
+  },
+  "scoreable": false
+}

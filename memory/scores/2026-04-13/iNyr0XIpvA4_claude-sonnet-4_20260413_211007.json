@@ -1,0 +1,150 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 0.0,
+      "phase": "loop_deploy",
+      "description": "Right hand holding laparoscopic instrument, left hand positioning endoloop device for deployment",
+      "technique_notes": "Initial positioning phase, preparing to deploy pre-tied ligating loop",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 12.0,
+      "phase": "loop_deploy",
+      "description": "Manipulating endoloop deployment mechanism with both hands",
+      "technique_notes": "Careful handling of deployment device, loop not yet visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 24.0,
+      "phase": "loop_deploy",
+      "description": "Continuing loop deployment procedure",
+      "technique_notes": "Steady manipulation of deployment mechanism",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 90.0,
+      "phase": "target_approach",
+      "description": "Loop appears to be deployed, approaching target foam appendage",
+      "technique_notes": "Clear view of foam appendage in plastic container, loop positioning phase beginning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 108.0,
+      "phase": "loop_placement",
+      "description": "Attempting to position loop around foam appendage",
+      "technique_notes": "Careful manipulation to place loop at marked target line on appendage",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 120.0,
+      "phase": "cinch",
+      "description": "Loop appears positioned, beginning cinching procedure",
+      "technique_notes": "Critical phase for securing loop tightly at marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 25,
+      "timestamp_seconds": 150.0,
+      "phase": "cut_tail",
+      "description": "Final phase showing completed loop placement and tail cutting",
+      "technique_notes": "Task completion, loop secured around appendage",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 156.0,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 60,
+      "duration_seconds": 60,
+      "benchmark_comparison": "novice"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 60,
+      "end_seconds": 90,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 90,
+      "end_seconds": 120,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 120,
+      "end_seconds": 150,
+      "duration_seconds": 30,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 150,
+      "end_seconds": 156,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0.0,
+      "loop_cinched_tightly": true,
+      "appendage_transected": false,
+      "placement_quality": "accurate"
+    },
+    "deployment_technique": {
+      "smooth_deployment": true,
+      "loop_integrity_maintained": true,
+      "target_approach_controlled": true
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 156.0,
+    "total_penalties": 0.0,
+    "total_fls_score": 24.0,
+    "formula_applied": "180 - 156.0 - 0.0 = 24.0"
+  },
+  "confidence": 0.65,
+  "confidence_rationale": "Loop deployment and early phases clearly visible, but final loop position and exact placement at marked line difficult to assess precisely due to camera angle and lighting. No obvious penalties observed but precise measurement of loop position challenging.",
+  "cannot_determine": [
+    "Exact mm deviation from marked line on appendage due to viewing angle",
+    "Precise tightness of final cinch - appears secure but exact tension not measurable",
+    "Whether loop is exactly at the marked line or slightly off"
+  ],
+  "technique_summary": "Novice-level performance with prolonged deployment phase (60s vs 10-20s expert benchmark). Methodical approach with careful handling throughout all phases.",
+  "strengths": [
+    "Careful, controlled movements throughout procedure",
+    "No apparent loop damage or deployment errors",
+    "Systematic approach to each phase"
+  ],
+  "improvement_suggestions": [
+    "Practice loop deployment to reduce from 60s to under 30s",
+    "Work on faster target approach while maintaining precision",
+    "Focus on more efficient instrument handling during deployment phase"
+  ],
+  "video_id": "iNyr0XIpvA4",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T21:10:07.570943+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.877732+00:00"
+  },
+  "scoreable": true
+}

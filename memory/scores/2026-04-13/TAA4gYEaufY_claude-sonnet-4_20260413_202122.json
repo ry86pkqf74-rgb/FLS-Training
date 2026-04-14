@@ -1,0 +1,100 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "educational_content",
+      "description": "Title screen showing 'Laparoscopic tubal ligation' - educational video introduction",
+      "technique_notes": "This appears to be instructional content, not actual task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 5.0,
+      "phase": "loop_deploy",
+      "description": "Laparoscopic view showing endoloop device being introduced through trocar",
+      "technique_notes": "Clean introduction of loop device, proper trocar entry",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 8.0,
+      "phase": "target_approach",
+      "description": "Loop device approaching tubular structure (fallopian tube) for ligation",
+      "technique_notes": "Controlled approach to anatomical target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 12.0,
+      "phase": "educational_content",
+      "description": "Title screen for 'Mini-laparotomy Tubal Ligation' - transition to different procedure",
+      "technique_notes": "This is educational transition, not FLS task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.0,
+      "phase": "loop_placement",
+      "description": "Anatomical view showing fallopian tube with fimbriated end visible",
+      "technique_notes": "Clear visualization of target anatomy for ligation",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 17.0,
+      "phase": "cinch",
+      "description": "Close-up view of loop being tightened around fallopian tube segment",
+      "technique_notes": "Proper cinching technique demonstrated on anatomical structure",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": null,
+      "loop_cinched_tightly": null,
+      "appendage_transected": null,
+      "confidence": 0.0
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Cannot compute - this is educational content, not FLS task performance"
+  },
+  "confidence": 0.0,
+  "confidence_rationale": "This video shows educational/instructional content about tubal ligation procedures, not an FLS Task 3 (Endoloop) performance on the standardized foam appendage. Cannot assess FLS scoring criteria.",
+  "cannot_determine": [
+    "Completion time - no actual FLS task performed",
+    "Loop placement accuracy - no marked target line visible",
+    "Loop tightness - educational demonstration, not standardized task",
+    "All FLS-specific penalties - wrong procedure type shown"
+  ],
+  "technique_summary": "This video contains educational content demonstrating laparoscopic and mini-laparotomy tubal ligation techniques rather than the standardized FLS Task 3 endoloop exercise performed on a foam appendage with marked target line.",
+  "strengths": [
+    "Clear anatomical visualization",
+    "Proper laparoscopic technique demonstrated"
+  ],
+  "improvement_suggestions": [
+    "To assess FLS Task 3, video should show performance on standardized foam appendage with marked target line",
+    "Need to see complete task from start to finish with timing"
+  ],
+  "video_id": "TAA4gYEaufY",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T20:21:22.948501+00:00",
+  "video_classification": "unclassified",
+  "_normalizer": {
+    "classification_inferred": "unclassified",
+    "normalized_at": "2026-04-13T23:28:08.840265+00:00"
+  },
+  "scoreable": false
+}

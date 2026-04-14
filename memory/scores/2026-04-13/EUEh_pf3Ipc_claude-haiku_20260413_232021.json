@@ -1,0 +1,148 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Two Handed Tie - Knot Tying Instruction",
+  "max_time_seconds": null,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide 'Two Handed Tie' displayed on black background",
+      "technique_notes": "Educational content introduction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.5,
+      "phase": "setup",
+      "description": "Ethicon trainer box with two yellow clamps visible, pink and white braided cords",
+      "technique_notes": "Trainer setup showing knot-tying apparatus",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "knot_formation_preparation",
+      "description": "Two hands positioned with pink and white cords, preparing to create initial crossing",
+      "technique_notes": "Bilateral hand setup, cords ready for interlacing",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 8.5,
+      "phase": "first_throw_execution",
+      "description": "Pink cord wrapped around white cord, hands creating initial loop formation",
+      "technique_notes": "First hand throw being demonstrated with clear hand positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 12.0,
+      "phase": "first_throw_completion",
+      "description": "First throw secured, knot forming on trainer, both strands visible crossing",
+      "technique_notes": "Clean first throw execution shown",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 16.0,
+      "phase": "second_throw_setup",
+      "description": "Hands repositioning for second throw, cords held at angles",
+      "technique_notes": "Hand switching demonstrated for alternating throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 20.0,
+      "phase": "second_throw_execution",
+      "description": "Second throw in progress, white cord being wrapped by opposite hand direction",
+      "technique_notes": "Demonstrates reversed hand approach for second throw",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "phase": "second_throw_completion",
+      "description": "Second throw completed, knot structure visible with both cords secured",
+      "technique_notes": "Clean second throw, knot appears secure",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 28.5,
+      "phase": "third_throw_setup",
+      "description": "Hands repositioning again for third throw, demonstrating hand switch",
+      "technique_notes": "Final throw preparation shown with hand positioning",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 32.0,
+      "phase": "third_throw_execution",
+      "description": "Third throw being tied, cords interlacing with final hand positioning",
+      "technique_notes": "Demonstrates completion of three-throw sequence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 36.0,
+      "phase": "final_knot_inspection",
+      "description": "Completed knot displayed clearly on trainer, hands holding both rope ends",
+      "technique_notes": "Final knot shows secure configuration with proper tension",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 40.0,
+      "phase": "completion",
+      "description": "Close-up of finished two-handed tie knot, demonstrating knot security",
+      "technique_notes": "Educational conclusion showing final result",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": null,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional content"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This video is clearly educational/instructional content demonstrating knot-tying technique rather than a formal FLS task performance. The title slide, slow demonstration with clear hand positioning, and focused camera work on technique execution indicate this is a teaching demonstration, not a timed performance assessment.",
+  "cannot_determine": [
+    "FLS score - this is instructional content, not a performance evaluation",
+    "Completion time - not a timed task performance"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Two-handed tie knot formation",
+      "Bilateral hand positioning and coordination",
+      "First throw execution with proper cord wrapping",
+      "Hand switching between first and second throw",
+      "Second throw execution with reversed hand approach",
+      "Third throw execution completing knot sequence",
+      "Proper tension maintenance throughout knot formation",
+      "Final knot security verification"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [
+      "Demonstrates proper hand crossing technique to avoid slack",
+      "Shows correct bilateral hand switching to maintain knot integrity",
+      "Illustrates appropriate cord tension throughout formation",
+      "Demonstrates complete three-throw sequence rather than incomplete knots"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "video_summary": "This is an instructional/educational video demonstrating the 'Two Handed Tie' knot-tying technique using an Ethicon trainer box. The video uses clear, slow-motion demonstration of hand positioning and cord manipulation across three sequential throws, with explicit focus on bilateral hand coordination and proper hand switching between throws. This is NOT a formal FLS task performance and should not be scored as one.",
+  "video_type_rationale": "Classified as 'instructional' because: (1) Title slide with educational framing, (2) Slow, deliberate demonstration technique clearly intended for teaching, (3) Multiple camera angles of same knot from different perspectives, (4) Focus on technique clarity rather than speed/efficiency, (5) No timing indicators or performance pressure evident",
+  "video_id": "EUEh_pf3Ipc",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:20:21.305799+00:00",
+  "scoreable": false
+}

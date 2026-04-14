@@ -1,0 +1,127 @@
+{
+  "task_id": "task3_endoloop",
+  "task_name": "Endoloop (Ligating Loop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0,
+      "phase": "loop_deploy",
+      "description": "Endoloop is visible but not yet engaged with the foam appendage.",
+      "technique_notes": "Initial deployment position appears correct.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12,
+      "phase": "target_approach",
+      "description": "Endoloop approaching target appendage, aligning well.",
+      "technique_notes": "Approach is steady, maintaining alignment.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 24,
+      "phase": "loop_placement",
+      "description": "Endoloop is placed over the appendage at marked position.",
+      "technique_notes": "Placement appears precise at this angle.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 36,
+      "phase": "cinch",
+      "description": "Loop is cinched tightly around marked line of appendage.",
+      "technique_notes": "Proper tension applied during cinching.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 48,
+      "phase": "cut_tail",
+      "description": "Excess loop material is being cut off neatly.",
+      "technique_notes": "Cutting technique is precise.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 52,
+  "phase_timings": [
+    {
+      "phase": "loop_deploy",
+      "start_seconds": 0,
+      "end_seconds": 8,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "target_approach",
+      "start_seconds": 8,
+      "end_seconds": 16,
+      "duration_seconds": 8,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "loop_placement",
+      "start_seconds": 16,
+      "end_seconds": 28,
+      "duration_seconds": 12,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "cinch",
+      "start_seconds": 28,
+      "end_seconds": 40,
+      "duration_seconds": 12,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "cut_tail",
+      "start_seconds": 40,
+      "end_seconds": 52,
+      "duration_seconds": 12,
+      "benchmark_comparison": "intermediate"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "loop_placement": {
+      "deviation_from_mark_mm": 0,
+      "confidence": 0.9
+    },
+    "cinching": {
+      "appears_tight": true,
+      "notes": "Cinching is firm and secure."
+    },
+    "cutting_assessment": {
+      "excess_loop_correctly_cut": true
+    }
+  },
+  "score_components": {
+    "max_score": 180,
+    "time_used": 52,
+    "total_penalties": 0,
+    "total_fls_score": 128,
+    "formula_applied": "180 - 52 - 0 = 128"
+  },
+  "confidence": 0.85,
+  "confidence_rationale": "All key actions were executed cleanly and are visible in the frames provided. No penalties observed.",
+  "cannot_determine": [],
+  "technique_summary": "Solid execution with precise endoloop placement and no visible errors. Consistent intermediate proficiency.",
+  "strengths": [
+    "Steady hand during loop placement and cinching",
+    "Accurate cut of excess loop material"
+  ],
+  "improvement_suggestions": [
+    "Reduce time in the cinching and cutting phases to align with expert benchmarks."
+  ],
+  "video_id": "JQznLrebcXE",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T20:01:11.090740+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.821600+00:00"
+  },
+  "scoreable": true
+}

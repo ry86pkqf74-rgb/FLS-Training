@@ -1,0 +1,219 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task3_endoloop",
+  "task_name": "Ligating Loop (Endoloop)",
+  "max_time_seconds": 180,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "introduction",
+      "description": "Title slide showing Earth globe and introductory graphics. No task performance content yet.",
+      "technique_notes": "Educational content opening; no FLS task timing begins.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 2.0,
+      "phase": "introduction",
+      "description": "Presenter identification: Todd Ponsky, MD, FACs, Pediatric Surgeon, Cincinnati Children's Hospital.",
+      "technique_notes": "Expert credentials established. Video is instructional lecture by expert.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 5.0,
+      "phase": "equipment_setup",
+      "description": "Endoscopic equipment display: 3 or 5mm endocamera shown on blue surgical drape with connecting cables.",
+      "technique_notes": "Educational equipment overview; narrated instruction context.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 10.0,
+      "phase": "task_initiation",
+      "description": "Laparoscopic view of red foam organ model with multiple appendages visible. Single instrument (grasper/dissector) entering field.",
+      "technique_notes": "First appearance of task setup and working field. Appendages visible as pink/red foam structures.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 15.0,
+      "phase": "step_1_context",
+      "description": "Laparoscopic view showing foam abdominal cavity. Text overlay: 'Step 1: Push the sac into the abdomen.' Instrument retracting/mobilizing tissue.",
+      "technique_notes": "Instructional slide showing anatomical context (abdominal approach step). Not the actual endoloop task\u2014this is demonstrating PPV closure technique context.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 20.0,
+      "phase": "step_2_context",
+      "description": "Laparoscopic view of foam model. Text overlay: 'Step 2: Resect the sac.' Instrument manipulating tissue.",
+      "technique_notes": "Instructional context for related procedure. Not endoloop task performance.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 25.0,
+      "phase": "anatomy_warning",
+      "description": "Close-up laparoscopic view showing cord structures. Annotations: 'Cord vessels' and 'Vas deferens.' Text: 'If you're not sure, do NOT do it or do it partially.'",
+      "technique_notes": "Safety teaching: identifies critical structures (vas deferens, cord vessels) to avoid. Expert-level anatomical awareness training.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 30.0,
+      "phase": "safety_instruction",
+      "description": "Laparoscopic view showing tissue dissection with bleeding/coagulation evident. Text: 'Be careful with adjacent structures.'",
+      "technique_notes": "Emphasizes precision and avoiding collateral tissue trauma. Demonstrates consequence of careless dissection.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "double_loop_technique_intro",
+      "description": "Title slide: 'Double Loop Technique' displayed on teal background.",
+      "technique_notes": "Transitions to instructional content on advanced ligating loop technique for complex cases.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 50.0,
+      "phase": "double_loop_dissection",
+      "description": "Laparoscopic view showing peritoneal dissection around cord structures. Text: 'This helps dissect the peritoneum to avoid the lesion of the cord structures.'",
+      "technique_notes": "Teaching advanced anatomy-aware dissection. Demonstrates peritoneal mobilization technique for safe ligating loop placement.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 60.0,
+      "phase": "needle_technique_ipsilateral",
+      "description": "Laparoscopic view with 18-gauge spinal needle visible. Text: '18 gauge spinal needle through half the IIO.' Needle passing through internal ring opening area on one side.",
+      "technique_notes": "Demonstrates needle trajectory for double loop technique. Ipsilateral placement shown first to establish anatomy.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 70.0,
+      "phase": "contralateral_needle_placement",
+      "description": "Laparoscopic view. Text: 'Pass the needle through the contralateral side with a new prolene loop.' Needle and suture material crossing midline.",
+      "technique_notes": "Shows contralateral passage technique. Demonstrates needle driver manipulation and loop positioning across anatomy.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 80.0,
+      "phase": "first_loop_snare",
+      "description": "Laparoscopic view showing two crossing suture lines/loops. Text: 'Use the first loop as a snare to take out the second one.'",
+      "technique_notes": "Advanced technique: using first loop as instrument control mechanism for second loop. Demonstrates surgical problem-solving.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 90.0,
+      "phase": "contralateral_section_title",
+      "description": "Title slide: 'Contralateral side. Closing a Small PPV like this has been contested.' Teal background.",
+      "technique_notes": "Discusses clinical controversy in surgical technique. Educational context acknowledges debate in field.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 100.0,
+      "phase": "contralateral_needle_placement_shown",
+      "description": "Laparoscopic view showing needle passing through internal ring opening on one side. Text: 'Pass an 18 gauge spinal needle through one side of the IIO.'",
+      "technique_notes": "Demonstrates first needle placement for contralateral approach. Shows anatomical landmark (internal ring opening).",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 110.0,
+      "phase": "loop_inside_technique",
+      "description": "Laparoscopic view showing needle passed through tissue with loop material visible inside previously placed loop. Text: 'Pass the needle inside the loop previously inserted.'",
+      "technique_notes": "Demonstrates sequential loop placement. Shows loop-within-loop technique for complex anatomy.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 17,
+      "timestamp_seconds": 120.0,
+      "phase": "second_loop_placement",
+      "description": "Laparoscopic view showing completion of second loop trajectory through tissue. Text: 'Step 7: Use the first loop as a snare and take the second loop through the other side.'",
+      "technique_notes": "Shows final step of double loop technique. Demonstrates loop-through-loop manipulation for securing tissue.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 135.0,
+      "phase": "summary",
+      "description": "Title slide: 'Let's summarize!' on teal background.",
+      "technique_notes": "Transitions to summary section of instructional content.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 145.0,
+      "phase": "final_teaching_point",
+      "description": "Title slide: 'Be careful with the cord structures' displayed on teal background with white text emphasis.",
+      "technique_notes": "Final reinforcement of critical safety point. Emphasizes anatomical awareness as paramount.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 20,
+      "timestamp_seconds": 155.0,
+      "phase": "closing",
+      "description": "Contact information slide showing YouTube, Facebook, Twitter, Instagram, and LinkedIn handles for 'Stay Current MD' educator.",
+      "technique_notes": "Educational content closure with instructor branding.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 180,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable\u2014instructional content, not a performance evaluation"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "This is clearly instructional/educational content with narration, title slides, presenter identification, and teaching context throughout. No trainee or surgeon is performing the FLS endoloop task; instead, an expert (Todd Ponsky, MD) is demonstrating and explaining advanced surgical technique (double loop technique) for ligating loop placement in complex inguinal hernia repair scenarios. No performance scoring is warranted.",
+  "cannot_determine": [],
+  "technique_summary": "This is an expert-level educational lecture on the ligating loop (endoloop) task and advanced double loop technique for pediatric inguinal hernia repair. The content demonstrates expert anatomical knowledge, safety consciousness, and surgical problem-solving approaches.",
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Standard endoloop placement on foam appendage model",
+      "Double loop technique for complex inguinal hernia cases",
+      "Peritoneal dissection to isolate cord structures",
+      "Ipsilateral and contralateral needle passage through internal ring opening",
+      "Loop-through-loop manipulation for tissue security",
+      "18-gauge spinal needle trajectory planning",
+      "Sequential loop deployment and tightening"
+    ],
+    "verbal_cues": [
+      "Push the sac into the abdomen (Step 1)",
+      "Resect the sac (Step 2)",
+      "If you're not sure, do NOT do it or do it partially",
+      "Be careful with adjacent structures",
+      "This helps dissect the peritoneum to avoid the lesion of the cord structures",
+      "Pass the needle through the contralateral side with a new prolene loop",
+      "Use the first loop as a snare to take out the second one"
+    ],
+    "common_errors_addressed": [
+      "Damaging vas deferens or cord vessels during dissection\u2014explicitly warned against",
+      "Incomplete peritoneal mobilization\u2014teaching shows proper dissection plane",
+      "Improper needle trajectory\u2014demonstrates correct passage through internal ring opening",
+      "Inadequate loop security on complex anatomy\u2014double loop technique overcomes single-loop limitations",
+      "Hesitation or partial completion\u2014instructor emphasizes commitment to technique or abandonment, not compromise"
+    ],
+    "skill_level_demonstrated": "expert",
+    "instructor_credentials": "Todd Ponsky, MD, FACs, Pediatric Surgeon, Cincinnati Children's Hospital"
+  },
+  "improvement_suggestions": [],
+  "video_classification_justification": "This video is **instructional content** because it contains: (1) expert presenter with credentials identified; (2) title slides and section transitions with narrated context; (3) multiple educational segments on different surgical approaches; (4) safety teaching and anatomy warnings; (5) no continuous task performance by a trainee; (6) deliberate pauses and explanation of technique rationale; (7) closing with instructor branding and contact information. It is not a 'performance' video of a trainee attempting the FLS endoloop task, nor is it an 'expert_demo' showing a single expert completing the task for direct comparison\u2014it is comprehensive surgical education on ligating loop technique and advanced variations.",
+  "video_id": "CbJoxbADbC4",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:12:08.049315+00:00",
+  "scoreable": false
+}

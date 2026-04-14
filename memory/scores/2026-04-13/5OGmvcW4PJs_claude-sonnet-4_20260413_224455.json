@@ -1,0 +1,88 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task2_pattern_cut",
+  "task_name": "Precision Cutting",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "product_introduction",
+      "description": "Pyxus HD product branding display with white background",
+      "technique_notes": "Marketing/branding material, not task performance",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 4.0,
+      "phase": "equipment_overview",
+      "description": "Full laparoscopic trainer setup displayed with instruments and task modules",
+      "technique_notes": "Equipment demonstration showing complete FLS system",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 12.0,
+      "phase": "presenter_introduction",
+      "description": "Dr. Elliot Street identified as Co-Founder & CEO of Inovus Medical",
+      "technique_notes": "Educational presenter introduction with credentials",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 24.0,
+      "phase": "task_module_identification",
+      "description": "Task modules labeled including threading base, AZE base, and ring stack base",
+      "technique_notes": "Educational overlay identifying different FLS task components",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 14,
+      "timestamp_seconds": 42.0,
+      "phase": "instrument_identification",
+      "description": "Johan grasping forceps and laparoscopic scissors labeled",
+      "technique_notes": "Equipment identification for Task 2 precision cutting",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {
+    "cutting_assessment": {
+      "circle_completed": false,
+      "deviation_measurements": [],
+      "gauze_handling": "not_demonstrated"
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "No performance to score - instructional content only"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Clear instructional video with product branding, presenter identification, and equipment labeling. No actual task performance demonstrated.",
+  "cannot_determine": [
+    "Task performance metrics - no cutting task performed in this video"
+  ],
+  "technique_summary": "Instructional video introducing FLS equipment and components, not a performance demonstration",
+  "strengths": [],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "FLS equipment identification",
+      "Task module organization",
+      "Instrument selection for precision cutting"
+    ],
+    "verbal_cues": [],
+    "common_errors_addressed": [],
+    "skill_level_demonstrated": "instructional_overview"
+  },
+  "improvement_suggestions": [],
+  "video_id": "5OGmvcW4PJs",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T22:44:55.177295+00:00",
+  "scoreable": false
+}

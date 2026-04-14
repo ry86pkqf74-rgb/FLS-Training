@@ -1,0 +1,160 @@
+{
+  "video_classification": "instructional",
+  "task_id": "unclassified",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "pre_task_instruction",
+      "description": "Instructor narration: 'Pull back the left instrument (camera) to start the exercise.' Yellow circle pattern overlay visible on liver model.",
+      "technique_notes": "This is an instructional/tutorial video with explicit verbal cues and overlays",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "pattern_identification",
+      "description": "Yellow circle pattern shown with cardinal mark indicators (top, left, right, bottom). Green circle overlay indicates target area.",
+      "technique_notes": "Demonstrates the 4cm diameter circular cutting target with 2mm accuracy requirement",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "pattern_identification",
+      "description": "Yellow dashed circle pattern shown in progress. Instructor narration: 'Find the left side of the liver.'",
+      "technique_notes": "Shows proper target identification on anatomy model",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "gauze_identification",
+      "description": "Green circle overlay on gauze suspended between clamps. Instructor identifies: 'Find the gallbladder' and 'Find the pyloric sphincter.'",
+      "technique_notes": "Demonstrates identification of anatomical landmarks on the gauze cutting target",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "anatomical_orientation",
+      "description": "Green circle overlay on liver model showing 'Find the pyloric sphincter' with anatomical context.",
+      "technique_notes": "Comprehensive instructional content identifying key anatomical structures",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "gauze_target_orientation",
+      "description": "Yellow circle pattern overlay on gauze with instruction 'Find the colon's hepatic (or right) flexure.'",
+      "technique_notes": "Demonstrates target structure orientation and naming",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "task_instruction",
+      "description": "Instruction overlay: 'Press pedal to exit.' Yellow circle target on gauze. Shows cutting preparation phase.",
+      "technique_notes": "Instructional cue for transitioning out of setup phase",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "task_instruction",
+      "description": "Multiple yellow circle patterns shown on gauze. Instruction: 'Find the right side of the falciform ligament.' Shows ascending colon with yellow circle overlay.",
+      "technique_notes": "Comprehensive anatomical identification instructions",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "task_instruction",
+      "description": "Yellow circle overlay with instruction: 'Press pedal to exit.' Yellow pattern shown around kidney anatomy.",
+      "technique_notes": "Final anatomical landmark identification before task execution",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "post_instruction",
+      "description": "Green circle overlay on complete view. Camera instruction: 'Hold the camera steady until the next target is selected.' Yellow circle shown on gauze model.",
+      "technique_notes": "Camera positioning and task readiness instructions",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "summary",
+      "description": "Yellow circle pattern shown on liver model with full anatomical context visible.",
+      "technique_notes": "Summary view showing complete task setup and target area",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "instructional_closure",
+      "description": "Final view of yellow circle target on gauze with all anatomical landmarks labeled.",
+      "technique_notes": "Instructional video demonstrates proper task setup and anatomical identification without performing the cutting task",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 300,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable \u2014 instructional video"
+  },
+  "confidence": null,
+  "confidence_rationale": "This is an instructional/tutorial video with explicit narration, overlay graphics (yellow and green circles), and step-by-step anatomical identification cues. No actual task performance is demonstrated. Per scoring rubric, instructional content should NOT be scored as a performance \u2014 only teaching content should be extracted.",
+  "cannot_determine": [
+    "Completion time \u2014 no actual cutting task performance shown",
+    "Penalties \u2014 no cutting attempted, no deviation or errors to measure",
+    "FLS score \u2014 task not performed"
+  ],
+  "technique_summary": "This is an expert-level instructional demonstration explaining Task 2 (Pattern Cut) setup, target identification, anatomical landmarks, and camera positioning. No cutting performance is shown.",
+  "strengths": [
+    "Clear verbal cues and anatomical landmark identification",
+    "Effective use of overlay graphics (yellow and green circles) to highlight target areas",
+    "Comprehensive coverage of proper task setup and camera positioning"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Proper identification of circular cutting target (4cm diameter)",
+      "Anatomical landmark recognition: gallbladder, pyloric sphincter, colon flexure, falciform ligament, kidney",
+      "Camera positioning and steadiness during task setup",
+      "Use of pedalto exit and enter task mode"
+    ],
+    "verbal_cues": [
+      "Pull back the left instrument (camera) to start the exercise",
+      "Find the left side of the liver",
+      "Find the gallbladder",
+      "Find the pyloric sphincter",
+      "Find the colon's hepatic (or right) flexure",
+      "Press pedal to exit",
+      "Find the right side of the falciform ligament",
+      "Hold the camera steady until the next target is selected"
+    ],
+    "common_errors_addressed": [
+      "Improper anatomical orientation (instructional cues guide correct identification)",
+      "Poor camera positioning (explicitly instructs to keep camera steady)",
+      "Missing target identification steps (comprehensive walkthrough of all landmarks)"
+    ],
+    "skill_level_demonstrated": "expert"
+  },
+  "improvement_suggestions": [
+    "No performance scored \u2014 this is an instructional video only"
+  ],
+  "video_id": "9ncVe_lPcyg",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T23:01:25.085630+00:00",
+  "scoreable": false
+}

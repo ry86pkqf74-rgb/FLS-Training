@@ -1,0 +1,127 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 13,
+      "phase": "gauze_grasp",
+      "description": "Instrument poised at beginning of circular pattern.",
+      "technique_notes": "Needle drivers used to grasp gauze firmly.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 13.29,
+      "phase": "initial_cut",
+      "description": "Initial incision made into the pattern.",
+      "technique_notes": "Cutting initiated with good control.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 14.32,
+      "phase": "clockwise_cut",
+      "description": "Progression around the marked line clockwise.",
+      "technique_notes": "Cutting closely follows the marked line.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 16,
+      "timestamp_seconds": 15.06,
+      "phase": "counterclockwise_cut",
+      "description": "Switch to counterclockwise direction.",
+      "technique_notes": "Deviation from marked line appears minimal.",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 19,
+      "timestamp_seconds": 15.17,
+      "phase": "completion",
+      "description": "Cut completed with closure of circle.",
+      "technique_notes": "Clean full circle achieved.",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 137.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 13,
+      "end_seconds": 13.08,
+      "duration_seconds": 0.08,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 13.08,
+      "end_seconds": 13.29,
+      "duration_seconds": 0.21,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 13.29,
+      "end_seconds": 14.32,
+      "duration_seconds": 1.03,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "counterclockwise_cut",
+      "start_seconds": 14.32,
+      "end_seconds": 15.06,
+      "duration_seconds": 0.74,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 15.06,
+      "end_seconds": 15.17,
+      "duration_seconds": 0.11,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [],
+  "task_specific_assessments": {
+    "gauze_attachment": {
+      "attached": true
+    },
+    "deviation_measurements": {
+      "at_north_mm": 1,
+      "at_east_mm": 1,
+      "at_south_mm": 1,
+      "at_west_mm": 1,
+      "total_deviation_penalty": 0,
+      "confidence": 0.9
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 137.0,
+    "total_penalties": 0,
+    "total_fls_score": 163.0,
+    "formula_applied": "300 - 137.0 - 0 = 163.0"
+  },
+  "confidence": 0.9,
+  "confidence_rationale": "Clear visibility of marked line and consistent adherence observed, with minimal deviation noted.",
+  "cannot_determine": [],
+  "technique_summary": "Solid expert performance with controlled cutting and minimal deviation from the marked line.",
+  "strengths": [
+    "Consistent cutting speed and direction.",
+    "Firm control of gauze resulting in a well-defined circular incision."
+  ],
+  "improvement_suggestions": [
+    "Continued practice to maintain line adherence and cutting precision."
+  ],
+  "video_id": "1kHnyhU5E5A",
+  "source": "teacher_gpt4o",
+  "model_name": "gpt-4o",
+  "scored_at": "2026-04-13T19:20:00.848569+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.737657+00:00"
+  },
+  "scoreable": true
+}

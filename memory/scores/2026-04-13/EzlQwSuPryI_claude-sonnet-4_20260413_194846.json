@@ -1,0 +1,193 @@
+{
+  "task_id": "task2_pattern_cut",
+  "task_name": "Pattern Cut (Precision Cutting)",
+  "max_time_seconds": 300,
+  "frame_analyses": [
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 0.0,
+      "phase": "gauze_grasp",
+      "description": "Both scissors positioned above gauze with circular pattern marked in red dashed lines",
+      "technique_notes": "Gauze appears properly suspended between clamps, clear marking visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 5.0,
+      "phase": "initial_cut",
+      "description": "Right scissors making first incision at top of circle",
+      "technique_notes": "Initial entry point appears close to marked line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 15.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting progressing clockwise around circle, approximately at 2 o'clock position",
+      "technique_notes": "Smooth cutting motion, staying close to line",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 25.0,
+      "phase": "clockwise_cut",
+      "description": "Continuing clockwise cut, now at approximately 4 o'clock position",
+      "technique_notes": "Cut appears to deviate slightly outside line at this position",
+      "penalties_observed": [
+        "line_deviation"
+      ]
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 40.0,
+      "phase": "clockwise_cut",
+      "description": "Cut progressing to bottom of circle, approximately 6 o'clock position",
+      "technique_notes": "Some deviation from line visible, cut appears ragged",
+      "penalties_observed": [
+        "line_deviation"
+      ]
+    },
+    {
+      "frame_number": 15,
+      "timestamp_seconds": 60.0,
+      "phase": "clockwise_cut",
+      "description": "Cutting around left side of circle, approximately 9 o'clock position",
+      "technique_notes": "Multiple deviations visible, some areas cut well outside marked line",
+      "penalties_observed": [
+        "line_deviation"
+      ]
+    },
+    {
+      "frame_number": 18,
+      "timestamp_seconds": 75.0,
+      "phase": "clockwise_cut",
+      "description": "Nearing completion of circle, approaching 12 o'clock starting point",
+      "technique_notes": "Final portion shows improvement in line adherence",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 22,
+      "timestamp_seconds": 90.0,
+      "phase": "completion",
+      "description": "Circle cut completed, circular piece removed from gauze",
+      "technique_notes": "Task completed, gauze remains attached to clamps",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": 90.0,
+  "phase_timings": [
+    {
+      "phase": "gauze_grasp",
+      "start_seconds": 0,
+      "end_seconds": 2,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "initial_cut",
+      "start_seconds": 2,
+      "end_seconds": 8,
+      "duration_seconds": 6,
+      "benchmark_comparison": "expert"
+    },
+    {
+      "phase": "clockwise_cut",
+      "start_seconds": 8,
+      "end_seconds": 88,
+      "duration_seconds": 80,
+      "benchmark_comparison": "intermediate"
+    },
+    {
+      "phase": "completion",
+      "start_seconds": 88,
+      "end_seconds": 90,
+      "duration_seconds": 2,
+      "benchmark_comparison": "expert"
+    }
+  ],
+  "penalties": [
+    {
+      "type": "line_deviation",
+      "description": "Deviation from marked line at 3 o'clock position, approximately 3mm outside",
+      "points_deducted": 3.0,
+      "frame_evidence": [
+        8,
+        9
+      ],
+      "confidence": 0.7
+    },
+    {
+      "type": "line_deviation",
+      "description": "Deviation from marked line at 6 o'clock position, approximately 2mm outside",
+      "points_deducted": 2.0,
+      "frame_evidence": [
+        11,
+        12
+      ],
+      "confidence": 0.6
+    },
+    {
+      "type": "line_deviation",
+      "description": "Multiple deviations on left side of circle, estimated 4mm total deviation",
+      "points_deducted": 4.0,
+      "frame_evidence": [
+        15,
+        16,
+        17
+      ],
+      "confidence": 0.5
+    }
+  ],
+  "task_specific_assessments": {
+    "cutting_precision": {
+      "total_deviation_mm": 9.0,
+      "cardinal_point_deviations": {
+        "12_oclock": 1.0,
+        "3_oclock": 3.0,
+        "6_oclock": 2.0,
+        "9_oclock": 3.0
+      },
+      "cut_completeness": "complete",
+      "gauze_integrity": "maintained"
+    },
+    "gauze_assessment": {
+      "detached_from_clamp": false,
+      "underlying_tissue_damage": false,
+      "circle_completely_excised": true
+    }
+  },
+  "score_components": {
+    "max_score": 300,
+    "time_used": 90.0,
+    "total_penalties": 9.0,
+    "total_fls_score": 201.0,
+    "formula_applied": "300 - 90.0 - 9.0 = 201.0"
+  },
+  "confidence": 0.62,
+  "confidence_rationale": "Deviation measurements estimated from oblique camera angle. Some areas of the cut are partially obscured by instrument shadows. Time estimation based on visible cutting progression.",
+  "cannot_determine": [
+    "Exact mm measurements at all cardinal points due to camera angle",
+    "Precise deviation measurements in shadowed areas of frames 13-14"
+  ],
+  "technique_summary": "Intermediate level performance with acceptable time but significant line deviations. Cutting technique shows some inconsistency with better precision in final quarter of circle.",
+  "strengths": [
+    "Appropriate cutting speed for accuracy",
+    "Maintained gauze suspension throughout task",
+    "Complete circle excision achieved"
+  ],
+  "improvement_suggestions": [
+    "Focus on maintaining closer adherence to marked line throughout entire cut",
+    "Consider slower, more deliberate cutting in challenging curve sections",
+    "Practice consistent hand positioning to minimize deviation"
+  ],
+  "video_id": "EzlQwSuPryI",
+  "source": "teacher_claude",
+  "model_name": "claude-sonnet-4-20250514",
+  "scored_at": "2026-04-13T19:48:46.075007+00:00",
+  "video_classification": "performance",
+  "_normalizer": {
+    "classification_inferred": "performance",
+    "normalized_at": "2026-04-13T23:28:08.804660+00:00"
+  },
+  "scoreable": true
+}

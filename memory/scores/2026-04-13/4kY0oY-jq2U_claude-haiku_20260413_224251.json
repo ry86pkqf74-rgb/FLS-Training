@@ -1,0 +1,159 @@
+{
+  "video_classification": "instructional",
+  "task_id": "task5_intracorporeal_suturing",
+  "task_name": "Intracorporeal Suture with Knot Tying",
+  "max_time_seconds": 600,
+  "frame_analyses": [
+    {
+      "frame_number": 1,
+      "timestamp_seconds": 0.0,
+      "phase": "setup",
+      "description": "Title slide: 'Objectives - Provide an example of how to teach laparoscopic skills virtually'",
+      "technique_notes": "Educational/instructional content with text overlays",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 2,
+      "timestamp_seconds": 5.0,
+      "phase": "setup",
+      "description": "Objectives slide expanded: demonstrate portable laparoscopic box trainer, describe optimal FLS setup, optimize virtual platform",
+      "technique_notes": "Narrated instructional objectives visible",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 3,
+      "timestamp_seconds": 10.0,
+      "phase": "equipment_display",
+      "description": "Equipment overview: laparoscopic graspers, clips, suture pad with Penrose drain highlighted with arrows",
+      "technique_notes": "Instructional equipment identification with labeled callouts",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 4,
+      "timestamp_seconds": 15.0,
+      "phase": "equipment_display",
+      "description": "Portable FLS trainer box (Ethicon Endo-Surgery) shown with hand demonstrating port access",
+      "technique_notes": "Physical trainer setup demonstration for virtual platform",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 5,
+      "timestamp_seconds": 20.0,
+      "phase": "equipment_display",
+      "description": "Trainer box angled view showing port layout and internal chamber",
+      "technique_notes": "Spatial orientation and setup instruction",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 6,
+      "timestamp_seconds": 25.0,
+      "phase": "equipment_display",
+      "description": "Trainer face-on showing instrument port positions marked with crosshairs and Penrose drain pad visible on smartphone display",
+      "technique_notes": "Integration of mobile/virtual display with physical trainer",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 7,
+      "timestamp_seconds": 30.0,
+      "phase": "demonstration_setup",
+      "description": "Pattern cut task (Task 2) shown with gauze suspended between clamps in trainer - camera angle from instrument view",
+      "technique_notes": "Example of different FLS task setup",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 8,
+      "timestamp_seconds": 35.0,
+      "phase": "demonstration_setup",
+      "description": "Close-up of peg transfer board with green foam objects on pegs, yellow instrument visible",
+      "technique_notes": "Task 1 peg transfer task shown as reference",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 9,
+      "timestamp_seconds": 40.0,
+      "phase": "instructional_content",
+      "description": "Title slide: 'Optimizing Virtual Platform For Training'",
+      "technique_notes": "Transition to next instructional section",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 10,
+      "timestamp_seconds": 45.0,
+      "phase": "demonstration_performance",
+      "description": "Live demonstration: laparoscopic scissors grasping gauze with circular pattern drawn, two needle drivers visible from below",
+      "technique_notes": "Actual task performance (Pattern Cut Task 2) begins",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 11,
+      "timestamp_seconds": 50.0,
+      "phase": "demonstration_performance",
+      "description": "Zoom breakout room interface visible; Pattern Cut task being demonstrated with scissors and gauze in foreground",
+      "technique_notes": "Virtual training delivery platform (Zoom breakout rooms) shown during live task",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 12,
+      "timestamp_seconds": 55.0,
+      "phase": "demonstration_performance",
+      "description": "Split screen Zoom interface: left side shows live task (suturing red Penrose with yellow instrument), right side shows 'CT' logo/watermark",
+      "technique_notes": "Multi-camera virtual demonstration setup for remote teaching",
+      "penalties_observed": []
+    },
+    {
+      "frame_number": 13,
+      "timestamp_seconds": 60.0,
+      "phase": "instructional_title",
+      "description": "Title slide: 'Tele-simulation for laparoscopic skills training'",
+      "technique_notes": "Final instructional section title",
+      "penalties_observed": []
+    }
+  ],
+  "completion_time_seconds": null,
+  "cannot_score": true,
+  "reason_not_scored": "This video is classified as INSTRUCTIONAL content. It contains educational slides with text overlays, narrated objectives, equipment identification, and demonstrations delivered as part of a training presentation. While it includes brief live task demonstrations (Pattern Cut and suturing examples) recorded during a virtual Zoom session, the primary content is pedagogical instruction about virtual FLS training setup and methodology, not a formal performance evaluation of a single trainee completing an entire task.",
+  "phase_timings": [],
+  "penalties": [],
+  "task_specific_assessments": {},
+  "score_components": {
+    "max_score": 600,
+    "time_used": null,
+    "total_penalties": null,
+    "total_fls_score": null,
+    "formula_applied": "Not applicable - instructional video"
+  },
+  "confidence": 1.0,
+  "confidence_rationale": "Video classification is definitive. Multiple frames contain instructional slide titles, learning objectives, labeled equipment diagrams, and narrated content. Live task clips are interspersed but serve as teaching examples within a larger curriculum module, not as standalone scored performances.",
+  "cannot_determine": [
+    "Completion time - no single coherent task performance to time",
+    "Specific penalties - demonstrations are illustrative, not evaluated performances",
+    "FLS score - video is educational content delivery, not performance assessment"
+  ],
+  "teaching_content": {
+    "demonstrated_techniques": [
+      "Portable FLS trainer box setup and port positioning",
+      "Integration of physical trainer with mobile/virtual display technology",
+      "Multi-camera recording setup for virtual instruction delivery",
+      "Equipment identification: graspers, scissors, clips, Penrose drain, suture",
+      "Zoom breakout room usage for remote FLS training delivery",
+      "Live task demonstration during virtual session (Pattern Cut and suturing examples)"
+    ],
+    "verbal_cues": [
+      "Objectives clearly stated: provide example of virtual laparoscopic skills teaching",
+      "Emphasis on demonstrating portable trainer setup for mobile devices",
+      "Focus on describing optimal FLS task setup",
+      "Discussion of optimizing virtual platform for training"
+    ],
+    "common_errors_addressed": [
+      "Video does not explicitly address common errors; instead focuses on best practices for virtual delivery and trainer setup"
+    ],
+    "skill_level_demonstrated": "expert",
+    "instructional_focus": "Virtual/tele-simulation delivery methodology for FLS training rather than trainee performance assessment"
+  },
+  "summary": "This is an instructional video demonstrating how to teach laparoscopic skills using a portable FLS trainer and virtual platform (Zoom-based tele-simulation). It shows equipment setup, virtual delivery methods, and includes brief live task examples but is primarily educational content about training infrastructure and remote pedagogy, not a performance to be scored.",
+  "video_id": "4kY0oY-jq2U",
+  "source": "teacher_haiku",
+  "model_name": "claude-haiku-4-5-20251001",
+  "scored_at": "2026-04-13T22:42:51.951858+00:00",
+  "scoreable": false
+}
