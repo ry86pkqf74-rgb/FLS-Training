@@ -170,7 +170,7 @@ def row_from_lasana(path: Path, frames_root: Path) -> dict | None:
     task_id = canon_task(d.get("task_id"))
     if not task_id: return None
     sc = d.get("score_components")
-    if not isinstance(sc, dict) or "total_fls_score" not in sc:
+    if not isinstance(sc, dict) or sc.get("total_fls_score") is None:
         return None
     # Build a v002-canonical target (match v4/YT row shape) so the model sees
     # ONE output schema across all sources. Drop LASANA-native fields that
