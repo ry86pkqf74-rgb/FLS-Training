@@ -97,13 +97,25 @@ def old_to_v002_target(target: dict, task_id: str) -> dict | None:
         ),
     }
 
-    new_target = dict(target)
-    new_target["task_id"] = task_canon
-    new_target["score_components"] = new_sc
-    new_target["estimated_fls_score"] = float(total)
-    if "completion_time_seconds" not in new_target and time_used is not None:
-        new_target["completion_time_seconds"] = float(time_used)
-    return new_target
+    # Build canonical v002 target — SAME shape as LASANA rows — so the model
+    # sees a single output schema across all sources. Drop everything else.
+    video_id = target.get("video_id") or "unknown"
+    canonical = {
+        "id": target.get("id") or f"score_v4_{video_id}",
+        "video_id": video_id,
+        "video_filename": target.get("video_filename") or f"{video_id}.mp4",
+        "source": target.get("source") or "v4",
+        "model_name": target.get("model_name") or "claude-sonnet-4-20250514",
+        "model_version": target.get("model_version") or "claude-sonnet-4-20250514",
+        "prompt_version": target.get("prompt_version") or "v002",
+        "task_id": task_canon,
+        "completion_time_seconds": float(target.get("completion_time_seconds") or (time_used or 0.0)),
+        "penalties": target.get("penalties") or [],
+        "score_components": new_sc,
+        "estimated_fls_score": float(total),
+        "confidence": float(target.get("confidence") or target.get("confidence_score") or 0.5),
+    }
+    return canonical
 
 
 def row_from_v4(row: dict, frames_root: Path) -> dict | None:
