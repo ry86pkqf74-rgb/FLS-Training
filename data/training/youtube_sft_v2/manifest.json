@@ -1,0 +1,31 @@
+{
+  "generated_by": "044_expand_sft_pool.py",
+  "sources": {
+    "v4": 86,
+    "gold": 0,
+    "lasana_rescore": 527
+  },
+  "dropped": {
+    "v4_schema": 77,
+    "v4_noframe": 5,
+    "gold_schema": 16,
+    "gold_noframe": 0,
+    "lasana_schema": 0,
+    "lasana_noframe": 0,
+    "low_conf": 439
+  },
+  "task_counts": {
+    "task2_pattern_cut": 168,
+    "task3_endoloop": 12,
+    "task1_peg_transfer": 294,
+    "task4_extracorporeal_knot": 9,
+    "task5_intracorporeal_suturing": 130
+  },
+  "splits": {
+    "train": 494,
+    "val": 60,
+    "test": 59
+  },
+  "min_conf": 0.5,
+  "require_frames": true
+}
