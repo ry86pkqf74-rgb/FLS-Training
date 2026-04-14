@@ -32,7 +32,11 @@ ap.add_argument("--diversity_gate", type=float, default=0.5,
 args = ap.parse_args()
 
 import torch
-from transformers import AutoProcessor, Qwen2VLForConditionalGeneration, BitsAndBytesConfig
+from transformers import AutoProcessor, BitsAndBytesConfig
+try:
+    from transformers import Qwen2_5_VLForConditionalGeneration as VLModel
+except ImportError:
+    from transformers import Qwen2VLForConditionalGeneration as VLModel
 from peft import PeftModel
 
 print(f"=== Eval {args.adapter} on {args.test} — {datetime.now()} ===")
@@ -40,7 +44,7 @@ print(f"=== Eval {args.adapter} on {args.test} — {datetime.now()} ===")
 bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
                         bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_use_double_quant=True)
 MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
-base = Qwen2VLForConditionalGeneration.from_pretrained(
+base = VLModel.from_pretrained(
     MODEL_ID, quantization_config=bnb, device_map="auto",
     torch_dtype=torch.bfloat16, attn_implementation="sdpa")
 model = PeftModel.from_pretrained(base, args.adapter)
@@ -101,23 +105,38 @@ preds_task = []
 
 for i, ex in enumerate(test):
     frames = ex.get("frames") or []
+    # Filter to existing paths (absolute or relative to /workspace)
+    import os
+    resolved = []
+    for f in frames:
+        if not f: continue
+        p = f if os.path.isabs(f) else str((Path("/workspace") / f).resolve())
+        if os.path.exists(p): resolved.append(p)
+    frames = resolved
     if not frames:
-        d = Path("/workspace/frames") / ex["video_id"]
-        frames = sorted(str(p) for p in d.glob("*.jpg")) if d.exists() else []
+        vid = ex["video_id"]
+        for d in (Path("/workspace/frames") / vid, Path("/workspace/frames") / vid.replace("yt_","",1)):
+            if d.exists():
+                frames = sorted(str(p) for p in d.glob("*.jpg"))
+                break
     frames = sample_frames(frames, args.max_frames)
     if not frames:
         results.append({"video_id": ex["video_id"], "error": "no_frames"})
         continue
 
+    from PIL import Image as _PILImage
+    import copy as _copy
     messages = [
         {"role":"system","content":[{"type":"text","text":SYSTEM_PROMPT}]},
         {"role":"user","content":[*[{"type":"image","image":p} for p in frames],
                                   {"type":"text","text":f"Score this FLS {ex.get('task_id','unknown')} performance. JSON only."}]},
     ]
-    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    image_inputs, video_inputs = process_vision_info(messages)
-    inp = processor(text=[text], images=image_inputs, videos=video_inputs,
-                    padding=True, return_tensors="pt").to(model.device)
+    text = processor.apply_chat_template(_copy.deepcopy(messages), tokenize=False, add_generation_prompt=True)
+    image_inputs = []
+    for p in frames:
+        img = _PILImage.open(p).convert("RGB"); img.thumbnail((448,448)); image_inputs.append(img)
+    inp = processor(text=[text], images=image_inputs, videos=None,
+                    padding=True, truncation=False, return_tensors="pt").to(model.device)
     with torch.no_grad():
         out = model.generate(**inp, max_new_tokens=1400, do_sample=False, temperature=0.0)
     gen = processor.batch_decode(out[:, inp.input_ids.shape[1]:], skip_special_tokens=True)[0]

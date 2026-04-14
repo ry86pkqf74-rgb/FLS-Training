@@ -70,16 +70,24 @@ SYSTEM_PROMPT = (
 )
 
 def resolve_frames(ex):
-    """Return up to MAX_FRAMES absolute image paths for this example."""
+    """Return up to MAX_FRAMES absolute image paths that actually exist."""
     frames = ex.get("frames") or []
+    paths = []
     if frames:
-        paths = [str((WS / f).resolve()) if not os.path.isabs(f) else f for f in frames]
-    else:
-        d = FRAMES_ROOT / ex["video_id"]
-        if d.exists():
-            paths = sorted(str(p) for p in d.glob("*.jpg"))
-        else:
-            paths = []
+        for f in frames:
+            if not f:
+                continue
+            p = f if os.path.isabs(f) else str((WS / f).resolve())
+            if os.path.exists(p):
+                paths.append(p)
+    if not paths:
+        vid = ex["video_id"]
+        for candidate in (FRAMES_ROOT / vid, FRAMES_ROOT / vid.replace("yt_", "", 1)):
+            if candidate.exists():
+                paths = sorted(str(p) for p in candidate.glob("*.jpg"))
+                break
+    # Filter again for existence
+    paths = [p for p in paths if p and os.path.exists(p)]
     if len(paths) > MAX_FRAMES:
         step = len(paths) / MAX_FRAMES
         paths = [paths[int(i * step)] for i in range(MAX_FRAMES)]
@@ -124,7 +132,10 @@ if len(train_convos) == 0:
     sys.exit(1)
 
 from transformers import AutoProcessor, BitsAndBytesConfig
-from transformers import Qwen2VLForConditionalGeneration
+try:
+    from transformers import Qwen2_5_VLForConditionalGeneration as VLModel
+except ImportError:
+    from transformers import Qwen2VLForConditionalGeneration as VLModel
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 
 print("\nLoading Qwen2.5-VL-7B-Instruct (4-bit)...")
@@ -136,7 +147,7 @@ bnb_config = BitsAndBytesConfig(
 )
 
 MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
-model = Qwen2VLForConditionalGeneration.from_pretrained(
+model = VLModel.from_pretrained(
     MODEL_ID,
     quantization_config=bnb_config,
     device_map="auto",
@@ -161,26 +172,56 @@ total = sum(p.numel() for p in model.parameters())
 print(f"Parameters: {trainable:,} trainable / {total:,} total ({100*trainable/total:.2f}%)")
 
 # Build datasets using the processor's chat template for VL inputs
-from datasets import Dataset
+from torch.utils.data import Dataset as _TorchDataset
+
+class ConvoDataset(_TorchDataset):
+    def __init__(self, convos): self.convos = convos
+    def __len__(self): return len(self.convos)
+    def __getitem__(self, i): return self.convos[i]
 
 def format_example(ex):
-    """Apply Qwen2.5-VL chat template → pixel_values + input_ids."""
-    from qwen_vl_utils import process_vision_info
-    text = processor.apply_chat_template(ex["messages"], tokenize=False, add_generation_prompt=False)
-    image_inputs, video_inputs = process_vision_info(ex["messages"])
+    """Apply Qwen2.5-VL chat template → pixel_values + input_ids.
+    Make a deep-copy of messages for chat template (which may mutate) and
+    resolve images ourselves to avoid qwen_vl_utils dict-mutation issues."""
+    import copy as _copy
+    from PIL import Image
+    msgs_for_template = _copy.deepcopy(ex["messages"])
+    text = processor.apply_chat_template(msgs_for_template, tokenize=False, add_generation_prompt=False)
+    # Collect all image paths from the ORIGINAL messages
+    image_inputs = []
+    MAX_DIM = 448  # keep per-image tokens small so 8 frames fit in seq budget
+    for m in ex["messages"]:
+        c = m.get("content")
+        if isinstance(c, list):
+            for item in c:
+                if isinstance(item, dict) and item.get("type") == "image":
+                    p = item.get("image")
+                    if p and isinstance(p, str):
+                        img = Image.open(p).convert("RGB")
+                        # Downscale aggressively — 8 frames @ 448px ≈ manageable seq-len
+                        img.thumbnail((MAX_DIM, MAX_DIM))
+                        image_inputs.append(img)
+    video_inputs = None
     batch = processor(
         text=[text],
         images=image_inputs,
         videos=video_inputs,
         padding=True,
-        truncation=True,
-        max_length=4096,
+        truncation=False,
         return_tensors="pt",
     )
-    return {k: v[0] for k, v in batch.items()}
+    # Only squeeze batch-dim on text tensors; pixel_values / image_grid_thw are
+    # already flat across images and must not be indexed.
+    out = {}
+    for k, v in batch.items():
+        if k in ("input_ids", "attention_mask"):
+            out[k] = v[0]
+        else:
+            out[k] = v
+    return out
 
-train_ds = Dataset.from_list(train_convos)
-val_ds = Dataset.from_list(val_convos)
+train_ds = ConvoDataset(train_convos)
+val_ds = ConvoDataset(val_convos)
 
 # Custom collator — pre-tokenized, pad by pixel_values/input_ids separately
 from torch.nn.utils.rnn import pad_sequence
@@ -204,9 +245,9 @@ def collate(batch):
 from transformers import Trainer, TrainingArguments
 
 BATCH = 1
-GRAD_ACCUM = 8
-EPOCHS = 3
-LR = 2e-4
+GRAD_ACCUM = 4      # smaller accum -> more gradient updates per epoch
+EPOCHS = 15         # bumped from 3; v1 (18 steps) was far too short to learn v002 schema
+LR = 3e-4           # slight bump; small dataset tolerates higher LR
 
 args = TrainingArguments(
     output_dir="/workspace/checkpoints_vl",
@@ -228,7 +269,7 @@ args = TrainingArguments(
     seed=42,
     gradient_checkpointing=True,
     remove_unused_columns=False,
-    dataloader_num_workers=2,
+    dataloader_num_workers=0,
 )
 
 print(f"\n=== Training — {datetime.now()} ===")
