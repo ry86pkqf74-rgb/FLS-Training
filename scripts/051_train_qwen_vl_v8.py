@@ -30,6 +30,19 @@ from datetime import datetime
 print(f"=== FLS Round 2 v8 (Qwen2.5-VL, LoRA + visual.merger unfrozen) — {datetime.now()} ===")
 
 import torch
+import torch.nn as _nn
+# nn.Module.set_submodule was added in torch 2.5; the pod ships torch 2.4.
+# Newer `transformers` bnb 4-bit skip-modules path calls it — monkey-patch
+# a compatible shim so we don't need to force a torch upgrade.
+if not hasattr(_nn.Module, "set_submodule"):
+    def _set_submodule(self, target: str, module: _nn.Module):
+        if target == "":
+            raise ValueError("set_submodule: empty target")
+        parts = target.split(".")
+        parent = self.get_submodule(".".join(parts[:-1])) if len(parts) > 1 else self
+        setattr(parent, parts[-1], module)
+    _nn.Module.set_submodule = _set_submodule
+    print("[compat] Installed nn.Module.set_submodule shim (torch<2.5).")
 gpu = torch.cuda.get_device_name(0)
 vram = torch.cuda.get_device_properties(0).total_memory / 1e9
 print(f"GPU: {gpu} ({vram:.1f}GB)  |  PyTorch: {torch.__version__}")
