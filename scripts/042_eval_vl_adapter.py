@@ -115,10 +115,17 @@ for i, ex in enumerate(test):
     frames = resolved
     if not frames:
         vid = ex["video_id"]
-        for d in (Path("/workspace/frames") / vid, Path("/workspace/frames") / vid.replace("yt_","",1)):
+        lasana_vid = vid.replace("lasana_", "", 1) if vid.startswith("lasana_") else vid
+        candidates = [
+            Path("/workspace/frames") / vid,
+            Path("/workspace/frames") / vid.replace("yt_", "", 1),
+            Path("/workspace/lasana_frames") / vid,
+            Path("/workspace/lasana_frames") / lasana_vid,
+        ]
+        for d in candidates:
             if d.exists():
                 frames = sorted(str(p) for p in d.glob("*.jpg"))
-                break
+                if frames: break
     frames = sample_frames(frames, args.max_frames)
     if not frames:
         results.append({"video_id": ex["video_id"], "error": "no_frames"})
