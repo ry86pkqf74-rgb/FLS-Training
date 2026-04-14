@@ -1,7 +1,1860 @@
 {
-  "eval_loss": NaN,
-  "eval_runtime": 43.1443,
-  "eval_samples_per_second": 2.805,
-  "eval_steps_per_second": 0.719,
-  "epoch": 3.0
+  "summary": {
+    "run_id": "fls_eval_20260414_001330",
+    "adapter": "/workspace/checkpoints/final",
+    "n_examples": 205,
+    "valid_json_rate": 1.0,
+    "task_id_accuracy": 1.0,
+    "mae_fls_score_mean": 57.56487804878048,
+    "mae_fls_score_n": 205,
+    "wall_seconds": 2341.718188047409,
+    "completed_at": "2026-04-14T00:13:30.042262+00:00"
+  },
+  "results": [
+    {
+      "video_id": "lasana_balloon_bluor",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 163.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_creild",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 48.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_foott",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 157.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_glaiox",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 113.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_graiopp",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 139.9,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_haams",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 58.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_hroiasts",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 169.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_hydrioms",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 210.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_jioupt",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 163.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_juict",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 208.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_kaiann",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 158.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_khuarm",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 211.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_knauely",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 72.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_kreausp",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 48.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_kroiss",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 108.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_mccraioss",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 97.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_mccuimp",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 170.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_mcfeuhl",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 59.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_mcfoerr",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 237.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_mckeungs",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 171.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_mihn",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 83.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_noedy",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 225.9,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_noon",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 215.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_pheurts",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 114.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_ploand",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 237.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_psychaoct",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 98.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_psychuez",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 210.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_reiants",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 210.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_schwaiants",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 87.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_schweands",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 54.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_scraerr",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 187.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_sheop",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 177.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_skit",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 216.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_slaasly",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 232.9,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_snaitch",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 188.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_snoeps",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 114.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_spleows",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 206.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_sploesp",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 138.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_spuohn",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 59.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_straipt",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 101.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_swaengly",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 144.9,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_szow",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 63.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_thraann",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 76.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_threall",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 131.9,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_twaard",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 48.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_twiuty",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 131.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_twuach",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 243.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_voah",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 54.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_voenk",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 196.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_wrauel",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 125.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_balloon_xaerg",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 119.9,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_bluags",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 78.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_broil",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 90.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_fliully",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 186.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_fraiob",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 73.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_gaiong",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 160.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_gieun",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 102.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_gleentz",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 145.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_hraemp",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 213.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcaully",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 131.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcfaagh",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 137.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mckuieys",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 170.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcloiarst",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 206.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcmaack",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 208.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcmex",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 106.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcmoorth",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 196.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcneorry",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 99.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_mcnoedy",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 121.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_nitt",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 197.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_physaox",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 142.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_physeurg",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 195.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_priouft",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 178.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_psychieubs",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 89.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_ruent",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 175.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_schmint",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 134.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_schrauerf",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 110.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_schreell",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 76.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_schuils",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 124.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_schwiouf",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 211.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_schworn",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 112.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_seaucks",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 186.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_shubly",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 171.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_siaf",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 199.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_skoasm",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 134.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_smaiasp",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 213.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_snur",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 220.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_spraiorn",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 59.1,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_sraongly",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 168.0,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_szoiands",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 220.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_teaucy",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 129.2,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_threrg",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 169.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_treust",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 189.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_tung",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 73.3,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_twaicks",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 128.7,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_twengly",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 172.9,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_vuiefy",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 152.8,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_weaft",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 181.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_wrauerr",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 145.5,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_wuieff",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 90.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_xall",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 83.6,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_circle_xeoch",
+      "expected_task": "task2_pattern_cut",
+      "expected_fls": 240.4,
+      "predicted_task": "task2_pattern_cut",
+      "predicted_fls": 144.6,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task2_pattern_cut\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.15486,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.37948,\n      \"depth_perception\": -0.06484,\n      \"efficiency\": -0.08484,\n      \"tissue_handlin"
+    },
+    {
+      "video_id": "lasana_peg_cheorly",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 201.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_cycliarn",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 114.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_frauny",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 125.2,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_freauf",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 140.2,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_glailt",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 228.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_haov",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 218.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_huerg",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 214.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_hydruierds",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 54.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_hyoirm",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 134.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_hypaom",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 145.7,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_hypiegs",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 202.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_jaegy",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 103.5,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_khieuy",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 188.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_khouss",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 154.4,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_kriaorts",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 174.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_kriern",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 125.2,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_kruef",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 108.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_kwuex",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 157.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_lietch",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 124.6,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mccaosm",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 235.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mcdeux",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 161.4,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mcfeurds",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 199.2,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mcgiys",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 99.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mciarty",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 206.5,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mclaonk",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 118.7,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mcmouft",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 119.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mcneaum",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 205.5,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mcnoem",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 57.5,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_mcnoutt",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 84.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_phoegs",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 107.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_piff",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 152.2,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_psychuobly",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 212.8,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_psychuotts",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 72.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_qeelt",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 126.8,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_reauks",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 197.6,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_rhieurry",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 185.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_rielt",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 87.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_sceufy",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 92.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_schmaeps",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 85.9,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_schwiry",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 112.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_scuints",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 104.8,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_soihn",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 144.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_sprutz",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 90.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_steety",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 165.3,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_striaoc",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 115.7,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_swiism",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 199.8,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_symbeiangs",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 208.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_symboerf",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 141.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_tsiould",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 163.2,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_voal",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 159.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_whiuck",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 177.7,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_wrak",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 99.0,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_wruoncy",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 107.1,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_peg_wuocs",
+      "expected_task": "task1_peg_transfer",
+      "expected_fls": 185.9,
+      "predicted_task": "task1_peg_transfer",
+      "predicted_fls": 137.0,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task1_peg_transfer\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.25436,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.78947,\n      \"depth_perception\": -0.06456,\n      \"efficiency\": -0.03433,\n      \"tissue_handli"
+    },
+    {
+      "video_id": "lasana_suture_bloihl",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 215.1,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_boosly",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 189.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_cheax",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 188.4,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_chruiemp",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 350.5,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_cuehn",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 140.4,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_draurm",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 244.7,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_geaks",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 403.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_giosly",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 457.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_gniet",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 229.0,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_hydroiw",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 173.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_hyoeg",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 321.8,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_joeys",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 97.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_juify",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 471.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_klintz",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 416.2,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_kluosm",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 336.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_kniewn",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 242.0,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_knoags",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 337.1,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_kraiank",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 470.4,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_kuangly",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 196.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_mccleery",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 385.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_mccraingly",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 281.5,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_mccrouss",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 110.2,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_mcmeauntz",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 359.8,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_phoiamp",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 97.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_qoosh",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 97.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_rhusp",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 442.7,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_schmeecs",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 441.0,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_schnouc",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 142.2,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_schruantly",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 449.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_schwaft",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 161.5,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_schwaush",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 292.0,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_scourf",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 333.9,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_scrarn",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 371.2,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_shroud",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 154.7,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_smits",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 429.9,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_snoiam",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 280.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_spliaos",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 280.7,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_spuofy",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 361.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_striey",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 428.7,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_symbaently",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 293.6,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_symbairk",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 166.1,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_symbuect",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 408.9,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_taey",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 345.8,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_teft",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 307.3,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_teusm",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 236.4,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_thieght",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 352.0,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_treght",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 251.2,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_triery",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 321.4,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_twuind",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 417.4,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    },
+    {
+      "video_id": "lasana_suture_xec",
+      "expected_task": "task5_intracorporeal_suture",
+      "expected_fls": 335.5,
+      "predicted_task": "task5_intracorporeal_suture",
+      "predicted_fls": 278.1,
+      "json_valid": true,
+      "raw_output_head": "{\n  \"video_classification\": \"performance\",\n  \"task_id\": \"task5_intracorporeal_suture\",\n  \"source_dataset\": \"lasana\",\n  \"ground_truth\": {\n    \"grs_zscore\": -0.24837,\n    \"sub_scores\": {\n      \"bimanual_dexterity\": -0.16944,\n      \"depth_perception\": -0.08736,\n      \"efficiency\": -0.06444,\n      \"tiss"
+    }
+  ]
 }

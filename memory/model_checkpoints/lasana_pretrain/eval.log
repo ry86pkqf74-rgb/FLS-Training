@@ -1,0 +1,31 @@
+=== FLS eval — 2026-04-13T23:34:21.480386+00:00 ===
+Loaded 205 test examples
+Loading base model...
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.47it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.28it/s]
+Attaching adapter...
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:634: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:651: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+  [25/205] valid_json=25 mae_n=25 task_match=25 elapsed=272s eta=1961s
+  [50/205] valid_json=50 mae_n=50 task_match=50 elapsed=542s eta=1681s
+  [75/205] valid_json=75 mae_n=75 task_match=75 elapsed=814s eta=1411s
+  [100/205] valid_json=100 mae_n=100 task_match=100 elapsed=1084s eta=1139s
+  [125/205] valid_json=125 mae_n=125 task_match=125 elapsed=1371s eta=878s
+  [150/205] valid_json=150 mae_n=150 task_match=150 elapsed=1662s eta=609s
+  [175/205] valid_json=175 mae_n=175 task_match=175 elapsed=1969s eta=338s
+  [200/205] valid_json=200 mae_n=200 task_match=200 elapsed=2279s eta=57s
+
+=== SUMMARY ===
+{
+  "run_id": "fls_eval_20260414_001330",
+  "adapter": "/workspace/checkpoints/final",
+  "n_examples": 205,
+  "valid_json_rate": 1.0,
+  "task_id_accuracy": 1.0,
+  "mae_fls_score_mean": 57.56487804878048,
+  "mae_fls_score_n": 205,
+  "wall_seconds": 2341.718188047409,
+  "completed_at": "2026-04-14T00:13:30.042262+00:00"
+}
