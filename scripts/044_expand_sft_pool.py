@@ -172,18 +172,31 @@ def row_from_lasana(path: Path, frames_root: Path) -> dict | None:
     sc = d.get("score_components")
     if not isinstance(sc, dict) or "total_fls_score" not in sc:
         return None
-    # Ensure estimated_fls_score is present top-level for downstream eval
-    if d.get("estimated_fls_score") is None:
-        d["estimated_fls_score"] = sc.get("total_fls_score")
-    # Strip our debugging fields
-    for k in ("_raw_claude_response", "_rescored_at", "_source", "_model",
-              "_prompt_version"):
-        d.pop(k, None)
+    # Build a v002-canonical target (match v4/YT row shape) so the model sees
+    # ONE output schema across all sources. Drop LASANA-native fields that
+    # don't appear in v4 rows: frame_analyses, task_name, max_time_seconds,
+    # phase_timings, task_specific_assessments, strengths, improvement_suggestions,
+    # technique_summary, cannot_determine, confidence_rationale, and all _debug keys.
+    canonical = {
+        "id": f"score_lasana_{video_id}",
+        "video_id": video_id,
+        "video_filename": f"{video_id}.mp4",
+        "source": "lasana_rescore",
+        "model_name": "claude-sonnet-4-20250514",
+        "model_version": "claude-sonnet-4-20250514",
+        "prompt_version": "v002",
+        "task_id": task_id,
+        "completion_time_seconds": float(d.get("completion_time_seconds") or sc.get("time_used") or 0.0),
+        "penalties": d.get("penalties") or [],
+        "score_components": sc,
+        "estimated_fls_score": float(sc.get("total_fls_score")),
+        "confidence": float(d.get("confidence", 0.7)),
+    }
     return {
-        "video_id": video_id, "task_id": task_id, "target": d,
+        "video_id": video_id, "task_id": task_id, "target": canonical,
         "frames": resolve_lasana_frames(video_id, frames_root),
         "source": "lasana_rescore",
-        "consensus_conf": d.get("confidence", 0.7),
+        "consensus_conf": float(d.get("confidence", 0.7)),
     }
 
 
