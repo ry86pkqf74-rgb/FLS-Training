@@ -308,11 +308,16 @@ def main() -> None:
     all_rows = [r for r in all_rows if (r.get("consensus_conf") or 0) >= args.min_conf]
     dropped["low_conf"] = before - len(all_rows)
 
-    # dedupe by video_id (keep highest-confidence row)
+    # dedupe by video_id. Prefer by source (gold > v4 > lasana_rescore) since
+    # gold rows are human-curated consensus labels; fall back to confidence
+    # when sources match. Fixes a prior bug where equal-conf v4 rows clobbered
+    # all 17 usable gold rows, wasting the entire consensus-labeled pool.
+    SOURCE_RANK = {"gold": 3, "v4": 2, "lasana_rescore": 1}
+    def _rank(r): return (SOURCE_RANK.get(r.get("source"), 0), r.get("consensus_conf") or 0)
     by_vid: dict[str, dict] = {}
     for r in all_rows:
         v = r["video_id"]
-        if v not in by_vid or (r.get("consensus_conf") or 0) > (by_vid[v].get("consensus_conf") or 0):
+        if v not in by_vid or _rank(r) > _rank(by_vid[v]):
             by_vid[v] = r
     all_rows = list(by_vid.values())
 
