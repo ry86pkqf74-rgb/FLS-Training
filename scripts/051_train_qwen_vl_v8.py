@@ -43,6 +43,12 @@ if not hasattr(_nn.Module, "set_submodule"):
         setattr(parent, parts[-1], module)
     _nn.Module.set_submodule = _set_submodule
     print("[compat] Installed nn.Module.set_submodule shim (torch<2.5).")
+# peft 0.19 iterates all dtype names (including float8_e8m0fnu added in
+# torch 2.6) via getattr(torch, name). On torch 2.4 this raises AttributeError.
+# Attach sentinel dtypes so getattr succeeds and the iteration just skips them.
+for _dt in ("float8_e8m0fnu", "float8_e4m3fnuz", "float8_e5m2fnuz"):
+    if not hasattr(torch, _dt):
+        setattr(torch, _dt, None)
 gpu = torch.cuda.get_device_name(0)
 vram = torch.cuda.get_device_properties(0).total_memory / 1e9
 print(f"GPU: {gpu} ({vram:.1f}GB)  |  PyTorch: {torch.__version__}")
