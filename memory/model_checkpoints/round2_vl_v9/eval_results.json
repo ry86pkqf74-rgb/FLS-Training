@@ -1,0 +1,433 @@
+{
+  "summary": {
+    "adapter": "/workspace/checkpoints_vl_v9/final",
+    "n_examples": 48,
+    "valid_json_rate": 0.9166666666666666,
+    "task_id_accuracy": 0.9166666666666666,
+    "classification_accuracy": 0.0,
+    "mae_fls_score": 97.8659090909091,
+    "mae_n": 44,
+    "unique_prediction_ratio": 0.09090909090909091,
+    "unique_fls_values": 4,
+    "per_task_mae": {
+      "task2_pattern_cut": 39.94285714285714,
+      "task1_peg_transfer": 96.31785714285715,
+      "task5_intracorporeal_suturing": 525.0
+    },
+    "completed_at": "2026-04-15T16:05:03.505659"
+  },
+  "results": [
+    {
+      "video_id": "lasana_circle_tauet",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 206.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_schwiouf\",\n  \"video_id\": \"lasana_circle_schwiouf\",\n  \"video_filename\": \"lasana_circle_schwiouf.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\":"
+    },
+    {
+      "video_id": "9pmAgTE2UzQ",
+      "error": "no_frames"
+    },
+    {
+      "video_id": "lasana_circle_weaft",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 162.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcceacy\",\n  \"video_id\": \"lasana_circle_mcceacy\",\n  \"video_filename\": \"lasana_circle_mcceacy.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "lasana_peg_mcgiys",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 0.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_pains",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 36.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_ciaorth",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 0.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "lasana_circle_fliully",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 0.0,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_schwiouf\",\n  \"video_id\": \"lasana_circle_schwiouf\",\n  \"video_filename\": \"lasana_circle_schwiouf.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\":"
+    },
+    {
+      "video_id": "lasana_peg_yeiack",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 235.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "lasana_circle_smuirst",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 209.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_schneian\",\n  \"video_id\": \"lasana_circle_schneian\",\n  \"video_filename\": \"lasana_circle_schneian.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\":"
+    },
+    {
+      "video_id": "lasana_peg_bloarr",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 60.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_sprutz",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 39.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_circle_bliuntly",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 209.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_schwiouf\",\n  \"video_id\": \"lasana_circle_schwiouf\",\n  \"video_filename\": \"lasana_circle_schwiouf.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\":"
+    },
+    {
+      "video_id": "lasana_circle_niirn",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 209.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_schneian\",\n  \"video_id\": \"lasana_circle_schneian\",\n  \"video_filename\": \"lasana_circle_schneian.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\":"
+    },
+    {
+      "video_id": "lasana_circle_kwuiwn",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 207.8,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_schwiouf\",\n  \"video_id\": \"lasana_circle_schwiouf\",\n  \"video_filename\": \"lasana_circle_schwiouf.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\":"
+    },
+    {
+      "video_id": "lasana_peg_strieurty",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 42.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_mccloork",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 205.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_circle_spleipp",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 262.0,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcceacy\",\n  \"video_id\": \"lasana_circle_mcceacy\",\n  \"video_filename\": \"lasana_circle_mcceacy.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "lasana_peg_miirth",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 25.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "lasana_circle_skaiw",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 206.0,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcceacy\",\n  \"video_id\": \"lasana_circle_mcceacy\",\n  \"video_filename\": \"lasana_circle_mcceacy.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "lasana_peg_mciown",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 248.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "Orp_c2VsqEE",
+      "error": "no_frames"
+    },
+    {
+      "video_id": "lasana_peg_sceufy",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 230.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_circle_swohn",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 0.0,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcnaack\",\n  \"video_id\": \"lasana_circle_mcnaack\",\n  \"video_filename\": \"lasana_circle_mcnaack.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "lasana_suture_psychearst",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": "task5_intracorporeal_suturing",
+      "expected_fls": 508.0,
+      "predicted_fls": 0.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_suture_gloull\",\n  \"video_id\": \"lasana_suture_gloull\",\n  \"video_filename\": \"lasana_suture_gloull.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task"
+    },
+    {
+      "video_id": "lasana_circle_krioun",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 204.5,
+      "predicted_fls": 211.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcceacy\",\n  \"video_id\": \"lasana_circle_mcceacy\",\n  \"video_filename\": \"lasana_circle_mcceacy.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "lasana_peg_knaiab",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 292.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_wiidly",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 216.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "lasana_peg_plogs",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 41.6,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "lasana_peg_gniom",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 195.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_smiorry",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 228.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "a0-W5oX_I5s",
+      "error": "no_frames"
+    },
+    {
+      "video_id": "lasana_peg_xoorts",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 5.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_circle_schioub",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 212.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcceacy\",\n  \"video_id\": \"lasana_circle_mcceacy\",\n  \"video_filename\": \"lasana_circle_mcceacy.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "WhUtStkkYHU",
+      "error": "no_frames"
+    },
+    {
+      "video_id": "lasana_peg_mccuy",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 15.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_duegy",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 252.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "lasana_circle_schmiects",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 212.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcceacy\",\n  \"video_id\": \"lasana_circle_mcceacy\",\n  \"video_filename\": \"lasana_circle_mcceacy.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "lasana_circle_sqilt",
+      "expected_task": "task2_pattern_cut",
+      "predicted_task": "task2_pattern_cut",
+      "expected_fls": 210.5,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_circle_mcceacy\",\n  \"video_id\": \"lasana_circle_mcceacy\",\n  \"video_filename\": \"lasana_circle_mcceacy.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"t"
+    },
+    {
+      "video_id": "lasana_peg_wrak",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 252.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_cucks",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 12.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_puirr",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 39.5,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    },
+    {
+      "video_id": "lasana_peg_hyaix",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 212.5,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_pebly",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 74.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_cycluts",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 235.0,
+      "predicted_fls": 212.5,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_suture_mcauesh",
+      "expected_task": "task5_intracorporeal_suturing",
+      "predicted_task": "task5_intracorporeal_suturing",
+      "expected_fls": 542.0,
+      "predicted_fls": 0.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_suture_xec\",\n  \"video_id\": \"lasana_suture_xec\",\n  \"video_filename\": \"lasana_suture_xec.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task5_intraco"
+    },
+    {
+      "video_id": "lasana_peg_shroiank",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 255.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_mcdiirk",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 205.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckiird\",\n  \"video_id\": \"lasana_peg_mckiird\",\n  \"video_filename\": \"lasana_peg_mckiird.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_peg_"
+    },
+    {
+      "video_id": "lasana_peg_proiarth",
+      "expected_task": "task1_peg_transfer",
+      "predicted_task": "task1_peg_transfer",
+      "expected_fls": 174.0,
+      "predicted_fls": 195.0,
+      "json_valid": true,
+      "raw_head": "{\n  \"id\": \"score_lasana_lasana_peg_mckauech\",\n  \"video_id\": \"lasana_peg_mckauech\",\n  \"video_filename\": \"lasana_peg_mckauech.mp4\",\n  \"source\": \"lasana_rescore\",\n  \"model_name\": \"claude-sonnet-4-20250514\",\n  \"model_version\": \"claude-sonnet-4-20250514\",\n  \"prompt_version\": \"v002\",\n  \"task_id\": \"task1_p"
+    }
+  ]
+}
