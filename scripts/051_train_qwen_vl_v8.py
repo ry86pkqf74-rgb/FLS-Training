@@ -169,33 +169,31 @@ print(f"Usable: {len(train_convos)} train / {len(val_convos)} val")
 if len(train_convos) == 0:
     print("FATAL: no usable training examples."); sys.exit(1)
 
-from transformers import AutoProcessor, BitsAndBytesConfig
+from transformers import AutoProcessor
 try:
     from transformers import Qwen2_5_VLForConditionalGeneration as VLModel
 except ImportError:
     from transformers import Qwen2VLForConditionalGeneration as VLModel
-from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+from peft import LoraConfig, get_peft_model
 
-print("\nLoading Qwen2.5-VL-7B-Instruct (4-bit LM, bf16 visual)...")
-# CRITICAL vs v7: skip 4-bit quantization for the entire visual subtree. The
-# merger MLP is made of nn.Linear layers — if those get 4-bit quantized,
-# bitsandbytes replaces them with bnb.Linear4bit whose weights are not
-# differentiable, and our later `requires_grad = True` pass would silently
-# produce zero gradients on the merger. llm_int8_skip_modules (despite the
-# name) also controls 4-bit skip patterns; prefix match on "visual." catches
-# both model.visual.* and any reparenting variants.
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True, bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_use_double_quant=True,
-    llm_int8_skip_modules=["visual"],
-)
+print("\nLoading Qwen2.5-VL-7B-Instruct (full bf16, no 4-bit)...")
+# v8.1: dropping 4-bit quantization. Rationale: llm_int8_skip_modules=["visual"]
+# did NOT keep visual.merger.mlp.[0,2] as nn.Linear in this transformers build
+# — bnb still replaced them with Linear4bit (uint8 weight), which makes
+# PEFT's modules_to_save=["merger"] crash in requires_grad_ on uint8 tensors.
+# Qwen2.5-VL-7B in bf16 (~14 GB) + LoRA adapters (~100 MB) + trainable merger
+# (~45 M params * 4B grad * 4B Adam states ≈ 540 MB) + activations with
+# gradient checkpointing fits comfortably in the H100's 80 GB. No quantization
+# = no skip-list games; merger stays plain nn.Linear and PEFT works as
+# designed.
 MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
 model = VLModel.from_pretrained(
-    MODEL_ID, quantization_config=bnb_config, device_map="auto",
+    MODEL_ID, device_map="auto",
     torch_dtype=torch.bfloat16, attn_implementation="sdpa",
 )
 processor = AutoProcessor.from_pretrained(MODEL_ID)
-model = prepare_model_for_kbit_training(model)
+model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
+model.enable_input_require_grads()
 
 lora_config = LoraConfig(
     r=32, lora_alpha=32, lora_dropout=0.05,
