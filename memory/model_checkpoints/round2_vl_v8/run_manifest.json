@@ -1,0 +1,19 @@
+{
+  "run_id": "fls_round2_vl_v8_20260415_025615",
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "adapter": "LoRA r=32 (LM) + visual.merger unfrozen",
+  "data_source": "youtube_sft_v2 = v4 + gold + LASANA rescore (all v002 schema)",
+  "yt_train": 445,
+  "yt_val": 54,
+  "yt_test": 54,
+  "epochs": 5,
+  "lr": 0.0001,
+  "lr_schedule": "cosine",
+  "max_frames_per_example": 8,
+  "loss_masking": "assistant-only (labels[:prompt_len] = -100 + pad masked)",
+  "merger_params_trainable": 44574464,
+  "train_loss": 0.15128749928304128,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "completed_at": "2026-04-15T02:56:15.662443",
+  "supersedes": "050_train_qwen_vl_v7.py (v7 passed loss fix but mode-collapsed because visual.merger was frozen \u2014 LM had no gradient pressure to condition on visual features)."
+}

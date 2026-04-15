@@ -32,6 +32,17 @@ ap.add_argument("--diversity_gate", type=float, default=0.5,
 args = ap.parse_args()
 
 import torch
+import torch.nn as _nn
+if not hasattr(_nn.Module, "set_submodule"):
+    def _set_submodule(self, target, module):
+        parts = target.split(".")
+        parent = self.get_submodule(".".join(parts[:-1])) if len(parts) > 1 else self
+        setattr(parent, parts[-1], module)
+    _nn.Module.set_submodule = _set_submodule
+for _dt in ("float8_e8m0fnu", "float8_e4m3fnuz", "float8_e5m2fnuz"):
+    if not hasattr(torch, _dt):
+        setattr(torch, _dt, None)
+
 from transformers import AutoProcessor, BitsAndBytesConfig
 try:
     from transformers import Qwen2_5_VLForConditionalGeneration as VLModel
@@ -41,21 +52,32 @@ from peft import PeftModel
 
 print(f"=== Eval {args.adapter} on {args.test} — {datetime.now()} ===")
 
-bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
-                        bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_use_double_quant=True)
 MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
 base = VLModel.from_pretrained(
-    MODEL_ID, quantization_config=bnb, device_map="auto",
+    MODEL_ID, device_map="auto",
     torch_dtype=torch.bfloat16, attn_implementation="sdpa")
 model = PeftModel.from_pretrained(base, args.adapter)
 model.eval()
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 
+SCHEMA_EXAMPLE = {
+    "task_id":"task1_peg_transfer","task_name":"Peg Transfer","completion_time_seconds":48.0,
+    "score_components":{"max_score":300,"time_used":48.0,"total_penalties":5.0,"total_fls_score":247.0,"formula_applied":"300 - 48.0 - 5.0 = 247.0"},
+    "confidence":0.85,"technique_summary":"…","strengths":["…"],"improvement_suggestions":["…"],"penalties":[],"estimated_fls_score":247.0
+}
 SYSTEM_PROMPT = (
     "You are an expert FLS (Fundamentals of Laparoscopic Surgery) proctor AI. "
     "Given sampled video frames of an FLS task performance, analyze the technique "
-    "and output a single strict-JSON ScoringResult matching the v002 universal scoring schema. "
-    "Output ONLY valid JSON — no prose, no markdown fences."
+    "and output a single strict-JSON ScoringResult matching the v002 universal "
+    "scoring schema. Output ONLY valid JSON — no prose, no markdown fences.\n\n"
+    "CRITICAL schema notes:\n"
+    "  - score_components MUST be an OBJECT (not an array) with keys: "
+    "max_score, time_used, total_penalties, total_fls_score, formula_applied.\n"
+    "  - estimated_fls_score is a top-level numeric field equal to total_fls_score.\n"
+    "  - task_id is one of: task1_peg_transfer, task2_pattern_cut, task3_endoloop, "
+    "task4_extracorporeal_knot, task5_intracorporeal_suturing.\n\n"
+    "Exact shape example (values are illustrative):\n" +
+    json.dumps(SCHEMA_EXAMPLE, indent=2)
 )
 
 def sample_frames(paths, n):
@@ -136,7 +158,7 @@ for i, ex in enumerate(test):
     messages = [
         {"role":"system","content":[{"type":"text","text":SYSTEM_PROMPT}]},
         {"role":"user","content":[*[{"type":"image","image":p} for p in frames],
-                                  {"type":"text","text":f"Score this FLS {ex.get('task_id','unknown')} performance. JSON only."}]},
+                                  {"type":"text","text":f"Score this FLS {ex.get('task_id','unknown')} performance. Return ONLY valid JSON per the v002 schema."}]},
     ]
     text = processor.apply_chat_template(_copy.deepcopy(messages), tokenize=False, add_generation_prompt=True)
     image_inputs = []
