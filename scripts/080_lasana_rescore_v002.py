@@ -153,10 +153,11 @@ def save_score(video_id: str, data: dict) -> None:
         json.dumps(data, indent=2, default=str))
 
 
-def worker(vid: str, task_id: str, max_frames: int, system_prompt: str) -> dict:
+def worker(vid: str, task_id: str, max_frames: int, system_prompt: str,
+           force: bool = False) -> dict:
     out = {"video_id": vid, "status": None}
     try:
-        if already_scored(vid):
+        if not force and already_scored(vid):
             out["status"] = "skip-existing"; return out
         b64s = sample_frames_b64(vid, max_frames)
         if not b64s:
@@ -172,10 +173,15 @@ def worker(vid: str, task_id: str, max_frames: int, system_prompt: str) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=6)
-    ap.add_argument("--max-frames", type=int, default=8)
+    ap.add_argument("--max-frames", type=int, default=8,
+                    help="default for all tasks; overridden by --suture-frames for suturing")
+    ap.add_argument("--suture-frames", type=int, default=24,
+                    help="frame budget for task5 suturing (needs more coverage — 600s task)")
     ap.add_argument("--max-videos", type=int, default=0, help="0 = all")
     ap.add_argument("--task", choices=list(PREFIX_TO_TASK.keys()) + ["all"], default="all")
     ap.add_argument("--shuffle", action="store_true")
+    ap.add_argument("--force", action="store_true",
+                    help="overwrite existing per-video output files")
     args = ap.parse_args()
 
     if not os.getenv("ANTHROPIC_API_KEY"):
@@ -191,13 +197,16 @@ def main() -> None:
     if args.shuffle: random.shuffle(videos)
     if args.max_videos: videos = videos[: args.max_videos]
 
-    log(f"Queued {len(videos)} videos | workers={args.workers} max_frames={args.max_frames} task={args.task}")
+    log(f"Queued {len(videos)} videos | workers={args.workers} max_frames={args.max_frames} "
+        f"suture_frames={args.suture_frames} task={args.task} force={args.force}")
     log(f"Output dir: {OUT_ROOT}  Model: {MODEL}")
 
     ok = err = skip = noframe = 0
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
-        futs = {ex.submit(worker, v, t, args.max_frames, system_prompt): v
+        def _mf(t):
+            return args.suture_frames if t == "task5_intracorporeal_suturing" else args.max_frames
+        futs = {ex.submit(worker, v, t, _mf(t), system_prompt, args.force): v
                 for v, t in videos}
         for i, f in enumerate(as_completed(futs), 1):
             r = f.result()

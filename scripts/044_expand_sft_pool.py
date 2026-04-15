@@ -86,16 +86,21 @@ def old_to_v002_target(target: dict, task_id: str) -> dict | None:
     if total is None or penalties is None:
         return None
 
+    # Clamp FLS to [0, max_score] per FLS rubric (minimum score is 0).
+    # Without this, rows with time_used + penalties > max_score produced
+    # negative labels (-200, -265, etc.) teaching the model nonsense.
+    total_clamped = max(0.0, min(float(max_score), float(total)))
     new_sc = {
         "max_score": max_score,
         "time_used": time_used if time_used is not None else 0.0,
         "total_penalties": float(penalties),
-        "total_fls_score": float(total),
+        "total_fls_score": total_clamped,
         "formula_applied": (
-            f"{max_score} - {time_used:.1f} - {float(penalties):.1f} = {float(total):.1f}"
-            if time_used is not None else f"total={total}"
+            f"{max_score} - {time_used:.1f} - {float(penalties):.1f} = {total_clamped:.1f}"
+            if time_used is not None else f"total={total_clamped}"
         ),
     }
+    total = total_clamped
 
     # Build canonical v002 target — SAME shape as LASANA rows — so the model
     # sees a single output schema across all sources. Drop everything else.
@@ -184,6 +189,10 @@ def row_from_lasana(path: Path, frames_root: Path) -> dict | None:
     sc = d.get("score_components")
     if not isinstance(sc, dict) or sc.get("total_fls_score") is None:
         return None
+    # Clamp FLS to [0, max_score]: Claude teacher occasionally returns
+    # negatives when time_used + penalties > max_score.
+    _ms = sc.get("max_score") or 300
+    sc["total_fls_score"] = max(0.0, min(float(_ms), float(sc["total_fls_score"])))
     # Build a v002-canonical target (match v4/YT row shape) so the model sees
     # ONE output schema across all sources. Drop LASANA-native fields that
     # don't appear in v4 rows: frame_analyses, task_name, max_time_seconds,
