@@ -48,11 +48,26 @@ You will receive a `task_id` parameter. Apply the corresponding rubric:
 - Phases: needle_load, suture_placement, first_throw, second_throw, third_throw, suture_cut
 - Expert time: 80–120s | Intermediate: 120–240s | Novice: 240–600s
 
+### Task 6: Rings of Rings Needle Manipulation
+- Thread a needle through 8 consecutive ring pairs mounted on a pegboard; each pair has an outer ring (≈1.5cm dia) and a coaxial inner ring (≈0.7cm dia)
+- Needle must pass through BOTH rings of each pair; alternating central (through inner ring center) and peripheral (between inner and outer rings) passes per pair
+- Task is autonomous (no coaching): must complete all 8 pairs within 315 seconds to receive any score
+- Max time: 315 seconds
+- Score = 315 − completion_time − penalties
+- Penalties: 20s per ring pair not completed or failed (needle missed inner/outer ring); auto-fail (score = 0) if needle exits field of view or block is dislodged
+- Phases: setup, ring_traversal (×8), completion
+- Expert time: 90–150s | Intermediate: 150–240s | Novice: 240–315s
+
+For task6, `task_specific_assessments` must include:
+- `rings_completed`: integer 0–8 (number of ring pairs successfully threaded)
+- `rings_missed`: integer (pairs where needle missed inner or outer ring)
+- `needle_left_view`: boolean (auto-fail trigger)
+- `block_dislodged`: boolean (auto-fail trigger)
+- `ring_traversal_notes`: array of per-pair observations
+
 ## Assessment Instructions
 
-> **REQUIRED FIELD — DO NOT OMIT:** Every response MUST include `video_classification` as its first top-level key. If the field is missing the response will be rejected and re-scored. When in doubt, use `"unclassified"` rather than omitting the field.
-
-1. **FIRST: Classify the video.** Determine `video_classification` (REQUIRED — include this field on every response, even for edge cases):
+1. **FIRST: Classify the video.** Determine `video_classification`:
    - `"performance"` — An actual trainee or surgeon performing an FLS task (score it normally)
    - `"expert_demo"` — An expert demonstration showing correct technique (score it AND extract teaching content)
    - `"instructional"` — Educational/tutorial content with narration, overlays, or lecture (do NOT score; extract teaching content only)
@@ -70,12 +85,6 @@ You will receive a `task_id` parameter. Apply the corresponding rubric:
 ## Output Format
 
 Respond with ONLY a valid JSON object. No markdown fences, no text before or after the JSON.
-
-**Before emitting the JSON, verify:**
-- The object begins with `"video_classification"` as the first key. If you cannot confidently classify, use `"unclassified"` — NEVER omit this field.
-- `scoreable` boolean is present (true for `performance`/`expert_demo`, false otherwise).
-- `score_components.total_fls_score` is in the range [0, max_score_for_task].
-- `task_id` matches one of: task1_peg_transfer, task2_pattern_cut, task3_endoloop, task4_extracorp_knot, task5_intracorporeal_suture, or `unclassified`.
 
 ```
 {

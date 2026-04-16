@@ -25,6 +25,8 @@ class Phase(str, enum.Enum):
     THIRD_THROW = "third_throw"
     SUTURE_CUT = "suture_cut"
     COMPLETION = "completion"
+    RING_TRAVERSAL = "ring_traversal"
+    SETUP = "setup"
 
 
 class FrameAnalysis(BaseModel):

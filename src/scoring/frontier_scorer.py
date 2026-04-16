@@ -22,6 +22,7 @@ TASK_RUBRIC_FILES = {
     "task3": "task3_ligating_loop.yaml",
     "task4": "task4_extracorporeal_suture.yaml",
     "task5": "task5_intracorporeal_suture.yaml",
+    "task6": "task6_rings_needle_manipulation.yaml",
 }
 TASK_ID_ALIASES = {
     "task1": "task1",
@@ -36,6 +37,9 @@ TASK_ID_ALIASES = {
     "task5": "task5",
     "task5_intracorporeal": "task5",
     "task5_intracorporeal_suture": "task5",
+    "task6": "task6",
+    "task6_rings": "task6",
+    "task6_rings_needle_manipulation": "task6",
 }
 VALID_PHASES = {
     "idle",
@@ -46,6 +50,7 @@ VALID_PHASES = {
     "third_throw",
     "suture_cut",
     "completion",
+    "ring_traversal",
 }
 PHASE_ALIASES = {
     "setup": "idle",

@@ -1,0 +1,72 @@
+task: task6_rings_needle_manipulation
+task_id: task6
+name: "Rings of Rings Needle Manipulation"
+fls_manual_reference: "Custom Task — Rings of Rings Needle Manipulation (PGY curriculum)"
+benchmark_reference: "Autonomous completion standard"
+
+max_time_seconds: 315
+proficiency_time_seconds: 150
+max_score: 315
+score_formula: "315 - completion_time - (20 * rings_missed)"
+passing_score: 80
+
+timing:
+  starts_when: "instruments first visible and trainee begins approaching first ring pair"
+  ends_when: "needle has passed through the final (8th) ring pair and instrument is retracted"
+  auto_fail_condition: "needle exits field of view OR block is dislodged"
+
+equipment:
+  - "FLS trainer box"
+  - "Pegboard with 8 ring pairs mounted in a line or arc"
+  - "Outer ring (approx 1.5cm diameter) with coaxial inner ring (approx 0.7cm diameter)"
+  - "Needle on suture or standalone needle"
+  - "Two laparoscopic instruments (needle driver + grasper)"
+
+phases:
+  - name: setup
+    description: "Instrument positioning, approach to first ring pair"
+    expert_time_range: [5, 15]
+    intermediate_range: [10, 30]
+
+  - name: ring_traversal
+    description: "Sequential needle threading through each of the 8 ring pairs; alternating central (through inner ring) and peripheral (between inner and outer ring) passes"
+    expert_time_range: [70, 120]
+    intermediate_range: [120, 220]
+    requirements:
+      - "Pairs 1,3,5,7: central pass (needle through inner ring center)"
+      - "Pairs 2,4,6,8: peripheral pass (needle between inner and outer ring)"
+      - "Needle must visibly clear both inner and outer ring of each pair"
+
+  - name: completion
+    description: "Final ring pair completed, instruments retracted or held clear"
+    expert_time_range: [3, 8]
+    intermediate_range: [5, 15]
+
+penalties:
+  - name: ring_miss
+    description: "Needle failed to pass through a ring pair (missed inner or outer ring)"
+    scoring: "20 seconds added per missed ring pair"
+
+  - name: needle_out_of_view
+    description: "Needle exits laparoscopic field of view"
+    scoring: "Automatic zero score (auto-fail)"
+
+  - name: block_dislodged
+    description: "Ring pegboard block moved or dislodged from position"
+    scoring: "Automatic zero score (auto-fail)"
+
+definitions:
+  ring_pair_completed: "Needle visibly passes through both the outer and inner ring of a pair in a single continuous motion without backing out."
+  central_pass: "Needle passes through the hollow center of the inner ring (smaller opening)."
+  peripheral_pass: "Needle passes through the gap between the inner ring and outer ring."
+  needle_out_of_view: "The needle tip and body are no longer visible in the laparoscopic image for more than 1 second."
+
+observability_rules:
+  - "If needle path through a ring is partially obscured, note uncertainty rather than assuming completion."
+  - "Count rings_completed conservatively — only count if traversal is clearly visible."
+  - "If auto-fail condition is suspected but not confirmed, lower confidence and note it in cannot_determine."
+
+edge_cases:
+  - "If the task is incomplete at 315 seconds, score based on rings completed at timeout."
+  - "Alternating central/peripheral pattern failure is not a scored penalty unless the task specification explicitly states it."
+  - "If block shifts slightly but needle path is unaffected, use judgment on block_dislodged."
