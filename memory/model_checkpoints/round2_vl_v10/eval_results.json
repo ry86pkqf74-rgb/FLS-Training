@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "adapter": "/workspace/checkpoints_vl_v10/final",
+    "n_examples": 50,
+    "valid_json_rate": 1.0,
+    "task_id_accuracy": 1.0,
+    "classification_accuracy": 0.0,
+    "mae_fls_score": 96.319,
+    "mae_n": 50,
+    "unique_prediction_ratio": 0.14,
+    "unique_fls_values": 7,
+    "per_task_mae": {
+      "task1_peg_transfer": 101.266,
+      "task2_pattern_cut": 56.0,
+      "task3_endoloop": 119.75,
+      "task5_intracorporeal_suturing": 215.875
+    },
+    "completed_at": "2026-04-16T02:35:58",
+    "train_rows": 403,
+    "dataset": "youtube_sft_v6",
+    "train_loss": 0.1571,
+    "gates_passed": [
+      "valid_json_rate"
+    ],
+    "gates_failed": [
+      "unique_prediction_ratio (mode collapse: 14% < 50%)"
+    ],
+    "vs_v9": {
+      "mae_fls_overall": "96.32 vs 97.87 (marginal)",
+      "task5_mae": "215.9 vs 525.0 (-59% win from S8 harvest)",
+      "task1_mae": "101.3 vs 96.3 (regression)",
+      "task2_mae": "56.0 vs 39.9 (regression)",
+      "unique_pred_ratio": "14% vs 9.1% (improved, still fails)",
+      "valid_json": "100% vs 91.7%",
+      "task_id_acc": "100% vs 91.7%"
+    },
+    "diagnosis": "Structural mode collapse: model memorizes training example IDs/scores verbatim. raw_head shows repeated templates (lasana_peg_schues=120, XQznLqNlJUk=202.5). V30/post_practice predicted 0 despite expected 430+. Fix: diversity regularizer or more varied task5 data."
+  }
+}
