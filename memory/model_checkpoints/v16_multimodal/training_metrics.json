@@ -1,0 +1,30 @@
+{
+  "version": "v16",
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "type": "multimodal_lora",
+  "lora_r": 32,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "train_loss": 0.3332,
+  "eval_loss": 0.2234,
+  "train_steps": 216,
+  "epochs": 3,
+  "learning_rate": 0.0001,
+  "effective_batch_size": 16,
+  "max_length": 4096,
+  "image_min_pixels": 100352,
+  "image_max_pixels": 200704,
+  "train_examples": 1151,
+  "val_examples": 141,
+  "frames_per_video": 8,
+  "hardware": "NVIDIA H100 80GB SXM (RunPod)",
+  "training_time_minutes": 80,
+  "adapter_size_mb": 380,
+  "adapter_locations": {
+    "s8_backup": "/data/fls/adapters/v16/",
+    "s6_demo": "/opt/fls/adapters/v16/"
+  },
+  "dataset": "v16_multimodal (1151 train, 141 val, 8 frames/video)",
+  "completed_at": "2026-04-20T21:04:00Z",
+  "notes": "Custom Trainer with MultimodalDataCollator, label masking, gradient checkpointing with enable_input_require_grads() and use_reentrant=False"
+}
