@@ -472,6 +472,7 @@ def prepare_dataset(
     include_sources: Iterable[str] | None = None,
     exclude_sources: Iterable[str] | None = None,
     respect_existing_splits: bool = False,
+    v003_target_schema: bool = False,
 ) -> dict:
     """Build train/val/test JSONL files from scored videos.
 
@@ -578,12 +579,25 @@ def prepare_dataset(
         if include_coach_feedback:
             coach_feedback = _load_coach_feedback(sample["video_id"])
 
-        # Build the assistant response: score JSON + optional coach JSON
-        assistant_content = json.dumps(score_data, default=str)
+        # Build the assistant response: score JSON + optional coach JSON.
+        # When the v003 schema flag is set we route the raw score through the
+        # v003 enrichment pipeline first, so the LoRA learns the new contract
+        # (formula_applied, critical_errors, severity, cannot_determine, ...).
+        target_payload: Any = score_data
+        if v003_target_schema:
+            try:
+                from src.training.v003_target import enrich_to_v003_target
+
+                target_payload = enrich_to_v003_target(score_data, score_data.get("task_id"))
+            except Exception as exc:  # pragma: no cover - defensive
+                logger.warning("v003 enrichment failed for %s: %s", sample.get("video_id"), exc)
+                target_payload = score_data
+
+        assistant_content = json.dumps(target_payload, default=str)
         if coach_feedback:
             # Wrap both in a combined output so student learns to produce both
             combined = {
-                "scoring_result": score_data,
+                "scoring_result": target_payload,
                 "coach_feedback": coach_feedback,
             }
             assistant_content = json.dumps(combined, default=str)
