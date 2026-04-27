@@ -121,14 +121,24 @@ def _resolve_task(score: dict, csv_lookup: dict[str, str]) -> str | None:
     return inferred
 
 
+def _safe_float(value, default: float = 0.0) -> float:
+    """Coerce arbitrary score-record values (incl. ``cannot_determine``) to float."""
+    if value is None or value == "":
+        return default
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def _score_total(d: dict) -> float:
     """Pull a meaningful FLS score out of either flat or score_components shape."""
-    fls = float(d.get("estimated_fls_score") or 0)
+    fls = _safe_float(d.get("estimated_fls_score"))
     if fls > 0:
         return fls
     sc = d.get("score_components") or {}
     if isinstance(sc, dict):
-        v = float(sc.get("total_fls_score") or 0)
+        v = _safe_float(sc.get("total_fls_score"))
         if v > 0:
             return v
     return 0.0
