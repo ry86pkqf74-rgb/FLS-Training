@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 from datetime import datetime
@@ -11,36 +12,17 @@ from typing import Any, Optional
 import yaml
 
 from src.scoring.schema import ScoringResult
+from src.rubrics.loader import (
+    TASK_ID_ALIASES,
+    TASK_RUBRIC_FILES,
+    canonical_task_id,
+    load_rubric,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 RUBRICS_ROOT = REPO_ROOT / "rubrics"
-
-TASK_RUBRIC_FILES = {
-    "task1": "task1_peg_transfer.yaml",
-    "task2": "task2_pattern_cut.yaml",
-    "task3": "task3_ligating_loop.yaml",
-    "task4": "task4_extracorporeal_suture.yaml",
-    "task5": "task5_intracorporeal_suture.yaml",
-    "task6": "task6_rings_needle_manipulation.yaml",
-}
-TASK_ID_ALIASES = {
-    "task1": "task1",
-    "task1_peg_transfer": "task1",
-    "task2": "task2",
-    "task2_pattern_cut": "task2",
-    "task3": "task3",
-    "task3_ligating_loop": "task3",
-    "task4": "task4",
-    "task4_extracorporeal": "task4",
-    "task4_extracorporeal_suture": "task4",
-    "task5": "task5",
-    "task5_intracorporeal": "task5",
-    "task5_intracorporeal_suture": "task5",
-    "task6": "task6",
-    "task6_rings": "task6",
-    "task6_rings_needle_manipulation": "task6",
-}
+logger = logging.getLogger(__name__)
 VALID_PHASES = {
     "idle",
     "needle_load",
@@ -148,14 +130,7 @@ def _strip_managed_scoring_fields(data: dict) -> dict:
 
 
 def _canonical_task_id(task: int | str) -> str:
-    task_name = str(task).strip().lower()
-    if task_name.isdigit():
-        return f"task{task_name}"
-    if task_name in TASK_ID_ALIASES:
-        return TASK_ID_ALIASES[task_name]
-    if task_name.startswith("task"):
-        return task_name.split("_", 1)[0]
-    return f"task{task_name}"
+    return canonical_task_id(task)
 
 
 def _normalize_task_name(task: int | str) -> str:
@@ -229,12 +204,67 @@ def _normalize_phase_collections(cleaned: dict) -> None:
 
 
 def _load_rubric(task: int | str) -> dict:
-    task_id = _canonical_task_id(task)
-    rubric_name = TASK_RUBRIC_FILES.get(task_id)
-    if not rubric_name:
-        raise FileNotFoundError(f"No rubric configured for task: {task}")
-    rubric_path = RUBRICS_ROOT / rubric_name
-    return yaml.safe_load(rubric_path.read_text()) or {}
+    return load_rubric(str(task))
+
+
+def recompute_score_from_components(payload: dict, task_id: str) -> dict:
+    """Recompute task score from rubric maximum, completion time, and penalties."""
+    rubric = load_rubric(task_id)
+    max_score = float(rubric["max_score"])
+    completion_time = _coerce_float(payload.get("completion_time_seconds", 0))
+    penalties = payload.get("penalties", [])
+
+    total_penalties = sum(
+        _coerce_float(p.get("points_deducted", p.get("value", 0)))
+        for p in penalties
+        if isinstance(p, dict)
+    )
+
+    score_components = payload.get("score_components")
+    if not total_penalties and isinstance(score_components, dict):
+        total_penalties = _coerce_float(
+            score_components.get("total_penalties", score_components.get("penalty_deductions", 0))
+        )
+
+    has_auto_fail = any(
+        p.get("severity") == "auto_fail" or p.get("forces_zero_score") is True
+        for p in penalties
+        if isinstance(p, dict)
+    )
+    has_auto_fail = has_auto_fail or any(
+        error.get("forces_zero_score") is True
+        for error in payload.get("critical_errors", [])
+        if isinstance(error, dict)
+    )
+
+    if has_auto_fail:
+        total_score = 0.0
+        formula = "automatic zero due to auto-fail penalty"
+    else:
+        total_score = max(0.0, max_score - completion_time - total_penalties)
+        formula = f"{max_score:g} - {completion_time:g} - {total_penalties:g} = {total_score:g}"
+
+    old_components = payload.get("score_components") or {}
+    old_formula = old_components.get("formula_applied") if isinstance(old_components, dict) else None
+    if old_formula and old_formula != formula:
+        logger.warning("Overwriting model-provided score formula %r with recomputed %r", old_formula, formula)
+
+    payload["task_id"] = canonical_task_id(task_id)
+    payload["task_name"] = str(rubric.get("name", ""))
+    payload["max_score"] = max_score
+    payload["max_time_seconds"] = float(rubric["max_time_seconds"])
+    payload["estimated_penalties"] = total_penalties
+    payload["estimated_fls_score"] = total_score
+    payload["score_components"] = {
+        "max_score": max_score,
+        "time_used": completion_time,
+        "total_penalties": total_penalties,
+        "total_fls_score": total_score,
+        "formula_applied": formula,
+        "time_score": completion_time,
+        "penalty_deductions": total_penalties,
+    }
+    return payload
 
 
 def _build_task_context(task: int | str) -> str:
@@ -294,6 +324,7 @@ def _prepare_scoring_payload(data: dict, task: int | str) -> dict:
     cleaned["estimated_fls_score"] = _coerce_float(cleaned.get("estimated_fls_score"))
     cleaned["confidence_score"] = _coerce_float(cleaned.get("confidence_score"))
     _normalize_phase_collections(cleaned)
+    recompute_score_from_components(cleaned, cleaned["task_id"])
 
     if cleaned.get("reasoning") and not cleaned.get("technique_summary"):
         cleaned["technique_summary"] = str(cleaned["reasoning"])

@@ -5,7 +5,9 @@ import enum
 from datetime import datetime
 from typing import Optional
 
-from pydantic import BaseModel, Field
+from typing import Any
+
+from pydantic import BaseModel, Field, model_validator
 
 
 class FLSTask(str, enum.Enum):
@@ -14,6 +16,7 @@ class FLSTask(str, enum.Enum):
     TASK3_LIGATING_LOOP = "task3_ligating_loop"
     TASK4_EXTRACORPOREAL = "task4_extracorporeal_suture"
     TASK5_INTRACORPOREAL = "task5_intracorporeal_suture"
+    TASK6_RINGS_NEEDLE_MANIPULATION = "task6_rings_needle_manipulation"
 
 
 class Phase(str, enum.Enum):
@@ -69,14 +72,59 @@ class DrainAssessment(BaseModel):
 
 class PenaltyItem(BaseModel):
     type: str
-    count: int = 1
     description: str = ""
+    points_deducted: float = 0.0
+    count: int = 1
+    severity: str = "minor"  # minor, moderate, major, critical, auto_fail
+    frame_evidence: list[int] = Field(default_factory=list)
+    confidence: float = 0.5
+    rubric_reference: str = ""
+
+    @model_validator(mode="before")
+    @classmethod
+    def _coerce_legacy_penalty(cls, data: Any) -> Any:
+        if isinstance(data, dict) and "points_deducted" not in data and "value" in data:
+            data = dict(data)
+            data["points_deducted"] = data.get("value", 0.0)
+        return data
 
 
 class ScoreComponents(BaseModel):
+    max_score: float = 0.0
+    time_used: float = 0.0
+    total_penalties: float = 0.0
+    total_fls_score: float = 0.0
+    formula_applied: str = ""
+
+    # Backward-compatible aliases for v001/v002 records.
     time_score: float = 0.0
     penalty_deductions: float = 0.0
-    total_fls_score: float = 0.0
+
+    @model_validator(mode="after")
+    def _sync_legacy_aliases(self) -> "ScoreComponents":
+        if not self.time_used and self.time_score:
+            self.time_used = self.time_score
+        if not self.total_penalties and self.penalty_deductions:
+            self.total_penalties = self.penalty_deductions
+        if not self.time_score and self.time_used:
+            self.time_score = self.time_used
+        if not self.penalty_deductions and self.total_penalties:
+            self.penalty_deductions = self.total_penalties
+        if not self.formula_applied and self.max_score:
+            self.formula_applied = (
+                f"{self.max_score:g} - {self.time_used:g} - "
+                f"{self.total_penalties:g} = {self.total_fls_score:g}"
+            )
+        return self
+
+
+class CriticalError(BaseModel):
+    type: str
+    present: bool
+    reason: str = ""
+    frame_evidence: list[int] = Field(default_factory=list)
+    forces_zero_score: bool = False
+    blocks_proficiency_claim: bool = True
 
 
 class ScoringResult(BaseModel):
@@ -92,8 +140,15 @@ class ScoringResult(BaseModel):
     scored_at: datetime = Field(default_factory=datetime.utcnow)
 
     task_id: str = ""
+    task_name: str = ""
+    max_time_seconds: float = 0.0
+    max_score: float = 0.0
     penalties: list[PenaltyItem] = []
     score_components: Optional[ScoreComponents] = None
+    critical_errors: list[CriticalError] = []
+    cannot_determine: list[str] = []
+    confidence_rationale: str = ""
+    task_specific_assessments: dict = Field(default_factory=dict)
     phases_detected: list[str] = []
     reasoning: str = ""
 
@@ -113,6 +168,21 @@ class ScoringResult(BaseModel):
     strengths: list[str] = []
 
     comparison_to_previous: dict = {}
+
+    @model_validator(mode="after")
+    def _sync_authoritative_score_fields(self) -> "ScoringResult":
+        if self.score_components is None:
+            return self
+
+        if self.score_components.total_fls_score or self.estimated_fls_score == 0:
+            self.estimated_fls_score = self.score_components.total_fls_score
+        if self.score_components.total_penalties or self.estimated_penalties == 0:
+            self.estimated_penalties = self.score_components.total_penalties
+        if self.score_components.max_score and not self.max_score:
+            self.max_score = self.score_components.max_score
+        if self.score_components.time_used and not self.completion_time_seconds:
+            self.completion_time_seconds = self.score_components.time_used
+        return self
 
     # Supersession metadata: when a score is forensically corrected,
     # the stale record is retained on disk for audit but flagged here
