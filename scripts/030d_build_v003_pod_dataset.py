@@ -62,15 +62,94 @@ def _csv_lookup() -> dict[str, str]:
     return out
 
 
+def _safe_canonical(value: str) -> str | None:
+    """Try canonical_task_id; on failure, fall back to ``taskN`` prefix parsing."""
+    if not value:
+        return None
+    value = value.strip()
+    try:
+        c = canonical_task_id(value)
+        if c in VALID_TASKS:
+            return c
+    except Exception:
+        pass
+    # Prefix parse: "task5_intracorporeal_suturing" -> "task5"
+    head = value.lower().split("_", 1)[0]
+    if head in VALID_TASKS:
+        return head
+    return None
+
+
+def _infer_task_from_summary(text: str) -> str | None:
+    """Heuristic mirror of scripts/021_batch_score.infer_task_from_technique_summary."""
+    if not text:
+        return None
+    t = text.lower()
+    pairs = [
+        ("task1", ("peg transfer", "peg-transfer", "outbound and return", "rubber rings")),
+        ("task2", ("pattern cut", "circle cut", "gauze", "marked circle")),
+        ("task3", ("endoloop", "ligating loop", "loop placement", "appendage")),
+        ("task4", ("extracorporeal", "knot pusher", "tied outside", "outside the body")),
+        ("task5", ("intracorporeal", "intra-corporeal", "intracorporeal suture", "square knot inside")),
+        ("task6", ("rings of rings", "needle manipulation", "ring traversal")),
+    ]
+    for task_id, kws in pairs:
+        if any(k in t for k in kws):
+            return task_id
+    return None
+
+
 def _resolve_task(score: dict, csv_lookup: dict[str, str]) -> str | None:
-    raw = (score.get("task_id") or "").strip()
-    canonical = canonical_task_id(raw or "task5")
-    if (not raw) or raw.lower() in {"unclassified", "unknown", ""}:
-        vid = score.get("video_id", "")
-        cand = csv_lookup.get(vid) or csv_lookup.get(vid.replace("yt_", ""))
-        if cand:
-            canonical = canonical_task_id(cand)
-    return canonical if canonical in VALID_TASKS else None
+    # 1. Direct task_id field, normalized.
+    direct = _safe_canonical(score.get("task_id") or "")
+    if direct:
+        return direct
+    # 2. Harvest CSV lookup by video id.
+    vid = score.get("video_id", "")
+    cand = csv_lookup.get(vid) or csv_lookup.get(vid.replace("yt_", ""))
+    if cand:
+        c = _safe_canonical(cand)
+        if c:
+            return c
+    # 3. Heuristic over technique_summary / reasoning.
+    inferred = _infer_task_from_summary(
+        " ".join(
+            str(score.get(k) or "")
+            for k in ("technique_summary", "reasoning", "video_filename")
+        )
+    )
+    return inferred
+
+
+def _score_total(d: dict) -> float:
+    """Pull a meaningful FLS score out of either flat or score_components shape."""
+    fls = float(d.get("estimated_fls_score") or 0)
+    if fls > 0:
+        return fls
+    sc = d.get("score_components") or {}
+    if isinstance(sc, dict):
+        v = float(sc.get("total_fls_score") or 0)
+        if v > 0:
+            return v
+    return 0.0
+
+
+def _has_useful_signal(d: dict) -> bool:
+    """Keep the record if it carries something usable for SFT.
+
+    Beyond positive FLS scores, we keep auto-fail records (drain_avulsed) and
+    records that have penalties enumerated even when the model emitted 0 score —
+    those still teach the v003 schema for critical-error gating.
+    """
+    if _score_total(d) > 0:
+        return True
+    if (d.get("drain_assessment") or {}).get("drain_avulsed"):
+        return True
+    if d.get("penalties"):
+        return True
+    if d.get("critical_errors"):
+        return True
+    return False
 
 
 def _best_per_video() -> dict[str, dict]:
@@ -85,9 +164,7 @@ def _best_per_video() -> dict[str, dict]:
         vid = d.get("video_id")
         if not vid:
             continue
-        score_fls = float(d.get("estimated_fls_score") or 0)
-        avulsed = (d.get("drain_assessment") or {}).get("drain_avulsed")
-        if score_fls <= 0 and not avulsed:
+        if not _has_useful_signal(d):
             continue
         prio = SOURCE_PRIORITY.get(d.get("source", "teacher_claude"), 9)
         if vid not in by_video or prio < SOURCE_PRIORITY.get(by_video[vid].get("source", ""), 9):
