@@ -83,3 +83,7 @@ data/external/simsurgskill/simsurgskill_2021_dataset/
 data/external/simsurgskill/*.zip
 data/external/simsurgskill/download.log
 harvested_videos/
+
+# Keep v17_v003 adapter weights tracked via Git LFS (override the bulk safetensors block above).
+!memory/model_checkpoints/v17_v003/adapter_model.safetensors
+!memory/model_checkpoints/v17_v003/training_args.bin

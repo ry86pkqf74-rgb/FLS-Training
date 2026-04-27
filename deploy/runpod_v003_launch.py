@@ -1,28 +1,20 @@
 #!/usr/bin/env python3
 """Launch (or reuse) a RunPod H100 SXM 80GB pod for the v003 training run.
 
-Reads the RunPod API key from one of:
+Uses the RunPod **REST API** (``https://rest.runpod.io/v1``) because the legacy
+GraphQL endpoint is currently Cloudflare-blocked for direct API access.
+
+Reads the API key from one of:
 
     1. $RUNPOD_API_KEY  (preferred, never persisted)
-    2. ~/.runpod/api_key (single line)
+    2. ~/.runpod/api_key (single line, chmod 600)
 
-Usage::
+Subcommands::
 
-    export RUNPOD_API_KEY='rpa_xxx'
-    python deploy/runpod_v003_launch.py launch       # creates a new pod
-    python deploy/runpod_v003_launch.py status       # prints pod + SSH info
-    python deploy/runpod_v003_launch.py terminate    # stops + deletes the pod
-
-Pod spec:
-
-    GPU       : H100 SXM 80GB (1x), fall back to H200 141GB if unavailable.
-    Image     : runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
-    Volume    : 200 GB at /workspace
-    Container : 80 GB
-    Ports     : 22/tcp (SSH), 8888/tcp (Jupyter, optional)
-
-The script writes the latest pod metadata to ``deploy/.runpod_v003_pod.json``
-so subsequent ``status`` / ``terminate`` calls don't need re-discovery.
+    python deploy/runpod_v003_launch.py launch      # creates a new pod
+    python deploy/runpod_v003_launch.py status      # prints pod + SSH info
+    python deploy/runpod_v003_launch.py terminate   # stops + deletes the pod
+    python deploy/runpod_v003_launch.py gpu-types   # lists in-stock GPUs
 """
 from __future__ import annotations
 
@@ -32,15 +24,27 @@ import os
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 from typing import Any
 
-API_URL = "https://api.runpod.io/graphql"
+API_BASE = "https://rest.runpod.io/v1"
 STATE_FILE = Path(__file__).resolve().parent / ".runpod_v003_pod.json"
 
 POD_NAME = "fls-v003-training"
-GPU_PREFERENCES = ["H100 SXM", "H100 PCIe", "H200", "A100 SXM"]
+# RunPod REST API uses NVIDIA SKU names as GPU type IDs (no separate listing
+# endpoint). H100 SXM is "NVIDIA H100 80GB HBM3"; H200 SXM is "NVIDIA H200".
+GPU_PREFERENCES = [
+    "NVIDIA H200",
+    "NVIDIA H100 80GB HBM3",  # H100 SXM
+    "NVIDIA H100 NVL",
+    "NVIDIA H100 PCIe",
+    "NVIDIA B200",
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "NVIDIA A100-SXM4-80GB",
+    "NVIDIA A100 80GB PCIe",
+]
 IMAGE = "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04"
 VOLUME_GB = 200
 CONTAINER_GB = 80
@@ -62,25 +66,25 @@ def _api_key() -> str:
     )
 
 
-def _gql(query: str, variables: dict[str, Any] | None = None) -> dict[str, Any]:
-    payload = json.dumps({"query": query, "variables": variables or {}}).encode()
-    req = urllib.request.Request(
-        API_URL,
-        data=payload,
-        headers={
-            "Authorization": f"Bearer {_api_key()}",
-            "Content-Type": "application/json",
-        },
-        method="POST",
-    )
+def _request(method: str, path: str, body: dict[str, Any] | None = None) -> Any:
+    url = f"{API_BASE}{path}"
+    data = json.dumps(body).encode() if body is not None else None
+    headers = {
+        "Authorization": f"Bearer {_api_key()}",
+        "Accept": "application/json",
+    }
+    if data is not None:
+        headers["Content-Type"] = "application/json"
+    req = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
-            body = json.loads(resp.read())
+            raw = resp.read()
+            if not raw:
+                return None
+            return json.loads(raw)
     except urllib.error.HTTPError as exc:
-        raise SystemExit(f"RunPod API HTTP {exc.code}: {exc.read().decode(errors='replace')}")
-    if body.get("errors"):
-        raise SystemExit(f"RunPod GraphQL error: {json.dumps(body['errors'], indent=2)}")
-    return body["data"]
+        detail = exc.read().decode(errors="replace") if exc.fp else ""
+        raise SystemExit(f"RunPod API HTTP {exc.code} {method} {path}: {detail or '<empty>'}")
 
 
 def _save_state(state: dict[str, Any]) -> None:
@@ -93,34 +97,13 @@ def _load_state() -> dict[str, Any]:
     return {}
 
 
-def _find_gpu_type() -> dict[str, Any]:
-    """Pick the first preferred GPU type that has stock and supports the spec."""
-    data = _gql("""
-        query GpuTypes {
-            gpuTypes {
-                id
-                displayName
-                memoryInGb
-                secureCloud
-                communityCloud
-                lowestPrice(input: {gpuCount: 1}) {
-                    minimumBidPrice
-                    uninterruptablePrice
-                }
-            }
-        }
-    """)
-    by_name = {gt["displayName"]: gt for gt in data["gpuTypes"]}
-    for pref in GPU_PREFERENCES:
-        candidates = [gt for name, gt in by_name.items() if pref in name]
-        for gt in sorted(candidates, key=lambda g: g["memoryInGb"], reverse=True):
-            price = gt.get("lowestPrice") or {}
-            if price.get("uninterruptablePrice"):
-                return gt
-    raise SystemExit(
-        "No GPU stock for any of: " + ", ".join(GPU_PREFERENCES)
-        + "\nRetry in a few minutes or pick a different region."
-    )
+def cmd_gpu_types() -> None:
+    """Print the static GPU preference list (REST API has no listing endpoint).
+
+    The OpenAPI ``/openapi.json`` enumerates valid IDs in the
+    ``PodCreateInput.gpuTypeIds`` enum; we just echo our preferred order here.
+    """
+    print(json.dumps(GPU_PREFERENCES, indent=2))
 
 
 def cmd_launch() -> None:
@@ -130,73 +113,67 @@ def cmd_launch() -> None:
         print("Run `terminate` first to start a new one.")
         return
 
-    gpu = _find_gpu_type()
-    print(f"Selected GPU: {gpu['displayName']} ({gpu['memoryInGb']} GB)")
+    print(f"GPU preference order (RunPod will pick first available):")
+    for g in GPU_PREFERENCES:
+        print(f"  - {g}")
 
-    mutation = """
-        mutation Deploy($input: PodFindAndDeployOnDemandInput!) {
-            podFindAndDeployOnDemand(input: $input) {
-                id
-                imageName
-                machineId
-                desiredStatus
-            }
-        }
-    """
-    variables = {
-        "input": {
-            "cloudType": "SECURE",
-            "gpuCount": 1,
-            "gpuTypeId": gpu["id"],
-            "name": POD_NAME,
-            "imageName": IMAGE,
-            "containerDiskInGb": CONTAINER_GB,
-            "volumeInGb": VOLUME_GB,
-            "volumeMountPath": "/workspace",
-            "minVcpuCount": MIN_VCPU,
-            "minMemoryInGb": MIN_RAM_GB,
-            "ports": "22/tcp,8888/http",
-            "supportPublicIp": True,
-            "startSsh": True,
-            "env": [
-                {"key": "PYTHONUNBUFFERED", "value": "1"},
-            ],
-        }
+    body = {
+        "name": POD_NAME,
+        "imageName": IMAGE,
+        "cloudType": "SECURE",
+        "gpuCount": 1,
+        "gpuTypeIds": GPU_PREFERENCES,
+        "gpuTypePriority": "custom",
+        "containerDiskInGb": CONTAINER_GB,
+        "volumeInGb": VOLUME_GB,
+        "volumeMountPath": "/workspace",
+        "vcpuCount": MIN_VCPU,
+        "minRAMPerGPU": MIN_RAM_GB,
+        "ports": ["22/tcp", "8888/http"],
+        "supportPublicIp": True,
+        "interruptible": False,
+        "env": {"PYTHONUNBUFFERED": "1"},
     }
-    data = _gql(mutation, variables)
-    pod = data["podFindAndDeployOnDemand"]
-    print(f"Launched pod: {pod['id']}")
-    state = {"pod_id": pod["id"], "gpu": gpu["displayName"], "image": IMAGE, "launched_at": time.time()}
+    pod = _request("POST", "/pods", body)
+    if not isinstance(pod, dict) or "id" not in pod:
+        raise SystemExit(f"Unexpected create-pod response: {json.dumps(pod, indent=2)[:600]}")
+
+    state = {
+        "pod_id": pod["id"],
+        "gpu_assigned": pod.get("machineId") or pod.get("gpuTypeId"),
+        "gpu_preferences": GPU_PREFERENCES,
+        "image": IMAGE,
+        "launched_at": time.time(),
+    }
     _save_state(state)
-    print("Polling for SSH endpoint...")
+    print(f"Launched pod: {pod['id']}")
     cmd_status(wait_for_ssh=True)
 
 
 def _query_pod(pod_id: str) -> dict[str, Any]:
-    data = _gql(
-        """
-        query Pod($id: String!) {
-            pod(input: {podId: $id}) {
-                id
-                desiredStatus
-                lastStatusChange
-                machineId
-                runtime {
-                    uptimeInSeconds
-                    ports {
-                        ip
-                        privatePort
-                        publicPort
-                        type
-                        isIpPublic
-                    }
+    pod = _request("GET", f"/pods/{pod_id}")
+    if not isinstance(pod, dict):
+        raise SystemExit(f"Unexpected pod payload: {pod!r}")
+    return pod
+
+
+def _ssh_endpoint(pod: dict[str, Any]) -> dict[str, Any] | None:
+    runtime = pod.get("runtime") or {}
+    ports = runtime.get("ports") or pod.get("portMappings") or []
+    for p in ports:
+        # REST schema sometimes returns dicts, sometimes "22/tcp -> ip:port" strings.
+        if isinstance(p, dict):
+            if int(p.get("privatePort") or 0) == 22 and (p.get("isIpPublic") or p.get("publicPort")):
+                return {
+                    "ip": p.get("ip") or pod.get("publicIp"),
+                    "publicPort": p.get("publicPort"),
                 }
-            }
-        }
-        """,
-        {"id": pod_id},
-    )
-    return data["pod"]
+        elif isinstance(p, str) and p.startswith("22/tcp"):
+            mapping = p.split("->")[-1].strip()
+            if ":" in mapping:
+                ip, port = mapping.rsplit(":", 1)
+                return {"ip": ip.strip(), "publicPort": int(port)}
+    return None
 
 
 def cmd_status(wait_for_ssh: bool = False) -> None:
@@ -209,28 +186,22 @@ def cmd_status(wait_for_ssh: bool = False) -> None:
     deadline = time.time() + (10 * 60 if wait_for_ssh else 0)
     while True:
         pod = _query_pod(pod_id)
-        runtime = pod.get("runtime") or {}
-        ports = runtime.get("ports") or []
-        ssh_port = next(
-            (p for p in ports if p.get("privatePort") == 22 and p.get("isIpPublic")),
-            None,
-        )
-        state.update(
-            {
-                "status": pod["desiredStatus"],
-                "uptime_seconds": runtime.get("uptimeInSeconds"),
-                "ssh": ssh_port,
-            }
-        )
+        ssh = _ssh_endpoint(pod)
+        state.update({
+            "status": pod.get("desiredStatus") or pod.get("status"),
+            "uptime_seconds": (pod.get("runtime") or {}).get("uptimeInSeconds"),
+            "ssh": ssh,
+        })
         _save_state(state)
 
-        print(json.dumps({k: v for k, v in state.items() if k != "ssh"}, indent=2))
-        if ssh_port:
+        printable = {k: v for k, v in state.items() if k != "ssh"}
+        print(json.dumps(printable, indent=2))
+        if ssh and ssh.get("publicPort"):
             print("\nSSH command:")
-            print(f"  ssh root@{ssh_port['ip']} -p {ssh_port['publicPort']} -i ~/.ssh/id_ed25519")
+            print(f"  ssh root@{ssh['ip']} -p {ssh['publicPort']} -i ~/.ssh/id_ed25519")
             return
         if not wait_for_ssh or time.time() >= deadline:
-            print("(SSH not ready yet)")
+            print("(SSH not ready yet — try `status` again in 30s)")
             return
         print("Waiting 15s for SSH...")
         time.sleep(15)
@@ -242,14 +213,7 @@ def cmd_terminate() -> None:
     if not pod_id:
         print("No pod tracked.")
         return
-    _gql(
-        """
-        mutation Terminate($id: String!) {
-            podTerminate(input: {podId: $id})
-        }
-        """,
-        {"id": pod_id},
-    )
+    _request("DELETE", f"/pods/{pod_id}")
     print(f"Terminated pod {pod_id}")
     STATE_FILE.unlink(missing_ok=True)
 
@@ -260,12 +224,14 @@ def main() -> None:
     sub.add_parser("launch", help="Create a new H100 pod for v003 training.")
     sub.add_parser("status", help="Show pod state + SSH endpoint.")
     sub.add_parser("terminate", help="Stop and delete the tracked pod.")
+    sub.add_parser("gpu-types", help="List GPU types + availability.")
     args = parser.parse_args()
 
     {
         "launch": cmd_launch,
         "status": cmd_status,
         "terminate": cmd_terminate,
+        "gpu-types": cmd_gpu_types,
     }[args.cmd]()
 
 
