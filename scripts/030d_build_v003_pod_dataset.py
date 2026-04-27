@@ -35,8 +35,29 @@ SYSTEM_PROMPT_FILE = ROOT / "prompts" / "v002_universal_scoring_system.md"
 
 FRAMES_ROOT = Path("/workspace/v003_frames")
 OUT_DIR = Path("/workspace/v003_multimodal")
-MAX_FRAMES_PER_SAMPLE = 8
+MAX_FRAMES_PER_SAMPLE = 4  # 4 frames * ~256 image tokens = ~1024 tokens, leaves room for text
 SEED = 42
+
+# Compact, task-aware system prompt (replaces the multi-thousand-token
+# v002_universal_scoring_system.md when building multimodal training data —
+# the long prompt blows past Qwen2.5-VL's effective context once 4–8 frame
+# image tokens are added).
+TRAIN_SYSTEM_PROMPT = (
+    "You are an expert FLS (Fundamentals of Laparoscopic Surgery) proctor AI. "
+    "Score the trainee's video for the indicated FLS task. Output a single "
+    "JSON object in v003 schema: task_id, task_name, max_score (the per-task "
+    "denominator: task1=300, task2=300, task3=180, task4=420, task5=600, "
+    "task6=315), max_time_seconds, completion_time_seconds, score_components "
+    "with formula_applied = max_score - completion_time - total_penalties "
+    "(or auto-zero if any penalty is severity=auto_fail), penalties (each with "
+    "type, points_deducted, severity ∈ {minor, moderate, major, critical, "
+    "auto_fail}, frame_evidence, confidence), critical_errors (each with "
+    "forces_zero_score and blocks_proficiency_claim), cannot_determine, "
+    "confidence_score, confidence_rationale, task_specific_assessments, "
+    "strengths, improvement_suggestions. Never claim proficiency when "
+    "critical_errors is non-empty. Do not invent millimetric or numeric "
+    "evidence; emit cannot_determine when not visible."
+)
 
 VALID_TASKS = {"task1", "task2", "task3", "task4", "task5", "task6"}
 SOURCE_PRIORITY = {
@@ -223,11 +244,7 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     csv_lookup = _csv_lookup()
     by_video = _best_per_video()
-    system_prompt = (
-        SYSTEM_PROMPT_FILE.read_text()
-        if SYSTEM_PROMPT_FILE.exists()
-        else "You are an FLS proctor. Output v003 scoring JSON."
-    )
+    system_prompt = TRAIN_SYSTEM_PROMPT
 
     per_task: dict[str, list[dict]] = defaultdict(list)
     drops: dict[str, int] = defaultdict(int)

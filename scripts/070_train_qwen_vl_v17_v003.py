@@ -60,7 +60,10 @@ FLSMultimodalDataset = _v16.FLSMultimodalDataset
 MultimodalDataCollator = _v16.MultimodalDataCollator
 
 MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
-MAX_LENGTH = _v16.MAX_LENGTH
+# Bumped from the v16 default (4096) — v003 examples carry an explicit task
+# rubric in the user message + a JSON v003 target in the assistant turn, so
+# the combined token count comfortably exceeds 4k once image tokens are added.
+MAX_LENGTH = 8192
 IMAGE_MIN_PIXELS = _v16.IMAGE_MIN_PIXELS
 IMAGE_MAX_PIXELS = _v16.IMAGE_MAX_PIXELS
 
