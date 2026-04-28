@@ -1,0 +1,17 @@
+{
+  "dataset": "v003_multimodal_v19",
+  "schema_version": "v003",
+  "source_dataset": "/workspace/v003_multimodal",
+  "assistant_char_budget": 2300,
+  "critical_upsample_factor": 5,
+  "totals_in": {
+    "train": 193,
+    "val": 23,
+    "test": 23
+  },
+  "totals_out": {
+    "train": 489,
+    "val": 23,
+    "test": 23
+  }
+}

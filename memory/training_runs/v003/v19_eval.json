@@ -1,0 +1,55 @@
+{
+  "adapter": "/workspace/v19_lora_output/final_adapter",
+  "test_jsonl": "/workspace/v003_multimodal/test.jsonl",
+  "n_examples": 23,
+  "score_mae": 100.54782608695652,
+  "score_rmse": 160.6769375513162,
+  "normalized_score_mae": 0.2798906142167012,
+  "time_mae_seconds": 101.22173913043478,
+  "task_accuracy": 1.0,
+  "schema_compliance": {
+    "task_id": 1.0,
+    "max_score": 1.0,
+    "completion_time_seconds": 1.0,
+    "score_components": 1.0,
+    "estimated_fls_score": 1.0,
+    "critical_errors": 1.0,
+    "cannot_determine": 1.0,
+    "confidence_score": 1.0
+  },
+  "critical_error": {
+    "precision": 0.4375,
+    "recall": 1.0,
+    "f1": 0.6086956521739131,
+    "tp": 7,
+    "fp": 9,
+    "fn": 0
+  },
+  "per_task": {
+    "task5": {
+      "n": 5,
+      "score_mae": 203.38,
+      "normalized_mae": 0.3389666666666667
+    },
+    "task2": {
+      "n": 5,
+      "score_mae": 115.54,
+      "normalized_mae": 0.3851333333333333
+    },
+    "task1": {
+      "n": 5,
+      "score_mae": 35.9,
+      "normalized_mae": 0.11966666666666667
+    },
+    "task3": {
+      "n": 4,
+      "score_mae": 73.75,
+      "normalized_mae": 0.4097222222222222
+    },
+    "task4": {
+      "n": 4,
+      "score_mae": 60.875,
+      "normalized_mae": 0.14494047619047618
+    }
+  }
+}
