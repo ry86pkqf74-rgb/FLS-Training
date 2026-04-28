@@ -1,14 +1,27 @@
 task: task6_rings_needle_manipulation
 task_id: task6
+canonical_task_id: task6_rings_needle_manipulation
 name: "Rings of Rings Needle Manipulation"
 fls_manual_reference: "Custom Task — Rings of Rings Needle Manipulation (PGY curriculum)"
 benchmark_reference: "Autonomous completion standard"
+official_fls_task: false
+custom_training_task: true
+certification_eligible: false
+score_units: training points
 
 max_time_seconds: 315
 proficiency_time_seconds: 150
 max_score: 315
-score_formula: "315 - completion_time - (20 * rings_missed)"
+score_formula: "315 - completion_time_seconds - 20 * failed_or_incomplete_ring_pairs unless an auto-fail condition is present"
 passing_score: 80
+task_label: "Custom FLS-adjacent training task: Rings of Rings Needle Manipulation"
+task6_scoring_rule:
+  auto_fail_score_zero_if:
+    - "needle exits field of view"
+    - "block is dislodged"
+  otherwise_formula: "315 - completion_time_seconds - 20 * failed_or_incomplete_ring_pairs"
+  incomplete_or_abandoned: "If the task is abandoned or fewer than a minimum required number of rings are attempted, mark incomplete and require human review."
+  official_fls_pass_fail_language_allowed: false
 
 timing:
   starts_when: "instruments first visible and trainee begins approaching first ring pair"

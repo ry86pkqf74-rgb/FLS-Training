@@ -3,3 +3,5 @@ models/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
 models/**/*.bin filter=lfs diff=lfs merge=lfs -text
 models/**/*.pt filter=lfs diff=lfs merge=lfs -text
 *.safetensors filter=lfs diff=lfs merge=lfs -text
+memory/model_checkpoints/v17_v003/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text
+memory/model_checkpoints/v19_v003/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text

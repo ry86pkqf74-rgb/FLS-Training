@@ -12,6 +12,14 @@ def test_normalize_phase_value_maps_task_specific_labels():
 
 
 def test_prepare_scoring_payload_coerces_none_score_component_and_phases():
+    """v003 contract: with no time and no penalties, total_fls_score == max_score.
+
+    Pre-v003 the function returned 0.0 here because score_components were treated
+    as raw model output. v003 routes the payload through
+    recompute_score_from_components, which fills the formula
+    ``max_score - completion_time - total_penalties`` from the rubric. For task 3
+    that is ``180 - 0 - 0 = 180``.
+    """
     payload = _prepare_scoring_payload(
         {
             "score_components": {
@@ -39,7 +47,12 @@ def test_prepare_scoring_payload_coerces_none_score_component_and_phases():
         task=3,
     )
 
-    assert payload["score_components"]["total_fls_score"] == 0.0
+    assert payload["score_components"]["max_score"] == 180.0
+    assert payload["score_components"]["total_penalties"] == 0.0
+    assert payload["score_components"]["time_used"] == 0.0
+    assert payload["score_components"]["total_fls_score"] == 180.0
+    assert payload["score_components"]["formula_applied"] == "180 - 0 - 0 = 180"
+    assert payload["estimated_fls_score"] == 180.0
     assert payload["frame_analyses"][0]["phase"] == "idle"
     assert payload["frame_analyses"][1]["phase"] == "suture_placement"
     assert payload["phase_timings"][0]["phase"] == "third_throw"

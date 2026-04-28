@@ -1,0 +1,22 @@
+{
+  "dataset": "youtube_sft_v003",
+  "source_dataset": "/Users/loganglosser/FLS_Training/FLS-Training/data/training/youtube_sft_v1",
+  "schema_version": "v003",
+  "system_prompt": "You are an expert FLS proctor AI. Score the trainee's performance on the indicated FLS task. Output rubric-faithful scoring JSON in v003 schema: include score_components with formula_applied, every penalty with points_deducted/severity/confidence/frame_evidence, critical_errors (forces_zero_score / blocks_proficiency_claim), cannot_determine, confidence_rationale, and task_specific_assessments. Do not invent evidence; never claim proficiency when critical errors are present.",
+  "created_at": "2026-04-27T20:42:42.086382+00:00",
+  "totals": {
+    "train": 48,
+    "val": 6,
+    "test": 5
+  },
+  "task_counts": {
+    "task2": 12,
+    "task4": 11,
+    "task5": 11,
+    "task3": 9,
+    "task1": 16
+  },
+  "examples_with_critical_error": 0,
+  "drop_stats": {},
+  "seed": 42
+}

@@ -1,0 +1,14 @@
+{
+  "version": "v17_v003",
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "resumed_from": null,
+  "train_loss": 3.72683531443278,
+  "eval_loss": 0.39105328917503357,
+  "train_steps": 75,
+  "epochs": 3,
+  "train_examples": 193,
+  "val_examples": 23,
+  "effective_batch_size": 8,
+  "learning_rate": 0.0001,
+  "completed_at": "2026-04-27T21:20:53.419014"
+}

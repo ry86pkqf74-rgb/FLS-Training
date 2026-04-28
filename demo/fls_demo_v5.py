@@ -61,8 +61,8 @@ TASK_DESCRIPTIONS = {
 TASK_MAX_SCORES = {
     "task1_peg_transfer": 300,
     "task2_pattern_cut": 300,
-    "task3_endoloop": 300,
-    "task4_extracorporeal_knot": 300,
+    "task3_endoloop": 180,
+    "task4_extracorporeal_knot": 420,
     "task5_intracorporeal_suturing": 600,
     "task6_rings_of_rings": 315,
 }

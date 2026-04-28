@@ -1,0 +1,24 @@
+{
+  "dataset": "v003_multimodal",
+  "schema_version": "v003",
+  "created_at": "2026-04-27T22:44:53.600393+00:00",
+  "totals": {
+    "train": 193,
+    "val": 23,
+    "test": 23
+  },
+  "task_distribution": {
+    "task2": 52,
+    "task5": 55,
+    "task3": 41,
+    "task4": 40,
+    "task1": 51
+  },
+  "vision_examples": 138,
+  "text_only_examples": 101,
+  "drops": {
+    "no_task": 79
+  },
+  "max_frames_per_sample": 4,
+  "system_prompt_file": "/workspace/FLS-Training/prompts/v002_universal_scoring_system.md"
+}

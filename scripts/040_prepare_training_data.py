@@ -153,6 +153,14 @@ def main() -> int:
         action="store_true",
         help="Honor pre-existing score-record split fields instead of re-randomizing them.",
     )
+    parser.add_argument(
+        "--v003-target-schema",
+        action="store_true",
+        help=(
+            "Route every score through src.training.v003_target.enrich_to_v003_target "
+            "before serializing the assistant message. Use this for v17/v003 LoRA training."
+        ),
+    )
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -189,6 +197,7 @@ def main() -> int:
         include_sources=_parse_csv_arg(args.include_sources),
         exclude_sources=_parse_csv_arg(args.exclude_sources),
         respect_existing_splits=args.respect_existing_splits,
+        v003_target_schema=args.v003_target_schema,
     )
 
     # Lineage sidecars: write <name>.meta.json next to every train/val/test jsonl.

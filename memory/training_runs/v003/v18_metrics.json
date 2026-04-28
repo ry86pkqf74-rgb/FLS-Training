@@ -1,0 +1,15 @@
+{
+  "version": "v18_v003",
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "resumed_from": "/workspace/v17_lora_output/final_adapter",
+  "train_loss": 0.9405405245670656,
+  "eval_loss": 0.3267115652561188,
+  "train_steps": 294,
+  "epochs": 6,
+  "train_examples": 193,
+  "val_examples": 23,
+  "effective_batch_size": 4,
+  "learning_rate": 3e-05,
+  "lora_dropout": 0.1,
+  "completed_at": "2026-04-27T23:12:44.187418"
+}
